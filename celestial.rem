@@ -45,7 +45,6 @@
   || monnum(trigdate()) == February && day(trigdate()) <= 20
     REM [trigger(trigdate())]  +0  PRIORITY 5000 MSG %"Chinese Year of the [element()] [animal()]%" %b%
   ENDIF
-  # XXX FIXME XXX  Find out why there are sometimes parse errors here
   # XXX FIXME XXX  Move this event to the day after the new moon instead
 
 
@@ -139,11 +138,11 @@
 
   # New DST starts on the second Sunday in March
   REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1  AT 02:00 +60 PRIORITY 5000 MSG %"03:00 New DST Starts (Z-4=Q)%" %b%
+    REM  [trigger(trigdate())] +1  AT 02:00 +60 PRIORITY 5000 MSG %"03:00 New DST Starts (EDT;  Z-4=Q)%" %b%
 
   # New DST ends on the first Sunday in November
   REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1  AT 02:00 +60 PRIORITY 5000 MSG %"01:00 New DST Ends (Z-5=R)%" %b%
+    REM  [trigger(trigdate())] +1  AT 02:00 +60 PRIORITY 5000 MSG %"01:00 New DST Ends (EST;  Z-5=R)%" %b%
 
   # Old DST starts on the first Sunday in April
   REM  Sun Apr [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1

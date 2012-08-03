@@ -5,47 +5,47 @@
 
 # Seasonal change events
 
-# REM  Mar 21 +0  PRIORITY 5000 MSG %"First Day of Spring%" %b%
-# REM  Jun 21 +0  PRIORITY 5000 MSG %"First Day of Summer%" %b%
-# REM  Sep 22 +0  PRIORITY 5000 MSG %"First Day of Fall%" %b%
-# REM  Dec 23 +0  PRIORITY 5000 MSG %"First Day of Winter%" %b%
-  # XXX FIXME XXX  Figure out the real season transitions from seasons.rem
+  #REM  Mar 21 +0 PRIORITY 0000 MSG %"First Day of Spring%" %b%
+  #REM  Jun 21 +0 PRIORITY 0000 MSG %"First Day of Summer%" %b%
+  #REM  Sep 22 +0 PRIORITY 0000 MSG %"First Day of Fall%" %b%
+  #REM  Dec 23 +0 PRIORITY 0000 MSG %"First Day of Winter%" %b%
+# XXX FIXME XXX  Figure out the real season transitions from seasons.rem
 
 
 # Signs of the Zodiac
 
-  REM  Mar 21 +0  PRIORITY 5000 MSG %"Aries Rises%" %b%
-  REM  Apr 19 +0  PRIORITY 5000 MSG %"Aries Sets%" %b%
-  REM  Apr 20 +0  PRIORITY 5000 MSG %"Taurus Rises%" %b%
-  REM  May 20 +0  PRIORITY 5000 MSG %"Taurus Sets%" %b%
-  REM  May 21 +0  PRIORITY 5000 MSG %"Gemini Rises%" %b%
-  REM  Jun 20 +0  PRIORITY 5000 MSG %"Gemini Sets%" %b%
-  REM  Jun 21 +0  PRIORITY 5000 MSG %"Cancer Rises%" %b%
-  REM  Jul 22 +0  PRIORITY 5000 MSG %"Cancer Sets%" %b%
-  REM  Jul 23 +0  PRIORITY 5000 MSG %"Leo Rises%" %b%
-  REM  Aug 22 +0  PRIORITY 5000 MSG %"Leo Sets%" %b%
-  REM  Aug 23 +0  PRIORITY 5000 MSG %"Virgo Rises%" %b%
-  REM  Sep 22 +0  PRIORITY 5000 MSG %"Virgo Sets%" %b%
-  REM  Sep 23 +0  PRIORITY 5000 MSG %"Libra Rises%" %b%
-  REM  Oct 22 +0  PRIORITY 5000 MSG %"Libra Sets%" %b%
-  REM  Oct 23 +0  PRIORITY 5000 MSG %"Scorpio Rises%" %b%
-  REM  Nov 21 +0  PRIORITY 5000 MSG %"Scorpio Sets%" %b%
-  REM  Nov 22 +0  PRIORITY 5000 MSG %"Sagittarius Rises%" %b%
-  REM  Dec 21 +0  PRIORITY 5000 MSG %"Sagittarius Sets%" %b%
-  REM  Dec 22 +0  PRIORITY 5000 MSG %"Capricorn Rises%" %b%
-  REM  Jan 19 +0  PRIORITY 5000 MSG %"Capricorn Sets%" %b%
-  REM  Jan 20 +0  PRIORITY 5000 MSG %"Aquarius Rises%" %b%
-  REM  Feb 18 +0  PRIORITY 5000 MSG %"Aquarius Sets%" %b%
-  REM  Feb 19 +0  PRIORITY 5000 MSG %"Pisces Rises%" %b%
-  REM  Mar 20 +0  PRIORITY 5000 MSG %"Pisces Sets%" %b%
+  REM  Mar 21 +0 PRIORITY 0000 MSG %"Aries Rises%" %b%
+  REM  Apr 19 +0 PRIORITY 0000 MSG %"Aries Sets%" %b%
+  REM  Apr 20 +0 PRIORITY 0000 MSG %"Taurus Rises%" %b%
+  REM  May 20 +0 PRIORITY 0000 MSG %"Taurus Sets%" %b%
+  REM  May 21 +0 PRIORITY 0000 MSG %"Gemini Rises%" %b%
+  REM  Jun 20 +0 PRIORITY 0000 MSG %"Gemini Sets%" %b%
+  REM  Jun 21 +0 PRIORITY 0000 MSG %"Cancer Rises%" %b%
+  REM  Jul 22 +0 PRIORITY 0000 MSG %"Cancer Sets%" %b%
+  REM  Jul 23 +0 PRIORITY 0000 MSG %"Leo Rises%" %b%
+  REM  Aug 22 +0 PRIORITY 0000 MSG %"Leo Sets%" %b%
+  REM  Aug 23 +0 PRIORITY 0000 MSG %"Virgo Rises%" %b%
+  REM  Sep 22 +0 PRIORITY 0000 MSG %"Virgo Sets%" %b%
+  REM  Sep 23 +0 PRIORITY 0000 MSG %"Libra Rises%" %b%
+  REM  Oct 22 +0 PRIORITY 0000 MSG %"Libra Sets%" %b%
+  REM  Oct 23 +0 PRIORITY 0000 MSG %"Scorpio Rises%" %b%
+  REM  Nov 21 +0 PRIORITY 0000 MSG %"Scorpio Sets%" %b%
+  REM  Nov 22 +0 PRIORITY 0000 MSG %"Sagittarius Rises%" %b%
+  REM  Dec 21 +0 PRIORITY 0000 MSG %"Sagittarius Sets%" %b%
+  REM  Dec 22 +0 PRIORITY 0000 MSG %"Capricorn Rises%" %b%
+  REM  Jan 19 +0 PRIORITY 0000 MSG %"Capricorn Sets%" %b%
+  REM  Jan 20 +0 PRIORITY 0000 MSG %"Aquarius Rises%" %b%
+  REM  Feb 18 +0 PRIORITY 0000 MSG %"Aquarius Sets%" %b%
+  REM  Feb 19 +0 PRIORITY 0000 MSG %"Pisces Rises%" %b%
+  REM  Mar 20 +0 PRIORITY 0000 MSG %"Pisces Sets%" %b%
 
   # Chinese/Lunar New Year is between Jan 21 and Feb 20 on the day after the new moon
   REM  [trigger(moondate(0))] SATISFY 1
   IF monnum(trigdate()) == January && day(trigdate()) >= 21 \
   || monnum(trigdate()) == February && day(trigdate()) <= 20
-    REM [trigger(trigdate())]  +0  PRIORITY 5000 MSG %"Chinese Year of the [element()] [animal()]%" %b%
+    REM [trigger(trigdate())]  +0 PRIORITY 0000 MSG %"Chinese Year of the [element()] [animal()]%" %b%
   ENDIF
-  # XXX FIXME XXX  Move this event to the day after the new moon instead
+# XXX FIXME XXX  Move this event to the day after the new moon instead
 
 
 # Some special names for full moons
@@ -53,72 +53,72 @@
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == January
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Wolf/Old Moon%" %b%
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Moon After Yule%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Wolf/Old Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Moon After Yule%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == February
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Hunger/Snow Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Hunger/Snow Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == March
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Worm/Crow/Crust/Sap/Lenten Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Worm/Crow/Crust/Sap/Lenten Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == April
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Pink/Sprouting Grass/Egg/Fish Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Pink/Sprouting Grass/Egg/Fish Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == May
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Flower/Corn Planting/Milk Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Flower/Corn Planting/Milk Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == June
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Strawberry/Rose Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Strawberry/Rose Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == July
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Buck/Thunder/Hay Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Buck/Thunder/Hay Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == August
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Sturgeon/Red/Green Corn/Grain Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Sturgeon/Red/Green Corn/Grain Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == September
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Harvest Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Harvest Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == October
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Hunter's Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Hunter's Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == November
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Beaver/Frosty Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Beaver/Frosty Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == December
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Cold/Long Nights Moon%" %b%
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Moon Before Yule%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Cold/Long Nights Moon%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Moon Before Yule%" %b%
   ENDIF
 
   # A Blue Moon is the second full moon that occurs in the month
   #REM  [trigger(moondate(2))] SATISFY (mon(moondate(2,trigdate()))) == (mon(moondate(2,moondate(2,trigdate())+1)))
   #IF trigvalid()
-  #  REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Blue Moon%" %b%
+  #  REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Blue Moon%" %b%
   #ENDIF
-  # XXX FIXME XXX  Try to determine the next blue moon
+# XXX FIXME XXX  Try to determine the next blue moon
 
 
 # Make sunrise/sunset work for QTH
@@ -138,16 +138,16 @@
 
   # New DST starts on the second Sunday in March
   REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1  AT 02:00 +60 PRIORITY 5000 MSG %"03:00 New DST Starts (EDT;  Z-4=Q)%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 AT 02:00 +60 MSG %"03:00 New DST Starts (EDT;  Z-4=Q)%" %b%
 
   # New DST ends on the first Sunday in November
   REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1  AT 02:00 +60 PRIORITY 5000 MSG %"01:00 New DST Ends (EST;  Z-5=R)%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 AT 02:00 +60 MSG %"01:00 New DST Ends (EST;  Z-5=R)%" %b%
 
   # Old DST starts on the first Sunday in April
   REM  Sun Apr [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Old DST Starts%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Old DST Starts%" %b%
 
   # Old DST ends on the fourth Sunday in October
   REM  Sun Oct [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +0  PRIORITY 5000 MSG %"Old DST Ends%" %b%
+    REM  [trigger(trigdate())] +0 PRIORITY 0000 MSG %"Old DST Ends%" %b%

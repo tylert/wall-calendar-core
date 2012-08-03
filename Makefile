@@ -6,7 +6,7 @@ GENERATED_FILES = yearly.ps rulers.pdf calendar.pdf
 all : $(GENERATED_FILES)
 
 yearly.ps : $(wildcard *.rem)
-	@remind -p12 -b1 top.rem $(DATE) | rem2ps -l -e -olrtb 1 -sthed 8 > $@
+	@remind -p12 -b1 -gdddd top.rem $(DATE) | rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
 rulers.pdf : rulers.svg
 	@inkscape -T -A $@ $<

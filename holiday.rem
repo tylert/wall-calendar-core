@@ -76,29 +76,29 @@
 
   # Martin Luther King Day is the third Monday in January
   REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Martin Luther King Day (US)%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 MSG %"Martin Luther King Day (US)%" %b%
 
   # President's Day is the third Monday in February
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 1000 MSG %"President's Day (US)%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 MSG %"President's Day (US)%" %b%
 
-  REM  Apr 23 +3 PRIORITY 1000 MSG %"St. George's Day (UK)%" %b%
-  REM  May 05 +3 PRIORITY 1000 MSG %"Cinco de Mayo (US)%" %b%
+  REM  Apr 23 +1 PRIORITY 1000 MSG %"St. George's Day (UK)%" %b%
+  REM  May 05 +1 PRIORITY 1000 MSG %"Cinco de Mayo (US)%" %b%
 
   # Memorial Day is the last Monday in May
   REM  Mon May [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Memorial Day (US)%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 MSG %"Memorial Day (US)%" %b%
 
-  REM  Jul 04 +3 PRIORITY 1000 MSG %"Independence Day (US)%" %b%
+  REM  Jul 04 +1 PRIORITY 1000 MSG %"Independence Day (US)%" %b%
 
   # Columbus Day is the second Monday in October
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Columbus Day (US)%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 MSG %"Columbus Day (US)%" %b%
 
-  REM  Nov 05 +3 PRIORITY 1000 MSG %"Guy Fawkes Day (UK)%" %b%
+  REM  Nov 05 +1 PRIORITY 1000 MSG %"Guy Fawkes Day (UK)%" %b%
 
   # US Thanksgiving Day is the fourth Thursday in November
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())]   +3 PRIORITY 1000 MSG %"Thanksgiving Day (US)%" %b%
-    REM  [trigger(trigdate()+1)] +3 PRIORITY 1000 MSG %"Black Friday (US)%" %b%
-    REM  [trigger(trigdate()+3)] +3 PRIORITY 1000 MSG %"Cyber Monday (US)%" %b%
+    REM  [trigger(trigdate())]   +1 PRIORITY 1000 MSG %"Thanksgiving Day (US)%" %b%
+    REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 MSG %"Black Friday (US)%" %b%
+    REM  [trigger(trigdate()+3)] +1 PRIORITY 1000 MSG %"Cyber Monday (US)%" %b%

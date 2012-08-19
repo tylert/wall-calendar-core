@@ -13,8 +13,8 @@ rulers.pdf : rulers.svg
 
 calendar.pdf : yearly.ps rulers.pdf
 	@a2ps -2B --borders=no $< -o - | ps2pdf - |\
-    pdftk - cat 1-2S output - uncompress |\
-    pdftk - background rulers.pdf output $@
+	pdftk - cat 1-2S output - uncompress |\
+	pdftk - background rulers.pdf output $@
 
 .PHONY : clean
 clean :

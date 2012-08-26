@@ -9,7 +9,7 @@
   #REM  Jun 21 +1 PRIORITY 0000 MSG %"First Day of Summer%" %b%
   #REM  Sep 22 +1 PRIORITY 0000 MSG %"First Day of Fall%" %b%
   #REM  Dec 23 +1 PRIORITY 0000 MSG %"First Day of Winter%" %b%
-# XXX FIXME XXX  Figure out the real season transitions from seasons.rem
+# XXX FIXME XXX  Figure out the real season transitions by relative position.
 
 
 # Signs of the Zodiac
@@ -121,7 +121,7 @@
 # XXX FIXME XXX  Try to determine the next blue moon
 
 
-# Make sunrise/sunset work for QTH
+# Make sunrise/sunset work for my home location
 
   SET $Location "Ottawa"
 

@@ -61,6 +61,7 @@
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Thanksgiving Day%" %b%
 
+  REM  Oct 30 +3 PRIORITY 1000 MSG %"Devil's Night%" %b%
   REM  Oct 31 +3 PRIORITY 1000 MSG %"Hallowe'en%" %b%
   REM  Nov 11 +3 PRIORITY 1000 MSG %"Rememberance Day%" %b%
   REM  Dec 24 +3 PRIORITY 1000 MSG %"Christmas Eve%" %b%

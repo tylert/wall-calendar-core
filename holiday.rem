@@ -72,6 +72,9 @@
   REM  Feb 02 +3 PRIORITY 1000 MSG %"Groundhog Day%" %b%
   REM  Feb 14 +3 PRIORITY 1000 MSG %"St. Valentine's Day%" %b%
 
+  REM 13 SATISFY [wkdaynum(trigdate()) == Friday]
+    REM [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Friday the 13th%" %b%
+
 
 # Generic holidays and celebratory-type events for US and UK
 

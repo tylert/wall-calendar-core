@@ -5,11 +5,7 @@
 
 # Seasonal change events
 
-  #REM  Mar 21 +1 PRIORITY 0000 MSG %"Spring Equinox%" %b%
-  #REM  Jun 21 +1 PRIORITY 0000 MSG %"Summer Solstice%" %b%
-  #REM  Sep 21 +1 PRIORITY 0000 MSG %"Fall Equinox%" %b%
-  #REM  Dec 21 +1 PRIORITY 0000 MSG %"Winter Solstice%" %b%
-# XXX FIXME XXX  Figure out the real season transitions by relative position.
+  INCLUDE seasons.rem
 
 
 # Signs of the Zodiac
@@ -129,12 +125,13 @@
   SET $LatMin 25
   SET $LatSec 15
 
-  SET $LongDeg -75
+  SET $LongDeg 75
   SET $LongMin 41
   SET $LongSec 24
 
   #REM [sunrise()]
   #REM [sunset()]
+# XXX FIXME XXX  Try to get the sun info on the daily calendar
 
 
 # DST transitions

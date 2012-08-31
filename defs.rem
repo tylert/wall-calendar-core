@@ -47,6 +47,9 @@
   SET Fri 5
   SET Sat 6
 
+
+# Other useful functions for great justice
+
   FSET nth(x) ord(year(trigdate()) - x)
 
 

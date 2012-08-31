@@ -5,9 +5,13 @@
 
 # Generic holidays and celebratory-type events for most of Canada
 
+  OMIT Jan 01 +3 PRIORITY 1000 MSG %"New Year's Day%" %b%
+  REM  Feb 02 +3 PRIORITY 1000 MSG %"Groundhog Day%" %b%
+  REM  Feb 14 +3 PRIORITY 1000 MSG %"St. Valentine's Day%" %b%
+
   # Family Day is the third Monday in February
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Family Day%" %b%
+    OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Family Day (CA)%" %b%
 
   REM  Mar 17 +3 PRIORITY 1000 MSG %"St. Patrick's Day%" %b%
   REM  Apr 01 +3 PRIORITY 1000 MSG %"April Fool's Day%" %b%
@@ -30,7 +34,7 @@
 
   # Victoria Day is the Monday on or before May 24
   REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Victoria Day%" %b%
+    OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Victoria Day (CA)%" %b%
 
   # Father's Day is the third Sunday in June
   REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -59,7 +63,7 @@
 
   # Canadian Thanksgiving is the second Monday in October
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Thanksgiving Day%" %b%
+    OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Thanksgiving Day (CA)%" %b%
 
   REM  Oct 30 +3 PRIORITY 1000 MSG %"Devil's Night%" %b%
   REM  Oct 31 +3 PRIORITY 1000 MSG %"Hallowe'en%" %b%
@@ -68,9 +72,6 @@
   OMIT Dec 25 +3 PRIORITY 1000 MSG %"Christmas Day%" %b%
   OMIT Dec 26 +3 PRIORITY 1000 MSG %"Boxing Day%" %b%
   REM  Dec 31 +3 PRIORITY 1000 MSG %"New Year's Eve%" %b%
-  OMIT Jan 01 +3 PRIORITY 1000 MSG %"New Year's Day%" %b%
-  REM  Feb 02 +3 PRIORITY 1000 MSG %"Groundhog Day%" %b%
-  REM  Feb 14 +3 PRIORITY 1000 MSG %"St. Valentine's Day%" %b%
 
   REM 13 SATISFY [wkdaynum(trigdate()) == Friday]
     REM [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Friday the 13th%" %b%

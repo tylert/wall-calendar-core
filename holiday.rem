@@ -86,6 +86,8 @@
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 MSG %"President's Day (US)%" %b%
 
+  REM  Mar 01 +1 PRIORITY 1000 MSG %"St. David's Day (UK)%" %b%
+  REM  Apr 21 +1 PRIORITY 1000 MSG %"Queen's Birthday (UK)%" %b%
   REM  Apr 23 +1 PRIORITY 1000 MSG %"St. George's Day (UK)%" %b%
   REM  May 05 +1 PRIORITY 1000 MSG %"Cinco de Mayo (US)%" %b%
 
@@ -99,6 +101,7 @@
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 MSG %"Columbus Day (US)%" %b%
 
+  REM  Nov 04 +1 PRIORITY 1000 MSG %"Bonfire Night (UK)%" %b%
   REM  Nov 05 +1 PRIORITY 1000 MSG %"Guy Fawkes Day (UK)%" %b%
 
   # US Thanksgiving Day is the fourth Thursday in November
@@ -106,3 +109,5 @@
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 MSG %"Thanksgiving Day (US)%" %b%
     REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 MSG %"Black Friday (US)%" %b%
     REM  [trigger(trigdate()+3)] +1 PRIORITY 1000 MSG %"Cyber Monday (US)%" %b%
+
+  REM  Nov 30 +1 PRIORITY 1000 MSG %"St. Andrew's Day (UK)%" %b%

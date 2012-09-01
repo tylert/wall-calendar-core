@@ -8,6 +8,25 @@
   INCLUDE seasons.rem
 
 
+# DST transitions
+
+  # New DST starts on the second Sunday in March
+  REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +3 PRIORITY 0000 AT 02:00 +60 MSG %"03:00 New DST Starts (EDT;  Z-4=Q)%" %b%
+
+  # New DST ends on the first Sunday in November
+  REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +3 PRIORITY 0000 AT 02:00 +60 MSG %"01:00 New DST Ends (EST;  Z-5=R)%" %b%
+
+  # Old DST starts on the first Sunday in April
+  REM  Sun Apr [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Old DST Starts%" %b%
+
+  # Old DST ends on the fourth Sunday in October
+  REM  Sun Oct [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Old DST Ends%" %b%
+
+
 # Signs of the Zodiac
 
   REM  Mar 21 +1 PRIORITY 0000 MSG %"Aries Rises%" %b%
@@ -132,22 +151,3 @@
   #REM [sunrise()]
   #REM [sunset()]
 # XXX FIXME XXX  Try to get the sun info on the daily calendar
-
-
-# DST transitions
-
-  # New DST starts on the second Sunday in March
-  REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 0000 AT 02:00 +60 MSG %"03:00 New DST Starts (EDT;  Z-4=Q)%" %b%
-
-  # New DST ends on the first Sunday in November
-  REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 0000 AT 02:00 +60 MSG %"01:00 New DST Ends (EST;  Z-5=R)%" %b%
-
-  # Old DST starts on the first Sunday in April
-  REM  Sun Apr [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Old DST Starts%" %b%
-
-  # Old DST ends on the fourth Sunday in October
-  REM  Sun Oct [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Old DST Ends%" %b%

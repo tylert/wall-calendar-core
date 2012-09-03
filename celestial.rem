@@ -148,6 +148,11 @@
   SET $LongMin 41
   SET $LongSec 24
 
-  #REM [sunrise()]
-  #REM [sunset()]
+  #MSG Sun is up from [sunrise(trigdate())] to [sunset(trigdate())]%
+  #MSG Next full moon is [mon(moondate(2))] [day(moondate(2))], [year(moondate(2))].%"%"%
 # XXX FIXME XXX  Try to get the sun info on the daily calendar
+
+  # add info to a reminder not viewable in calendar mode (wyrd) but viewable in default mode with rem -q (bound to "r" in wyrd)
+  # text contained within %" and %" will display in calendar mode (wyrd)
+  # %_%_ starts a paragraph, and %_ represents a new line of text
+  #REM Apr 1 2006 MSG %"some title that displays in calendar mode%" %_%_and more info for default mode with rem -q%_this being a new line of text

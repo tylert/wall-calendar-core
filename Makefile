@@ -1,12 +1,15 @@
 SHELL := /bin/bash
 
-GENERATED_FILES = yearly.ps rulers.pdf calendar.pdf
+GENERATED_FILES = yearly.ps yearly-fr.ps rulers.pdf calendar.pdf
 
 .PHONY : all
 all : $(GENERATED_FILES)
 
 yearly.ps : $(wildcard *.rem)
 	@remind -p12 -b1 -gdddd top.rem $(DATE) | rem2ps -l -e -olrtb 1 -sthed 8 > $@
+
+yearly-fr.ps : $(wildcard *.rem)
+	@remind-fr -p12 -b1 -gdddd top.rem $(DATE) | rem2ps-fr -i -l -e -olrtb 1 -sthed 8 > $@
 
 rulers.pdf : rulers.svg
 	@inkscape -T -A $@ $<

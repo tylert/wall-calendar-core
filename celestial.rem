@@ -12,11 +12,13 @@
 
   # New DST starts on the second Sunday in March
   REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 0000 AT 02:00 +60 MSG %"03:00 New DST Starts (EDT;  Z-4=Q)%" %b%
+    REM  [trigger(trigdate())] +3 PRIORITY 0000 AT 02:00 +60 \
+      MSG %"03:00 New DST Starts (EDT;  Z-4=Q)%" %b%
 
   # New DST ends on the first Sunday in November
   REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 0000 AT 02:00 +60 MSG %"01:00 New DST Ends (EST;  Z-5=R)%" %b%
+    REM  [trigger(trigdate())] +3 PRIORITY 0000 AT 02:00 +60 \
+      MSG %"01:00 New DST Ends (EST;  Z-5=R)%" %b%
 
   # Old DST starts on the first Sunday in April
   REM  Sun Apr [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -54,11 +56,13 @@
   REM  Feb 19 +1 PRIORITY 0000 MSG %"Pisces Rises%" %b%
   REM  Mar 20 +1 PRIORITY 0000 MSG %"Pisces Sets%" %b%
 
-  # Chinese/Lunar New Year is between Jan 21 and Feb 20 on the day after the new moon
+  # Chinese/Lunar New Year is between Jan 21 and Feb 20 on the day after the
+  # new moon
   REM  [trigger(moondate(0))] SATISFY 1
   IF monnum(trigdate()) == January && day(trigdate()) >= 21 \
   || monnum(trigdate()) == February && day(trigdate()) <= 20
-    REM [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Chinese Year of the [element()] [animal()]%" %b%
+    REM [trigger(trigdate())] +1 PRIORITY 0000 \
+      MSG %"Chinese Year of the [element()] [animal()]%" %b%
   ENDIF
 # XXX FIXME XXX  Move this event to the day after the new moon instead
 
@@ -79,32 +83,38 @@
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == March
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Worm/Crow/Crust/Sap/Lenten Moon%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 \
+      MSG %"Worm/Crow/Crust/Sap/Lenten Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == April
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Pink/Sprouting Grass/Egg/Fish Moon%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 \
+      MSG %"Pink/Sprouting Grass/Egg/Fish Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == May
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Flower/Corn Planting/Milk Moon%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 \
+      MSG %"Flower/Corn Planting/Milk Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == June
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Strawberry/Rose Moon%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 \
+      MSG %"Strawberry/Rose Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == July
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Buck/Thunder/Hay Moon%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 \
+      MSG %"Buck/Thunder/Hay Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == August
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Sturgeon/Red/Green Corn/Grain Moon%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 \
+      MSG %"Sturgeon/Red/Green Corn/Grain Moon%" %b%
   ENDIF
 
   REM  [trigger(moondate(2))] SATISFY 1
@@ -124,7 +134,8 @@
 
   REM  [trigger(moondate(2))] SATISFY 1
   IF monnum(trigdate()) == December
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Cold/Long Nights Moon%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 \
+      MSG %"Cold/Long Nights Moon%" %b%
     REM  [trigger(trigdate())] +1 PRIORITY 0000 MSG %"Moon Before Yule%" %b%
   ENDIF
 

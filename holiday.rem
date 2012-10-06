@@ -72,11 +72,12 @@
   # Canadian Thanksgiving is the second Monday in October
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"Thanksgiving Day (CA)%" %b%
+      MSG %"[babel("Thanksgiving Day (CA)", "Action de Grâce")]%" %b%
 
   REM  Oct 30 +3 PRIORITY 1000 MSG %"Devil's Night%" %b%
   REM  Oct 31 +3 PRIORITY 1000 MSG %"Hallowe'en%" %b%
-  REM  Nov 11 +3 PRIORITY 1000 MSG %"Rememberance Day%" %b%
+  REM  Nov 11 +3 PRIORITY 1000 \
+    MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
   REM  Dec 24 +3 PRIORITY 1000 MSG %"Christmas Eve%" %b%
   OMIT Dec 25 +3 PRIORITY 1000 MSG %"[babel("Christmas Day", "Noël")]%" %b%
   OMIT Dec 26 +3 PRIORITY 1000 MSG %"Boxing Day%" %b%
@@ -119,7 +120,7 @@
   # US Thanksgiving Day is the fourth Thursday in November
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
-      MSG %"Thanksgiving Day (US)%" %b%
+      MSG %"[babel("Thanksgiving Day (US)","Action de Grâce (ÉU)")]%" %b%
     REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 MSG %"Black Friday (US)%" %b%
     REM  [trigger(trigdate()+3)] +1 PRIORITY 1000 MSG %"Cyber Monday (US)%" %b%
 

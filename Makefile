@@ -10,8 +10,15 @@ yearly.ps : $(wildcard *.rem)
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
 yearly.fr.ps : $(wildcard *.rem)
-	@remind.fr -p12 -b1 -gdddd top.rem $(DATE) |\
+	@remind.fr -p12 -b1 -gdddd rac.rem $(DATE) |\
     rem2ps.fr -i -l -e -olrtb 1 -sthed 8 > $@
+
+# Ã© -> é
+# Ã ̈ -> è
+# Ã« -> ë
+# Ãa -> ê
+# Ã¢ -> â
+# Ã ́ -> ô
 
 rulers.pdf : rulers.svg
 	@inkscape -T -A $@ $<

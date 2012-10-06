@@ -7,54 +7,71 @@
 
   OMIT Jan 01 +3 PRIORITY 1000 \
     MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
-  REM  Feb 02 +3 PRIORITY 1000 MSG %"Groundhog Day%" %b%
-  REM  Feb 14 +3 PRIORITY 1000 MSG %"St. Valentine's Day%" %b%
+  REM  Feb 02 +3 PRIORITY 1000 \
+    MSG %"[babel("Groundhog Day", "Fête de la marmotte")]%" %b%
+  REM  Feb 14 +3 PRIORITY 1000 \
+    MSG %"[babel("St. Valentine's Day", "Fête des amoureux")]%" %b%
 
   # Family Day is the third Monday in February
+  # AB, BC, ON, SK => Family Day, MB => Louis Riel Day, PE => Islander Day
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Family Day (CA)%" %b%
+    OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Family/Louis Riel/Islander Day", "")]%" %b%
 
-  REM  Mar 17 +3 PRIORITY 1000 MSG %"St. Patrick's Day%" %b%
-  REM  Apr 01 +3 PRIORITY 1000 MSG %"April Fool's Day%" %b%
+  REM  Mar 17 +3 PRIORITY 1000 \
+    MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
+  REM  Apr 01 +3 PRIORITY 1000 \
+    MSG %"[babel("April Fool's Day", "1er avril")]%" %b%
 
   # Easter is the first Sunday after the first full moon after the Spring
   # equinox
   SET easter easterdate(year(today()))
-    REM  [trigger(easter-47)] +3 PRIORITY 1000 MSG %"Shrove Tuesday%" %b%
-    REM  [trigger(easter-46)] +3 PRIORITY 1000 MSG %"Ash Wednesday%" %b%
-    REM  [trigger(easter-7)]  +3 PRIORITY 1000 MSG %"Palm Sunday%" %b%
-    REM  [trigger(easter-3)]  +3 PRIORITY 1000 MSG %"Maundy Thursday%" %b%
-    OMIT [trigger(easter-2)]  +3 PRIORITY 1000 MSG %"Good Friday%" %b%
-    OMIT [trigger(easter)]    +3 PRIORITY 1000 MSG %"Easter Sunday%" %b%
-    REM  [trigger(easter+1)]  +3 PRIORITY 1000 MSG %"Easter Monday%" %b%
-    REM  [trigger(easter+39)] +3 PRIORITY 1000 MSG %"Ascension%" %b%
-    REM  [trigger(easter+49)] +3 PRIORITY 1000 MSG %"Pentecost%" %b%
+    REM  [trigger(easter-47)] +3 PRIORITY 1000 \
+      MSG %"[babel("Shrove Tuesday", "")]%" %b%
+    REM  [trigger(easter-46)] +3 PRIORITY 1000 \
+      MSG %"[babel("Ash Wednesday", "")]%" %b%
+    REM  [trigger(easter-7)]  +3 PRIORITY 1000 \
+      MSG %"[babel("Palm Sunday", "")]%" %b%
+    REM  [trigger(easter-3)]  +3 PRIORITY 1000 \
+      MSG %"[babel("Maundy Thursday", "")]%" %b%
+    OMIT [trigger(easter-2)]  +3 PRIORITY 1000 \
+      MSG %"[babel("Good Friday", "Vendredi saint")]%" %b%
+    OMIT [trigger(easter)]    +3 PRIORITY 1000 \
+      MSG %"[babel("Easter Sunday", "Le dimanche de Pâques")]%" %b%
+    REM  [trigger(easter+1)]  +3 PRIORITY 1000 \
+      MSG %"[babel("Easter Monday", "Le lundi de Pâques")]%" %b%
+    REM  [trigger(easter+39)] +3 PRIORITY 1000 \
+      MSG %"[babel("Ascension", "")]%" %b%
+    REM  [trigger(easter+49)] +3 PRIORITY 1000 \
+      MSG %"[babel("Pentecost", "Pentecôte")]%" %b%
 
   # Mother's Day is the second Sunday in May
   REM  Sun May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Mother's Day%" %b%
+    REM  [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Mother's Day", "Fête des Mères")]%" %b%
 
   # Victoria Day is the Monday on or before May 24
   REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Victoria Day (CA)", "Fête de la Reine")]%" %b%
+      MSG %"[babel("Victoria Day", "Fête de la Reine")]%" %b%
 
   # Father's Day is the third Sunday in June
   REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Father's Day%" %b%
+    REM  [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Father's Day", "Fête des Pères")]%" %b%
 
   REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF wkdaynum(trigdate()) == Saturday
     REM  [trigger(trigdate())]   +3 PRIORITY 1000 \
       MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
     OMIT [trigger(trigdate()+2)] +3 PRIORITY 1000 \
-      MSG %"Day off for Canada Day%" %b%
+      MSG %"[babel("Day off for Canada Day", "")]%" %b%
   ELSE
     IF wkdaynum(trigdate()) == Sunday
       REM  [trigger(trigdate())]   +3 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
       OMIT [trigger(trigdate()+1)] +3 PRIORITY 1000 \
-        MSG %"Day off for Canada Day%" %b%
+        MSG %"[babel("Day off for Canada Day", "")]%" %b%
     ELSE
       OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
@@ -63,65 +80,32 @@
 
   # Civic holiday is the first Monday in August
   REM  Mon Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Civic Holiday%" %b%
+    OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Civic Holiday", "")]%" %b%
 
   # Labour Day is the first Monday in September
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Labour Day%" %b%
+    OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Labour Day", "Fête du Travail")]%" %b%
 
   # Canadian Thanksgiving is the second Monday in October
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Thanksgiving Day (CA)", "Action de Grâce")]%" %b%
+      MSG %"[babel("Thanksgiving Day", "Journée d'Actions de Grâce")]%" %b%
 
-  REM  Oct 30 +3 PRIORITY 1000 MSG %"Devil's Night%" %b%
-  REM  Oct 31 +3 PRIORITY 1000 MSG %"Hallowe'en%" %b%
+  REM  Oct 31 +3 PRIORITY 1000 \
+    MSG %"[babel("Hallowe'en", "L'Halloween")]%" %b%
   REM  Nov 11 +3 PRIORITY 1000 \
     MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
-  REM  Dec 24 +3 PRIORITY 1000 MSG %"Christmas Eve%" %b%
-  OMIT Dec 25 +3 PRIORITY 1000 MSG %"[babel("Christmas Day", "Noël")]%" %b%
-  OMIT Dec 26 +3 PRIORITY 1000 MSG %"Boxing Day%" %b%
-  REM  Dec 31 +3 PRIORITY 1000 MSG %"New Year's Eve%" %b%
+  REM  Dec 24 +3 PRIORITY 1000 \
+    MSG %"[babel("Christmas Eve", "")]%" %b%
+  OMIT Dec 25 +3 PRIORITY 1000 \
+    MSG %"[babel("Christmas Day", "Noël")]%" %b%
+  OMIT Dec 26 +3 PRIORITY 1000 \
+    MSG %"[babel("Boxing Day", "")]%" %b%
+  REM  Dec 31 +3 PRIORITY 1000 \
+    MSG %"[babel("New Year's Eve", "Réveillon de la Saint-Sylvestre")]%" %b%
 
   REM 13 SATISFY [wkdaynum(trigdate()) == Friday]
-    REM [trigger(trigdate())] +3 PRIORITY 1000 MSG %"Friday the 13th%" %b%
-
-
-# Generic holidays and celebratory-type events for US and UK
-
-  # Martin Luther King Day is the third Monday in January
-  REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"Martin Luther King Day (US)%" %b%
-
-  # President's Day is the third Monday in February
-  REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"President's Day (US)%" %b%
-
-  REM  Mar 01 +1 PRIORITY 1000 MSG %"St. David's Day (UK)%" %b%
-  REM  Apr 21 +1 PRIORITY 1000 MSG %"Queen's Birthday (UK)%" %b%
-  REM  Apr 23 +1 PRIORITY 1000 MSG %"St. George's Day (UK)%" %b%
-  REM  May 05 +1 PRIORITY 1000 MSG %"Cinco de Mayo (US)%" %b%
-
-  # Memorial Day is the last Monday in May
-  REM  Mon May [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 MSG %"Memorial Day (US)%" %b%
-
-  REM  Jul 04 +1 PRIORITY 1000 MSG %"Independence Day (US)%" %b%
-
-  # Columbus Day is the second Monday in October
-  REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 MSG %"Columbus Day (US)%" %b%
-
-  REM  Nov 04 +1 PRIORITY 1000 MSG %"Bonfire Night (UK)%" %b%
-  REM  Nov 05 +1 PRIORITY 1000 MSG %"Guy Fawkes Day (UK)%" %b%
-
-  # US Thanksgiving Day is the fourth Thursday in November
-  REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
-      MSG %"[babel("Thanksgiving Day (US)","Action de Grâce (ÉU)")]%" %b%
-    REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 MSG %"Black Friday (US)%" %b%
-    REM  [trigger(trigdate()+3)] +1 PRIORITY 1000 MSG %"Cyber Monday (US)%" %b%
-
-  REM  Nov 30 +1 PRIORITY 1000 MSG %"St. Andrew's Day (UK)%" %b%
+    REM [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%

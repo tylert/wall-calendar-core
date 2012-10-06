@@ -24,4 +24,4 @@
 
 # Print week numbers
 
-  REM Sunday SPECIAL WEEK Week [weekno()]
+  REM Sunday SPECIAL WEEK [babel("Week", "Semaine")] [weekno()]

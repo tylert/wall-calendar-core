@@ -1,17 +1,24 @@
 SHELL := /bin/bash
 
-GENERATED_FILES = yearly.ps yearly.fr.ps rulers.pdf calendar.pdf
+GENERATED_FILES = rac.en.pdf rac.fr.pdf watermark.pdf \
+  yearly.ps calendar.pdf rulers.pdf
 
 .PHONY : all
 all : $(GENERATED_FILES)
 
-yearly.ps : $(wildcard *.rem)
+yearly.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd top.rem $(DATE) |\
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
-yearly.fr.ps : $(wildcard *.rem)
+rac.en.pdf : $(wildcard *.rem) watermark.pdf Makefile
+	@remind -p12 -b1 -gdddd rac.rem $(DATE) |\
+    rem2ps -l -e -olrtb 1 -sthed 8 | ps2pdf - |\
+      pdftk - background watermark.pdf output $@
+
+rac.fr.pdf : $(wildcard *.rem) watermark.pdf Makefile
 	@remind.fr -p12 -b1 -gdddd rac.rem $(DATE) |\
-    rem2ps.fr -i -l -e -olrtb 1 -sthed 8 > $@
+    rem2ps.fr -i -l -e -olrtb 1 -sthed 8 | ps2pdf - |\
+      pdftk - background watermark.pdf output $@
 
 # Ã© -> é
 # Ã ̈ -> è
@@ -20,7 +27,10 @@ yearly.fr.ps : $(wildcard *.rem)
 # Ã¢ -> â
 # Ã ́ -> ô
 
-rulers.pdf : rulers.svg
+%.pdf : %.ps
+	@ps2pdf $< $@
+
+%.pdf : %.svg
 	@inkscape -T -A $@ $<
 
 calendar.pdf : yearly.ps rulers.pdf

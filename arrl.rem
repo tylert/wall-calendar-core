@@ -8,9 +8,11 @@
   REM Jan 1 AT 00:00 DURATION 23:59 \
     MSG %"ARRL Straight Key Night%" %b%
 
-# XXX FIXME XXX never on January 1
-  REM Sat Jan [Week_1] AT 18:00 DURATION 29:59 \
-    MSG %"ARRL RTTY Roundup%" %b%
+  IFTRIG Jan 1
+  ELSE
+    REM Sat Jan [Week_1] AT 18:00 DURATION 29:59 \
+      MSG %"ARRL RTTY Roundup%" %b%
+  ENDIF
 
 # XXX FIXME XXX third or fourth weekend
   REM Sat Jan [Week_3] AT 19:00 DURATION 32:59 \
@@ -52,7 +54,7 @@
 
 # XXX FIXME XXX These shouldn't line up on the same weekend
   REM Fri Dec [Week_1] AT 22:00 DURATION 41:59 \
-    MSG %"ARRL 160 Meter Contest%" %b%
+    MSG %"[babel("ARRL 160 Meter Contest", "ARRL concours 160 metres")]%" %b%
   REM Sat Dec [Week_2] AT 00:00 DURATION 23:59 \
     MSG %"ARRL 10 Meter Contest%" %b%
   REM Sun Dec [Week_3] AT 18:00 DURATION 05:59 \

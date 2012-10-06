@@ -52,6 +52,9 @@
 
   FSET nth(x) ord(year(trigdate()) - x)
 
+  FSET mylang() iif(language() == "French", 2, 1)
+  FSET babel(x, y) choose(mylang(), x, y)
+
 
 # Chinese zodiac helper functions
 

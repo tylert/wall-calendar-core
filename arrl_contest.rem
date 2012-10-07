@@ -3,6 +3,19 @@
   INCLUDE defs.rem
 
 
+# Generic radio-related reminders
+
+  REM  Apr 18 +3 PRIORITY 2000 \
+    MSG %"[babel("World Amateur Radio Day", "")]%" %b%
+
+
+# RAC generic contest dates
+
+  # The RAC Winter Contest is usually the third Saturday in December
+  REM  Sat Dec [Week_3] +7 PRIORITY 2000 AT 20:00 +60 DURATION 24:00 \
+    MSG %"[babel("RAC Winter Contest", "")]%" %b%
+
+
 # ARRL generic contest dates
 
   REM Jan 1 AT 00:00 DURATION 23:59 \
@@ -52,7 +65,7 @@
   REM Sat Nov [Week_3] AT 21:00 DURATION 29:59 \
     MSG %"[babel("ARRL November Sweepstakes Phone", "")]%" %b%
 
-# XXX FIXME XXX These shouldn't line up on the same weekend
+# XXX FIXME XXX These next two shouldn't ever line up on the same weekend
   REM Fri Dec [Week_1] AT 22:00 DURATION 41:59 \
     MSG %"[babel("ARRL 160 Meter Contest", "ARRL concours 160 metres")]%" %b%
   REM Sat Dec [Week_2] AT 00:00 DURATION 23:59 \

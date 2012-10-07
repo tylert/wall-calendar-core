@@ -5,7 +5,7 @@
 
 # Seasonal change events
 
-  INCLUDE seasons.rem
+  INCLUDE season.rem
 
 
 # DST transitions

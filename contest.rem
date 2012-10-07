@@ -18,8 +18,8 @@
 
 # Pull in all the other calendars
 
-  INCLUDE holiday.rem
-  INCLUDE arrl.rem
+  INCLUDE canada_holiday.rem
+  INCLUDE arrl_contest.rem
 
 
 # Print week numbers

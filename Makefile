@@ -11,12 +11,12 @@ yearly.ps : $(wildcard *.rem) Makefile
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
 rac.en.pdf : $(wildcard *.rem) watermark.pdf Makefile
-	@remind -p12 -b1 -gdddd rac.rem $(DATE) |\
+	@remind -p12 -b1 -gdddd contest.rem $(DATE) |\
     rem2ps -l -e -olrtb 1 -sthed 8 | ps2pdf - |\
       pdftk - background watermark.pdf output $@
 
 rac.fr.pdf : $(wildcard *.rem) watermark.pdf Makefile
-	@remind.fr -p12 -b1 -gdddd rac.rem $(DATE) |\
+	@remind.fr -p12 -b1 -gdddd contest.rem $(DATE) |\
     rem2ps.fr -i -l -e -olrtb 1 -sthed 8 | ps2pdf - |\
       pdftk - background watermark.pdf output $@
 

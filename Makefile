@@ -11,24 +11,24 @@ yearly.ps : $(wildcard *.rem) Makefile
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
 calendar.pdf : yearly.ps rulers.pdf
-	@a2ps -2B --borders=no $< -o - | ps2pdf - |\
+	@a2ps -Xiso1 -2B --borders=no $< -o - | ps2pdf - |\
     pdftk - cat 1-2S output - uncompress |\
-      pdftk - background rulers.pdf output $@
+      pdftk - background rulers.pdf output $@ uncompress
 
 contest.en.pdf : $(wildcard *.rem) watermark.pdf Makefile
 	@remind -p12 -b1 -gdddd contest.rem $(DATE) |\
     rem2ps -l -e -olrtb 1 -sthed 8 | ps2pdf - |\
-      pdftk - background watermark.pdf output $@
+      pdftk - background watermark.pdf output $@ uncompress
 
 contest.fr.pdf : $(wildcard *.rem) watermark.pdf Makefile
 	@remind.fr -p12 -b1 -gdddd contest.rem $(DATE) |\
     rem2ps.fr -i -l -e -olrtb 1 -sthed 8 | ps2pdf - |\
-      pdftk - background watermark.pdf output $@
+      pdftk - background watermark.pdf output $@ uncompress
 
 # Ã© -> é
-# Ã ̈ -> è
+# Ã¨ -> è
 # Ã« -> ë
-# Ãa -> ê
+# Ãª -> ê
 # Ã¢ -> â
 # Ã ́ -> ô
 

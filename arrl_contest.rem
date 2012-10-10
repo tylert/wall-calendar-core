@@ -12,7 +12,7 @@
 
 # RAC generic contest dates
 
-  REM  Jul 1 +7 PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
+  REM  Jul 01 +7 PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
     MSG %"[babel("RAC Canada Day Contest", \
                  "Concours Fête du Canada RAC")]%" %b%
 
@@ -24,10 +24,10 @@
 
 # ARRL generic contest dates
 
-  REM Jan 1 PRIORITY 2000 AT 00:00 DURATION 23:59 \
+  REM Jan 01 PRIORITY 2000 AT 00:00 DURATION 23:59 \
     MSG %"[babel("ARRL Straight Key Night", "")]%" %b%
 
-  IFTRIG Jan 1
+  IFTRIG Jan 01
   ELSE
     REM Sat Jan [Week_1] PRIORITY 2000 AT 18:00 DURATION 29:59 \
       MSG %"[babel("ARRL RTTY Roundup", "")]%" %b%
@@ -38,11 +38,12 @@
     MSG %"[babel("ARRL January VHF Sweepstakes", "")]%" %b%
 
   REM Sat Feb [Week_3] PRIORITY 2000 AT 00:00 DURATION 23:59 \
-    MSG %"[babel("International DX Contest CW", "")]%" %b%
+    MSG %"[babel("International DX Contest CW", \
+                 "Concours DX international ???")]%" %b%
 
   REM Sat Mar [Week_1] PRIORITY 2000 AT 00:00 DURATION 23:59 \
     MSG %"[babel("International DX Contest Phone", \
-                 "concours DX International")]%" %b%
+                 "Concours DX international ???")]%" %b%
 
   REM Sun Apr [Week_3] PRIORITY 2000 AT 18:00 DURATION 05:59 \
     MSG %"[babel("ARRL Rookie Roundup Phone", "")]%" %b%
@@ -56,16 +57,18 @@
     MSG %"[babel("IARU HF World Championships", "")]%" %b%
 
   REM Sat Aug [Week_1] PRIORITY 2000 AT 18:00 DURATION 23:59 \
-    MSG %"[babel("ARRL August UHF Contest", "")]%" %b%
+    MSG %"[babel("ARRL August UHF Contest", "Concours UHF d'aout ARRL")]%" %b%
   REM Sat Aug [Week_3] PRIORITY 2000 AT 06:00 DURATION 29:59 \
-    MSG %"[babel("(Local, not UTC) ARRL 10 GHz and Up Contest Round 1", "")]%" %b%
+    MSG %"[babel("(not in UTC) ARRL 10 GHz and Up Contest Round 1", \
+                 "(pas dans UTC) Concours 10 GHz et plus haut ARRL 1er partie")]%" %b%
   REM Sun Aug [Week_3] PRIORITY 2000 AT 18:00 DURATION 05:59 \
     MSG %"[babel("ARRL Rookie Roundup RTTY", "")]%" %b%
 
   REM Sat Sep [Week_2] PRIORITY 2000 AT 18:00 DURATION 32:59 \
     MSG %"[babel("ARRL September VHF QSO Party", "")]%" %b%
   REM Sat Sep [Week_3] PRIORITY 2000 AT 06:00 DURATION 29:59 \
-    MSG %"[babel("(Local, not UTC) ARRL 10 GHz and Up Contest Round 2", "")]%" %b%
+    MSG %"[babel("(not in UTC) ARRL 10 GHz and Up Contest Round 2", \
+                 "(pas dans UTC) Concours 10 GHz et plus haut ARRL 2ieme partie")]%" %b%
 
   REM Sat Nov [Week_1] PRIORITY 2000 AT 21:00 DURATION 29:59 \
     MSG %"[babel("ARRL November Sweepstakes CW", "")]%" %b%
@@ -74,8 +77,8 @@
 
 # XXX FIXME XXX These next two shouldn't ever line up on the same weekend
   REM Fri Dec [Week_1] PRIORITY 2000 AT 22:00 DURATION 41:59 \
-    MSG %"[babel("ARRL 160 Meter Contest", "ARRL concours 160 metres")]%" %b%
+    MSG %"[babel("ARRL 160 Meter Contest", "Concours 160 metres ARRL")]%" %b%
   REM Sat Dec [Week_2] PRIORITY 2000 AT 00:00 DURATION 23:59 \
-    MSG %"[babel("ARRL 10 Meter Contest", "")]%" %b%
+    MSG %"[babel("ARRL 10 Meter Contest", "Concours 10 metres ARRL")]%" %b%
   REM Sun Dec [Week_3] PRIORITY 2000 AT 18:00 DURATION 05:59 \
     MSG %"[babel("ARRL Rookie Roundup CW", "")]%" %b%

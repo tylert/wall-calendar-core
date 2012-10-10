@@ -14,6 +14,7 @@
 
   # Family Day is the third Monday in February
   # AB, BC, ON, SK => Family Day, MB => Louis Riel Day, PE => Islander Day
+  # QC => ?
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Family/Louis Riel/Islander Day", "")]%" %b%

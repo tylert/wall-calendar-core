@@ -2,39 +2,66 @@
 
   INCLUDE defs.rem
 
+  # AB => Alberta
+  # BC => British Columbia
+  # MB => Manitoba
+  # NB => New Brunswick
+  # NL => Newfoundland and Labrador
+  # NS => Nova Scotia
+  # NT => Northwest Territories
+  # NU => Nunavut
+  # ON => Ontario
+  # PE => Prince Edward Island
+  # QC => Quebec
+  # SK => Saskatchewan
+  # YT => Yukon
+
 
 # Generic holidays and celebratory-type events for most of Canada
 
   OMIT Jan 01 +3 PRIORITY 1000 \
     MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
   REM  Feb 02 +3 PRIORITY 1000 \
-    MSG %"[babel("Groundhog Day", "Fête de la marmotte")]%" %b%
+    MSG %"[babel("Groundhog Day", "Jour de la marmotte")]%" %b%
   REM  Feb 14 +3 PRIORITY 1000 \
-    MSG %"[babel("St. Valentine's Day", "Fête des amoureux")]%" %b%
+    MSG %"[babel("St. Valentine's Day", "Saint-Valentin")]%" %b%
 
-  # Family Day is the third Monday in February
-  # AB, BC, ON, SK => Family Day, MB => Louis Riel Day, PE => Islander Day
-  # QC => ?
+  # The second Monday in February is observed in 1 provinces and 0 territories
+  #   BC => Family Day (statutory)
+  REM  Mon Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Family Day (BC)", "")]%" %b%
+
+  # The third Monday in February is observed in 5 provinces and 0 territories
+  #   AB => Family Day (statutory)
+  #   MB => Louis Riel Day (statutory)
+  #   ON => Family Day (statutory)
+  #   PE => Islander Day (statutory)
+  #   SK => Family Day (statutory)
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Family/Louis Riel/Islander Day", "")]%" %b%
+      MSG %"[babel("Family Day (AB, ON, SK)", "")]%" %b%
+    REM  [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Louis Riel Day (MB)", "")]%" %b%
+    REM  [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Islander Day (PE)", "")]%" %b%
 
   REM  Mar 17 +3 PRIORITY 1000 \
     MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
   REM  Apr 01 +3 PRIORITY 1000 \
-    MSG %"[babel("April Fool's Day", "1er avril")]%" %b%
+    MSG %"[babel("April Fool's Day", "Poisson d'avril")]%" %b%
 
   # Easter is the first Sunday after the first full moon after the Spring
   # equinox
   SET easter easterdate(year(today()))
     REM  [trigger(easter-47)] +3 PRIORITY 1000 \
-      MSG %"[babel("Shrove Tuesday", "")]%" %b%
+      MSG %"[babel("Shrove Tuesday", "Mardi Gras")]%" %b%
     REM  [trigger(easter-46)] +3 PRIORITY 1000 \
-      MSG %"[babel("Ash Wednesday", "")]%" %b%
+      MSG %"[babel("Ash Wednesday", "Mercredi des Cendres")]%" %b%
     REM  [trigger(easter-7)]  +3 PRIORITY 1000 \
-      MSG %"[babel("Palm Sunday", "")]%" %b%
+      MSG %"[babel("Palm Sunday", "Dimanche des Rameaux")]%" %b%
     REM  [trigger(easter-3)]  +3 PRIORITY 1000 \
-      MSG %"[babel("Maundy Thursday", "")]%" %b%
+      MSG %"[babel("Maundy Thursday", "Jeudi saint")]%" %b%
     OMIT [trigger(easter-2)]  +3 PRIORITY 1000 \
       MSG %"[babel("Good Friday", "Vendredi saint")]%" %b%
     OMIT [trigger(easter)]    +3 PRIORITY 1000 \
@@ -42,7 +69,7 @@
     REM  [trigger(easter+1)]  +3 PRIORITY 1000 \
       MSG %"[babel("Easter Monday", "Le lundi de Pâques")]%" %b%
     REM  [trigger(easter+39)] +3 PRIORITY 1000 \
-      MSG %"[babel("Ascension", "")]%" %b%
+      MSG %"[babel("Ascension", "Ascension")]%" %b%
     REM  [trigger(easter+49)] +3 PRIORITY 1000 \
       MSG %"[babel("Pentecost", "Pentecôte")]%" %b%
 
@@ -54,12 +81,15 @@
   # Victoria Day is the Monday on or before May 24
   REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Victoria Day", "Fête de la Reine")]%" %b%
+      MSG %"[babel("Victoria Day", "Journée nationale des patriotes")]%" %b%
 
   # Father's Day is the third Sunday in June
   REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Father's Day", "Fête des Pères")]%" %b%
+
+  REM  Jun 24 +3 PRIORITY 1000 \
+    MSG %"[babel("St. John the Baptist Day", "Fête nationale du Québec")]%" %b%
 
   REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF wkdaynum(trigdate()) == Saturday
@@ -79,10 +109,23 @@
     ENDIF
   ENDIF
 
-  # Civic holiday is the first Monday in August
+  # The first Monday in August is a quasi-semi-poly-un-statutory holiday, kinda
+  #   AB => Heritage Day (optional, formerly statutory)
+  #   BC => British Columbia Day (statutory)
+  #   MB => Civic Holiday (non-statutory)
+  #   NB => New Brunswick Day (statutory)
+  #   NL => not observed
+  #   NS => Natal Day (non-statutory)
+  #   NT => Civic Holiday (statutory)
+  #   NU => Civic Holiday (statutory)
+  #   ON => Civic Holiday and Simcoe Day (non-statutory)
+  #   PE => Civic Holiday (statutory or non-statutory)
+  #   QC => not observed
+  #   SK => Saskatchewan Day (statutory)
+  #   YT => not observed
   REM  Mon Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Civic Holiday", "")]%" %b%
+      MSG %"[babel("August Long Weekend", "")]%" %b%
 
   # Labour Day is the first Monday in September
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -92,20 +135,20 @@
   # Canadian Thanksgiving is the second Monday in October
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Thanksgiving Day", "Journée d'Actions de Grâce")]%" %b%
+      MSG %"[babel("Thanksgiving Day", "Action de grâce")]%" %b%
 
   REM  Oct 31 +3 PRIORITY 1000 \
-    MSG %"[babel("Hallowe'en", "L'Halloween")]%" %b%
+    MSG %"[babel("Hallowe'en", "Halloween")]%" %b%
   REM  Nov 11 +3 PRIORITY 1000 \
     MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
   REM  Dec 24 +3 PRIORITY 1000 \
-    MSG %"[babel("Christmas Eve", "")]%" %b%
+    MSG %"[babel("Christmas Eve", "Veille de Noël")]%" %b%
   OMIT Dec 25 +3 PRIORITY 1000 \
     MSG %"[babel("Christmas Day", "Noël")]%" %b%
   OMIT Dec 26 +3 PRIORITY 1000 \
-    MSG %"[babel("Boxing Day", "")]%" %b%
+    MSG %"[babel("Boxing Day", "Lendemain de Noël")]%" %b%
   REM  Dec 31 +3 PRIORITY 1000 \
-    MSG %"[babel("New Year's Eve", "Réveillon de la Saint-Sylvestre")]%" %b%
+    MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%
 
   REM 13 SATISFY [wkdaynum(trigdate()) == Friday]
     REM [trigger(trigdate())] +3 PRIORITY 1000 \

@@ -45,7 +45,7 @@
   # US Thanksgiving Day is the fourth Thursday in November
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
-      MSG %"[babel("Thanksgiving Day (US)", "Journée d'Actions de Grâce américaine")]%" %b%
+      MSG %"[babel("Thanksgiving Day (US)", "Action de Grâce américaine")]%" %b%
     REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 \
       MSG %"[babel("Black Friday (US)", "")]%" %b%
     REM  [trigger(trigdate()+3)] +1 PRIORITY 1000 \

@@ -88,8 +88,12 @@
     REM  [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Father's Day", "Fête des Pères")]%" %b%
 
+  REM  Jun 21 +3 PRIORITY 1000 \
+    MSG %"[babel("National Aboriginal Day", \
+                 "Journée nationale des Autochtones")]%" %b%
   REM  Jun 24 +3 PRIORITY 1000 \
-    MSG %"[babel("St. John the Baptist Day", "Fête nationale du Québec")]%" %b%
+    MSG %"[babel("", "Fête nationale du Québec")]%" %b%
+#   MSG %"[babel("St. John the Baptist Day", "Fête de la Saint-Jean-Baptiste")]%" %b%
 
   REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF wkdaynum(trigdate()) == Saturday

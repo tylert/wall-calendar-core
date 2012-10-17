@@ -25,15 +25,17 @@ rac_calendar_fr.ps : $(wildcard *.rem) watermark.pdf Makefile
     rem2ps.fr -i -l -e -olrtb 1 -sthed 8 > $@
 
 rac_calendar_fr.pdf : rac_calendar_fr.ps watermark.pdf
-	@ps2pdf $< - |\
-    pdftk - background watermark.pdf output $@ uncompress
+	@cat $< | sed \
+    -e 's/\d195\d162/\d226/g' \
+    -e 's/\d195\d168/\d232/g' \
+    -e 's/\d195\d169/\d233/g' \
+    -e 's/\d195\d170/\d234/g' \
+    -e 's/\d195\d171/\d235/g' \
+    -e 's/\d195\d180/\d244/g' \
+      | ps2pdf - - |\
+        pdftk - background watermark.pdf output $@ uncompress
 
-# 's/Ã©/é/g'
-# 's/Ã¨/è/g'
-# 's/Ã«/ë/g'
-# 's/Ãª/ê/g'
-# 's/Ã¢/â/g'
-# 's/Ã´/ô/g'
+# man iso_8859-1
 
 %.pdf : %.ps
 	@ps2pdf $< $@

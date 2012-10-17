@@ -113,6 +113,13 @@
     ENDIF
   ENDIF
 
+  # The Quebec Construction Holiday is the last two weeks in July
+  REM  Sun Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("", "Début des vacances de la construction")]%" %b%
+    REM  Aug -1                +3 PRIORITY 1000 \
+      MSG %"[babel("", "Fin des vacances de la construction")]%" %b%
+
   # The first Monday in August is a quasi-semi-poly-un-statutory holiday, kinda
   #   AB => Heritage Day (optional, formerly statutory)
   #   BC => British Columbia Day (statutory)

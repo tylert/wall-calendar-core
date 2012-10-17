@@ -139,7 +139,7 @@
   # Canadian Thanksgiving is the second Monday in October
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Thanksgiving Day", "Action de grâce")]%" %b%
+      MSG %"[babel("Thanksgiving Day", "Action de Grâce")]%" %b%
 
   REM  Oct 31 +3 PRIORITY 1000 \
     MSG %"[babel("Hallowe'en", "Halloween")]%" %b%

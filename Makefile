@@ -1,7 +1,8 @@
 SHELL := /bin/bash
 
 GENERATED_FILES = calendar.ps calendar.pdf rulers.pdf \
-  calendar_rac_en.pdf calendar_rac_fr.ps calendar_rac_fr.pdf watermark_rac.pdf
+  calendar_rac_en.ps calendar_rac_en.pdf \
+  calendar_rac_fr.ps calendar_rac_fr.pdf watermark_rac.pdf
 
 .PHONY : all
 all : $(GENERATED_FILES)
@@ -15,10 +16,13 @@ calendar.pdf : calendar.ps rulers.pdf Makefile
     pdftk - cat 1-2S output - uncompress |\
       pdftk - background rulers.pdf output $@ uncompress
 
-calendar_rac_en.pdf : $(wildcard *.rem) watermark_rac.pdf Makefile
+calendar_rac_en.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd calendar_rac.rem $(DATE) |\
-    rem2ps -l -e -olrtb 1 -sthed 8 | ps2pdf - |\
-      pdftk - background watermark_rac.pdf output $@ uncompress
+    rem2ps -l -e -olrtb 1 -sthed 8 > $@
+
+calendar_rac_en.pdf : calendar_rac_en.ps watermark_rac.pdf Makefile
+	@ps2pdf $< - |\
+    pdftk - background watermark_rac.pdf output $@ uncompress
 
 calendar_rac_fr.ps : $(wildcard *.rem) Makefile
 	@remind.fr -p12 -b1 -gdddd calendar_rac.rem $(DATE) |\

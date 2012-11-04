@@ -1,13 +1,13 @@
 SHELL := /bin/bash
 
 GENERATED_FILES = calendar.ps calendar.pdf rulers.pdf \
-  rac_calendar_en.pdf rac_calendar_fr.ps rac_calendar_fr.pdf rac_watermark.pdf
+  calendar_rac_en.pdf calendar_rac_fr.ps calendar_rac_fr.pdf watermark_rac.pdf
 
 .PHONY : all
 all : $(GENERATED_FILES)
 
 calendar.ps : $(wildcard *.rem) Makefile
-	@remind -p12 -b1 -gdddd top.rem $(DATE) |\
+	@remind -p12 -b1 -gdddd calendar.rem $(DATE) |\
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
 calendar.pdf : calendar.ps rulers.pdf Makefile
@@ -15,16 +15,16 @@ calendar.pdf : calendar.ps rulers.pdf Makefile
     pdftk - cat 1-2S output - uncompress |\
       pdftk - background rulers.pdf output $@ uncompress
 
-rac_calendar_en.pdf : $(wildcard *.rem) rac_watermark.pdf Makefile
-	@remind -p12 -b1 -gdddd rac_calendar.rem $(DATE) |\
+calendar_rac_en.pdf : $(wildcard *.rem) watermark_rac.pdf Makefile
+	@remind -p12 -b1 -gdddd calendar_rac.rem $(DATE) |\
     rem2ps -l -e -olrtb 1 -sthed 8 | ps2pdf - |\
-      pdftk - background rac_watermark.pdf output $@ uncompress
+      pdftk - background watermark_rac.pdf output $@ uncompress
 
-rac_calendar_fr.ps : $(wildcard *.rem) rac_watermark.pdf Makefile
-	@remind.fr -p12 -b1 -gdddd rac_calendar.rem $(DATE) |\
+calendar_rac_fr.ps : $(wildcard *.rem) Makefile
+	@remind.fr -p12 -b1 -gdddd calendar_rac.rem $(DATE) |\
     rem2ps.fr -i -l -e -olrtb 1 -sthed 8 > $@
 
-rac_calendar_fr.pdf : rac_calendar_fr.ps rac_watermark.pdf Makefile
+calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf Makefile
 	@cat $< | sed \
     -e 's/\d195\d162/\d226/g' \
     -e 's/\d195\d168/\d232/g' \
@@ -33,7 +33,7 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps rac_watermark.pdf Makefile
     -e 's/\d195\d171/\d235/g' \
     -e 's/\d195\d180/\d244/g' \
       | ps2pdf - - |\
-        pdftk - background rac_watermark.pdf output $@ uncompress
+        pdftk - background watermark_rac.pdf output $@ uncompress
 
 # man iso_8859-1
 

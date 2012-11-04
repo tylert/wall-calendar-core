@@ -34,7 +34,6 @@ calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf Makefile
     -e 's/\d195\d180/\d244/g' \
       | ps2pdf - - |\
         pdftk - background watermark_rac.pdf output $@ uncompress
-
 # man iso_8859-1
 
 %.pdf : %.ps

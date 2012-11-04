@@ -22,6 +22,17 @@
   INCLUDE contest.rem
 
 
+# DST transitions
+
+  # New DST starts on the second Sunday in March
+  REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +3 PRIORITY 5000 MSG %"DST Starts (except SK)%" %b%
+
+  # New DST ends on the first Sunday in November
+  REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +3 PRIORITY 5000 MSG %"DST Ends (except SK)%" %b%
+
+
 # Print week numbers
 
-  REM Sunday SPECIAL WEEK [babel("Week", "Semaine")] [weekno()]
+  REM Sunday PRIORITY 5000 SPECIAL WEEK [babel("Week", "Semaine")] [weekno()]

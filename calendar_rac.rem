@@ -26,11 +26,15 @@
 
   # New DST starts on the second Sunday in March
   REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 5000 MSG %"DST Starts (except SK)%" %b%
+    REM  [trigger(trigdate())] +3 PRIORITY 5000 \
+      MSG %"[babel("DST Begins (except SK)", \
+                   "Heure d'éte commence (sauf SK)")]%" %b%
 
   # New DST ends on the first Sunday in November
   REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 5000 MSG %"DST Ends (except SK)%" %b%
+    REM  [trigger(trigdate())] +3 PRIORITY 5000 \
+      MSG %"[babel("DST Ends (except SK)", \
+                   "Heure d'éte termine (sauf SK)")]%" %b%
 
 
 # Print week numbers

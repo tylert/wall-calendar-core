@@ -19,8 +19,6 @@
     MSG %"[babel("St. David's Day (UK)", "")]%" %b%
   REM  Apr 21 +1 PRIORITY 1000 \
     MSG %"[babel("Queen's Birthday (UK)", "")]%" %b%
-  REM  Apr 23 +1 PRIORITY 1000 \
-    MSG %"[babel("St. George's Day (UK)", "")]%" %b%
   REM  May 05 +1 PRIORITY 1000 \
     MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai")]%" %b%
 

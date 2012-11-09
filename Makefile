@@ -21,8 +21,7 @@ calendar_rac_en.ps : $(wildcard *.rem) Makefile
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
 calendar_rac_en.pdf : calendar_rac_en.ps watermark_rac.pdf Makefile
-	@ps2pdf $< - |\
-    pdftk - background watermark_rac.pdf output $@ uncompress
+	@ps2pdf $< - | pdftk - background watermark_rac.pdf output $@ uncompress
 
 calendar_rac_fr.ps : $(wildcard *.rem) Makefile
 	@remind.fr -p12 -b1 -gdddd calendar_rac.rem $(DATE) |\
@@ -36,8 +35,7 @@ calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf Makefile
     -e 's/\d195\d170/\d234/g' \
     -e 's/\d195\d171/\d235/g' \
     -e 's/\d195\d180/\d244/g' \
-      | ps2pdf - - |\
-        pdftk - background watermark_rac.pdf output $@ uncompress
+      | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
 # man iso_8859-1
 
 %.pdf : %.ps

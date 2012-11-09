@@ -5,16 +5,16 @@
 
 # Short names for Canadian provinces and territories
 #   AB => Alberta
-#   BC => British Columbia
+#   BC => British Columbia, Colombie-Britannique
 #   MB => Manitoba
-#   NB => New Brunswick
-#   NL => Newfoundland and Labrador
-#   NS => Nova Scotia
-#   NT => Northwest Territories
-#   NU => Nunavut
+#   NB => New/Nouveau Brunswick
+#   NL => Newfoundland and Labrador, Terre-Neuve-et-Labrador
+#   NS => Nova Scotia, Nouvelle-Écosse
+#   NT => Northwest Territories, Territoires du Nord-Ouest
+#   NU => Nunavut, ᓄᓇᕗᑦ
 #   ON => Ontario
-#   PE => Prince Edward Island
-#   QC => Quebec
+#   PE => Prince Edward Island, Île-du-Prince-Édouard
+#   QC => Québec
 #   SK => Saskatchewan
 #   YT => Yukon
 
@@ -32,7 +32,7 @@
   #   BC => Family Day (statutory)
   REM  Mon Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Family Day (BC)", "")]%" %b%
+      MSG %"[babel("Family Day (BC)", "Fête de la famille (BC)")]%" %b%
 
   # The third Monday in February is observed in 5 provinces and 0 territories
   #   AB => Family Day (statutory)
@@ -42,18 +42,22 @@
   #   SK => Family Day (statutory)
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Family Day (AB, ON, SK)", "")]%" %b%
+      MSG %"[babel("Family Day (AB, ON, SK)", \
+                   "Fête de la famille (AB, ON, SK)")]%" %b%
     REM  [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Louis Riel Day (MB)", "")]%" %b%
+      MSG %"[babel("Louis Riel Day (MB)", "Journée Louis Riel (MB)")]%" %b%
     REM  [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Islander Day (PE)", "")]%" %b%
+      MSG %"[babel("Islander Day (PE)", "Fête des Insulaires (PE)")]%" %b%
+
+  # Heritage Day (YT) is the Friday before the last Sunday in February
 
   REM  Mar 17 +3 PRIORITY 1000 \
     MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
   REM  Apr 01 +3 PRIORITY 1000 \
     MSG %"[babel("April Fool's Day", "Poisson d'avril")]%" %b%
   REM  Apr 23 +1 PRIORITY 1000 \
-    MSG %"[babel("St. George's Day", "")]%" %b%
+    MSG %"[babel("St. George's Day (NL)", \
+                 "Fête de la Saint-Georges (NL)")]%" %b%
 
   # Easter is the first Sunday after the first full moon after the Spring
   # equinox
@@ -97,7 +101,10 @@
     MSG %"[babel("National Aboriginal Day", \
                  "Journée nationale des Autochtones")]%" %b%
   REM  Jun 24 +3 PRIORITY 1000 \
-    MSG %"[babel("", "Fête nationale du Québec")]%" %b%
+    MSG %"[babel("Discovery Day (NL)", "Journée découverte (NL)")]%" %b%
+  REM  Jun 24 +3 PRIORITY 1000 \
+    MSG %"[babel("Quebec's National Holiday", \
+                 "Fête nationale du Québec")]%" %b%
   REM  Jun 24 +3 PRIORITY 1000 \
     MSG %"[babel("St. John the Baptist Day", \
                  "Fête de la Saint-Jean-Baptiste")]%" %b%
@@ -119,8 +126,13 @@
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
     ENDIF
   ENDIF
+
   REM  Jul 01 +3 PRIORITY 1000 \
-    MSG %"[babel("Memorial Day (NL)", "")]%" %b%
+    MSG %"[babel("Memorial Day (NL)", "Memorial Day (NL)")]%" %b%
+  REM  Jul 09 +3 PRIORITY 1000 \
+    MSG %"[babel("Nunavut Day", "Fête du Nunavut")]%" %b%
+  REM  Jul 12 +3 PRIORITY 1000 \
+    MSG %"[babel("Orangemen's Day (NL)", "Fête des Orangistes (NL)")]%" %b%
 
   # The Quebec Construction Holiday is the last two weeks of July
   REM  Sun Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -145,7 +157,11 @@
   #   YT => not observed
   REM  Mon Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("August Long Weekend", "")]%" %b%
+      MSG %"[babel("August Long Weekend (except NL, QC, YT)", "")]%" %b%
+
+  REM  Mon Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Discovery Day (YT)", "Journée découverte (YT)")]%" %b%
 
   # Labour Day is the first Monday in September
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -162,7 +178,7 @@
   REM  Nov 11 +3 PRIORITY 1000 \
     MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
   REM  Nov 11 +3 PRIORITY 1000 \
-    MSG %"[babel("Armistice Day (NL)", "")]%" %b%
+    MSG %"[babel("Armistice Day (NL)", "Jour de l'Armistice (NL)")]%" %b%
   REM  Dec 24 +3 PRIORITY 1000 \
     MSG %"[babel("Christmas Eve", "Veille de Noël")]%" %b%
   OMIT Dec 25 +3 PRIORITY 1000 \

@@ -21,6 +21,8 @@
     REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
       MSG %"[babel("RAC Canada Winter Contest", \
                    "Concours d'hiver du Canada RAC")]%" %b%
+  # Sat Dec [Week_4]
+  # Sat Jan 1 --7
 
 
 # ARRL generic contest dates

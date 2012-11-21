@@ -50,6 +50,7 @@
       MSG %"[babel("Islander Day (PE)", "Fête des Insulaires (PE)")]%" %b%
 
   # Heritage Day (YT) is the Friday before the last Sunday in February
+  # XXX TODO XXX  Figure out the incantations for this one sometime
 
   REM  Mar 17 +3 PRIORITY 1000 \
     MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
@@ -160,6 +161,7 @@
       MSG %"[babel("August Long Weekend (except NL, QC, YT)", \
                    "Long week-end d'aôut (sauf NL, QC, YT)")]%" %b%
 
+  # Discovery Day (YT) is the third Monday in August
   REM  Mon Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Discovery Day (YT)", "Journée découverte (YT)")]%" %b%

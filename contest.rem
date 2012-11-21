@@ -9,6 +9,11 @@
     MSG %"[babel("World Amateur Radio Day", \
                  "Journée de la Radio amateur")]%" %b%
 
+  REM  Fri May [Week_3] +7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] PRIORITY 2000 \
+      MSG %"[babel("Dayton Hamvention® Begins", \
+                   "Hamvention® de Dayton commence")]%" %b%
+
 
 # RAC generic contest dates
 

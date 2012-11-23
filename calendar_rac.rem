@@ -19,6 +19,7 @@
 # Pull in all the other calendars
 
   INCLUDE holiday_canada.rem
+  INCLUDE holiday_other.rem
   INCLUDE contest.rem
 
 

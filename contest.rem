@@ -9,6 +9,7 @@
     MSG %"[babel("World Amateur Radio Day", \
                  "Journée de la Radio amateur")]%" %b%
 
+  # The Dayton Hamvention is the third weekend in May
   REM  Fri May [Week_3] +7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 \
       MSG %"[babel("Dayton Hamvention® Begins", \
@@ -27,11 +28,13 @@
 #   REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
 #     MSG %"[babel("RAC Canada Winter Contest", \
 #                  "Concours d'hiver du Canada RAC")]%" %b%
+
   # RAC Canada Winter Contest is the fourth Saturday in December
   REM  Sat Dec [Week_4] +7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
       MSG %"[babel("RAC Canada Winter Contest", \
                    "Concours d'hiver du Canada RAC")]%" %b%
+
   # RAC Canada Winter Contest is the last Saturday in December
 # REM  Sat Jan 1 --7 +7 SCANFROM [trigger(today() - 7)] SATISFY 1
 #   REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
@@ -66,27 +69,6 @@
       MSG %"[babel("ARRL January VHF Sweepstakes", \
                    "Sweepstakes VHF de janvier ARRL")]%" %b%
 
-
-# Februrary events
-
-  # International DX Contest CW is the third weekend in February
-  #   0000 UTC Saturday through 2359 UTC Sunday
-  REM Sat Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 23:59 \
-      MSG %"[babel("International DX Contest CW", \
-                   "Concours DX international CW")]%" %b%
-
-
-# March events
-
-  # International DX Contest SSB is the first weekend in March
-  #   0000 UTC Saturday through 2359 UTC Sunday
-  REM Sat Mar [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 47:59 \
-      MSG %"[babel("International DX Contest SSB", \
-                   "Concours DX international SSB")]%" %b%
-
-
 # April ARRL events
 
   # April ARRL Rookie Roundup SSB is the third weekend in April
@@ -94,7 +76,6 @@
   REM Sun Apr [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 05:59 \
       MSG %"[babel("ARRL Rookie Roundup SSB", "Rookie Roundup SSB ARRL")]%" %b%
-
 
 # June ARRL events
 
@@ -110,17 +91,6 @@
   REM Sat Jun [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 26:59 \
       MSG %"[babel("Field Day", "Field Day")]%" %b%
-
-
-# July events
-
-  # IARU HF World Championships are the second weekend in July
-  #   1200 UTC Saturday through 1159 UTC Sunday
-  REM Sat Jul [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] PRIORITY 2000 AT 12:00 DURATION 23:59 \
-      MSG %"[babel("IARU HF World Championships", \
-                   "Championnats HF mondiale IARU")]%" %b%
-
 
 # August ARRL events
 
@@ -145,7 +115,6 @@
       MSG %"[babel("ARRL Rookie Roundup RTTY", \
                    "Rookie Roundup RTTY ARRL")]%" %b%
 
-
 # September ARRL events
 
   # ARRL September VHF QSO Party is the second weekend in September
@@ -162,7 +131,6 @@
       MSG %"[babel("(not in UTC) ARRL 10 GHz and Up Contest Round 2", \
         "(pas en UTC) Concours 10 GHz et plus haut ARRL 2ième partie")]%" %b%
 
-
 # November ARRL events
 
   # ARRL November Sweepstakes CW is the first weekend in November
@@ -178,7 +146,6 @@
     REM [trigger(trigdate())] PRIORITY 2000 AT 21:00 DURATION 29:59 \
       MSG %"[babel("ARRL November Sweepstakes SSB", \
                    "Sweepstakes SSB de novembre ARRL")]%" %b%
-
 
 # December ARRL events
 #   XXX FIXME XXX  These next two events should not occur on the same weekend
@@ -200,3 +167,33 @@
   REM Sun Dec [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 05:59 \
       MSG %"[babel("ARRL Rookie Roundup CW", "Rookie Roundup CW ARRL")]%" %b%
+
+
+# Other contest events
+
+# Februrary events
+
+  # International DX Contest CW is the third weekend in February
+  #   0000 UTC Saturday through 2359 UTC Sunday
+  REM Sat Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 23:59 \
+      MSG %"[babel("International DX Contest CW", \
+                   "Concours DX international CW")]%" %b%
+
+# March events
+
+  # International DX Contest SSB is the first weekend in March
+  #   0000 UTC Saturday through 2359 UTC Sunday
+  REM Sat Mar [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 47:59 \
+      MSG %"[babel("International DX Contest SSB", \
+                   "Concours DX international SSB")]%" %b%
+
+# July events
+
+  # IARU HF World Championships are the second weekend in July
+  #   1200 UTC Saturday through 1159 UTC Sunday
+  REM Sat Jul [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] PRIORITY 2000 AT 12:00 DURATION 23:59 \
+      MSG %"[babel("IARU HF World Championships", \
+                   "Championnats HF mondiale IARU")]%" %b%

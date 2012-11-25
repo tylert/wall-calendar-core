@@ -42,14 +42,14 @@ calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf Makefile
       | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
 
 # man iso_8859-1
-#   ® -> Â®    -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174
+#   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174
 #   É -> Ã -> \303\203\302\211 -> \xc3\x83\|\xc2\x89 -> \d201
-#   â -> Ã¢    -> \d195\d162 -> \d226
-#   è -> Ã¨    -> \d195\d168 -> \d232
-#   é -> Ã©    -> \d195\d169 -> \d233
-#   ê -> Ãª    -> \d195\d170 -> \d234
-#   ë -> Ã«    -> \d195\d171 -> \d235
-#   ô -> Ã´    -> \d195\d180 -> \d244
+#   â -> Ã¢ -> \d195\d162 -> \d226
+#   è -> Ã¨ -> \d195\d168 -> \d232
+#   é -> Ã© -> \d195\d169 -> \d233
+#   ê -> Ãª -> \d195\d170 -> \d234
+#   ë -> Ã« -> \d195\d171 -> \d235
+#   ô -> Ã´ -> \d195\d180 -> \d244
 
 .PHONY : burst
 burst :
@@ -58,6 +58,9 @@ burst :
 
 %.pdf : %.svg
 	@inkscape -T -A $@ $<
+
+%.pdf : %.odt
+	@libreoffice --headless --convert-to pdf $^
 
 .PHONY : clean
 clean :

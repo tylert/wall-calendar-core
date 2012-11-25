@@ -56,9 +56,6 @@ burst :
 	@pdftk calendar_rac_en.pdf burst output en%02d.pdf uncompress
 	@pdftk calendar_rac_fr.pdf burst output fr%02d.pdf uncompress
 
-%.pdf : %.ps
-	@ps2pdf $< $@
-
 %.pdf : %.svg
 	@inkscape -T -A $@ $<
 

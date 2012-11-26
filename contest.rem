@@ -40,44 +40,55 @@
 # January ARRL events
 
   # ARRL Straight Key Night is January 1
-  #   0000 UTC January 1 through 2359 UTC January 1
+  #   00:00 UTC January 1 through 23:59 UTC January 1
   REM Jan 01 PRIORITY 2000 AT 00:00 DURATION 23:59 \
     MSG %"[babel("ARRL Straight Key Night", "Straight Key Night ARRL")]%" %b%
 
   # ARRL RTTY Roundup is the first weekend in January (but not January 1)
-  #   1800 UTC Saturday through 2359 UTC Sunday
+  #   18:00 UTC Saturday through 23:59 UTC Sunday
   IFTRIG Jan 01
   ELSE
     REM Sat Jan [Week_1] PRIORITY 2000 AT 18:00 DURATION 29:59 \
-      MSG %"[babel("ARRL RTTY Roundup", "RTTY Roundup ARRL")]%" %b%
+      MSG %"[babel("ARRL RTTY Roundup", "Roundup RTTY ARRL")]%" %b%
   ENDIF
 
   # ARRL January VHF Sweekpstakes is the third or fourth weekend in January
-  #   1900 UTC Saturday through 0359 UTC Monday
+  #   19:00 UTC Saturday through 03:59 UTC Monday
   REM Sat Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 19:00 DURATION 32:59 \
       MSG %"[babel("ARRL January VHF Sweepstakes", \
                    "Sweepstakes VHF de janvier ARRL")]%" %b%
 
+
+# February ARRL events
+
+  # Winter/Spring Term School Club Roundup is the second school week in February
+  #   13:00 UTC Monday through 23:59 UTC Friday
+  REM Mon Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] PRIORITY 2000 AT 13:00 DURATION 106:59 \
+      MSG %"[babel("ARRL School Club Roundup", \
+                   "Roundup Clubs scholaires ARRL")]%" %b%
+
+
 # April ARRL events
 
-  # April ARRL Rookie Roundup SSB is the third weekend in April
-  #   1800 UTC Sunday through 2359 UTC Sunday
+  # April ARRL SSB Rookie Roundup is the third weekend in April
+  #   18:00 UTC Sunday through 23:59 UTC Sunday
   REM Sun Apr [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 05:59 \
-      MSG %"[babel("ARRL Rookie Roundup SSB", "Rookie Roundup SSB ARRL")]%" %b%
+      MSG %"[babel("ARRL SSB Rookie Roundup", "Rookie Roundup SSB ARRL")]%" %b%
 
 # June ARRL events
 
   # ARRL June VHF QSO Party is the second weekend in June
-  #   1800 UTC Saturday through 0259 UTC Monday
+  #   18:00 UTC Saturday through 02:59 UTC Monday
   REM Sat Jun [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 32:59 \
       MSG %"[babel("ARRL June VHF QSO Party", \
                    "QSO Party VHF de juin ARRL")]%" %b%
 
   # Field Day is the fourth weekend in June
-  #   1800 UTC Saturday through 2059 UTC Sunday
+  #   18:00 UTC Saturday through 20:59 UTC Sunday
   REM Sat Jun [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 26:59 \
       MSG %"[babel("Field Day", "Field Day")]%" %b%
@@ -85,104 +96,121 @@
 # August ARRL events
 
   # ARRL August UHF Contest is the first weekend in August
-  #   1800 UTC Saturday through 1759 UTC Sunday
+  #   18:00 UTC Saturday through 17:59 UTC Sunday
   REM Sat Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 23:59 \
       MSG %"[babel("ARRL August UHF Contest", \
                    "Concours UHF d'aôut ARRL")]%" %b%
 
   # ARRL 10 GHz and Up Contest is the third weekend in August
-  #   0600 local time Saturday through 2359 local time Sunday
+  #   06:00 local time Saturday through 23:59 local time Sunday
   REM Sat Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 06:00 DURATION 41:59 \
       MSG %"[babel("(not in UTC) ARRL 10 GHz and Up Contest Round 1", \
         "(pas en UTC) Concours 10 GHz et plus haut ARRL 1ière partie")]%" %b%
 
-  # August ARRL Rookie Roundup RTTY is the third Sunday in August
-  #   1800 UTC Sunday through 2359 UTC Sunday
+  # August ARRL RTTY Rookie Roundup is the third Sunday in August
+  #   18:00 UTC Sunday through 23:59 UTC Sunday
   REM Sun Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 05:59 \
-      MSG %"[babel("ARRL Rookie Roundup RTTY", \
+      MSG %"[babel("ARRL RTTY Rookie Roundup", \
                    "Rookie Roundup RTTY ARRL")]%" %b%
 
 # September ARRL events
 
   # ARRL September VHF QSO Party is the second weekend in September
-  #   1800 UTC Saturday through 0259 UTC Monday
+  #   18:00 UTC Saturday through 02:59 UTC Monday
   REM Sat Sep [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 32:59 \
       MSG %"[babel("ARRL September VHF QSO Party", \
                    "QSO Party VHF de septembre ARRL")]%" %b%
 
   # ARRL 10 GHz and Up Contest is the third weekend in September
-  #   0600 local time Saturday through 2359 local time Sunday
+  #   06:00 local time Saturday through 23:59 local time Sunday
   REM Sat Sep [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 06:00 DURATION 41:59 \
       MSG %"[babel("(not in UTC) ARRL 10 GHz and Up Contest Round 2", \
         "(pas en UTC) Concours 10 GHz et plus haut ARRL 2ième partie")]%" %b%
 
+# October ARRL events
+
+  # Fall Term School Club Roundup is the third school week in October
+  #   13:00 UTC Monday through 23:59 UTC Friday
+  REM Mon Oct [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] PRIORITY 2000 AT 13:00 DURATION 106:59 \
+      MSG %"[babel("ARRL School Club Roundup", \
+                   "Roundup Clubs scholaires ARRL")]%" %b%
+
 # November ARRL events
 
   # ARRL November Sweepstakes CW is the first weekend in November
-  #   2100 UTC Saturday through 0259 UTC Monday
+  #   21:00 UTC Saturday through 02:59 UTC Monday
   REM Sat Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 21:00 DURATION 29:59 \
-      MSG %"[babel("ARRL November Sweepstakes CW", \
+      MSG %"[babel("ARRL CW November Sweepstakes", \
                    "Sweepstakes CW de novembre ARRL")]%" %b%
 
   # ARRL November Sweepstakes SSB is the third weekend in November
-  #   2100 UTC Saturday through 0259 UTC Monday
+  #   21:00 UTC Saturday through 02:59 UTC Monday
   REM Sat Nov [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 21:00 DURATION 29:59 \
-      MSG %"[babel("ARRL November Sweepstakes SSB", \
+      MSG %"[babel("ARRL SSB November Sweepstakes", \
                    "Sweepstakes SSB de novembre ARRL")]%" %b%
 
 # December ARRL events
 #   XXX FIXME XXX  These events should all occur on different weekends
 
-  # ARRL 160 Meter Contest is the first weekend in December
-  #   2200 UTC Friday through 1559 UTC Sunday
+  # ARRL 160 meter Contest is the first weekend in December
+  #   22:00 UTC Friday through 15:59 UTC Sunday
   REM Fri Dec [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 22:00 DURATION 41:59 \
-      MSG %"[babel("ARRL 160 Meter Contest", "Concours 160 metres ARRL")]%" %b%
+      MSG %"[babel("ARRL 160 meter Contest", "Concours 160 metres ARRL")]%" %b%
 
-  # ARRL 10 Meter Contest is the second weekend in December
-  #   0000 UTC Saturday through 2359 UTC Sunday
+  # ARRL 10 meter Contest is the second weekend in December
+  #   00:00 UTC Saturday through 23:59 UTC Sunday
   REM Sat Dec [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 47:59 \
-      MSG %"[babel("ARRL 10 Meter Contest", "Concours 10 metres ARRL")]%" %b%
+      MSG %"[babel("ARRL 10 meter Contest", "Concours 10 metres ARRL")]%" %b%
 
-  # December ARRL Rookie Roundup CW is the third Sunday in December
-  #   1800 UTC Sunday through 2359 UTC Sunday
+  # December ARRL CW Rookie Roundup is the third Sunday in December
+  #   18:00 UTC Sunday through 23:59 UTC Sunday
   REM Sun Dec [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 18:00 DURATION 05:59 \
-      MSG %"[babel("ARRL Rookie Roundup CW", "Rookie Roundup CW ARRL")]%" %b%
+      MSG %"[babel("ARRL CW Rookie Roundup", "Rookie Roundup CW ARRL")]%" %b%
 
 
 # Other contest events
 
 # Februrary events
 
+  # Freeze Your Buns Off QRP Sprint is the first weekend in February
+  #   00:00 UTC Saturday through 24:00 UTC Saturday
+  #     http://www.azscqrpions.com/fybo2009rules.html
+  REM Sat Feb [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] PRIORITY 2000 AT 14:00 DURATION 10:00 \
+      MSG %"[babel("Freeze Your Buns Off QRP Contest", \
+                   "Concours QRP Freeze Your Buns Off")]%" %b%
+
   # International DX Contest CW is the third weekend in February
-  #   0000 UTC Saturday through 2359 UTC Sunday
+  #   00:00 UTC Saturday through 23:59 UTC Sunday
   REM Sat Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 23:59 \
-      MSG %"[babel("International DX Contest CW", \
+      MSG %"[babel("International CW DX Contest", \
                    "Concours DX international CW")]%" %b%
 
 # March events
 
   # International DX Contest SSB is the first weekend in March
-  #   0000 UTC Saturday through 2359 UTC Sunday
+  #   00:00 UTC Saturday through 23:59 UTC Sunday
   REM Sat Mar [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 47:59 \
-      MSG %"[babel("International DX Contest SSB", \
+      MSG %"[babel("International SSB DX Contest", \
                    "Concours DX international SSB")]%" %b%
 
 # July events
 
   # IARU HF World Championships are the second weekend in July
-  #   1200 UTC Saturday through 1159 UTC Sunday
+  #   12:00 UTC Saturday through 11:59 UTC Sunday
   REM Sat Jul [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 12:00 DURATION 23:59 \
       MSG %"[babel("IARU HF World Championships", \

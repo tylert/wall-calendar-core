@@ -23,23 +23,13 @@
     MSG %"[babel("RAC Canada Day Contest", \
                  "Concours Fête du Canada RAC")]%" %b%
 
-  # RAC Canada Winter Contest is the third Saturday in December
+  # RAC Canada Winter Contest is the last Saturday in December
 # REM  Sat Dec [Week_3] +7 SCANFROM [trigger(today() - 7)] SATISFY 1
-#   REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
-#     MSG %"[babel("RAC Canada Winter Contest", \
-#                  "Concours d'hiver du Canada RAC")]%" %b%
-
-  # RAC Canada Winter Contest is the fourth Saturday in December
-  REM  Sat Dec [Week_4] +7 SCANFROM [trigger(today() - 7)] SATISFY 1
+# REM  Sat Dec [Week_4] +7 SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Sat Jan 1 --7 +7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
       MSG %"[babel("RAC Canada Winter Contest", \
                    "Concours d'hiver du Canada RAC")]%" %b%
-
-  # RAC Canada Winter Contest is the last Saturday in December
-# REM  Sat Jan 1 --7 +7 SCANFROM [trigger(today() - 7)] SATISFY 1
-#   REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
-#     MSG %"[babel("RAC Canada Winter Contest", \
-#                  "Concours d'hiver du Canada RAC")]%" %b%
 
 
 # ARRL generic contest dates
@@ -148,7 +138,7 @@
                    "Sweepstakes SSB de novembre ARRL")]%" %b%
 
 # December ARRL events
-#   XXX FIXME XXX  These next two events should not occur on the same weekend
+#   XXX FIXME XXX  These events should all occur on different weekends
 
   # ARRL 160 Meter Contest is the first weekend in December
   #   2200 UTC Friday through 1559 UTC Sunday

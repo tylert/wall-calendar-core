@@ -71,7 +71,23 @@
       MSG %"[babel("ARRL School Club Roundup", \
                    "Roundup Clubs scholaires ARRL")]%" %b%
 
+  # International DX Contest CW is the third weekend in February
+  #   0000 UTC Saturday through 2359 UTC Sunday
+  #     http://arrl.org/arrl-dx
+  REM Sat Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 23:59 \
+      MSG %"[babel("International CW DX Contest", \
+                   "Concours DX international CW")]%" %b%
+
 # March ARRL events
+
+  # International DX Contest SSB is the first weekend in March
+  #   0000 UTC Saturday through 2359 UTC Sunday
+  #     http://arrl.org/arrl-dx
+  REM Sat Mar [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 47:59 \
+      MSG %"[babel("International SSB DX Contest", \
+                   "Concours DX international SSB")]%" %b%
 
 # April ARRL events
 
@@ -211,24 +227,6 @@
     REM [trigger(trigdate())] PRIORITY 2000 AT 14:00 DURATION 10:00 \
       MSG %"[babel("Freeze Your Buns Off QRP Contest", \
                    "Concours QRP Freeze Your Buns Off")]%" %b%
-
-  # International DX Contest CW is the third weekend in February
-  #   0000 UTC Saturday through 2359 UTC Sunday
-  #     http://arrl.org/arrl-dx
-  REM Sat Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 23:59 \
-      MSG %"[babel("International CW DX Contest", \
-                   "Concours DX international CW")]%" %b%
-
-# March events
-
-  # International DX Contest SSB is the first weekend in March
-  #   0000 UTC Saturday through 2359 UTC Sunday
-  #     http://arrl.org/arrl-dx
-  REM Sat Mar [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] PRIORITY 2000 AT 00:00 DURATION 47:59 \
-      MSG %"[babel("International SSB DX Contest", \
-                   "Concours DX international SSB")]%" %b%
 
 # July events
 

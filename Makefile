@@ -1,5 +1,7 @@
 SHELL := /bin/bash
 
+YEAR ?= $(shell date +%Y)
+
 GENERATED_FILES = calendar.ps calendar.pdf rulers.pdf \
   calendar_rac_en.ps calendar_rac_en.pdf \
   calendar_rac_fr.ps calendar_rac_fr.pdf watermark_rac.pdf

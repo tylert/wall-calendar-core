@@ -20,7 +20,8 @@
 
   INCLUDE holiday_canada.rem
   INCLUDE holiday_other.rem
-  INCLUDE contest.rem
+  INCLUDE contest_other.rem
+  INCLUDE contest_arrl.rem
 
 
 # DST transitions

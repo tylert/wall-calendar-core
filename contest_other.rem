@@ -16,6 +16,13 @@
       MSG %"[babel("Dayton Hamvention® Begins", \
                    "Hamvention® de Dayton commence")]%" %b%
 
+  # The Canadian Ski Marathon is the second weekend in February
+  #   http://csm-mcs.com
+  REM  Sat Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] +7 PRIORITY 2000 \
+      MSG %"[nst(1967)][babel("th Canadian Ski Marathon Begins", \
+        "ième Marathon canadien de ski commence")]%" %b%
+
 
 # RAC events
 
@@ -38,23 +45,23 @@
   # CQ WW 160 meter CW Contest is the last weekend in January
   #   2200 UTC Friday through 2200 UTC Sunday
   #     http://cq160.com
-  REM Sat Feb 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 22:00 DURATION 72:00 \
+  REM Fri Feb 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 22:00 DURATION 48:00 \
       MSG %"[babel("CQ WW 160 meter CW Contest", \
                    "Concours CQ WW 160 mètres CW")]%" %b%
 
   # CQ WW 160 meter SSB Contest is the last weekend in February
   #   2200 UTC Friday through 2200 UTC Sunday
   #     http://cq160.com
-  REM Sat Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 22:00 DURATION 72:00 \
+  REM Fri Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 22:00 DURATION 48:00 \
       MSG %"[babel("CQ WW 160 meter SSB Contest", \
                    "Concours CQ WW 160 mètres SSB")]%" %b%
 
-  # CQ WPX RTTY Contest is the last weekend in February
+  # CQ WPX RTTY Contest is the second weekend in February
   #   0000 UTC Saturday through 2359 UTC Sunday
   #     http://cqwpxrtty.com
-  REM Sat Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM Sat Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WPX RTTY Contest", \
                    "Concours CQ WPX RTTY")]%" %b%

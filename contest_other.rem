@@ -40,21 +40,21 @@
                    "Concours d'hiver du Canada RAC")]%" %b%
 
 
-# CQ contest events
+# CQ Magazine events
 
   # CQ WW 160 meter CW Contest is the last weekend in January
   #   2200 UTC Friday through 2200 UTC Sunday
   #     http://cq160.com
-  REM Fri Feb 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 22:00 DURATION 48:00 \
+  REM Sun Feb 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate()-2)] +7 PRIORITY 2000 AT 22:00 DURATION 48:00 \
       MSG %"[babel("CQ WW 160 meter CW Contest", \
                    "Concours CQ WW 160 mètres CW")]%" %b%
 
   # CQ WW 160 meter SSB Contest is the last weekend in February
   #   2200 UTC Friday through 2200 UTC Sunday
   #     http://cq160.com
-  REM Fri Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 22:00 DURATION 48:00 \
+  REM Sun Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate()-2)] +7 PRIORITY 2000 AT 22:00 DURATION 48:00 \
       MSG %"[babel("CQ WW 160 meter SSB Contest", \
                    "Concours CQ WW 160 mètres SSB")]%" %b%
 
@@ -69,48 +69,48 @@
   # CQ WW WPX SSB Contest is the last weekend in March
   #   0000 UTC Saturday through 2359 UTC Sunday
   #     http://cqwpx.com
-  REM Sat Apr 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
+  REM Sun Apr 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WW WPX SSB Contest", \
                    "Concours CQ WW WPX SSB")]%" %b%
 
   # CQ WW WPX CW Contest is the last weekend in May
   #   0000 UTC Saturday through 2359 UTC Sunday
   #     http://cqwpx.com
-  REM Sat Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
+  REM Sun Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WW WPX CW Contest", \
                    "Concours CQ WW WPX CW")]%" %b%
 
   # CQ WW VHF Contest is the last weekend in July
   #   1800 UTC Saturday through 2100 UTC Sunday
   #     http://cqww-vhf.com
-  REM Sat Aug 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 18:00 DURATION 27:00 \
+  REM Sun Aug 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 18:00 DURATION 27:00 \
       MSG %"[babel("CQ WW VHF Contest", \
                    "Concours CQ WW VHF")]%" %b%
 
   # CQ WW RTTY DX Contest is the last weekend in September
   #   0000 UTC Saturday through 2400 UTC Sunday
   #     http://cqwwrtty.com
-  REM Sat Oct 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 00:00 DURATION 48:00 \
+  REM Sun Oct 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 48:00 \
       MSG %"[babel("CQ WW RTTY DX Contest", \
                    "Concours CQ WW RTTY DX")]%" %b%
 
   # CQ WW DX SSB Contest is the last weekend in October
   #   0000 UTC Saturday through 2359 UTC Sunday
   #     http://cqww.com
-  REM Sat Nov 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
+  REM Sun Nov 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WW DX SSB Contest", \
                    "Concours CQ WW DX SSB")]%" %b%
 
   # CQ WW DX CW Contest is the last weekend in November
   #   0000 UTC Saturday through 2359 UTC Sunday
   #     http://cqww.com
-  REM Sat Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
+  REM Sun Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WW DX CW Contest", \
                    "Concours CQ WW DX CW")]%" %b%
 

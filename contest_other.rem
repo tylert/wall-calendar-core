@@ -82,11 +82,11 @@
       MSG %"[babel("CQ WW WPX CW Contest", \
                    "Concours CQ WW WPX CW")]%" %b%
 
-  # CQ WW VHF Contest is the last weekend in July
+  # CQ WW VHF Contest is the third weekend in July
   #   1800 UTC Saturday through 2100 UTC Sunday
   #     http://cqww-vhf.com
-  REM Sun Aug 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 18:00 DURATION 27:00 \
+  REM Sat Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 18:00 DURATION 27:00 \
       MSG %"[babel("CQ WW VHF Contest", \
                    "Concours CQ WW VHF")]%" %b%
 

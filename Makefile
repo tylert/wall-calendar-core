@@ -29,7 +29,8 @@ calendar_rac_fr.ps : $(wildcard *.rem) Makefile
 calendar_rac_en.pdf : calendar_rac_en.ps watermark_rac.pdf Makefile
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
-	    | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
+	    | ps2pdf - - | pdftk - output $@ uncompress
+	    #| ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
 
 calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf Makefile
 	@cat $< | sed \
@@ -41,7 +42,8 @@ calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf Makefile
     -e 's/\d195\d170/\d234/g' \
     -e 's/\d195\d171/\d235/g' \
     -e 's/\d195\d180/\d244/g' \
-      | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
+	     | ps2pdf - - | pdftk - output $@ uncompress
+	     #| ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
 
 # man iso_8859-1
 #   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174

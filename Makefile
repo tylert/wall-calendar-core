@@ -1,5 +1,3 @@
-# (c) 2012 7601999 Canada, Inc.  All rights reserved.
-
 SHELL := /bin/bash
 
 YEAR ?= $(shell date +%Y)
@@ -71,3 +69,6 @@ burst :
 .PHONY : clean
 clean :
 	@rm -f $(GENERATED_FILES)
+
+
+# (c) 2012 7601999 Canada, Inc.  All rights reserved.

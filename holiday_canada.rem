@@ -196,3 +196,6 @@
   REM 13 SATISFY [wkdaynum(trigdate()) == Friday]
     REM [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%
+
+
+# (c) 2012 7601999 Canada, Inc.  All rights reserved.

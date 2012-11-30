@@ -146,3 +146,6 @@
   # text contained within %" and %" will display in calendar mode (wyrd)
   # %_%_ starts a paragraph, and %_ represents a new line of text
   #REM Apr 1 2006 MSG %"some title that displays in calendar mode%" %_%_and more info for default mode with rem -q%_this being a new line of text
+
+
+# (c) 2012 7601999 Canada, Inc.  All rights reserved.

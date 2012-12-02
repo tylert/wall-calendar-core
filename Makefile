@@ -13,7 +13,7 @@ calendar.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd calendar.rem $(DATE) |\
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
-calendar.pdf : calendar.ps rulers.pdf Makefile
+calendar.pdf : calendar.ps rulers.pdf
 	@a2ps -Xiso1 -2B --borders=no $< -o - | ps2pdf - |\
     pdftk - cat 1-2S output - uncompress |\
       pdftk - background rulers.pdf output $@ uncompress
@@ -26,13 +26,13 @@ calendar_rac_fr.ps : $(wildcard *.rem) Makefile
 	@remind.fr -p12 -b1 -gdddd calendar_rac.rem $(DATE) |\
     rem2ps.fr -i -l -e -olrtb 1 -sthed 8 > $@
 
-calendar_rac_en.pdf : calendar_rac_en.ps watermark_rac.pdf Makefile
+calendar_rac_en.pdf : calendar_rac_en.ps watermark_rac.pdf
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
 	    | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
 	    #| ps2pdf - - | pdftk - output $@ uncompress
 
-calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf Makefile
+calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
     -e 's/\xc3\x83\|\xc2\x89/\d201/g' \

@@ -3,6 +3,7 @@ SHELL := /bin/bash
 YEAR ?= $(shell date +%Y)
 
 GENERATED_FILES = calendar.ps calendar.pdf rulers.pdf \
+  calendar_mrow.ps calendar_mrow.pdf \
   calendar_rac_en.ps calendar_rac_en.pdf \
   calendar_rac_fr.ps calendar_rac_fr.pdf watermark_rac.pdf
 
@@ -18,6 +19,14 @@ calendar.pdf : calendar.ps rulers.pdf
     pdftk - cat 1-2S output - uncompress |\
       pdftk - background rulers.pdf output $@ uncompress
 
+calendar_mrow.ps : $(wildcard *.rem) Makefile
+	@remind -p12 -b1 -gdddd calendar_mrow.rem $(DATE) |\
+    rem2ps -l -e -olrtb 1 -sthed 8 > $@
+
+calendar_mrow.pdf : calendar_mrow.ps
+	@ps2pdf $< - |\
+    pdftk - output $@ uncompress
+
 calendar_rac_en.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd calendar_rac.rem $(DATE) |\
     rem2ps -i -l -e -olrtb 1 -sthed 8 > $@
@@ -30,7 +39,6 @@ calendar_rac_en.pdf : calendar_rac_en.ps watermark_rac.pdf
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
 	    | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
-	    #| ps2pdf - - | pdftk - output $@ uncompress
 
 calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf
 	@cat $< | sed \
@@ -43,7 +51,6 @@ calendar_rac_fr.pdf : calendar_rac_fr.ps watermark_rac.pdf
     -e 's/\d195\d171/\d235/g' \
     -e 's/\d195\d180/\d244/g' \
 	     | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
-	     #| ps2pdf - - | pdftk - output $@ uncompress
 
 # man iso_8859-1
 #   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174

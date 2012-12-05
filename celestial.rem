@@ -3,11 +3,6 @@
   INCLUDE defs.rem
 
 
-# Seasonal change events
-
-  INCLUDE season.rem
-
-
 # Signs of the Zodiac
 
   REM  Mar 21 +1 PRIORITY 0000 MSG %"Aries Rises%" %b%

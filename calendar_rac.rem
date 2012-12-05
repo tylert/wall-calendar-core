@@ -18,30 +18,33 @@
 
 # Pull in all the other calendars
 
+# INCLUDE celestial.rem
+# INCLUDE season.rem
   INCLUDE holiday_canada.rem
   INCLUDE holiday_other.rem
   INCLUDE contest_other.rem
   INCLUDE contest_arrl.rem
+# INCLUDE geek.rem
 
 
 # DST transitions
 
-  # New DST starts on the second Sunday in March
+  # DST starts on the second Sunday in March
   REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 5000 \
-      MSG %"[babel("DST Begins (except SK)", \
+    REM  [trigger(trigdate())] +3 PRIORITY 4000 \
+      MSG %"[babel("Daylight Savings Time Begins (except SK)", \
                    "Heure d'éte commence (sauf SK)")]%" %b%
 
-  # New DST ends on the first Sunday in November
+  # DST ends on the first Sunday in November
   REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 5000 \
-      MSG %"[babel("DST Ends (except SK)", \
+    REM  [trigger(trigdate())] +3 PRIORITY 4000 \
+      MSG %"[babel("Daylight Savings Time Ends (except SK)", \
                    "Heure d'éte termine (sauf SK)")]%" %b%
 
 
 # Print week numbers
 
-  REM Sunday PRIORITY 5000 SPECIAL WEEK [babel("Week", "Semaine")] [weekno()]
+  REM Sunday PRIORITY 4000 SPECIAL WEEK [babel("Week", "Semaine")] [weekno()]
 
 
 # (c) 2012 7601999 Canada, Inc.  All rights reserved.

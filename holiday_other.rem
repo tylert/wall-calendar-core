@@ -23,9 +23,9 @@
 #   MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai")]%" %b%
 
   # Memorial Day is the last Monday in May
-# REM  Mon May [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
-#   REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-#     MSG %"[babel("Memorial Day (US)", "")]%" %b%
+  REM  Mon Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Memorial Day (US)", "Memorial Day (US)")]%" %b%
 
 # REM  Jul 04 +1 PRIORITY 1000 \
 #   MSG %"[babel("Independence Day (US)", "")]%" %b%

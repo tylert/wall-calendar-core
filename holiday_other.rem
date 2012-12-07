@@ -5,10 +5,13 @@
 
 # Generic holidays and celebratory-type events for US and UK
 
-  # Martin Luther King Day is the third Monday in January
+  # Martin Luther King, Jr. Day is the third Monday in January
 # REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
 #   REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-#     MSG %"[babel("Martin Luther King Day (US)", "")]%" %b%
+#     MSG %"[babel("Martin Luther King, Jr. Day (US)", "")]%" %b%
+
+  # Inauguration Day is January 20th or the 21st if the 20th is a Sunday
+  # every fourth year (the next one will occur in 2013)
 
   # President's Day is the third Monday in February
 # REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -39,6 +42,8 @@
 #   MSG %"[babel("Bonfire Night (UK)", "")]%" %b%
 # REM  Nov 05 +1 PRIORITY 1000 \
 #   MSG %"[babel("Guy Fawkes Day (UK)", "")]%" %b%
+
+  # Veterans Day is November 11
 
   # US Thanksgiving Day is the fourth Thursday in November
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1

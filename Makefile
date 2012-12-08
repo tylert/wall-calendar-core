@@ -3,13 +3,14 @@ SHELL := /bin/bash
 YEAR ?= $(shell date +%Y)
 
 GENERATED_FILES = calendar.ps calendar.pdf rulers.pdf \
-  calendar_mrow.ps calendar_mrow.pdf \
+  calendar_mrow.ps calendar_mrow.pdf floral_border.pdf \
   calendar_rac_en.ps calendar_rac_en.pdf \
   calendar_rac_fr.ps calendar_rac_fr.pdf watermark_rac.pdf
 
 .PHONY : all
 all : $(GENERATED_FILES)
 
+# Personal calendars
 calendar.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd calendar.rem $(DATE) |\
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
@@ -23,10 +24,11 @@ calendar_mrow.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd calendar_mrow.rem $(DATE) |\
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
-calendar_mrow.pdf : calendar_mrow.ps
+calendar_mrow.pdf : calendar_mrow.ps floral_border.pdf
 	@ps2pdf $< - |\
-    pdftk - output $@ uncompress
+    pdftk - background floral_border.pdf output $@ uncompress
 
+# Public calendars
 calendar_rac_en.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd calendar_rac.rem $(DATE) |\
     rem2ps -i -l -e -olrtb 1 -sthed 8 > $@

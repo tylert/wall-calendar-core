@@ -27,15 +27,15 @@
 # INCLUDE geek.rem
 
 
-# DST transitions
+# Time transitions
 
-  # DST starts on the second Sunday in March
+  # Daylight Savings Time starts on the second Sunday in March
   REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 4000 \
       MSG %"[babel("Daylight Savings Time Begins (except SK)", \
                    "Heure d'éte commence (sauf SK)")]%" %b%
 
-  # DST ends on the first Sunday in November
+  # Daylight Savings Time ends on the first Sunday in November
   REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 4000 \
       MSG %"[babel("Daylight Savings Time Ends (except SK)", \

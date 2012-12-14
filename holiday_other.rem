@@ -5,15 +5,15 @@
 
 # Generic holidays and celebratory-type events for US and UK
 
-  # Martin Luther King, Jr. Day is the third Monday in January
+  # Martin Luther King, Jr. Day (US) is the third Monday in January
 # REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
 #   REM  [trigger(trigdate())] +1 PRIORITY 1000 \
 #     MSG %"[babel("Martin Luther King, Jr. Day (US)", "")]%" %b%
 
-  # Inauguration Day is January 20th or the 21st if the 20th is a Sunday
+  # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
   # every fourth year (the next one will occur in 2013)
 
-  # President's Day is the third Monday in February
+  # President's Day (US) is the third Monday in February
 # REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
 #   REM  [trigger(trigdate())] +1 PRIORITY 1000 \
 #     MSG %"[babel("President's Day (US)", "Journée de la Présidence")]%" %b%
@@ -25,7 +25,7 @@
 # REM  May 05 +1 PRIORITY 1000 \
 #   MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai")]%" %b%
 
-  # Memorial Day is the last Monday in May
+  # Memorial Day (US) is the last Monday in May
   REM  Mon Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Memorial Day (US)", "Memorial Day (US)")]%" %b%
@@ -33,7 +33,7 @@
 # REM  Jul 04 +1 PRIORITY 1000 \
 #   MSG %"[babel("Independence Day (US)", "")]%" %b%
 
-  # Columbus Day is the second Monday in October
+  # Columbus Day (US) is the second Monday in October
 # REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
 #   REM  [trigger(trigdate())] +1 PRIORITY 1000 \
 #     MSG %"[babel("Columbus Day (US)", "")]%" %b%
@@ -43,9 +43,12 @@
 # REM  Nov 05 +1 PRIORITY 1000 \
 #   MSG %"[babel("Guy Fawkes Day (UK)", "")]%" %b%
 
-  # Veterans Day is November 11
+  # Veterans Day (US) is November 11
+  REM  Nov 11 +1 PRIORITY 1000 \
+      MSG %"[babel("Veterans Day (US)", \
+                   "Jour des anciens combattants (US)")]%" %b%
 
-  # US Thanksgiving Day is the fourth Thursday in November
+  # Thanksgiving Day (US) is the fourth Thursday in November
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
       MSG %"[babel("Thanksgiving Day (US)", "Action de Grâce (US)")]%" %b%

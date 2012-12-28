@@ -119,7 +119,7 @@
 
   # Freeze Your Buns Off QRP Sprint is the first weekend in February
   #   1400 UTC Saturday through 0000 UTC Saturday
-  #     http://www.azscqrpions.com/fybo2009rules.html
+  #     http://azscqrpions.com/fybo2009rules.html
   REM Sat Feb [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 AT 14:00 DURATION 10:00 \
       MSG %"[babel("Freeze Your Buns Off QRP Contest", \

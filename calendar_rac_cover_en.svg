@@ -17,7 +17,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.48.3.1 r9886"
    version="1.0"
-   sodipodi:docname="rac_cover_en.svg"
+   sodipodi:docname="calendar_rac_cover_en.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    inkscape:export-filename="/home/tyler/f1/radio/logos/main/rac_db.png"
    inkscape:export-xdpi="96"
@@ -199,9 +199,9 @@
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="956"
+     inkscape:window-width="1916"
      inkscape:window-height="1041"
-     inkscape:window-x="2880"
+     inkscape:window-x="1920"
      inkscape:window-y="18"
      borderlayer="true"
      inkscape:window-maximized="0" />
@@ -521,50 +521,25 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:85.71793365px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold Semi-Condensed"
+       style="font-size:85.71793365px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:80%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold Semi-Condensed"
        x="788.65399"
        y="198.52423"
        id="text3053"
-       sodipodi:linespacing="80.000001%"><tspan
+       sodipodi:linespacing="80%"><tspan
          sodipodi:role="line"
-         id="tspan4191"
-         x="788.65399"
-         y="198.52423">2013</tspan><tspan
+         id="tspan3079">2013 RAC</tspan><tspan
          sodipodi:role="line"
-         id="tspan4193"
-         x="788.65399"
-         y="267.09857">Contest</tspan><tspan
-         sodipodi:role="line"
-         id="tspan4195"
-         x="788.65399"
-         y="335.67291">Calendar</tspan></text>
+         id="tspan3081">Calendar</tspan></text>
     <text
-       sodipodi:linespacing="80.000001%"
+       sodipodi:linespacing="80%"
        id="text3831"
        y="198.52423"
        x="788.65399"
-       style="font-size:85.71793365px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold Semi-Condensed"
+       style="font-size:85.71793365px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:80%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold Semi-Condensed"
        xml:space="preserve"><tspan
          sodipodi:role="line"
-         id="tspan4185"
-         x="788.65399"
-         y="198.52423">2013</tspan><tspan
+         id="tspan3075">2013 RAC</tspan><tspan
          sodipodi:role="line"
-         id="tspan4187"
-         x="788.65399"
-         y="267.09857">Contest</tspan><tspan
-         sodipodi:role="line"
-         id="tspan4189"
-         x="788.65399"
-         y="335.67291">Calendar</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:11.37301159px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="568.19952"
-       y="836.36621"
-       id="text4179"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4197">RAC Headquarters;  Photo by VA3DGN</tspan></text>
+         id="tspan3077">Calendar</tspan></text>
   </g>
 </svg>

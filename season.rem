@@ -6,127 +6,136 @@
 # Season transitions from now until 2020
 #   From http://www.usno.navy.mil/USNO/astronomical-applications/data-services/earth-seasons
 
-  # Equinox literally means "equal night"
-  # Soltice literally meeans "sun stands still" (longest/shortest day)
-  # Aphelion is when the Earth is farthest from the Sun (NH Summer, SH Winter)
-  # Perihelion is when the Earth is closest to the Sun (NH Winter, SH Summer)
+  # Aphelion/Aphélie is when the Earth is farthest from the Sun
+  # Perihelion/Périhélie is when the Earth is closest to the Sun
 
-  REM  [trigger(date(2012,01,05), time(00,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  [trigger(date(2012,03,20), time(05,14), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("March Equinox", "Équinoxe de mars")]%" %b%
-  REM  [trigger(date(2012,06,20), time(23,09), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("June Solstice", "Solstice de juin")]%" %b%
-  REM  [trigger(date(2012,07,05), time(03,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  [trigger(date(2012,09,22), time(14,49), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("September Equinox", "Éqinoxe de septembre")]%" %b%
-  REM  [trigger(date(2012,12,21), time(11,11), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("December Solstice", "Solstice de décembre")]%" %b%
+  # Equinox/Équinoxe literally means "equal night"
+  # Solstice literally meeans "sun stands still" (longest/shortest day)
 
-  REM  [trigger(date(2013,01,02), time(05,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  [trigger(date(2013,03,20), time(11,02), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("March Equinox", "Équinoxe de mars")]%" %b%
-  REM  [trigger(date(2013,06,21), time(05,04), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("June Solstice", "Solstice de juin")]%" %b%
-  REM  [trigger(date(2013,07,05), time(15,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  [trigger(date(2013,09,22), time(20,44), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("September Equinox", "Éqinoxe de septembre")]%" %b%
-  REM  [trigger(date(2013,12,21), time(17,11), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("December Solstice", "Solstice de décembre")]%" %b%
+  # The March Equinox is the First Day of Spring in the Northern Hemisphere
+  # The June Solstice is the First Day of Summer in the Northern Hemisphere
+  # The September Equinox is the First Day of Fall in the Northern Hemisphere
+  # The December Solstice is the First Day of Winter in the Northern Hemisphere
 
-  REM  [trigger(date(2014,01,04), time(12,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  [trigger(date(2014,03,20), time(16,57), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("March Equinox", "Équinoxe de mars")]%" %b%
-  REM  [trigger(date(2014,06,21), time(10,51), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("June Solstice", "Solstice de juin")]%" %b%
-  REM  [trigger(date(2014,07,04), time(00,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  [trigger(date(2014,09,23), time(02,29), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("September Equinox", "Éqinoxe de septembre")]%" %b%
-  REM  [trigger(date(2014,12,21), time(23,03), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("December Solstice", "Solstice de décembre")]%" %b%
+# REM  [trigger(date(2013,01,02), time(05,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
+  # [trigger(date(2013,03,20), time(11,02), 1)]
+  REM  Mar 20 2013 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+  # [trigger(date(2013,06,21), time(05,04), 1)]
+  REM  Jun 21 2013 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+# REM  [trigger(date(2013,07,05), time(15,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
+  # [trigger(date(2013,09,22), time(20,44), 1)]
+  REM  Sep 22 2013 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+  # [trigger(date(2013,12,21), time(17,11), 1)]
+  REM  Dec 21 2013 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
-  REM  [trigger(date(2015,01,04), time(07,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  [trigger(date(2015,03,20), time(22,45), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("March Equinox", "Équinoxe de mars")]%" %b%
-  REM  [trigger(date(2015,06,21), time(16,38), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("June Solstice", "Solstice de juin")]%" %b%
-  REM  [trigger(date(2015,07,06), time(19,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  [trigger(date(2015,09,23), time(08,20), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("September Equinox", "Éqinoxe de septembre")]%" %b%
-  REM  [trigger(date(2015,12,22), time(04,48), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("December Solstice", "Solstice de décembre")]%" %b%
+# REM  [trigger(date(2014,01,04), time(12,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
+  # [trigger(date(2014,03,20), time(16,57), 1)]
+  REM  Mar 20 2014 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+  # [trigger(date(2014,06,21), time(10,51), 1)]
+  REM  Jun 21 2014 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+# REM  [trigger(date(2014,07,04), time(00,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
+  # [trigger(date(2014,09,23), time(02,29), 1)]
+  REM  Sep 23 2014 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+  # [trigger(date(2014,12,21), time(23,03), 1)]
+  REM  Dec 21 2014 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
-  REM  [trigger(date(2016,01,02), time(23,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  [trigger(date(2016,03,20), time(04,30), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("March Equinox", "Équinoxe de mars")]%" %b%
-  REM  [trigger(date(2016,06,20), time(22,34), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("June Solstice", "Solstice de juin")]%" %b%
-  REM  [trigger(date(2016,07,04), time(16,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  [trigger(date(2016,09,22), time(14,21), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("September Equinox", "Éqinoxe de septembre")]%" %b%
-  REM  [trigger(date(2016,12,21), time(10,44), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("December Solstice", "Solstice de décembre")]%" %b%
+# REM  [trigger(date(2015,01,04), time(07,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
+  # [trigger(date(2015,03,20), time(22,45), 1)]
+  REM  Mar 20 2015 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+  # [trigger(date(2015,06,21), time(16,38), 1)]
+  REM  Jun 21 2015 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+# REM  [trigger(date(2015,07,06), time(19,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
+  # [trigger(date(2015,09,23), time(08,20), 1)]
+  REM  Sep 23 2015 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+  # [trigger(date(2015,12,22), time(04,48), 1)]
+  REM  Dec 22 2015 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
-  REM  [trigger(date(2017,01,04), time(14,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  [trigger(date(2017,03,20), time(10,28), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("March Equinox", "Équinoxe de mars")]%" %b%
-  REM  [trigger(date(2017,06,21), time(04,24), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("June Solstice", "Solstice de juin")]%" %b%
-  REM  [trigger(date(2017,07,03), time(20,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  [trigger(date(2017,09,22), time(20,02), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("September Equinox", "Éqinoxe de septembre")]%" %b%
-  REM  [trigger(date(2017,12,21), time(16,28), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("December Solstice", "Solstice de décembre")]%" %b%
+# REM  [trigger(date(2016,01,02), time(23,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
+  # [trigger(date(2016,03,20), time(04,30), 1)]
+  REM  Mar 20 2016 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+  # [trigger(date(2016,06,20), time(22,34), 1)]
+  REM  Jun 20 2016 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+# REM  [trigger(date(2016,07,04), time(16,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
+  # [trigger(date(2016,09,22), time(14,21), 1)]
+  REM  Sep 22 2016 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+  # [trigger(date(2016,12,21), time(10,44), 1)]
+  REM  Dec 21 2016 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
-  REM  [trigger(date(2018,01,03), time(06,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  [trigger(date(2018,03,20), time(16,15), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("March Equinox", "Équinoxe de mars")]%" %b%
-  REM  [trigger(date(2018,06,21), time(10,07), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("June Solstice", "Solstice de juin")]%" %b%
-  REM  [trigger(date(2018,07,06), time(17,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  [trigger(date(2018,09,23), time(01,54), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("September Equinox", "Éqinoxe de septembre")]%" %b%
-  REM  [trigger(date(2018,12,21), time(22,22), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("December Solstice", "Solstice de décembre")]%" %b%
+# REM  [trigger(date(2017,01,04), time(14,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
+# REM  [trigger(date(2017,03,20), time(10,28), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+# REM  [trigger(date(2017,06,21), time(04,24), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+# REM  [trigger(date(2017,07,03), time(20,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
+# REM  [trigger(date(2017,09,22), time(20,02), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+# REM  [trigger(date(2017,12,21), time(16,28), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
-  REM  [trigger(date(2019,01,03), time(05,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  [trigger(date(2019,03,20), time(21,58), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("March Equinox", "Équinoxe de mars")]%" %b%
-  REM  [trigger(date(2019,06,21), time(15,54), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("June Solstice", "Solstice de juin")]%" %b%
-  REM  [trigger(date(2019,07,04), time(22,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  [trigger(date(2019,09,23), time(07,50), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("September Equinox", "Éqinoxe de septembre")]%" %b%
-  REM  [trigger(date(2019,12,22), time(04,19), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("December Solstice", "Solstice de décembre")]%" %b%
+# REM  [trigger(date(2018,01,03), time(06,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
+# REM  [trigger(date(2018,03,20), time(16,15), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+# REM  [trigger(date(2018,06,21), time(10,07), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+# REM  [trigger(date(2018,07,06), time(17,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
+# REM  [trigger(date(2018,09,23), time(01,54), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+# REM  [trigger(date(2018,12,21), time(22,22), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
-  REM  [trigger(date(2020,01,05), time(08,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  [trigger(date(2020,03,20), time(03,49), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("March Equinox", "Équinoxe de mars")]%" %b%
-  REM  [trigger(date(2020,06,20), time(21,43), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("June Solstice", "Solstice de juin")]%" %b%
-  REM  [trigger(date(2020,07,04), time(12,00), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  [trigger(date(2020,09,22), time(13,30), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("September Equinox", "Éqinoxe de septembre")]%" %b%
-  REM  [trigger(date(2020,12,21), time(10,02), 1)] +1 PRIORITY 0000 \
-    MSG %"[babel("December Solstice", "Solstice de décembre")]%" %b%
+# REM  [trigger(date(2019,01,03), time(05,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
+# REM  [trigger(date(2019,03,20), time(21,58), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+# REM  [trigger(date(2019,06,21), time(15,54), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+# REM  [trigger(date(2019,07,04), time(22,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
+# REM  [trigger(date(2019,09,23), time(07,50), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+# REM  [trigger(date(2019,12,22), time(04,19), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
+
+# REM  [trigger(date(2020,01,05), time(08,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
+# REM  [trigger(date(2020,03,20), time(03,49), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+# REM  [trigger(date(2020,06,20), time(21,43), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+# REM  [trigger(date(2020,07,04), time(12,00), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
+# REM  [trigger(date(2020,09,22), time(13,30), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+# REM  [trigger(date(2020,12,21), time(10,02), 1)] +1 PRIORITY 0000 \
+#   MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
 
 # (c) 2012 7601999 Canada, Inc.  All rights reserved.

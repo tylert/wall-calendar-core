@@ -43,7 +43,6 @@
 # REM  Nov 05 +1 PRIORITY 1000 \
 #   MSG %"[babel("Guy Fawkes Day (UK)", "")]%" %b%
 
-  # Veterans Day (US) is November 11
   REM  Nov 11 +1 PRIORITY 1000 \
       MSG %"[babel("Veterans Day (US)", \
                    "Jour des anciens combattants (US)")]%" %b%
@@ -54,7 +53,8 @@
       MSG %"[babel("Thanksgiving Day (US)", "Action de Grâce (US)")]%" %b%
 
 # REM  Nov 30 +1 PRIORITY 1000 \
-#   MSG %"[babel("St. Andrew's Day (UK)", "Fête de la Saint-")]%" %b%
+#   MSG %"[babel("St. Andrew's Day (UK)", \
+#                "Fête de la Saint-Andrew (UK)")]%" %b%
 
 
 # (c) 2012 7601999 Canada, Inc.  All rights reserved.

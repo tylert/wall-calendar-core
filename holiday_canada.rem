@@ -3,22 +3,6 @@
   INCLUDE defs.rem
 
 
-# Short names for Canadian provinces and territories
-#   AB => Alberta
-#   BC => British Columbia, Colombie-Britannique
-#   MB => Manitoba
-#   NB => New/Nouveau Brunswick
-#   NL => Newfoundland and Labrador, Terre-Neuve-et-Labrador
-#   NS => Nova Scotia, Nouvelle-Écosse
-#   NT => Northwest Territories, Territoires du Nord-Ouest
-#   NU => Nunavut, ᓄᓇᕗᑦ
-#   ON => Ontario
-#   PE => Prince Edward Island, Île-du-Prince-Édouard
-#   QC => Québec
-#   SK => Saskatchewan
-#   YT => Yukon
-
-
 # Generic holidays and celebratory-type events for most of Canada
 
   OMIT Jan 01 +3 PRIORITY 1000 \

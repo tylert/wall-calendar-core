@@ -29,17 +29,17 @@
     MSG %"[babel("St. Valentine's Day", "Saint-Valentin")]%" %b%
 
   # The second Monday in February is observed in 1 provinces and 0 territories
-  #   BC => Family Day;  statutory
+  #   BC:  Family Day;  statutory
   REM  Mon Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Family Day (BC)", "Fête de la famille (BC)")]%" %b%
 
   # The third Monday in February is observed in 5 provinces and 0 territories
-  #   AB => Family Day;  statutory
-  #   MB => Louis Riel Day;  statutory
-  #   ON => Family Day;  statutory
-  #   PE => Islander Day;  statutory
-  #   SK => Family Day;  statutory
+  #   AB:  Family Day;  statutory
+  #   MB:  Louis Riel Day;  statutory
+  #   ON:  Family Day;  statutory
+  #   PE:  Islander Day;  statutory
+  #   SK:  Family Day;  statutory
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Family Day (AB, ON, SK)", \
@@ -148,19 +148,19 @@
                  "Fin des vacances de la construction (QC)")]%" %b%
 
   # The first Monday in August is a quasi-semi-poly-un-statutory holiday, kinda
-  #   AB => Heritage Day;  optional, formerly statutory
-  #   BC => British Columbia Day;  statutory
-  #   MB => Civic Holiday;  non-statutory
-  #   NB => New Brunswick Day;  statutory
-  #   NL => not observed
-  #   NS => Natal Day;  non-statutory
-  #   NT => Civic Holiday;  statutory
-  #   NU => Civic Holiday;  statutory
-  #   ON => Civic Holiday and Simcoe Day;  non-statutory
-  #   PE => Civic Holiday;  statutory or non-statutory
-  #   QC => not observed
-  #   SK => Saskatchewan Day;  statutory
-  #   YT => not observed
+  #   AB:  Heritage Day;  optional, formerly statutory
+  #   BC:  British Columbia Day;  statutory
+  #   MB:  Civic Holiday;  non-statutory
+  #   NB:  New Brunswick Day;  statutory
+  #   NL:  not observed
+  #   NS:  Natal Day;  non-statutory
+  #   NT:  Civic Holiday;  statutory
+  #   NU:  Civic Holiday;  statutory
+  #   ON:  Civic Holiday and Simcoe Day;  non-statutory
+  #   PE:  Civic Holiday;  statutory or non-statutory
+  #   QC:  not observed
+  #   SK:  Saskatchewan Day;  statutory
+  #   YT:  not observed
   REM  Mon Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("August Long Weekend (except NL, QC, YT)", \
@@ -201,4 +201,4 @@
       MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%
 
 
-# (c) 2012 7601999 Canada, Inc.  All rights reserved.
+# (c) 2008 - 2013 7601999 Canada, Inc.  All rights reserved.

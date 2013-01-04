@@ -87,29 +87,37 @@
 
 # REM  [trigger(date(2017,01,04), time(14,00), 1)] +1 PRIORITY 0000 \
 #   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-# REM  [trigger(date(2017,03,20), time(10,28), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
-# REM  [trigger(date(2017,06,21), time(04,24), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+  # [trigger(date(2017,03,20), time(10,28), 1)]
+  REM  Mar 20 2017 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+  # [trigger(date(2017,06,21), time(04,24), 1)]
+  REM  Jun 21 2017 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
 # REM  [trigger(date(2017,07,03), time(20,00), 1)] +1 PRIORITY 0000 \
 #   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-# REM  [trigger(date(2017,09,22), time(20,02), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
-# REM  [trigger(date(2017,12,21), time(16,28), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
+  # [trigger(date(2017,09,22), time(20,02), 1)]
+  REM  Sep 22 2017 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+  # [trigger(date(2017,12,21), time(16,28), 1)]
+  REM  Dec 21 2017 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
 # REM  [trigger(date(2018,01,03), time(06,00), 1)] +1 PRIORITY 0000 \
 #   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-# REM  [trigger(date(2018,03,20), time(16,15), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
-# REM  [trigger(date(2018,06,21), time(10,07), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
+  # [trigger(date(2018,03,20), time(16,15), 1)]
+  REM  Mar 20 2018 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
+  # [trigger(date(2018,06,21), time(10,07), 1)]
+  REM  Jun 21 2018 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
 # REM  [trigger(date(2018,07,06), time(17,00), 1)] +1 PRIORITY 0000 \
 #   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-# REM  [trigger(date(2018,09,23), time(01,54), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
-# REM  [trigger(date(2018,12,21), time(22,22), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
+  # [trigger(date(2018,09,23), time(01,54), 1)]
+  REM  Sep 23 2018 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
+  # [trigger(date(2018,12,21), time(22,22), 1)]
+  REM  Dec 21 2018 +1 PRIORITY 0000 \
+    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
 # REM  [trigger(date(2019,01,03), time(05,00), 1)] +1 PRIORITY 0000 \
 #   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
@@ -138,4 +146,4 @@
 #   MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
 
 
-# (c) 2012 7601999 Canada, Inc.  All rights reserved.
+# (c) 2008 - 2013 7601999 Canada, Inc.  All rights reserved.

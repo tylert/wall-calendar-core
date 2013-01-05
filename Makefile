@@ -2,7 +2,7 @@ SHELL := /bin/bash
 
 YEAR ?= $(shell date +%Y)
 
-GENERATED_FILES = calendar.ps calendar.pdf rulers.pdf \
+GENERATED_FILES = calendar.ps calendar.pdf \
   calendar_mrow.ps calendar_mrow.pdf floral_border.pdf \
   rac_calendar_en.ps rac_calendar_en.pdf \
   rac_calendar_fr.ps rac_calendar_fr.pdf rac_watermark.pdf
@@ -16,10 +16,9 @@ calendar.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd calendar.rem $(DATE) |\
     rem2ps -l -e -olrtb 1 -sthed 8 > $@
 
-calendar.pdf : calendar.ps rulers.pdf
+calendar.pdf : calendar.ps
 	@a2ps -Xiso1 -2B --borders=no $< -o - | ps2pdf - |\
-    pdftk - cat 1-2S output - uncompress |\
-      pdftk - background rulers.pdf output $@ uncompress
+    pdftk - cat 1-endS output $@ uncompress
 
 calendar_mrow.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd calendar_mrow.rem $(DATE) |\
@@ -82,4 +81,4 @@ clean :
 	@rm -f $(GENERATED_FILES)
 
 
-# (c) 2012 7601999 Canada, Inc.  All rights reserved.
+# (c) 2008 - 2013 7601999 Canada, Inc.  All rights reserved.

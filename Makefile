@@ -13,12 +13,14 @@ all : $(GENERATED_FILES)
 # Personal calendars
 
 calendar.ps : $(wildcard *.rem) Makefile
-	@remind -p12 -b1 -gdddd calendar.rem $(DATE) |\
-    rem2ps -l -e -olrtb 1 -sthed 8 > $@
+	@remind -p12 -b1 -gdddd calendar.rem $(DATE) \
+    | rem2ps -i -l -e -olrtb 1 -sthed 8 > $@
 
 calendar.pdf : calendar.ps
-	@a2ps -Xiso1 -2B --borders=no $< -o - | ps2pdf - |\
-    pdftk - cat 1-endS output $@ uncompress
+	@cat $< | sed \
+    -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
+      | a2ps -2B --borders=no $< -o - \
+        | ps2pdf - - | pdftk - cat 1-endS output $@ uncompress
 
 calendar_mrow.ps : $(wildcard *.rem) Makefile
 	@remind -p12 -b1 -gdddd calendar_mrow.rem $(DATE) |\
@@ -31,12 +33,12 @@ calendar_mrow.pdf : calendar_mrow.ps floral_border.pdf
 # Public calendars
 
 rac_calendar_en.ps : $(wildcard *.rem) Makefile
-	@remind -p12 -b1 -gdddd rac_calendar.rem $(DATE) |\
-    rem2ps -i -l -e -olrtb 1 -sthed 8 > $@
+	@remind -p12 -b1 -gdddd rac_calendar.rem $(DATE) \
+    | rem2ps -i -l -e -olrtb 1 -sthed 8 > $@
 
 rac_calendar_fr.ps : $(wildcard *.rem) Makefile
-	@remind.fr -p12 -b1 -gdddd rac_calendar.rem $(DATE) |\
-    rem2ps.fr -i -l -e -olrtb 1 -sthed 8 > $@
+	@remind.fr -p12 -b1 -gdddd rac_calendar.rem $(DATE) \
+    | rem2ps.fr -i -l -e -olrtb 1 -sthed 8 > $@
 
 rac_calendar_en.pdf : rac_calendar_en.ps rac_watermark.pdf
 	@cat $< | sed \
@@ -53,7 +55,7 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps rac_watermark.pdf
     -e 's/\d195\d170/\d234/g' \
     -e 's/\d195\d171/\d235/g' \
     -e 's/\d195\d180/\d244/g' \
-	     | ps2pdf - - | pdftk - background rac_watermark.pdf output $@ uncompress
+      | ps2pdf - - | pdftk - background rac_watermark.pdf output $@ uncompress
 
 # man iso_8859-1
 #   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174

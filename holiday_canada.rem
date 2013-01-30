@@ -11,6 +11,9 @@
     MSG %"[babel("Groundhog Day", "Jour de la marmotte")]%" %b%
   REM  Feb 14 +3 PRIORITY 1000 \
     MSG %"[babel("St. Valentine's Day", "Saint-Valentin")]%" %b%
+  REM  Feb 15 +3 PRIORITY 1000 \
+    MSG %"[babel("National Flag of Canada Day", \
+                 "Jour du drapeau national du Canada")]%" %b%
 
   # The second Monday in February is observed in 1 provinces and 0 territories
   #   BC:  Family Day;  statutory

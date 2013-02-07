@@ -115,6 +115,17 @@
                    "Concours CQ WW DX CW")]%" %b%
 
 
+# RSGB contest events
+
+  # RSGB Commonwealth Contest is the second weekend in March
+  #   1000 UTC Saturday through 1000 UTC Sunday
+  #     http://www.rsgbcc.org/hf/rules/2013/rberu.shtml
+  REM Sat Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 10:00 DURATION 24:00 \
+      MSG %"[babel("RSGB BERU Commonwealth CW Contest", \
+                   "Concours CW BERU Commonwealth RSGB")]%" %b%
+
+
 # Other contest events
 
   # Freeze Your Buns Off QRP Sprint is the first weekend in February

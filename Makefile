@@ -3,7 +3,6 @@ SHELL := /bin/bash
 YEAR ?= $(shell date +%Y)
 
 GENERATED_FILES = calendar.ps calendar.pdf \
-  calendar_mrow.ps calendar_mrow.pdf floral_border.pdf \
   rac_calendar_en.ps rac_calendar_en.pdf \
   rac_calendar_fr.ps rac_calendar_fr.pdf rac_watermark.pdf
 
@@ -18,17 +17,9 @@ calendar.ps : $(wildcard *.rem) Makefile
 
 calendar.pdf : calendar.ps
 	@cat $< | sed \
-    -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
+    -e 's/\d194\d174/\d174/g' \
       | a2ps -2B --borders=no $< -o - \
         | ps2pdf - - | pdftk - cat 1-endS output $@ uncompress
-
-calendar_mrow.ps : $(wildcard *.rem) Makefile
-	@remind -p12 -b1 -gdddd calendar_mrow.rem $(DATE) |\
-    rem2ps -l -e -olrtb 1 -sthed 8 > $@
-
-calendar_mrow.pdf : calendar_mrow.ps floral_border.pdf
-	@ps2pdf $< - |\
-    pdftk - background floral_border.pdf output $@ uncompress
 
 # Public calendars
 

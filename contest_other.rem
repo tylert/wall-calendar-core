@@ -135,6 +135,3 @@
     REM [trigger(trigdate())] +7 PRIORITY 2000 AT 14:00 DURATION 10:00 \
       MSG %"[babel("Freeze Your Buns Off QRP Contest", \
                    "Concours QRP Freeze Your Buns Off")]%" %b%
-
-
-# (c) 2008 - 2013 7601999 Canada, Inc.  All rights reserved.

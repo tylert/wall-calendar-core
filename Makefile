@@ -72,6 +72,3 @@ burst :
 .PHONY : clean
 clean :
 	@rm -f $(GENERATED_FILES)
-
-
-# (c) 2008 - 2013 7601999 Canada, Inc.  All rights reserved.

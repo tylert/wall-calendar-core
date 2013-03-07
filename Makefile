@@ -12,7 +12,7 @@ all : $(GENERATED_FILES)
 # Personal calendars
 
 calendar.ps : $(wildcard *.rem) Makefile
-	@remind -p12 -b1 -gdaad calendar.rem $(DATE) \
+	@remind -p14 -b1 -gdaad calendar.rem $(DATE) \
     | rem2ps -i -l -e -olrtb 1 -sthed 8 > $@
 
 calendar.pdf : calendar.ps
@@ -24,11 +24,11 @@ calendar.pdf : calendar.ps
 # Public calendars
 
 rac_calendar_en.ps : $(wildcard *.rem) Makefile
-	@remind -p12 -b1 -gdaad rac_calendar.rem $(DATE) \
+	@remind -p13 -b1 -gdaad rac_calendar.rem $(DATE) \
     | rem2ps -i -l -e -olrtb 1 -sthed 8 > $@
 
 rac_calendar_fr.ps : $(wildcard *.rem) Makefile
-	@remind.fr -p12 -b1 -gdaad rac_calendar.rem $(DATE) \
+	@remind.fr -p13 -b1 -gdaad rac_calendar.rem $(DATE) \
     | rem2ps.fr -i -l -e -olrtb 1 -sthed 8 > $@
 
 rac_calendar_en.pdf : rac_calendar_en.ps rac_watermark.pdf

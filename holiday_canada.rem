@@ -13,7 +13,7 @@
     MSG %"[babel("St. Valentine's Day", "Saint-Valentin")]%" %b%
   REM  Feb 15 +3 PRIORITY 1000 \
     MSG %"[babel("National Flag of Canada Day", \
-                 "Jour du drapeau national du Canada")]%" %b%
+      "Jour du drapeau national du Canada")]%" %b%
 
   # The second Monday in February is observed in 1 provinces and 0 territories
   #   BC:  Family Day;  statutory
@@ -30,7 +30,7 @@
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Family Day (AB, ON, SK)", \
-                   "Fête de la famille (AB, ON, SK)")]%" %b%
+        "Fête de la famille (AB, ON, SK)")]%" %b%
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Louis Riel Day (MB)", "Journée Louis Riel (MB)")]%" %b%
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
@@ -45,7 +45,7 @@
   REM Sun Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-2)] +3 PRIORITY 1000 \
       MSG %"[babel("Heritage Day (YT)", \
-                   "Jour de patrimoine (YT)")]%" %b%
+        "Jour de patrimoine (YT)")]%" %b%
 
   REM  Mar 17 +3 PRIORITY 1000 \
     MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
@@ -53,7 +53,7 @@
     MSG %"[babel("April Fool's Day", "Poisson d'avril")]%" %b%
   REM  Apr 23 +1 PRIORITY 1000 \
     MSG %"[babel("St. George's Day (NL, UK)", \
-                 "Fête de la Saint-Georges (NL, UK)")]%" %b%
+      "Fête de la Saint-Georges (NL, UK)")]%" %b%
 
   # Easter is the first Sunday after the first full moon after the Spring
   #   equinox
@@ -95,15 +95,15 @@
 
   REM  Jun 21 +3 PRIORITY 1000 \
     MSG %"[babel("National Aboriginal Day", \
-                 "Journée nationale des Autochtones")]%" %b%
+      "Journée nationale des Autochtones")]%" %b%
   REM  Jun 24 +3 PRIORITY 1000 \
     MSG %"[babel("Discovery Day (NL)", "Journée découverte (NL)")]%" %b%
   REM  Jun 24 +3 PRIORITY 1000 \
     MSG %"[babel("Quebec's National Holiday", \
-                 "Fête nationale du Québec")]%" %b%
+      "Fête nationale du Québec")]%" %b%
   REM  Jun 24 +3 PRIORITY 1000 \
     MSG %"[babel("St. John the Baptist Day", \
-                 "Fête de la Saint-Jean-Baptiste")]%" %b%
+      "Fête de la Saint-Jean-Baptiste")]%" %b%
 
   REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF wkdaynum(trigdate()) == Saturday
@@ -134,10 +134,10 @@
   REM  Sun Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Construction Holiday Begins (QC)", \
-                   "Début des vacances de la construction (QC)")]%" %b%
+        "Début des vacances de la construction (QC)")]%" %b%
   REM  Aug 01 -1 +3 PRIORITY 1000 \
     MSG %"[babel("Construction Holiday Ends (QC)", \
-                 "Fin des vacances de la construction (QC)")]%" %b%
+      "Fin des vacances de la construction (QC)")]%" %b%
 
   # The first Monday in August is a quasi-semi-poly-un-statutory holiday, kinda
   #   AB:  Heritage Day;  optional, formerly statutory
@@ -156,7 +156,7 @@
   REM  Mon Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("August Long Weekend (except NL, QC, YT)", \
-                   "Longue fin de semaine d'aôut (sauf NL, QC, YT)")]%" %b%
+        "Longue fin de semaine d'aôut (sauf NL, QC, YT)")]%" %b%
 
   # Discovery Day (YT) is the third Monday in August
   REM  Mon Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1

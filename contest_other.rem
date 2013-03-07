@@ -7,21 +7,21 @@
 
   REM  Apr 18 +3 PRIORITY 2000 \
     MSG %"[babel("World Amateur Radio Day", \
-                 "Journée de la Radio amateur")]%" %b%
+      "Journée de la Radio amateur")]%" %b%
 
   # The Dayton Hamvention is the third weekend in May
   #   http://hamvention.org
   REM  Fri May [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 \
       MSG %"[babel("Dayton Hamvention® Begins", \
-                   "Hamvention® de Dayton commence")]%" %b%
+        "Hamvention® de Dayton commence")]%" %b%
 
   # The Canadian Ski Marathon is the second weekend in February
   #   http://csm-mcs.com
   REM  Sat Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 \
       MSG %"[nst(1967)][babel("th Canadian Ski Marathon Begins", \
-        "ième Marathon canadien de ski commence")]%" %b%
+        "e Marathon canadien de ski commence")]%" %b%
 
 
 # RAC events
@@ -29,7 +29,7 @@
   # RAC Canada Day Contest is July 1
   REM  Jul 01 +7 PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
     MSG %"[babel("RAC Canada Day Contest", \
-                 "Concours Fête du Canada RAC")]%" %b%
+      "Concours Fête du Canada RAC")]%" %b%
 
   # RAC Canada Winter Contest is the last Saturday in December
 # REM  Sat Dec [Week_3] +7 SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -37,7 +37,22 @@
   REM  Sat Jan 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
       MSG %"[babel("RAC Canada Winter Contest", \
-                   "Concours d'hiver du Canada RAC")]%" %b%
+        "Concours d'hiver du Canada RAC")]%" %b%
+
+
+# Ontario events
+
+  # Ontario QSO Party is the third weekend in April
+  #   1800 UTC Saturday through 0500 UTC Sunday and
+  #   1200 UTC Sunday through 1800 UTC Sunday
+  #     http://va3cco.com/oqp
+  REM  Sat Apr [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] +7 PRIORITY 2000 AT 18:00 +60 DURATION 11:00 \
+      MSG %"[nst(1998)][babel("th Ontario QSO Party Contest Part 1", \
+        "e Concours Ontario QSO Party 1e partie")]%" %b%
+    REM [trigger(trigdate()+1)] +7 PRIORITY 2000 AT 12:00 +60 DURATION 06:00 \
+      MSG %"[nst(1998)][babel("th Ontario QSO Party Contest Part 2", \
+        "e Concours Ontario QSO Party 2e partie")]%" %b%
 
 
 # CQ Magazine events
@@ -48,7 +63,7 @@
   REM Sun Feb 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-2)] +7 PRIORITY 2000 AT 22:00 DURATION 48:00 \
       MSG %"[babel("CQ WW 160 meter CW Contest", \
-                   "Concours CQ WW 160 mètres CW")]%" %b%
+        "Concours CQ WW 160 mètres CW")]%" %b%
 
   # CQ WW 160 meter SSB Contest is the last weekend in February
   #   2200 UTC Friday through 2200 UTC Sunday
@@ -56,7 +71,7 @@
   REM Sun Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-2)] +7 PRIORITY 2000 AT 22:00 DURATION 48:00 \
       MSG %"[babel("CQ WW 160 meter SSB Contest", \
-                   "Concours CQ WW 160 mètres SSB")]%" %b%
+        "Concours CQ WW 160 mètres SSB")]%" %b%
 
   # CQ WPX RTTY Contest is the second weekend in February
   #   0000 UTC Saturday through 2359 UTC Sunday
@@ -64,7 +79,7 @@
   REM Sat Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WPX RTTY Contest", \
-                   "Concours CQ WPX RTTY")]%" %b%
+        "Concours CQ WPX RTTY")]%" %b%
 
   # CQ WW WPX SSB Contest is the last weekend in March
   #   0000 UTC Saturday through 2359 UTC Sunday
@@ -72,7 +87,7 @@
   REM Sun Apr 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WW WPX SSB Contest", \
-                   "Concours CQ WW WPX SSB")]%" %b%
+        "Concours CQ WW WPX SSB")]%" %b%
 
   # CQ WW WPX CW Contest is the last weekend in May
   #   0000 UTC Saturday through 2359 UTC Sunday
@@ -80,7 +95,7 @@
   REM Sun Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WW WPX CW Contest", \
-                   "Concours CQ WW WPX CW")]%" %b%
+        "Concours CQ WW WPX CW")]%" %b%
 
   # CQ WW VHF Contest is the third weekend in July
   #   1800 UTC Saturday through 2100 UTC Sunday
@@ -88,7 +103,7 @@
   REM Sat Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 AT 18:00 DURATION 27:00 \
       MSG %"[babel("CQ WW VHF Contest", \
-                   "Concours CQ WW VHF")]%" %b%
+        "Concours CQ WW VHF")]%" %b%
 
   # CQ WW RTTY DX Contest is the last weekend in September
   #   0000 UTC Saturday through 2400 UTC Sunday
@@ -96,7 +111,7 @@
   REM Sun Oct 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 48:00 \
       MSG %"[babel("CQ WW RTTY DX Contest", \
-                   "Concours CQ WW RTTY DX")]%" %b%
+        "Concours CQ WW RTTY DX")]%" %b%
 
   # CQ WW DX SSB Contest is the last weekend in October
   #   0000 UTC Saturday through 2359 UTC Sunday
@@ -104,7 +119,7 @@
   REM Sun Nov 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WW DX SSB Contest", \
-                   "Concours CQ WW DX SSB")]%" %b%
+        "Concours CQ WW DX SSB")]%" %b%
 
   # CQ WW DX CW Contest is the last weekend in November
   #   0000 UTC Saturday through 2359 UTC Sunday
@@ -112,7 +127,7 @@
   REM Sun Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +7 PRIORITY 2000 AT 00:00 DURATION 47:59 \
       MSG %"[babel("CQ WW DX CW Contest", \
-                   "Concours CQ WW DX CW")]%" %b%
+        "Concours CQ WW DX CW")]%" %b%
 
 
 # RSGB contest events
@@ -122,8 +137,8 @@
   #     http://www.rsgbcc.org/hf/rules/2013/rberu.shtml
   REM Sat Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 AT 10:00 DURATION 24:00 \
-      MSG %"[babel("RSGB BERU Commonwealth CW Contest", \
-                   "Concours CW BERU Commonwealth RSGB")]%" %b%
+      MSG %"[nst(1938)][babel("th RSGB BERU Commonwealth CW Contest", \
+        "e Concours CW BERU Commonwealth RSGB")]%" %b%
 
 
 # Other contest events
@@ -134,4 +149,4 @@
   REM Sat Feb [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 AT 14:00 DURATION 10:00 \
       MSG %"[babel("Freeze Your Buns Off QRP Contest", \
-                   "Concours QRP Freeze Your Buns Off")]%" %b%
+        "Concours QRP Freeze Your Buns Off")]%" %b%

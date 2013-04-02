@@ -70,7 +70,7 @@
       MSG %"[babel("Good Friday", "Vendredi saint")]%" %b%
     OMIT [trigger(easter)]    +3 PRIORITY 1000 \
       MSG %"[babel("Easter Sunday", "Le dimanche de Pâques")]%" %b%
-    REM  [trigger(easter+1)]  +3 PRIORITY 1000 \
+    OMIT [trigger(easter+1)]  +3 PRIORITY 1000 \
       MSG %"[babel("Easter Monday", "Le lundi de Pâques")]%" %b%
     REM  [trigger(easter+39)] +3 PRIORITY 1000 \
       MSG %"[babel("Ascension", "Ascension")]%" %b%

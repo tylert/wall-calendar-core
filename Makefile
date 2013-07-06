@@ -3,8 +3,10 @@ SHELL := /bin/bash
 YEAR ?= $(shell date +%Y)
 
 GENERATED_FILES = calendar.ps calendar.pdf \
-  rac_calendar_en.ps rac_calendar_en.pdf \
-  rac_calendar_fr.ps rac_calendar_fr.pdf rac_watermark.pdf
+  rac_calendar_en.ps rac_calendar_fr.ps \
+  rac_calendar_en.pdf rac_calendar_fr.pdf \
+  rac_calendar_draft_en.pdf rac_calendar_draft_fr.pdf \
+  rac_watermark.pdf draft_watermark.pdf
 
 .PHONY : all
 all : $(GENERATED_FILES)
@@ -57,6 +59,12 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps rac_watermark.pdf
 #   ê -> Ãª -> \d195\d170 -> \d234
 #   ë -> Ã« -> \d195\d171 -> \d235
 #   ô -> Ã´ -> \d195\d180 -> \d244
+
+rac_calendar_draft_en.pdf : rac_calendar_en.pdf draft_watermark.pdf
+	pdftk $< background draft_watermark.pdf output $@
+
+rac_calendar_draft_fr.pdf : rac_calendar_fr.pdf draft_watermark.pdf
+	pdftk $< background draft_watermark.pdf output $@
 
 .PHONY : burst
 burst :

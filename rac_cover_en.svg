@@ -17,7 +17,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.48.3.1 r9886"
    version="1.0"
-   sodipodi:docname="calendar_rac_cover_en.svg"
+   sodipodi:docname="rac_cover_en.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    inkscape:export-filename="/home/tyler/f1/radio/logos/main/rac_db.png"
    inkscape:export-xdpi="96"
@@ -192,7 +192,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.80808081"
-     inkscape:cx="495"
+     inkscape:cx="497.475"
      inkscape:cy="382.5"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
@@ -202,7 +202,7 @@
      inkscape:window-width="1916"
      inkscape:window-height="1041"
      inkscape:window-x="1920"
-     inkscape:window-y="18"
+     inkscape:window-y="13"
      borderlayer="true"
      inkscape:window-maximized="0" />
   <metadata
@@ -527,19 +527,33 @@
        id="text3053"
        sodipodi:linespacing="80%"><tspan
          sodipodi:role="line"
-         id="tspan3079">2013 RAC</tspan><tspan
+         id="tspan3069">2014 RAC</tspan><tspan
          sodipodi:role="line"
-         id="tspan3081">Calendar</tspan></text>
+         id="tspan3071">Calendar</tspan></text>
     <text
-       sodipodi:linespacing="80%"
+       sodipodi:linespacing="80.000001%"
        id="text3831"
        y="198.52423"
        x="788.65399"
-       style="font-size:85.71793365px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:80%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold Semi-Condensed"
+       style="font-size:85.71793365px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold Semi-Condensed"
        xml:space="preserve"><tspan
          sodipodi:role="line"
-         id="tspan3075">2013 RAC</tspan><tspan
+         id="tspan3075"
+         x="788.65399"
+         y="198.52423">2014 RAC</tspan><tspan
          sodipodi:role="line"
-         id="tspan3077">Calendar</tspan></text>
-  </g>
+         id="tspan3077"
+         x="788.65399"
+         y="267.09857">Calendar</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3059"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3061"><rect
+           id="rect3063"
+           width="758.58752"
+           height="372.48749"
+           x="-143.55"
+           y="-82.6875" /></flowRegion><flowPara
+         id="flowPara3065"></flowPara></flowRoot>  </g>
 </svg>

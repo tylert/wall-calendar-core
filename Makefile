@@ -2,7 +2,7 @@ SHELL := /bin/bash
 
 YEAR ?= $(shell date +%Y)
 
-GENERATED_FILES = calendar.ps calendar.pdf \
+GENERATED_FILES = calendar.ps calendar_small.pdf calendar_full.pdf \
   rac_calendar_en.ps rac_calendar_fr.ps \
   rac_calendar_en.pdf rac_calendar_fr.pdf \
   rac_calendar_draft_en.pdf rac_calendar_draft_fr.pdf \
@@ -17,11 +17,20 @@ calendar.ps : $(wildcard *.rem) Makefile
 	@remind -p14 -b1 -gdaad calendar.rem $(DATE) \
     | rem2ps -i -l -e -olrtb 1 -sthed 8 > $@
 
-calendar.pdf : calendar.ps
+calendar_small.pdf : calendar.ps
 	@cat $< | sed \
     -e 's/\d194\d174/\d174/g' \
       | a2ps -2B --borders=no $< -o - \
         | ps2pdf - - | pdftk - cat 1-endS output $@ uncompress
+
+calendar_full.pdf : calendar.ps
+	@cat $< | sed \
+    -e 's/\d194\d174/\d174/g' \
+      | a2ps -1B --borders=no $< -o - \
+        | ps2pdf - - | pdftk - cat 1-endE output $@ uncompress
+
+calendar_squiggly.pdf : calendar_full.pdf squiggly_border.pdf
+	@pdftk $< background squiggly_border.pdf output $@
 
 # Public calendars
 
@@ -61,10 +70,10 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps rac_watermark.pdf
 #   ô -> Ã´ -> \d195\d180 -> \d244
 
 rac_calendar_draft_en.pdf : rac_calendar_en.pdf draft_watermark.pdf
-	pdftk $< background draft_watermark.pdf output $@
+	@pdftk $< background draft_watermark.pdf output $@
 
 rac_calendar_draft_fr.pdf : rac_calendar_fr.pdf draft_watermark.pdf
-	pdftk $< background draft_watermark.pdf output $@
+	@pdftk $< background draft_watermark.pdf output $@
 
 .PHONY : burst
 burst :

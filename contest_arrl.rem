@@ -188,7 +188,6 @@
   # December ARRL CW Rookie Roundup is the third Sunday in December
   #   1800 UTC Sunday through 2359 UTC Sunday
   #     http://arrl.org/rookie-roundup
-  REM Sun Dec [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM Sun Dec [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +7 PRIORITY 2000 AT 18:00 DURATION 05:59 \
       MSG %"[babel("ARRL CW Rookie Roundup", "Rookie Roundup CW ARRL")]%" %b%
-# XXX FIXME XXX  Should be Week_3

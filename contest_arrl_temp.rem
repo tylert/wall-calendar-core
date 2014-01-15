@@ -1,0 +1,22 @@
+# ARRL EME events
+
+  # ARRL EME 2.3 GHz and Up Contest date moves around each year
+  #   0000 UTC Saturday through 2359 UTC Sunday
+  #     http://arrl.org/eme-contest
+  REM Sat Sep 27 2014 +7 PRIORITY 2000 AT 06:00 DURATION 23:59 \
+    MSG %"[babel("ARRL EME 2.3 GHz and Up Contest", \
+      "Concours EME 2.3 GHz et plus haut ARRL")]%" %b%
+
+  # ARRL EME 50 to 1296 MHz Contest Part 1 date moves around each year
+  #   0000 UTC Saturday through 2359 UTC Sunday
+  #     http://arrl.org/eme-contest
+  REM Sat Oct 25 2014 +7 PRIORITY 2000 AT 06:00 DURATION 23:59 \
+    MSG %"[babel("ARRL EME 50 to 1296 MHz Contest Part 1", \
+      "Concours EME 50 a 1296 MHz ARRL 1e partie")]%" %b%
+
+  # ARRL EME 50 to 1296 MHz Contest Part 2 date moves around each year
+  #   0000 UTC Saturday through 2359 UTC Sunday
+  #     http://arrl.org/eme-contest
+  REM Sat Nov 16 2014 +7 PRIORITY 2000 AT 06:00 DURATION 23:59 \
+    MSG %"[babel("ARRL EME 50 to 1296 MHz Contest Part 2", \
+      "Concours EME 50 a 1296 MHz ARRL 2e partie")]%" %b%

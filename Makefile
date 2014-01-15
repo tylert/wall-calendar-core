@@ -8,7 +8,7 @@ GENERATED_FILES = rac_calendar_en.ps rac_calendar_fr.ps \
   rac_watermark.pdf draft_watermark.pdf
 
 .PHONY : all
-all : $(GENERATED_FILES)
+all : rac_calendar_en.pdf rac_calendar_fr.pdf
 
 rac_calendar_en.ps : $(wildcard *.rem) Makefile
 	@remind -p13 -b1 -gdaad rac_calendar.rem $(DATE) \

@@ -24,7 +24,7 @@
   INCLUDE holiday_other.rem
   INCLUDE contest_other.rem
   INCLUDE contest_arrl.rem
-  INCLUDE contest_arrl_temp.rem
+  INCLUDE contest_arrl_2014.rem
 
 
 # Time transitions

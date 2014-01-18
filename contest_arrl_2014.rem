@@ -1,3 +1,10 @@
+# Helper stuff
+
+  INCLUDE defs.rem
+
+
+# From http://arrl.org/contest-calendar
+
 # ARRL EME events
 
   # ARRL EME 2.3 GHz and Up Contest date moves around each year

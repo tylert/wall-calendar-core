@@ -1,0 +1,13 @@
+apt-get install make remind inkscape pdftk psutils
+apt-get install libreoffice
+
+wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz
+wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz.sig
+gpg --recv-key 126F42E0
+gpg --verify remind-03.01.13.tar.gz.sig remind-03.01.13.tar.gz
+
+tar xvfz remind-03.01.13.tar.gz
+cd remind-03.01.13
+make "LANGDEF=-DLANG=FRENCH"
+cp src/remind $(which remind).fr
+cp src/rem2ps $(which rem2ps).fr

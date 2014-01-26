@@ -1,6 +1,7 @@
 SHELL := /bin/bash
 
 YEAR ?= $(shell date +%Y)
+MONTHS ?= 13
 
 GENERATED_FILES = rac_calendar_en.ps rac_calendar_fr.ps \
   rac_calendar_en.pdf rac_calendar_fr.pdf \
@@ -11,11 +12,11 @@ GENERATED_FILES = rac_calendar_en.ps rac_calendar_fr.ps \
 all : rac_calendar_en.pdf rac_calendar_fr.pdf
 
 rac_calendar_en.ps : $(wildcard *.rem) Makefile
-	@remind -p13 -b1 -gdaad rac_calendar.rem $(DATE) \
+	@remind -p$(MONTHS) -b1 -gdaad rac_calendar.rem $(DATE) \
     | rem2ps -i -l -e -olrtb 1 -sthed 8 > $@
 
 rac_calendar_fr.ps : $(wildcard *.rem) Makefile
-	@remind.fr -p13 -b1 -gdaad rac_calendar.rem $(DATE) \
+	@remind.fr -p$(MONTHS) -b1 -gdaad rac_calendar.rem $(DATE) \
     | rem2ps.fr -i -l -e -olrtb 1 -sthed 8 > $@
 
 rac_calendar_en.pdf : rac_calendar_en.ps watermark_rac.pdf

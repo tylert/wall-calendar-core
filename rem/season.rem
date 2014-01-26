@@ -1,6 +1,6 @@
 # Helper stuff
 
-  INCLUDE defs.rem
+  INCLUDE [filedir()]/defs.rem
 
 
 # Season transitions from now until 2020

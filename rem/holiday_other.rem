@@ -1,6 +1,6 @@
 # Helper stuff
 
-  INCLUDE defs.rem
+  INCLUDE [filedir()]/defs.rem
 
 
 # Generic holidays and celebratory-type events for US and UK

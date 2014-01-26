@@ -1,6 +1,6 @@
 # Helper stuff
 
-  INCLUDE defs.rem
+  INCLUDE [filedir()]/defs.rem
 
 
 # From http://arrl.org/contest-calendar

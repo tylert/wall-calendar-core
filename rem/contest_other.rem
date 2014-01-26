@@ -1,6 +1,6 @@
 # Helper stuff
 
-  INCLUDE defs.rem
+  INCLUDE [filedir()]/defs.rem
 
 
 # Assorted radio-related events and reminders

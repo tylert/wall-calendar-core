@@ -45,6 +45,9 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps rac_watermark.pdf
 #   ë -> Ã« -> \d195\d171 -> \d235
 #   ô -> Ã´ -> \d195\d180 -> \d244
 
+.PHONY : draft
+draft : rac_calendar_draft_en.pdf rac_calendar_draft_fr.pdf
+
 rac_calendar_draft_en.pdf : rac_calendar_en.pdf draft_watermark.pdf
 	@pdftk $< background draft_watermark.pdf output $@
 

@@ -25,6 +25,7 @@
   INCLUDE contest_other.rem
   INCLUDE contest_arrl.rem
   INCLUDE contest_arrl_2014.rem
+  INCLUDE cw_qualifying_2014.rem
 
 
 # Time transitions

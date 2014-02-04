@@ -60,7 +60,7 @@ burst :
 	@pdftk rac_calendar_en.pdf burst output en%02d.pdf uncompress
 	@pdftk rac_calendar_fr.pdf burst output fr%02d.pdf uncompress
 
-%.pdf : %.svg
+%.pdf : svg/%.svg
 	@inkscape -T -A $@ $<
 
 %.pdf : %.odt

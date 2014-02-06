@@ -1,13 +1,18 @@
-apt-get install make remind inkscape pdftk psutils
-apt-get install libreoffice
+  sudo apt-get install remind
+  sudo apt-get install make inkscape pdftk psutils
+  sudo apt-get install libreoffice
 
-wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz
-wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz.sig
-gpg --recv-key 126F42E0
-gpg --verify remind-03.01.13.tar.gz.sig remind-03.01.13.tar.gz
+  wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz
+  wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz.sig
+  gpg --recv-key 126F42E0
+  gpg --verify remind-03.01.13.tar.gz.sig remind-03.01.13.tar.gz
 
-tar xvfz remind-03.01.13.tar.gz
-cd remind-03.01.13
-make "LANGDEF=-DLANG=FRENCH"
-cp src/remind $(which remind).fr
-cp src/rem2ps $(which rem2ps).fr
+  tar xvfz remind-03.01.13.tar.gz
+  cd remind-03.01.13
+  make "LANGDEF=-DLANG=FRENCH"
+  sudo cp src/remind $(which remind).fr
+  sudo cp src/rem2ps $(which rem2ps).fr
+
+# NOTE:  Debian 7 ships with remind 03.01.12.  If you are concerned about
+# making both an English and French calendar that look the same, you should
+# probably make sure to build the same version of remind for both languages.

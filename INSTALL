@@ -1,18 +1,48 @@
-  sudo apt-get install remind
-  sudo apt-get install make inkscape pdftk psutils
-  sudo apt-get install libreoffice
+# Normally, all that would be required to install remind would be to use the
+# already packaged version provided by your Linux distribution.  On
+# Debian/Ubuntu, this is usually done by typing:
 
-  wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz
+  sudo apt-get install remind
+
+# The current version of remind does not allow the desired language to be
+# specified at the command-line, so, if you want to make calendars for a
+# language other than your native locale, you will be required to rebuild
+# remind from source.  One way of doing this is to execute the following:
+
+  sudo apt-get install build-essential make
+
+  mkdir -p tmp
+  cd tmp
+
   wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz.sig
+  wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz
   gpg --recv-key 126F42E0
+  gpg --export --armor --no-emit-version --no-comment 126F42E0 >\
+    126F42E0.gpg.pub.txt
   gpg --verify remind-03.01.13.tar.gz.sig remind-03.01.13.tar.gz
 
   tar xvfz remind-03.01.13.tar.gz
   cd remind-03.01.13
   make "LANGDEF=-DLANG=FRENCH"
-  sudo cp src/remind $(which remind).fr
-  sudo cp src/rem2ps $(which rem2ps).fr
+  sudo cp src/remind /usr/bin/remind.fr
+  sudo cp src/rem2ps /usr/bin/rem2ps.fr
 
-# NOTE:  Debian 7 ships with remind 03.01.12.  If you are concerned about
-# making both an English and French calendar that look the same, you should
-# probably make sure to build the same version of remind for both languages.
+  make clean
+  make "LANGDEF=-DLANG=ENGLISH"
+  sudo cp src/remind /usr/bin/remind.en
+  sudo cp src/rem2ps /usr/bin/rem2ps.en
+
+# Debian 7 ships with remind 03.01.12 and Ubuntu 13.10 ships with remind
+# 03.01.13.  Since there may be subtle differences with the way things look
+# from version to version, if you are concerned about making both an English
+# and French calendar that look the same, you should probably make sure to
+# build the same version of remind for all the languages for which you wish to
+# make calendars.
+
+# To perform some other operations related to generating or testing these
+# calendars, you will probably also want to install some additional tools by
+# typing:
+
+  sudo apt-get install tkremind wyrd
+  sudo apt-get install inkscape pdftk psutils
+  sudo apt-get install libreoffice

@@ -13,9 +13,8 @@
 
   # World Radio Day is February 13
   #   http://worldradioday.org
-  REM  Apr 18 +3 PRIORITY 2000 \
-    MSG %"[babel("World Radio Day", \
-      "Journée mondial de la radio")]%" %b%
+  REM  Feb 13 +3 PRIORITY 2000 \
+    MSG %"[babel("World Radio Day", "Journée mondial de la radio")]%" %b%
 
   # The Dayton Hamvention is the third weekend in May
   #   http://hamvention.org

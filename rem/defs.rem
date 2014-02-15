@@ -67,6 +67,9 @@
     "Wood", "Fire", "Fire", "Earth", "Earth")
   FSET element() elements(year(trigdate()) % 10)
 
+  FSET spins(x) choose(x, "Yang", "Yin")
+  FSET spin() spins(year(trigdate()) % 2)
+
 
 # Traditional wedding anniversary gifts
 

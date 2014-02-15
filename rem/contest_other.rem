@@ -5,9 +5,17 @@
 
 # Assorted radio-related events and reminders
 
+  # World Amateur Radio Day is April 18
+  #   http://iaru.org/world-amateur-radio-day.html
   REM  Apr 18 +3 PRIORITY 2000 \
     MSG %"[babel("World Amateur Radio Day", \
-      "Journée de la Radio amateur")]%" %b%
+      "Journée de la radio amateur")]%" %b%
+
+  # World Radio Day is February 13
+  #   http://worldradioday.org
+  REM  Apr 18 +3 PRIORITY 2000 \
+    MSG %"[babel("World Radio Day", \
+      "Journée mondial de la radio")]%" %b%
 
   # The Dayton Hamvention is the third weekend in May
   #   http://hamvention.org

@@ -31,12 +31,14 @@
 # Time transitions
 
   # Daylight Savings Time starts on the second Sunday in March
+  #   EST = UTC - 4
   REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 4000 \
       MSG %"[babel("Daylight Savings Time Begins (except SK)", \
         "Heure d'éte commence (sauf SK)")]%" %b%
 
   # Daylight Savings Time ends on the first Sunday in November
+  #   EDT = UTC - 5
   REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 4000 \
       MSG %"[babel("Daylight Savings Time Ends (except SK)", \

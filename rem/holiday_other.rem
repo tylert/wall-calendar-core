@@ -16,7 +16,8 @@
   # President's Day (US) is the third Monday in February
 # REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
 #   REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-#     MSG %"[babel("President's Day (US)", "Journée de la Présidence")]%" %b%
+#     MSG %"[babel("President's Day (US)", \
+#       "Journée de la Présidence (EU)")]%" %b%
 
 # REM  Mar 01 +1 PRIORITY 1000 \
 #   MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-")]%" %b%

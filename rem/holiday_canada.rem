@@ -36,16 +36,16 @@
     OMIT [trigger(trigdate())] +3 PRIORITY 1000 \
       MSG %"[babel("Islander Day (PE)", "Fête des Insulaires (PE)")]%" %b%
 
-  # Commonwealth Day is the second Monday in March
-  REM  Mon Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +3 PRIORITY 1000 \
-      MSG %"[babel("Commonwealth Day", "Jour du Commonwealth")]%" %b%
-
   # Heritage Day (YT) is the Friday before the last Sunday in February
   REM Sun Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-2)] +3 PRIORITY 1000 \
       MSG %"[babel("Heritage Day (YT)", \
         "Jour de patrimoine (YT)")]%" %b%
+
+  # Commonwealth Day is the second Monday in March
+  REM  Mon Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +3 PRIORITY 1000 \
+      MSG %"[babel("Commonwealth Day", "Jour du Commonwealth")]%" %b%
 
   REM  Mar 17 +3 PRIORITY 1000 \
     MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%

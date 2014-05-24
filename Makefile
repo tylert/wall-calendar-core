@@ -56,16 +56,16 @@ rac_calendar_draft_fr.pdf : rac_calendar_fr.pdf watermark_draft.pdf
 	@pdftk $< background watermark_draft.pdf output $@
 
 .PHONY : burst
-burst :
+burst : rac_calendar_en.pdf rac_calendar_fr.pdf
 	@pdftk rac_calendar_en.pdf burst output en%02d.pdf uncompress
 	@pdftk rac_calendar_fr.pdf burst output fr%02d.pdf uncompress
 
 %.pdf : svg/%.svg
-	@inkscape -T -A $@ $<
+	@inkscape --export-text-to-path --export-pdf=$@ $<
 
 %.pdf : %.odt
 	@libreoffice --headless --convert-to pdf $^
 
 .PHONY : clean
 clean :
-	@rm -f $(GENERATED_FILES)
+	@rm -f $(GENERATED_FILES) en??.pdf fr??.pdf doc_data.txt

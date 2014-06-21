@@ -3,35 +3,27 @@ SHELL := /bin/bash
 YEAR ?= $(shell date +%Y)
 MONTHS ?= 13
 
-GENERATED_FILES = calendar_en.ps calendar_fr.ps \
-  calendar_en.pdf calendar_fr.pdf doc_data.txt
+GENERATED_FILES = en.ps fr.ps \
+  en.pdf fr.pdf doc_data.txt
 
 .PHONY : all
-all : calendar_en.pdf calendar_fr.pdf
+all : burst
 
 
 # Remind to PS
 
-calendar_en.ps : $(wildcard remind/*.rem) Makefile
+en.ps : $(wildcard remind/*.rem) Makefile
 	@remind.en -p$(MONTHS) -b1 -gdaad remind/top.rem $(DATE) \
     | rem2ps.en -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
-calendar_fr.ps : $(wildcard remind/*.rem) Makefile
+fr.ps : $(wildcard remind/*.rem) Makefile
 	@remind.fr -p$(MONTHS) -b1 -gdaad remind/top.rem $(DATE) \
     | rem2ps.fr -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
 
 # PS to PDF
 
-calendar_en.pdf : calendar_en.ps
-	@cat $< | sed \
-    -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
-    | ps2pdf - - \
-    | pdftk - output $@ uncompress
-# XXX ps2pdf -sPAPERSIZE=legal - -
-# XXX pdftk - background watermark_rac.pdf output $@ uncompress
-
-calendar_fr.pdf : calendar_fr.ps
+%.pdf : %.ps
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
     -e 's/\xc3\x83\|\xc2\x89/\d201/g' \
@@ -43,6 +35,8 @@ calendar_fr.pdf : calendar_fr.ps
     -e 's/\d195\d180/\d244/g' \
     | ps2pdf - - \
     | pdftk - output $@ uncompress
+# XXX ps2pdf -sPAPERSIZE=legal - -
+# XXX pdftk - background watermark_rac.pdf output $@ uncompress
 
 # man iso_8859-1
 #   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174
@@ -59,12 +53,13 @@ calendar_fr.pdf : calendar_fr.ps
 burst : burst_en burst_fr
 
 .PHONY : burst_en
-burst_en : calendar_en.pdf
+burst_en : en.pdf
 	@pdftk $^ burst output en%02d.pdf uncompress
 
 .PHONY : burst_fr
-burst_fr : calendar_fr.pdf
+burst_fr : fr.pdf
 	@pdftk $^ burst output fr%02d.pdf uncompress
+
 
 %.pdf : svg/%.svg
 	@inkscape --export-text-to-path --export-pdf=$@ $<

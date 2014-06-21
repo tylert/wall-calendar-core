@@ -3,27 +3,27 @@ SHELL := /bin/bash
 YEAR ?= $(shell date +%Y)
 MONTHS ?= 13
 
-GENERATED_FILES = rac_calendar_en.ps rac_calendar_fr.ps \
-  rac_calendar_en.pdf rac_calendar_fr.pdf watermark_rac.pdf
+GENERATED_FILES = calendar_en.ps calendar_fr.ps \
+  calendar_en.pdf calendar_fr.pdf doc_data.txt
 
 .PHONY : all
-all : rac_calendar_en.pdf rac_calendar_fr.pdf
+all : calendar_en.pdf calendar_fr.pdf
 
 
 # Remind to PS
 
-rac_calendar_en.ps : $(wildcard remind/*.rem) Makefile
-	@remind.en -p$(MONTHS) -b1 -gdaad remind/rac_calendar.rem $(DATE) \
+calendar_en.ps : $(wildcard remind/*.rem) Makefile
+	@remind.en -p$(MONTHS) -b1 -gdaad remind/top.rem $(DATE) \
     | rem2ps.en -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
-rac_calendar_fr.ps : $(wildcard remind/*.rem) Makefile
-	@remind.fr -p$(MONTHS) -b1 -gdaad remind/rac_calendar.rem $(DATE) \
+calendar_fr.ps : $(wildcard remind/*.rem) Makefile
+	@remind.fr -p$(MONTHS) -b1 -gdaad remind/top.rem $(DATE) \
     | rem2ps.fr -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
 
 # PS to PDF
 
-rac_calendar_en.pdf : rac_calendar_en.ps
+calendar_en.pdf : calendar_en.ps
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
     | ps2pdf - - \
@@ -31,7 +31,7 @@ rac_calendar_en.pdf : rac_calendar_en.ps
 # XXX ps2pdf -sPAPERSIZE=legal - -
 # XXX pdftk - background watermark_rac.pdf output $@ uncompress
 
-rac_calendar_fr.pdf : rac_calendar_fr.ps
+calendar_fr.pdf : calendar_fr.ps
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
     -e 's/\xc3\x83\|\xc2\x89/\d201/g' \
@@ -59,11 +59,11 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps
 burst : burst_en burst_fr
 
 .PHONY : burst_en
-burst_en : rac_calendar_en.pdf
+burst_en : calendar_en.pdf
 	@pdftk $^ burst output en%02d.pdf uncompress
 
 .PHONY : burst_fr
-burst_fr : rac_calendar_fr.pdf
+burst_fr : calendar_fr.pdf
 	@pdftk $^ burst output fr%02d.pdf uncompress
 
 %.pdf : svg/%.svg
@@ -74,4 +74,4 @@ burst_fr : rac_calendar_fr.pdf
 
 .PHONY : clean
 clean :
-	@rm -f $(GENERATED_FILES) en??.pdf fr??.pdf doc_data.txt
+	@rm -f $(GENERATED_FILES) en??.pdf fr??.pdf

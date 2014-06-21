@@ -4,12 +4,10 @@ YEAR ?= $(shell date +%Y)
 MONTHS ?= 13
 
 GENERATED_FILES = rac_calendar_en.ps rac_calendar_fr.ps \
-  rac_calendar_en.pdf rac_calendar_fr.pdf watermark_rac.pdf \
-  rac_calendar_draft_en.pdf rac_calendar_draft_fr.pdf watermark_draft.pdf
+  rac_calendar_en.pdf rac_calendar_fr.pdf watermark_rac.pdf
 
 .PHONY : all
-all : rac_calendar_en.pdf rac_calendar_fr.pdf \
-  rac_calendar_draft_en.pdf rac_calendar_draft_fr.pdf
+all : rac_calendar_en.pdf rac_calendar_fr.pdf
 
 rac_calendar_en.ps : $(wildcard rem/*.rem) Makefile
 	@remind.en -p$(MONTHS) -b1 -gdaad rem/rac_calendar.rem $(DATE) \
@@ -22,7 +20,8 @@ rac_calendar_fr.ps : $(wildcard rem/*.rem) Makefile
 rac_calendar_en.pdf : rac_calendar_en.ps watermark_rac.pdf
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
-	    | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
+    | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
+#   | ps2pdf -sPAPERSIZE=legal - - | pdftk - background watermark_rac.pdf output $@ uncompress
 
 rac_calendar_fr.pdf : rac_calendar_fr.ps watermark_rac.pdf
 	@cat $< | sed \
@@ -34,7 +33,7 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps watermark_rac.pdf
     -e 's/\d195\d170/\d234/g' \
     -e 's/\d195\d171/\d235/g' \
     -e 's/\d195\d180/\d244/g' \
-      | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
+    | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
 
 # man iso_8859-1
 #   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174
@@ -45,15 +44,6 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps watermark_rac.pdf
 #   ê -> Ãª -> \d195\d170 -> \d234
 #   ë -> Ã« -> \d195\d171 -> \d235
 #   ô -> Ã´ -> \d195\d180 -> \d244
-
-.PHONY : draft
-draft : rac_calendar_draft_en.pdf rac_calendar_draft_fr.pdf
-
-rac_calendar_draft_en.pdf : rac_calendar_en.pdf watermark_draft.pdf
-	@pdftk $< background watermark_draft.pdf output $@
-
-rac_calendar_draft_fr.pdf : rac_calendar_fr.pdf watermark_draft.pdf
-	@pdftk $< background watermark_draft.pdf output $@
 
 .PHONY : burst
 burst : rac_calendar_en.pdf rac_calendar_fr.pdf

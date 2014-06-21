@@ -9,9 +9,9 @@
 # language other than your native locale, you will be required to rebuild
 # remind from source.  One way of doing this is to execute the following:
 
-  sudo apt-get install build-essential make
+  sudo apt-get install build-essential
 
-  mkdir -p tmp
+  mkdir --parents tmp
   cd tmp
 
   wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz.sig
@@ -21,7 +21,7 @@
     126F42E0.gpg.pub.txt
   gpg --verify remind-03.01.13.tar.gz.sig remind-03.01.13.tar.gz
 
-  tar xvfz remind-03.01.13.tar.gz
+  tar --extract --verbose --gzip --file remind-03.01.13.tar.gz
   cd remind-03.01.13
   make "LANGDEF=-DLANG=FRENCH"
   sudo cp src/remind /usr/bin/remind.fr
@@ -43,6 +43,4 @@
 # calendars, you will probably also want to install some additional tools by
 # typing:
 
-  sudo apt-get install tkremind wyrd
-  sudo apt-get install inkscape pdftk psutils
-  sudo apt-get install libreoffice
+  sudo apt-get install inkscape pdftk psutils libreoffice

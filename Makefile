@@ -3,27 +3,38 @@ SHELL := /bin/bash
 YEAR ?= $(shell date +%Y)
 MONTHS ?= 13
 
-GENERATED_FILES = en.ps fr.ps \
-  en.pdf fr.pdf doc_data.txt
+SOURCE_DIR := source
+BUILD_DIR := build
+
+GENERATED_FILES = \
+  $(wildcard $(BUILD_DIR)/*.ps) \
+  $(wildcard $(BUILD_DIR)/*.pdf) \
+  $(wildcard $(BUILD_DIR)/*.svg) \
+  doc_data.txt
+
 
 .PHONY : all
 all : burst
 
+.PHONY : clean
+clean :
+	@rm -f $(GENERATED_FILES)
+
 
 # Remind to PS
 
-en.ps : $(wildcard remind/*.rem) Makefile
-	@remind.en -p$(MONTHS) -b1 -gdaad remind/top.rem $(DATE) \
+$(BUILD_DIR)/en.ps : $(wildcard source/*.rem) Makefile
+	@remind.en -p$(MONTHS) -b1 -gdaad source/top.rem $(DATE) \
     | rem2ps.en -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
-fr.ps : $(wildcard remind/*.rem) Makefile
-	@remind.fr -p$(MONTHS) -b1 -gdaad remind/top.rem $(DATE) \
+$(BUILD_DIR)/fr.ps : $(wildcard source/*.rem) Makefile
+	@remind.fr -p$(MONTHS) -b1 -gdaad source/top.rem $(DATE) \
     | rem2ps.fr -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
 
 # PS to PDF
 
-%.pdf : %.ps
+$(BUILD_DIR)/%.pdf : $(BUILD_DIR)/%.ps
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
     -e 's/\xc3\x83\|\xc2\x89/\d201/g' \
@@ -49,24 +60,28 @@ fr.ps : $(wildcard remind/*.rem) Makefile
 #   ô -> Ã´ -> \d195\d180 -> \d244
 
 
+# multi-page PDF to single-page PDF
+
 .PHONY : burst
 burst : burst_en burst_fr
 
 .PHONY : burst_en
-burst_en : en.pdf
-	@pdftk $^ burst output en%02d.pdf uncompress
+burst_en : $(BUILD_DIR)/en.pdf
+	@pdftk $^ burst output $(BUILD_DIR)/en%02d.pdf uncompress
 
 .PHONY : burst_fr
-burst_fr : fr.pdf
-	@pdftk $^ burst output fr%02d.pdf uncompress
+burst_fr : $(BUILD_DIR)/fr.pdf
+	@pdftk $^ burst output $(BUILD_DIR)/fr%02d.pdf uncompress
 
 
-%.pdf : svg/%.svg
-	@inkscape --export-text-to-path --export-pdf=$@ $<
+# PDF to SVG
 
-%.pdf : %.odt
-	@libreoffice --headless --convert-to pdf $^
+$(BUILD_DIR)/%.svg : $(BUILD_DIR)/%.pdf
+	@inkscape --export-plain-svg $@ $^
 
-.PHONY : clean
-clean :
-	@rm -f $(GENERATED_FILES) en??.pdf fr??.pdf
+
+#$(BUILD_DIR)/%.pdf : svg/%.svg
+#	@inkscape --export-text-to-path --export-pdf=$@ $<
+
+#%.pdf : %.odt
+#	@libreoffice --headless --convert-to pdf $^

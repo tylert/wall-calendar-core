@@ -2,10 +2,9 @@
 
 SHELL := /bin/bash
 
-SOURCE_DIR := source
-BUILD_DIR := build
-
-TOP_CALENDAR ?= $(SOURCE_DIR)/top.rem
+TOP_CALENDAR ?= source/top.rem
+SOURCE_FILES ?= $(TOP_CALENDAR) $(wildcard source/*.rem)
+BUILD_DIR ?= build
 
 MONTHS ?= 13
 RANGE = $(shell seq --format "%02g" $(MONTHS))
@@ -33,11 +32,11 @@ clean :
 
 # Remind -> Postscript
 
-$(BUILD_DIR)/en.ps : $(wildcard source/*.rem) Makefile
+$(BUILD_DIR)/en.ps : $(SOURCE_FILES) Makefile
 	@remind.en -p$(MONTHS) -b1 -gdaad $(TOP_CALENDAR) $(DATE) \
     | rem2ps.en -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
-$(BUILD_DIR)/fr.ps : $(wildcard source/*.rem) Makefile
+$(BUILD_DIR)/fr.ps : $(SOURCE_FILES) Makefile
 	@remind.fr -p$(MONTHS) -b1 -gdaad $(TOP_CALENDAR) $(DATE) \
     | rem2ps.fr -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 

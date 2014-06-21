@@ -1,10 +1,16 @@
 SHELL := /bin/bash
 
 YEAR ?= $(shell date +%Y)
-MONTHS ?= 13
 
 SOURCE_DIR := source
 BUILD_DIR := build
+
+MONTHS ?= 13
+range = $(shell seq --format "%02g" $(MONTHS))
+EN_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix en,$(range))))
+FR_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix fr,$(range))))
+EN_SVGS = $(EN_PDFS:.pdf=.svg)
+FR_SVGS = $(FR_PDFS:.pdf=.svg)
 
 GENERATED_FILES = \
   $(wildcard $(BUILD_DIR)/*.ps) \
@@ -14,7 +20,7 @@ GENERATED_FILES = \
 
 
 .PHONY : all
-all : burst
+all : $(EN_SVGS) $(FR_SVGS)
 
 .PHONY : clean
 clean :
@@ -62,15 +68,10 @@ $(BUILD_DIR)/%.pdf : $(BUILD_DIR)/%.ps
 
 # multi-page PDF to single-page PDF
 
-.PHONY : burst
-burst : burst_en burst_fr
-
-.PHONY : burst_en
-burst_en : $(BUILD_DIR)/en.pdf
+$(EN_PDFS) : $(BUILD_DIR)/en.pdf
 	@pdftk $^ burst output $(BUILD_DIR)/en%02d.pdf uncompress
 
-.PHONY : burst_fr
-burst_fr : $(BUILD_DIR)/fr.pdf
+$(FR_PDFS) : $(BUILD_DIR)/fr.pdf
 	@pdftk $^ burst output $(BUILD_DIR)/fr%02d.pdf uncompress
 
 

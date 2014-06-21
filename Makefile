@@ -1,14 +1,16 @@
-SHELL := /bin/bash
+# Tools required:  remind, pdftk, inkscape
 
-YEAR ?= $(shell date +%Y)
+SHELL := /bin/bash
 
 SOURCE_DIR := source
 BUILD_DIR := build
 
+TOP_CALENDAR ?= $(SOURCE_DIR)/top.rem
+
 MONTHS ?= 13
-range = $(shell seq --format "%02g" $(MONTHS))
-EN_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix en,$(range))))
-FR_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix fr,$(range))))
+RANGE = $(shell seq --format "%02g" $(MONTHS))
+EN_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix en,$(RANGE))))
+FR_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix fr,$(RANGE))))
 EN_SVGS = $(EN_PDFS:.pdf=.svg)
 FR_SVGS = $(FR_PDFS:.pdf=.svg)
 
@@ -17,6 +19,8 @@ GENERATED_FILES = \
   $(wildcard $(BUILD_DIR)/*.pdf) \
   $(wildcard $(BUILD_DIR)/*.svg) \
   doc_data.txt
+
+YEAR ?= $(shell date +%Y)
 
 
 .PHONY : all
@@ -27,18 +31,18 @@ clean :
 	@rm -f $(GENERATED_FILES)
 
 
-# Remind to PS
+# Remind -> Postscript
 
 $(BUILD_DIR)/en.ps : $(wildcard source/*.rem) Makefile
-	@remind.en -p$(MONTHS) -b1 -gdaad source/top.rem $(DATE) \
+	@remind.en -p$(MONTHS) -b1 -gdaad $(TOP_CALENDAR) $(DATE) \
     | rem2ps.en -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
 $(BUILD_DIR)/fr.ps : $(wildcard source/*.rem) Makefile
-	@remind.fr -p$(MONTHS) -b1 -gdaad source/top.rem $(DATE) \
+	@remind.fr -p$(MONTHS) -b1 -gdaad $(TOP_CALENDAR) $(DATE) \
     | rem2ps.fr -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
 
-# PS to PDF
+# Postscript -> Portable Document Format
 
 $(BUILD_DIR)/%.pdf : $(BUILD_DIR)/%.ps
 	@cat $< | sed \
@@ -50,7 +54,7 @@ $(BUILD_DIR)/%.pdf : $(BUILD_DIR)/%.ps
     -e 's/\d195\d170/\d234/g' \
     -e 's/\d195\d171/\d235/g' \
     -e 's/\d195\d180/\d244/g' \
-    | ps2pdf - - \
+    | ps2pdf14 - - \
     | pdftk - output $@ uncompress
 # XXX ps2pdf -sPAPERSIZE=legal - -
 # XXX pdftk - background watermark_rac.pdf output $@ uncompress
@@ -66,7 +70,7 @@ $(BUILD_DIR)/%.pdf : $(BUILD_DIR)/%.ps
 #   ô -> Ã´ -> \d195\d180 -> \d244
 
 
-# multi-page PDF to single-page PDF
+# Multi-page -> Single-page Portable Document Format
 
 $(EN_PDFS) : $(BUILD_DIR)/en.pdf
 	@pdftk $^ burst output $(BUILD_DIR)/en%02d.pdf uncompress
@@ -75,7 +79,7 @@ $(FR_PDFS) : $(BUILD_DIR)/fr.pdf
 	@pdftk $^ burst output $(BUILD_DIR)/fr%02d.pdf uncompress
 
 
-# PDF to SVG
+# Portable Document Format -> Scalable Vector Graphic
 
 $(BUILD_DIR)/%.svg : $(BUILD_DIR)/%.pdf
 	@inkscape --export-plain-svg $@ $^

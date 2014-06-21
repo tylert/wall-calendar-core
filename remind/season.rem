@@ -17,23 +17,6 @@
   # The September Equinox is the First Day of Fall in the Northern Hemisphere
   # The December Solstice is the First Day of Winter in the Northern Hemisphere
 
-# REM  [trigger(date(2013,01,02), time(05,00), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  # [trigger(date(2013,03,20), time(11,02), 1)]
-  REM  Mar 20 2013 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
-  # [trigger(date(2013,06,21), time(05,04), 1)]
-  REM  Jun 21 2013 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
-# REM  [trigger(date(2013,07,05), time(15,00), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  # [trigger(date(2013,09,22), time(20,44), 1)]
-  REM  Sep 22 2013 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
-  # [trigger(date(2013,12,21), time(17,11), 1)]
-  REM  Dec 21 2013 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
-
 # REM  [trigger(date(2014,01,04), time(12,00), 1)] +1 PRIORITY 0000 \
 #   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
   # [trigger(date(2014,03,20), time(16,57), 1)]

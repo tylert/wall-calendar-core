@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# http://ma.juii.net/blog/scale-page-content-of-pdf-files
+
+gs -q -dNOPAUSE -dBATCH -sDEVICE="pdfwrite" -dSAFER \
+  -dCompatibilityLevel="1.4" \
+  -dSubsetFonts=true -dEmbedAllFonts=true \
+  -sPAPERSIZE="letter" -sOutputFile="${2}" \
+  -c "<</BeginPage{0.9 0.9 scale 29.75 42.1 translate}>> setpagedevice" \
+  -f ${1}
+
+# -dPDFSETTINGS="/printer" \
+
+#gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dFIXEDMEDIA \
+#   -dPDFFitPage -d -dBATCH -dQUIET -dNOPAUSE -dDEVICEWIDTHPOINTS=864 \
+#   -dDEVICEHEIGHTPOINTS=612 -sOutputFile=$INPUT $OUTPUT

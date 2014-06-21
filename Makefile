@@ -9,6 +9,8 @@ GENERATED_FILES = rac_calendar_en.ps rac_calendar_fr.ps \
 .PHONY : all
 all : rac_calendar_en.pdf rac_calendar_fr.pdf
 
+# Remind to PS
+
 rac_calendar_en.ps : $(wildcard remind/*.rem) Makefile
 	@remind.en -p$(MONTHS) -b1 -gdaad remind/rac_calendar.rem $(DATE) \
     | rem2ps.en -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
@@ -16,6 +18,8 @@ rac_calendar_en.ps : $(wildcard remind/*.rem) Makefile
 rac_calendar_fr.ps : $(wildcard remind/*.rem) Makefile
 	@remind.fr -p$(MONTHS) -b1 -gdaad remind/rac_calendar.rem $(DATE) \
     | rem2ps.fr -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
+
+# PS to PDF
 
 rac_calendar_en.pdf : rac_calendar_en.ps watermark_rac.pdf
 	@cat $< | sed \

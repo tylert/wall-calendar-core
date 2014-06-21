@@ -23,7 +23,7 @@ YEAR ?= $(shell date +%Y)
 
 
 .PHONY : all
-all : $(EN_SVGS) $(FR_SVGS)
+all : $(BUILD_DIR)/en.pdf $(BUILD_DIR)/fr.pdf
 
 .PHONY : clean
 clean :

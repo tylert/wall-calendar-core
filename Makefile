@@ -9,6 +9,7 @@ GENERATED_FILES = rac_calendar_en.ps rac_calendar_fr.ps \
 .PHONY : all
 all : rac_calendar_en.pdf rac_calendar_fr.pdf
 
+
 # Remind to PS
 
 rac_calendar_en.ps : $(wildcard remind/*.rem) Makefile
@@ -19,15 +20,18 @@ rac_calendar_fr.ps : $(wildcard remind/*.rem) Makefile
 	@remind.fr -p$(MONTHS) -b1 -gdaad remind/rac_calendar.rem $(DATE) \
     | rem2ps.fr -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 > $@
 
+
 # PS to PDF
 
-rac_calendar_en.pdf : rac_calendar_en.ps watermark_rac.pdf
+rac_calendar_en.pdf : rac_calendar_en.ps
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
-    | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
-#   | ps2pdf -sPAPERSIZE=legal - - | pdftk - background watermark_rac.pdf output $@ uncompress
+    | ps2pdf - - \
+    | pdftk - output $@ uncompress
+# XXX ps2pdf -sPAPERSIZE=legal - -
+# XXX pdftk - background watermark_rac.pdf output $@ uncompress
 
-rac_calendar_fr.pdf : rac_calendar_fr.ps watermark_rac.pdf
+rac_calendar_fr.pdf : rac_calendar_fr.ps
 	@cat $< | sed \
     -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
     -e 's/\xc3\x83\|\xc2\x89/\d201/g' \
@@ -37,7 +41,8 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps watermark_rac.pdf
     -e 's/\d195\d170/\d234/g' \
     -e 's/\d195\d171/\d235/g' \
     -e 's/\d195\d180/\d244/g' \
-    | ps2pdf - - | pdftk - background watermark_rac.pdf output $@ uncompress
+    | ps2pdf - - \
+    | pdftk - output $@ uncompress
 
 # man iso_8859-1
 #   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174
@@ -49,10 +54,17 @@ rac_calendar_fr.pdf : rac_calendar_fr.ps watermark_rac.pdf
 #   ë -> Ã« -> \d195\d171 -> \d235
 #   ô -> Ã´ -> \d195\d180 -> \d244
 
+
 .PHONY : burst
-burst : rac_calendar_en.pdf rac_calendar_fr.pdf
-	@pdftk rac_calendar_en.pdf burst output en%02d.pdf uncompress
-	@pdftk rac_calendar_fr.pdf burst output fr%02d.pdf uncompress
+burst : burst_en burst_fr
+
+.PHONY : burst_en
+burst_en : rac_calendar_en.pdf
+	@pdftk $^ burst output en%02d.pdf uncompress
+
+.PHONY : burst_fr
+burst_fr : rac_calendar_fr.pdf
+	@pdftk $^ burst output fr%02d.pdf uncompress
 
 %.pdf : svg/%.svg
 	@inkscape --export-text-to-path --export-pdf=$@ $<

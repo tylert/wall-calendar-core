@@ -2,9 +2,10 @@
 
 SHELL := /bin/bash
 
-TOP_CALENDAR ?= source/top.rem
-SOURCE_FILES ?= $(TOP_CALENDAR) $(wildcard source/*.rem)
-BUILD_DIR ?= build
+SOURCE ?= source
+BUILD ?= build
+TOP_CALENDAR ?= $(SOURCE)/top.rem
+CALENDARS ?= $(TOP_CALENDAR) $(wildcard $(SOURCE)/*.rem)
 
 MEDIA ?= legal
 
@@ -13,20 +14,20 @@ DATE ?= $(YEAR)-01-01
 
 MONTHS ?= 12
 RANGE = $(shell seq --format "%02g" $(MONTHS))
-EN_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix en,$(RANGE))))
-FR_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix fr,$(RANGE))))
+EN_PDFS = $(addprefix $(BUILD)/,$(addsuffix .pdf,$(addprefix en,$(RANGE))))
+FR_PDFS = $(addprefix $(BUILD)/,$(addsuffix .pdf,$(addprefix fr,$(RANGE))))
 EN_SVGS = $(EN_PDFS:.pdf=.svg)
 FR_SVGS = $(FR_PDFS:.pdf=.svg)
 
 GENERATED_FILES = \
-  $(wildcard $(BUILD_DIR)/*.ps) \
-  $(wildcard $(BUILD_DIR)/*.pdf) \
-  $(wildcard $(BUILD_DIR)/*.svg) \
+  $(wildcard $(BUILD)/*.ps) \
+  $(wildcard $(BUILD)/*.pdf) \
+  $(wildcard $(BUILD)/*.svg) \
   doc_data.txt
 
 
 .PHONY : all
-all : $(BUILD_DIR)/$(YEAR)_calendar.pdf $(BUILD_DIR)/$(YEAR)_calendrier.pdf
+all : $(BUILD)/$(YEAR)_calendar.pdf $(BUILD)/$(YEAR)_calendrier.pdf
 
 .PHONY : svgs
 svgs : $(EN_SVGS) $(FR_SVGS)
@@ -38,7 +39,7 @@ clean :
 
 # Remind -> Postscript
 
-$(BUILD_DIR)/en.ps : $(SOURCE_FILES) Makefile
+$(BUILD)/en.ps : $(CALENDARS) Makefile
 	@remind.en -p$(MONTHS) -b1 -gdaad $(TOP_CALENDAR) $(DATE) \
     | rem2ps.en -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 \
     | sed \
@@ -54,7 +55,7 @@ $(BUILD_DIR)/en.ps : $(SOURCE_FILES) Makefile
       -sPAPERSIZE=$(MEDIA) -dFIXEDMEDIA -sOutputFile=$@ \
       -c '<</BeginPage{0.9 0.9 scale 29.75 42.1 translate}>> setpagedevice'
 
-$(BUILD_DIR)/fr.ps : $(SOURCE_FILES) Makefile
+$(BUILD)/fr.ps : $(CALENDARS) Makefile
 	@remind.fr -p$(MONTHS) -b1 -gdaad $(TOP_CALENDAR) $(DATE) \
     | rem2ps.fr -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 \
     | sed \
@@ -86,33 +87,33 @@ $(BUILD_DIR)/fr.ps : $(SOURCE_FILES) Makefile
 
 # Postscript -> Portable Document Format
 
-$(BUILD_DIR)/%.pdf : $(BUILD_DIR)/%.ps
+$(BUILD)/%.pdf : $(BUILD)/%.ps
 	@ps2pdf14 -sPAPERSIZE=$(MEDIA) $< - \
     | pdftk - output $@ uncompress
 
-$(BUILD_DIR)/$(YEAR)_calendar.pdf : $(BUILD_DIR)/en.pdf $(BUILD_DIR)/watermark_rac.pdf
-	@pdftk $< background $(BUILD_DIR)/watermark_rac.pdf output $@ uncompress
+$(BUILD)/$(YEAR)_calendar.pdf : $(BUILD)/en.pdf $(BUILD)/watermark_rac.pdf
+	@pdftk $< background $(BUILD)/watermark_rac.pdf output $@ uncompress
 
-$(BUILD_DIR)/$(YEAR)_calendrier.pdf : $(BUILD_DIR)/fr.pdf $(BUILD_DIR)/watermark_rac.pdf
-	@pdftk $< background $(BUILD_DIR)/watermark_rac.pdf output $@ uncompress
+$(BUILD)/$(YEAR)_calendrier.pdf : $(BUILD)/fr.pdf $(BUILD)/watermark_rac.pdf
+	@pdftk $< background $(BUILD)/watermark_rac.pdf output $@ uncompress
 
 
 # Multi-page -> Single-page Portable Document Format
 
-$(EN_PDFS) : $(BUILD_DIR)/en.pdf
-	@pdftk $^ burst output $(BUILD_DIR)/en%02d.pdf uncompress
+$(EN_PDFS) : $(BUILD)/en.pdf
+	@pdftk $^ burst output $(BUILD)/en%02d.pdf uncompress
 
-$(FR_PDFS) : $(BUILD_DIR)/fr.pdf
-	@pdftk $^ burst output $(BUILD_DIR)/fr%02d.pdf uncompress
+$(FR_PDFS) : $(BUILD)/fr.pdf
+	@pdftk $^ burst output $(BUILD)/fr%02d.pdf uncompress
 
 
 # Portable Document Format -> Scalable Vector Graphic
 
-$(BUILD_DIR)/%.svg : $(BUILD_DIR)/%.pdf
+$(BUILD)/%.svg : $(BUILD)/%.pdf
 	@inkscape --export-plain-svg $@ $^
 
 
-$(BUILD_DIR)/%.pdf : svg/%.svg
+$(BUILD)/%.pdf : $(SOURCE)/%.svg
 	@inkscape --export-text-to-path --export-pdf=$@ $<
 
 #%.pdf : %.odt

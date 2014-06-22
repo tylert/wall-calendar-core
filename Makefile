@@ -1,4 +1,4 @@
-# Tools required:  remind, pdftk, inkscape
+# Tools required:  make, remind, sed, ghostscript, pdftk, inkscape
 
 SHELL := /bin/bash
 
@@ -7,8 +7,10 @@ SOURCE_FILES ?= $(TOP_CALENDAR) $(wildcard source/*.rem)
 BUILD_DIR ?= build
 
 MEDIA ?= legal
+YEAR ?= $(shell date +%Y)
+DATE ?= jan 1 $(YEAR)
 
-MONTHS ?= 13
+MONTHS ?= 12
 RANGE = $(shell seq --format "%02g" $(MONTHS))
 EN_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix en,$(RANGE))))
 FR_PDFS = $(addprefix $(BUILD_DIR)/,$(addsuffix .pdf,$(addprefix fr,$(RANGE))))
@@ -20,8 +22,6 @@ GENERATED_FILES = \
   $(wildcard $(BUILD_DIR)/*.pdf) \
   $(wildcard $(BUILD_DIR)/*.svg) \
   doc_data.txt
-
-YEAR ?= $(shell date +%Y)
 
 
 .PHONY : all
@@ -70,6 +70,7 @@ $(BUILD_DIR)/fr.ps : $(SOURCE_FILES) Makefile
       -c '<</BeginPage{0.9 0.9 scale 29.75 42.1 translate}>> setpagedevice'
 
 # http://ma.juii.net/blog/scale-page-content-of-pdf-files
+# http://stackoverflow.com/questions/3351967/prevent-ghostscript-from-writing-errors-to-standard-output
 
 # man iso_8859-1
 #   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174
@@ -87,7 +88,7 @@ $(BUILD_DIR)/fr.ps : $(SOURCE_FILES) Makefile
 $(BUILD_DIR)/%.pdf : $(BUILD_DIR)/%.ps
 	@ps2pdf14 -sPAPERSIZE=$(MEDIA) $< - \
     | pdftk - output $@ uncompress
-# XXX pdftk - background watermark_rac.pdf output $@ uncompress
+#   | pdftk - background watermark_rac.pdf output $@ uncompress
 
 
 # Multi-page -> Single-page Portable Document Format

@@ -8,7 +8,8 @@ BUILD_DIR ?= build
 
 MEDIA ?= legal
 
-DATE ?= $(shell expr 1 + $(shell date +%Y))-01-01
+YEAR ?= $(shell expr 1 + $(shell date +%Y))
+DATE ?= $(YEAR)-01-01
 
 MONTHS ?= 12
 RANGE = $(shell seq --format "%02g" $(MONTHS))
@@ -25,7 +26,7 @@ GENERATED_FILES = \
 
 
 .PHONY : all
-all : $(BUILD_DIR)/en.pdf $(BUILD_DIR)/fr.pdf
+all : $(BUILD_DIR)/$(YEAR)_calendar.pdf $(BUILD_DIR)/$(YEAR)_calendrier.pdf
 
 .PHONY : svgs
 svgs : $(EN_SVGS) $(FR_SVGS)
@@ -88,7 +89,12 @@ $(BUILD_DIR)/fr.ps : $(SOURCE_FILES) Makefile
 $(BUILD_DIR)/%.pdf : $(BUILD_DIR)/%.ps
 	@ps2pdf14 -sPAPERSIZE=$(MEDIA) $< - \
     | pdftk - output $@ uncompress
-#   | pdftk - background watermark_rac.pdf output $@ uncompress
+
+$(BUILD_DIR)/$(YEAR)_calendar.pdf : $(BUILD_DIR)/en.pdf $(BUILD_DIR)/watermark_rac.pdf
+	@pdftk $< background $(BUILD_DIR)/watermark_rac.pdf output $@ uncompress
+
+$(BUILD_DIR)/$(YEAR)_calendrier.pdf : $(BUILD_DIR)/fr.pdf $(BUILD_DIR)/watermark_rac.pdf
+	@pdftk $< background $(BUILD_DIR)/watermark_rac.pdf output $@ uncompress
 
 
 # Multi-page -> Single-page Portable Document Format

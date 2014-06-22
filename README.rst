@@ -1,4 +1,4 @@
-﻿Welcome to the 2014 Edition of the RAC Calendar [0], 1st Revision.
+﻿Welcome to the 2015 Edition of the RAC Calendar [0], 1st Revision.
 
 This calendar was originally inspired by advertisements for the ARRL printed
 calendar [1].  Construction was greatly eased by the simple, deterministic

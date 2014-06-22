@@ -7,7 +7,8 @@ SOURCE_FILES ?= $(TOP_CALENDAR) $(wildcard source/*.rem)
 BUILD_DIR ?= build
 
 MEDIA ?= legal
-YEAR ?= $(shell date +%Y)
+
+YEAR ?= $(shell expr 1 + $(shell date +%Y))
 DATE ?= jan 1 $(YEAR)
 
 MONTHS ?= 12
@@ -27,8 +28,8 @@ GENERATED_FILES = \
 .PHONY : all
 all : $(BUILD_DIR)/en.pdf $(BUILD_DIR)/fr.pdf
 
-.PHONY : more
-more : $(EN_SVGS) $(FR_SVGS)
+.PHONY : svgs
+svgs : $(EN_SVGS) $(FR_SVGS)
 
 .PHONY : clean
 clean :
@@ -106,8 +107,8 @@ $(BUILD_DIR)/%.svg : $(BUILD_DIR)/%.pdf
 	@inkscape --export-plain-svg $@ $^
 
 
-#$(BUILD_DIR)/%.pdf : svg/%.svg
-#	@inkscape --export-text-to-path --export-pdf=$@ $<
+$(BUILD_DIR)/%.pdf : svg/%.svg
+	@inkscape --export-text-to-path --export-pdf=$@ $<
 
 #%.pdf : %.odt
 #	@libreoffice --headless --convert-to pdf $^

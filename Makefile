@@ -8,8 +8,7 @@ BUILD_DIR ?= build
 
 MEDIA ?= legal
 
-YEAR ?= $(shell expr 1 + $(shell date +%Y))
-DATE ?= jan 1 $(YEAR)
+DATE ?= $(shell expr 1 + $(shell date +%Y))-01-01
 
 MONTHS ?= 12
 RANGE = $(shell seq --format "%02g" $(MONTHS))

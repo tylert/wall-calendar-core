@@ -1,5 +1,8 @@
+# If you are trying to install these tools and run them on a system that isn't
+# Linux/Unix, these instructions will likely not work for you.
+
 # Normally, all that would be required to install remind would be to use the
-# already packaged version provided by your Linux distribution.  On
+# already packaged version provided by your chosen Linux distribution.  On
 # Debian/Ubuntu, this is usually done by typing:
 
   sudo apt-get install remind
@@ -32,15 +35,24 @@
   sudo cp src/remind /usr/bin/remind.en
   sudo cp src/rem2ps /usr/bin/rem2ps.en
 
-# Debian 7 ships with remind 03.01.12 and Ubuntu 13.10 ships with remind
+# Naming the newly-built binaries in this manner works with the provided
+# makefile to call the appropriate remind and rem2ps backend binaries
+# depending on the desired language.
+
+# Debian 7.5 ships with remind 03.01.12 and Ubuntu 13.10 ships with remind
 # 03.01.13.  Since there may be subtle differences with the way things look
 # from version to version, if you are concerned about making both an English
 # and French calendar that look the same, you should probably make sure to
 # build the same version of remind for all the languages for which you wish to
 # make calendars.
 
-# To perform some other operations related to generating or testing these
+# If you wish to provide support for other languages, you should build
+# whichever binaries are appropriate for your needs using the instructions
+# above, and then add additional entries wherever you see the "babel()" remind
+# function being used.
+
+# To perform some other operations related to generating or working with these
 # calendars, you will probably also want to install some additional tools by
 # typing:
 
-  sudo apt-get install inkscape pdftk psutils libreoffice
+  sudo apt-get install ghostscript psutils pdftk inkscape libreoffice

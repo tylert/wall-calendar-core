@@ -1,4 +1,5 @@
-*NAQP-RTTY*  http://ncjweb.com/naqp
+*NAQP-RTTY*      http://ncjweb.com/naqp
+*CQ-WW-160-SSB*  http://cq160.com
 
 Feb 18 Aquarius Sets
 Feb 19 Pisces Rises

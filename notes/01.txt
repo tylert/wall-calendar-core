@@ -1,5 +1,6 @@
-*NAQP-CW*  http://ncjweb.com/naqp
-*NAQP-SSB*  http://ncjweb.com/naqp
+*NAQP-CW*       http://ncjweb.com/naqp
+*NAQP-SSB*      http://ncjweb.com/naqp
+*CQ-WW-160-CW*  http://cq160.com
 
 Jan 19 Capricorn Sets
 Jan 20 Aquarius Rises

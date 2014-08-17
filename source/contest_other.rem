@@ -138,54 +138,32 @@
 
 
 # National Contest Journal events
+#   North Americal QSO Party
+#     http://ncjweb.com/naqp
 
-  # North American QSO Party CW
-  #   1800 UTC Saturday through 0600 UTC Sunday
-  #     http://ncjweb.com/naqp
   REM Sat Jan [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
-      MSG %"[babel("North American QSO Party CW Contest", \
-        " Concours CW NAQP")]%" %b%
+      MSG %"[babel("*NAQP-CW*", "*NAQP-CW*")]%" %b%
 
-  # North American QSO Party SSB
-  #   1800 UTC Saturday through 0600 UTC Sunday
-  #     http://ncjweb.com/naqp
   REM Sat Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
-      MSG %"[babel("North American QSO Party SSB Contest", \
-        " Concours SSB NAQP")]%" %b%
+      MSG %"[babel("*NAQP-SSB*", "*NAQP-SSB*")]%" %b%
 
-  # North American QSO Party RTTY
-  #   1800 UTC Saturday through 0600 UTC Sunday
-  #     http://ncjweb.com/naqp
   REM Sat Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
-      MSG %"[babel("North American QSO Party RTTY Contest", \
-        " Concours RTTY NAQP")]%" %b%
+      MSG %"[babel("*NAQP-RTTY*", "*NAQP-RTTY*")]%" %b%
 
-  # North American QSO Party RTTY
-  #   1800 UTC Saturday through 0600 UTC Sunday
-  #     http://ncjweb.com/naqp
   REM Sat Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
-      MSG %"[babel("North American QSO Party RTTY Contest", \
-        " Concours RTTY NAQP")]%" %b%
+      MSG %"[babel("*NAQP-RTTY*", "*NAQP-RTTY*")]%" %b%
 
-  # North American QSO Party CW
-  #   1800 UTC Saturday through 0600 UTC Sunday
-  #     http://ncjweb.com/naqp
   REM Sat Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
-      MSG %"[babel("North American QSO Party CW Contest", \
-        " Concours CW NAQP")]%" %b%
+      MSG %"[babel("*NAQP-CW*", "*NAQP-CW*")]%" %b%
 
-  # North American QSO Party SSB
-  #   1800 UTC Saturday through 0600 UTC Sunday
-  #     http://ncjweb.com/naqp
   REM Sat Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
-      MSG %"[babel("North American QSO Party SSB Contest", \
-        " Concours SSB NAQP")]%" %b%
+      MSG %"[babel("*NAQP-SSB*", "*NAQP-SSB*")]%" %b%
 
 
 # RSGB contest events

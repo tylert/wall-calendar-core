@@ -70,44 +70,37 @@
   # http://cqwpxrtty.com
   REM Sat Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
-      MSG %"[babel("CQ WPX RTTY Contest", \
-        "Concours CQ WPX RTTY")]%" %b%
+      MSG %"[babel("*CQ-WPX-RTTY*", "*CQ-WPX-RTTY*")]%" %b%
 
   # http://cqwpx.com
   REM Sun Apr 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
-      MSG %"[babel("CQ WW WPX SSB Contest", \
-        "Concours CQ WW WPX SSB")]%" %b%
+      MSG %"[babel("*CQ-WW-WPX-SSB*", "*CQ-WW-WPX-SSB*")]%" %b%
 
   # http://cqwpx.com
   REM Sun Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
-      MSG %"[babel("CQ WW WPX CW Contest", \
-        "Concours CQ WW WPX CW")]%" %b%
+      MSG %"[babel("*CQ-WW-WPX-CW*", "*CQ-WW-WPX-CW*")]%" %b%
 
   # http://cqww-vhf.com
   REM Sat Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 27:00 \
-      MSG %"[babel("CQ WW VHF Contest", \
-        "Concours CQ WW VHF")]%" %b%
+      MSG %"[babel("*CQ-WW-VHF*", "*CQ-WW-VHF*")]%" %b%
 
   # http://cqwwrtty.com
   REM Sun Oct 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 48:00 \
-      MSG %"[babel("CQ WW RTTY DX Contest", \
-        "Concours CQ WW RTTY DX")]%" %b%
+      MSG %"[babel("*CQ-WW-RTTY-DX*", "*CQ-WW-RTTY-DX*")]%" %b%
 
   # http://cqww.com
   REM Sun Nov 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
-      MSG %"[babel("CQ WW DX SSB Contest", \
-        "Concours CQ WW DX SSB")]%" %b%
+      MSG %"[babel("*CQ-WW-DX-SSB*", "*CQ-WW-DX-SSB*")]%" %b%
 
   # http://cqww.com
   REM Sun Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
-      MSG %"[babel("CQ WW DX CW Contest", \
-        "Concours CQ WW DX CW")]%" %b%
+      MSG %"[babel("*CQ-WW-DX-CW*", "*CQ-WW-DX-CW*")]%" %b%
 
 
 # National Contest Journal events

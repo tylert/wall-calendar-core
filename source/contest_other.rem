@@ -42,9 +42,9 @@
       "Concours Fête du Canada RAC")]%" %b%
 
   # RAC Canada Winter Contest is the last Saturday in December
-# REM  Sat Dec [Week_3] +1 SCANFROM [trigger(today() - 7)] SATISFY 1
-# REM  Sat Dec [Week_4] +1 SCANFROM [trigger(today() - 7)] SATISFY 1
-  REM  Sat Jan 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+#  REM  Sat Dec [Week_4] +1 SCANFROM [trigger(today() - 7)] SATISFY 1
+#  REM  Sat Jan 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Sat Dec [Week_3] +1 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
       MSG %"[babel("RAC Canada Winter Contest", \
         "Concours d'hiver du Canada RAC")]%" %b%

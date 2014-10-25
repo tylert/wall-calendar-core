@@ -26,6 +26,13 @@
       MSG %"[nst(1967)][babel("th Canadian Ski Marathon Begins", \
         "e Marathon canadien de ski commence")]%" %b%
 
+  # https://jotajoti.org
+  # http://joti.org
+  # http://arrl.org/jamboree-on-the-air-jota
+  REM  Sat Oct [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM [trigger(trigdate())] +1 PRIORITY 2000 \
+      MSG %"[babel("*JOTA-JOTI*", "*JOTA-JOTI*")]%" %b%
+
 
 # RAC events
 

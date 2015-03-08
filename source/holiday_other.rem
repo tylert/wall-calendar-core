@@ -23,8 +23,8 @@
 #   MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
 # REM  Apr 21 +1 PRIORITY 1000 \
 #   MSG %"[babel("Queen's Birthday (UK)", "")]%" %b%
-# REM  May 05 +1 PRIORITY 1000 \
-#   MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai (US)")]%" %b%
+  REM  May 05 +1 PRIORITY 1000 \
+    MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai (US)")]%" %b%
 
   # Memorial Day (US) is the last Monday in May
   REM  Mon Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -45,8 +45,8 @@
 #   MSG %"[babel("Guy Fawkes Day (UK)", "")]%" %b%
 
   REM  Nov 11 +1 PRIORITY 1000 \
-      MSG %"[babel("Veterans Day (US)", \
-        "Jour des anciens combattants (US)")]%" %b%
+    MSG %"[babel("Veterans Day (US)", \
+      "Jour des anciens combattants (US)")]%" %b%
 
   # Thanksgiving Day (US) is the fourth Thursday in November
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -56,3 +56,10 @@
 # REM  Nov 30 +1 PRIORITY 1000 \
 #   MSG %"[babel("St. Andrew's Day (UK)", \
 #     "Fête de la Saint-Andrew (UK)")]%" %b%
+
+
+# Other interesting days
+
+  REM 13 SATISFY [wkdaynum(trigdate()) == Friday]
+    REM [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%

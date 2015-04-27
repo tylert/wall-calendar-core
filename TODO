@@ -1,3 +1,4 @@
+http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/calendar/calendars/???
 Add in make magic to build notes pages automatically
 Extract links from README for monthly notes
 Put meteor events info into monthly notes

@@ -130,8 +130,11 @@
     MSG %"[babel("Memorial Day (NL)", "Memorial Day (NL)")]%" %b%
   REM  Jul 09 +1 PRIORITY 1000 \
     MSG %"[babel("Nunavut Day", "Fête du Nunavut")]%" %b%
-  REM  Jul 12 +1 PRIORITY 1000 \
-    MSG %"[babel("Orangemen's Day (NL)", "Fête des Orangistes (NL)")]%" %b%
+
+  # Orangemen's Day is the Monday closest to July 12
+  REM  Mon Jul 09 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Orangemen's Day (NL)", "Fête des Orangistes (NL)")]%" %b%
 
   # The Quebec Construction Holiday is the last two weeks of July
   REM  Sun Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1

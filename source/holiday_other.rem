@@ -19,8 +19,8 @@
 #     MSG %"[babel("President's Day (US)", \
 #       "Journée de la Présidence (US)")]%" %b%
 
-# REM  Mar 01 +1 PRIORITY 1000 \
-#   MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
+  REM  Mar 01 +1 PRIORITY 1000 \
+    MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
 # REM  Apr 21 +1 PRIORITY 1000 \
 #   MSG %"[babel("Queen's Birthday (UK)", "")]%" %b%
   REM  Apr 23 +1 PRIORITY 1000 \
@@ -56,13 +56,19 @@
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Thanksgiving Day (US)", "Action de Grâce (US)")]%" %b%
 
-# REM  Nov 30 +1 PRIORITY 1000 \
-#   MSG %"[babel("St. Andrew's Day (UK)", \
-#     "Fête de la Saint-Andrew (UK)")]%" %b%
+  REM  Nov 30 +1 PRIORITY 1000 \
+    MSG %"[babel("St. Andrew's Day (UK)", \
+      "Fête de la Saint-Andrew (UK)")]%" %b%
 
 
 # Other interesting days
 
+  REM  Feb 27 +1 PRIORITY 1000 \
+    MSG %"[babel("International Polar Bear Day", \
+      "Journée internationale des ours polaires")]%" %b%
+  REM  Apr 06 +1 PRIORITY 1000 \
+    MSG %"[babel("Tartan Day", "Jour du tartan")]%" %b%
+
   REM 13 SATISFY [wkdaynum(trigdate()) == Friday]
-    REM [trigger(trigdate())] +1 PRIORITY 1000 \
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%

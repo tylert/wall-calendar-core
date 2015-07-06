@@ -20,7 +20,7 @@ Great care has been taken to ensure that there are as few errors as possible
 but there may still be omissions and errata concerning provincial and
 territorial holidays or other other major events of interest to Canadian
 amateurs.  Readers are encouraged to submit feedback and corrections, in either
-English or French, directly to <va3dgn@rac.ca> or to:
+English or French, directly to <va3dgn@rac.ca> or to::
 
   RAC Calendar Comments
   Tyler Tidman VA3DGN
@@ -32,7 +32,7 @@ English or French, directly to <va3dgn@rac.ca> or to:
   Canada
 
 Where applicable, to save space, the following ISO 3166 abbreviations were
-used:
+used::
 
   AB Alberta
   BC British Columbia
@@ -53,7 +53,7 @@ used:
 This calendar was created on a computer running the Debian® GNU/Linux®
 operating system [5], [6].  All the work was performed using royalty-free and
 open-source software released under the GNU General Public License (GPL).  The
-software tools used include the following:
+software tools used include the following::
 
   remind [7], for generating calendars from remind markup language
   rem2ps [7], for generating Postscript calendars from the output of remind
@@ -68,7 +68,8 @@ software tools used include the following:
   git [g], for keeping a record of all the changes made
   LibreOffice [h], to typeset this note
 
-References:
+References::
+
   [0] http://rac.ca
   [1] http://arrl.org/shop/2013-ARRL-Calendar
   [2] http://arrl.org/contest-calendar
@@ -133,7 +134,7 @@ possible, mais il peut encore y avoir des omissions et errata concernant les
 vacances provinciaux et territoriaux ou autres événements majeurs d'intérêt
 pour les amateurs canadiens.  Lecteurs sont encouragés à soumettre des
 commentaires et des corrections, en anglais ou en français, directement à
-<va3dgn@rac.ca> ou à:
+<va3dgn@rac.ca> ou à::
 
   Commentaires pour le calendrier de RAC
   Tyler Tidman VA3DGN
@@ -145,7 +146,7 @@ commentaires et des corrections, en anglais ou en français, directement à
   Canada
 
 Le cas échéant, pour économiser l'espace, les abréviations ISO 3166 suivantes
-ont été utilisées:
+ont été utilisées::
 
   AB Alberta
   BC Colombie-Britannique
@@ -166,7 +167,7 @@ ont été utilisées:
 Ce calendrier a été créé avec un ordinateur exécutant le système d'exploitation
 Debian® GNU/Linux® [5], [6].  Tout le travail a été effectué en utilisant les
 logiciels libres et open-source publié sous la licence GNU General Public
-License (GPL).  Les outils logiciels utilisés sont les suivantes:
+License (GPL).  Les outils logiciels utilisés sont les suivantes::
 
   remind [7], pour générer des calendriers en langage de balisage remind
   rem2ps [7], pour générer des calendriers Postscript à partir de remind
@@ -181,7 +182,8 @@ License (GPL).  Les outils logiciels utilisés sont les suivantes:
   git [g], pour garder une trace de toutes les modifications apportées
   LibreOffice [h], pour composer cette note
 
-Références:
+Références::
+
   [0] http://rac.ca
   [1] http://arrl.org/shop/2013-ARRL-Calendar
   [2] http://arrl.org/contest-calendar

@@ -16,7 +16,7 @@
 
   # http://hamvention.org
   REM  Fri May [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())] +1 PRIORITY 2000 \
+    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Dayton Hamvention® Begins", \
         "Hamvention® de Dayton commence")]%" %b%
 

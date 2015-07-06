@@ -49,4 +49,4 @@
 
 # Print week numbers
 
-  REM Sunday PRIORITY 4000 SPECIAL WEEK [babel("Week", "Semaine")] [weekno()]
+  REM  Sunday PRIORITY 4000 SPECIAL WEEK [babel("Week", "Semaine")] [weekno()]

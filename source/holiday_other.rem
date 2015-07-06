@@ -69,6 +69,6 @@
   REM  Apr 06 +1 PRIORITY 1000 \
     MSG %"[babel("Tartan Day", "Jour du tartan")]%" %b%
 
-  REM 13 SATISFY [wkdaynum(trigdate()) == Friday]
+  REM  13 SATISFY [wkdaynum(trigdate()) == Friday]
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%

@@ -35,7 +35,7 @@
   REM  [trigger(moondate(0))] SATISFY 1
   IF monnum(trigdate()) == January && day(trigdate()) >= 21 \
   || monnum(trigdate()) == February && day(trigdate()) <= 20
-    REM [trigger(trigdate())] +1 PRIORITY 0000 \
+    REM  [trigger(trigdate())] +1 PRIORITY 0000 \
       MSG %"Lunar New Year ([element()] [animal()])%" %b%
   ENDIF
 # XXX FIXME XXX  Move this event to the day after the new moon instead

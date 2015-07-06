@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # If you are trying to install these tools and run them on a system that isn't
 # Linux/Unix, these instructions will likely not work for you.
 
@@ -5,7 +7,7 @@
 # already packaged version provided by your chosen Linux distribution.  On
 # Debian/Ubuntu, this is usually done by typing:
 
-  sudo apt-get install remind
+#  sudo apt-get install remind
 
 # The current version of remind does not allow the desired language to be
 # specified at the command-line, so, if you want to make calendars for a
@@ -17,23 +19,23 @@
   mkdir --parents tmp
   cd tmp
 
-  wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz.sig
-  wget http://www.roaringpenguin.com/files/download/remind-03.01.13.tar.gz
+  wget http://www.roaringpenguin.com/files/download/remind-03.01.14.tar.gz.sig
+  wget http://www.roaringpenguin.com/files/download/remind-03.01.14.tar.gz
   gpg --recv-key 126F42E0
   gpg --export --armor --no-emit-version --no-comment 126F42E0 >\
     126F42E0.gpg.pub.txt
-  gpg --verify remind-03.01.13.tar.gz.sig remind-03.01.13.tar.gz
+  gpg --verify remind-03.01.14.tar.gz.sig remind-03.01.14.tar.gz
 
-  tar --extract --verbose --gzip --file remind-03.01.13.tar.gz
-  cd remind-03.01.13
+  tar --extract --verbose --gzip --file remind-03.01.14.tar.gz
+  cd remind-03.01.14
   make "LANGDEF=-DLANG=FRENCH"
-  sudo cp src/remind /usr/bin/remind.fr
-  sudo cp src/rem2ps /usr/bin/rem2ps.fr
+  sudo cp src/remind /usr/local/bin/remind.fr
+  sudo cp src/rem2ps /usr/local/bin/rem2ps.fr
 
   make clean
   make "LANGDEF=-DLANG=ENGLISH"
-  sudo cp src/remind /usr/bin/remind.en
-  sudo cp src/rem2ps /usr/bin/rem2ps.en
+  sudo cp src/remind /usr/local/bin/remind.en
+  sudo cp src/rem2ps /usr/local/bin/rem2ps.en
 
 # Naming the newly-built binaries in this manner works with the provided
 # makefile to call the appropriate remind and rem2ps backend binaries

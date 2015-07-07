@@ -19,15 +19,16 @@
   mkdir --parents tmp
   cd tmp
 
-  wget http://www.roaringpenguin.com/files/download/remind-03.01.14.tar.gz.sig
-  wget http://www.roaringpenguin.com/files/download/remind-03.01.14.tar.gz
+  REMIND_VERSION='remind-03.01.14'
+  wget http://www.roaringpenguin.com/files/download/${REMIND_VERSION}.tar.gz.sig
+  wget http://www.roaringpenguin.com/files/download/${REMIND_VERSION}.tar.gz
   gpg --recv-key 126F42E0
   gpg --export --armor --no-emit-version --no-comment 126F42E0 >\
     126F42E0.gpg.pub.txt
-  gpg --verify remind-03.01.14.tar.gz.sig remind-03.01.14.tar.gz
+  gpg --verify ${REMIND_VERSION}.tar.gz.sig ${REMIND_VERSION}.tar.gz
 
-  tar --extract --verbose --gzip --file remind-03.01.14.tar.gz
-  cd remind-03.01.14
+  tar --extract --verbose --gzip --file ${REMIND_VERSION}.tar.gz
+  cd ${REMIND_VERSION}
   make "LANGDEF=-DLANG=FRENCH"
   sudo cp src/remind /usr/local/bin/remind.fr
   sudo cp src/rem2ps /usr/local/bin/rem2ps.fr

@@ -3,9 +3,10 @@
   INCLUDE [filedir()]/defs.rem
 
 
-# Set up some stuff for the daily calendar pages
+# Force non-PS remind to display nice headers on days without reminders
 
   BANNER %w, %m %d, %y:
+  MSG %
 
 
 # Show all moon phase change symbols (0 == new, 2 == full)

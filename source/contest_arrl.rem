@@ -30,7 +30,7 @@
   REM  Mon Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 13:00 +60 DURATION 106:59 \
       MSG %"[babel("ARRL School Club Roundup", \
-        "Roundup Clubs scholaires ARRL")]%" %b%
+        "Roundup clubs scholaires ARRL")]%" %b%
 
   # http://arrl.org/arrl-dx
   REM  Sat Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -116,7 +116,7 @@
   REM  Mon Oct [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 13:00 +60 DURATION 106:59 \
       MSG %"[babel("ARRL School Club Roundup", \
-        "Roundup Clubs scholaires ARRL")]%" %b%
+        "Roundup clubs scholaires ARRL")]%" %b%
 
 # November ARRL events
 

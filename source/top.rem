@@ -5,7 +5,7 @@
 
 # Force non-PS remind to display nice headers on days without reminders
 
-  BANNER %w, %m %d, %y:
+  BANNER %w, %m %d, %y%
   MSG %
 
 

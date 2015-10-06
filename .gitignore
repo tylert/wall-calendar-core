@@ -4,3 +4,4 @@
 *.pdf
 doc_data.txt
 build/*.svg
+venv/

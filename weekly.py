@@ -4,8 +4,7 @@
 from datetime import datetime, timedelta
 from subprocess import Popen, PIPE
 
-#pip install latex
-#from latex import build_pdf
+from latex import build_pdf
 
 
 days = 30

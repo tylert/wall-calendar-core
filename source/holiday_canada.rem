@@ -175,9 +175,17 @@
       MSG %"[babel("Labour Day", "Fête du Travail")]%" %b%
 
   # Canadian Thanksgiving is the second Monday in October
+  # Oktoberfest (ON) starts the Friday before Thanksgiving and ends the
+  # Saturday after
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Thanksgiving Day", "Action de Grâce")]%" %b%
+    REM  [trigger(trigdate()-3)] +1 PRIORITY 1000 \
+      MSG %"[babel("Oktoberfest Begins (ON)", \
+        "Début de l'Oktoberfest (ON)")]%" %b%
+    REM  [trigger(trigdate()+8)] +1 PRIORITY 1000 \
+      MSG %"[babel("Oktoberfest Ends (ON)", \
+        "Fin de l'Oktoberfest (ON)")]%" %b%
 
   REM  Oct 31 +1 PRIORITY 1000 \
     MSG %"[babel("Hallowe'en", "Halloween")]%" %b%
@@ -199,3 +207,8 @@
     MSG %"[babel("Boxing Day", "Lendemain de Noël")]%" %b%
   REM  Dec 31 +1 PRIORITY 1000 \
     MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%
+
+  REM  [hebdate(25, "Kislev")] PRIORITY 1000 \
+    MSG %"[babel("Hanukkah Begins", "Début de Hanukkah")]%" %b%
+  REM  [hebdate(2, "Tevet")] PRIORITY 1000 \
+    MSG %"[babel("Hanukkah Ends", "Fin de Hanukkah")]%" %b%

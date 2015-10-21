@@ -25,9 +25,7 @@
   INCLUDE [filedir()]/holiday_other.rem
   INCLUDE [filedir()]/contest_other.rem
   INCLUDE [filedir()]/contest_arrl.rem
-  INCLUDE [filedir()]/contest_arrl_2014.rem
   INCLUDE [filedir()]/contest_arrl_2015.rem
-  INCLUDE [filedir()]/cw_qualifying_2014.rem
   INCLUDE [filedir()]/cw_qualifying_2015.rem
 
 

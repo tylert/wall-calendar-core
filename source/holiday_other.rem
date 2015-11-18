@@ -55,6 +55,10 @@
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Thanksgiving Day (US)", "Action de Grâce (US)")]%" %b%
+    REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 \
+      MSG %"[babel("Black Friday (US)", "Vendredi Noir (US)")]%" %b%
+    REM  [trigger(trigdate()+3)] +1 PRIORITY 1000 \
+      MSG %"[babel("Cyber Monday (US)", "Cyber Lundi (US)")]%" %b%
 
   REM  Nov 30 +1 PRIORITY 1000 \
     MSG %"[babel("St. Andrew's Day (UK)", \

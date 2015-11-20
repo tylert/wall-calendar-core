@@ -52,6 +52,8 @@
       "Jour des anciens combattants (US)")]%" %b%
 
   # Thanksgiving Day (US) is the fourth Thursday in November
+  # Black Friday (US) is the Friday after Thanksgiving Day (US)
+  # Cyber Monday (US) is the Monday after Thanksgiving Day (US)
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Thanksgiving Day (US)", "Action de Grâce (US)")]%" %b%

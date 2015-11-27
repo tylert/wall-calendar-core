@@ -211,15 +211,15 @@
 
 # Major Jewish holidays and celebratory-type events
 
-  REM  [hebdate(1, "Tishrey")] PRIORITY 1000 \
+  REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Rosh Hashanah Begins", "Début de Rosh Hashanah")]%" %b%
-  REM  [hebdate(2, "Tishrey")] PRIORITY 1000 \
+  REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Rosh Hashanah Ends", "Fin de Rosh Hashanah")]%" %b%
 
-  REM  [hebdate(10, "Tishrey")] PRIORITY 1000 \
+  REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Yom Kippur", "Yom Kippur")]%" %b%
 
-  REM  [hebdate(25, "Kislev")] PRIORITY 1000 \
+  REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
     MSG %"[babel("Hanukkah Begins", "Début de Hanukkah")]%" %b%
-  REM  [hebdate(2, "Tevet")] PRIORITY 1000 \
+  REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
     MSG %"[babel("Hanukkah Ends", "Fin de Hanukkah")]%" %b%

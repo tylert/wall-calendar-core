@@ -23,6 +23,7 @@
   INCLUDE [filedir()]/season.rem
   INCLUDE [filedir()]/holiday_canada.rem
   INCLUDE [filedir()]/holiday_other.rem
+  INCLUDE [filedir()]/club_ottawa.rem
   INCLUDE [filedir()]/contest_other.rem
   INCLUDE [filedir()]/contest_arrl.rem
   INCLUDE [filedir()]/contest_arrl_2015.rem

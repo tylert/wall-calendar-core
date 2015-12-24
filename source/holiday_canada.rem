@@ -83,7 +83,7 @@
   # Mother's Day is the second Sunday in May
   REM  Sun May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Mother's Day", "Fête des Mères")]%" %b%
+      MSG %"[babel("Mother's Day", "Fête des mères")]%" %b%
 
   # Victoria Day is the Monday on or before May 24
   # Also known as Fête de la Reine
@@ -94,7 +94,7 @@
   # Father's Day is the third Sunday in June
   REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Father's Day", "Fête des Pères")]%" %b%
+      MSG %"[babel("Father's Day", "Fête des pères")]%" %b%
 
   REM  Jun 21 +1 PRIORITY 1000 \
     MSG %"[babel("National Aboriginal Day", \
@@ -172,7 +172,7 @@
   # Labour Day is the first Monday in September
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Labour Day", "Fête du Travail")]%" %b%
+      MSG %"[babel("Labour Day", "Fête du travail")]%" %b%
 
   # Canadian Thanksgiving is the second Monday in October
   # Oktoberfest (ON) starts the Friday before Thanksgiving and ends the
@@ -207,19 +207,3 @@
     MSG %"[babel("Boxing Day", "Lendemain de Noël")]%" %b%
   REM  Dec 31 +1 PRIORITY 1000 \
     MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%
-
-
-# Major Jewish holidays and celebratory-type events
-
-  REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Rosh Hashanah Begins", "Début de Rosh Hashanah")]%" %b%
-  REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Rosh Hashanah Ends", "Fin de Rosh Hashanah")]%" %b%
-
-  REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Yom Kippur", "Yom Kippur")]%" %b%
-
-  REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
-    MSG %"[babel("Hanukkah Begins", "Début de Hanukkah")]%" %b%
-  REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
-    MSG %"[babel("Hanukkah Ends", "Fin de Hanukkah")]%" %b%

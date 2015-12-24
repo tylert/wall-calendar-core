@@ -66,6 +66,27 @@
     MSG %"[babel("St. Andrew's Day (UK)", \
       "Fête de la Saint-Andrew (UK)")]%" %b%
 
+  REM  Dec 26 +1 PRIORITY 1000 \
+    MSG %"[babel("Kwanzaa Begins", "Début de Kwanzaa")]%" %b%
+  REM  Jan 01 +1 PRIORITY 1000 \
+    MSG %"[babel("Kwanzaa Ends", "Fin de Kwanzaa")]%" %b%
+
+
+# Major Jewish holidays and celebratory-type events
+
+  REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Rosh Hashanah Begins", "Début de Rosh Hashanah")]%" %b%
+  REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Rosh Hashanah Ends", "Fin de Rosh Hashanah")]%" %b%
+
+  REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Yom Kippur", "Yom Kippur")]%" %b%
+
+  REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
+    MSG %"[babel("Hanukkah Begins", "Début de Hanukkah")]%" %b%
+  REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
+    MSG %"[babel("Hanukkah Ends", "Fin de Hanukkah")]%" %b%
+
 
 # Other interesting days
 

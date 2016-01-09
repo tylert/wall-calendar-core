@@ -7,6 +7,8 @@
 
   OMIT Jan 01 +1 PRIORITY 1000 \
     MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
+  REM  Jan 06 +1 PRIORITY 1000 \
+    MSG %"[babel("Epiphany", "Epiphanie")]%" %b%
   REM  Feb 02 +1 PRIORITY 1000 \
     MSG %"[babel("Groundhog Day", "Jour de la marmotte")]%" %b%
   REM  Feb 14 +1 PRIORITY 1000 \

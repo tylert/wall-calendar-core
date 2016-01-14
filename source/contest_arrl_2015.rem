@@ -27,19 +27,3 @@
   REM  Sat Nov 28 2015 +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
     MSG %"[babel("ARRL EME 50 to 1296 MHz Contest Part 2", \
       "Concours EME 50 a 1296 MHz ARRL 2e partie")]%" %b%
-
-# ARRL Kids Days
-
-  # ARRL Kids Day date moves around each year
-  #   1800 UTC through 2359 UTC
-  #     http://arrl.org/kids-day
-  REM  Sun Jan 04 2015 +1 PRIORITY 2000 AT 18:00 +60 DURATION 05:59 \
-    MSG %"[babel("ARRL Kids Day", \
-      "Journée des enfants ARRL")]%" %b%
-
-  # ARRL Kids Day date moves around each year
-  #   1800 UTC through 2359 UTC
-  #     http://arrl.org/kids-day
-  REM  Sat Jun 20 2015 +1 PRIORITY 2000 AT 18:00 +60 DURATION 05:59 \
-    MSG %"[babel("ARRL Kids Day", \
-      "Journée des enfants ARRL")]%" %b%

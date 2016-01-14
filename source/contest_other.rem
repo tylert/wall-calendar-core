@@ -5,30 +5,30 @@
 
 # Assorted radio-related events and reminders
 
-  # http://iaru.org/world-amateur-radio-day.html
+  #     http://iaru.org/world-amateur-radio-day.html
   REM  Apr 18 +1 PRIORITY 2000 \
     MSG %"[babel("World Amateur Radio Day", \
       "Journée de la radio amateur")]%" %b%
 
-  # http://worldradioday.org
+  #     http://worldradioday.org
   REM  Feb 13 +1 PRIORITY 2000 \
     MSG %"[babel("World Radio Day", "Journée mondiale de la radio")]%" %b%
 
-  # http://hamvention.org
+  #     http://hamvention.org
   REM  Fri May [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Dayton Hamvention® Begins", \
         "Hamvention® de Dayton commence")]%" %b%
 
-  # http://csm-mcs.com
+  #     http://csm-mcs.com
   REM  Sat Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[nst(1967)][babel("th Canadian Ski Marathon Begins", \
         "e Marathon canadien de ski commence")]%" %b%
 
-  # https://jotajoti.org
-  # http://joti.org
-  # http://arrl.org/jamboree-on-the-air-jota
+  #     https://jotajoti.org
+  #     http://joti.org
+  #     http://arrl.org/jamboree-on-the-air-jota
   REM  Sat Oct [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("*JOTA-JOTI*", "*JOTA-JOTI*")]%" %b%
@@ -36,12 +36,14 @@
 
 # RAC events
 
-  # RAC Canada Day Contest is July 1
+  # RAC Canada Day Contest is 0000 UTC to 2359 UTC July 1
+  #     http://wp.rac.ca/canada-day-contest/ ???
   REM  Jul 01 +1 PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
     MSG %"[babel("RAC Canada Day Contest", \
       "Concours Fête du Canada RAC")]%" %b%
 
   # RAC Canada Winter Contest is the last Saturday in December
+  #     http://wp.rac.ca/winter-contest/ ???
 #  REM  Sat Dec [Week_4] +1 SCANFROM [trigger(today() - 7)] SATISFY 1
 #  REM  Sat Jan 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
   REM  Sat Dec [Week_3] +1 SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -52,7 +54,7 @@
 
 # Ontario events
 
-  # http://va3cco.com/oqp
+  #     http://va3cco.com/oqp
   REM  Sat Apr [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 11:00 \
       MSG %"[nst(1998)][babel("th Ontario QSO Party Contest Part 1", \
@@ -64,47 +66,47 @@
 
 # CQ Magazine events
 
-  # http://cq160.com
+  #     http://cq160.com
   REM  Sun Feb 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()-2)] +1 PRIORITY 2000 AT 22:00 +60 DURATION 48:00 \
       MSG %"[babel("*CQ-WW-160-CW*", "*CQ-WW-160-CW*")]%" %b%
 
-  # http://cq160.com
+  #     http://cq160.com
   REM  Sun Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()-2)] +1 PRIORITY 2000 AT 22:00 +60 DURATION 48:00 \
       MSG %"[babel("*CQ-WW-160-SSB*", "*CQ-WW-160-SSB*")]%" %b%
 
-  # http://cqwpxrtty.com
+  #     http://cqwpxrtty.com
   REM  Sat Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
       MSG %"[babel("*CQ-WPX-RTTY*", "*CQ-WPX-RTTY*")]%" %b%
 
-  # http://cqwpx.com
+  #     http://cqwpx.com
   REM  Sun Apr 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
       MSG %"[babel("*CQ-WW-WPX-SSB*", "*CQ-WW-WPX-SSB*")]%" %b%
 
-  # http://cqwpx.com
+  #     http://cqwpx.com
   REM  Sun Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
       MSG %"[babel("*CQ-WW-WPX-CW*", "*CQ-WW-WPX-CW*")]%" %b%
 
-  # http://cqww-vhf.com
+  #     http://cqww-vhf.com
   REM  Sat Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 27:00 \
       MSG %"[babel("*CQ-WW-VHF*", "*CQ-WW-VHF*")]%" %b%
 
-  # http://cqwwrtty.com
+  #     http://cqwwrtty.com
   REM  Sun Oct 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 48:00 \
       MSG %"[babel("*CQ-WW-RTTY-DX*", "*CQ-WW-RTTY-DX*")]%" %b%
 
-  # http://cqww.com
+  #     http://cqww.com
   REM  Sun Nov 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
       MSG %"[babel("*CQ-WW-DX-SSB*", "*CQ-WW-DX-SSB*")]%" %b%
 
-  # http://cqww.com
+  #     http://cqww.com
   REM  Sun Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()-1)] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
       MSG %"[babel("*CQ-WW-DX-CW*", "*CQ-WW-DX-CW*")]%" %b%
@@ -113,32 +115,32 @@
 # National Contest Journal events
 #   North Americal QSO Party
 
-  # http://ncjweb.com/naqp
+  #     http://ncjweb.com/naqp
   REM  Sat Jan [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
       MSG %"[babel("*NAQP-CW*", "*NAQP-CW*")]%" %b%
 
-  # http://ncjweb.com/naqp
+  #     http://ncjweb.com/naqp
   REM  Sat Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
       MSG %"[babel("*NAQP-SSB*", "*NAQP-SSB*")]%" %b%
 
-  # http://ncjweb.com/naqp
+  #     http://ncjweb.com/naqp
   REM  Sat Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
       MSG %"[babel("*NAQP-RTTY*", "*NAQP-RTTY*")]%" %b%
 
-  # http://ncjweb.com/naqp
+  #     http://ncjweb.com/naqp
   REM  Sat Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
       MSG %"[babel("*NAQP-RTTY*", "*NAQP-RTTY*")]%" %b%
 
-  # http://ncjweb.com/naqp
+  #     http://ncjweb.com/naqp
   REM  Sat Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
       MSG %"[babel("*NAQP-CW*", "*NAQP-CW*")]%" %b%
 
-  # http://ncjweb.com/naqp
+  #     http://ncjweb.com/naqp
   REM  Sat Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 12:00 \
       MSG %"[babel("*NAQP-SSB*", "*NAQP-SSB*")]%" %b%
@@ -146,7 +148,7 @@
 
 # RSGB contest events
 
-  # http://www.rsgbcc.org/hf/rules/2013/rberu.shtml
+  #     http://www.rsgbcc.org/hf/rules/2013/rberu.shtml
   REM  Sat Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 10:00 +60 DURATION 24:00 \
       MSG %"[nst(1938)][babel("th RSGB BERU Commonwealth CW Contest", \
@@ -155,7 +157,7 @@
 
 # Other contest events
 
-  # http://azscqrpions.com/fybo2009rules.html
+  #     http://azscqrpions.com/fybo2009rules.html
   REM  Sat Feb [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 14:00 +60 DURATION 10:00 \
       MSG %"[babel("Freeze Your Buns Off QRP Contest", \

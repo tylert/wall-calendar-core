@@ -82,7 +82,7 @@ $(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf $(
 
 # Single-page -> 2-up Portable Document Format
 
-$(BUILD)/junior_$(GEN_LANG).pdf : $(BUILD)/letter_$(GEN_LANG).pdf
+$(BUILD)/junior_$(YEAR)_$(GEN_LANG).pdf : $(BUILD)/letter_$(YEAR)_$(GEN_LANG).pdf
 	@pdf2ps $< - | psnup -2 -c -f | ps2pdf - $@
 
 

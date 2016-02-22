@@ -76,8 +76,8 @@ $(BUILD)/$(MEDIA)_$(GEN_LANG).ps : $(CALENDARS) Makefile
 $(BUILD)/%.pdf : $(BUILD)/%.ps
 	@ps2pdf14 -sPAPERSIZE=$(MEDIA) $< - | pdftk - output $@ uncompress
 
-$(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf $(BUILD)/border.pdf
-	@pdftk $< background $(BUILD)/border.pdf output $@ uncompress
+$(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf $(BUILD)/$(MEDIA)_border.pdf
+	@pdftk $< background $(BUILD)/$(MEDIA)_border.pdf output $@ uncompress
 
 
 # Single-page -> 2-up Portable Document Format

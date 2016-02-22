@@ -13,8 +13,9 @@ MEDIA ?= legal
 
 YEAR ?= $(shell expr 1 + $(shell date +%Y))
 DATE ?= $(YEAR)-01-01
-
 MONTHS ?= 12
+
+# Assume that we're working with n < 100 months
 RANGE = $(shell seq --format "%02g" $(MONTHS))
 PDFS = $(addprefix $(BUILD)/, $(addsuffix .pdf, $(addprefix $(GEN_LANG), \
   $(RANGE))))
@@ -28,7 +29,10 @@ GENERATED_FILES = \
 
 
 .PHONY : all
-all : $(BUILD)/$(YEAR)_$(GEN_LANG).pdf
+all : calendar
+
+.PHONY : calendar
+calendar : $(BUILD)/$(YEAR)_$(GEN_LANG).pdf
 
 .PHONY : svgs
 svgs : $(SVGS)
@@ -93,6 +97,3 @@ $(BUILD)/%.svg : $(BUILD)/%.pdf
 
 $(BUILD)/%.pdf : $(SOURCE)/%.svg
 	@inkscape --export-text-to-path --export-pdf=$@ $<
-
-#%.pdf : %.odt
-#	@libreoffice --headless --convert-to pdf $^

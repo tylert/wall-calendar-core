@@ -11,7 +11,8 @@ CALENDARS ?= $(TOP_CALENDAR) $(wildcard $(SOURCE)/*.rem)
 GEN_LANG ?= fr
 MEDIA ?= legal
 
-YEAR ?= $(shell expr 1 + $(shell date +%Y))
+#YEAR ?= $(shell expr 1 + $(shell date +%Y))
+YEAR ?= $(shell date +%Y)
 DATE ?= $(YEAR)-01-01
 MONTHS ?= 12
 

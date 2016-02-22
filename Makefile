@@ -32,7 +32,7 @@ GENERATED_FILES = \
 all : calendar
 
 .PHONY : calendar
-calendar : $(BUILD)/$(YEAR)_$(GEN_LANG).pdf
+calendar : $(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf
 
 .PHONY : svgs
 svgs : $(SVGS)
@@ -44,7 +44,7 @@ clean :
 
 # Remind -> Postscript
 
-$(BUILD)/$(GEN_LANG).ps : $(CALENDARS) Makefile
+$(BUILD)/$(MEDIA)_$(GEN_LANG).ps : $(CALENDARS) Makefile
 	@remind.$(GEN_LANG) -p$(MONTHS) -b1 -gdaad $(TOP_CALENDAR) $(DATE) \
     | rem2ps.$(GEN_LANG) -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 \
     | sed \
@@ -79,13 +79,13 @@ $(BUILD)/$(GEN_LANG).ps : $(CALENDARS) Makefile
 $(BUILD)/%.pdf : $(BUILD)/%.ps
 	@ps2pdf14 -sPAPERSIZE=$(MEDIA) $< - | pdftk - output $@ uncompress
 
-$(BUILD)/$(YEAR)_$(GEN_LANG).pdf : $(BUILD)/$(GEN_LANG).pdf $(BUILD)/border.pdf
+$(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf $(BUILD)/border.pdf
 	@pdftk $< background $(BUILD)/border.pdf output $@ uncompress
 
 
 # Multi-page -> Single-page Portable Document Format
 
-$(PDFS) : $(BUILD)/$(GEN_LANG).pdf
+$(PDFS) : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf
 	@pdftk $^ burst output $(BUILD)/$(GEN_LANG)%02d.pdf uncompress
 
 

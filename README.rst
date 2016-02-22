@@ -1,6 +1,4 @@
-﻿Welcome to the 2015 Edition of the RAC Calendar [0], 1st Revision.
-
-This calendar was originally inspired by advertisements for the ARRL printed
+﻿This calendar was originally inspired by advertisements for the ARRL printed
 calendar [1].  Construction was greatly eased by the simple, deterministic
 rules for locating future ARRL events (e.g.:  "the second weekend in June") [2]
 and early availability of the "real" contest dates for the coming year allowed
@@ -20,16 +18,7 @@ Great care has been taken to ensure that there are as few errors as possible
 but there may still be omissions and errata concerning provincial and
 territorial holidays or other other major events of interest to Canadian
 amateurs.  Readers are encouraged to submit feedback and corrections, in either
-English or French, directly to <va3dgn@rac.ca> or to::
-
-  RAC Calendar Comments
-  Tyler Tidman VA3DGN
-  c/o Radio Amateurs of/du Canada
-  720 Belfast Road
-  Suite 217
-  Ottawa, Ontario
-  K1G 0Z5
-  Canada
+English or French, directly to <va3dgn@rac.ca>.
 
 Where applicable, to save space, the following ISO 3166 abbreviations were
 used::
@@ -70,7 +59,6 @@ software tools used include the following::
 
 References::
 
-  [0] http://rac.ca
   [1] http://arrl.org/shop/2013-ARRL-Calendar
   [2] http://arrl.org/contest-calendar
   [3] http://hamvention.org
@@ -102,14 +90,11 @@ Association, Inc.  Debian® is a registered trademark of Software in the Public
 Interest, Inc.  Linux® is a registered trademark of Linus Torvalds.  Wikipedia®
 is a registered trademark of Wikimedia Foundation, Inc., a non-profit
 organization.  All GNU software and GPL licenses are © Free Software
-Foundation, Inc.  The RAC logo is a registered trademark of Radio Amateurs
-of/du Canada, Inc.
+Foundation, Inc.
 
 Ce calendrier est aussi disponible en français.
 
 ---
-
-Bienvenue au 2014 édition du calendrier RAC [0], 1ier révision.
 
 Ce calendrier a été inspiré par la publicité pour le calendrier imprimé par
 ARRL [1].  La construction a été grandement facilitée par les règles simples et
@@ -134,16 +119,7 @@ possible, mais il peut encore y avoir des omissions et errata concernant les
 vacances provinciaux et territoriaux ou autres événements majeurs d'intérêt
 pour les amateurs canadiens.  Lecteurs sont encouragés à soumettre des
 commentaires et des corrections, en anglais ou en français, directement à
-<va3dgn@rac.ca> ou à::
-
-  Commentaires pour le calendrier de RAC
-  Tyler Tidman VA3DGN
-  a/s Radio Amateurs of/du Canada
-  720 Belfast Road
-  Suite 217
-  Ottawa, Ontario
-  K1G 0Z5
-  Canada
+<va3dgn@rac.ca>.
 
 Le cas échéant, pour économiser l'espace, les abréviations ISO 3166 suivantes
 ont été utilisées::
@@ -184,7 +160,6 @@ License (GPL).  Les outils logiciels utilisés sont les suivantes::
 
 Références::
 
-  [0] http://rac.ca
   [1] http://arrl.org/shop/2013-ARRL-Calendar
   [2] http://arrl.org/contest-calendar
   [3] http://hamvention.org
@@ -216,6 +191,6 @@ Inc.  Debian® est une marque déposée de Software in the Public Interest, Inc.
 Linux® est une marque déposée de Linus Torvalds.  Wikipedia® est une marque
 déposée de Wikimedia Foundation, Inc., une organisation à but non lucratif.
 Tous les logiciels GNU et les licences GPL sont © Free Software Foundation,
-Inc.  Le logo RAC est une marque déposée de Radio Amateurs of/du Canada, Inc.
+Inc.
 
 This calendar is also available in English.

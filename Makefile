@@ -15,10 +15,6 @@ YEAR ?= $(shell expr 1 + $(shell date +%Y))
 DATE ?= $(YEAR)-01-01
 MONTHS ?= 12
 
-# Assume that we're working with n < 100 months
-RANGE = $(shell seq --format "%02g" $(MONTHS))
-PDFS = $(addprefix $(BUILD)/, $(addsuffix .pdf, $(addprefix $(GEN_LANG), \
-  $(RANGE))))
 SVGS = $(PDFS:.pdf=.svg)
 
 GENERATED_FILES = \
@@ -83,8 +79,20 @@ $(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf $(
 	@pdftk $< background $(BUILD)/border.pdf output $@ uncompress
 
 
+# Single-page -> 2-up Portable Document Format
+
+$(BUILD)/junior_$(GEN_LANG).pdf : $(BUILD)/letter_$(GEN_LANG).pdf
+	@pdf2ps $< - | psnup -2 -c -f | ps2pdf - $@
+
+
 # Multi-page -> Single-page Portable Document Format
 
+# XXX If n < 100 months, otherwise use different padding
+RANGE = $(shell seq --format "%02g" $(MONTHS))
+PDFS = $(addprefix $(BUILD)/, $(addsuffix .pdf, $(addprefix $(GEN_LANG), \
+  $(RANGE))))
+
+# XXX If n < 100 months, otherwise use different padding
 $(PDFS) : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf
 	@pdftk $^ burst output $(BUILD)/$(GEN_LANG)%02d.pdf uncompress
 

@@ -49,14 +49,15 @@
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 07:30 +60 DURATION 06:00 \
       MSG %"CN Cycle for CHEO%" %b%
 
-  # Lap the Gats is (usually) the last weekend in May
-  REM  Sat Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+  # Lap the Gats is (usually) the third weekend in June???
+  # Lap the Gats is (usually) the last weekend in May???
+  REM  Sat Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"Lap the Gats%" %b%
 
   # Rideau Lakes Cycle Tour is (usually) the first or second weekend in June
   #   since 1972
-  REM  Sat Jun [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Sat Jun [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())]   +1 PRIORITY 2000 MSG %"RLCT%" %b%
     REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 MSG %"RLCT%" %b%
 

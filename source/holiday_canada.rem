@@ -49,6 +49,12 @@
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Commonwealth Day", "Jour du Commonwealth")]%" %b%
 
+  # St. Patrick's Day (NL) is the Monday closest to March 17
+  REM  Mon Mar 14 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("St. Patrick's Day (NL)", \
+        "Fête de la Saint-Patrick (NL)")]%" %b%
+
   REM  Mar 17 +1 PRIORITY 1000 \
     MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
   REM  Apr 01 +1 PRIORITY 1000 \

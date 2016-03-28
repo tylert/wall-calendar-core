@@ -51,15 +51,23 @@
 
   # Lap the Gats is (usually) the third weekend in June???
   # Lap the Gats is (usually) the last weekend in May???
+  # http://lapthegats.org
   REM  Sat Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+# REM  Sat Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
-      MSG %"Lap the Gats%" %b%
+      MSG %"[babel("Lap the Gats", "Défi Vélo")]%" %b%
 
   # Rideau Lakes Cycle Tour is (usually) the first or second weekend in June
   #   since 1972
+  # http://ottawabicycleclub.ca/rlct
   REM  Sat Jun [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())]   +1 PRIORITY 2000 MSG %"RLCT%" %b%
     REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 MSG %"RLCT%" %b%
+
+  # MS Bike Tour:  Ottawa to Cornwall
+  # http://mssoc.convio.net/site/TR?fr_id=4906&pg=entry
+  REM  Sat Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 2000 MSG %"MS Bike Tour%" %b%
 
   # OARC Hamfest is (usually) the first Saturday after Labour Day
   # OARC Portable Station Demo is (usually) the first Saturday after the OARC

@@ -47,7 +47,7 @@
   # https://cncycle.ca
   REM  Sun May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 07:30 +60 DURATION 06:00 \
-      MSG %"CN Cycle for CHEO%" %b%
+      MSG %"[babel("CN Cycle for CHEO", "Le Défi CN pour le CHEO")]%" %b%
 
   # Lap the Gats is (usually) the third weekend in June???
   # Lap the Gats is (usually) the last weekend in May???

@@ -52,8 +52,8 @@
   # Lap the Gats is (usually) the third weekend in June???
   # Lap the Gats is (usually) the last weekend in May???
   # http://lapthegats.org
-  REM  Sat Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-# REM  Sat Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+# REM  Sun Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Lap the Gats", "Défi Vélo")]%" %b%
 

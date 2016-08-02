@@ -18,7 +18,7 @@
   REM  Wed [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 02:30 MSG %"[bable("OARC Meeting", "")]%" %b%
+      DURATION 02:30 MSG %"[babel("OARC Meeting", "")]%" %b%
   ENDIF
 
   # WCARC meetings are the first Tuesday of each month
@@ -32,7 +32,7 @@
   REM  Wed [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 01:30 MSG %"[bable("OVMRC Meeting", "")]%" %b%
+      DURATION 01:30 MSG %"[babel("OVMRC Meeting", "")]%" %b%
   ENDIF
 
 
@@ -91,7 +91,7 @@
       MSG %"[babel("OARC Hamfest", "")]%" %b%
   REM  Mon Sep [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 \
-      MSG %"[bable("OARC Portable Station Demo", "")]%" %b%
+      MSG %"[babel("OARC Portable Station Demo", "")]%" %b%
 
   # Tall Pines Rally is (usually) the last weekend in November
   # http://tallpinesrally.com

@@ -17,40 +17,6 @@
   # The September Equinox is the First Day of Fall in the Northern Hemisphere
   # The December Solstice is the First Day of Winter in the Northern Hemisphere
 
-# REM  [trigger(date(2014,01,04), time(12,00), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  # [trigger(date(2014,03,20), time(16,57), 1)]
-  REM  Mar 20 2014 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
-  # [trigger(date(2014,06,21), time(10,51), 1)]
-  REM  Jun 21 2014 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
-# REM  [trigger(date(2014,07,04), time(00,00), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  # [trigger(date(2014,09,23), time(02,29), 1)]
-  REM  Sep 23 2014 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
-  # [trigger(date(2014,12,21), time(23,03), 1)]
-  REM  Dec 21 2014 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
-
-# REM  [trigger(date(2015,01,04), time(07,00), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  # [trigger(date(2015,03,20), time(22,45), 1)]
-  REM  Mar 20 2015 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
-  # [trigger(date(2015,06,21), time(16,38), 1)]
-  REM  Jun 21 2015 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
-# REM  [trigger(date(2015,07,06), time(19,00), 1)] +1 PRIORITY 0000 \
-#   MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  # [trigger(date(2015,09,23), time(08,20), 1)]
-  REM  Sep 23 2015 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
-  # [trigger(date(2015,12,22), time(04,48), 1)]
-  REM  Dec 22 2015 +1 PRIORITY 0000 \
-    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
-
 # REM  [trigger(date(2016,01,02), time(23,00), 1)] +1 PRIORITY 0000 \
 #   MSG %"[babel("Perihelion", "Périhélie")]%" %b%
   # [trigger(date(2016,03,20), time(04,30), 1)]

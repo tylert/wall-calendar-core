@@ -6,11 +6,11 @@
 # Local amateur radio club meetings
 
   # OARC exec meetings are the first Wednesday of each month except July and
-  #   August
+  # August
   REM  Wed [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 01:30 MSG %"OARC Exec Meeting%" %b%
+      DURATION 01:30 MSG %"[babel("OARC Exec Meeting", "")]%" %b%
   ENDIF
 
   # OARC meetings are the second Wednesday of each month except July and August
@@ -18,30 +18,33 @@
   REM  Wed [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 02:30 MSG %"OARC Meeting%" %b%
+      DURATION 02:30 MSG %"[bable("OARC Meeting", "")]%" %b%
   ENDIF
 
   # WCARC meetings are the first Tuesday of each month
   # http://wcarc.on.ca
   REM  Tue [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 02:00 MSG %"WCARC Meeting%" %b%
+      DURATION 02:00 MSG %"[babel("WCARC Meeting", "")]%" %b%
 
   # OVMRC meetings are the third Wednesday of each month except July and August
   # http://ovmrc.on.ca
   REM  Wed [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 01:30 MSG %"OVMRC Meeting%" %b%
+      DURATION 01:30 MSG %"[bable("OVMRC Meeting", "")]%" %b%
   ENDIF
 
 
 # Local amateur radio-related volunteer events
 
-  # Lanark Highlands Forest Rally is (usually) the first weekend in May
+  # Lanark Highlands Forest Rally LHFR is (usually) the first weekend in May
   # http://lhfr.ca
-  REM  Sat May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 MSG %"LHFR%" %b%
+  REM  Fri May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
+      MSG %"[babel("*LHFR*", "*LHFR*")]%" %b%
+    REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 \
+      MSG %"[babel("*LHFR*", "*LHFR*")]%" %b%
 
   # CN Cycle for CHEO is (usually) the first weekend in May
   # https://cncycle.ca
@@ -57,33 +60,44 @@
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Lap the Gats", "Défi Vélo")]%" %b%
 
-  # Rideau Lakes Cycle Tour is (usually) the first or second weekend in June
-  #   since 1972
+  # Rideau Lakes Cycle Tour RLCT is (usually) the first or second weekend in
+  # June since 1972
   # http://ottawabicycleclub.ca/rlct
   REM  Sat Jun [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())]   +1 PRIORITY 2000 MSG %"RLCT%" %b%
-    REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 MSG %"RLCT%" %b%
+    REM [trigger(trigdate())]   +1 PRIORITY 2000 \
+      MSG %"[babel("*RLCT*", "*RLCT*")]%" %b%
+    REM [trigger(trigdate()+1)] +1 PRIORITY 2000 \
+      MSG %"[babel("*RLCT*", "*RLCT*")]%" %b%
+
+  # Galway Cavendish Forest Rally (GCFR) is the second weekend in July
+  # http://pmscrally.com/gcfr/
+  REM  Fri Jul [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
+      MSG %"[babel("*GCFR*", "*GCFR*")]%" %b%
+    REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 \
+      MSG %"[babel("*GCFR*", "*GCFR*")]%" %b%
 
   # MS Bike Tour:  Ottawa to Cornwall
   # http://mssoc.convio.net/site/TR?fr_id=4906&pg=entry
   REM  Sat Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 MSG %"MS Bike Tour%" %b%
+    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
+      MSG %"[babel("MS Bike Tour", "Vélotour SP")]%" %b%
 
   # OARC Hamfest is (usually) the first Saturday after Labour Day
   # OARC Portable Station Demo is (usually) the first Saturday after the OARC
-  #   Hamfest
+  # Hamfest
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 \
-      MSG %"OARC Hamfest%" %b%
+      MSG %"[babel("OARC Hamfest", "")]%" %b%
   REM  Mon Sep [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 \
-      MSG %"OARC Portable Station Demo%" %b%
+      MSG %"[bable("OARC Portable Station Demo", "")]%" %b%
 
   # Tall Pines Rally is (usually) the last weekend in November
   # http://tallpinesrally.com
   REM  Sat Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
-      MSG %"Tall Pines Rally%" %b%
+      MSG %"[babel("Tall Pines Rally", "")]%" %b%
 
 
 # Local non-radio events

@@ -10,7 +10,8 @@
   REM  Wed [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 01:30 MSG %"[babel("OARC Exec Meeting", "")]%" %b%
+      DURATION 01:30 MSG %"[babel("OARC Exec Meeting", \
+        "Meeting de OARC exécutif")]%" %b%
   ENDIF
 
   # OARC meetings are the second Wednesday of each month except July and August
@@ -18,21 +19,21 @@
   REM  Wed [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 02:30 MSG %"[babel("OARC Meeting", "")]%" %b%
+      DURATION 02:30 MSG %"[babel("OARC Meeting", "Meeting de OARC")]%" %b%
   ENDIF
 
   # WCARC meetings are the first Tuesday of each month
   # http://wcarc.on.ca
   REM  Tue [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 02:00 MSG %"[babel("WCARC Meeting", "")]%" %b%
+      DURATION 02:00 MSG %"[babel("WCARC Meeting", "Meeting de WCARC")]%" %b%
 
   # OVMRC meetings are the third Wednesday of each month except July and August
   # http://ovmrc.on.ca
   REM  Wed [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 01:30 MSG %"[babel("OVMRC Meeting", "")]%" %b%
+      DURATION 01:30 MSG %"[babel("OVMRC Meeting", "Meeting de OVMRC")]%" %b%
   ENDIF
 
 
@@ -64,7 +65,7 @@
   # June since 1972
   # http://ottawabicycleclub.ca/rlct
   REM  Sat Jun [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM [trigger(trigdate())]   +1 PRIORITY 2000 \
+    REM [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("*RLCT*", "*RLCT*")]%" %b%
     REM [trigger(trigdate()+1)] +1 PRIORITY 2000 \
       MSG %"[babel("*RLCT*", "*RLCT*")]%" %b%
@@ -86,18 +87,20 @@
   # OARC Hamfest is (usually) the first Saturday after Labour Day
   # OARC Portable Station Demo is (usually) the first Saturday after the OARC
   # Hamfest
+  # http://oarc.net/fleamarket/
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 \
-      MSG %"[babel("OARC Hamfest", "")]%" %b%
+    REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 AT 07:30 DURATION 3:00 \
+      MSG %"[babel("OARC Hamfest", "Hamfest OARC")]%" %b%
   REM  Mon Sep [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 \
-      MSG %"[babel("OARC Portable Station Demo", "")]%" %b%
+    REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 AT 08:00 \
+      MSG %"[babel("OARC Portable Station Demo", \
+        "Demo des Stations Portatif OARC")]%" %b%
 
   # Tall Pines Rally is (usually) the last weekend in November
   # http://tallpinesrally.com
   REM  Sat Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
-      MSG %"[babel("Tall Pines Rally", "")]%" %b%
+      MSG %"[babel("Tall Pines Rally", "Rallye des Hautes Pins")]%" %b%
 
 
 # Local non-radio events

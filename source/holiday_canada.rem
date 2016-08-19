@@ -176,7 +176,7 @@
 
   # International Day of the World's Indigenous Peoples is August 9
   # https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
-  REM  Aug 09 +1 PRIORITY 1000
+  REM  Aug 09 +1 PRIORITY 1000 \
     MSG %"[babel("International Day of the World's Indigenous Peoples", \
       "Journée internationale des populations autochtones du monde")]%" %b%
 

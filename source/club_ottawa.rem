@@ -22,9 +22,9 @@
       DURATION 02:30 MSG %"[babel("OARC Meeting", "Meeting de OARC")]%" %b%
   ENDIF
 
-  # WCARC meetings are the first Tuesday of each month
+  # WCARC meetings are the third Monday of each month
   # http://wcarc.on.ca
-  REM  Tue [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Mon [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
       DURATION 02:00 MSG %"[babel("WCARC Meeting", "Meeting de WCARC")]%" %b%
 

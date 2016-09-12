@@ -123,13 +123,15 @@
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
       MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
     OMIT [trigger(trigdate()+2)] +1 PRIORITY 1000 \
-      MSG %"[babel("Day off for Canada Day", "")]%" %b%
+      MSG %"[babel("Day off for Canada Day", \
+        "Jour de congé pour la fête du Canada")]%" %b%
   ELSE
     IF wkdaynum(trigdate()) == Sunday
       REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
       OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \
-        MSG %"[babel("Day off for Canada Day", "")]%" %b%
+        MSG %"[babel("Day off for Canada Day", \
+          "Jour de congé pour la fête du Canada")]%" %b%
     ELSE
       OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%

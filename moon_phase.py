@@ -61,7 +61,8 @@ def julian_day(
     return jul
 
 
-print(moon_phase())
+if __name__ == '__main__':
+    print(moon_phase())
 
 
 #import code

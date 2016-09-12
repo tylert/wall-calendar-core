@@ -34,8 +34,8 @@
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Memorial Day (US)", "Memorial Day (US)")]%" %b%
 
-# REM  Jul 04 +1 PRIORITY 1000 \
-#   MSG %"[babel("Independence Day (US)", "")]%" %b%
+  REM  Jul 04 +1 PRIORITY 1000 \
+    MSG %"[babel("Independence Day (US)", "Jour de l'indépendance (US)")]%" %b%
 
   # Columbus Day (US) is the second Monday in October
 # REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -99,3 +99,15 @@
   REM  13 SATISFY [wkdaynum(trigdate()) == Friday]
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%
+
+  # The Day of the Programmer is the 256th day of the year
+  # https://en.wikipedia.org/wiki/Day_of_the_Programmer
+  IF isleap(today())
+    REM Sep 12 +1 PRIORITY 1000 \
+      MSG %"[babel("Day of the Programmer (256th day)", \
+        "Jour du programmeur (256e jour)")]%" %b%
+  ELSE
+    REM Sep 13 +1 PRIORITY 1000 \
+      MSG %"[babel("Day of the Programmer (256th day)", \
+        "Jour du programmeur (256e jour)")]%" %b%
+  ENDIF

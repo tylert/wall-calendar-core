@@ -60,7 +60,7 @@
   IF monnum(trigdate()) == January && day(trigdate()) >= 21 \
   || monnum(trigdate()) == February && day(trigdate()) <= 20
     REM  [trigger(trigdate())] +1 PRIORITY 0000 \
-      MSG %"Lunar New Year ([element()] [animal()])%" %b%
+      MSG %"Lunar New Year ([element_en()] [animal_en()] - [spin_en()])%" %b%
   ENDIF
 # XXX FIXME XXX  Move this event to the day after the new moon instead
 
@@ -78,11 +78,11 @@
 
   SET $LatDeg 45
   SET $LatMin 25
-  SET $LatSec 15
+  SET $LatSec 29
 
-  SET $LongDeg 75
+  SET $LongDeg -75
   SET $LongMin 41
-  SET $LongSec 24
+  SET $LongSec 59
 
   #MSG Sun is up from [sunrise(trigdate())] to [sunset(trigdate())]%
   #MSG Next full moon is [mon(moondate(2))] [day(moondate(2))], [year(moondate(2))].%"%"%

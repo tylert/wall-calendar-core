@@ -60,16 +60,27 @@
 
 # Chinese zodiac helper functions
 
-  FSET animals(x) choose(x, "Rooster", "Dog", "Boar", "Rat", "Ox", "Tiger", \
-    "Rabbit", "Dragon", "Snake", "Horse", "Sheep", "Monkey")
-  FSET animal() animals(year(trigdate()) % 12)
+  FSET animals_en(x) choose(x, "Rooster", "Dog", "Pig/Boar", "Rat", "Ox", "Tiger", \
+    "Rabbit", "Dragon", "Snake", "Horse", "Goat/Ram/Sheep", "Monkey")
+  FSET animal_en() animals_en(year(trigdate()) % 12)
+  FSET animals_fr(x) choose(x, "Coq", "Chien", "Cochon/Sanglier/Verrat", "Rat", "Boeuf", "Tigre", \
+    "Lapin", "Dragon", "Serpent", "Cheval", "Chèvre/Bélier/Mouton", "Singe")
+  FSET animal_fr() animals_fr(year(trigdate()) % 12)
 
-  FSET elements(x) choose(x, "Metal", "Metal", "Water", "Water", "Wood", \
+  FSET elements_en(x) choose(x, "Metal", "Metal", "Water", "Water", "Wood", \
     "Wood", "Fire", "Fire", "Earth", "Earth")
-  FSET element() elements(year(trigdate()) % 10)
+  FSET element_en() elements_en(year(trigdate()) % 10)
+  FSET elements_fr(x) choose(x, "Métal", "Métal", "Eau", "Eau", "Bois", \
+    "Bois", "Feu", "Feu", "Terre", "Terre")
+  FSET element_fr() elements_fr(year(trigdate()) % 10)
 
-  FSET spins(x) choose(x, "Yang", "Yin")
-  FSET spin() spins(year(trigdate()) % 2)
+  # Years ending in even numbers are Yang and the odd ones are Yin
+  # Rooster, Pig/Boar, Ox, Rabbit, Snake, Goat/Ram/Sheep are Yin
+  # Dog, Rat, Tiger, Dragon, Horse, Monkey are Yang
+  FSET spins_en(x) choose(x, "Yin", "Yang")
+  FSET spin_en() spins_en(year(trigdate()) % 2)
+  FSET spins_fr(x) choose(x, "Yin", "Yang")
+  FSET spin_fr() spins_fr(year(trigdate()) % 2)
 
 
 # Traditional wedding anniversary gifts

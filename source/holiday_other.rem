@@ -21,8 +21,9 @@
 
   REM  Mar 01 +1 PRIORITY 1000 \
     MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
-  #REM  Apr 21 +1 PRIORITY 1000 \
-  #  MSG %"[babel("Queen's Birthday (UK)", "")]%" %b%
+  REM  Apr 21 +1 PRIORITY 1000 \
+    MSG %"[babel("Queen's Birthday (UK)", \
+      "Anniversaire de la reine (UK)")]%" %b%
   REM  Apr 23 +1 PRIORITY 1000 \
     MSG %"[babel("St. George's Day (UK)", \
       "Fête de la Saint-Georges (UK)")]%" %b%
@@ -38,14 +39,14 @@
     MSG %"[babel("Independence Day (US)", "Jour de l'indépendance (US)")]%" %b%
 
   # Columbus Day (US) is the second Monday in October
-  #REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-  #  REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-  #    MSG %"[babel("Columbus Day (US)", "")]%" %b%
+  REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Columbus Day (US)", "Jour de Columbus (US)")]%" %b%
 
-  #REM  Nov 04 +1 PRIORITY 1000 \
-  #  MSG %"[babel("Bonfire Night (UK)", "")]%" %b%
-  #REM  Nov 05 +1 PRIORITY 1000 \
-  #  MSG %"[babel("Guy Fawkes Day (UK)", "")]%" %b%
+  REM  Nov 04 +1 PRIORITY 1000 \
+    MSG %"[babel("Bonfire Night (UK)", "Nuit de feu de joie (UK)")]%" %b%
+  REM  Nov 05 +1 PRIORITY 1000 \
+    MSG %"[babel("Guy Fawkes Day (UK)", "Journée de Guy Fawkes (UK)")]%" %b%
 
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Veterans Day (US)", \

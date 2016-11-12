@@ -49,6 +49,8 @@
     MSG %"[babel("Guy Fawkes Day (UK)", "Journée de Guy Fawkes (UK)")]%" %b%
 
   REM  Nov 11 +1 PRIORITY 1000 \
+    MSG %"[babel("Armistice Day (UK)", "Jour de l'Armistice (UK)")]%" %b%
+  REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Veterans Day (US)", \
       "Jour des anciens combattants (US)")]%" %b%
 

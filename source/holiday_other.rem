@@ -37,6 +37,9 @@
 
   REM  Jul 04 +1 PRIORITY 1000 \
     MSG %"[babel("Independence Day (US)", "Jour de l'indépendance (US)")]%" %b%
+  REM  Sep 03 +1 PRIORITY 1000 \
+    MSG %"[babel("Merchant Navy Day (UK, NZ)", \
+      "Jour de la marine marchande (UK, NZ)")]%" %b%
 
   # Columbus Day (US) is the second Monday in October
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1

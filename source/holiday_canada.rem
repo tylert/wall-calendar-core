@@ -101,6 +101,11 @@
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Victoria Day", "Journée nationale des patriotes")]%" %b%
 
+  # Canadian Armed Forces Day is the first Sunday in June
+  REM  Sun Jun [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Canadian Armed Forces Day", \
+        "Journée des Forces canadiennes")]%" %b%
   # Father's Day is the third Sunday in June
   REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
@@ -207,6 +212,10 @@
 
   REM  Oct 31 +1 PRIORITY 1000 \
     MSG %"[babel("Hallowe'en", "Halloween")]%" %b%
+  REM  Nov 01 +1 PRIORITY 1000 \
+    MSG %"[babel("All Saints' Day", "Toussaint")]%" %b%
+  REM  Nov 02 +1 PRIORITY 1000 \
+    MSG %"[babel("All Souls' Day", "Fête des Morts")]%" %b%
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
   REM  Nov 11 +1 PRIORITY 1000 \

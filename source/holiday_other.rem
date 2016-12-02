@@ -6,18 +6,19 @@
 # Generic holidays and celebratory-type events for US and UK
 
   # Martin Luther King, Jr. Day (US) is the third Monday in January
-  #REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-  #  REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-  #    MSG %"[babel("Martin Luther King, Jr. Day (US)", "")]%" %b%
+  REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Martin Luther King, Jr. Day (US)", \
+        "Journée de Martin Luther King Jr.")]%" %b%
 
   # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
   # every fourth year (the next one will occur in 2017)
 
   # President's Day (US) is the third Monday in February
-  #REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-  #  REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-  #    MSG %"[babel("President's Day (US)", \
-  #      "Journée de la Présidence (US)")]%" %b%
+  REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("President's Day (US)", \
+        "Journée de la Présidence (US)")]%" %b%
 
   REM  Mar 01 +1 PRIORITY 1000 \
     MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
@@ -30,16 +31,26 @@
   REM  May 05 +1 PRIORITY 1000 \
     MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai (US)")]%" %b%
 
+  # Armed Forces Day (US) is the third Saturday in May
+  REM  Sat May [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Armed Forces Day (US)", \
+        "Journée des forces armées (US)")]%" %b%
+
   # Memorial Day (US) is the last Monday in May
   REM  Mon Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Memorial Day (US)", "Memorial Day (US)")]%" %b%
 
+  REM  Jun 14 +1 PRIORITY 1000 \
+    MSG %"[babel("Flag Day (US)", "Jour du drapeau (US)")]%" %b%
   REM  Jul 04 +1 PRIORITY 1000 \
     MSG %"[babel("Independence Day (US)", "Jour de l'indépendance (US)")]%" %b%
   REM  Sep 03 +1 PRIORITY 1000 \
     MSG %"[babel("Merchant Navy Day (UK, NZ)", \
       "Jour de la marine marchande (UK, NZ)")]%" %b%
+  REM  Sep 11 +1 PRIORITY 1000 \
+    MSG %"[babel("Patriot Day (US)", "Journée des patriotes (US)")]%" %b%
 
   # Columbus Day (US) is the second Monday in October
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1

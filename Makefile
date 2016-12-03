@@ -16,6 +16,9 @@ YEAR ?= $(shell date +%Y)
 DATE ?= $(YEAR)-01-01
 MONTHS ?= 12
 
+.SUFFIXES :
+.SUFFIXES : .rem .ps .pdf .svg .txt
+
 SVGS = $(PDFS:.pdf=.svg)
 
 GENERATED_FILES = \

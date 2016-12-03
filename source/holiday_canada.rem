@@ -5,8 +5,10 @@
 
 # Generic holidays and celebratory-type events for most of Canada
 
+  # New Year's Day is January 1st
   OMIT Jan 01 +1 PRIORITY 1000 \
     MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
+
   REM  Feb 02 +1 PRIORITY 1000 \
     MSG %"[babel("Groundhog Day", "Jour de la marmotte")]%" %b%
   REM  Feb 15 +1 PRIORITY 1000 \
@@ -45,8 +47,10 @@
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Commonwealth Day", "Jour du Commonwealth")]%" %b%
 
+  # April Fool's Day is April 1st
   REM  Apr 01 +1 PRIORITY 1000 \
     MSG %"[babel("April Fool's Day", "Poisson d'avril")]%" %b%
+
   REM  Apr 09 +1 PRIORITY 1000 \
     MSG %"[babel("Vimy Ridge Day", "Jour de la crête de Vimy")]%" %b%
   REM  Apr 25 +1 PRIORITY 1000 \
@@ -68,6 +72,7 @@
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Canadian Armed Forces Day", \
         "Journée des Forces canadiennes")]%" %b%
+
   # Father's Day is the third Sunday in June
   REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
@@ -82,6 +87,7 @@
     MSG %"[babel("Quebec's National Holiday", \
       "Fête nationale du Québec")]%" %b%
 
+  # Canada Day is July 1st
   REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF wkdaynum(trigdate()) == Saturday
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
@@ -176,5 +182,6 @@
     MSG %"[nst(1932)][babel("th Anniversary of the Statue of Westminster", \
       "e anniversaire du Statut de Westminster")]%" %b%
 
+  # New Year's Eve is December 31st
   REM  Dec 31 +1 PRIORITY 1000 \
     MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%

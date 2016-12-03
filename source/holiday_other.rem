@@ -94,7 +94,7 @@
 
   # The Day of the Programmer is the 256th day of the year
   # https://en.wikipedia.org/wiki/Day_of_the_Programmer
-  IF isleap(today())
+  IF isleap(trigdate())
     REM Sep 12 +1 PRIORITY 1000 \
       MSG %"[babel("Day of the Programmer (256th day)", \
         "Jour du programmeur (256e jour)")]%" %b%

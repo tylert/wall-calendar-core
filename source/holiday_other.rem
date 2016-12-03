@@ -20,14 +20,9 @@
       MSG %"[babel("President's Day (US)", \
         "Journée de la Présidence (US)")]%" %b%
 
-  REM  Mar 01 +1 PRIORITY 1000 \
-    MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
   REM  Apr 21 +1 PRIORITY 1000 \
     MSG %"[babel("Queen's Birthday (UK)", \
       "Anniversaire de la reine (UK)")]%" %b%
-  REM  Apr 23 +1 PRIORITY 1000 \
-    MSG %"[babel("St. George's Day (UK)", \
-      "Fête de la Saint-Georges (UK)")]%" %b%
   REM  May 05 +1 PRIORITY 1000 \
     MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai (US)")]%" %b%
 
@@ -79,30 +74,10 @@
     REM  [trigger(trigdate()+3)] +1 PRIORITY 1000 \
       MSG %"[babel("Cyber Monday (US)", "Cyber Lundi (US)")]%" %b%
 
-  REM  Nov 30 +1 PRIORITY 1000 \
-    MSG %"[babel("St. Andrew's Day (UK)", \
-      "Fête de la Saint-Andrew (UK)")]%" %b%
-
   REM  Dec 26 +1 PRIORITY 1000 \
     MSG %"[babel("Kwanzaa Begins", "Début de Kwanzaa")]%" %b%
   REM  Jan 01 +1 PRIORITY 1000 \
     MSG %"[babel("Kwanzaa Ends", "Fin de Kwanzaa")]%" %b%
-
-
-# Major Jewish holidays and celebratory-type events
-
-  REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Rosh Hashanah Begins", "Début de Rosh Hashanah")]%" %b%
-  REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Rosh Hashanah Ends", "Fin de Rosh Hashanah")]%" %b%
-
-  REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Yom Kippur", "Yom Kippur")]%" %b%
-
-  REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
-    MSG %"[babel("Hanukkah Begins", "Début de Hanukkah")]%" %b%
-  REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
-    MSG %"[babel("Hanukkah Ends", "Fin de Hanukkah")]%" %b%
 
 
 # Other interesting days

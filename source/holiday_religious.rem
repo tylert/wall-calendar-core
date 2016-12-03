@@ -1,0 +1,100 @@
+# Helper stuff
+
+  INCLUDE [filedir()]/defs.rem
+
+
+# Major Christian holidays and celebratory-type events
+
+  REM  Jan 06 +1 PRIORITY 1000 \
+    MSG %"[babel("Epiphany", "Epiphanie")]%" %b%
+  REM  Feb 14 +1 PRIORITY 1000 \
+    MSG %"[babel("St. Valentine's Day", "Saint-Valentin")]%" %b%
+  REM  Mar 01 +1 PRIORITY 1000 \
+    MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
+
+  # St. Patrick's Day (NL) is the Monday closest to March 17
+  REM  Mon Mar 14 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("St. Patrick's Day (NL)", \
+        "Fête de la Saint-Patrick (NL)")]%" %b%
+
+  # St. Patrick's Day is March 17
+  REM  Mar 17 +1 PRIORITY 1000 \
+    MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
+
+  # Easter is the first Sunday after the first full moon after the Spring
+  # equinox
+  SET easter easterdate(year(today()))
+    REM  [trigger(easter-47)] +1 PRIORITY 1000 \
+      MSG %"[babel("Shrove Tuesday", "Mardi Gras")]%" %b%
+    REM  [trigger(easter-46)] +1 PRIORITY 1000 \
+      MSG %"[babel("Ash Wednesday", "Mercredi des Cendres")]%" %b%
+    REM  [trigger(easter-7)]  +1 PRIORITY 1000 \
+      MSG %"[babel("Palm Sunday", "Dimanche des Rameaux")]%" %b%
+    REM  [trigger(easter-3)]  +1 PRIORITY 1000 \
+      MSG %"[babel("Maundy Thursday", "Jeudi saint")]%" %b%
+    OMIT [trigger(easter-2)]  +1 PRIORITY 1000 \
+      MSG %"[babel("Good Friday", "Vendredi saint")]%" %b%
+    OMIT [trigger(easter)]    +1 PRIORITY 1000 \
+      MSG %"[babel("Easter Sunday", "Le dimanche de Pâques")]%" %b%
+    OMIT [trigger(easter+1)]  +1 PRIORITY 1000 \
+      MSG %"[babel("Easter Monday", "Le lundi de Pâques")]%" %b%
+    REM  [trigger(easter+39)] +1 PRIORITY 1000 \
+      MSG %"[babel("Ascension", "Ascension")]%" %b%
+    REM  [trigger(easter+49)] +1 PRIORITY 1000 \
+      MSG %"[babel("Pentecost", "Pentecôte")]%" %b%
+
+  # St. George's Day (NL) is April 19
+  REM  Mon Apr 19 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("St. George's Day (NL)", \
+        "Fête de la Saint-Georges (NL)")]%" %b%
+
+  # St. George's Day (UK) is April 23
+  REM  Apr 23 +1 PRIORITY 1000 \
+    MSG %"[babel("St. George's Day (UK)", \
+      "Fête de la Saint-Georges (UK)")]%" %b%
+
+  REM  Jun 24 +1 PRIORITY 1000 \
+    MSG %"[babel("St. John the Baptist Day", \
+      "Fête de la Saint-Jean-Baptiste")]%" %b%
+
+  # Orangemen's Day is the Monday closest to July 12
+  REM  Mon Jul 09 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Orangemen's Day (NL)", "Fête des Orangistes (NL)")]%" %b%
+
+  REM  Nov 01 +1 PRIORITY 1000 \
+    MSG %"[babel("All Saints' Day", "Toussaint")]%" %b%
+  REM  Nov 02 +1 PRIORITY 1000 \
+    MSG %"[babel("All Souls' Day", "Fête des Morts")]%" %b%
+  REM  Nov 30 +1 PRIORITY 1000 \
+    MSG %"[babel("St. Andrew's Day (UK)", \
+      "Fête de la Saint-Andrew (UK)")]%" %b%
+  REM  Dec 24 +1 PRIORITY 1000 \
+    MSG %"[babel("Christmas Eve", "Veille de Noël")]%" %b%
+  OMIT Dec 25 +1 PRIORITY 1000 \
+    MSG %"[babel("Christmas Day", "Noël")]%" %b%
+  OMIT Dec 26 +1 PRIORITY 1000 \
+    MSG %"[babel("Boxing Day", "Lendemain de Noël")]%" %b%
+
+
+# Major Jewish holidays and celebratory-type events
+
+  REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Rosh Hashanah Begins", "Début de Rosh Hashanah")]%" %b%
+  REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Rosh Hashanah Ends", "Fin de Rosh Hashanah")]%" %b%
+
+  REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Yom Kippur", "Yom Kippur")]%" %b%
+
+  REM  [hebdate(15, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Sukkot Begins", "Début de Sukkot")]%" %b%
+  REM  [hebdate(22, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Sukkot Ends", "Fin de Sukkot")]%" %b%
+
+  REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
+    MSG %"[babel("Hanukkah Begins", "Début de Hanukkah")]%" %b%
+  REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
+    MSG %"[babel("Hanukkah Ends", "Fin de Hanukkah")]%" %b%

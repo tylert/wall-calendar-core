@@ -49,7 +49,7 @@
   REM  [trigger(easter+49)] +1 PRIORITY 1000 \
     MSG %"[babel("Pentecost", "Pentecôte")]%" %b%
 
-  # Passover is from 14 or 15 to 21 or 22 Nisan
+  # Passover is from 14 or 15 to 21 or 22 Nisan (1st month)
   REM  [hebdate(15, "Nisan")] +1 PRIORITY 1000 \
     MSG %"[babel("Passover Begins", "Début de Pâque des Juifs")]%" %b%
   REM  [hebdate(22, "Nisan")] +1 PRIORITY 1000 \
@@ -96,26 +96,30 @@
 
 # Major Jewish holidays and celebratory-type events
 
-  # Rosh Hashanah or Jewish New Year is 1 and 2 Tishrey
+  # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following (3rd month)
+
+  # Rosh Hashanah or Jewish New Year is 1 and 2 Tishrey (7th month)
   REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Rosh Hashanah Begins", "Début de Rosh Hashanah")]%" %b%
   REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Rosh Hashanah Ends", "Fin de Rosh Hashanah")]%" %b%
 
-  # Yom Kippur is 10 Tishrey
+  # Yom Kippur is 10 Tishrey (7th month)
   REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Yom Kippur", "Yom Kippur")]%" %b%
 
-  # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following
-
-  # Sukkot or Tabernacles is from 15 to 21 or 22 Tishrey
+  # Sukkot or Tabernacles is from 15 to 21 or 22 Tishrey (7th month)
   REM  [hebdate(15, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Sukkot Begins", "Début de Sukkot")]%" %b%
   REM  [hebdate(22, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Sukkot Ends", "Fin de Sukkot")]%" %b%
 
-  # Hanukkah is from 25 Kislev to 2 Tevet
+  # Hanukkah is from 25 Kislev (9th month) to 2 Tevet (10th month)
   REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
     MSG %"[babel("Hanukkah Begins", "Début de Hanukkah")]%" %b%
   REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
     MSG %"[babel("Hanukkah Ends", "Fin de Hanukkah")]%" %b%
+
+  # Purim is 14 Adar (12th month)
+  REM  [hebdate(14, "Adar")] +1 PRIORITY 1000 \
+    MSG %"[babel("Purim", "Purim")]%" %b%

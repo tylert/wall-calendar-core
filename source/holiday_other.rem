@@ -3,7 +3,7 @@
   INCLUDE [filedir()]/defs.rem
 
 
-# Generic holidays and celebratory-type events for US and UK
+# Generic holidays and celebratory-type events for US, UK and NZ
 
   # Martin Luther King, Jr. Day (US) is the third Monday in January
   REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -87,6 +87,12 @@
       "Journée internationale des ours polaires")]%" %b%
   REM  Apr 06 +1 PRIORITY 1000 \
     MSG %"[babel("Tartan Day", "Jour du tartan")]%" %b%
+  REM  Sep 21 +1 PRIORITY 1000 \
+    MSG %"[babel("International Day of Peace", \
+      "Journée internationale de la paix")]%" %b%
+  REM  Nov 13 +1 PRIORITY 1000 \
+    MSG %"[babel("World Kindness Day", \
+      "Journée mondiale de la gentillesse")]%" %b%
 
   REM  13 SATISFY [wkdaynum(trigdate()) == Friday]
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \

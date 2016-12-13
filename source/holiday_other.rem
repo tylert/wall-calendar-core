@@ -9,7 +9,7 @@
   REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Martin Luther King Jr. Day (US)", \
-        "Journée de Martin Luther King Jr.")]%" %b%
+        "Journée de Martin Luther King Jr. (US)")]%" %b%
 
   # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
   # every fourth year (the next one will occur in 2017)

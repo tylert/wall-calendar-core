@@ -6,8 +6,25 @@
 # Generic holidays and celebratory-type events for most of Canada
 
   # New Year's Day is January 1st
-  OMIT Jan 01 +1 PRIORITY 1000 \
-    MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
+  REM  Jan 01 SCANFROM [trigger(today() - 7)] SATISFY 1
+  IF wkdaynum(trigdate()) == Saturday
+    REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
+      MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
+    OMIT [trigger(trigdate()+2)] +1 PRIORITY 1000 \
+      MSG %"[babel("New Year's Day (observed)", \
+        "Jour de l'an (observé)")]%" %b%
+  ELSE
+    IF wkdaynum(trigdate()) == Sunday
+      REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
+        MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
+      OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \
+        MSG %"[babel("New Year's Day (observed)", \
+          "Jour de l'an (observé)")]%" %b%
+    ELSE
+      OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
+        MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
+    ENDIF
+  ENDIF
 
   REM  Feb 02 +1 PRIORITY 1000 \
     MSG %"[babel("Groundhog Day", "Jour de la marmotte")]%" %b%
@@ -93,15 +110,14 @@
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
       MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
     OMIT [trigger(trigdate()+2)] +1 PRIORITY 1000 \
-      MSG %"[babel("Day off for Canada Day", \
-        "Jour de congé pour la fête du Canada")]%" %b%
+      MSG %"[babel("Canada Day (observed)", "Fête du Canada (observé)")]%" %b%
   ELSE
     IF wkdaynum(trigdate()) == Sunday
       REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
       OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \
-        MSG %"[babel("Day off for Canada Day", \
-          "Jour de congé pour la fête du Canada")]%" %b%
+        MSG %"[babel("Canada Day (observed)", \
+          "Fête du Canada (observé)")]%" %b%
     ELSE
       OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%

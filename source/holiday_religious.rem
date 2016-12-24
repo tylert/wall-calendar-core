@@ -17,7 +17,7 @@
   REM  Mar 01 +1 PRIORITY 1000 \
     MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
 
-  # St. Patrick's Day (NL) is the Monday closest to March 17
+  # St. Patrick's Day (NL) is the Monday closest to March 17th
   REM  Mon Mar 14 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("St. Patrick's Day (NL)", \
@@ -55,13 +55,15 @@
   REM  [hebdate(22, "Nisan")] +1 PRIORITY 1000 \
     MSG %"[babel("Passover Ends", "Fin de Pâque des Juifs")]%" %b%
 
-  # St. George's Day (NL) is April 19th
+  # St. George's Day (NL) is the Monday closest to April 23rd
+  # https://en.wikipedia.org/wiki/Saint_George's_Day
   REM  Mon Apr 19 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("St. George's Day (NL)", \
         "Fête de la Saint-Georges (NL)")]%" %b%
 
   # St. George's Day (UK) is April 23rd
+  # https://en.wikipedia.org/wiki/Saint_George's_Day
   REM  Apr 23 +1 PRIORITY 1000 \
     MSG %"[babel("St. George's Day (UK)", \
       "Fête de la Saint-Georges (UK)")]%" %b%
@@ -71,13 +73,16 @@
     MSG %"[babel("St. John the Baptist Day", \
       "Fête de la Saint-Jean-Baptiste")]%" %b%
 
-  # Orangemen's Day (NL) is the Monday closest to July 12
+  # Orangemen's Day (NL) is the Monday closest to July 12th
   REM  Mon Jul 09 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Orangemen's Day (NL)", "Fête des Orangistes (NL)")]%" %b%
 
+  # All Saints' Day is November 1st
   REM  Nov 01 +1 PRIORITY 1000 \
     MSG %"[babel("All Saints' Day", "Toussaint")]%" %b%
+
+  # All Souls' Day is November 2nd
   REM  Nov 02 +1 PRIORITY 1000 \
     MSG %"[babel("All Souls' Day", "Fête des Morts")]%" %b%
 
@@ -86,10 +91,15 @@
     MSG %"[babel("St. Andrew's Day (UK)", \
       "Fête de la Saint-Andrew (UK)")]%" %b%
 
+  # Christmas Eve is December 24th
   REM  Dec 24 +1 PRIORITY 1000 \
     MSG %"[babel("Christmas Eve", "Veille de Noël")]%" %b%
+
+  # Christmas Day is December 25th
   OMIT Dec 25 +1 PRIORITY 1000 \
     MSG %"[babel("Christmas Day", "Noël")]%" %b%
+
+  # Boxing Day is December 26th
   OMIT Dec 26 +1 PRIORITY 1000 \
     MSG %"[babel("Boxing Day", "Lendemain de Noël")]%" %b%
 

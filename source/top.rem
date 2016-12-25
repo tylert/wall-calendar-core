@@ -31,7 +31,7 @@
 
 # Time transitions
 
-  # Daylight Savings Time starts on the second Sunday in March
+  # Daylight Savings Time starts on the 2nd Sunday in March
   # "spring forward"
   #   EST -> UTC-04:00 -> Quebec (EST5EDT)
   #   BST -> UTC+01:00 -> Alpha
@@ -40,7 +40,7 @@
       MSG %"[babel("Daylight Savings Time Begins (except SK)", \
         "Heure d'éte commence (sauf SK)")]%" %b%
 
-  # Daylight Savings Time ends on the first Sunday in November
+  # Daylight Savings Time ends on the 1st Sunday in November
   # "fall back"
   #   EDT -> UTC-05:00 -> Romeo (EST5EDT)
   #   GMT -> UTC+00:00 -> Zulu

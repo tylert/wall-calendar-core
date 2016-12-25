@@ -32,22 +32,27 @@
   REM  Feb 02 +1 PRIORITY 1000 \
     MSG %"[babel("Groundhog Day", "Jour de la marmotte")]%" %b%
 
+  # National Flag of Canada Day is February 15th
+  # https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
   REM  Feb 15 +1 PRIORITY 1000 \
     MSG %"[babel("National Flag of Canada Day", \
       "Jour du drapeau national du Canada")]%" %b%
 
-  # The second Monday in February is observed in 1 provinces and 0 territories
+  # The 2nd Monday in February is observed in 1 provinces and 0 territories
   #   BC:  Family Day;  statutory
+  # https://en.wikipedia.org/wiki/Family_Day
   REM  Mon Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Family Day (BC)", "Fête de la famille (BC)")]%" %b%
 
-  # The third Monday in February is observed in 5 provinces and 0 territories
+  # The 3rd Monday in February is observed in 5 provinces and 0 territories
   #   AB:  Family Day;  statutory
   #   MB:  Louis Riel Day;  statutory
   #   ON:  Family Day;  statutory
+  #   NS:  Nova Scotia Heritage Day;  ?
   #   PE:  Islander Day;  statutory
   #   SK:  Family Day;  statutory
+  # https://en.wikipedia.org/wiki/Family_Day
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Family Day (AB, ON, SK)", \
@@ -63,7 +68,7 @@
       MSG %"[babel("Heritage Day (YT)", \
         "Jour de patrimoine (YT)")]%" %b%
 
-  # Commonwealth Day is the second Monday in March
+  # Commonwealth Day is the 2nd Monday in March
   REM  Mon Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Commonwealth Day", "Jour du Commonwealth")]%" %b%
@@ -72,12 +77,16 @@
   REM  Apr 01 +1 PRIORITY 1000 \
     MSG %"[babel("April Fool's Day", "Poisson d'avril")]%" %b%
 
+  # Vimy Ridge Day is April 9th
   REM  Apr 09 +1 PRIORITY 1000 \
     MSG %"[babel("Vimy Ridge Day", "Jour de la crête de Vimy")]%" %b%
+
+  # Anzac Day is April 25th
   REM  Apr 25 +1 PRIORITY 1000 \
     MSG %"[babel("Anzac Day", "Jour d'Anzac")]%" %b%
 
-  # Mother's Day is the second Sunday in May
+  # Mother's Day is the 2nd Sunday in May
+  # https://en.wikipedia.org/wiki/Mother's_Day
   REM  Sun May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Mother's Day", "Fête des mères")]%" %b%
@@ -91,13 +100,14 @@
         "Journée nationale des patriotes (QC)")]%" %b%
       #MSG %"[babel("Victoria Day", "Victoria Day")]%" %b%
 
-  # Canadian Armed Forces Day is the first Sunday in June
+  # Canadian Armed Forces Day is the 1st Sunday in June
   REM  Sun Jun [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Canadian Armed Forces Day", \
         "Journée des Forces canadiennes")]%" %b%
 
-  # Father's Day is the third Sunday in June
+  # Father's Day is the 3rd Sunday in June
+  # https://en.wikipedia.org/wiki/Father's_Day
   REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Father's Day", "Fête des pères")]%" %b%
@@ -129,6 +139,7 @@
       "Journée canadienne du multiculturalisme")]%" %b%
 
   # Canada Day is July 1st
+  # https://en.wikipedia.org/wiki/Canada_Day
   REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF wkdaynum(trigdate()) == Saturday
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
@@ -148,10 +159,12 @@
     ENDIF
   ENDIF
 
+  # Memorial Day (NL) is July 1st
   REM  Jul 01 +1 PRIORITY 1000 \
     MSG %"[babel("Memorial Day (NL)", "Memorial Day (NL)")]%" %b%
 
-  # XXX FIXME XXX
+  # Nunavut Day (NU)
+  # https://en.wikipedia.org/wiki/Nunavut_Day
   REM  Jul 09 +1 PRIORITY 1000 \
     MSG %"[babel("Nunavut Day", "Fête du Nunavut")]%" %b%
 
@@ -164,7 +177,7 @@
     MSG %"[babel("Construction Holiday Ends (QC)", \
       "Fin des vacances de la construction (QC)")]%" %b%
 
-  # The first Monday in August is a quasi-semi-poly-un-statutory holiday, kinda
+  # The 1st Monday in August is a quasi-semi-poly-un-statutory holiday, kinda
   #   AB:  Heritage Day;  optional, formerly statutory
   #   BC:  British Columbia Day;  statutory
   #   MB:  Civic Holiday;  non-statutory
@@ -183,24 +196,25 @@
       MSG %"[babel("August Long Weekend (except NL, QC, YT)", \
         "Longue fin de semaine d'aôut (sauf NL, QC, YT)")]%" %b%
 
-  # International Day of the World's Indigenous Peoples is August 9
+  # International Day of the World's Indigenous Peoples is August 9th
   # https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
   REM  Aug 09 +1 PRIORITY 1000 \
     MSG %"[babel("International Day of the World's Indigenous Peoples", \
       "Journée internationale des populations autochtones du monde")]%" %b%
 
-  # Discovery Day (YT) is the third Monday in August
+  # Discovery Day (YT) is the 3rd Monday in August
   # https://en.wikipedia.org/wiki/Discovery_Day
   REM  Mon Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Discovery Day (YT)", "Journée découverte (YT)")]%" %b%
 
-  # Labour Day is the first Monday in September
+  # Labour Day is the 1st Monday in September
+  # https://en.wikipedia.org/wiki/Labour_Day
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Labour Day", "Fête du travail")]%" %b%
 
-  # Canadian Thanksgiving is the second Monday in October
+  # Canadian Thanksgiving is the 2nd Monday in October
   # Oktoberfest (ON) starts the Friday before Thanksgiving and ends the
   # Saturday after
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -213,10 +227,16 @@
       MSG %"[babel("Oktoberfest Ends (ON)", \
         "Fin de l'Oktoberfest (ON)")]%" %b%
 
+  # Hallowe'en is October 31st
+  # https://en.wikipedia.org/wiki/Halloween
   REM  Oct 31 +1 PRIORITY 1000 \
     MSG %"[babel("Hallowe'en", "Halloween")]%" %b%
+
+  # Rememberance Day is November 11th
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
+
+  # Armistice Day (NL) is November 11th
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Armistice Day (NL)", "Jour de l'Armistice (NL)")]%" %b%
 
@@ -226,5 +246,6 @@
       "e anniversaire du Statut de Westminster")]%" %b%
 
   # New Year's Eve is December 31st
+  # https://en.wikipedia.org/wiki/New_Year's_Eve
   REM  Dec 31 +1 PRIORITY 1000 \
     MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%

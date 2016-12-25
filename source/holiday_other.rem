@@ -5,16 +5,16 @@
 
 # Generic holidays and celebratory-type events for US, UK and NZ
 
-  # Martin Luther King, Jr. Day (US) is the third Monday in January
+  # Martin Luther King, Jr. Day (US) is the 3rd Monday in January
   REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Martin Luther King Jr. Day (US)", \
         "Journée de Martin Luther King Jr. (US)")]%" %b%
 
   # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
-  # every fourth year (the next one will occur in 2017)
+  # every 4th year (the next one will occur in 2017)
 
-  # President's Day (US) is the third Monday in February
+  # President's Day (US) is the 3rd Monday in February
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("President's Day (US)", \
@@ -26,7 +26,7 @@
   REM  May 05 +1 PRIORITY 1000 \
     MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai (US)")]%" %b%
 
-  # Armed Forces Day (US) is the third Saturday in May
+  # Armed Forces Day (US) is the 3rd Saturday in May
   REM  Sat May [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Armed Forces Day (US)", \
@@ -47,7 +47,7 @@
   REM  Sep 11 +1 PRIORITY 1000 \
     MSG %"[babel("Patriot Day (US)", "Journée des patriotes (US)")]%" %b%
 
-  # Columbus Day (US) is the second Monday in October
+  # Columbus Day (US) is the 2nd Monday in October
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Columbus Day (US)", "Jour de Columbus (US)")]%" %b%
@@ -63,7 +63,7 @@
     MSG %"[babel("Veterans Day (US)", \
       "Jour des anciens combattants (US)")]%" %b%
 
-  # Thanksgiving Day (US) is the fourth Thursday in November
+  # Thanksgiving Day (US) is the 4th Thursday in November
   # Black Friday (US) is the Friday after Thanksgiving Day (US)
   # Cyber Monday (US) is the Monday after Thanksgiving Day (US)
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1

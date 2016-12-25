@@ -6,29 +6,42 @@
 # Major Christian holidays and celebratory-type events
 
   # Epiphany is January 6th
+  # https://en.wikipedia.org/wiki/Epiphany_(holiday)
   REM  Jan 06 +1 PRIORITY 1000 \
     MSG %"[babel("Epiphany", "Epiphanie")]%" %b%
 
   # St. Valentine's Day is February 14th
+  # https://en.wikipedia.org/wiki/Valentine's_Day
   REM  Feb 14 +1 PRIORITY 1000 \
     MSG %"[babel("St. Valentine's Day", "Saint-Valentin")]%" %b%
 
   # St. David's Day (UK) is March 1st
+  # https://en.wikipedia.org/wiki/Saint_David's_Day
   REM  Mar 01 +1 PRIORITY 1000 \
     MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
 
   # St. Patrick's Day (NL) is the Monday closest to March 17th
+  # https://en.wikipedia.org/wiki/Saint_Patrick's_Day
   REM  Mon Mar 14 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("St. Patrick's Day (NL)", \
         "Fête de la Saint-Patrick (NL)")]%" %b%
 
   # St. Patrick's Day is March 17th
+  # https://en.wikipedia.org/wiki/Saint_Patrick's_Day
   REM  Mar 17 +1 PRIORITY 1000 \
     MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
 
-  # Easter is the first Sunday after the first full moon after the Spring
+  # Easter is the 1st Sunday after the 1st full moon after the Spring
   # equinox
+  # https://en.wikipedia.org/wiki/Shrove_Tuesday
+  # https://en.wikipedia.org/wiki/Ash_Wednesday
+  # https://en.wikipedia.org/wiki/Palm_Sunday
+  # https://en.wikipedia.org/wiki/Maundy_Thursday
+  # https://en.wikipedia.org/wiki/Good_Friday
+  # https://en.wikipedia.org/wiki/Easter
+  # https://en.wikipedia.org/wiki/Feast_of_the_Ascension
+  # https://en.wikipedia.org/wiki/Pentecost
   SET easter easterdate(year(today()))
   REM  [trigger(easter-47)] +1 PRIORITY 1000 \
     MSG %"[babel("Shrove Tuesday", "Mardi Gras")]%" %b%
@@ -50,6 +63,7 @@
     MSG %"[babel("Pentecost", "Pentecôte")]%" %b%
 
   # Passover is from 14 or 15 to 21 or 22 Nisan (1st month)
+  # https://en.wikipedia.org/wiki/Passover
   REM  [hebdate(15, "Nisan")] +1 PRIORITY 1000 \
     MSG %"[babel("Passover Begins", "Début de Pâque des Juifs")]%" %b%
   REM  [hebdate(22, "Nisan")] +1 PRIORITY 1000 \
@@ -92,14 +106,17 @@
       "Fête de la Saint-Andrew (UK)")]%" %b%
 
   # Christmas Eve is December 24th
+  # https://en.wikipedia.org/wiki/Christmas_Eve
   REM  Dec 24 +1 PRIORITY 1000 \
     MSG %"[babel("Christmas Eve", "Veille de Noël")]%" %b%
 
   # Christmas Day is December 25th
+  # https://en.wikipedia.org/wiki/Christmas
   OMIT Dec 25 +1 PRIORITY 1000 \
     MSG %"[babel("Christmas Day", "Noël")]%" %b%
 
   # Boxing Day is December 26th
+  # https://en.wikipedia.org/wiki/Boxing_Day
   OMIT Dec 26 +1 PRIORITY 1000 \
     MSG %"[babel("Boxing Day", "Lendemain de Noël")]%" %b%
 

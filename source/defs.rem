@@ -85,7 +85,7 @@
 
 # Traditional wedding anniversary gifts
 
-  FSET gifts(x) choose(x, \
+  FSET gifts_en(x) choose(x, \
     "Paper", "Cotton", "Leather", "Flowers/Books", "Wood", \
     "Iron/Sugar", "Copper/Wool", "Bronze/Salt/Rubber", "Pottery", "Aluminium/Tin", \
     "Steel", "Silk/Linen", "Lace", "Ivory/Agate", "Crystal/Glass", \
@@ -106,4 +106,4 @@
     "", "", "", "", "", \
     "", "", "", "", "", \
     "", "", "", "", "")
-  FSET gift(x) gifts(year(trigdate()) - x)
+  FSET gift_en(x) gifts_en(year(trigdate()) - x)

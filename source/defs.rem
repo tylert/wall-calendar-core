@@ -84,22 +84,24 @@
 
 
 # Traditional wedding anniversary gifts
+# http://www.happy-anniversary.com/year-of-marriage/
+# http://ideas.hallmark.com/articles/anniversary-ideas/anniversary-gifts-by-year/
 
   FSET gifts_en(x) choose(x, \
-    "Paper", "Cotton", "Leather", "Flowers/Books", "Wood", \
-    "Iron/Sugar", "Copper/Wool", "Bronze/Salt/Rubber", "Pottery", "Aluminium/Tin", \
-    "Steel", "Silk/Linen", "Lace", "Ivory/Agate", "Crystal/Glass", \
-    "Obsidian", "Quartz", "Porcelain", "Amethyst", "China", \
-    "Brass/Nickel", "", "", "Instruments", "Silver", \
-    "", "", "", "", "Pearl", \
-    "", "", "", "", "Coral/Jade", \
-    "", "", "", "", "Ruby/Garnet", \
-    "", "", "", "", "Sapphire", \
-    "", "", "", "", "Gold", \
-    "", "", "", "", "Emerald/Turquoise", \
-    "", "", "", "", "Diamond", \
+    "Paper|Plastic|Clocks", "Cotton|Calico|China", "Leather|Crystal/Glass", "Fruit/Flowers|Linen/Silk/Nylon|Appliances", "Wood|Silverware", \
+    "Candy|Iron|Wood", "Copper/Wool|Brass|Desk Sets", "Bronze|Pottery|Linen/Lace", "Pottery|Willow|Leather", "Tin|Aluminium|Diamond", \
+    "Steel|Jewelry", "Silk|Linen|Pearl", "Lace|Textiles/Fur", "Ivory|Gold", "Crystal/Glass|Watches", \
+    "Coffee/Tea", "Furniture|Wine/Spirits", "Porcelain|Appliances", "Bronze|Jade", "China|Platinum", \
+    "Brass/Nickel|Fire", "Copper|Water", "Air", "Musical Instruments|Stone", "Silver", \
+    "Pictures|Art", "Sculpture|Music", "Orchids|Linens", "Furniture|Tools", "Pearl", \
+    "Timepieces|Travel/Tourism", "Transportation|Bronze", "Amethyst|Iron", "Opal|Food", "Coral|Jade", \
+    "Bone China|Antiques", "Alabaster|Books", "Beryl|Tourmaline|Luck", "Lace|Laughter", "Ruby|Garnet", \
+    "Land|Office/Desk", "Real Estate|Clocks/Watches", "Travel|Entertainment", "Gourmet|Electronics", "Sapphire", \
+    "Poetry|Games", "Books|Garden/Plants", "Optical|Home Improvement", "Luxury Goods|Copper", "Gold", \
+    "Photos/Cameras", "Bath/Spa", "Plastic", "Glass", "Emerald|Turquoise", \
+    "Day", "Night", "Faith/Hope", "Charity", "Diamond|Gold", \
     "", "", "", "", "Platinum/Blue Sapphire", \
-    "", "", "", "", "Titanium/Platinum", "", \
+    "", "", "", "", "Titanium/Platinum", \
     "", "", "", "", "", \
     "", "", "", "", "Oak", \
     "", "", "", "", "", \
@@ -107,3 +109,25 @@
     "", "", "", "", "", \
     "", "", "", "", "")
   FSET gift_en(x) gifts_en(year(trigdate()) - x)
+  FSET gifts_fr(x) choose(x, \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "", \
+    "", "", "", "", "")
+  FSET gift_fr(x) gifts_fr(year(trigdate()) - x)

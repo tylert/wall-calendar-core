@@ -32,6 +32,11 @@
   REM  Mar 17 +1 PRIORITY 1000 \
     MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
 
+  # Annunciation is March 25th
+  # https://en.wikipedia.org/wiki/Annunciation
+  REM  Mar 25 +1 PRIORITY 1000 \
+    MSG %"[babel("Annunciation", "Annonciation")]%" %b%
+
   # Easter is the 1st Sunday after the 1st full moon after the Spring
   # equinox
   # https://en.wikipedia.org/wiki/Shrove_Tuesday

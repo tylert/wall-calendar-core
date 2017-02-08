@@ -99,14 +99,16 @@
       MSG %"[babel("Mother's Day", "Fête des mères")]%" %b%
 
   # Victoria Day is the Monday on or before May 24th
-  # Also known as Fête de la Reine
-  # XXX FIXME XXX
+  # (or the last Monday preceeding May 25th)
   # https://en.wikipedia.org/wiki/Victoria_Day
+  # https://en.wikipedia.org/wiki/National_Patriots%27_Day
   REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Victoria Day", \
+      MSG %"[babel("Victoria Day", "Fête de la Reine")]%" %b%
+  REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
+    OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("National Patriots' Day", \
         "Journée nationale des patriotes (QC)")]%" %b%
-      #MSG %"[babel("Victoria Day", "Victoria Day")]%" %b%
 
   # Canadian Armed Forces Day is the 1st Sunday in June
   # https://en.wikipedia.org/wiki/Armed_Forces_Day

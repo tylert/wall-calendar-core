@@ -41,6 +41,7 @@
   # The 2nd Monday in February is observed in 1 provinces and 0 territories
   #   BC:  Family Day;  statutory
   # https://en.wikipedia.org/wiki/Family_Day
+  # https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
   REM  Mon Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Family Day (BC)", "Fête de la famille (BC)")]%" %b%
@@ -53,6 +54,7 @@
   #   PE:  Islander Day;  statutory
   #   SK:  Family Day;  statutory
   # https://en.wikipedia.org/wiki/Family_Day
+  # https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Family Day (AB, ON, SK)", \
@@ -63,25 +65,30 @@
       MSG %"[babel("Islander Day (PE)", "Fête des Insulaires (PE)")]%" %b%
 
   # Heritage Day (YT) is the Friday before the last Sunday in February
+  # https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
   REM  Sun Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()-2)] +1 PRIORITY 1000 \
       MSG %"[babel("Heritage Day (YT)", \
         "Jour de patrimoine (YT)")]%" %b%
 
   # Commonwealth Day is the 2nd Monday in March
+  # https://en.wikipedia.org/wiki/Commonwealth_Day
   REM  Mon Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Commonwealth Day", "Jour du Commonwealth")]%" %b%
 
   # April Fool's Day is April 1st
+  # https://en.wikipedia.org/wiki/April_Fools'_Day
   REM  Apr 01 +1 PRIORITY 1000 \
     MSG %"[babel("April Fool's Day", "Poisson d'avril")]%" %b%
 
   # Vimy Ridge Day is April 9th
+  # https://en.wikipedia.org/wiki/Vimy_Ridge_Day
   REM  Apr 09 +1 PRIORITY 1000 \
     MSG %"[babel("Vimy Ridge Day", "Jour de la crête de Vimy")]%" %b%
 
   # Anzac Day is April 25th
+  # https://en.wikipedia.org/wiki/Anzac_Day
   REM  Apr 25 +1 PRIORITY 1000 \
     MSG %"[babel("Anzac Day", "Jour d'Anzac")]%" %b%
 
@@ -94,6 +101,7 @@
   # Victoria Day is the Monday on or before May 24th
   # Also known as Fête de la Reine
   # XXX FIXME XXX
+  # https://en.wikipedia.org/wiki/Victoria_Day
   REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Victoria Day", \
@@ -101,6 +109,7 @@
       #MSG %"[babel("Victoria Day", "Victoria Day")]%" %b%
 
   # Canadian Armed Forces Day is the 1st Sunday in June
+  # https://en.wikipedia.org/wiki/Armed_Forces_Day
   REM  Sun Jun [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Canadian Armed Forces Day", \
@@ -118,22 +127,13 @@
     MSG %"[babel("National Aboriginal Day", \
       "Journée nationale des Autochtones")]%" %b%
 
-  # St. John the Baptist's Day is June 24th
-  # XXX FIXME XXX
-  REM  Jun 24 +1 PRIORITY 1000 \
-    MSG %"[babel("St. Jean Baptiste Day (QC)", \
-      "Fête de la Saint-Jean-Baptiste (QC)")]%" %b%
-  REM  Jun 24 +1 PRIORITY 1000 \
-    MSG %"[babel("Quebec's National Holiday", \
-      "Fête nationale des Québecois")]%" %b%
-
-  # Discovery Day (NL) is the Monday closest June 24th
+  # Discovery Day (NL) is the Monday nearest June 24th
   # https://en.wikipedia.org/wiki/Discovery_Day
-  # XXX FIXME XXX
-  REM  Jun 24 +1 PRIORITY 1000 \
+  REM  Mon Jun 21 +1 PRIORITY 1000 \
     MSG %"[babel("Discovery Day (NL)", "Journée découverte (NL)")]%" %b%
 
   # Canadian Multiculturalism Day is June 27th
+  # https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
   REM  Jun 27 +1 PRIORITY 1000 \
     MSG %"[babel("Canadian Multiculturalism Day", \
       "Journée canadienne du multiculturalisme")]%" %b%
@@ -160,6 +160,7 @@
   ENDIF
 
   # Memorial Day (NL) is July 1st
+  # https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
   REM  Jul 01 +1 PRIORITY 1000 \
     MSG %"[babel("Memorial Day (NL)", "Memorial Day (NL)")]%" %b%
 
@@ -191,6 +192,7 @@
   #   QC:  not observed
   #   SK:  Saskatchewan Day;  statutory
   #   YT:  not observed
+  # https://en.wikipedia.org/wiki/Public_holidays_in_Canada
   REM  Mon Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("August Long Weekend (except NL, QC, YT)", \
@@ -217,6 +219,7 @@
   # Canadian Thanksgiving is the 2nd Monday in October
   # Oktoberfest (ON) starts the Friday before Thanksgiving and ends the
   # Saturday after
+  # https://en.wikipedia.org/wiki/Oktoberfest
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Thanksgiving Day", "Action de Grâce")]%" %b%
@@ -233,14 +236,17 @@
     MSG %"[babel("Hallowe'en", "Halloween")]%" %b%
 
   # Rememberance Day is November 11th
+  # https://en.wikipedia.org/wiki/Remembrance_Day
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
 
   # Armistice Day (NL) is November 11th
+  # https://en.wikipedia.org/wiki/Armistice_Day
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Armistice Day (NL)", "Jour de l'Armistice (NL)")]%" %b%
 
   # The Statute of Westminster was enacted on December 11th, 1931
+  # https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
   REM  Dec 11 +1 PRIORITY 1000 \
     MSG %"[nst(1932)][babel("th Anniversary of the Statue of Westminster", \
       "e anniversaire du Statut de Westminster")]%" %b%

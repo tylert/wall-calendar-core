@@ -6,53 +6,53 @@
 # Signs of the Zodiac
 
   REM  Mar 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Aries Rises", "ascension du bélier")]%" %b%
+    MSG %"[babel("Aries Rises", "Ascension du bélier")]%" %b%
   REM  Apr 19 +1 PRIORITY 0000 \
-    MSG %"[babel("Aries Sets", "descension du bélier")]%" %b%
+    MSG %"[babel("Aries Sets", "Descension du bélier")]%" %b%
   REM  Apr 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Taurus Rises", "ascension du taureau")]%" %b%
+    MSG %"[babel("Taurus Rises", "Ascension du taureau")]%" %b%
   REM  May 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Taurus Sets", "descension du taureau")]%" %b%
+    MSG %"[babel("Taurus Sets", "Descension du taureau")]%" %b%
   REM  May 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Gemini Rises", "ascension des gémeaux")]%" %b%
+    MSG %"[babel("Gemini Rises", "Ascension des gémeaux")]%" %b%
   REM  Jun 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Gemini Sets", "descension des gémeaux")]%" %b%
+    MSG %"[babel("Gemini Sets", "Descension des gémeaux")]%" %b%
   REM  Jun 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Cancer Rises", "ascension du cancer")]%" %b%
+    MSG %"[babel("Cancer Rises", "Ascension du cancer")]%" %b%
   REM  Jul 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Cancer Sets", "descension du cancer")]%" %b%
+    MSG %"[babel("Cancer Sets", "Descension du cancer")]%" %b%
   REM  Jul 23 +1 PRIORITY 0000 \
-    MSG %"[babel("Leo Rises", "ascension du lion")]%" %b%
+    MSG %"[babel("Leo Rises", "Ascension du lion")]%" %b%
   REM  Aug 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Leo Sets", "descension du lion")]%" %b%
+    MSG %"[babel("Leo Sets", "Descension du lion")]%" %b%
   REM  Aug 23 +1 PRIORITY 0000 \
-    MSG %"[babel("Virgo Rises", "ascension de la vierge")]%" %b%
+    MSG %"[babel("Virgo Rises", "Ascension de la vierge")]%" %b%
   REM  Sep 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Virgo Sets", "descension de la vierge")]%" %b%
+    MSG %"[babel("Virgo Sets", "Descension de la vierge")]%" %b%
   REM  Sep 23 +1 PRIORITY 0000 \
-    MSG %"[babel("Libra Rises", "ascension de la balance")]%" %b%
+    MSG %"[babel("Libra Rises", "Ascension de la balance")]%" %b%
   REM  Oct 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Libra Sets", "descension de la balance")]%" %b%
+    MSG %"[babel("Libra Sets", "Descension de la balance")]%" %b%
   REM  Oct 23 +1 PRIORITY 0000 \
-    MSG %"[babel("Scorpio Rises", "ascension du scorpion")]%" %b%
+    MSG %"[babel("Scorpio Rises", "Ascension du scorpion")]%" %b%
   REM  Nov 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Scorpio Sets", "descension du scorpion")]%" %b%
+    MSG %"[babel("Scorpio Sets", "Descension du scorpion")]%" %b%
   REM  Nov 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Sagittarius Rises", "ascension du sagittaire")]%" %b%
+    MSG %"[babel("Sagittarius Rises", "Ascension du sagittaire")]%" %b%
   REM  Dec 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Sagittarius Sets", "descension du sagittaire")]%" %b%
+    MSG %"[babel("Sagittarius Sets", "Descension du sagittaire")]%" %b%
   REM  Dec 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Capricorn Rises", "ascension du capricorne")]%" %b%
+    MSG %"[babel("Capricorn Rises", "Ascension du capricorne")]%" %b%
   REM  Jan 19 +1 PRIORITY 0000 \
-    MSG %"[babel("Capricorn Sets", "descension du capricorne")]%" %b%
+    MSG %"[babel("Capricorn Sets", "Descension du capricorne")]%" %b%
   REM  Jan 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Aquarius Rises", "ascension du verseau")]%" %b%
+    MSG %"[babel("Aquarius Rises", "Ascension du verseau")]%" %b%
   REM  Feb 18 +1 PRIORITY 0000 \
-    MSG %"[babel("Aquarius Sets", "descension du verseau")]%" %b%
+    MSG %"[babel("Aquarius Sets", "Descension du verseau")]%" %b%
   REM  Feb 19 +1 PRIORITY 0000 \
-    MSG %"[babel("Pisces Rises", "ascension des poissons")]%" %b%
+    MSG %"[babel("Pisces Rises", "Ascension des poissons")]%" %b%
   REM  Mar 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Pisces Sets", "descension des poissons")]%" %b%
+    MSG %"[babel("Pisces Sets", "Descension des poissons")]%" %b%
 
   # Chinese/Lunar New Year is between Jan 21 and Feb 20 on the day after the
   # new moon

@@ -20,7 +20,7 @@
   REM  Mar 01 +1 PRIORITY 1000 \
     MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
 
-  # St. Patrick's Day (NL) is the Monday closest to March 17th
+  # St. Patrick's Day (NL) is the Monday nearest March 17th
   # https://en.wikipedia.org/wiki/Saint_Patrick's_Day
   REM  Mon Mar 14 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
@@ -69,9 +69,9 @@
   REM  [hebdate(22, "Nisan")] +1 PRIORITY 1000 \
     MSG %"[babel("Passover Ends", "Fin de Pâque des Juifs")]%" %b%
 
-  # St. George's Day (NL) is the Monday closest to April 23rd
+  # St. George's Day (NL) is the Monday nearest April 23rd
   # https://en.wikipedia.org/wiki/Saint_George's_Day
-  REM  Mon Apr 19 SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Mon Apr 20 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("St. George's Day (NL)", \
         "Fête de la Saint-Georges (NL)")]%" %b%
@@ -82,25 +82,39 @@
     MSG %"[babel("St. George's Day (UK)", \
       "Fête de la Saint-Georges (UK)")]%" %b%
 
-  # St. John the Baptist Day is June 24th
+  # St. John the Baptist's Day is June 24th
+  # https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
+  # https://en.wikipedia.org/wiki/John_the_Baptist
+  # https://en.wikipedia.org/wiki/Nativity_of_St_John_the_Baptist
   REM  Jun 24 +1 PRIORITY 1000 \
-    MSG %"[babel("St. John the Baptist Day", \
+    MSG %"[babel("Nativity of St. John the Baptist", \
+      "Nativité de saint Jean-Baptiste")]%" %b%
+  REM  Jun 24 +1 PRIORITY 1000 \
+    MSG %"[babel("Saint-Jean-Baptiste Day", \
       "Fête de la Saint-Jean-Baptiste")]%" %b%
+  REM  Jun 24 +1 PRIORITY 1000 \
+    MSG %"[babel("Quebec's National Holiday", \
+      "Fête nationale des Québecois")]%" %b%
 
-  # Orangemen's Day (NL) is the Monday closest to July 12th
+  # Orangemen's Day (NL) is the Monday nearest July 12th
+  # https://en.wikipedia.org/wiki/Orangemen%27s_Day
+  # https://en.wikipedia.org/wiki/Orange_Order
   REM  Mon Jul 09 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Orangemen's Day (NL)", "Fête des Orangistes (NL)")]%" %b%
 
   # All Saints' Day is November 1st
+  # https://en.wikipedia.org/wiki/All_Saints'_Day
   REM  Nov 01 +1 PRIORITY 1000 \
     MSG %"[babel("All Saints' Day", "Toussaint")]%" %b%
 
   # All Souls' Day is November 2nd
+  # https://en.wikipedia.org/wiki/All_Souls'_Day
   REM  Nov 02 +1 PRIORITY 1000 \
     MSG %"[babel("All Souls' Day", "Fête des Morts")]%" %b%
 
   # St. Andrew's Day (UK) is November 30th
+  # https://en.wikipedia.org/wiki/St._Andrew's_Day
   REM  Nov 30 +1 PRIORITY 1000 \
     MSG %"[babel("St. Andrew's Day (UK)", \
       "Fête de la Saint-Andrew (UK)")]%" %b%
@@ -124,29 +138,39 @@
 # Major Jewish holidays and celebratory-type events
 
   # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following (3rd month)
+  # https://en.wikipedia.org/wiki/Shavuot
+  REM  [hebdate(6, "Sivan")] +1 PRIORITY 1000 \
+    MSG %"[babel("Shauvot Begins", "Début de Shauvot")]%" %b%
+  REM  [hebdate(7, "Sivan")] +1 PRIORITY 1000 \
+    MSG %"[babel("Shauvot Ends", "Fin de Shauvot")]%" %b%
 
   # Rosh Hashanah or Jewish New Year is 1 and 2 Tishrey (7th month)
+  # https://en.wikipedia.org/wiki/Rosh_Hashanah
   REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Rosh Hashanah Begins", "Début de Rosh Hashanah")]%" %b%
   REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Rosh Hashanah Ends", "Fin de Rosh Hashanah")]%" %b%
 
   # Yom Kippur is 10 Tishrey (7th month)
+  # https://en.wikipedia.org/wiki/Yom_Kippur
   REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Yom Kippur", "Yom Kippur")]%" %b%
 
   # Sukkot or Tabernacles is from 15 to 21 or 22 Tishrey (7th month)
+  # https://en.wikipedia.org/wiki/Sukkot
   REM  [hebdate(15, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Sukkot Begins", "Début de Sukkot")]%" %b%
   REM  [hebdate(22, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Sukkot Ends", "Fin de Sukkot")]%" %b%
 
   # Hanukkah is from 25 Kislev (9th month) to 2 Tevet (10th month)
+  # https://en.wikipedia.org/wiki/Hanukkah
   REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
     MSG %"[babel("Hanukkah Begins", "Début de Hanukkah")]%" %b%
   REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
     MSG %"[babel("Hanukkah Ends", "Fin de Hanukkah")]%" %b%
 
   # Purim is 14 Adar (12th month)
+  # https://en.wikipedia.org/wiki/Purim
   REM  [hebdate(14, "Adar")] +1 PRIORITY 1000 \
     MSG %"[babel("Purim", "Purim")]%" %b%

@@ -15,6 +15,18 @@
   # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
   # every 4th year (the next one will occur in 2017)
   # https://en.wikipedia.org/wiki/United_States_presidential_inauguration
+  REM  Jan 20 SCANFROM [trigger(today() - 7)] SATISFY 1
+  IF 1 == year(trigdate()) % 4
+    IF Sunday == wkdaynum(trigdate())
+      REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 \
+        MSG %"[babel("Inauguration Day (US)", \
+          "Jour d'inauguration (US)")]%" %b%
+    ELSE
+      REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+        MSG %"[babel("Inauguration Day (US)", \
+          "Jour d'inauguration (US)")]%" %b%
+    ENDIF
+  ENDIF
 
   # President's Day (US) is the 3rd Monday in February
   # https://en.wikipedia.org/wiki/Washington's_Birthday
@@ -156,6 +168,6 @@
 
   # Friday the 13th is every Friday that occurs on the 13th of the month
   # https://en.wikipedia.org/wiki/Friday_The_13th
-  REM  13 SATISFY [wkdaynum(trigdate()) == Friday]
+  REM  13 SATISFY [Friday == wkdaynum(trigdate())]
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%

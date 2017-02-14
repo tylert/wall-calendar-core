@@ -8,14 +8,14 @@
   # New Year's Day is January 1st
   # https://en.wikipedia.org/wiki/New_Year's_Day
   REM  Jan 01 SCANFROM [trigger(today() - 7)] SATISFY 1
-  IF wkdaynum(trigdate()) == Saturday
+  IF Saturday == wkdaynum(trigdate())
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
       MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
     OMIT [trigger(trigdate()+2)] +1 PRIORITY 1000 \
       MSG %"[babel("New Year's Day (observed)", \
         "Jour de l'an (observé)")]%" %b%
   ELSE
-    IF wkdaynum(trigdate()) == Sunday
+    IF Sunday == wkdaynum(trigdate())
       REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
         MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
       OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \
@@ -144,13 +144,13 @@
   # Canada Day is July 1st
   # https://en.wikipedia.org/wiki/Canada_Day
   REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
-  IF wkdaynum(trigdate()) == Saturday
+  IF Saturday == wkdaynum(trigdate())
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
       MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
     OMIT [trigger(trigdate()+2)] +1 PRIORITY 1000 \
       MSG %"[babel("Canada Day (observed)", "Fête du Canada (observé)")]%" %b%
   ELSE
-    IF wkdaynum(trigdate()) == Sunday
+    IF Sunday == wkdaynum(trigdate())
       REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
       OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \

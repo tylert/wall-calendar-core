@@ -87,11 +87,6 @@
   REM  Apr 09 +1 PRIORITY 1000 \
     MSG %"[babel("Vimy Ridge Day", "Jour de la crête de Vimy")]%" %b%
 
-  # Anzac Day is April 25th
-  # https://en.wikipedia.org/wiki/Anzac_Day
-  REM  Apr 25 +1 PRIORITY 1000 \
-    MSG %"[babel("Anzac Day", "Jour d'Anzac")]%" %b%
-
   # Mother's Day is the 2nd Sunday in May
   # https://en.wikipedia.org/wiki/Mother's_Day
   REM  Sun May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -107,7 +102,7 @@
       MSG %"[babel("Victoria Day", "Fête de la Reine")]%" %b%
   REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("National Patriots' Day", \
+      MSG %"[babel("National Patriots' Day (QC)", \
         "Journée nationale des patriotes (QC)")]%" %b%
 
   # Canadian Armed Forces Day is the 1st Sunday in June
@@ -128,6 +123,12 @@
   REM  Jun 21 +1 PRIORITY 1000 \
     MSG %"[babel("National Aboriginal Day", \
       "Journée nationale des Autochtones")]%" %b%
+
+  # Quebec's National Holiday is June 24th
+  # https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
+  REM  Jun 24 +1 PRIORITY 1000 \
+    MSG %"[babel("Quebec's National Holiday", \
+      "Fête nationale des Québecois")]%" %b%
 
   # Discovery Day (NL) is the Monday nearest June 24th
   # https://en.wikipedia.org/wiki/Discovery_Day
@@ -166,12 +167,13 @@
   REM  Jul 01 +1 PRIORITY 1000 \
     MSG %"[babel("Memorial Day (NL)", "Memorial Day (NL)")]%" %b%
 
-  # Nunavut Day (NU)
+  # Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (NU) is July 9th
   # https://en.wikipedia.org/wiki/Nunavut_Day
   REM  Jul 09 +1 PRIORITY 1000 \
     MSG %"[babel("Nunavut Day", "Fête du Nunavut")]%" %b%
 
   # The Quebec Construction Holiday is the last two weeks of July
+  # https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
   REM  Sun Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Construction Holiday Begins (QC)", \
@@ -211,6 +213,12 @@
   REM  Mon Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Discovery Day (YT)", "Journée découverte (YT)")]%" %b%
+
+  # Merchant Navy Veterans Day (CA) is September 3rd
+  # https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
+  REM  Sep 03 +1 PRIORITY 1000 \
+    MSG %"[babel("Merchant Navy Day (CA)", \
+      "Jour de la marine marchande (CA)")]%" %b%
 
   # Labour Day is the 1st Monday in September
   # https://en.wikipedia.org/wiki/Labour_Day

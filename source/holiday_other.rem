@@ -6,6 +6,7 @@
 # Generic holidays and celebratory-type events for US, UK and NZ
 
   # Martin Luther King, Jr. Day (US) is the 3rd Monday in January
+  # https://en.wikipedia.org/wiki/Martin_Luther_King_Jr._Day
   REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Martin Luther King Jr. Day (US)", \
@@ -13,59 +14,93 @@
 
   # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
   # every 4th year (the next one will occur in 2017)
+  # https://en.wikipedia.org/wiki/United_States_presidential_inauguration
 
   # President's Day (US) is the 3rd Monday in February
+  # https://en.wikipedia.org/wiki/Washington's_Birthday
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("President's Day (US)", \
         "Journée de la Présidence (US)")]%" %b%
 
+  # The Queen's Official Birthday is April 21st
+  # https://en.wikipedia.org/wiki/Queen's_Official_Birthday
   REM  Apr 21 +1 PRIORITY 1000 \
     MSG %"[babel("Queen's Birthday (UK)", \
       "Anniversaire de la reine (UK)")]%" %b%
+
+  # Anzac Day (AU/NZ) is April 25th
+  # https://en.wikipedia.org/wiki/Anzac_Day
+  REM  Apr 25 +1 PRIORITY 1000 \
+    MSG %"[babel("Anzac Day (AU, NZ)", "Jour d'Anzac (AU, NZ)")]%" %b%
+
+  # Cinco de Mayo is May 5th
+  # https://en.wikipedia.org/wiki/Cinco_de_Mayo
   REM  May 05 +1 PRIORITY 1000 \
     MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai (US)")]%" %b%
 
   # Armed Forces Day (US) is the 3rd Saturday in May
+  # https://en.wikipedia.org/wiki/Armed_Forces_Day
   REM  Sat May [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Armed Forces Day (US)", \
         "Journée des forces armées (US)")]%" %b%
 
   # Memorial Day (US) is the last Monday in May
+  # https://en.wikipedia.org/wiki/Memorial_Day
   REM  Mon Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Memorial Day (US)", "Memorial Day (US)")]%" %b%
 
+  # Flag Day (US) is June 14th
+  # https://en.wikipedia.org/wiki/Flag_Day_(United_States)
   REM  Jun 14 +1 PRIORITY 1000 \
     MSG %"[babel("Flag Day (US)", "Jour du drapeau (US)")]%" %b%
+
+  # Independence Day (US) is July 4th
+  # https://en.wikipedia.org/wiki/Independence_Day_%28United_States%29
   REM  Jul 04 +1 PRIORITY 1000 \
     MSG %"[babel("Independence Day (US)", "Jour de l'indépendance (US)")]%" %b%
+
+  # Merchant Navy Day (NZ, UK) is September 3rd
+  # https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
   REM  Sep 03 +1 PRIORITY 1000 \
-    MSG %"[babel("Merchant Navy Day (UK, NZ)", \
-      "Jour de la marine marchande (UK, NZ)")]%" %b%
+    MSG %"[babel("Merchant Navy Day (NZ, UK)", \
+      "Jour de la marine marchande (NZ, UK)")]%" %b%
+
+  # Patriot Day (US) is September 11th
+  # https://en.wikipedia.org/wiki/Patriot_Day
   REM  Sep 11 +1 PRIORITY 1000 \
     MSG %"[babel("Patriot Day (US)", "Journée des patriotes (US)")]%" %b%
 
   # Columbus Day (US) is the 2nd Monday in October
+  # https://en.wikipedia.org/wiki/Columbus_Day
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Columbus Day (US)", "Jour de Columbus (US)")]%" %b%
 
-  REM  Nov 04 +1 PRIORITY 1000 \
-    MSG %"[babel("Bonfire Night (UK)", "Nuit de feu de joie (UK)")]%" %b%
+  # Guy Fawkes Day (UK) is November 5th
+  # https://en.wikipedia.org/wiki/Guy_Fawkes_Night
   REM  Nov 05 +1 PRIORITY 1000 \
     MSG %"[babel("Guy Fawkes Day (UK)", "Journée de Guy Fawkes (UK)")]%" %b%
 
-  REM  Nov 11 +1 PRIORITY 1000 \
-    MSG %"[babel("Armistice Day (UK)", "Jour de l'Armistice (UK)")]%" %b%
+  # Veterans Day (US) is November 11th
+  # https://en.wikipedia.org/wiki/Veterans_Day
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Veterans Day (US)", \
       "Jour des anciens combattants (US)")]%" %b%
 
+  # Armistice Day (UK) is November 11th
+  # https://en.wikipedia.org/wiki/Armistice_Day
+  REM  Nov 11 +1 PRIORITY 1000 \
+    MSG %"[babel("Armistice Day (UK)", "Jour de l'Armistice (UK)")]%" %b%
+
   # Thanksgiving Day (US) is the 4th Thursday in November
   # Black Friday (US) is the Friday after Thanksgiving Day (US)
   # Cyber Monday (US) is the Monday after Thanksgiving Day (US)
+  # https://en.wikipedia.org/wiki/Thanksgiving
+  # https://en.wikipedia.org/wiki/Black_Friday_(shopping)
+  # https://en.wikipedia.org/wiki/Cyber_Monday
   REM  Thu Nov [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Thanksgiving Day (US)", "Action de Grâce (US)")]%" %b%
@@ -74,6 +109,8 @@
     REM  [trigger(trigdate()+3)] +1 PRIORITY 1000 \
       MSG %"[babel("Cyber Monday (US)", "Cyber Lundi (US)")]%" %b%
 
+  # Kwanzaa is December 26th to January 1st
+  # https://en.wikipedia.org/wiki/Kwanzaa
   REM  Dec 26 +1 PRIORITY 1000 \
     MSG %"[babel("Kwanzaa Begins", "Début de Kwanzaa")]%" %b%
   REM  Jan 01 +1 PRIORITY 1000 \
@@ -82,21 +119,16 @@
 
 # Other interesting days
 
+  # International Polar Bear Day is February 27th
+  # https://en.wikipedia.org/wiki/International_Polar_Bear_Day
   REM  Feb 27 +1 PRIORITY 1000 \
     MSG %"[babel("International Polar Bear Day", \
       "Journée internationale des ours polaires")]%" %b%
+
+  # Tartan Day is April 6th
+  # https://en.wikipedia.org/wiki/Tartan_Day
   REM  Apr 06 +1 PRIORITY 1000 \
     MSG %"[babel("Tartan Day", "Jour du tartan")]%" %b%
-  REM  Sep 21 +1 PRIORITY 1000 \
-    MSG %"[babel("International Day of Peace", \
-      "Journée internationale de la paix")]%" %b%
-  REM  Nov 13 +1 PRIORITY 1000 \
-    MSG %"[babel("World Kindness Day", \
-      "Journée mondiale de la gentillesse")]%" %b%
-
-  REM  13 SATISFY [wkdaynum(trigdate()) == Friday]
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%
 
   # The Day of the Programmer is the 256th day of the year
   # https://en.wikipedia.org/wiki/Day_of_the_Programmer
@@ -109,3 +141,21 @@
       MSG %"[babel("Day of the Programmer (256th day)", \
         "Jour du programmeur (256e jour)")]%" %b%
   ENDIF
+
+  # International Day of Peace is September 21st
+  # https://en.wikipedia.org/wiki/International_Day_of_Peace
+  REM  Sep 21 +1 PRIORITY 1000 \
+    MSG %"[babel("International Day of Peace", \
+      "Journée internationale de la paix")]%" %b%
+
+  # World Kindness Day is November 13th
+  # https://en.wikipedia.org/wiki/World_Kindness_Day
+  REM  Nov 13 +1 PRIORITY 1000 \
+    MSG %"[babel("World Kindness Day", \
+      "Journée mondiale de la gentillesse")]%" %b%
+
+  # Friday the 13th is every Friday that occurs on the 13th of the month
+  # https://en.wikipedia.org/wiki/Friday_The_13th
+  REM  13 SATISFY [wkdaynum(trigdate()) == Friday]
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Friday the 13th", "Le vendredi treize")]%" %b%

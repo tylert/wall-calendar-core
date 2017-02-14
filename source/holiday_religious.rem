@@ -92,14 +92,11 @@
   # https://en.wikipedia.org/wiki/John_the_Baptist
   # https://en.wikipedia.org/wiki/Nativity_of_St_John_the_Baptist
   REM  Jun 24 +1 PRIORITY 1000 \
-    MSG %"[babel("Nativity of St. John the Baptist", \
-      "Nativité de saint Jean-Baptiste")]%" %b%
-  REM  Jun 24 +1 PRIORITY 1000 \
     MSG %"[babel("Saint-Jean-Baptiste Day", \
       "Fête de la Saint-Jean-Baptiste")]%" %b%
   REM  Jun 24 +1 PRIORITY 1000 \
-    MSG %"[babel("Quebec's National Holiday", \
-      "Fête nationale des Québecois")]%" %b%
+    MSG %"[babel("Nativity of St. John the Baptist", \
+      "Nativité de saint Jean-Baptiste")]%" %b%
 
   # Orangemen's Day (NL) is the Monday nearest July 12th
   # https://en.wikipedia.org/wiki/Orangemen%27s_Day

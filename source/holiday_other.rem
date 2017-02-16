@@ -131,6 +131,11 @@
 
 # Other interesting days
 
+  # Darwin Day is February 12th
+  # https://en.wikipedia.org/wiki/Darwin_Day
+  REM  Feb 12 +1 PRIORITY 1000 \
+    MSG %"[babel("Darwin Day", "Jour de Darwin")]%" %b%
+
   # International Polar Bear Day is February 27th
   # https://en.wikipedia.org/wiki/International_Polar_Bear_Day
   REM  Feb 27 +1 PRIORITY 1000 \
@@ -141,6 +146,20 @@
   # https://en.wikipedia.org/wiki/Tartan_Day
   REM  Apr 06 +1 PRIORITY 1000 \
     MSG %"[babel("Tartan Day", "Jour du tartan")]%" %b%
+
+  # Earth Day is April 22nd
+  # https://en.wikipedia.org/wiki/Earth_Day
+  REM  Apr 22 +1 PRIORITY 2000 \
+    MSG %"[babel("Earth Day", "Jour de la Terre")]%" %b%
+
+  # INTERNATIONAL CAPS LOCK DAY is June 28th and October 22nd
+  # https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day
+  REM  Jun 28 +1 PRIORITY 2000 \
+    MSG %"[babel("INTERNATIONAL CAPS LOCK DAY", \
+      "JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES")]%" %b%
+  REM  Oct 22 +1 PRIORITY 2000 \
+    MSG %"[babel("INTERNATIONAL CAPS LOCK DAY", \
+      "JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES")]%" %b%
 
   # The Day of the Programmer is the 256th day of the year
   # https://en.wikipedia.org/wiki/Day_of_the_Programmer
@@ -159,6 +178,20 @@
   REM  Sep 21 +1 PRIORITY 1000 \
     MSG %"[babel("International Day of Peace", \
       "Journée internationale de la paix")]%" %b%
+
+  # Software Freedom Day is the 3rd Saturday in September
+  # https://en.wikipedia.org/wiki/Software_Freedom_Day
+  REM  Sat Sep [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Software Freedom Day", \
+        "Journée de la liberté des logiciels")]%" %b%
+
+  # Ada Lovelace Day is the 2nd Tuesday in October
+  # https://en.wikipedia.org/wiki/Ada_Lovelace_Day
+  # http://findingada.com/about/when-is-ald/
+  REM  Tue Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Ada Lovelace Day", "Jour de Ada Lovelace")]%" %b%
 
   # World Kindness Day is November 13th
   # https://en.wikipedia.org/wiki/World_Kindness_Day

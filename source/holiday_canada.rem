@@ -12,14 +12,14 @@
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
       MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
     OMIT [trigger(trigdate()+2)] +1 PRIORITY 1000 \
-      MSG %"[babel("New Year's Day (observed)", \
+      MSG %"[babel("New Year's Day (Observed)", \
         "Jour de l'an (observé)")]%" %b%
   ELSE
     IF Sunday == wkdaynum(trigdate())
       REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
         MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
       OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \
-        MSG %"[babel("New Year's Day (observed)", \
+        MSG %"[babel("New Year's Day (Observed)", \
           "Jour de l'an (observé)")]%" %b%
     ELSE
       OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
@@ -148,13 +148,13 @@
     REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
       MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
     OMIT [trigger(trigdate()+2)] +1 PRIORITY 1000 \
-      MSG %"[babel("Canada Day (observed)", "Fête du Canada (observé)")]%" %b%
+      MSG %"[babel("Canada Day (Observed)", "Fête du Canada (observé)")]%" %b%
   ELSE
     IF Sunday == wkdaynum(trigdate())
       REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
       OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \
-        MSG %"[babel("Canada Day (observed)", \
+        MSG %"[babel("Canada Day (Observed)", \
           "Fête du Canada (observé)")]%" %b%
     ELSE
       OMIT [trigger(trigdate())] +1 PRIORITY 1000 \

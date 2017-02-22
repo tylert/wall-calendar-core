@@ -136,6 +136,14 @@
   REM  Feb 12 +1 PRIORITY 1000 \
     MSG %"[babel("Darwin Day", "Jour de Darwin")]%" %b%
 
+  # Pink Shirt Day is February ?
+  # http://pinkshirtday.ca/
+  # http://www.erasebullying.ca/resources/resources-pink-shirt.php
+  #REM  Wed Apr [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+  #  REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+  #    MSG %"[babel("Pink Shirt Day", \
+  #      "Journée des chemises rose")]%" %b%
+
   # International Polar Bear Day is February 27th
   # https://en.wikipedia.org/wiki/International_Polar_Bear_Day
   REM  Feb 27 +1 PRIORITY 1000 \
@@ -147,10 +155,23 @@
   REM  Apr 06 +1 PRIORITY 1000 \
     MSG %"[babel("Tartan Day", "Jour du tartan")]%" %b%
 
+  # International Day of Pink is the 2nd Wednesday of April
+  # https://en.wikipedia.org/wiki/International_Day_of_Pink
+  REM  Wed Apr [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("International Day of Pink", \
+        "Journée internationale de la rose")]%" %b%
+
   # Earth Day is April 22nd
   # https://en.wikipedia.org/wiki/Earth_Day
   REM  Apr 22 +1 PRIORITY 2000 \
     MSG %"[babel("Earth Day", "Jour de la Terre")]%" %b%
+
+  # International Anti-Bullying Day is May 4th
+  # https://en.wikipedia.org/wiki/Anti-Bullying_Day
+  REM  May 04 +1 PRIORITY 1000 \
+    MSG %"[babel("International Anti-Bullying Day", \
+      "Journée internationale anti-intimidation")]%" %b%
 
   # INTERNATIONAL CAPS LOCK DAY is June 28th and October 22nd
   # https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day

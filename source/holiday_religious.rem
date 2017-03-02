@@ -49,7 +49,7 @@
   # https://en.wikipedia.org/wiki/Pentecost
   SET easter easterdate(year(today()))
   REM  [trigger(easter-47)] +1 PRIORITY 1000 \
-    MSG %"[babel("Shrove Tuesday", "Mardi Gras")]%" %b%
+    MSG %"[babel("Shrove/Pancake Tuesday", "Mardi Gras")]%" %b%
   REM  [trigger(easter-46)] +1 PRIORITY 1000 \
     MSG %"[babel("Ash Wednesday", "Mercredi des Cendres")]%" %b%
   REM  [trigger(easter-7)]  +1 PRIORITY 1000 \

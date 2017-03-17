@@ -35,6 +35,11 @@
       MSG %"[babel("President's Day (US)", \
         "Journée de la Présidence (US)")]%" %b%
 
+  # Nowruz is March 21st
+  # https://en.wikipedia.org/wiki/Nowruz
+  REM  Mar 21 +1 PRIORITY 1000 \
+    MSG %"[babel("Nowruz", "Nowruz")]%" %b%
+
   # The Queen's Official Birthday is April 21st
   # https://en.wikipedia.org/wiki/Queen's_Official_Birthday
   REM  Apr 21 +1 PRIORITY 1000 \

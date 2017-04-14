@@ -41,7 +41,7 @@
 
   # Lanark Highlands Forest Rally LHFR is (usually) the 1st weekend in May
   # http://lhfr.ca
-  REM  Fri May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Sat May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("*LHFR*", "*LHFR*")]%" %b%
     REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 \
@@ -53,15 +53,14 @@
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 07:30 +60 DURATION 06:00 \
       MSG %"[babel("CN Cycle for CHEO", "Le Défi CN pour le CHEO")]%" %b%
 
-  # Lap the Gats is (usually) the 3rd weekend in June???
-  # Lap the Gats is (usually) the last weekend in May???
+  # Lap the Gats is (usually) the last weekend in June (maybe, kinda)
   # http://lapthegats.org
-  REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Sun Jun [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
   #REM  Sun Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Lap the Gats", "Défi Vélo")]%" %b%
 
-  # Rideau Lakes Cycle Tour RLCT is (usually) the 1st or second weekend in
+  # Rideau Lakes Cycle Tour RLCT is (usually) the 1st or 2nd weekend in
   # June since 1972
   # http://ottawabicycleclub.ca/rlct
   REM  Sat Jun [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1

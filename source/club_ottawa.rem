@@ -39,7 +39,7 @@
 
 # Local amateur radio-related volunteer events
 
-  # Lanark Highlands Forest Rally LHFR is (usually) the 1st weekend in May
+  # Lanark Highlands Forest Rally LHFR is the 1st weekend in May
   # http://lhfr.ca
   REM  Sat May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
@@ -47,13 +47,13 @@
     REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 \
       MSG %"[babel("*LHFR*", "*LHFR*")]%" %b%
 
-  # CN Cycle for CHEO is (usually) the 1st weekend in May
+  # CN Cycle for CHEO is the 1st weekend in May
   # https://cncycle.ca
   REM  Sun May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 07:30 +60 DURATION 06:00 \
       MSG %"[babel("CN Cycle for CHEO", "Le Défi CN pour le CHEO")]%" %b%
 
-  # Lap the Gats is (usually) the last weekend in June (maybe, kinda)
+  # Lap the Gats is the last weekend in June (maybe, kinda)
   # http://lapthegats.org
   REM  Sun Jun [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
   #REM  Sun Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -83,9 +83,8 @@
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("MS Bike Tour", "Vélotour SP")]%" %b%
 
-  # OARC Hamfest is (usually) the 1st Saturday after Labour Day
-  # OARC Portable Station Demo is (usually) the 1st Saturday after the OARC
-  # Hamfest
+  # OARC Hamfest is the 1st Saturday after Labour Day
+  # OARC Portable Station Demo is the 1st Saturday after the OARC Hamfest
   # http://oarc.net/fleamarket/
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 AT 07:30 DURATION 3:00 \
@@ -95,7 +94,7 @@
       MSG %"[babel("OARC Portable Station Demo", \
         "Demo des Stations Portatif OARC")]%" %b%
 
-  # Tall Pines Rally is (usually) the last weekend in November
+  # Tall Pines Rally is the last weekend in November
   # http://tallpinesrally.com
   REM  Sat Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
@@ -104,8 +103,9 @@
 
 # Local non-radio events
 
-  # Tulip Festival is (usually) the last 3 weekends in May
+  # Tulip Festival is the last 3 weekends in May
   # https://en.wikipedia.org/wiki/Canadian_Tulip_Festival
+  # http://www.tulipfestival.ca/
   REM  Sat May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Canadian Tulip Festival Starts", \
@@ -115,8 +115,18 @@
       MSG %"[babel("Canadian Tulip Festival Ends", \
         "Fin du Festival Canadien des Tulipes")]%" %b%
 
-  # Doors Open Ottawa is (usually) the 1st weekend in June
+  # Doors Open Ottawa is the 2nd weekend in May
+  # https://en.wikipedia.org/wiki/Ottawa_Comiccon
+  # http://www.ottawacomiccon.com/
+  REM  Sat May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())]   +1 PRIORITY 2000 \
+      MSG %"[babel("Ottawa Comiccon", "Comiccon d'Ottawa")]%" %b%
+    REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 \
+      MSG %"[babel("Ottawa Comiccon", "Comiccon d'Ottawa")]%" %b%
+
+  # Doors Open Ottawa is the 1st weekend in June
   # https://en.wikipedia.org/wiki/Doors_Open_Ottawa
+  # http://ottawa.ca/en/liveculture/doors-open-ottawa
   REM  Sat Jun [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())]   +1 PRIORITY 2000 \
       MSG %"[babel("Doors Open Ottawa", "Portes ouvertes Ottawa")]%" %b%

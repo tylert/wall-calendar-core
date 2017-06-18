@@ -174,15 +174,17 @@
 
   # Earth Day is April 22nd
   # https://en.wikipedia.org/wiki/Earth_Day
-  REM  Apr 22 +1 PRIORITY 2000 \
+  REM  Apr 22 +1 PRIORITY 1000 \
     MSG %"[babel("Earth Day", "Jour de la Terre")]%" %b%
 
+# XXX FIXME XXX  Not working properly
   # Administrative Professionals' Day is the Wednesday of the last full week
   # of April
   # https://en.wikipedia.org/wiki/Administrative_Professionals'_Day
-  #REM  Wed Apr 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-  #  MSG %"[babel("Administrative Professionals' Day", \
-  #    "Journée des professionnels de l'administration")]%" %b%
+  #REM  Wed May 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+  #  REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+  #    MSG %"[babel("Administrative Professionals' Day", \
+  #      "Journée des professionnels de l'administration")]%" %b%
 
   # International Anti-Bullying Day is May 4th
   # https://en.wikipedia.org/wiki/Anti-Bullying_Day
@@ -190,23 +192,28 @@
     MSG %"[babel("International Anti-Bullying Day", \
       "Journée internationale anti-intimidation")]%" %b%
 
+  # World Oceans Day is June 8th
+  # https://en.wikipedia.org/wiki/World_Oceans_Day
+  REM  Jun 08 +1 PRIORITY 1000 \
+    MSG %"[babel("World Oceans Day", "Journée mondiale des océans")]%" %b%
+
   # INTERNATIONAL CAPS LOCK DAY is June 28th and October 22nd
   # https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day
-  REM  Jun 28 +1 PRIORITY 2000 \
+  REM  Jun 28 +1 PRIORITY 1000 \
     MSG %"[babel("INTERNATIONAL CAPS LOCK DAY", \
       "JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES")]%" %b%
-  REM  Oct 22 +1 PRIORITY 2000 \
+  REM  Oct 22 +1 PRIORITY 1000 \
     MSG %"[babel("INTERNATIONAL CAPS LOCK DAY", \
       "JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES")]%" %b%
 
   # The Day of the Programmer is the 256th day of the year
   # https://en.wikipedia.org/wiki/Day_of_the_Programmer
   IF isleap(trigdate())
-    REM Sep 12 +1 PRIORITY 1000 \
+    REM  Sep 12 +1 PRIORITY 1000 \
       MSG %"[babel("Day of the Programmer (256th day)", \
         "Jour du programmeur (256e jour)")]%" %b%
   ELSE
-    REM Sep 13 +1 PRIORITY 1000 \
+    REM  Sep 13 +1 PRIORITY 1000 \
       MSG %"[babel("Day of the Programmer (256th day)", \
         "Jour du programmeur (256e jour)")]%" %b%
   ENDIF

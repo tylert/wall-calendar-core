@@ -103,14 +103,14 @@
 
 # Local non-radio events
 
-  # Tulip Festival is the last 3 weekends in May
+  # Tulip Festival is the middle 2 weekends in May
   # https://en.wikipedia.org/wiki/Canadian_Tulip_Festival
   # http://www.tulipfestival.ca/
-  REM  Sat May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Fri May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Canadian Tulip Festival Starts", \
         "Début du Festival Canadien des Tulipes")]%" %b%
-  REM  Sun May [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Mon May [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Canadian Tulip Festival Ends", \
         "Fin du Festival Canadien des Tulipes")]%" %b%

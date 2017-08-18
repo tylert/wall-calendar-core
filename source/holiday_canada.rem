@@ -123,8 +123,8 @@
   # Davis Day (CA-NS) is June 11th
   # https://en.wikipedia.org/wiki/William_Davis_Miners'_Memorial_Day
   REM  Jun 11 +1 PRIORITY 1000 \
-    MSG %"[babel("Davis Day (CA-NS)", \
-      "(NS)")]%" %b%
+    MSG %"[babel("William Davis Miners' Memorial Day (CA-NS)", \
+      "Journée commémorative des mineurs (CA-NS)")]%" %b%
 
   # National Aboriginal Day is June 21st
   # https://en.wikipedia.org/wiki/National_Aboriginal_Day

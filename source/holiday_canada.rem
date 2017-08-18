@@ -39,37 +39,39 @@
       "Jour du drapeau national du Canada")]%" %b%
 
   # The 2nd Monday in February is observed in 1 provinces and 0 territories
-  #   BC:  Family Day;  statutory
+  #   CA-BC:  Family Day;  statutory
   # https://en.wikipedia.org/wiki/Family_Day
   # https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
   REM  Mon Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Family Day (BC)", "Fête de la famille (BC)")]%" %b%
+      MSG %"[babel("Family Day (CA-BC)", "Fête de la famille (CA-BC)")]%" %b%
 
   # The 3rd Monday in February is observed in 5 provinces and 0 territories
-  #   AB:  Family Day;  statutory
-  #   MB:  Louis Riel Day;  statutory
-  #   ON:  Family Day;  statutory
-  #   NS:  Nova Scotia Heritage Day;  ?
-  #   PE:  Islander Day;  statutory
-  #   SK:  Family Day;  statutory
+  #   CA-AB:  Family Day;  statutory
+  #   CA-MB:  Louis Riel Day;  statutory
+  #   CA-ON:  Family Day;  statutory
+  #   CA-NS:  Nova Scotia Heritage Day;  ?
+  #   CA-PE:  Islander Day;  statutory
+  #   CA-SK:  Family Day;  statutory
   # https://en.wikipedia.org/wiki/Family_Day
   # https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Family Day (AB, ON, SK)", \
-        "Fête de la famille (AB, ON, SK)")]%" %b%
+      MSG %"[babel("Family Day (CA-AB, CA-ON, CA-SK)", \
+        "Fête de la famille (CA-AB, CA-ON, CA-SK)")]%" %b%
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Louis Riel Day (MB)", "Journée Louis Riel (MB)")]%" %b%
+      MSG %"[babel("Louis Riel Day (CA-MB)", \
+        "Journée Louis Riel (CA-MB)")]%" %b%
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Islander Day (PE)", "Fête des Insulaires (PE)")]%" %b%
+      MSG %"[babel("Islander Day (CA-PE)", \
+        "Fête des Insulaires (CA-PE)")]%" %b%
 
-  # Heritage Day (YT) is the Friday before the last Sunday in February
+  # Heritage Day (CA-YT) is the Friday before the last Sunday in February
   # https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
   REM  Sun Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()-2)] +1 PRIORITY 1000 \
-      MSG %"[babel("Heritage Day (YT)", \
-        "Jour de patrimoine (YT)")]%" %b%
+      MSG %"[babel("Heritage Day (CA-YT)", \
+        "Jour de patrimoine (CA-YT)")]%" %b%
 
   # Commonwealth Day is the 2nd Monday in March
   # https://en.wikipedia.org/wiki/Commonwealth_Day
@@ -102,8 +104,8 @@
       MSG %"[babel("Victoria Day", "Fête de la Reine")]%" %b%
   REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("National Patriots' Day (QC)", \
-        "Journée nationale des patriotes (QC)")]%" %b%
+      MSG %"[babel("National Patriots' Day (CA-QC)", \
+        "Journée nationale des patriotes (CA-QC)")]%" %b%
 
   # Canadian Armed Forces Day is the 1st Sunday in June
   # https://en.wikipedia.org/wiki/Armed_Forces_Day
@@ -118,6 +120,12 @@
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Father's Day", "Fête des pères")]%" %b%
 
+  # Davis Day (CA-NS) is June 11th
+  # https://en.wikipedia.org/wiki/William_Davis_Miners'_Memorial_Day
+  REM  Jun 11 +1 PRIORITY 1000 \
+    MSG %"[babel("Davis Day (CA-NS)", \
+      "(NS)")]%" %b%
+
   # National Aboriginal Day is June 21st
   # https://en.wikipedia.org/wiki/National_Aboriginal_Day
   REM  Jun 21 +1 PRIORITY 1000 \
@@ -130,10 +138,11 @@
     MSG %"[babel("Quebec's National Holiday", \
       "Fête nationale des Québecois")]%" %b%
 
-  # Discovery Day (NL) is the Monday nearest June 24th
+  # Discovery Day (CA-NL) is the Monday nearest June 24th
   # https://en.wikipedia.org/wiki/Discovery_Day
   REM  Mon Jun 21 +1 PRIORITY 1000 \
-    MSG %"[babel("Discovery Day (NL)", "Journée découverte (NL)")]%" %b%
+    MSG %"[babel("Discovery Day (CA-NL)", \
+      "Journée découverte (CA-NL)")]%" %b%
 
   # Canadian Multiculturalism Day is June 27th
   # https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
@@ -162,12 +171,12 @@
     ENDIF
   ENDIF
 
-  # Memorial Day (NL) is July 1st
+  # Memorial Day (CA-NL) is July 1st
   # https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
   REM  Jul 01 +1 PRIORITY 1000 \
-    MSG %"[babel("Memorial Day (NL)", "Memorial Day (NL)")]%" %b%
+    MSG %"[babel("Memorial Day (CA-NL)", "Memorial Day (CA-NL)")]%" %b%
 
-  # Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (NU) is July 9th
+  # Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU) is July 9th
   # https://en.wikipedia.org/wiki/Nunavut_Day
   REM  Jul 09 +1 PRIORITY 1000 \
     MSG %"[babel("Nunavut Day", "Fête du Nunavut")]%" %b%
@@ -176,31 +185,31 @@
   # https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
   REM  Sun Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Construction Holiday Begins (QC)", \
-        "Début des vacances de la construction (QC)")]%" %b%
+      MSG %"[babel("Construction Holiday Begins (CA-QC)", \
+        "Début des vacances de la construction (CA-QC)")]%" %b%
   REM  Aug 01 -1 +1 PRIORITY 1000 \
-    MSG %"[babel("Construction Holiday Ends (QC)", \
-      "Fin des vacances de la construction (QC)")]%" %b%
+    MSG %"[babel("Construction Holiday Ends (CA-QC)", \
+      "Fin des vacances de la construction (CA-QC)")]%" %b%
 
   # The 1st Monday in August is a quasi-semi-poly-un-statutory holiday, kinda
-  #   AB:  Heritage Day;  optional, formerly statutory
-  #   BC:  British Columbia Day;  statutory
-  #   MB:  Civic Holiday;  non-statutory
-  #   NB:  New Brunswick Day;  statutory
-  #   NL:  not observed
-  #   NS:  Natal Day;  non-statutory
-  #   NT:  Civic Holiday;  statutory
-  #   NU:  Civic Holiday;  statutory
-  #   ON:  Civic Holiday and Simcoe Day;  non-statutory
-  #   PE:  Civic Holiday;  statutory or non-statutory
-  #   QC:  not observed
-  #   SK:  Saskatchewan Day;  statutory
-  #   YT:  not observed
+  #   CA-AB:  Heritage Day;  optional, formerly statutory
+  #   CA-BC:  British Columbia Day;  statutory
+  #   CA-MB:  Civic Holiday;  non-statutory
+  #   CA-NB:  New Brunswick Day;  statutory
+  #   CA-NL:  not observed
+  #   CA-NS:  Natal Day;  non-statutory
+  #   CA-NT:  Civic Holiday;  statutory
+  #   CA-NU:  Civic Holiday;  statutory
+  #   CA-ON:  Civic Holiday and Simcoe Day;  non-statutory
+  #   CA-PE:  Civic Holiday;  statutory or non-statutory
+  #   CA-QC:  not observed
+  #   CA-SK:  Saskatchewan Day;  statutory
+  #   CA-YT:  not observed
   # https://en.wikipedia.org/wiki/Public_holidays_in_Canada
   REM  Mon Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("August Long Weekend (except NL, QC, YT)", \
-        "Longue fin de semaine d'aôut (sauf NL, QC, YT)")]%" %b%
+      MSG %"[babel("August Long Weekend (except CA-NL, CA-QC, CA-YT)", \
+        "Longue fin de semaine d'aôut (sauf CA-NL, CA-QC, CA-YT)")]%" %b%
 
   # International Day of the World's Indigenous Peoples is August 9th
   # https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
@@ -208,11 +217,12 @@
     MSG %"[babel("International Day of the World's Indigenous Peoples", \
       "Journée internationale des populations autochtones du monde")]%" %b%
 
-  # Discovery Day (YT) is the 3rd Monday in August
+  # Discovery Day (CA-YT) is the 3rd Monday in August
   # https://en.wikipedia.org/wiki/Discovery_Day
   REM  Mon Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Discovery Day (YT)", "Journée découverte (YT)")]%" %b%
+      MSG %"[babel("Discovery Day (CA-YT)", \
+        "Journée découverte (CA-YT)")]%" %b%
 
   # Merchant Navy Veterans Day (CA) is September 3rd
   # https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
@@ -227,18 +237,18 @@
       MSG %"[babel("Labour Day", "Fête du travail")]%" %b%
 
   # Canadian Thanksgiving is the 2nd Monday in October
-  # Oktoberfest (ON) starts the Friday before Thanksgiving and ends the
+  # Oktoberfest (CA-ON) starts the Friday before Thanksgiving and ends the
   # Saturday after
   # https://en.wikipedia.org/wiki/Oktoberfest
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Thanksgiving Day", "Action de Grâce")]%" %b%
     REM  [trigger(trigdate()-3)] +1 PRIORITY 1000 \
-      MSG %"[babel("Oktoberfest Begins (ON)", \
-        "Début de l'Oktoberfest (ON)")]%" %b%
+      MSG %"[babel("Oktoberfest Begins (CA-ON)", \
+        "Début de l'Oktoberfest (CA-ON)")]%" %b%
     REM  [trigger(trigdate()+8)] +1 PRIORITY 1000 \
-      MSG %"[babel("Oktoberfest Ends (ON)", \
-        "Fin de l'Oktoberfest (ON)")]%" %b%
+      MSG %"[babel("Oktoberfest Ends (CA-ON)", \
+        "Fin de l'Oktoberfest (CA-ON)")]%" %b%
 
   # Hallowe'en is October 31st
   # https://en.wikipedia.org/wiki/Halloween
@@ -250,10 +260,10 @@
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
 
-  # Armistice Day (NL) is November 11th
+  # Armistice Day (CA-NL) is November 11th
   # https://en.wikipedia.org/wiki/Armistice_Day
   REM  Nov 11 +1 PRIORITY 1000 \
-    MSG %"[babel("Armistice Day (NL)", "Jour de l'Armistice (NL)")]%" %b%
+    MSG %"[babel("Armistice Day (CA-NL)", "Jour de l'Armistice (CA-NL)")]%" %b%
 
   # The Statute of Westminster was enacted on December 11th, 1931
   # https://en.wikipedia.org/wiki/Statute_of_Westminster_1931

@@ -20,24 +20,27 @@ territorial holidays or other other major events of interest to Canadian
 amateurs.  Readers are encouraged to submit feedback and corrections, in either
 English or French, directly to <va3dgn@rac.ca>.
 
-Where applicable, to save space, the following ISO 3166 abbreviations were
+Where applicable, to save space, the following ISO 3166-2 abbreviations were
 used::
 
-  AB Alberta
-  BC British Columbia
-  MB Manitoba
-  NB New Brunswick
-  NL Newfoundland and Labrador
-  NS Nova Scotia
-  NT Northwest Territories
-  NU Nunavut, ᓄᓇᕗᑦ
-  ON Ontario
-  PE Prince Edward Island
-  QC Quebec
-  SK Saskatchewan
-  YT Yukon
-  US United States (of America)
-  UK United Kingdom (of Great Britain and Northern Ireland)
+  AU     Australia
+  BD     Bangladesh
+  CA-AB  Alberta
+  CA-BC  British Columbia
+  CA-MB  Manitoba
+  CA-NB  New Brunswick
+  CA-NL  Newfoundland and Labrador
+  CA-NS  Nova Scotia
+  CA-NT  Northwest Territories
+  CA-NU  Nunavut, ᓄᓇᕗᑦ
+  CA-ON  Ontario
+  CA-PE  Prince Edward Island
+  CA-QC  Quebec
+  CA-SK  Saskatchewan
+  CA-YT  Yukon
+  NZ     New Zealand
+  US     United States (of America)
+  UK     United Kingdom (of Great Britain and Northern Ireland)
 
 This calendar was created on a computer running the Debian® GNU/Linux®
 operating system [5], [6].  All the work was performed using royalty-free and
@@ -121,24 +124,27 @@ pour les amateurs canadiens.  Lecteurs sont encouragés à soumettre des
 commentaires et des corrections, en anglais ou en français, directement à
 <va3dgn@rac.ca>.
 
-Le cas échéant, pour économiser l'espace, les abréviations ISO 3166 suivantes
+Le cas échéant, pour économiser l'espace, les abréviations ISO 3166-2 suivantes
 ont été utilisées::
 
-  AB Alberta
-  BC Colombie-Britannique
-  MB Manitoba
-  NB Nouveau Brunswick
-  NL Terre-Neuve-et-Labrador
-  NS Nouvelle-Écosse
-  NT Territoires du Nord-Ouest
-  NU Nunavut, ᓄᓇᕗᑦ
-  ON Ontario
-  PE Île-du-Prince-Édouard
-  QC Québec
-  SK Saskatchewan
-  YT Yukon
-  US États-Unis (d'Amérique)
-  UK Royaume-Uni (de Grande-Bretagne et d'Irlande du Nord)
+  AU     Australie
+  BD     Bangladesh
+  CA-AB  Alberta
+  CA-BC  Colombie-Britannique
+  CA-MB  Manitoba
+  CA-NB  Nouveau Brunswick
+  CA-NL  Terre-Neuve-et-Labrador
+  CA-NS  Nouvelle-Écosse
+  CA-NT  Territoires du Nord-Ouest
+  CA-NU  Nunavut, ᓄᓇᕗᑦ
+  CA-ON  Ontario
+  CA-PE  Île-du-Prince-Édouard
+  CA-QC  Québec
+  CA-SK  Saskatchewan
+  CA-YT  Yukon
+  NZ     Nouvelle-Zélande
+  US     États-Unis (d'Amérique)
+  UK     Royaume-Uni (de Grande-Bretagne et d'Irlande du Nord)
 
 Ce calendrier a été créé avec un ordinateur exécutant le système d'exploitation
 Debian® GNU/Linux® [5], [6].  Tout le travail a été effectué en utilisant les

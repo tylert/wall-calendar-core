@@ -258,8 +258,8 @@
   # The Statute of Westminster was enacted on December 11th, 1931
   # https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
   REM  Dec 11 +1 PRIORITY 1000 \
-    MSG %"[nst(1932)][babel("th Anniversary of the Statue of Westminster", \
-      "e anniversaire du Statut de Westminster")]%" %b%
+    MSG %"[nth(1932)] [babel("Anniversary of the Statue of Westminster", \
+      "Anniversaire du Statut de Westminster")]%" %b%
 
   # New Year's Eve is December 31st
   # https://en.wikipedia.org/wiki/New_Year's_Eve

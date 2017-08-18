@@ -23,8 +23,8 @@
   # http://csm-mcs.com
   REM  Sat Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
-      MSG %"[nst(1967)][babel("th Canadian Ski Marathon Begins", \
-        "e Marathon canadien de ski commence")]%" %b%
+      MSG %"[nth(1967)] [babel("Canadian Ski Marathon Begins", \
+        "Marathon canadien de ski commence")]%" %b%
 
   # https://jotajoti.org
   # http://joti.org
@@ -57,11 +57,11 @@
   # http://va3cco.com/oqp
   REM  Sat Apr [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 11:00 \
-      MSG %"[nst(1998)][babel("th Ontario QSO Party Contest Part 1", \
-        "e Concours Ontario QSO Party 1e partie")]%" %b%
+      MSG %"[nth(1998)] [babel("Ontario QSO Party Contest Part 1", \
+        "Concours Ontario QSO Party 1e partie")]%" %b%
     REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 AT 12:00 +60 DURATION 06:00 \
-      MSG %"[nst(1998)][babel("th Ontario QSO Party Contest Part 2", \
-        "e Concours Ontario QSO Party 2e partie")]%" %b%
+      MSG %"[nth(1998)] [babel("Ontario QSO Party Contest Part 2", \
+        "Concours Ontario QSO Party 2e partie")]%" %b%
 
 
 # CQ Magazine events
@@ -151,8 +151,8 @@
   # http://www.rsgbcc.org/hf/rules/2013/rberu.shtml
   REM  Sat Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 10:00 +60 DURATION 24:00 \
-      MSG %"[nst(1938)][babel("th RSGB BERU Commonwealth CW Contest", \
-        "e Concours CW BERU Commonwealth RSGB")]%" %b%
+      MSG %"[nth(1938)] [babel("RSGB BERU Commonwealth CW Contest", \
+        "Concours CW BERU Commonwealth RSGB")]%" %b%
 
 
 # Other contest events

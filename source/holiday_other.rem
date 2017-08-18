@@ -3,7 +3,7 @@
   INCLUDE [filedir()]/defs.rem
 
 
-# Generic holidays and celebratory-type events for US, UK and NZ
+# Generic holidays and celebratory-type events for US, UK, NZ, BD
 
   # Martin Luther King, Jr. Day (US) is the 3rd Monday in January
   # https://en.wikipedia.org/wiki/Martin_Luther_King_Jr._Day
@@ -159,6 +159,20 @@
   REM  Feb 27 +1 PRIORITY 1000 \
     MSG %"[babel("International Polar Bear Day", \
       "Journée internationale des ours polaires")]%" %b%
+
+  # Pi Day, Tau Day, Pi Approximation Day
+  # https://en.wikipedia.org/wiki/Pi_Day
+  # https://en.wikipedia.org/wiki/Tau_Day
+  # http://www.piday.org/
+  # https://tauday.com/
+  # http://piapproximationday.com/
+  REM  Mar 14 +1 PRIORITY 1000 \
+    MSG %"[babel("Pi Day (3.14)", "Jour de pi (3.14)")]%" %b%
+  REM  Jun 28 +1 PRIORITY 1000 \
+    MSG %"[babel("Tau Day (6.28)", "Jour de tau (6.28)")]%" %b%
+  REM  Jul 22 +1 PRIORITY 1000 \
+    MSG %"[babel("Pi Approximation Day (22/7)", \
+      "Jour d'approximation pi (22/7)")]%" %b%
 
   # Tartan Day is April 6th
   # https://en.wikipedia.org/wiki/Tartan_Day

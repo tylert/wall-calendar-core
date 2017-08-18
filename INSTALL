@@ -7,54 +7,55 @@
 # already packaged version provided by your chosen Linux distribution.  On
 # Debian/Ubuntu, this is usually done by typing:
 
-#  sudo apt-get install remind
+# sudo apt-get --yes install remind
 
 # The current version of remind does not allow the desired language to be
 # specified at the command-line, so, if you want to make calendars for a
 # language other than your native locale, you will be required to rebuild
 # remind from source.  One way of doing this is to execute the following:
 
-  sudo apt-get install build-essential
+sudo apt-get --yes install build-essential
 
-  REMIND_VERSION='remind-03.01.15'
-  REMIND_GPG_KEY_ID='126F42E0'
-  TEMP_LOCATION='tmp'
-  TARGET_LOCATION='/usr/local/bin'
+REMIND_VERSION='remind-03.01.15'
+REMIND_GPG_KEY_ID='126F42E0'
+TEMP_LOCATION='tmp'
+TARGET_LOCATION='/usr/local/bin'
 
-  # Prepare stuff.
-  mkdir --parents ${TEMP_LOCATION}
-  pushd ${TEMP_LOCATION}
+# Prepare stuff.
+mkdir --parents ${TEMP_LOCATION}
+pushd ${TEMP_LOCATION}
 
-  # Fetch stuff.
-  wget http://www.roaringpenguin.com/files/download/${REMIND_VERSION}.tar.gz.sig
-  wget http://www.roaringpenguin.com/files/download/${REMIND_VERSION}.tar.gz
-  gpg --recv-key ${REMIND_GPG_KEY_ID}
-  gpg --export --armor --no-emit-version --no-comment ${REMIND_GPG_KEY_ID} >\
+# Fetch stuff.
+wget http://www.roaringpenguin.com/files/download/${REMIND_VERSION}.tar.gz.sig
+wget http://www.roaringpenguin.com/files/download/${REMIND_VERSION}.tar.gz
+gpg --recv-key ${REMIND_GPG_KEY_ID}
+gpg --export --armor --no-emit-version --no-comment ${REMIND_GPG_KEY_ID} >\
     ${REMIND_GPG_KEY_ID}.gpg.pub.txt
 
-  # Verify stuff.
-  gpg --verify ${REMIND_VERSION}.tar.gz.sig ${REMIND_VERSION}.tar.gz
-  read
+# Verify stuff.
+gpg --verify ${REMIND_VERSION}.tar.gz.sig ${REMIND_VERSION}.tar.gz
+read
 
-  # Extract stuff.
-  tar --extract --verbose --gzip --file ${REMIND_VERSION}.tar.gz
+# Extract stuff.
+tar --extract --verbose --gzip --file ${REMIND_VERSION}.tar.gz
 
-  # Build French stuff.
-  pushd ${REMIND_VERSION}
-  make "LANGDEF=-DLANG=FRENCH"
-  sudo cp src/remind ${TARGET_LOCATION}/remind.fr
-  sudo cp src/rem2ps ${TARGET_LOCATION}/rem2ps.fr
+# Build French stuff.
+pushd ${REMIND_VERSION}
+# XXX FIXME XXX hack FOrd() in src/funcs.c to force the strings to be French
+make "LANGDEF=-DLANG=FRENCH"
+sudo cp src/remind ${TARGET_LOCATION}/remind.fr
+sudo cp src/rem2ps ${TARGET_LOCATION}/rem2ps.fr
 
-  # Build English stuff.
-  make clean
-  make "LANGDEF=-DLANG=ENGLISH"
-  sudo cp src/remind ${TARGET_LOCATION}/remind.en
-  sudo cp src/rem2ps ${TARGET_LOCATION}/rem2ps.en
-  popd
+# Build English stuff.
+make clean
+make "LANGDEF=-DLANG=ENGLISH"
+sudo cp src/remind ${TARGET_LOCATION}/remind.en
+sudo cp src/rem2ps ${TARGET_LOCATION}/rem2ps.en
+popd
 
-  # Clean up stuff.
-  popd
-#  rm --recursive --force ${TEMP_LOCATION}
+# Clean up stuff.
+popd
+# rm --recursive --force ${TEMP_LOCATION}
 
 # Naming the newly-built binaries in this manner works with the provided
 # makefile to call the appropriate remind and rem2ps backend binaries
@@ -76,4 +77,4 @@
 # calendars, you will probably also want to install some additional tools by
 # typing:
 
-#  sudo apt-get install ghostscript psutils pdftk inkscape libreoffice
+# sudo apt-get --yes install ghostscript psutils pdftk inkscape libreoffice

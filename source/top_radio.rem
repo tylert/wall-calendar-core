@@ -37,8 +37,8 @@
   #   BST -> UTC+01:00 -> Alpha
   REM  Sun Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 4000 \
-      MSG %"[babel("Daylight Savings Time Begins (except SK)", \
-        "Heure d'éte commence (sauf SK)")]%" %b%
+      MSG %"[babel("Daylight Savings Time Begins (except CA-SK)", \
+        "Heure d'éte commence (sauf CA-SK)")]%" %b%
 
   # Daylight Savings Time ends on the 1st Sunday in November
   # "fall back"
@@ -46,8 +46,8 @@
   #   GMT -> UTC+00:00 -> Zulu
   REM  Sun Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +3 PRIORITY 4000 \
-      MSG %"[babel("Daylight Savings Time Ends (except SK)", \
-        "Heure d'éte termine (sauf SK)")]%" %b%
+      MSG %"[babel("Daylight Savings Time Ends (except CA-SK)", \
+        "Heure d'éte termine (sauf CA-SK)")]%" %b%
 
 
 # Print week numbers

@@ -115,7 +115,7 @@
       MSG %"[babel("Canadian Tulip Festival Ends", \
         "Fin du Festival Canadien des Tulipes")]%" %b%
 
-  # Doors Open Ottawa is the 2nd weekend in May
+  # Comicon Ottawa is the 2nd weekend in May
   # https://en.wikipedia.org/wiki/Ottawa_Comiccon
   # http://www.ottawacomiccon.com/
   REM  Sat May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1

@@ -146,6 +146,7 @@
   REM  Feb 12 +1 PRIORITY 1000 \
     MSG %"[babel("Darwin Day", "Jour de Darwin")]%" %b%
 
+# XXX FIXME XXX  Unsure why this was commented out
   # Pink Shirt Day is February ?
   # http://pinkshirtday.ca/
   # http://www.erasebullying.ca/resources/resources-pink-shirt.php

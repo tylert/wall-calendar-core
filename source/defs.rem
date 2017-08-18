@@ -51,9 +51,11 @@
 
 # Other useful functions for great justice
 
-  FSET bday(x) ord(year(trigdate()) - x)     # zero-based
-  FSET nth(x) ord(year(trigdate()) - x + 1)  # one-based
-  FSET count(x) year(trigdate()) - x + 1     # one-based, but no ordinal
+  # Birthdays are zero-based, event dates are one-based
+  # count() is the same as nth() but without the ord() wrapper
+  FSET bday(x) ord(year(trigdate()) - x)
+  FSET nth(x) ord(year(trigdate()) - x + 1)
+  FSET count(x) year(trigdate()) - x + 1
 
   FSET lang() iif(language() == "French", 2, 1)
   FSET babel(e, f) choose(lang(), e, f)

@@ -1,10 +1,1 @@
-argparse==1.2.1
-data==0.4
-decorator==4.0.4
-funcsigs==0.4
-future==0.15.2
-latex==0.6.1
-shutilwhich==1.1.0
-six==1.9.0
-tempdir==0.6
-wsgiref==0.1.2
+latex==0.6.4

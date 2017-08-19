@@ -1,5 +1,5 @@
-# Tools required:  make, bash, remind, sed, ghostscript, psutils, pdftk,
-#   inkscape
+# Tools required:
+#   make, bash, remind, sed, ghostscript, psutils, pdftk, inkscape
 
 SHELL := /bin/bash
 
@@ -49,7 +49,7 @@ $(BUILD)/$(MEDIA)_$(GEN_LANG).ps : $(CALENDARS) Makefile
     | rem2ps.$(GEN_LANG) -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 \
     | sed \
       -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
-      -e 's/\xc3\x83\|\xc2\x89/\d201/g' \
+      -e 's/\xc3\x89/\d201/g' \
       -e 's/\d195\d162/\d226/g' \
       -e 's/\d195\d168/\d232/g' \
       -e 's/\d195\d169/\d233/g' \
@@ -65,12 +65,12 @@ $(BUILD)/$(MEDIA)_$(GEN_LANG).ps : $(CALENDARS) Makefile
 
 # man iso_8859-1
 #   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174
-#   É -> Ã -> \303\203\302\211 -> \xc3\x83\|\xc2\x89 -> \d201
 #   â -> Ã¢ -> \d195\d162 -> \d226
+#   ê -> Ãª -> \d195\d170 -> \d234
 #   è -> Ã¨ -> \d195\d168 -> \d232
 #   é -> Ã© -> \d195\d169 -> \d233
-#   ê -> Ãª -> \d195\d170 -> \d234
 #   ë -> Ã« -> \d195\d171 -> \d235
+#   É -> Ã -> \xc3\x89 -> \d201
 #   ô -> Ã´ -> \d195\d180 -> \d244
 
 
@@ -91,12 +91,12 @@ $(BUILD)/junior_$(GEN_LANG).pdf : $(BUILD)/letter_$(GEN_LANG).pdf
 
 # Multi-page -> Single-page Portable Document Format
 
-# XXX If n < 100 months, otherwise use different padding
+# XXX FIXME XXX If n < 100 months, otherwise use different padding
 RANGE = $(shell seq --format "%02g" $(MONTHS))
 PDFS = $(addprefix $(BUILD)/, $(addsuffix .pdf, $(addprefix $(GEN_LANG), \
   $(RANGE))))
 
-# XXX If n < 100 months, otherwise use different padding
+# XXX FIXME XXX If n < 100 months, otherwise use different padding
 $(PDFS) : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf
 	@pdftk $^ burst output $(BUILD)/$(GEN_LANG)%02d.pdf uncompress
 

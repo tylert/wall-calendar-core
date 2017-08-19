@@ -5,8 +5,8 @@ from datetime import datetime, timedelta
 import math
 
 
-#http://rhodesmill.org/pyephem/quick.html#phases-of-the-moon
-#http://stackoverflow.com/questions/2526815/moon-lunar-phase-algorithm
+# http://rhodesmill.org/pyephem/quick.html#phases-of-the-moon
+# http://stackoverflow.com/questions/2526815/moon-lunar-phase-algorithm
 
 
 (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(0, 7)
@@ -65,5 +65,5 @@ if __name__ == '__main__':
     print(moon_phase())
 
 
-#import code
-#code.interact(local=locals())
+# import code
+# code.interact(local=locals())

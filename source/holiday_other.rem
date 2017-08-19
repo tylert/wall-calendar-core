@@ -192,14 +192,13 @@
   REM  Apr 22 +1 PRIORITY 1000 \
     MSG %"[babel("Earth Day", "Jour de la Terre")]%" %b%
 
-# XXX FIXME XXX  Not working properly
   # Administrative Professionals' Day is the Wednesday of the last full week
   # of April
   # https://en.wikipedia.org/wiki/Administrative_Professionals'_Day
-  #REM  Wed May 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-  #  REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-  #    MSG %"[babel("Administrative Professionals' Day", \
-  #      "Journée des professionnels de l'administration")]%" %b%
+  REM  Wed Apr 28 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
+      MSG %"[babel("Administrative Professionals' Day", \
+        "Journée des professionnels de l'administration")]%" %b%
 
   # International Anti-Bullying Day is May 4th
   # https://en.wikipedia.org/wiki/Anti-Bullying_Day

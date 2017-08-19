@@ -147,7 +147,6 @@
     MSG %"[babel("Darwin Day", "Jour de Darwin")]%" %b%
 
   # Pink Shirt Day seems to be on the last Wednesday in February
-  # https://en.wikipedia.org/wiki/Anti-Bullying_Day
   # http://pinkshirtday.ca/
   # http://www.erasebullying.ca/resources/resources-pink-shirt.php
   REM  Wed Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -161,19 +160,11 @@
     MSG %"[babel("International Polar Bear Day", \
       "Journée internationale des ours polaires")]%" %b%
 
-  # Pi Day, Tau Day, Pi Approximation Day
+  # Pi Day
   # https://en.wikipedia.org/wiki/Pi_Day
-  # https://en.wikipedia.org/wiki/Tau_Day
   # http://www.piday.org/
-  # https://tauday.com/
-  # http://piapproximationday.com/
   REM  Mar 14 +1 PRIORITY 1000 \
     MSG %"[babel("Pi Day (3.14)", "Jour de pi (3.14)")]%" %b%
-  REM  Jun 28 +1 PRIORITY 1000 \
-    MSG %"[babel("Tau Day (6.28)", "Jour de tau (6.28)")]%" %b%
-  REM  Jul 22 +1 PRIORITY 1000 \
-    MSG %"[babel("Pi Approximation Day (22/7)", \
-      "Jour d'approximation pi (22/7)")]%" %b%
 
   # Tartan Day is April 6th
   # https://en.wikipedia.org/wiki/Tartan_Day
@@ -219,6 +210,18 @@
   REM  Oct 22 +1 PRIORITY 1000 \
     MSG %"[babel("INTERNATIONAL CAPS LOCK DAY", \
       "JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES")]%" %b%
+
+  # Tau Day
+  # https://en.wikipedia.org/wiki/Tau_Day
+  # https://tauday.com/
+  REM  Jun 28 +1 PRIORITY 1000 \
+    MSG %"[babel("Tau Day (6.28)", "Jour de tau (6.28)")]%" %b%
+  # Pi Approximation Day
+  # https://en.wikipedia.org/wiki/Pi_Day
+  # http://piapproximationday.com/
+  REM  Jul 22 +1 PRIORITY 1000 \
+    MSG %"[babel("Pi Approximation Day (22/7)", \
+      "Jour d'approximation pi (22/7)")]%" %b%
 
   # The Day of the Programmer is the 256th day of the year
   # https://en.wikipedia.org/wiki/Day_of_the_Programmer

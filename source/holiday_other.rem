@@ -248,6 +248,12 @@
       MSG %"[babel("Software Freedom Day", \
         "Journée de la liberté des logiciels")]%" %b%
 
+  # Sputnik 1 was launched on October 4th, 1957
+  # https://en.wikipedia.org/wiki/Sputnik_1
+  REM  Oct 4 +1 PRIORITY 1000 \
+    MSG %"[nth(1957)] [babel("Anniversary of Launch of Sputnik 1", \
+      "Anniversaire du lancement de Sputnik 1")]%" %b%
+
   # Ada Lovelace Day is the 2nd Tuesday in October
   # https://en.wikipedia.org/wiki/Ada_Lovelace_Day
   # http://findingada.com/about/when-is-ald/

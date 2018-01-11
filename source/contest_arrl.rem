@@ -10,7 +10,7 @@
   # Straight Key Night is 0000 to 2359 UTC January 1st
   # http://arrl.org/straight-key-night
   REM  Jan 01 +1 PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
-    MSG %"[babel("ARRL Straight Key Night", "Straight Key Night ARRL")]%" %b%
+    MSG %"Z [babel("ARRL Straight Key Night", "Straight Key Night ARRL")]%" %b%
 
   # RTTY Roundup is Saturday 1800 to Sunday 2359 UTC the 1st weekend in
   # January unless it's January 1st
@@ -18,7 +18,7 @@
   IFTRIG Jan 01
   ELSE
     REM  Sat Jan [Week_1] +1 PRIORITY 2000 AT 18:00 +60 DURATION 29:59 \
-      MSG %"[babel("ARRL RTTY Roundup", "Roundup RTTY ARRL")]%" %b%
+      MSG %"Z [babel("ARRL RTTY Roundup", "Roundup RTTY ARRL")]%" %b%
   ENDIF
 
   # XXX FIXME XXX 2016 seems to have moved Kids Day in June to a fixed date
@@ -26,7 +26,7 @@
   # Kids Day is 1800 UTC through 2359 UTC the 1st Sunday in January
   # http://arrl.org/kids-day
   REM  Sun Jan [Week_1] +1 PRIORITY 2000 AT 18:00 +60 DURATION 05:59 \
-    MSG %"[babel("ARRL Kids Day", "Journée des enfants ARRL")]%" %b%
+    MSG %"Z [babel("ARRL Kids Day", "Journée des enfants ARRL")]%" %b%
 
   # XXX FIXME XXX
   # January VHF Sweepstakes is Saturday 1900 to Monday 0359 UTC the 3rd,
@@ -36,7 +36,7 @@
   #REM  Sat Jan [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
   REM  Sat Jan [Week_5] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 19:00 +60 DURATION 32:59 \
-      MSG %"[babel("ARRL January VHF Sweepstakes", \
+      MSG %"Z [babel("ARRL January VHF Sweepstakes", \
         "Sweepstakes VHF de janvier ARRL")]%" %b%
 
 # February ARRL events
@@ -53,7 +53,7 @@
   # http://arrl.org/arrl-dx
   REM  Sat Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
-      MSG %"[babel("CW International DX Contest", \
+      MSG %"Z [babel("CW International DX Contest", \
         "Concours DX international CW")]%" %b%
 
 # March ARRL events
@@ -63,7 +63,7 @@
   # http://arrl.org/arrl-dx
   REM  Sat Mar [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
-      MSG %"[babel("SSB International DX Contest", \
+      MSG %"Z [babel("SSB International DX Contest", \
         "Concours DX international SSB")]%" %b%
 
 # April ARRL events
@@ -72,7 +72,8 @@
   # http://arrl.org/rookie-roundup
   REM  Sun Apr [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 05:59 \
-      MSG %"[babel("ARRL SSB Rookie Roundup", "Rookie Roundup SSB ARRL")]%" %b%
+      MSG %"Z [babel("ARRL SSB Rookie Roundup",
+        "Rookie Roundup SSB ARRL")]%" %b%
 
 # May ARRL events
 
@@ -88,13 +89,13 @@
   # Kids Day is 1800 to 2359 UTC the 3rd Saturday in June
   # http://arrl.org/kids-day
   REM  Sat Jun [Week_3] +1 PRIORITY 2000 AT 18:00 +60 DURATION 05:59 \
-    MSG %"[babel("ARRL Kids Day", "Journée des enfants ARRL")]%" %b%
+    MSG %"Z [babel("ARRL Kids Day", "Journée des enfants ARRL")]%" %b%
 
   # Field Day is Saturday 1800 to Sunday 2059 UTC the 4th weekend in June
   # http://arrl.org/field-day
   REM  Sat Jun [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 26:59 \
-      MSG %"[babel("Field Day", "Field Day")]%" %b%
+      MSG %"Z [babel("Field Day", "Field Day")]%" %b%
 
 # July ARRL events
 
@@ -103,7 +104,7 @@
   # http://arrl.org/iaru-hf-championship
   REM  Sat Jul [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 12:00 +60 DURATION 23:59 \
-      MSG %"[babel("IARU HF World Championships", \
+      MSG %"Z [babel("IARU HF World Championships", \
         "Championnats HF mondiale IARU")]%" %b%
 
 # August ARRL events
@@ -113,7 +114,7 @@
   # http://arrl.org/august-uhf
   REM  Sat Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 23:59 \
-      MSG %"[babel("ARRL August UHF Contest", \
+      MSG %"Z [babel("ARRL August UHF Contest", \
         "Concours UHF d'aôut ARRL")]%" %b%
 
   # 10 GHz and Up Contest Leg 1 is Saturday 0600 to Sunday 1159 local time the
@@ -128,7 +129,7 @@
   # http://arrl.org/rookie-roundup
   REM  Sun Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 05:59 \
-      MSG %"[babel("ARRL RTTY Rookie Roundup", \
+      MSG %"Z [babel("ARRL RTTY Rookie Roundup", \
         "Rookie Roundup RTTY ARRL")]%" %b%
 
 # September ARRL events
@@ -138,7 +139,7 @@
   # http://arrl.org/september-vhf
   REM  Sat Sep [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 32:59 \
-      MSG %"[babel("ARRL September VHF QSO Party", \
+      MSG %"Z [babel("ARRL September VHF QSO Party", \
         "QSO Party VHF de septembre ARRL")]%" %b%
 
   # 10 GHz and Up Contest Leg 2 is Saturday 0600 to Sunday 1159 local time the
@@ -155,7 +156,7 @@
   # http://arrl.org/school-club-roundup
   REM  Mon Oct [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 13:00 +60 DURATION 106:59 \
-      MSG %"[babel("ARRL School Club Roundup", \
+      MSG %"Z [babel("ARRL School Club Roundup", \
         "Roundup clubs scholaires ARRL")]%" %b%
 
 # November ARRL events
@@ -165,7 +166,7 @@
   # http://arrl.org/sweepstakes
   REM  Sat Nov [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 21:00 +60 DURATION 29:59 \
-      MSG %"[babel("ARRL CW November Sweepstakes", \
+      MSG %"Z [babel("ARRL CW November Sweepstakes", \
         "Sweepstakes CW de novembre ARRL")]%" %b%
 
   # SSB November Sweepstakes is Saturday 2100 to Sunday 0259 UTC the 3rd
@@ -173,7 +174,7 @@
   # http://arrl.org/sweepstakes
   REM  Sat Nov [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 21:00 +60 DURATION 29:59 \
-      MSG %"[babel("ARRL SSB November Sweepstakes", \
+      MSG %"Z [babel("ARRL SSB November Sweepstakes", \
         "Sweepstakes SSB de novembre ARRL")]%" %b%
 
 # December ARRL events
@@ -184,17 +185,19 @@
   # http://arrl.org/160-meter
   REM  Fri Dec [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 22:00 +60 DURATION 41:59 \
-      MSG %"[babel("ARRL 160 meter Contest", "Concours 160 mètres ARRL")]%" %b%
+      MSG %"Z [babel("ARRL 160 meter Contest",
+        "Concours 160 mètres ARRL")]%" %b%
 
   # 10 Meter Contest is Saturday 0000 to Sunday 2359 UTC the 2nd weekend in
   # December
   # http://arrl.org/10-meter
   REM  Sat Dec [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
-      MSG %"[babel("ARRL 10 meter Contest", "Concours 10 mèters ARRL")]%" %b%
+      MSG %"Z [babel("ARRL 10 meter Contest",
+        "Concours 10 mèters ARRL")]%" %b%
 
   # CW Rookie Roundup is 1800 to 2359 UTC the 3rd Sunday in December
   # http://arrl.org/rookie-roundup
   REM  Sun Dec [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 18:00 +60 DURATION 05:59 \
-      MSG %"[babel("ARRL CW Rookie Roundup", "Rookie Roundup CW ARRL")]%" %b%
+      MSG %"Z [babel("ARRL CW Rookie Roundup", "Rookie Roundup CW ARRL")]%" %b%

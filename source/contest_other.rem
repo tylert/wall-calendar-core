@@ -36,10 +36,10 @@
 
 # RAC events
 
-  # RAC Canada Day Contest is 0000 UTC to 2359 UTC July 1
+  # RAC Canada Day Contest is 0000 UTC to 2359 UTC July 1st
   # http://wp.rac.ca/canada-day-contest/ ???
   REM  Jul 01 +1 PRIORITY 2000 AT 00:00 +60 DURATION 23:59 \
-    MSG %"[babel("RAC Canada Day Contest", \
+    MSG %"Z [babel("RAC Canada Day Contest", \
       "Concours Fête du Canada RAC")]%" %b%
 
   # RAC Canada Winter Contest is the last Saturday in December
@@ -155,6 +155,12 @@
 
 
 # Other contest events
+
+  # Winter Field Day runs for 24 hours during the last full weekend in January
+  # each year from 1900 UTC (2pm EST) Saturday to 1900 UTC (2pm EST) Sunday
+  # https://www.winterfieldday.com/
+  # REM ... PRIORITY 2000 AT 14:00 +60 DURATION 24:00 \
+  #   MSG %"Z [babel("", "")]%" %b%
 
   # http://azscqrpions.com/fybo2009rules.html
   REM  Sat Feb [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1

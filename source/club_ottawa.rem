@@ -55,8 +55,7 @@
 
   # Lap the Gats is the last weekend in June (maybe, kinda)
   # http://lapthegats.org
-  REM  Sun Jun [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
-  #REM  Sun Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Sun Jul 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Lap the Gats", "Défi Vélo")]%" %b%
 

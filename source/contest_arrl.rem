@@ -185,7 +185,7 @@
   # http://arrl.org/160-meter
   REM  Fri Dec [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 22:00 +60 DURATION 41:59 \
-      MSG %"Z [babel("ARRL 160 meter Contest",
+      MSG %"Z [babel("ARRL 160 meter Contest", \
         "Concours 160 mètres ARRL")]%" %b%
 
   # 10 Meter Contest is Saturday 0000 to Sunday 2359 UTC the 2nd weekend in
@@ -193,7 +193,7 @@
   # http://arrl.org/10-meter
   REM  Sat Dec [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 00:00 +60 DURATION 47:59 \
-      MSG %"Z [babel("ARRL 10 meter Contest",
+      MSG %"Z [babel("ARRL 10 meter Contest", \
         "Concours 10 mèters ARRL")]%" %b%
 
   # CW Rookie Roundup is 1800 to 2359 UTC the 3rd Sunday in December

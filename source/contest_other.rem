@@ -41,7 +41,7 @@
   # http://ve3we.org/2017/04/25/history-of-amateur-radio-in-canada/
   # https://en.wikipedia.org/wiki/Radio_Amateurs_of_Canada
   REM  May 03 +1 PRIORITY 2000 \
-    MSG %"[bday(1993)] [babel("Anniversary of Founding of RAC",
+    MSG %"[bday(1993)] [babel("Anniversary of Founding of RAC", \
       "Anniversaire du fondation de RAC")]%" %b%
 
   # RAC Canada Day Contest is 0000H to 2359H UTC July 1st

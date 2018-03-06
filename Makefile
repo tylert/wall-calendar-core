@@ -27,24 +27,22 @@ GENERATED_FILES = \
   $(wildcard $(BUILD)/*.svg) \
   doc_data.txt
 
+.PHONY: all
+all: calendar
 
-.PHONY : all
-all : calendar
+.PHONY: calendar
+calendar: $(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf
 
-.PHONY : calendar
-calendar : $(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf
+.PHONY: svgs
+svgs: $(SVGS)
 
-.PHONY : svgs
-svgs : $(SVGS)
-
-.PHONY : clean
-clean :
+.PHONY: clean
+clean:
 	@rm -f $(GENERATED_FILES)
-
 
 # Remind -> Postscript
 
-$(BUILD)/$(MEDIA)_$(GEN_LANG).ps : $(CALENDARS) Makefile
+$(BUILD)/$(MEDIA)_$(GEN_LANG).ps: $(CALENDARS) Makefile
 	@remind.$(GEN_LANG) -p$(MONTHS) -b1 -gdaad $(TOP_CALENDAR) $(DATE) \
     | rem2ps.$(GEN_LANG) -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 \
     | sed \
@@ -73,21 +71,18 @@ $(BUILD)/$(MEDIA)_$(GEN_LANG).ps : $(CALENDARS) Makefile
 #   É -> Ã -> \xc3\x89 -> \d201
 #   ô -> Ã´ -> \d195\d180 -> \d244
 
-
 # Postscript -> Portable Document Format
 
-$(BUILD)/%.pdf : $(BUILD)/%.ps
+$(BUILD)/%.pdf: $(BUILD)/%.ps
 	@ps2pdf14 -sPAPERSIZE=$(MEDIA) $< - | pdftk - output $@ uncompress
 
 $(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf $(BUILD)/$(MEDIA)_border.pdf
 	@pdftk $< background $(BUILD)/$(MEDIA)_border.pdf output $@ uncompress
 
-
 # Single-page -> 2-up Portable Document Format
 
-$(BUILD)/junior_$(GEN_LANG).pdf : $(BUILD)/letter_$(GEN_LANG).pdf
+$(BUILD)/junior_$(GEN_LANG).pdf: $(BUILD)/letter_$(GEN_LANG).pdf
 	@pdf2ps $< - | psnup -2 -c -f | ps2pdf - - | pdftk - output $@ uncompress
-
 
 # Multi-page -> Single-page Portable Document Format
 
@@ -97,15 +92,13 @@ PDFS = $(addprefix $(BUILD)/, $(addsuffix .pdf, $(addprefix $(GEN_LANG), \
   $(RANGE))))
 
 # XXX FIXME XXX If n < 100 months, otherwise use different padding
-$(PDFS) : $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf
+$(PDFS): $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf
 	@pdftk $^ burst output $(BUILD)/$(GEN_LANG)%02d.pdf uncompress
-
 
 # Portable Document Format -> Scalable Vector Graphic
 
-$(BUILD)/%.svg : $(BUILD)/%.pdf
+$(BUILD)/%.svg: $(BUILD)/%.pdf
 	@inkscape --export-plain-svg $@ $^
 
-
-$(BUILD)/%.pdf : $(SOURCE)/%.svg
+$(BUILD)/%.pdf: $(SOURCE)/%.svg
 	@inkscape --export-text-to-path --export-pdf=$@ $<

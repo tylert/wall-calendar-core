@@ -38,9 +38,11 @@ used::
   CA-QC  Quebec
   CA-SK  Saskatchewan
   CA-YT  Yukon
+  GB     United Kingdom of Great Britain and Northern Ireland
+  JP     Japan
   NZ     New Zealand
-  US     United States (of America)
-  UK     United Kingdom (of Great Britain and Northern Ireland)
+  UN     United Nations
+  US     United States of America
 
 This calendar was created on a computer running the Debian® GNU/Linux®
 operating system [5], [6].  All the work was performed using royalty-free and
@@ -142,9 +144,11 @@ ont été utilisées::
   CA-QC  Québec
   CA-SK  Saskatchewan
   CA-YT  Yukon
+  GB     Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
+  JP     Japon
   NZ     Nouvelle-Zélande
-  US     États-Unis (d'Amérique)
-  UK     Royaume-Uni (de Grande-Bretagne et d'Irlande du Nord)
+  UN     Les Nations Unies
+  US     Les États-Unis d'Amérique
 
 Ce calendrier a été créé avec un ordinateur exécutant le système d'exploitation
 Debian® GNU/Linux® [5], [6].  Tout le travail a été effectué en utilisant les

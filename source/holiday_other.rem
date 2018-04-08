@@ -216,12 +216,24 @@
   # https://tauday.com/
   REM  Jun 28 +1 PRIORITY 1000 \
     MSG %"[babel("Tau Day (6.28)", "Jour de tau (6.28)")]%" %b%
+
   # Pi Approximation Day
   # https://en.wikipedia.org/wiki/Pi_Day
   # http://piapproximationday.com/
   REM  Jul 22 +1 PRIORITY 1000 \
     MSG %"[babel("Pi Approximation Day (22/7)", \
       "Jour d'approximation pi (22/7)")]%" %b%
+
+  # National Preparedness Month is September 1st
+  # https://en.wikipedia.org/wiki/National_Preparedness_Month
+  REM  Sep 01 +1 PRIORITY 1000 \
+    MSG %"[babel("National Preparedness Month (US)", \
+      "Mois national de la préparation (US)")]%" %b%
+  # Disaster Prevention Day (JP) is September 1st
+  # https://en.wikipedia.org/wiki/Disaster_Prevention_Day
+  REM  Sep 01 +1 PRIORITY 1000 \
+    MSG %"[babel("Disaster Prevention Day (JP)", \
+      "Journée de prévention des catastrophes (JP)")]%" %b%
 
   # The Day of the Programmer is the 256th day of the year
   # https://en.wikipedia.org/wiki/Day_of_the_Programmer
@@ -247,6 +259,12 @@
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Software Freedom Day", \
         "Journée de la liberté des logiciels")]%" %b%
+
+  # International Day for Disaster Reduction is October 13th
+  # https://en.wikipedia.org/wiki/International_Day_for_Disaster_Reduction
+  REM  Oct 13 +1 PRIORITY 1000 \
+    MSG %"[babel("International Day for Disaster Reduction (UN)", \
+      "Journée internationale de la prévention des catastrophes (UN)")]%" %b%
 
   # Sputnik 1 was launched on October 4th, 1957
   # https://en.wikipedia.org/wiki/Sputnik_1

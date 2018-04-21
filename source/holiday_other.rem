@@ -191,6 +191,11 @@
       MSG %"[babel("Administrative Professionals' Day", \
         "Journée des professionnels de l'administration")]%" %b%
 
+  # Astronomy Day is the Saturday closest to the quarter moon between mid-April
+  # and mid-May and the Saturday closest to the quarter moon between
+  # mid-September and mid-October
+  # https://en.wikipedia.org/wiki/Astronomy_Day
+
   # International Anti-Bullying Day is May 4th
   # https://en.wikipedia.org/wiki/Anti-Bullying_Day
   REM  May 04 +1 PRIORITY 1000 \

@@ -83,12 +83,13 @@
       MSG %"[babel("MS Bike Tour", "Vélotour SP")]%" %b%
 
   # OARC Hamfest is the 1st Saturday after Labour Day
-  # OARC Portable Station Demo is the 1st Saturday after the OARC Hamfest
+  # OARC Portable Station Demo is the 1st or 2nd Saturday after the OARC
+  # Hamfest
   # http://oarc.net/fleamarket/
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 AT 07:30 +60 DURATION 3:00 \
       MSG %"[babel("OARC Hamfest", "Hamfest OARC")]%" %b%
-  REM  Mon Sep [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Mon Sep [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 AT 08:00 +60 \
       MSG %"[babel("OARC Portable Station Demo", \
         "Demo des Stations Portatif OARC")]%" %b%

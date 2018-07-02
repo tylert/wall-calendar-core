@@ -162,7 +162,7 @@
     IF Sunday == wkdaynum(trigdate())
       REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
-      REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 \
+      OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day (Observed)", \
           "Fête du Canada (observé)")]%" %b%
     ELSE

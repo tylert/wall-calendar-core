@@ -9,16 +9,16 @@
   # https://en.wikipedia.org/wiki/New_Year's_Day
   REM  Jan 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF Saturday == wkdaynum(trigdate())
-    REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
+    OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
       MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
-    OMIT [trigger(trigdate()+2)] +1 PRIORITY 1000 \
+    REM  [trigger(trigdate()+2)] +1 PRIORITY 1000 \
       MSG %"[babel("New Year's Day (Observed)", \
         "Jour de l'an (observé)")]%" %b%
   ELSE
     IF Sunday == wkdaynum(trigdate())
-      REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
+      OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
         MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
-      OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \
+      REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 \
         MSG %"[babel("New Year's Day (Observed)", \
           "Jour de l'an (observé)")]%" %b%
     ELSE
@@ -134,7 +134,7 @@
 
   # Quebec's National Holiday is June 24th
   # https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
-  REM  Jun 24 +1 PRIORITY 1000 \
+  OMIT Jun 24 +1 PRIORITY 1000 \
     MSG %"[babel("Quebec's National Holiday", \
       "Fête nationale des Québecois")]%" %b%
 
@@ -154,15 +154,15 @@
   # https://en.wikipedia.org/wiki/Canada_Day
   REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF Saturday == wkdaynum(trigdate())
-    REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
+    OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
       MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
-    OMIT [trigger(trigdate()+2)] +1 PRIORITY 1000 \
+    REM  [trigger(trigdate()+2)] +1 PRIORITY 1000 \
       MSG %"[babel("Canada Day (Observed)", "Fête du Canada (observé)")]%" %b%
   ELSE
     IF Sunday == wkdaynum(trigdate())
-      REM  [trigger(trigdate())]   +1 PRIORITY 1000 \
+      OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
-      OMIT [trigger(trigdate()+1)] +1 PRIORITY 1000 \
+      REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 \
         MSG %"[babel("Canada Day (Observed)", \
           "Fête du Canada (observé)")]%" %b%
     ELSE
@@ -237,6 +237,7 @@
       MSG %"[babel("Labour Day", "Fête du travail")]%" %b%
 
   # Canadian Thanksgiving is the 2nd Monday in October
+  # https://en.wikipedia.org/wiki/Thanksgiving#Canada
   # Oktoberfest (CA-ON) starts the Friday before Thanksgiving and ends the
   # Saturday after
   # https://en.wikipedia.org/wiki/Oktoberfest

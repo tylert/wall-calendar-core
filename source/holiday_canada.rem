@@ -38,16 +38,9 @@
     MSG %"[babel("National Flag of Canada Day", \
       "Jour du drapeau national du Canada")]%" %b%
 
-  # The 2nd Monday in February is observed in 1 provinces and 0 territories
-  #   CA-BC:  Family Day;  statutory
-  # https://en.wikipedia.org/wiki/Family_Day
-  # https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
-  REM  Mon Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Family Day (CA-BC)", "Fête de la famille (CA-BC)")]%" %b%
-
-  # The 3rd Monday in February is observed in 5 provinces and 0 territories
+  # The 3rd Monday in February is observed in 6 provinces and 0 territories
   #   CA-AB:  Family Day;  statutory
+  #   CA-BC:  Family Day;  statutory
   #   CA-MB:  Louis Riel Day;  statutory
   #   CA-ON:  Family Day;  statutory
   #   CA-NS:  Nova Scotia Heritage Day;  ?
@@ -57,8 +50,8 @@
   # https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Family Day (CA-AB, CA-ON, CA-SK)", \
-        "Fête de la famille (CA-AB, CA-ON, CA-SK)")]%" %b%
+      MSG %"[babel("Family Day (CA-AB, CA-BC, CA-ON, CA-SK)", \
+        "Fête de la famille (CA-AB, CA-BC, CA-ON, CA-SK)")]%" %b%
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Louis Riel Day (CA-MB)", \
         "Journée Louis Riel (CA-MB)")]%" %b%

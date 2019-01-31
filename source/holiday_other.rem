@@ -178,6 +178,13 @@
       MSG %"[babel("International Day of Pink", \
         "Journée internationale de la rose")]%" %b%
 
+  # Dark-Sky Week is the week of the new moon in April
+  # https://en.wikipedia.org/wiki/National_Dark-Sky_Week
+  # REM  [trigger(moondate(0))] SATISFY 1
+  # IF monnum(trigdate()) == April
+  # ... wkdaynum() == Sunday
+  #   MSG %"[babel("Dark-Sky Week", "")]%" %b%
+
   # Earth Day is April 22nd
   # https://en.wikipedia.org/wiki/Earth_Day
   REM  Apr 22 +1 PRIORITY 1000 \

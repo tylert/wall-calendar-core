@@ -16,46 +16,47 @@
 
 sudo apt-get --yes install build-essential
 
-REMIND_VERSION='remind-03.01.15'
-REMIND_GPG_KEY_ID='126F42E0'
-TEMP_LOCATION='tmp'
-TARGET_LOCATION='/usr/local/bin'
+remind_version='remind-03.01.16'
+remind_gpg_key_id='126F42E0'
+temp_location='tmp'
+target_location='/usr/local/bin'
 
 # Prepare stuff.
-mkdir --parents ${TEMP_LOCATION}
-pushd ${TEMP_LOCATION}
+mkdir --parents ${temp_location}
+pushd ${temp_location}
 
 # Fetch stuff.
-wget http://www.roaringpenguin.com/files/download/${REMIND_VERSION}.tar.gz.sig
-wget http://www.roaringpenguin.com/files/download/${REMIND_VERSION}.tar.gz
-gpg --recv-key ${REMIND_GPG_KEY_ID}
-gpg --export --armor --no-emit-version --no-comment ${REMIND_GPG_KEY_ID} >\
-    ${REMIND_GPG_KEY_ID}.gpg.pub.txt
+location=https://dianne.skoll.ca/projects/remind/download
+wget ${location}/${remind_version}.tar.gz.sig
+wget ${location}/${remind_version}.tar.gz
+gpg --recv-key ${remind_gpg_key_id}
+gpg --export --armor --no-emit-version --no-comment ${remind_gpg_key_id} >\
+    ${remind_gpg_key_id}.gpg.pub.txt
 
 # Verify stuff.
-gpg --verify ${REMIND_VERSION}.tar.gz.sig ${REMIND_VERSION}.tar.gz
+gpg --verify ${remind_version}.tar.gz.sig ${remind_version}.tar.gz
 read
 
 # Extract stuff.
-tar --extract --verbose --gzip --file ${REMIND_VERSION}.tar.gz
+tar --extract --verbose --gzip --file ${remind_version}.tar.gz
 
 # Build French stuff.
-pushd ${REMIND_VERSION}
+pushd ${remind_version}
 # XXX FIXME XXX hack FOrd() in src/funcs.c to force the strings to be French
 make "LANGDEF=-DLANG=FRENCH"
-sudo cp src/remind ${TARGET_LOCATION}/remind.fr
-sudo cp src/rem2ps ${TARGET_LOCATION}/rem2ps.fr
+sudo cp src/remind ${target_location}/remind.fr
+sudo cp src/rem2ps ${target_location}/rem2ps.fr
 
 # Build English stuff.
 make clean
 make "LANGDEF=-DLANG=ENGLISH"
-sudo cp src/remind ${TARGET_LOCATION}/remind.en
-sudo cp src/rem2ps ${TARGET_LOCATION}/rem2ps.en
+sudo cp src/remind ${target_location}/remind.en
+sudo cp src/rem2ps ${target_location}/rem2ps.en
 popd
 
 # Clean up stuff.
 popd
-# rm --recursive --force ${TEMP_LOCATION}
+# rm --recursive --force ${temp_location}
 
 # Naming the newly-built binaries in this manner works with the provided
 # makefile to call the appropriate remind and rem2ps backend binaries

@@ -62,34 +62,6 @@ software tools used include the following::
   git [g], for keeping a record of all the changes made
   LibreOffice [h], to typeset this note
 
-References::
-
-  [1] http://arrl.org/shop/2013-ARRL-Calendar
-  [2] http://arrl.org/contest-calendar
-  [3] http://hamvention.org
-  [4] http://en.wikipedia.org/wiki/Public_holidays_in_Canada
-  [5] http://debian.org
-  [6] http://linux.com
-  [7] http://roaringpenguin.com/products/remind
-  [8] http://inkscape.org
-  [9] http://pdflabs.com/tools/pdftk-the-pdf-toolkit
-  [a] http://gnu.org/software/ghostscript
-  [b] http://gnu.org/software/a2ps
-  [c] http://gnu.org/software/sed
-  [d] http://gnu.org/software/bash
-  [e] http://gnu.org/software/make
-  [f] http://vim.org
-  [g] http://git-scm.com
-  [h] http://libreoffice.org
-  [i] http://cq160.com
-  [j] http://cqwpxrtty.com
-  [k] http://cqwpx.com
-  [l] http://cqww-vhf.com
-  [m] http://cqwwrtty.com
-  [n] http://cqww.com
-  [o] http://azscqrpions.com/fybo2009rules.html
-  [p] http://www.farmersalmanac.com/astronomy/fullmoonnames.html
-
 Dayton Hamvention® is a registered trademark of Dayton Amateur Radio
 Association, Inc.  Debian® is a registered trademark of Software in the Public
 Interest, Inc.  Linux® is a registered trademark of Linus Torvalds.  Wikipedia®
@@ -168,7 +140,18 @@ License (GPL).  Les outils logiciels utilisés sont les suivantes::
   git [g], pour garder une trace de toutes les modifications apportées
   LibreOffice [h], pour composer cette note
 
-Références::
+Dayton Hamvention® est une marque déposée de Dayton Amateur Radio Association,
+Inc.  Debian® est une marque déposée de Software in the Public Interest, Inc.
+Linux® est une marque déposée de Linus Torvalds.  Wikipedia® est une marque
+déposée de Wikimedia Foundation, Inc., une organisation à but non lucratif.
+Tous les logiciels GNU et les licences GPL sont © Free Software Foundation,
+Inc.
+
+This calendar is also available in English.
+
+---
+
+References/Références::
 
   [1] http://arrl.org/shop/2013-ARRL-Calendar
   [2] http://arrl.org/contest-calendar
@@ -176,7 +159,7 @@ Références::
   [4] http://en.wikipedia.org/wiki/Public_holidays_in_Canada
   [5] http://debian.org
   [6] http://linux.com
-  [7] http://roaringpenguin.com/products/remind
+  [7] https://dianne.skoll.ca/projects/remind/
   [8] http://inkscape.org
   [9] http://pdflabs.com/tools/pdftk-the-pdf-toolkit
   [a] http://gnu.org/software/ghostscript
@@ -195,12 +178,3 @@ Références::
   [n] http://cqww.com
   [o] http://azscqrpions.com/fybo2009rules.html
   [p] http://www.farmersalmanac.com/astronomy/fullmoonnames.html
-
-Dayton Hamvention® est une marque déposée de Dayton Amateur Radio Association,
-Inc.  Debian® est une marque déposée de Software in the Public Interest, Inc.
-Linux® est une marque déposée de Linus Torvalds.  Wikipedia® est une marque
-déposée de Wikimedia Foundation, Inc., une organisation à but non lucratif.
-Tous les logiciels GNU et les licences GPL sont © Free Software Foundation,
-Inc.
-
-This calendar is also available in English.

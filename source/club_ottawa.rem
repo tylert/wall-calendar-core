@@ -28,36 +28,14 @@
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:00 +60 \
       DURATION 02:00 MSG %"[babel("WCARC Meeting", "Meeting de WCARC")]%" %b%
 
-  # OVMRC meetings are the 3rd Wednesday of each month except July and August
-  # http://ovmrc.on.ca
-  REM  Wed [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-  IF monnum(trigdate()) != July && monnum(trigdate()) != August
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 01:30 MSG %"[babel("OVMRC Meeting", "Meeting de OVMRC")]%" %b%
-  ENDIF
-
 
 # Local amateur radio-related volunteer events
-
-  # Lanark Highlands Forest Rally LHFR is the 1st weekend in May
-  # http://lhfr.ca
-  REM  Sat May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
-      MSG %"[babel("*LHFR*", "*LHFR*")]%" %b%
-    REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 \
-      MSG %"[babel("*LHFR*", "*LHFR*")]%" %b%
 
   # CN Cycle for CHEO is the 1st weekend in May
   # https://cncycle.ca
   REM  Sun May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 07:30 +60 DURATION 06:00 \
       MSG %"[babel("CN Cycle for CHEO", "Le Défi CN pour le CHEO")]%" %b%
-
-  # Lap the Gats is the last weekend in June (maybe, kinda)
-  # http://lapthegats.org
-  REM  Sun Jul 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
-      MSG %"[babel("Lap the Gats", "Défi Vélo")]%" %b%
 
   # Rideau Lakes Cycle Tour RLCT is (usually) the 1st or 2nd weekend in
   # June since 1972
@@ -67,20 +45,6 @@
       MSG %"[babel("*RLCT*", "*RLCT*")]%" %b%
     REM [trigger(trigdate()+1)] +1 PRIORITY 2000 \
       MSG %"[babel("*RLCT*", "*RLCT*")]%" %b%
-
-  # Galway Cavendish Forest Rally (GCFR) is the 2nd weekend in July
-  # http://pmscrally.com/gcfr/
-  REM  Fri Jul [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
-      MSG %"[babel("*GCFR*", "*GCFR*")]%" %b%
-    REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 \
-      MSG %"[babel("*GCFR*", "*GCFR*")]%" %b%
-
-  # MS Bike Tour:  Ottawa to Cornwall
-  # http://mssoc.convio.net/site/TR?fr_id=4906&pg=entry
-  REM  Sat Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
-      MSG %"[babel("MS Bike Tour", "Vélotour SP")]%" %b%
 
   # OARC Hamfest is the 1st Saturday after Labour Day
   # OARC Portable Station Demo is the 1st or 2nd Saturday after the OARC

@@ -37,8 +37,9 @@
 
   # Nowruz is March 21st
   # https://en.wikipedia.org/wiki/Nowruz
+  # https://fr.wikipedia.org/wiki/Norouz
   REM  Mar 21 +1 PRIORITY 1000 \
-    MSG %"[babel("Nowruz", "Nowruz")]%" %b%
+    MSG %"[babel("Nowruz", "Norouz")]%" %b%
 
   # Pahela Baishakh (BD) is April 14th
   # https://en.wikipedia.org/wiki/Pahela_Baishakh
@@ -202,6 +203,7 @@
   # and mid-May and the Saturday closest to the quarter moon between
   # mid-September and mid-October
   # https://en.wikipedia.org/wiki/Astronomy_Day
+  # XXX FIXME
 
   # International Anti-Bullying Day is May 4th
   # https://en.wikipedia.org/wiki/Anti-Bullying_Day

@@ -7,8 +7,15 @@
 
   # Epiphany is January 6th
   # https://en.wikipedia.org/wiki/Epiphany_(holiday)
+  # https://fr.wikipedia.org/wiki/%C3%89piphanie
   REM  Jan 06 +1 PRIORITY 1000 \
     MSG %"[babel("Epiphany", "Epiphanie")]%" %b%
+
+  # Conversion of St. Paul is January 25th
+  # https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
+  # https://fr.wikipedia.org/wiki/Conversion_de_Paul
+  REM  Jan 25 +1 PRIORITY 1000 \
+    MSG %"[babel("Conversion of St. Paul", "Conversion de Paul")]%" %b%
 
   # St. Valentine's Day is February 14th
   # https://en.wikipedia.org/wiki/Valentine's_Day

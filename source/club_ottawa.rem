@@ -5,7 +5,7 @@
 
 # Local amateur radio club meetings
 
-  # OARC exec meetings are the 1st Wednesday of each month except July and
+  # Ottawa Amateur Radio Club executive meetings are the 1st Wednesday of each month except July and
   # August
   REM  Wed [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
@@ -14,19 +14,25 @@
         "Meeting de OARC exécutif")]%" %b%
   ENDIF
 
-  # OARC meetings are the 2nd Wednesday of each month except July and August
-  # http://oarc.net
+  # Ottawa Amateur Radio Club meetings are the 2nd Wednesday of each month except July and August
+  # https://www.oarc.net/
   REM  Wed [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
       DURATION 02:30 MSG %"[babel("OARC Meeting", "Meeting de OARC")]%" %b%
   ENDIF
 
-  # WCARC meetings are the 3rd Monday of each month
-  # http://wcarc.on.ca
+  # West-Carleton Amateur Radio Club meetings are the 3rd Monday of each month
+  # https://wcarc.on.ca
   REM  Mon [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:00 +60 \
       DURATION 02:00 MSG %"[babel("WCARC Meeting", "Meeting de WCARC")]%" %b%
+
+  # Rideau Lakes Amateur Radio Club meetings are the 3rd Thursday of each month
+  # https://www.ve3rlr.ca/p/about.html
+  REM  Thu [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
+      DURATION 02:30 MSG %"[babel("RLARC Meeting", "Meeting de RLARC")]%" %b%
 
 
 # Local amateur radio-related volunteer events

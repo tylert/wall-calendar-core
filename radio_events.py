@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 from paper_cal import scan_for, WEDNESDAY, THURSDAY, WEEK1, WEEK2, WEEK3
 
 

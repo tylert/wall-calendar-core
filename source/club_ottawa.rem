@@ -5,8 +5,9 @@
 
 # Local amateur radio club meetings
 
-  # Ottawa Amateur Radio Club executive meetings are the 1st Wednesday of each month except July and
-  # August
+  # Ottawa Amateur Radio Club executive meetings are the 1st Wednesday of each
+  # month except July and August
+  # https://www.oarc.net/
   REM  Wed [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
@@ -14,7 +15,8 @@
         "Meeting de OARC exécutif")]%" %b%
   ENDIF
 
-  # Ottawa Amateur Radio Club meetings are the 2nd Wednesday of each month except July and August
+  # Ottawa Amateur Radio Club meetings are the 2nd Wednesday of each month
+  # except July and August
   # https://www.oarc.net/
   REM  Wed [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August

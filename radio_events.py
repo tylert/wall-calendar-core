@@ -24,7 +24,7 @@ def main():
   # Rideau Lakes Amateur Radio Club meetings are the 3rd Thursday of each month
   # https://www.ve3rlr.ca/p/about.html
   for year in (2020, 2021):
-      for month in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12):
+      for month in range(1, 13):
           print(scan_for(THURSDAY, year, month, WEEK3), end='')
           print(':  RLARC Meeting')
 

@@ -10,8 +10,6 @@ def moon_phase(year=date.today().year, month=date.today().month,
     '''
     '''
 
-    # http://rhodesmill.org/pyephem/quick.html#phases-of-the-moon
-    # http://stackoverflow.com/questions/2526815/moon-lunar-phase-algorithm
     # http://www.ben-daglish.net/moon.shtml
 
     moon_date = date(year, month, day)
@@ -49,6 +47,13 @@ LENGTH_OF_WEEK = 7
 
 (WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
 DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+# https://en.wikipedia.org/wiki/Sexagenary_cycle
+SPINS = ['陽', '陰']  # year mod 2
+HEAVENLY_STEMS = ['庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁', '戊', '己']  # year mod 10
+MAJOR_ELEMENTS = ['金', '金', '水', '水', '木', '木', '火', '火', '土', '土']  # year mod 10
+CHINESE_ZODIAC = ['猴', '雞', '狗', '豬', '鼠', '牛', '虎', '兔', '龍', '蛇', '馬', '羊']  # year mod 12
+EARTHLY_BRANCHES = ['申', '酉', '戌', '亥', '子', '丑', '寅', '卯', '辰', '巳', '午', '未']  # year mod 12
 
 
 def scan_for(desired_weekday, year=date.today().year,
@@ -89,3 +94,82 @@ def is_leap(year):
 
 if __name__ == '__main__':
     print(moon_phase(2020, 1, 7))
+
+
+# Seasons and Moon Phases
+# https://rhodesmill.org/skyfield/examples.html#what-phase-is-the-moon-tonight
+# https://rhodesmill.org/skyfield/almanac.html#the-seasons
+
+# Chinese New Year
+# https://humanoriginproject.com/the-chinese-calendar-how-to-calculate-chinese-new-year/
+# Chinese New Year falls between January 21 and February 21.
+# The precise date is the second new moon after the December solstice (December 21).
+
+# Easter
+# https://www.timeanddate.com/calendar/determining-easter-date.html
+# https://www.timeanddate.com/astronomy/moon/pink.html
+# https://www.assa.org.au/edm
+
+# 陽 = yang
+# 陰 = yin
+
+# 庚 = white metal, geng
+# 辛 = wrought metal, xin
+# 金 = metal
+# 西 = west
+
+# 壬 = black running water, ren
+# 癸 = stagnant water, gui
+# 水 = water
+# 北 = north
+
+# 甲 = green shield wood, jia
+# 乙 = timber wood, yi
+# 木 = wood
+# 東 = east
+
+# 丙 = red fire, bing
+# 丁 = artificial fire, ding
+# 火 = fire
+# 南 = south
+
+# 戊 = yellow earth, wu
+# 己 = pottery, ji
+# 土 = earth
+# 中 = middle
+
+# 猴 = monkey, hou
+# 申 = shen
+
+# 雞 = rooster, ji
+# 酉 = you
+
+# 狗 = dog, gou
+# 戌 = xu
+
+# 豬 = pig, zhu
+# 亥 = hai
+
+# 鼠 = rat, shu
+# 子 = zi
+
+# 牛 = ox, niu
+# 丑 = chou
+
+# 虎 = tiger, hu
+# 寅 = yin
+
+# 兔 = rabbit, tu
+# 卯 = mao
+
+# 龍 = dragon, long
+# 辰 = chen
+
+# 蛇 = snake, she
+# 巳 = si
+
+# 馬 = horse, ma
+# 午 = wu
+
+# 羊 = goat, yang
+# 未 = wei

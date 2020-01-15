@@ -5,28 +5,6 @@ from datetime import date, timedelta
 from math import ceil, floor, sin
 
 
-LENGTH_OF_WEEK = 7
-(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(
-    LENGTH_OF_WEEK)
-
-(WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
-DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
-# 0 = new ( ), 8 = first (D), 15 = full (O), 22 = last (C), 29 = end
-(NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
-
-# https://en.wikipedia.org/wiki/Sexagenary_cycle
-SPINS = ['陽', '陰']  # year mod 2
-HEAVENLY_STEMS = ['庚', '辛', '壬', '癸', '甲',
-                  '乙', '丙', '丁', '戊', '己']  # year mod 10
-MAJOR_ELEMENTS = ['金', '金', '水', '水', '木',
-                  '木', '火', '火', '土', '土']  # year mod 10
-CHINESE_ZODIAC = ['猴', '雞', '狗', '豬', '鼠', '牛',
-                  '虎', '兔', '龍', '蛇', '馬', '羊']  # year mod 12
-EARTHLY_BRANCHES = ['申', '酉', '戌', '亥', '子', '丑',
-                    '寅', '卯', '辰', '巳', '午', '未']  # year mod 12
-
-
 def moon_phase(year=date.today().year, month=date.today().month,
                day=date.today().day):
     '''
@@ -62,18 +40,43 @@ def moon_phase(year=date.today().year, month=date.today().month,
     return (jul - jd + 30) % 30
 
 
+# 0 = new ( ), 8 = first (D), 15 = full (O), 22 = last (C), 29 = end
+(NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
+
+
 def scan_for_moon(desired_phase, year=date.today().year,
                   month=date.today().month, day=date.today().day,
                   last=False):
     '''
     '''
 
-    offset = moon_phase(year, month, day) - desired_phase
+    # XXX FIXME TODO Finish this!!!
+
+    offset = moon_phase(year=year, month=month, day=day) - desired_phase
 
     if offset < 9:
         offset += 0
     if offset > -9:
         offset -= 0
+
+
+# https://en.wikipedia.org/wiki/Sexagenary_cycle
+SPINS = ['陽', '陰']  # year mod 2
+HEAVENLY_STEMS = ['庚', '辛', '壬', '癸', '甲',
+                  '乙', '丙', '丁', '戊', '己']  # year mod 10
+MAJOR_ELEMENTS = ['金', '金', '水', '水', '木',
+                  '木', '火', '火', '土', '土']  # year mod 10
+CHINESE_ZODIAC = ['猴', '雞', '狗', '豬', '鼠', '牛',
+                  '虎', '兔', '龍', '蛇', '馬', '羊']  # year mod 12
+EARTHLY_BRANCHES = ['申', '酉', '戌', '亥', '子', '丑',
+                    '寅', '卯', '辰', '巳', '午', '未']  # year mod 12
+
+
+LENGTH_OF_WEEK = 7  # days
+(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(
+    LENGTH_OF_WEEK)
+(MON, TUE, WED, THU, FRI, SAT, SUN) = range(LENGTH_OF_WEEK)
+(WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
 
 
 def scan_for_day(desired_weekday, year=date.today().year,
@@ -85,9 +88,11 @@ def scan_for_day(desired_weekday, year=date.today().year,
     # https://dateutil.readthedocs.io/en/stable/rrule.html
 
     if last:
-        nearby_date = date(year, month, DAYS_IN_MONTH[month])
+        nearby_date = date(year, month, days_in_month(year=year, month=month))
     else:
         nearby_date = date(year, month, day)
+
+    # XXX FIXME TODO Exception if desired_weekday is too weird???
 
     offset = nearby_date.weekday() - (desired_weekday % LENGTH_OF_WEEK)
 
@@ -105,11 +110,31 @@ def scan_for_day(desired_weekday, year=date.today().year,
         return delta
 
 
-def is_leap(year):
+DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+FEBRUARY_LEAP_YEAR = 29
+(JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER,
+    NOVEMBER, DECEMBER) = range(1, 13, 1)
+(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
+
+
+def days_in_month(year=date.today().year, month=date.today().month):
     '''
     '''
 
-    # "year -> 1 if leap year, else 0."
+    # XXX FIXME TODO Add some better range checking!!!
+
+    if month == FEBRUARY and is_leap_year(year=year):
+        return FEBRUARY_LEAP_YEAR
+    else:
+        return DAYS_IN_MONTH[month]
+
+
+def is_leap_year(year=date.today().year):
+    '''
+    '''
+
+    # XXX FIXME TODO Add some better range checking!!!
+
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
 

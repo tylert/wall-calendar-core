@@ -1,7 +1,5 @@
 .DS_Store
 .*.sw?
-*.ps
-*.pdf
-doc_data.txt
-build/*.svg
-venv/
+.venv/
+__pycache__/
+*.py[co]

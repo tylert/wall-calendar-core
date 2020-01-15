@@ -25,19 +25,19 @@ used::
 
   AU     Australia
   BD     Bangladesh
-  CA-AB  Alberta
-  CA-BC  British Columbia
-  CA-MB  Manitoba
-  CA-NB  New Brunswick
-  CA-NL  Newfoundland and Labrador
-  CA-NS  Nova Scotia
-  CA-NT  Northwest Territories
-  CA-NU  Nunavut, ᓄᓇᕗᑦ
-  CA-ON  Ontario
-  CA-PE  Prince Edward Island
-  CA-QC  Quebec
-  CA-SK  Saskatchewan
-  CA-YT  Yukon
+  CA-AB  Canada - Alberta
+  CA-BC  Canada - British Columbia
+  CA-MB  Canada - Manitoba
+  CA-NB  Canada - New Brunswick
+  CA-NL  Canada - Newfoundland and Labrador
+  CA-NS  Canada - Nova Scotia
+  CA-NT  Canada - Northwest Territories
+  CA-NU  Canada - Nunavut, ᓄᓇᕗᑦ
+  CA-ON  Canada - Ontario
+  CA-PE  Canada - Prince Edward Island
+  CA-QC  Canada - Quebec
+  CA-SK  Canada - Saskatchewan
+  CA-YT  Canada - Yukon
   GB     United Kingdom of Great Britain and Northern Ireland
   JP     Japan
   NZ     New Zealand
@@ -103,19 +103,19 @@ ont été utilisées::
 
   AU     Australie
   BD     Bangladesh
-  CA-AB  Alberta
-  CA-BC  Colombie-Britannique
-  CA-MB  Manitoba
-  CA-NB  Nouveau Brunswick
-  CA-NL  Terre-Neuve-et-Labrador
-  CA-NS  Nouvelle-Écosse
-  CA-NT  Territoires du Nord-Ouest
-  CA-NU  Nunavut, ᓄᓇᕗᑦ
-  CA-ON  Ontario
-  CA-PE  Île-du-Prince-Édouard
-  CA-QC  Québec
-  CA-SK  Saskatchewan
-  CA-YT  Yukon
+  CA-AB  Canada - Alberta
+  CA-BC  Canada - Colombie-Britannique
+  CA-MB  Canada - Manitoba
+  CA-NB  Canada - Nouveau Brunswick
+  CA-NL  Canada - Terre-Neuve-et-Labrador
+  CA-NS  Canada - Nouvelle-Écosse
+  CA-NT  Canada - Territoires du Nord-Ouest
+  CA-NU  Canada - Nunavut, ᓄᓇᕗᑦ
+  CA-ON  Canada - Ontario
+  CA-PE  Canada - Île-du-Prince-Édouard
+  CA-QC  Canada - Québec
+  CA-SK  Canada - Saskatchewan
+  CA-YT  Canada - Yukon
   GB     Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
   JP     Japon
   NZ     Nouvelle-Zélande

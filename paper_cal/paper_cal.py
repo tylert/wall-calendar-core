@@ -5,6 +5,72 @@ from datetime import date, timedelta
 from math import ceil, floor, sin
 
 
+_LENGTH_OF_WEEK = 7  # days
+
+(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(
+    _LENGTH_OF_WEEK)
+(MON, TUE, WED, THU, FRI, SAT, SUN) = range(_LENGTH_OF_WEEK)
+(WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
+
+
+def scan_for_day(desired_weekday, year=date.today().year,
+                 month=date.today().month, day=date.today().day,
+                 last=False):
+    '''
+    '''
+
+    if last:
+        nearby_date = date(year, month, days_in_month(year=year, month=month))
+    else:
+        nearby_date = date(year, month, day)
+
+    # XXX FIXME TODO Exception if desired_weekday is too weird???
+
+    offset = nearby_date.weekday() - (desired_weekday % _LENGTH_OF_WEEK)
+
+    if offset < -3:
+        offset += _LENGTH_OF_WEEK
+    if offset > 3:
+        offset -= _LENGTH_OF_WEEK
+
+    delta = nearby_date - timedelta(days=offset)
+
+    # Jump back into the correct month if we managed to leave it
+    if last and delta.month != nearby_date.month:
+        return delta - timedelta(days=_LENGTH_OF_WEEK)
+    else:
+        return delta
+
+
+_DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+_FEBRUARY_LEAP_YEAR = 29
+
+(JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER,
+    NOVEMBER, DECEMBER) = range(1, 13, 1)
+(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
+
+
+def days_in_month(year=date.today().year, month=date.today().month):
+    '''
+    '''
+
+    # XXX FIXME TODO Add some better range checking!!!
+
+    if month == FEBRUARY and is_leap_year(year=year):
+        return _FEBRUARY_LEAP_YEAR
+    else:
+        return _DAYS_IN_MONTH[month]
+
+
+def is_leap_year(year=date.today().year):
+    '''
+    '''
+
+    # XXX FIXME TODO Add some better range checking!!!
+
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+
 def moon_phase(year=date.today().year, month=date.today().month,
                day=date.today().day):
     '''
@@ -72,72 +138,6 @@ EARTHLY_BRANCHES = ['申', '酉', '戌', '亥', '子', '丑',
                     '寅', '卯', '辰', '巳', '午', '未']  # year mod 12
 
 
-LENGTH_OF_WEEK = 7  # days
-(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(
-    LENGTH_OF_WEEK)
-(MON, TUE, WED, THU, FRI, SAT, SUN) = range(LENGTH_OF_WEEK)
-(WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
-
-
-def scan_for_day(desired_weekday, year=date.today().year,
-                 month=date.today().month, day=date.today().day,
-                 last=False):
-    '''
-    '''
-
-    # https://dateutil.readthedocs.io/en/stable/rrule.html
-
-    if last:
-        nearby_date = date(year, month, days_in_month(year=year, month=month))
-    else:
-        nearby_date = date(year, month, day)
-
-    # XXX FIXME TODO Exception if desired_weekday is too weird???
-
-    offset = nearby_date.weekday() - (desired_weekday % LENGTH_OF_WEEK)
-
-    if offset < -3:
-        offset += LENGTH_OF_WEEK
-    if offset > 3:
-        offset -= LENGTH_OF_WEEK
-
-    delta = nearby_date - timedelta(days=offset)
-
-    # Jump back into the correct month if we managed to leave it
-    if last and delta.month != nearby_date.month:
-        return delta - timedelta(days=LENGTH_OF_WEEK)
-    else:
-        return delta
-
-
-DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-FEBRUARY_LEAP_YEAR = 29
-(JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER,
-    NOVEMBER, DECEMBER) = range(1, 13, 1)
-(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
-
-
-def days_in_month(year=date.today().year, month=date.today().month):
-    '''
-    '''
-
-    # XXX FIXME TODO Add some better range checking!!!
-
-    if month == FEBRUARY and is_leap_year(year=year):
-        return FEBRUARY_LEAP_YEAR
-    else:
-        return DAYS_IN_MONTH[month]
-
-
-def is_leap_year(year=date.today().year):
-    '''
-    '''
-
-    # XXX FIXME TODO Add some better range checking!!!
-
-    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
-
-
 if __name__ == '__main__':
     print(moon_phase(2020, 1, 7))
     # last Saturday in January 2020
@@ -145,6 +145,8 @@ if __name__ == '__main__':
     # 3rd Saturday in January 2020
     print(scan_for_day(SATURDAY, 2020, 1, WEEK3))
 
+
+# https://dateutil.readthedocs.io/en/stable/rrule.html
 
 # Seasons and Moon Phases
 # https://rhodesmill.org/skyfield/examples.html#what-phase-is-the-moon-tonight

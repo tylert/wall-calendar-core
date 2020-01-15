@@ -27,7 +27,7 @@ def main():
     for year in (2020, 2021):
         for month in range(1, 13):
             print(scan_for_day(THURSDAY, year, month, WEEK3), end='')
-            print(':  1930-220h RLARC Meeting')
+            print(':  1930-2200h RLARC Meeting')
 
     # Daylight Savings Time starts on the 2nd Sunday in March
     # Before 2007, old DST started on the 1st Sunday in April

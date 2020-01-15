@@ -20,9 +20,10 @@ def scan_for_day(desired_weekday, year=date.today().year,
     '''
 
     if last:
-        nearby_date = date(year, month, days_in_month(year=year, month=month))
+        nearby_date = date(year=year, month=month,
+                           day=days_in_month(year=year, month=month))
     else:
-        nearby_date = date(year, month, day)
+        nearby_date = date(year=year, month=month, day=day)
 
     # XXX FIXME TODO Exception if desired_weekday is too weird???
 
@@ -78,7 +79,7 @@ def moon_phase(year=date.today().year, month=date.today().month,
 
     # http://www.ben-daglish.net/moon.shtml
 
-    moon_date = date(year, month, day)
+    moon_date = date(year=year, month=month, day=day)
 
     n = floor(12.37 * (moon_date.year - 1900 +
                        ((1.0 * moon_date.month - 0.5) / 12.0)))

@@ -139,12 +139,7 @@ EARTHLY_BRANCHES = ['申', '酉', '戌', '亥', '子', '丑',
                     '寅', '卯', '辰', '巳', '午', '未']  # year mod 12
 
 
-if __name__ == '__main__':
-    print(moon_phase(2020, 1, 7))
-    # last Saturday in January 2020
-    print(scan_for_day(SATURDAY, 2020, 1, 30, last=True))
-    # 3rd Saturday in January 2020
-    print(scan_for_day(SATURDAY, 2020, 1, WEEK3))
+# if __name__ == '__main__':
 
 
 # https://dateutil.readthedocs.io/en/stable/rrule.html

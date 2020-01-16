@@ -11,7 +11,7 @@ from .paper_cal import (JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY,
                         JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV,
                         DEC)
 
-from .paper_cal import (moon_phase, scan_for_moon)
+from .paper_cal import (moon_phase, closest_moon)
 
 # Useful constants for moon phase names/indexes
 from .paper_cal import (NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON,

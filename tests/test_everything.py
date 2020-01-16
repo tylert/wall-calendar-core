@@ -43,9 +43,11 @@ class TestDays:
                            WEEK1) == date(2020, JANUARY, 4)
         assert closest_day(MONDAY, 2020, JULY, 24) == date(2020, JULY, 27)
 
-    def test_invalid_date_handling(self):
+    def test_some_exception_handling(self):
         with pytest.raises(ValueError):
             assert closest_day(MONDAY, 2020, 13, 32)
+        with pytest.raises(TypeError):
+            assert closest_day()
 
 
 class TestMoons:
@@ -61,3 +63,13 @@ class TestMoons:
     def test_weird_date_exception_handling(self):
         with pytest.raises(ValueError):
             assert moon_phase(2020, 13, 32)
+
+    def test_some_nearby_moons(self):
+        assert closest_moon(FULL_MOON, 2020, JANUARY,
+                            7) == date(2020, JANUARY, 9)
+        assert closest_moon(FULL_MOON, 2020, JANUARY,
+                            15) == date(2020, JANUARY, 9)
+        assert closest_moon(NEW_MOON, 2020, JANUARY,
+                            1) == date(2019, DECEMBER, 25)
+        # assert closest_moon(NEW_MOON, 2020, JANUARY,
+        #                     20) == date(2019, JANUARY, 24)

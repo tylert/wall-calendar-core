@@ -111,20 +111,22 @@ def moon_phase(year=date.today().year, month=date.today().month,
 (NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
 
 
-def scan_for_moon(desired_phase, year=date.today().year,
-                  month=date.today().month, day=date.today().day,
-                  last=False):
+def closest_moon(desired_phase, year=date.today().year,
+                 month=date.today().month, day=date.today().day,
+                 last=False):
     '''
     '''
 
     # XXX FIXME TODO Finish this!!!
 
-    offset = moon_phase(year=year, month=month, day=day) - desired_phase
+    nearby_date = date(year=year, month=month, day=day)
 
-    if offset < 9:
-        offset += 0
-    if offset > -9:
-        offset -= 0
+    offset = moon_phase(year=year, month=month, day=day) - (desired_phase % 30)
+
+    found_date = nearby_date - timedelta(days=offset)
+
+    # Jump back into the correct month if we managed to leave it
+    return found_date
 
 
 # https://en.wikipedia.org/wiki/Sexagenary_cycle

@@ -19,11 +19,11 @@ class TestDays:
         assert days_in_month(2024, FEBRUARY) == 29  # leap year
 
     def test_some_leap_years(self):
-        assert is_leap_year(2020) == True
-        assert is_leap_year(2021) == False
-        assert is_leap_year(2022) == False
-        assert is_leap_year(2023) == False
-        assert is_leap_year(2024) == True
+        assert is_leap_year(2020) is True
+        assert is_leap_year(2021) is False
+        assert is_leap_year(2022) is False
+        assert is_leap_year(2023) is False
+        assert is_leap_year(2024) is True
 
     def test_some_nearby_days(self):
         # the last Saturday in January 2020
@@ -32,11 +32,21 @@ class TestDays:
         # the 4th Saturday in January 2020
         assert scan_for_day(SATURDAY, 2020, JANUARY,
                             WEEK4) == date(2020, JANUARY, 25)
+        # the last Friday in January 2020
+        assert scan_for_day(FRIDAY, 2020, JANUARY, 30,
+                            last=True) == date(2020, JANUARY, 31)
+        # the 4th Friday in January 2020
+        assert scan_for_day(FRIDAY, 2020, JANUARY,
+                            WEEK4) == date(2020, JANUARY, 24)
         # the 3rd Saturday in January 2020
         assert scan_for_day(SATURDAY, 2020, JANUARY,
                             WEEK3) == date(2020, JANUARY, 18)
         # the Monday closest to July 24, 2020
         assert scan_for_day(MONDAY, 2020, JULY, 24) == date(2020, JULY, 27)
+
+    def test_invalid_date_handling(self):
+        with pytest.raises(ValueError):
+            assert scan_for_day(MONDAY, 2020, 13, 32)
 
 
 class TestMoons:

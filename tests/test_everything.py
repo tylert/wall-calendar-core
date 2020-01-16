@@ -27,25 +27,25 @@ class TestDays:
         assert days_in_month(2024, FEBRUARY) == 29
 
     def test_some_nearby_days(self):
-        assert scan_for_day(SATURDAY, 2020, JANUARY, 30,
-                            last=True) == date(2020, JANUARY, 25)
-        assert scan_for_day(SATURDAY, 2020, JANUARY,
-                            WEEK4) == date(2020, JANUARY, 25)
-        assert scan_for_day(FRIDAY, 2020, JANUARY, 30,
-                            last=True) == date(2020, JANUARY, 31)
-        assert scan_for_day(FRIDAY, 2020, JANUARY,
-                            WEEK4) == date(2020, JANUARY, 24)
-        assert scan_for_day(SATURDAY, 2020, JANUARY,
-                            WEEK3) == date(2020, JANUARY, 18)
-        assert scan_for_day(SATURDAY, 2020, JANUARY,
-                            WEEK2) == date(2020, JANUARY, 11)
-        assert scan_for_day(SATURDAY, 2020, JANUARY,
-                            WEEK1) == date(2020, JANUARY, 4)
-        assert scan_for_day(MONDAY, 2020, JULY, 24) == date(2020, JULY, 27)
+        assert closest_day(SATURDAY, 2020, JANUARY, 30,
+                           last=True) == date(2020, JANUARY, 25)
+        assert closest_day(SATURDAY, 2020, JANUARY,
+                           WEEK4) == date(2020, JANUARY, 25)
+        assert closest_day(FRIDAY, 2020, JANUARY, 30,
+                           last=True) == date(2020, JANUARY, 31)
+        assert closest_day(FRIDAY, 2020, JANUARY,
+                           WEEK4) == date(2020, JANUARY, 24)
+        assert closest_day(SATURDAY, 2020, JANUARY,
+                           WEEK3) == date(2020, JANUARY, 18)
+        assert closest_day(SATURDAY, 2020, JANUARY,
+                           WEEK2) == date(2020, JANUARY, 11)
+        assert closest_day(SATURDAY, 2020, JANUARY,
+                           WEEK1) == date(2020, JANUARY, 4)
+        assert closest_day(MONDAY, 2020, JULY, 24) == date(2020, JULY, 27)
 
     def test_invalid_date_handling(self):
         with pytest.raises(ValueError):
-            assert scan_for_day(MONDAY, 2020, 13, 32)
+            assert closest_day(MONDAY, 2020, 13, 32)
 
 
 class TestMoons:

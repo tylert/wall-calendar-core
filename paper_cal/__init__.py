@@ -1,4 +1,4 @@
-from .paper_cal import (scan_for_day, days_in_month, is_leap_year)
+from .paper_cal import (is_leap_year, days_in_month, closest_day)
 
 # Useful constants for day/week names/indexes
 from .paper_cal import (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY,

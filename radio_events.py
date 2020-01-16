@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-from paper_cal import scan_for_day, WEDNESDAY, THURSDAY, WEEK1, WEEK2, WEEK3
+from paper_cal import closest_day, WEDNESDAY, THURSDAY, WEEK1, WEEK2, WEEK3
 
 
 def main():
@@ -16,9 +16,9 @@ def main():
     for year in (2020, 2021):
         for month in (1, 2, 3, 4, 5, 6, 9, 10, 11, 12):
             # exécutif
-            print(scan_for_day(WEDNESDAY, year, month, WEEK1), end='')
+            print(closest_day(WEDNESDAY, year, month, WEEK1), end='')
             print(':  1900-2100h OARC Exec Meeting')
-            print(scan_for_day(WEDNESDAY, year, month, WEEK2), end='')
+            print(closest_day(WEDNESDAY, year, month, WEEK2), end='')
             print(':  1930-2200h OARC Meeting')
 
     # Rideau Lakes Amateur Radio Club meetings are the 3rd Thursday of each
@@ -26,7 +26,7 @@ def main():
     # https://www.ve3rlr.ca/p/about.html
     for year in (2020, 2021):
         for month in range(1, 13):
-            print(scan_for_day(THURSDAY, year, month, WEEK3), end='')
+            print(closest_day(THURSDAY, year, month, WEEK3), end='')
             print(':  1930-2200h RLARC Meeting')
 
     # Daylight Savings Time starts on the 2nd Sunday in March

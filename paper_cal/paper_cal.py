@@ -42,9 +42,9 @@ _LENGTH_OF_WEEK = 7  # days
 (WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
 
 
-def scan_for_day(desired_weekday, year=date.today().year,
-                 month=date.today().month, day=date.today().day,
-                 last=False):
+def closest_day(desired_weekday, year=date.today().year,
+                month=date.today().month, day=date.today().day,
+                last=False):
     '''
     '''
 

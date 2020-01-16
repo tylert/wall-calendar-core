@@ -5,6 +5,35 @@ from datetime import date, timedelta
 from math import ceil, floor, sin
 
 
+def is_leap_year(year=date.today().year):
+    '''
+    '''
+
+    # XXX FIXME TODO Add some better range checking!!!
+
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+
+_DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+_FEBRUARY_LEAP_YEAR = 29
+
+(JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER,
+    NOVEMBER, DECEMBER) = range(1, 13, 1)
+(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
+
+
+def days_in_month(year=date.today().year, month=date.today().month):
+    '''
+    '''
+
+    # XXX FIXME TODO Add some better range checking!!!
+
+    if month == FEBRUARY and is_leap_year(year=year):
+        return _FEBRUARY_LEAP_YEAR
+    else:
+        return _DAYS_IN_MONTH[month]
+
+
 _LENGTH_OF_WEEK = 7  # days
 
 (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(
@@ -34,42 +63,13 @@ def scan_for_day(desired_weekday, year=date.today().year,
     if offset > 3:
         offset -= _LENGTH_OF_WEEK
 
-    delta = nearby_date - timedelta(days=offset)
+    found_date = nearby_date - timedelta(days=offset)
 
     # Jump back into the correct month if we managed to leave it
-    if last and delta.month != nearby_date.month:
-        return delta - timedelta(days=_LENGTH_OF_WEEK)
+    if last and found_date.month != nearby_date.month:
+        return found_date - timedelta(days=_LENGTH_OF_WEEK)
     else:
-        return delta
-
-
-_DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-_FEBRUARY_LEAP_YEAR = 29
-
-(JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER,
-    NOVEMBER, DECEMBER) = range(1, 13, 1)
-(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
-
-
-def days_in_month(year=date.today().year, month=date.today().month):
-    '''
-    '''
-
-    # XXX FIXME TODO Add some better range checking!!!
-
-    if month == FEBRUARY and is_leap_year(year=year):
-        return _FEBRUARY_LEAP_YEAR
-    else:
-        return _DAYS_IN_MONTH[month]
-
-
-def is_leap_year(year=date.today().year):
-    '''
-    '''
-
-    # XXX FIXME TODO Add some better range checking!!!
-
-    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+        return found_date
 
 
 def moon_phase(year=date.today().year, month=date.today().month,

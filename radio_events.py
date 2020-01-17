@@ -1,33 +1,37 @@
 #!/usr/bin/env python
 
 
-from paper_cal import closest_day, WEDNESDAY, THURSDAY, WEEK1, WEEK2, WEEK3
+from paper_cal import (closest_day, MONDAY, WEDNESDAY, THURSDAY, WEEK1, WEEK2, WEEK3)
 
 
 def main():
     '''
     '''
 
+    for year in (2020, 2021):
     # Ottawa Amateur Radio Club executive meetings are the 1st Wednesday of
     # each month except July and August
     # Ottawa Amateur Radio Club regular meetings are the 2nd Wednesday of each
     # month except July and August
     # https://www.oarc.net/
-    for year in (2020, 2021):
         for month in (1, 2, 3, 4, 5, 6, 9, 10, 11, 12):
             # exécutif
             print(closest_day(WEDNESDAY, year, month, WEEK1), end='')
-            print(':  1900-2100h OARC Exec Meeting')
+            print(' 1900-2100h OARC Exec')
             print(closest_day(WEDNESDAY, year, month, WEEK2), end='')
-            print(':  1930-2200h OARC Meeting')
+            print(' 1930-2200h OARC')
 
     # Rideau Lakes Amateur Radio Club meetings are the 3rd Thursday of each
     # month
     # https://www.ve3rlr.ca/p/about.html
-    for year in (2020, 2021):
         for month in range(1, 13):
             print(closest_day(THURSDAY, year, month, WEEK3), end='')
-            print(':  1930-2200h RLARC Meeting')
+            print(' 1930-2200h RLARC')
+
+    # West-Carleton Amateur Radio Club meetings are the 3rd Monday of each month
+    # https://wcarc.on.ca
+            print(closest_day(MONDAY, year, month, WEEK3), end='')
+            print(' 1900-2100h WCARC')
 
     # Daylight Savings Time starts on the 2nd Sunday in March
     # Before 2007, old DST started on the 1st Sunday in April

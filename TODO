@@ -1,9 +1,4 @@
-Extract links from README for monthly notes
-Put moon info into monthly notes
-
 http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/calendar/calendars/???
-Add in make magic to build notes pages automatically
-Put meteor events info into monthly notes
 
 http://stackoverflow.com/questions/7276017/producing-a-printable-calendar-with-python
 

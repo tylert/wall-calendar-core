@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 
-from paper_cal import (closest_day, MONDAY, WEDNESDAY, THURSDAY, WEEK1, WEEK2, WEEK3)
+from paper_cal import (closest_day, MONDAY, WEDNESDAY,
+                       THURSDAY, SATURDAY, WEEK1, WEEK2, WEEK3, SEPTEMBER)
 
 
 def main():
@@ -9,17 +10,21 @@ def main():
     '''
 
     for year in (2020, 2021):
-    # Ottawa Amateur Radio Club executive meetings are the 1st Wednesday of
-    # each month except July and August
-    # Ottawa Amateur Radio Club regular meetings are the 2nd Wednesday of each
-    # month except July and August
-    # https://www.oarc.net/
+        # Ottawa Amateur Radio Club executive meetings are the 1st Wednesday of
+        # each month except July and August
+        # Ottawa Amateur Radio Club regular meetings are the 2nd Wednesday of
+        # each month except July and August
+        # https://www.oarc.net/
         for month in (1, 2, 3, 4, 5, 6, 9, 10, 11, 12):
             # exécutif
             print(closest_day(WEDNESDAY, year, month, WEEK1), end='')
             print(' 1900-2100h OARC Exec')
             print(closest_day(WEDNESDAY, year, month, WEEK2), end='')
             print(' 1930-2200h OARC')
+        print(closest_day(SATURDAY, year, SEPTEMBER, WEEK1), end='')
+        print(' OARC Hamfest')
+        print(closest_day(SATURDAY, year, SEPTEMBER, WEEK3), end='')
+        print(' OARC Demo')
 
     # Rideau Lakes Amateur Radio Club meetings are the 3rd Thursday of each
     # month
@@ -28,7 +33,8 @@ def main():
             print(closest_day(THURSDAY, year, month, WEEK3), end='')
             print(' 1930-2200h RLARC')
 
-    # West-Carleton Amateur Radio Club meetings are the 3rd Monday of each month
+    # West-Carleton Amateur Radio Club meetings are the 3rd Monday of each
+    # month
     # https://wcarc.on.ca
             print(closest_day(MONDAY, year, month, WEEK3), end='')
             print(' 1900-2100h WCARC')

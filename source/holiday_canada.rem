@@ -119,17 +119,17 @@
     MSG %"[babel("William Davis Miners' Memorial Day (CA-NS)", \
       "Journée commémorative des mineurs (CA-NS)")]%" %b%
 
-  # National Aboriginal Day is June 21st
-  # https://en.wikipedia.org/wiki/National_Aboriginal_Day
+  # National Indigenous Peoples Day is June 21st
+  # https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
   REM  Jun 21 +1 PRIORITY 1000 \
-    MSG %"[babel("National Aboriginal Day", \
-      "Journée nationale des Autochtones")]%" %b%
+    MSG %"[babel("National Indigenous Peoples Day", \
+      "Journée nationale des peuples autochtones")]%" %b%
 
   # Quebec's National Holiday is June 24th
   # https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
   OMIT Jun 24 +1 PRIORITY 1000 \
     MSG %"[babel("Quebec's National Holiday", \
-      "Fête nationale des Québecois")]%" %b%
+      "Fête nationale du Québec")]%" %b%
 
   # Discovery Day (CA-NL) is the Monday nearest June 24th
   # https://en.wikipedia.org/wiki/Discovery_Day

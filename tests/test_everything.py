@@ -1,8 +1,8 @@
 from datetime import date
 
-from paper_cal import *
-
 import pytest
+
+from paper_cal import *
 
 
 class TestDays:
@@ -42,6 +42,15 @@ class TestDays:
         assert closest_day(SATURDAY, 2020, JANUARY,
                            WEEK1) == date(2020, JANUARY, 4)
         assert closest_day(MONDAY, 2020, JULY, 24) == date(2020, JULY, 27)
+
+    def test_some_weekday_constants(self):
+        assert date.weekday(closest_day(SUNDAY, 2020, JANUARY, 1)) == 6
+        assert date.weekday(closest_day(MONDAY, 2020, JANUARY, 1)) == 0
+        assert date.weekday(closest_day(TUESDAY, 2020, JANUARY, 1)) == 1
+        assert date.weekday(closest_day(WEDNESDAY, 2020, JANUARY, 1)) == 2
+        assert date.weekday(closest_day(THURSDAY, 2020, JANUARY, 1)) == 3
+        assert date.weekday(closest_day(FRIDAY, 2020, JANUARY, 1)) == 4
+        assert date.weekday(closest_day(SATURDAY, 2020, JANUARY, 1)) == 5
 
     def test_some_exception_handling(self):
         with pytest.raises(ValueError):

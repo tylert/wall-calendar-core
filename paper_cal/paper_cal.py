@@ -54,8 +54,6 @@ def closest_day(desired_weekday, year=date.today().year,
     else:
         nearby_date = date(year=year, month=month, day=day)
 
-    # XXX FIXME TODO Exception if desired_weekday is too weird???
-
     offset = nearby_date.weekday() - (desired_weekday % _LENGTH_OF_WEEK)
 
     if offset < -3:

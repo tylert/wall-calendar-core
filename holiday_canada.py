@@ -13,24 +13,30 @@ def main():
     '''
     '''
 
+    # https://en.wikipedia.org/wiki/Public_holidays_in_Canada
+    # https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
+
     for year in (2020, 2021, 2022):
         # New Year's Day is January 1st
         # https://en.wikipedia.org/wiki/New_Year's_Day
+        # https://fr.wikipedia.org/wiki/Jour_de_l%27an
         print('{}'.format(date(year, JANUARY, 1)), end='')
         print(' New Year\'s Day')
+        # Jour de l'an
         if date.weekday(date(year, JANUARY, 1)) == SATURDAY \
                 or date.weekday(date(year, JANUARY, 1)) == SUNDAY:
             print(closest_day(MONDAY, year, JANUARY, 1), end='')
             print(' New Year\'s Day (observed)')
-        # Jour de l'an (observé)
+            # Jour de l'an (observé)
 
         # The 3rd Monday in February is observed in 6 provinces and 0
         # territories...
         #   CA-AB:  Family Day;  statutory
         #   CA-BC:  Family Day;  statutory
         #   CA-MB:  Louis Riel Day;  statutory
+        #   CA-NB:  Family Day;  statutory
         #   CA-ON:  Family Day;  statutory
-        #   CA-NS:  Nova Scotia Heritage Day;  ?
+        #   CA-NS:  Heritage Day;  ?
         #   CA-PE:  Islander Day;  statutory
         #   CA-SK:  Family Day;  statutory
         # https://en.wikipedia.org/wiki/Family_Day
@@ -40,8 +46,16 @@ def main():
         # Fête de la famille
         # Journée Louis Riel (CA-MB)
         # Fête des Insulaires (CA-PE)
+        # Fête du Patrimoine (CA-NS)
 
-        # XXX FIXME TODO Good Friday
+        # March break
+        # Congé de mars
+
+        # https://en.wikipedia.org/wiki/Spring_break
+        # Spring break
+        # Congé de printemps
+
+        # XXX FIXME TODO Easter (variable between March 20 and April 23)
 
         # Easter is the 1st Sunday after the 1st full moon after the Spring
         # equinox
@@ -84,13 +98,16 @@ def main():
         # (or the last Monday preceeding May 25th)
         # https://en.wikipedia.org/wiki/Victoria_Day
         # https://en.wikipedia.org/wiki/National_Patriots%27_Day
+        # https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
         print(closest_day(MONDAY, year, MAY, 21), end='')
         print(' Victoria Day')
         # Fête de la Reine
+        # Fête de Victoria
         # Journée nationale des patriotes (CA-QC)
 
         # Canada Day is July 1st
         # https://en.wikipedia.org/wiki/Canada_Day
+        # https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
         print('{}'.format(date(year, JULY, 1)), end='')
         print(' Canada Day')
         # Fête du Canada (observé)
@@ -110,22 +127,34 @@ def main():
         #   CA-QC:  not observed
         #   CA-SK:  Saskatchewan Day;  statutory
         #   CA-YT:  not observed
+        # https://en.wikipedia.org/wiki/Civic_Holiday
         # https://en.wikipedia.org/wiki/Public_holidays_in_Canada
+        # https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
         print(closest_day(MONDAY, year, AUGUST, WEEK1), end='')
-        print(' August Long Weekend')
+        print(' August Civic Holiday')
+        # Premier lundi d'août
         # Longue fin de semaine d'aôut
 
         # Labour Day is the 1st Monday in September
         # https://en.wikipedia.org/wiki/Labour_Day
+        # https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
         print(closest_day(MONDAY, year, SEPTEMBER, WEEK1), end='')
         print(' Labour Day')
-        # Fête du travail
+        # Fête du Travail
 
         # Canadian Thanksgiving is the 2nd Monday in October
         # https://en.wikipedia.org/wiki/Thanksgiving#Canada
+        # https://fr.wikipedia.org/wiki/Action_de_gr%C3%A2ce_(Canada)
         print(closest_day(MONDAY, year, OCTOBER, WEEK2), end='')
         print(' Thanksgiving Day')
         # Action de Grâce
+
+        # Rememberance Day is November 11th
+        # https://en.wikipedia.org/wiki/Remembrance_Day
+        # https://fr.wikipedia.org/wiki/Jour_du_Souvenir
+        print('{}'.format(date(year, NOVEMBER, 11)), end='')
+        print(' Rememberance Day')
+        # Jour du Souvenir
 
         # Christmas Day is December 25th
         # https://en.wikipedia.org/wiki/Christmas
@@ -140,6 +169,8 @@ def main():
         print('{}'.format(date(year, DECEMBER, 26)), end='')
         print(' Boxing Day')
         # Lendemain de Noël
+        # Le jour des boîtes
+        # Après-Noël
 
 
 if __name__ == '__main__':

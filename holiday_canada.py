@@ -3,10 +3,12 @@
 
 from datetime import date
 
+from pymeeus.Sun import Sun
+
 from paper_cal import (closest_day, SUNDAY, MONDAY, WEDNESDAY,
                        THURSDAY, SATURDAY, WEEK1, WEEK2, WEEK3, JANUARY,
                        FEBRUARY, MAY, JULY, AUGUST, SEPTEMBER, OCTOBER,
-                       DECEMBER)
+                       NOVEMBER, DECEMBER)
 
 
 def main():
@@ -55,7 +57,26 @@ def main():
         # Spring break
         # Congé de printemps
 
-        # XXX FIXME TODO Easter (variable between March 20 and April 23)
+        spring_equinox = Sun.get_equinox_solstice(year, target='spring')
+        summer_solstice = Sun.get_equinox_solstice(year, target='summer')
+        autumn_equinox = Sun.get_equinox_solstice(year, target='autumn')
+        winter_solstice = Sun.get_equinox_solstice(year, target='winter')
+
+        _, temp_month, temp_day, _, _, _ = spring_equinox.get_full_date()
+        print(date(year, temp_month, temp_day), end='')
+        print(' First day of Spring')
+
+        _, temp_month, temp_day, _, _, _ = summer_solstice.get_full_date()
+        print(date(year, temp_month, temp_day), end='')
+        print(' First day of Summer')
+
+        _, temp_month, temp_day, _, _, _ = autumn_equinox.get_full_date()
+        print(date(year, temp_month, temp_day), end='')
+        print(' First day of Fall')
+
+        _, temp_month, temp_day, _, _, _ = winter_solstice.get_full_date()
+        print(date(year, temp_month, temp_day), end='')
+        print(' First day of Winter')
 
         # Easter is the 1st Sunday after the 1st full moon after the Spring
         # equinox

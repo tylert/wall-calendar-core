@@ -6,6 +6,7 @@ packaging==20.3
 pluggy==0.13.1
 py==1.8.1
 pycodestyle==2.5.0
+PyMeeus==0.3.7
 pyparsing==2.4.7
 pytest==5.4.1
 six==1.14.0

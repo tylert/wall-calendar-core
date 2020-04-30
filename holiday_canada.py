@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
 
-from paper_cal import (closest_day, MONDAY, WEDNESDAY,
+from datetime import date
+
+from paper_cal import (closest_day, SUNDAY, MONDAY, WEDNESDAY,
                        THURSDAY, SATURDAY, WEEK1, WEEK2, WEEK3, JANUARY,
                        FEBRUARY, MAY, JULY, AUGUST, SEPTEMBER, OCTOBER,
                        DECEMBER)
@@ -11,11 +13,15 @@ def main():
     '''
     '''
 
-    for year in (2020, 2021):
+    for year in (2020, 2021, 2022):
         # New Year's Day is January 1st
         # https://en.wikipedia.org/wiki/New_Year's_Day
-        print('{}-{}-{}'.format(year, '01', '01'), end='')
+        print('{}'.format(date(year, JANUARY, 1)), end='')
         print(' New Year\'s Day')
+        if date.weekday(date(year, JANUARY, 1)) == SATURDAY \
+                or date.weekday(date(year, JANUARY, 1)) == SUNDAY:
+            print(closest_day(MONDAY, year, JANUARY, 1), end='')
+            print(' New Year\'s Day (observed)')
         # Jour de l'an (observé)
 
         # The 3rd Monday in February is observed in 6 provinces and 0
@@ -85,7 +91,7 @@ def main():
 
         # Canada Day is July 1st
         # https://en.wikipedia.org/wiki/Canada_Day
-        print('{}-{}-{}'.format(year, '07', '01'), end='')
+        print('{}'.format(date(year, JULY, 1)), end='')
         print(' Canada Day')
         # Fête du Canada (observé)
 
@@ -124,14 +130,14 @@ def main():
         # Christmas Day is December 25th
         # https://en.wikipedia.org/wiki/Christmas
         # https://fr.wikipedia.org/wiki/No%C3%ABl
-        print('{}-{}-{}'.format(year, DECEMBER, 25), end='')
+        print('{}'.format(date(year, DECEMBER, 25)), end='')
         print(' Christmas Day')
         # Noël
 
         # Boxing Day is December 26th
         # https://en.wikipedia.org/wiki/Boxing_Day
         # https://fr.wikipedia.org/wiki/Boxing_Day
-        print('{}-{}-{}'.format(year, DECEMBER, 26), end='')
+        print('{}'.format(date(year, DECEMBER, 26)), end='')
         print(' Boxing Day')
         # Lendemain de Noël
 

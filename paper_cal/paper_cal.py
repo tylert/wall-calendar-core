@@ -117,7 +117,7 @@ def closest_moon(desired_phase, year=date.today().year,
     '''
     '''
 
-    # XXX FIXME TODO Finish this!!!
+    # XXX FIXME TODO Exception if desired_phase is too weird???
 
     nearby_date = date(year=year, month=month, day=day)
 
@@ -127,6 +127,18 @@ def closest_moon(desired_phase, year=date.today().year,
 
     # Jump back into the correct month if we managed to leave it
     return found_date
+
+
+#          0     1     2     3     4     5     6     7
+#          8     9     10    11    12    13    14    15
+#          16    17    18    19    20    21    22    23
+#          24    25    26    27    28    29
+_MOONS = ['🌑', '🌒', '🌒', '🌒', '🌒', '🌒', '🌒', '🌒',
+          '🌓', '🌔', '🌔', '🌔', '🌔', '🌔', '🌔', '🌕',
+          '🌖', '🌖', '🌖', '🌖', '🌖', '🌖', '🌗', '🌘',
+          '🌘', '🌘', '🌘', '🌘', '🌘', '🌘']
+# new, waxing crescent, first quarter, waxing gibbous, full, waning gibbous,
+# last quarter, waning crescent
 
 
 # https://en.wikipedia.org/wiki/Sexagenary_cycle
@@ -224,3 +236,6 @@ EARTHLY_BRANCHES = ['申', '酉', '戌', '亥', '子', '丑',
 
 # 羊 = goat, YANG
 # 未 = ?, WEI
+
+# Zodiac
+# https://en.wikipedia.org/wiki/Astrological_symbols

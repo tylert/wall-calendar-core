@@ -178,3 +178,5 @@ References/Références::
   [n] http://cqww.com
   [o] http://azscqrpions.com/fybo2009rules.html
   [p] http://www.farmersalmanac.com/astronomy/fullmoonnames.html
+
+* https://stackoverflow.com/questions/704108/how-do-i-compute-equinox-solstice-moments

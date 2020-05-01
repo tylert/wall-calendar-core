@@ -31,6 +31,13 @@ def main():
             print(' New Year\'s Day (observed)')
             # Jour de l'an (observé)
 
+        # Groundhog Day is February 2nd
+        # https://en.wikipedia.org/wiki/Groundhog_Day
+        # https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
+        print('{}'.format(date(year, FEBRUARY, 2)), end='')
+        print(' Groundhog Day')
+        # Jour de la marmotte
+
         # The 3rd Monday in February is observed in 6 provinces and 0
         # territories...
         #   CA-AB:  Family Day;  statutory
@@ -131,7 +138,12 @@ def main():
         # https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
         print('{}'.format(date(year, JULY, 1)), end='')
         print(' Canada Day')
-        # Fête du Canada (observé)
+        # Fête du Canada
+        if date.weekday(date(year, JULY, 1)) == SATURDAY \
+                or date.weekday(date(year, JULY, 1)) == SUNDAY:
+            print(closest_day(MONDAY, year, JULY, 1), end='')
+            print(' Canada Day (observed)')
+            # Fête du Canada (observé)
 
         # The 1st Monday in August is a quasi-semi-poly-un-statutory holiday,
         # kinda...
@@ -183,6 +195,11 @@ def main():
         print('{}'.format(date(year, DECEMBER, 25)), end='')
         print(' Christmas Day')
         # Noël
+        # XXX FIXME TODO Xmas and Boxing Day too close together
+        # if date.weekday(date(year, DECEMBER, 25)) == SATURDAY \
+        #         or date.weekday(date(year, DECEMBER, 25)) == SUNDAY:
+        #     print(closest_day(MONDAY, year, DECEMBER, 25), end='')
+        #     print(' Christmas Day (observed)')
 
         # Boxing Day is December 26th
         # https://en.wikipedia.org/wiki/Boxing_Day
@@ -192,6 +209,11 @@ def main():
         # Lendemain de Noël
         # Le jour des boîtes
         # Après-Noël
+        # XXX FIXME TODO Xmas and Boxing Day too close together
+        # if date.weekday(date(year, DECEMBER, 26)) == SATURDAY \
+        #         or date.weekday(date(year, DECEMBER, 26)) == SUNDAY:
+        #     print(closest_day(MONDAY, year, DECEMBER, 26), end='')
+        #     print(' Boxing Day (observed)')
 
 
 if __name__ == '__main__':

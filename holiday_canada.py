@@ -87,6 +87,10 @@ def main():
 
         # Easter is the 1st Sunday after the 1st full moon after the Spring
         # equinox
+        # (min:  March 22nd, max:  April 25th)
+        # https://en.wikipedia.org/wiki/Ecclesiastical_full_moon#Paschal_full_moon
+        # https://en.wikipedia.org/wiki/Computus
+        # https://fr.wikipedia.org/wiki/Calcul_de_la_date_de_P%C3%A2ques
         # https://en.wikipedia.org/wiki/Shrove_Tuesday
         # https://fr.wikipedia.org/wiki/Mardi_gras
         # https://en.wikipedia.org/wiki/Ash_Wednesday

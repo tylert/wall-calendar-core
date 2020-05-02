@@ -105,6 +105,8 @@ def moon_phase(year=date.today().year, month=date.today().month,
     return (jul - jd + 30) % 30
 
 
+_LENGTH_OF_LUNAR_MONTH = 30
+
 # 0 = new ( ), 8 = first (D), 15 = full (O), 22 = last (C), 29 = end
 (NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
 
@@ -119,12 +121,21 @@ def closest_moon(desired_phase, year=date.today().year,
 
     nearby_date = date(year=year, month=month, day=day)
 
-    offset = moon_phase(year=year, month=month, day=day) - (desired_phase % 30)
+    offset = moon_phase(year=year, month=month, day=day) - \
+        (desired_phase % _LENGTH_OF_LUNAR_MONTH)
+
+    if offset < -14:
+        offset += _LENGTH_OF_LUNAR_MONTH
+    if offset > 14:
+        offset -= _LENGTH_OF_LUNAR_MONTH
 
     found_date = nearby_date - timedelta(days=offset)
 
     # Jump back into the correct month if we managed to leave it
-    return found_date
+    if last and found_date.month != nearby_date.month:
+        return found_date - timedelta(days=_LENGTH_OF_LUNAR_MONTH)
+    else:
+        return found_date
 
 
 #          0     1     2     3     4     5     6     7

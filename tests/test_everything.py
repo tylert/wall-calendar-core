@@ -27,58 +27,60 @@ class TestDays:
         assert days_in_month(2024, FEBRUARY) == 29
 
     def test_some_nearby_days(self):
-        assert closest_day(SATURDAY, 2020, JANUARY, 30,
+        assert closest_day(SATURDAY, date(2020, JANUARY, 30),
                            last=True) == date(2020, JANUARY, 25)
-        assert closest_day(SATURDAY, 2020, JANUARY,
-                           WEEK4) == date(2020, JANUARY, 25)
-        assert closest_day(FRIDAY, 2020, JANUARY, 30,
+        assert closest_day(SATURDAY, date(2020, JANUARY,
+                           WEEK4)) == date(2020, JANUARY, 25)
+        assert closest_day(FRIDAY, date(2020, JANUARY, 30),
                            last=True) == date(2020, JANUARY, 31)
-        assert closest_day(FRIDAY, 2020, JANUARY,
-                           WEEK4) == date(2020, JANUARY, 24)
-        assert closest_day(SATURDAY, 2020, JANUARY,
-                           WEEK3) == date(2020, JANUARY, 18)
-        assert closest_day(SATURDAY, 2020, JANUARY,
-                           WEEK2) == date(2020, JANUARY, 11)
-        assert closest_day(SATURDAY, 2020, JANUARY,
-                           WEEK1) == date(2020, JANUARY, 4)
-        assert closest_day(MONDAY, 2020, JULY, 24) == date(2020, JULY, 27)
+        assert closest_day(FRIDAY, date(2020, JANUARY,
+                           WEEK4)) == date(2020, JANUARY, 24)
+        assert closest_day(SATURDAY, date(2020, JANUARY,
+                           WEEK3)) == date(2020, JANUARY, 18)
+        assert closest_day(SATURDAY, date(2020, JANUARY,
+                           WEEK2)) == date(2020, JANUARY, 11)
+        assert closest_day(SATURDAY, date(2020, JANUARY,
+                           WEEK1)) == date(2020, JANUARY, 4)
+        assert closest_day(MONDAY, date(2020, JULY,
+                           24)) == date(2020, JULY, 27)
 
     def test_some_weekday_constants(self):
-        assert date.weekday(closest_day(SUNDAY, 2020, JANUARY, 1)) == 6
-        assert date.weekday(closest_day(MONDAY, 2020, JANUARY, 1)) == 0
-        assert date.weekday(closest_day(TUESDAY, 2020, JANUARY, 1)) == 1
-        assert date.weekday(closest_day(WEDNESDAY, 2020, JANUARY, 1)) == 2
-        assert date.weekday(closest_day(THURSDAY, 2020, JANUARY, 1)) == 3
-        assert date.weekday(closest_day(FRIDAY, 2020, JANUARY, 1)) == 4
-        assert date.weekday(closest_day(SATURDAY, 2020, JANUARY, 1)) == 5
+        assert date.weekday(closest_day(SUNDAY, date(2020, JANUARY, 1))) == 6
+        assert date.weekday(closest_day(MONDAY, date(2020, JANUARY, 1))) == 0
+        assert date.weekday(closest_day(TUESDAY, date(2020, JANUARY, 1))) == 1
+        assert date.weekday(closest_day(WEDNESDAY, date(2020, JANUARY,
+                            1))) == 2
+        assert date.weekday(closest_day(THURSDAY, date(2020, JANUARY, 1))) == 3
+        assert date.weekday(closest_day(FRIDAY, date(2020, JANUARY, 1))) == 4
+        assert date.weekday(closest_day(SATURDAY, date(2020, JANUARY, 1))) == 5
 
     def test_some_exception_handling(self):
         with pytest.raises(ValueError):
-            assert closest_day(MONDAY, 2020, 13, 32)
+            assert closest_day(MONDAY, date(2020, 13, 32))
         with pytest.raises(TypeError):
             assert closest_day()
 
 
 class TestMoons:
     def test_some_moon_phases(self):
-        assert moon_phase(2020, JANUARY, 2) == FIRST_QUARTER_MOON
-        assert moon_phase(2020, JANUARY, 9) == FULL_MOON
-        assert moon_phase(2020, JANUARY, 16) == LAST_QUARTER_MOON
-        assert moon_phase(2020, JANUARY, 23) == 29  # end of phase
-        assert moon_phase(2020, JANUARY, 24) == NEW_MOON
-        assert moon_phase(2020, OCTOBER, 1) == FULL_MOON
-        assert moon_phase(2020, OCTOBER, 31) == FULL_MOON  # blue moon
+        assert moon_phase(date(2020, JANUARY, 2)) == FIRST_QUARTER_MOON
+        assert moon_phase(date(2020, JANUARY, 9)) == FULL_MOON
+        assert moon_phase(date(2020, JANUARY, 16)) == LAST_QUARTER_MOON
+        assert moon_phase(date(2020, JANUARY, 23)) == 29  # end of phase
+        assert moon_phase(date(2020, JANUARY, 24)) == NEW_MOON
+        assert moon_phase(date(2020, OCTOBER, 1)) == FULL_MOON
+        assert moon_phase(date(2020, OCTOBER, 31)) == FULL_MOON  # blue moon
 
     def test_weird_date_exception_handling(self):
         with pytest.raises(ValueError):
-            assert moon_phase(2020, 13, 32)
+            assert moon_phase(date(2020, 13, 32))
 
     def test_some_nearby_moons(self):
-        assert closest_moon(FULL_MOON, 2020, JANUARY,
-                            7) == date(2020, JANUARY, 9)
-        assert closest_moon(FULL_MOON, 2020, JANUARY,
-                            15) == date(2020, JANUARY, 9)
-        assert closest_moon(NEW_MOON, 2020, JANUARY,
-                            1) == date(2019, DECEMBER, 25)
-        # assert closest_moon(NEW_MOON, 2020, JANUARY,
-        #                     20) == date(2019, JANUARY, 24)
+        assert closest_moon(FULL_MOON, date(2020, JANUARY,
+                            7)) == date(2020, JANUARY, 9)
+        assert closest_moon(FULL_MOON, date(2020, JANUARY,
+                            15)) == date(2020, JANUARY, 9)
+        assert closest_moon(NEW_MOON, date(2020, JANUARY,
+                            1)) == date(2019, DECEMBER, 25)
+        # assert closest_moon(NEW_MOON, date(2020, JANUARY,
+        #                     20)) == date(2019, JANUARY, 24)

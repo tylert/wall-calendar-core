@@ -5,10 +5,9 @@ from datetime import date
 
 from pymeeus.Sun import Sun
 
-from paper_cal import (closest_day, SUNDAY, MONDAY, WEDNESDAY,
-                       THURSDAY, SATURDAY, WEEK1, WEEK2, WEEK3, JANUARY,
-                       FEBRUARY, MAY, JULY, AUGUST, SEPTEMBER, OCTOBER,
-                       NOVEMBER, DECEMBER)
+from paper_cal import (closest_day, SUNDAY, MONDAY, SATURDAY, WEEK1, WEEK2,
+                       WEEK3, JANUARY, FEBRUARY, MAY, JULY, AUGUST, SEPTEMBER,
+                       OCTOBER, NOVEMBER, DECEMBER)
 
 
 def main():
@@ -27,7 +26,7 @@ def main():
         # Jour de l'an
         if date.weekday(date(year, JANUARY, 1)) == SATURDAY \
                 or date.weekday(date(year, JANUARY, 1)) == SUNDAY:
-            print(closest_day(MONDAY, year, JANUARY, 1), end='')
+            print(closest_day(MONDAY, date(year, JANUARY, 1)), end='')
             print(' New Year\'s Day (observed)')
             # Jour de l'an (observé)
 
@@ -38,7 +37,14 @@ def main():
         print(' Groundhog Day')
         # Jour de la marmotte
 
-        # The 3rd Monday in February is observed in 6 provinces and 0
+        # National Flag of Canada Day is February 15th
+        # https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
+        # https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
+        print('{}'.format(date(year, FEBRUARY, 15)), end='')
+        print(' National Flag of Canada Day')
+        # Jour du drapeau national du Canada
+
+        # The 3rd Monday in February is observed in 8 provinces and 0
         # territories...
         #   CA-AB:  Family Day;  statutory
         #   CA-BC:  Family Day;  statutory
@@ -50,7 +56,7 @@ def main():
         #   CA-SK:  Family Day;  statutory
         # https://en.wikipedia.org/wiki/Family_Day
         # https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
-        print(closest_day(MONDAY, year, FEBRUARY, WEEK3), end='')
+        print(closest_day(MONDAY, date(year, FEBRUARY, WEEK3)), end='')
         print(' Family Day')
         # Fête de la famille
         # Journée Louis Riel (CA-MB)
@@ -131,7 +137,7 @@ def main():
         # https://en.wikipedia.org/wiki/Victoria_Day
         # https://en.wikipedia.org/wiki/National_Patriots%27_Day
         # https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
-        print(closest_day(MONDAY, year, MAY, 21), end='')
+        print(closest_day(MONDAY, date(year, MAY, 21)), end='')
         print(' Victoria Day')
         # Fête de la Reine
         # Fête de Victoria
@@ -145,7 +151,7 @@ def main():
         # Fête du Canada
         if date.weekday(date(year, JULY, 1)) == SATURDAY \
                 or date.weekday(date(year, JULY, 1)) == SUNDAY:
-            print(closest_day(MONDAY, year, JULY, 1), end='')
+            print(closest_day(MONDAY, date(year, JULY, 1)), end='')
             print(' Canada Day (observed)')
             # Fête du Canada (observé)
 
@@ -167,7 +173,7 @@ def main():
         # https://en.wikipedia.org/wiki/Civic_Holiday
         # https://en.wikipedia.org/wiki/Public_holidays_in_Canada
         # https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
-        print(closest_day(MONDAY, year, AUGUST, WEEK1), end='')
+        print(closest_day(MONDAY, date(year, AUGUST, WEEK1)), end='')
         print(' August Civic Holiday')
         # Premier lundi d'août
         # Longue fin de semaine d'aôut
@@ -175,14 +181,14 @@ def main():
         # Labour Day is the 1st Monday in September
         # https://en.wikipedia.org/wiki/Labour_Day
         # https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
-        print(closest_day(MONDAY, year, SEPTEMBER, WEEK1), end='')
+        print(closest_day(MONDAY, date(year, SEPTEMBER, WEEK1)), end='')
         print(' Labour Day')
         # Fête du Travail
 
         # Canadian Thanksgiving is the 2nd Monday in October
         # https://en.wikipedia.org/wiki/Thanksgiving#Canada
         # https://fr.wikipedia.org/wiki/Action_de_gr%C3%A2ce_(Canada)
-        print(closest_day(MONDAY, year, OCTOBER, WEEK2), end='')
+        print(closest_day(MONDAY, date(year, OCTOBER, WEEK2)), end='')
         print(' Thanksgiving Day')
         # Action de Grâce
 
@@ -218,6 +224,14 @@ def main():
         #         or date.weekday(date(year, DECEMBER, 26)) == SUNDAY:
         #     print(closest_day(MONDAY, year, DECEMBER, 26), end='')
         #     print(' Boxing Day (observed)')
+
+        # New Year's Eve is December 31st
+        # https://en.wikipedia.org/wiki/New_Year's_Eve
+        # https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
+        print('{}'.format(date(year, DECEMBER, 31)), end='')
+        print(' New Year\'s Eve')
+        # XXX FIXME TODO Get a better name in French
+        # Veille du Nouvel An
 
 
 if __name__ == '__main__':

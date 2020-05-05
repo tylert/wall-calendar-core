@@ -42,17 +42,15 @@ _LENGTH_OF_WEEK = 7  # days
 (WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
 
 
-def closest_day(desired_weekday, year=date.today().year,
-                month=date.today().month, day=date.today().day,
-                last=False):
+def closest_day(desired_weekday, nearby_date=date.today(), last=False):
     '''
     '''
 
+    # Move the nearby_date to the end of the month
     if last:
-        nearby_date = date(year=year, month=month,
-                           day=days_in_month(year=year, month=month))
-    else:
-        nearby_date = date(year=year, month=month, day=day)
+        nearby_date = date(year=nearby_date.year, month=nearby_date.month,
+                           day=days_in_month(year=nearby_date.year,
+                                             month=nearby_date.month))
 
     offset = nearby_date.weekday() - (desired_weekday % _LENGTH_OF_WEEK)
 
@@ -70,14 +68,11 @@ def closest_day(desired_weekday, year=date.today().year,
         return found_date
 
 
-def moon_phase(year=date.today().year, month=date.today().month,
-               day=date.today().day):
+def moon_phase(moon_date=date.today()):
     '''
     '''
 
     # http://www.ben-daglish.net/moon.shtml
-
-    moon_date = date(year=year, month=month, day=day)
 
     n = floor(12.37 * (moon_date.year - 1900 +
                        ((1.0 * moon_date.month - 0.5) / 12.0)))
@@ -111,17 +106,13 @@ _LENGTH_OF_LUNAR_MONTH = 30
 (NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
 
 
-def closest_moon(desired_phase, year=date.today().year,
-                 month=date.today().month, day=date.today().day,
-                 last=False):
+def closest_moon(desired_phase, nearby_date=date.today(), last=False):
     '''
     '''
 
     # XXX FIXME TODO Exception if desired_phase is too weird???
 
-    nearby_date = date(year=year, month=month, day=day)
-
-    offset = moon_phase(year=year, month=month, day=day) - \
+    offset = moon_phase(nearby_date) - \
         (desired_phase % _LENGTH_OF_LUNAR_MONTH)
 
     if offset < -14:

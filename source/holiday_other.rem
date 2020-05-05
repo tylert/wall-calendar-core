@@ -142,7 +142,7 @@
   # Hogmanay (UK) is December 31st
   # https://en.wikipedia.org/wiki/Hogmanay
   REM  Dec 31 +1 PRIORITY 1000 \
-    MSG %"[babel("Hogmanay (UK) ", "Hogmanay (UK) ")]%" %b%
+    MSG %"[babel("Hogmanay (UK)", "Hogmanay (UK)")]%" %b%
 
 
 # Other interesting days

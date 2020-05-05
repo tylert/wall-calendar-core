@@ -36,11 +36,12 @@
 
   # National Flag of Canada Day is February 15th
   # https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
+  # https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
   REM  Feb 15 +1 PRIORITY 1000 \
     MSG %"[babel("National Flag of Canada Day", \
       "Jour du drapeau national du Canada")]%" %b%
 
-  # The 3rd Monday in February is observed in 6 provinces and 0
+  # The 3rd Monday in February is observed in 8 provinces and 0
   # territories...
   #   CA-AB:  Family Day;  statutory
   #   CA-BC:  Family Day;  statutory
@@ -279,5 +280,6 @@
 
   # New Year's Eve is December 31st
   # https://en.wikipedia.org/wiki/New_Year's_Eve
+  # https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
   REM  Dec 31 +1 PRIORITY 1000 \
     MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%

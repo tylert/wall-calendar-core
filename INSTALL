@@ -16,16 +16,16 @@
 
 sudo apt-get --yes install build-essential
 
-remind_version='remind-03.01.17'
+remind_version='remind-03.03.01'
 remind_gpg_key_id='738E4D954052902C147D07B2685A5A5E511D30E2'
 temp_location='tmp'
 target_location='/usr/local/bin'
 
-# Prepare stuff.
+# Prepare stuff
 mkdir --parents ${temp_location}
 pushd ${temp_location}
 
-# Fetch stuff.
+# Fetch stuff
 location=https://dianne.skoll.ca/projects/remind/download
 wget ${location}/${remind_version}.tar.gz.sig
 wget ${location}/${remind_version}.tar.gz
@@ -33,28 +33,28 @@ gpg --recv-key ${remind_gpg_key_id}
 gpg --export --armor --no-emit-version --no-comment ${remind_gpg_key_id} >\
     ${remind_gpg_key_id}.gpg.pub.txt
 
-# Verify stuff.
+# Verify stuff
 gpg --verify ${remind_version}.tar.gz.sig ${remind_version}.tar.gz
 read
 
-# Extract stuff.
+# Extract stuff
 tar --extract --verbose --gzip --file ${remind_version}.tar.gz
 
-# Build French stuff.
+# Build French stuff
 pushd ${remind_version}
 # XXX FIXME XXX hack FOrd() in src/funcs.c to force the strings to be French
 make "LANGDEF=-DLANG=FRENCH"
 sudo cp src/remind ${target_location}/remind.fr
 sudo cp src/rem2ps ${target_location}/rem2ps.fr
 
-# Build English stuff.
+# Build English stuff
 make clean
 make "LANGDEF=-DLANG=ENGLISH"
 sudo cp src/remind ${target_location}/remind.en
 sudo cp src/rem2ps ${target_location}/rem2ps.en
 popd
 
-# Clean up stuff.
+# Clean up stuff
 popd
 # rm --recursive --force ${temp_location}
 

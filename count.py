@@ -7,10 +7,10 @@ today_date = date.today()
 
 # ---==[b]==---
 if today_date.month >= 6:
-    b = date(today_date.year + 1, 6, 1) - today_date  # count down to next June
+    b = date(today_date.year + 1, 6, 15) - today_date  # count down to next mid-June
     print('Bv {} days, {:.2f} weeks, {:.2f} months, {:.2f} years'.format(b.days, b.days / 7, b.days / 30, b.days / 365))
 else:
-    b = date(today_date.year, 6, 1) - today_date  # count down to this June
+    b = date(today_date.year, 6, 15) - today_date  # count down to this mid-June
     print('Bv {} days, {:.2f} weeks, {:.2f} months, {:.2f} years'.format(b.days, b.days / 7, b.days / 30, b.days / 365))
 
 # ---==[s]==---

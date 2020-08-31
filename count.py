@@ -19,9 +19,9 @@ else:
 # d = date(2017, 10, 10) + timedelta(days=365 * 2) - today_date  # count down to date two years later
 # print('Dv {} days, {:.2f} weeks, {:.2f} months, {:.2f} years'.format(d.days, d.days / 7, d.days / 30, d.days / 365))
 
-# ---==[s]==---
-s = today_date - date(2020, 3, 9)  # count up from start date
-print('S^ {} days, {:.2f} weeks, {:.2f} months, {:.2f} years'.format(s.days, s.days / 7, s.days / 30, s.days / 365))
+# ---==[o]==---
+o = today_date - date(2020, 3, 9)  # count up from start date
+print('O^ {} days, {:.2f} weeks, {:.2f} months, {:.2f} years'.format(o.days, o.days / 7, o.days / 30, o.days / 365))
 
 # ---==[e]==---
 e = today_date - date(2017, 10, 10)  # count up from start date

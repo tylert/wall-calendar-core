@@ -3,3 +3,4 @@ click
 pycodestyle
 PyMeeus
 pytest
+vobject

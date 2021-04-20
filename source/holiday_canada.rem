@@ -98,10 +98,10 @@
   # https://en.wikipedia.org/wiki/Victoria_Day
   # https://en.wikipedia.org/wiki/National_Patriots%27_Day
   # https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
-  REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Mon May 18 SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Victoria Day", "Fête de la Reine")]%" %b%
-  REM  Mon May 17 SCANFROM [trigger(today() - 7)] SATISFY 1
+  REM  Mon May 18 SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("National Patriots' Day (CA-QC)", \
         "Journée nationale des patriotes (CA-QC)")]%" %b%

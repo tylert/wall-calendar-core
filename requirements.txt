@@ -4,7 +4,7 @@ click==7.1.2
 iniconfig==1.1.1
 packaging==20.7
 pluggy==0.13.1
-py==1.9.0
+py==1.10.0
 pycodestyle==2.6.0
 PyMeeus==0.3.7
 pyparsing==2.4.7

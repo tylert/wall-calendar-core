@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 from datetime import date, timedelta
 from math import ceil, floor, sin
 
@@ -151,9 +148,6 @@ CHINESE_ZODIAC = ['猴', '雞', '狗', '豬', '鼠', '牛',
                   '虎', '兔', '龍', '蛇', '馬', '羊']  # year mod 12
 EARTHLY_BRANCHES = ['申', '酉', '戌', '亥', '子', '丑',
                     '寅', '卯', '辰', '巳', '午', '未']  # year mod 12
-
-
-# if __name__ == '__main__':
 
 
 # https://dateutil.readthedocs.io/en/stable/rrule.html

@@ -18,7 +18,7 @@ def get_assignment():
     # (Run through all the choices uniquely before doing so again)
     while True:
         for name in names:
-            yield ' {}'.format(name)
+            yield f' {name}'
 
 
 def main():
@@ -26,7 +26,7 @@ def main():
     '''
 
     assignment = get_assignment()
-    for year in (2020, 2021, 2022, 2023, 2024, 2025):
+    for year in (2022, 2023, 2024, 2025):
         # Lanark North Leeds ARES nets are every Wednesday of each month at
         # 2000H.
         for month in range(1, 13):

@@ -11,7 +11,7 @@ def main():
     '''
     '''
 
-    for year in (2020, 2021, 2022, 2023):
+    for year in (2022, 2023):
         # Ottawa Amateur Radio Club executive meetings are the 1st Wednesday of
         # each month except July and August
         # Ottawa Amateur Radio Club regular meetings are the 2nd Wednesday of

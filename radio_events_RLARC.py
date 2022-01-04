@@ -10,7 +10,7 @@ def main():
     '''
     '''
 
-    for year in (2020, 2021, 2022, 2023):
+    for year in (2022, 2023):
         # Rideau Lakes Amateur Radio Club nets are every Thursday of each month
         # at 1930H.
         # https://www.ve3rlr.ca/p/about.html

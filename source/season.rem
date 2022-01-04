@@ -17,45 +17,6 @@
   # The September Equinox is the First Day of Fall in the Northern Hemisphere
   # The December Solstice is the First Day of Winter in the Northern Hemisphere
 
-  REM  Jan 03 2019 PRIORITY 0000 AT 05:20 +60 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  Jul 04 2019 PRIORITY 0000 AT 22:11 +60 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  Mar 20 2019 +1 PRIORITY 0000 AT 21:58 +60 \
-    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
-  REM  Jun 21 2019 +1 PRIORITY 0000 AT 15:54 +60 \
-    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
-  REM  Sep 23 2019 +1 PRIORITY 0000 AT 07:50 +60 \
-    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
-  REM  Dec 22 2019 +1 PRIORITY 0000 AT 04:19 +60 \
-    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
-
-  REM  Jan 05 2020 PRIORITY 0000 AT 07:48 +60 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  Jul 04 2020 PRIORITY 0000 AT 11:35 +60 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  Mar 20 2020 +1 PRIORITY 0000 AT 03:50 +60 \
-    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
-  REM  Jun 20 2020 +1 PRIORITY 0000 AT 21:44 +60 \
-    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
-  REM  Sep 22 2020 +1 PRIORITY 0000 AT 13:31 +60 \
-    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
-  REM  Dec 21 2020 +1 PRIORITY 0000 AT 10:02 +60 \
-    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
-
-  REM  Jan 02 2021 PRIORITY 0000 AT 13:51 +60 \
-    MSG %"[babel("Perihelion", "Périhélie")]%" %b%
-  REM  Jul 05 2021 PRIORITY 0000 AT 22:27 +60 \
-    MSG %"[babel("Aphelion", "Aphélie")]%" %b%
-  REM  Mar 20 2021 +1 PRIORITY 0000 AT 09:27 +60 \
-    MSG %"[babel("First Day of Spring", "Premier jour de printemps")]%" %b%
-  REM  Jun 21 2021 +1 PRIORITY 0000 AT 03:32 +60 \
-    MSG %"[babel("First Day of Summer", "Premier jour d'été")]%" %b%
-  REM  Sep 22 2021 +1 PRIORITY 0000 AT 19:21 +60 \
-    MSG %"[babel("First Day of Fall", "Premier jour d'automne")]%" %b%
-  REM  Dec 21 2021 +1 PRIORITY 0000 AT 15:59 +60 \
-    MSG %"[babel("First Day of Winter", "Premier jour d'hiver")]%" %b%
-
   REM  Jan 04 2022 PRIORITY 0000 AT 06:55 +60 \
     MSG %"[babel("Perihelion", "Périhélie")]%" %b%
   REM  Jul 04 2022 PRIORITY 0000 AT 07:11 +60 \

@@ -37,7 +37,7 @@ def days_in_month(year=date.today().year, month=date.today().month):
         return _DAYS_IN_MONTH[month]
 
 
-def closest_day(desired_weekday, nearby_date=date.today(), last=False):
+def closest_date(desired_weekday, nearby_date=date.today(), last=False):
     '''
     '''
 

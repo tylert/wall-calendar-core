@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
+
 from datetime import datetime
 
-import click
 from vobject import iCalendar
+import click
 
 
 def generate_ical():

@@ -3,8 +3,7 @@
 
 from datetime import date
 
-from paper_cal import (closest_day, MONDAY, WEDNESDAY, THURSDAY, SATURDAY,
-                       WEEK1, WEEK2, WEEK3, MAY, JUNE, JULY, SEPTEMBER)
+from paper_cal import *
 
 
 def main():
@@ -19,31 +18,31 @@ def main():
         # https://www.oarc.net/
         for month in range(1, 13, 1):
             # XXX FIXME TODO Make summer break work properly
-            if month != JUNE or month != JULY:
-                print(closest_day(WEDNESDAY, date(year, month, WEEK1)), end='')
+            if month != JUN or month != JUL:
+                print(closest_date(WED, date(year, month, WEEK1)), end='')
                 print(' 1900-2100h OARC Exec')
                 # exécutif
-                print(closest_day(WEDNESDAY, date(year, month, WEEK2)), end='')
+                print(closest_date(WED, date(year, month, WEEK2)), end='')
                 print(' 1930-2200h OARC')
-        print(closest_day(SATURDAY, date(year, SEPTEMBER, WEEK2)), end='')
+        print(closest_date(SAT, date(year, SEP, WEEK2)), end='')
         print(' 0700-1200h OARC Hamfest')
-        print(closest_day(SATURDAY, date(year, SEPTEMBER, WEEK3)), end='')
+        print(closest_date(SAT, date(year, SEP, WEEK3)), end='')
         print(' 0800-1300h OARC Demo')
 
         # Rideau Lakes Amateur Radio Club meetings are the 3rd Thursday of each
         # month
         # https://www.ve3rlr.ca/p/about.html
         for month in range(1, 13):
-            print(closest_day(THURSDAY, date(year, month, WEEK3)), end='')
+            print(closest_date(THU, date(year, month, WEEK3)), end='')
             print(' 1930-2200h RLARC')
-        print(closest_day(SATURDAY, date(year, MAY, WEEK2)), end='')
+        print(closest_date(SAT, date(year, MAY, WEEK2)), end='')
         print(' 0700-1200h RLARC Fleamarket')
 
         # West-Carleton Amateur Radio Club meetings are the 3rd Monday of each
         # month
         # https://wcarc.on.ca
         for month in range(1, 13):
-            print(closest_day(MONDAY, date(year, month, WEEK3)), end='')
+            print(closest_date(MON, date(year, month, WEEK3)), end='')
             print(' 1900-2100h WCARC')
 
     # Daylight Savings Time starts on the 2nd Sunday in March

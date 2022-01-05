@@ -2,6 +2,20 @@ from datetime import date, timedelta
 from math import ceil, floor, sin
 
 
+(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
+(JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER,
+    NOVEMBER, DECEMBER) = range(1, 13, 1)
+
+_DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+_FEBRUARY_LEAP_YEAR = 29
+_LENGTH_OF_WEEK = 7  # days
+
+(MON, TUE, WED, THU, FRI, SAT, SUN) = range(_LENGTH_OF_WEEK)
+(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(
+    _LENGTH_OF_WEEK)
+(WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
+
+
 def is_leap_year(year=date.today().year):
     '''
     '''
@@ -9,14 +23,6 @@ def is_leap_year(year=date.today().year):
     # XXX FIXME TODO Add some better range checking!!!
 
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
-
-
-_DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-_FEBRUARY_LEAP_YEAR = 29
-
-(JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER,
-    NOVEMBER, DECEMBER) = range(1, 13, 1)
-(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
 
 
 def days_in_month(year=date.today().year, month=date.today().month):
@@ -29,14 +35,6 @@ def days_in_month(year=date.today().year, month=date.today().month):
         return _FEBRUARY_LEAP_YEAR
     else:
         return _DAYS_IN_MONTH[month]
-
-
-_LENGTH_OF_WEEK = 7  # days
-
-(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(
-    _LENGTH_OF_WEEK)
-(MON, TUE, WED, THU, FRI, SAT, SUN) = range(_LENGTH_OF_WEEK)
-(WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
 
 
 def closest_day(desired_weekday, nearby_date=date.today(), last=False):
@@ -102,6 +100,17 @@ _LENGTH_OF_LUNAR_MONTH = 30
 # 0 = new ( ), 8 = first (D), 15 = full (O), 22 = last (C), 29 = end
 (NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
 
+#          0     1     2     3     4     5     6     7
+#          8     9     10    11    12    13    14    15
+#          16    17    18    19    20    21    22    23
+#          24    25    26    27    28    29
+_MOONS = ['🌑', '🌒', '🌒', '🌒', '🌒', '🌒', '🌒', '🌒',
+          '🌓', '🌔', '🌔', '🌔', '🌔', '🌔', '🌔', '🌕',
+          '🌖', '🌖', '🌖', '🌖', '🌖', '🌖', '🌗', '🌘',
+          '🌘', '🌘', '🌘', '🌘', '🌘', '🌘']
+# new, waxing crescent, first quarter, waxing gibbous, full, waning gibbous,
+# last quarter, waning crescent
+
 
 def closest_moon(desired_phase, nearby_date=date.today(), last=False):
     '''
@@ -124,18 +133,6 @@ def closest_moon(desired_phase, nearby_date=date.today(), last=False):
         return found_date - timedelta(days=_LENGTH_OF_LUNAR_MONTH)
     else:
         return found_date
-
-
-#          0     1     2     3     4     5     6     7
-#          8     9     10    11    12    13    14    15
-#          16    17    18    19    20    21    22    23
-#          24    25    26    27    28    29
-_MOONS = ['🌑', '🌒', '🌒', '🌒', '🌒', '🌒', '🌒', '🌒',
-          '🌓', '🌔', '🌔', '🌔', '🌔', '🌔', '🌔', '🌕',
-          '🌖', '🌖', '🌖', '🌖', '🌖', '🌖', '🌗', '🌘',
-          '🌘', '🌘', '🌘', '🌘', '🌘', '🌘']
-# new, waxing crescent, first quarter, waxing gibbous, full, waning gibbous,
-# last quarter, waning crescent
 
 
 # https://en.wikipedia.org/wiki/Sexagenary_cycle

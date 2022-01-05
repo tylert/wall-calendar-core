@@ -65,24 +65,33 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Pentec%C3%B4te
     _, temp_month, temp_day, _, _, _ = spring_equinox.get_full_date()
     print(f'{closest_date(SUNDAY, closest_moon(FULL_MOON, date(year, temp_month, temp_day)))} NOT QUITE Easter')
-    # REM  [trigger(easter-47)] +1 PRIORITY 1000 \
-    #   MSG %"[babel("Shrove/Pancake Tuesday", "Mardi Gras")]%" %b%
-    # REM  [trigger(easter-46)] +1 PRIORITY 1000 \
-    #   MSG %"[babel("Ash Wednesday", "Mercredi des Cendres")]%" %b%
-    # REM  [trigger(easter-7)]  +1 PRIORITY 1000 \
-    #   MSG %"[babel("Palm Sunday", "Dimanche des Rameaux")]%" %b%
-    # REM  [trigger(easter-3)]  +1 PRIORITY 1000 \
-    #   MSG %"[babel("Maundy Thursday", "Jeudi saint")]%" %b%
-    # OMIT [trigger(easter-2)]  +1 PRIORITY 1000 \
-    #   MSG %"[babel("Good Friday", "Vendredi saint")]%" %b%
-    # OMIT [trigger(easter)]    +1 PRIORITY 1000 \
-    #   MSG %"[babel("Easter Sunday", "Le dimanche de Pâques")]%" %b%
-    # REM  [trigger(easter+1)]  +1 PRIORITY 1000 \
-    #   MSG %"[babel("Easter Monday", "Le lundi de Pâques")]%" %b%
-    # REM  [trigger(easter+39)] +1 PRIORITY 1000 \
-    #   MSG %"[babel("Ascension", "Ascension")]%" %b%
-    # REM  [trigger(easter+49)] +1 PRIORITY 1000 \
-    #   MSG %"[babel("Pentecost", "Pentecôte")]%" %b%
+    # easter-47
+    #   Shrove/Pancake Tuesday
+    #   Mardi Gras
+    # easter-46
+    #   Ash Wednesday
+    #   Mercredi des Cendres
+    # easter-7
+    #   Palm Sunday
+    #   Dimanche des Rameaux
+    # easter-3
+    #   Maundy Thursday
+    #   Jeudi saint
+    # easter-2
+    #   Good Friday
+    #   Vendredi saint
+    # easter
+    #   Easter Sunday
+    #   Le dimanche de Pâques
+    # easter+1
+    #   Easter Monday
+    #   Le lundi de Pâques
+    # easter+39
+    #   Ascension
+    #   Ascension
+    # easter+49
+    #   Pentecost
+    #   Pentecôte
 
     # Christmas Eve is December 24th
     print(f'{date(year, DECEMBER, 24)} Christmas Eve')
@@ -100,10 +109,10 @@ def main(year):
     # Lendemain de Noël
     # Le jour des boîtes
     # Après-Noël
-    if date.weekday(date(year, DECEMBER, 25)) == SAT:
+    if date.weekday(date(year, DECEMBER, 25)) == SATURDAY:
         print(f'{closest_date(MONDAY, date(year, DECEMBER, 25))} Christmas Day (observed)')
         print(f'{closest_date(TUESDAY, date(year, DECEMBER, 26))} Boxing Day (observed)')
-    if date.weekday(date(year, DECEMBER, 25)) == SUN:
+    if date.weekday(date(year, DECEMBER, 25)) == SUNDAY:
         print(f'{closest_date(TUESDAY, date(year, DECEMBER, 25))} Christmas Day (observed)')
 
 

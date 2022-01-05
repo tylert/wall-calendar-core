@@ -4,6 +4,8 @@
 from datetime import date
 import random
 
+import click
+
 from paper_cal import *
 
 
@@ -18,31 +20,32 @@ def get_assignment():
     # (Run through all the choices uniquely before doing so again)
     while True:
         for name in names:
-            yield f' {name}'
+            yield f'{name}'
 
 
-def main():
+@click.command()
+@click.option(
+    '--year',
+    '-y',
+    default=date.today().year,
+    help='Year to show',
+)
+def main(year):
     '''
     '''
 
     assignment = get_assignment()
-    for year in (2022, 2023, 2024, 2025):
-        # Lanark North Leeds ARES nets are every Wednesday of each month at
-        # 2000H.
-        for month in range(1, 13):
-            print(closest_date(WED, date(year, month, WEEK1)), end='')
-            print(next(assignment))
-            print(closest_date(WED, date(year, month, WEEK2)), end='')
-            print(next(assignment))
-            print(closest_date(WED, date(year, month, WEEK3)), end='')
-            print(next(assignment))
-            print(closest_date(WED, date(year, month, WEEK4)), end='')
-            print(next(assignment))
-            # Wednesdays sometimes happen in the 5th week of the month
-            if closest_date(WED, date(year, month, WEEK4)) \
-                    != closest_date(WED, date(year, month, WEEK4), last=True):
-                print(closest_date(WED, date(year, month, WEEK4), last=True), end='')
-                print(next(assignment))
+    # Lanark North Leeds ARES nets are every Wednesday of each month at
+    # 2000H.
+    for month in range(1, 13):
+        print(f'{closest_date(WEDNESDAY, date(year, month, WEEK1))} {next(assignment)}')
+        print(f'{closest_date(WEDNESDAY, date(year, month, WEEK2))} {next(assignment)}')
+        print(f'{closest_date(WEDNESDAY, date(year, month, WEEK3))} {next(assignment)}')
+        print(f'{closest_date(WEDNESDAY, date(year, month, WEEK4))} {next(assignment)}')
+        # Wednesdays sometimes happen in the 5th week of the month
+        if closest_date(WEDNESDAY, date(year, month, WEEK4)) \
+                != closest_date(WEDNESDAY, date(year, month, WEEK4), last=True):
+            print(f'{closest_date(WEDNESDAY, date(year, month, WEEK4), last=True)} {next(assignment)}')
 
 
 if __name__ == '__main__':

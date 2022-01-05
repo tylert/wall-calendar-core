@@ -6,39 +6,37 @@
 # Major Christian holidays and celebratory-type events
 
   # Epiphany is January 6th
-  # https://en.wikipedia.org/wiki/Epiphany_(holiday)
-  # https://fr.wikipedia.org/wiki/%C3%89piphanie
+  #   https://en.wikipedia.org/wiki/Epiphany_(holiday)
+  #   https://fr.wikipedia.org/wiki/%C3%89piphanie
   REM  Jan 06 +1 PRIORITY 1000 \
     MSG %"[babel("Epiphany", "Epiphanie")]%" %b%
 
   # Baptism of the Lord is the 1st Sunday after January 6th
-  # https://en.wikipedia.org/wiki/Baptism_of_the_Lord
-  # ???
-  # XXX FIXME
+  #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord
   #   MSG %"[babel("Baptism of the Lord", "???")]%" %b%
 
   # Conversion of St. Paul is January 25th
-  # https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
-  # https://fr.wikipedia.org/wiki/Conversion_de_Paul
+  #   https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
+  #   https://fr.wikipedia.org/wiki/Conversion_de_Paul
   REM  Jan 25 +1 PRIORITY 1000 \
     MSG %"[babel("Conversion of St. Paul", "Conversion de Paul")]%" %b%
 
   # St. Valentine's Day is February 14th
-  # https://en.wikipedia.org/wiki/Valentine%27s_Day
-  # https://fr.wikipedia.org/wiki/Saint-Valentin
+  #   https://en.wikipedia.org/wiki/Valentine%27s_Day
+  #   https://fr.wikipedia.org/wiki/Saint-Valentin
   REM  Feb 14 +1 PRIORITY 1000 \
     MSG %"[babel("St. Valentine's Day", "Saint-Valentin")]%" %b%
 
   # St. David's Day (UK) is March 1st
-  # https://en.wikipedia.org/wiki/Saint_David%27s_Day
-  # https://fr.wikipedia.org/wiki/Saint_David%27s_Day
+  #   https://en.wikipedia.org/wiki/Saint_David%27s_Day
+  #   https://fr.wikipedia.org/wiki/Saint_David%27s_Day
   REM  Mar 01 +1 PRIORITY 1000 \
     MSG %"[babel("St. David's Day (UK)", "Fête de la Saint-David (UK)")]%" %b%
 
   # St. Patrick's Day is March 17th
   # St. Patrick's Day (NL) is the Monday nearest March 17th
-  # https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day
-  # https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Patrick
+  #   https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day
+  #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Patrick
   REM  Mar 17 +1 PRIORITY 1000 \
     MSG %"[babel("St. Patrick's Day", "Fête de la Saint-Patrick")]%" %b%
   REM  Mon Mar 14 SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -47,29 +45,29 @@
         "Fête de la Saint-Patrick (CA-NL)")]%" %b%
 
   # Annunciation is March 25th
-  # https://en.wikipedia.org/wiki/Annunciation
-  # https://fr.wikipedia.org/wiki/Annonciation
+  #   https://en.wikipedia.org/wiki/Annunciation
+  #   https://fr.wikipedia.org/wiki/Annonciation
   REM  Mar 25 +1 PRIORITY 1000 \
     MSG %"[babel("Annunciation", "Annonciation")]%" %b%
 
   # Easter is the 1st Sunday after the 1st full moon after the Spring
   # equinox
-  # https://en.wikipedia.org/wiki/Shrove_Tuesday
-  # https://fr.wikipedia.org/wiki/Mardi_gras
-  # https://en.wikipedia.org/wiki/Ash_Wednesday
-  # https://fr.wikipedia.org/wiki/Mercredi_des_Cendres
-  # https://en.wikipedia.org/wiki/Palm_Sunday
-  # https://fr.wikipedia.org/wiki/Dimanche_des_Rameaux
-  # https://en.wikipedia.org/wiki/Maundy_Thursday
-  # https://fr.wikipedia.org/wiki/Jeudi_saint
-  # https://en.wikipedia.org/wiki/Good_Friday
-  # https://fr.wikipedia.org/wiki/Vendredi_saint
-  # https://en.wikipedia.org/wiki/Easter
-  # https://fr.wikipedia.org/wiki/P%C3%A2ques
-  # https://en.wikipedia.org/wiki/Feast_of_the_Ascension
-  # https://fr.wikipedia.org/wiki/Ascension_(f%C3%AAte)
-  # https://en.wikipedia.org/wiki/Pentecost
-  # https://fr.wikipedia.org/wiki/Pentec%C3%B4te
+  #   https://en.wikipedia.org/wiki/Shrove_Tuesday
+  #   https://fr.wikipedia.org/wiki/Mardi_gras
+  #   https://en.wikipedia.org/wiki/Ash_Wednesday
+  #   https://fr.wikipedia.org/wiki/Mercredi_des_Cendres
+  #   https://en.wikipedia.org/wiki/Palm_Sunday
+  #   https://fr.wikipedia.org/wiki/Dimanche_des_Rameaux
+  #   https://en.wikipedia.org/wiki/Maundy_Thursday
+  #   https://fr.wikipedia.org/wiki/Jeudi_saint
+  #   https://en.wikipedia.org/wiki/Good_Friday
+  #   https://fr.wikipedia.org/wiki/Vendredi_saint
+  #   https://en.wikipedia.org/wiki/Easter
+  #   https://fr.wikipedia.org/wiki/P%C3%A2ques
+  #   https://en.wikipedia.org/wiki/Feast_of_the_Ascension
+  #   https://fr.wikipedia.org/wiki/Ascension_(f%C3%AAte)
+  #   https://en.wikipedia.org/wiki/Pentecost
+  #   https://fr.wikipedia.org/wiki/Pentec%C3%B4te
   SET easter easterdate(year(today()))
   REM  [trigger(easter-47)] +1 PRIORITY 1000 \
     MSG %"[babel("Shrove/Pancake Tuesday", "Mardi Gras")]%" %b%
@@ -91,8 +89,8 @@
     MSG %"[babel("Pentecost", "Pentecôte")]%" %b%
 
   # Passover is from 14 or 15 to 21 or 22 Nisan (1st month)
-  # https://en.wikipedia.org/wiki/Passover
-  # https://fr.wikipedia.org/wiki/Pessa%27h
+  #   https://en.wikipedia.org/wiki/Passover
+  #   https://fr.wikipedia.org/wiki/Pessa%27h
   REM  [hebdate(15, "Nisan")] +1 PRIORITY 1000 \
     MSG %"[babel("Passover Begins", "Début de Pâque des Juifs")]%" %b%
   REM  [hebdate(22, "Nisan")] +1 PRIORITY 1000 \
@@ -100,8 +98,8 @@
 
   # St. George's Day (NL) is the Monday nearest April 23rd
   # St. George's Day (UK) is April 23rd
-  # https://en.wikipedia.org/wiki/Saint_George%27s_Day
-  # https://fr.wikipedia.org/wiki/Sant_Jordi
+  #   https://en.wikipedia.org/wiki/Saint_George%27s_Day
+  #   https://fr.wikipedia.org/wiki/Sant_Jordi
   REM  Mon Apr 20 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("St. George's Day (CA-NL)", \
@@ -111,13 +109,11 @@
       "Fête de la Saint-Georges (UK)")]%" %b%
 
   # St. John the Baptist's Day is June 24th
-  # https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
-  # https://fr.wikipedia.org/wiki/F%C3%AAte_nationale_du_Qu%C3%A9bec
-  # https://en.wikipedia.org/wiki/John_the_Baptist
-  # https://fr.wikipedia.org/wiki/Jean_le_Baptiste
-  # https://en.wikipedia.org/wiki/Nativity_of_St_John_the_Baptist
-  # ???
-  # XXX FIXME
+  #   https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
+  #   https://fr.wikipedia.org/wiki/F%C3%AAte_nationale_du_Qu%C3%A9bec
+  #   https://en.wikipedia.org/wiki/John_the_Baptist
+  #   https://fr.wikipedia.org/wiki/Jean_le_Baptiste
+  #   https://en.wikipedia.org/wiki/Nativity_of_St_John_the_Baptist
   REM  Jun 24 +1 PRIORITY 1000 \
     MSG %"[babel("Saint-Jean-Baptiste Day", \
       "Fête de la Saint-Jean-Baptiste")]%" %b%
@@ -126,49 +122,48 @@
       "Nativité de saint Jean-Baptiste")]%" %b%
 
   # Orangemen's Day (NL) is the Monday nearest July 12th
-  # https://en.wikipedia.org/wiki/Orangemen%27s_Day
-  # https://fr.wikipedia.org/wiki/Orange_Day
-  # https://en.wikipedia.org/wiki/The_Twelfth#The_Twelfth_outside_Northern_Ireland
-  # ???
+  #   https://en.wikipedia.org/wiki/Orangemen%27s_Day
+  #   https://fr.wikipedia.org/wiki/Orange_Day
+  #   https://en.wikipedia.org/wiki/The_Twelfth#The_Twelfth_outside_Northern_Ireland
   REM  Mon Jul 09 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Orangemen's Day (CA-NL)", \
         "Fête des Orangistes (CA-NL)")]%" %b%
 
   # All Saints' Day is November 1st
-  # https://en.wikipedia.org/wiki/All_Saints%27_Day
-  # https://fr.wikipedia.org/wiki/Toussaint
+  #   https://en.wikipedia.org/wiki/All_Saints%27_Day
+  #   https://fr.wikipedia.org/wiki/Toussaint
   REM  Nov 01 +1 PRIORITY 1000 \
     MSG %"[babel("All Saints' Day", "Toussaint")]%" %b%
 
   # All Souls' Day is November 2nd
-  # https://en.wikipedia.org/wiki/All_Souls%27_Day
-  # https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
+  #   https://en.wikipedia.org/wiki/All_Souls%27_Day
+  #   https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
   REM  Nov 02 +1 PRIORITY 1000 \
     MSG %"[babel("All Souls' Day", "Fête des Morts")]%" %b%
 
   # St. Andrew's Day (UK) is November 30th
-  # https://en.wikipedia.org/wiki/Saint_Andrew%27s_Day
-  # https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Andr%C3%A9
+  #   https://en.wikipedia.org/wiki/Saint_Andrew%27s_Day
+  #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Andr%C3%A9
   REM  Nov 30 +1 PRIORITY 1000 \
     MSG %"[babel("St. Andrew's Day (UK)", \
       "Fête de la Saint-André (UK)")]%" %b%
 
   # Christmas Eve is December 24th
-  # https://en.wikipedia.org/wiki/Christmas_Eve
-  # https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
+  #   https://en.wikipedia.org/wiki/Christmas_Eve
+  #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
   REM  Dec 24 +1 PRIORITY 1000 \
     MSG %"[babel("Christmas Eve", "Veille de Noël")]%" %b%
 
   # Christmas Day is December 25th
-  # https://en.wikipedia.org/wiki/Christmas
-  # https://fr.wikipedia.org/wiki/No%C3%ABl
+  #   https://en.wikipedia.org/wiki/Christmas
+  #   https://fr.wikipedia.org/wiki/No%C3%ABl
   OMIT Dec 25 +1 PRIORITY 1000 \
     MSG %"[babel("Christmas Day", "Noël")]%" %b%
 
   # Boxing Day is December 26th
-  # https://en.wikipedia.org/wiki/Boxing_Day
-  # https://fr.wikipedia.org/wiki/Boxing_Day
+  #   https://en.wikipedia.org/wiki/Boxing_Day
+  #   https://fr.wikipedia.org/wiki/Boxing_Day
   OMIT Dec 26 +1 PRIORITY 1000 \
     MSG %"[babel("Boxing Day", "Lendemain de Noël")]%" %b%
 
@@ -176,45 +171,45 @@
 # Major Jewish holidays and celebratory-type events
 
   # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following (3rd month)
-  # https://en.wikipedia.org/wiki/Shavuot
-  # https://fr.wikipedia.org/wiki/Chavouot
+  #   https://en.wikipedia.org/wiki/Shavuot
+  #   https://fr.wikipedia.org/wiki/Chavouot
   REM  [hebdate(6, "Sivan")] +1 PRIORITY 1000 \
     MSG %"[babel("Shauvot Begins", "Début de Chavouot")]%" %b%
   REM  [hebdate(7, "Sivan")] +1 PRIORITY 1000 \
     MSG %"[babel("Shauvot Ends", "Fin de Chavouot")]%" %b%
 
   # Rosh Hashanah or Jewish New Year is 1 and 2 Tishrey (7th month)
-  # https://en.wikipedia.org/wiki/Rosh_Hashanah
-  # https://fr.wikipedia.org/wiki/Roch_Hachana
+  #   https://en.wikipedia.org/wiki/Rosh_Hashanah
+  #   https://fr.wikipedia.org/wiki/Roch_Hachana
   REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Rosh Hashanah Begins", "Début de Roch Hachana")]%" %b%
   REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Rosh Hashanah Ends", "Fin de Roch Hachana")]%" %b%
 
   # Yom Kippur is 10 Tishrey (7th month)
-  # https://en.wikipedia.org/wiki/Yom_Kippur
-  # https://fr.wikipedia.org/wiki/Yom_Kippour
+  #   https://en.wikipedia.org/wiki/Yom_Kippur
+  #   https://fr.wikipedia.org/wiki/Yom_Kippour
   REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Yom Kippur", "Yom Kippour")]%" %b%
 
   # Sukkot or Tabernacles is from 15 to 21 or 22 Tishrey (7th month)
-  # https://en.wikipedia.org/wiki/Sukkot
-  # https://fr.wikipedia.org/wiki/Souccot
+  #   https://en.wikipedia.org/wiki/Sukkot
+  #   https://fr.wikipedia.org/wiki/Souccot
   REM  [hebdate(15, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Sukkot Begins", "Début de Souccot")]%" %b%
   REM  [hebdate(22, "Tishrey")] +1 PRIORITY 1000 \
     MSG %"[babel("Sukkot Ends", "Fin de Souccot")]%" %b%
 
   # Hanukkah is from 25 Kislev (9th month) to 2 Tevet (10th month)
-  # https://en.wikipedia.org/wiki/Hanukkah
-  # https://fr.wikipedia.org/wiki/Hanoucca
+  #   https://en.wikipedia.org/wiki/Hanukkah
+  #   https://fr.wikipedia.org/wiki/Hanoucca
   REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
     MSG %"[babel("Hanukkah Begins", "Début de Hanoucca")]%" %b%
   REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
     MSG %"[babel("Hanukkah Ends", "Fin de Hanoucca")]%" %b%
 
   # Purim is 14 Adar (12th month)
-  # https://en.wikipedia.org/wiki/Purim
-  # https://fr.wikipedia.org/wiki/Pourim
+  #   https://en.wikipedia.org/wiki/Purim
+  #   https://fr.wikipedia.org/wiki/Pourim
   REM  [hebdate(14, "Adar")] +1 PRIORITY 1000 \
     MSG %"[babel("Purim", "Pourim")]%" %b%

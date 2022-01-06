@@ -10,11 +10,19 @@ from paper_cal import *
 
 
 def get_assignment():
-    '''
-    '''
+    ''' '''
 
-    names = ['Name1', 'Name2', 'Name3', 'Name4', 'Name5', 'Name6', 'Name7',
-             'Name8', 'Name9']
+    names = [
+        'Name1',
+        'Name2',
+        'Name3',
+        'Name4',
+        'Name5',
+        'Name6',
+        'Name7',
+        'Name8',
+        'Name9',
+    ]
 
     # Try to distribute the assignements "fairly"
     # (Run through all the choices uniquely before doing so again)
@@ -31,8 +39,7 @@ def get_assignment():
     help='Year to show',
 )
 def main(year):
-    '''
-    '''
+    ''' '''
 
     assignment = get_assignment()
     # Lanark North Leeds ARES nets are every Wednesday of each month at
@@ -43,9 +50,12 @@ def main(year):
         print(f'{closest_date(WEDNESDAY, date(year, month, WEEK3))} {next(assignment)}')
         print(f'{closest_date(WEDNESDAY, date(year, month, WEEK4))} {next(assignment)}')
         # Wednesdays sometimes happen in the 5th week of the month
-        if closest_date(WEDNESDAY, date(year, month, WEEK4)) \
-                != closest_date(WEDNESDAY, date(year, month, WEEK4), last=True):
-            print(f'{closest_date(WEDNESDAY, date(year, month, WEEK4), last=True)} {next(assignment)}')
+        if closest_date(WEDNESDAY, date(year, month, WEEK4)) != closest_date(
+            WEDNESDAY, date(year, month, WEEK4), last=True
+        ):
+            print(
+                f'{closest_date(WEDNESDAY, date(year, month, WEEK4), last=True)} {next(assignment)}'
+            )
 
 
 if __name__ == '__main__':

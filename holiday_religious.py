@@ -64,7 +64,9 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Pentecost
     #   https://fr.wikipedia.org/wiki/Pentec%C3%B4te
     _, temp_month, temp_day, _, _, _ = spring_equinox.get_full_date()
-    print(f'{closest_date(SUNDAY, closest_moon(FULL_MOON, date(year, temp_month, temp_day)))} NOT QUITE Easter')
+    print(
+        f'{closest_date(SUNDAY, closest_moon(FULL_MOON, date(year, temp_month, temp_day)))} NOT QUITE Easter'
+    )
     # easter-47
     #   Shrove/Pancake Tuesday
     #   Mardi Gras
@@ -110,10 +112,16 @@ def main(year):
     # Le jour des boîtes
     # Après-Noël
     if date.weekday(date(year, DECEMBER, 25)) == SATURDAY:
-        print(f'{closest_date(MONDAY, date(year, DECEMBER, 25))} Christmas Day (observed)')
-        print(f'{closest_date(TUESDAY, date(year, DECEMBER, 26))} Boxing Day (observed)')
+        print(
+            f'{closest_date(MONDAY, date(year, DECEMBER, 25))} Christmas Day (observed)'
+        )
+        print(
+            f'{closest_date(TUESDAY, date(year, DECEMBER, 26))} Boxing Day (observed)'
+        )
     if date.weekday(date(year, DECEMBER, 25)) == SUNDAY:
-        print(f'{closest_date(TUESDAY, date(year, DECEMBER, 25))} Christmas Day (observed)')
+        print(
+            f'{closest_date(TUESDAY, date(year, DECEMBER, 25))} Christmas Day (observed)'
+        )
 
 
 if __name__ == '__main__':

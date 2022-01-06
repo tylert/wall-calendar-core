@@ -8,8 +8,7 @@ import click
 
 
 def generate_ical():
-    '''
-    '''
+    ''' '''
 
     # http://eventable.github.io/vobject/
     # https://en.wikipedia.org/wiki/ICalendar
@@ -29,8 +28,7 @@ def generate_ical():
 # @click.command()
 # @click.option('', '', default='', help='')
 def main():
-    '''
-    '''
+    ''' '''
 
     calendar = generate_ical()
     print(calendar.serialize())

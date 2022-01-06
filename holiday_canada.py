@@ -25,9 +25,13 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Jour_de_l%27an
     print(f'{date(year, JANUARY, 1)} New Year\'s Day')
     # Jour de l'an
-    if date.weekday(date(year, JANUARY, 1)) == SATURDAY \
-            or date.weekday(date(year, JANUARY, 1)) == SUNDAY:
-        print(f'{closest_date(MONDAY, date(year, JANUARY, 1))} New Year\'s Day (observed)')
+    if (
+        date.weekday(date(year, JANUARY, 1)) == SATURDAY
+        or date.weekday(date(year, JANUARY, 1)) == SUNDAY
+    ):
+        print(
+            f'{closest_date(MONDAY, date(year, JANUARY, 1))} New Year\'s Day (observed)'
+        )
         # Jour de l'an (observé)
 
     # Groundhog Day is February 2nd
@@ -82,8 +86,10 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
     print(f'{date(year, JULY, 1)} Canada Day')
     # Fête du Canada
-    if date.weekday(date(year, JULY, 1)) == SATURDAY \
-            or date.weekday(date(year, JULY, 1)) == SUNDAY:
+    if (
+        date.weekday(date(year, JULY, 1)) == SATURDAY
+        or date.weekday(date(year, JULY, 1)) == SUNDAY
+    ):
         print(f'{closest_date(MONDAY, date(year, JULY, 1))} Canada Day (observed)')
         # Fête du Canada (observé)
 

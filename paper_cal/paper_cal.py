@@ -142,6 +142,12 @@ def moon_phase(moon_date=date.today()):
     return (jul - jd + 30) % 30
 
 
+def moon_glyph(moon_date=date.today()):
+    ''' '''
+
+    return _MOON_GLYPHS[moon_phase(moon_date)]
+
+
 def closest_moon(desired_phase, nearby_date=date.today(), last=False):
     ''' '''
 

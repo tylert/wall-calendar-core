@@ -3,6 +3,7 @@ from .paper_cal import (
     closest_moon,
     days_in_month,
     is_leap_year,
+    moon_glyph,
     moon_phase,
 )
 

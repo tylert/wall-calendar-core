@@ -2,7 +2,6 @@
 
 
 from datetime import date
-import random
 
 import click
 

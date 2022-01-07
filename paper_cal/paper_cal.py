@@ -1,5 +1,5 @@
 from datetime import date, timedelta
-from math import ceil, floor, sin
+from math import ceil, floor, pi, sin
 
 
 (JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
@@ -117,7 +117,7 @@ def moon_phase(moon_date=date.today()):
     # http://www.ben-daglish.net/moon.shtml
 
     n = floor(12.37 * (moon_date.year - 1900 + ((1.0 * moon_date.month - 0.5) / 12.0)))
-    rad = 3.14159265 / 180.0
+    rad = pi / 180.0
     t = n / 1236.85
     t2 = t * t
     ass = 359.2242 + 29.105356 * n
@@ -145,7 +145,7 @@ def moon_phase(moon_date=date.today()):
 def moon_glyph(moon_date=date.today()):
     ''' '''
 
-    return _MOON_GLYPHS[moon_phase(moon_date)]
+    return _MOON_GLYPHS[moon_phase(moon_date=moon_date)]
 
 
 def closest_moon(desired_phase, nearby_date=date.today(), last=False):
@@ -175,7 +175,7 @@ def closest_moon(desired_phase, nearby_date=date.today(), last=False):
 # https://en.wikipedia.org/wiki/Heavenly_Stems
 # https://en.wikipedia.org/wiki/Earthly_Branches
 
-CHINESE_ZODIAC = [
+_CHINESE_ZODIAC = [
     '猴',  # hóu (monkey)
     '雞',  # jī (rooster) 鸡
     '狗',  # gǒu (dog)
@@ -189,7 +189,7 @@ CHINESE_ZODIAC = [
     '馬',  # mǎ (horse) 马
     '羊',  # yáng (goat)
 ]  # year mod 12
-MAJOR_ELEMENTS = [
+_MAJOR_ELEMENTS = [
     '金',  # jīn (metal)
     '金',  # jīn (metal)
     '水',  # shuǐ (water)
@@ -201,11 +201,11 @@ MAJOR_ELEMENTS = [
     '土',  # tǔ (earth)
     '土',  # tǔ (earth)
 ]  # year mod 10
-SPINS = [
+_SPINS = [
     '陽',  # yáng (white side) 阳
     '陰',  # yīn (black side) 阴
 ]  # year mod 2
-HEAVENLY_STEMS = [
+_HEAVENLY_STEMS = [
     '庚',  # gēng
     '辛',  # xīn
     '壬',  # rén
@@ -217,7 +217,7 @@ HEAVENLY_STEMS = [
     '戊',  # wù
     '己',  # jǐ
 ]  # year mod 10
-EARTHLY_BRANCHES = [
+_EARTHLY_BRANCHES = [
     '申',  # shēn
     '酉',  # yǒu
     '戌',  # xū

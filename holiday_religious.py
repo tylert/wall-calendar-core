@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
 
-from datetime import date
+from datetime import date, timedelta
 
 from pymeeus.Sun import Sun
+from pymeeus.Epoch import Epoch
 import click
 
 from paper_cal import *
@@ -18,14 +19,20 @@ from paper_cal import *
 )
 def main(year):
 
-    # https://en.wikipedia.org/wiki/Public_holidays_in_Canada
-    # https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
+    # Epiphany is January 6th
+    #   https://en.wikipedia.org/wiki/Epiphany_(holiday)
+    #   https://fr.wikipedia.org/wiki/%C3%89piphanie
+    print(f'{date(year, JANUARY, 6)} Epiphany')  # Epiphanie
 
     # St. Valentine's Day is February 14th
     #   https://en.wikipedia.org/wiki/Valentine%27s_Day
     #   https://fr.wikipedia.org/wiki/Saint-Valentin
-    print(f'{date(year, FEBRUARY, 14)} St. Valentine\'s Day')
-    # Saint-Valentin
+    print(f'{date(year, FEBRUARY, 14)} St. Valentine\'s Day')  # Saint-Valentin
+
+    # Annunciation is March 25th
+    #   https://en.wikipedia.org/wiki/Annunciation
+    #   https://fr.wikipedia.org/wiki/Annonciation
+    print(f'{date(year, MARCH, 25)} Annunciation')  # Annonciation
 
     spring_equinox = Sun.get_equinox_solstice(year, target='spring')
     summer_solstice = Sun.get_equinox_solstice(year, target='summer')
@@ -63,41 +70,45 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Ascension_(f%C3%AAte)
     #   https://en.wikipedia.org/wiki/Pentecost
     #   https://fr.wikipedia.org/wiki/Pentec%C3%B4te
-    _, temp_month, temp_day, _, _, _ = spring_equinox.get_full_date()
+    temp_month, temp_day = Epoch.easter(year)
     print(
-        f'{closest_date(SUNDAY, closest_moon(FULL_MOON, date(year, temp_month, temp_day)))} NOT QUITE Easter'
-    )
-    # easter-47
-    #   Shrove/Pancake Tuesday
-    #   Mardi Gras
-    # easter-46
-    #   Ash Wednesday
-    #   Mercredi des Cendres
-    # easter-7
-    #   Palm Sunday
-    #   Dimanche des Rameaux
-    # easter-3
-    #   Maundy Thursday
-    #   Jeudi saint
-    # easter-2
-    #   Good Friday
-    #   Vendredi saint
-    # easter
-    #   Easter Sunday
-    #   Le dimanche de Pâques
-    # easter+1
-    #   Easter Monday
-    #   Le lundi de Pâques
-    # easter+39
-    #   Ascension
-    #   Ascension
-    # easter+49
-    #   Pentecost
-    #   Pentecôte
+        f'{date(year, temp_month, temp_day) - timedelta(days=47)} Shrove/Pancake Tuesday'
+    )  # Mardi Gras
+    print(
+        f'{date(year, temp_month, temp_day) - timedelta(days=46)} Ash Wednesday'
+    )  # Mercredi des Cendres
+    print(
+        f'{date(year, temp_month, temp_day) - timedelta(days=7)} Palm Sunday'
+    )  # Dimanche des Rameaux
+    print(
+        f'{date(year, temp_month, temp_day) - timedelta(days=3)} Maundy Thursday'
+    )  # Jeudi saint
+    print(
+        f'{date(year, temp_month, temp_day) - timedelta(days=2)} Good Friday'
+    )  # Vendredi saint
+    print(f'{date(year, temp_month, temp_day)} Easter Sunday')  # Le dimanche de Pâques
+    print(
+        f'{date(year, temp_month, temp_day) + timedelta(days=1)} Easter Monday'
+    )  # Le lundi de Pâques
+    print(
+        f'{date(year, temp_month, temp_day) + timedelta(days=39)} Ascension'
+    )  # Ascension
+    print(
+        f'{date(year, temp_month, temp_day) + timedelta(days=49)} Pentecost'
+    )  # Pentecôte
+
+    # All Saints' Day is November 1st
+    #   https://en.wikipedia.org/wiki/All_Saints%27_Day
+    #   https://fr.wikipedia.org/wiki/Toussaint
+    print(f'{date(year, NOVEMBER, 1)} All Saints\' Day')  # Toussaint
+
+    # All Souls' Day is November 2nd
+    #   https://en.wikipedia.org/wiki/All_Souls%27_Day
+    #   https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
+    print(f'{date(year, NOVEMBER, 2)} All Souls\' Day')  # Fête des Morts
 
     # Christmas Eve is December 24th
-    print(f'{date(year, DECEMBER, 24)} Christmas Eve')
-    # Veille de Noël
+    print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
 
     # Christmas Day is December 25th
     #   https://en.wikipedia.org/wiki/Christmas
@@ -105,8 +116,7 @@ def main(year):
     # Boxing Day is December 26th
     #   https://en.wikipedia.org/wiki/Boxing_Day
     #   https://fr.wikipedia.org/wiki/Boxing_Day
-    print(f'{date(year, DECEMBER, 25)} Christmas Day')
-    # Noël
+    print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
     print(f'{date(year, DECEMBER, 26)} Boxing Day')
     # Lendemain de Noël
     # Le jour des boîtes

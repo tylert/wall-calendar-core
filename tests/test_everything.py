@@ -61,14 +61,14 @@ class TestDays:
         )
         assert closest_date(MONDAY, date(2020, JULY, 24)) == date(2020, JULY, 27)
 
-    def test_some_weekday_constants(self):
-        assert date.weekday(closest_date(SUNDAY, date(2020, JANUARY, 1))) == 6
-        assert date.weekday(closest_date(MONDAY, date(2020, JANUARY, 1))) == 0
-        assert date.weekday(closest_date(TUESDAY, date(2020, JANUARY, 1))) == 1
-        assert date.weekday(closest_date(WEDNESDAY, date(2020, JANUARY, 1))) == 2
-        assert date.weekday(closest_date(THURSDAY, date(2020, JANUARY, 1))) == 3
-        assert date.weekday(closest_date(FRIDAY, date(2020, JANUARY, 1))) == 4
-        assert date.weekday(closest_date(SATURDAY, date(2020, JANUARY, 1))) == 5
+    def test_the_weekday_constants(self):
+        assert date.weekday(closest_date(SUNDAY, date(2020, JANUARY, 1))) == SUN
+        assert date.weekday(closest_date(MONDAY, date(2020, JANUARY, 1))) == MON
+        assert date.weekday(closest_date(TUESDAY, date(2020, JANUARY, 1))) == TUE
+        assert date.weekday(closest_date(WEDNESDAY, date(2020, JANUARY, 1))) == WED
+        assert date.weekday(closest_date(THURSDAY, date(2020, JANUARY, 1))) == THU
+        assert date.weekday(closest_date(FRIDAY, date(2020, JANUARY, 1))) == FRI
+        assert date.weekday(closest_date(SATURDAY, date(2020, JANUARY, 1))) == SAT
 
         assert date.weekday(closest_date(SUN, date(2020, JANUARY, 1))) == 6
         assert date.weekday(closest_date(MON, date(2020, JANUARY, 1))) == 0
@@ -84,7 +84,7 @@ class TestDays:
         with pytest.raises(TypeError):
             assert closest_date()
 
-    def test_easter(self):
+    def test_a_bunch_of_easters(self):
         assert easter(2020) == date(2020, APRIL, 12)
         assert easter(2021) == date(2021, APRIL, 4)
         assert easter(2022) == date(2022, APRIL, 17)
@@ -97,6 +97,9 @@ class TestDays:
         assert easter(2285) == date(2285, MARCH, 22)
         assert easter(1943) == date(1943, APRIL, 25)
         assert easter(2038) == date(2038, APRIL, 25)
+
+        for year in range(1, 5000):
+            assert easter(year).month == MARCH or easter(year).month == APRIL
 
 
 # class TestMoons:

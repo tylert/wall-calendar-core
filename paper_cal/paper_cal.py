@@ -1,8 +1,10 @@
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from math import ceil, floor, pi, sin
 
+from pymeeus.Epoch import Epoch
+from pymeeus.Sun import Sun
 
-(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
+
 (
     JANUARY,
     FEBRUARY,
@@ -17,21 +19,16 @@ from math import ceil, floor, pi, sin
     NOVEMBER,
     DECEMBER,
 ) = range(1, 13, 1)
-
-_DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-_FEBRUARY_LEAP_YEAR = 29
-_LENGTH_OF_WEEK = 7  # days
-
-(MON, TUE, WED, THU, FRI, SAT, SUN) = range(_LENGTH_OF_WEEK)
-(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(
-    _LENGTH_OF_WEEK
-)
+(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
+LENGTH_OF_WEEK = 7  # days
+(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(LENGTH_OF_WEEK)
+(MON, TUE, WED, THU, FRI, SAT, SUN) = range(LENGTH_OF_WEEK)
 (WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
 
-_LENGTH_OF_LUNAR_MONTH = 30
+LENGTH_OF_LUNAR_MONTH = 30
 (NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
 
-_MOON_GLYPHS = [
+MOON_GLYPHS = [
     '🌑',  #  0 new moon
     '🌒',  #  1
     '🌒',  #  2
@@ -65,23 +62,23 @@ _MOON_GLYPHS = [
 ]
 
 
-def is_leap_year(year=date.today().year):
+def is_leap(year=date.today().year):
     ''' '''
 
-    # XXX FIXME TODO Add some better range checking!!!
+    # return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+    return Epoch.is_leap(year)
 
-    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
-
-def days_in_month(year=date.today().year, month=date.today().month):
+def days_in_month(month=date.today().month, year=date.today().year):
     ''' '''
 
-    # XXX FIXME TODO Add some better range checking!!!
+    DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    FEBRUARY_LEAP_YEAR = 29
 
-    if month == FEBRUARY and is_leap_year(year=year):
-        return _FEBRUARY_LEAP_YEAR
+    if month == FEBRUARY and is_leap(year=year):
+        return FEBRUARY_LEAP_YEAR
     else:
-        return _DAYS_IN_MONTH[month]
+        return DAYS_IN_MONTH[month]
 
 
 def closest_date(desired_weekday, nearby_date=date.today(), last=False):
@@ -92,29 +89,74 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
         nearby_date = date(
             year=nearby_date.year,
             month=nearby_date.month,
-            day=days_in_month(year=nearby_date.year, month=nearby_date.month),
+            day=days_in_month(month=nearby_date.month, year=nearby_date.year),
         )
 
-    offset = nearby_date.weekday() - (desired_weekday % _LENGTH_OF_WEEK)
+    offset = nearby_date.weekday() - (desired_weekday % LENGTH_OF_WEEK)
 
     if offset < -3:
-        offset += _LENGTH_OF_WEEK
+        offset += LENGTH_OF_WEEK
     if offset > 3:
-        offset -= _LENGTH_OF_WEEK
+        offset -= LENGTH_OF_WEEK
 
     found_date = nearby_date - timedelta(days=offset)
 
     # Jump back into the correct month if we managed to leave it
     if last and found_date.month != nearby_date.month:
-        return found_date - timedelta(days=_LENGTH_OF_WEEK)
+        return found_date - timedelta(days=LENGTH_OF_WEEK)
     else:
         return found_date
 
 
-def moon_phase(moon_date=date.today()):
+# https://www.timeanddate.com/calendar/determining-easter-date.html
+# https://www.assa.org.au/edm
+# http://www.ben-daglish.net/moon.shtml
+
+def easter(year=date.today().year):
     ''' '''
 
-    # http://www.ben-daglish.net/moon.shtml
+    month, day = Epoch.easter(year)
+    return date(year, month, day)
+
+
+def spring(year=date.today().year):
+    ''' '''
+
+    _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
+        year, target='spring'
+    ).get_full_date()
+    return datetime(year, month, day, hour, minute)
+
+
+def summer(year=date.today().year):
+    ''' '''
+
+    _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
+        year, target='summer'
+    ).get_full_date()
+    return datetime(year, month, day, hour, minute)
+
+
+def autumn(year=date.today().year):
+    ''' '''
+
+    _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
+        year, target='autumn'
+    ).get_full_date()
+    return datetime(year, month, day, hour, minute)
+
+
+def winter(year=date.today().year):
+    ''' '''
+
+    _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
+        year, target='winter'
+    ).get_full_date()
+    return datetime(year, month, day, hour, minute)
+
+
+def moon_phase(moon_date=date.today()):
+    ''' '''
 
     n = floor(12.37 * (moon_date.year - 1900 + ((1.0 * moon_date.month - 0.5) / 12.0)))
     rad = pi / 180.0
@@ -142,29 +184,23 @@ def moon_phase(moon_date=date.today()):
     return (jul - jd + 30) % 30
 
 
-def moon_glyph(moon_date=date.today()):
-    ''' '''
-
-    return _MOON_GLYPHS[moon_phase(moon_date=moon_date)]
-
-
 def closest_moon(desired_phase, nearby_date=date.today(), last=False):
     ''' '''
 
     # XXX FIXME TODO Exception if desired_phase is too weird???
 
-    offset = moon_phase(nearby_date) - (desired_phase % _LENGTH_OF_LUNAR_MONTH)
+    offset = moon_phase(nearby_date) - (desired_phase % LENGTH_OF_LUNAR_MONTH)
 
     if offset < -14:
-        offset += _LENGTH_OF_LUNAR_MONTH
+        offset += LENGTH_OF_LUNAR_MONTH
     if offset > 14:
-        offset -= _LENGTH_OF_LUNAR_MONTH
+        offset -= LENGTH_OF_LUNAR_MONTH
 
     found_date = nearby_date - timedelta(days=offset)
 
     # Jump back into the correct month if we managed to leave it
     if last and found_date.month != nearby_date.month:
-        return found_date - timedelta(days=_LENGTH_OF_LUNAR_MONTH)
+        return found_date - timedelta(days=LENGTH_OF_LUNAR_MONTH)
     else:
         return found_date
 
@@ -175,7 +211,7 @@ def closest_moon(desired_phase, nearby_date=date.today(), last=False):
 # https://en.wikipedia.org/wiki/Heavenly_Stems
 # https://en.wikipedia.org/wiki/Earthly_Branches
 
-_CHINESE_ZODIAC = [
+CHINESE_ZODIAC = [
     '猴',  # hóu (monkey)
     '雞',  # jī (rooster) 鸡
     '狗',  # gǒu (dog)
@@ -189,7 +225,7 @@ _CHINESE_ZODIAC = [
     '馬',  # mǎ (horse) 马
     '羊',  # yáng (goat)
 ]  # year mod 12
-_MAJOR_ELEMENTS = [
+MAJOR_ELEMENTS = [
     '金',  # jīn (metal)
     '金',  # jīn (metal)
     '水',  # shuǐ (water)
@@ -201,11 +237,11 @@ _MAJOR_ELEMENTS = [
     '土',  # tǔ (earth)
     '土',  # tǔ (earth)
 ]  # year mod 10
-_SPINS = [
+SPINS = [
     '陽',  # yáng (white side) 阳
     '陰',  # yīn (black side) 阴
 ]  # year mod 2
-_HEAVENLY_STEMS = [
+HEAVENLY_STEMS = [
     '庚',  # gēng
     '辛',  # xīn
     '壬',  # rén
@@ -217,7 +253,7 @@ _HEAVENLY_STEMS = [
     '戊',  # wù
     '己',  # jǐ
 ]  # year mod 10
-_EARTHLY_BRANCHES = [
+EARTHLY_BRANCHES = [
     '申',  # shēn
     '酉',  # yǒu
     '戌',  # xū
@@ -244,11 +280,6 @@ _EARTHLY_BRANCHES = [
 # Chinese New Year falls between January 21 and February 21.
 # The precise date is the second new moon after the December solstice (December
 # 21).
-
-# Easter
-# https://www.timeanddate.com/calendar/determining-easter-date.html
-# https://www.timeanddate.com/astronomy/moon/pink.html
-# https://www.assa.org.au/edm
 
 # 庚 = white metal (GENG)
 # 辛 = wrought metal (XIN)

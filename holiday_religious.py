@@ -3,8 +3,6 @@
 
 from datetime import date, timedelta
 
-from pymeeus.Sun import Sun
-from pymeeus.Epoch import Epoch
 import click
 
 from paper_cal import *
@@ -34,23 +32,13 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Annonciation
     print(f'{date(year, MARCH, 25)} Annunciation')  # Annonciation
 
-    spring_equinox = Sun.get_equinox_solstice(year, target='spring')
-    summer_solstice = Sun.get_equinox_solstice(year, target='summer')
-    autumn_equinox = Sun.get_equinox_solstice(year, target='autumn')
-    winter_solstice = Sun.get_equinox_solstice(year, target='winter')
-
-    _, temp_month, temp_day, _, _, _ = spring_equinox.get_full_date()
-    print(f'{date(year, temp_month, temp_day)} First day of Spring')
-    _, temp_month, temp_day, _, _, _ = summer_solstice.get_full_date()
-    print(f'{date(year, temp_month, temp_day)} First day of Summer')
-    _, temp_month, temp_day, _, _, _ = autumn_equinox.get_full_date()
-    print(f'{date(year, temp_month, temp_day)} First day of Fall')
-    _, temp_month, temp_day, _, _, _ = winter_solstice.get_full_date()
-    print(f'{date(year, temp_month, temp_day)} First day of Winter')
+    print(f'{spring(year).date()} First day of Spring')
+    print(f'{summer(year).date()} First day of Summer')
+    print(f'{autumn(year).date()} First day of Fall')
+    print(f'{winter(year).date()} First day of Winter')
 
     # Easter is the 1st Sunday after the 1st full moon after the Spring
-    # equinox
-    # (min:  March 22nd, max:  April 25th)
+    # equinox (min:  March 22nd, max:  April 25th)
     #   https://en.wikipedia.org/wiki/Ecclesiastical_full_moon#Paschal_full_moon
     #   https://en.wikipedia.org/wiki/Computus
     #   https://fr.wikipedia.org/wiki/Calcul_de_la_date_de_P%C3%A2ques
@@ -70,32 +58,30 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Ascension_(f%C3%AAte)
     #   https://en.wikipedia.org/wiki/Pentecost
     #   https://fr.wikipedia.org/wiki/Pentec%C3%B4te
-    temp_month, temp_day = Epoch.easter(year)
-    print(
-        f'{date(year, temp_month, temp_day) - timedelta(days=47)} Shrove/Pancake Tuesday'
-    )  # Mardi Gras
-    print(
-        f'{date(year, temp_month, temp_day) - timedelta(days=46)} Ash Wednesday'
-    )  # Mercredi des Cendres
-    print(
-        f'{date(year, temp_month, temp_day) - timedelta(days=7)} Palm Sunday'
-    )  # Dimanche des Rameaux
-    print(
-        f'{date(year, temp_month, temp_day) - timedelta(days=3)} Maundy Thursday'
-    )  # Jeudi saint
-    print(
-        f'{date(year, temp_month, temp_day) - timedelta(days=2)} Good Friday'
-    )  # Vendredi saint
-    print(f'{date(year, temp_month, temp_day)} Easter Sunday')  # Le dimanche de Pâques
-    print(
-        f'{date(year, temp_month, temp_day) + timedelta(days=1)} Easter Monday'
-    )  # Le lundi de Pâques
-    print(
-        f'{date(year, temp_month, temp_day) + timedelta(days=39)} Ascension'
-    )  # Ascension
-    print(
-        f'{date(year, temp_month, temp_day) + timedelta(days=49)} Pentecost'
-    )  # Pentecôte
+    #   https://www.timeanddate.com/holidays/common/carnival-wednesday
+    #   https://www.timeanddate.com/holidays/common/palm-sunday
+    #   https://www.timeanddate.com/holidays/common/maundy-thursday
+    #   https://www.timeanddate.com/holidays/common/good-friday
+    #   https://www.timeanddate.com/holidays/common/holy-saturday
+    #   https://www.timeanddate.com/holidays/common/easter-monday
+    #   https://www.timeanddate.com/holidays/common/ascension-day
+    #   https://www.timeanddate.com/holidays/common/whit-sunday
+    #   https://www.timeanddate.com/holidays/common/whit-monday
+    #   https://www.timeanddate.com/holidays/common/trinity
+    #   https://www.timeanddate.com/holidays/common/corpus-christi
+    print(f'{easter(year) - timedelta(days=47)} Shrove/Pancake Tuesday')  # Mardi Gras
+    print(f'{easter(year) - timedelta(days=46)} Ash Wednesday')  # Mercredi des Cendres
+    print(f'{easter(year) - timedelta(days=7)} Palm Sunday')  # Dimanche des Rameaux
+    print(f'{easter(year) - timedelta(days=3)} Maundy Thursday')  # Jeudi saint
+    print(f'{easter(year) - timedelta(days=2)} Good Friday')  # Vendredi saint
+    print(f'{easter(year) - timedelta(days=1)} Easter Saturday')
+    print(f'{easter(year)} Easter Sunday')  # Le dimanche de Pâques
+    print(f'{easter(year) + timedelta(days=1)} Easter Monday')  # Le lundi de Pâques
+    print(f'{easter(year) + timedelta(days=39)} Ascension Day')  # Ascension
+    print(f'{easter(year) + timedelta(days=49)} Whit Sunday/Pentecost')  # Pentecôte
+    print(f'{easter(year) + timedelta(days=50)} Whit Monday')
+    print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
+    print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
 
     # All Saints' Day is November 1st
     #   https://en.wikipedia.org/wiki/All_Saints%27_Day
@@ -107,15 +93,13 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
     print(f'{date(year, NOVEMBER, 2)} All Souls\' Day')  # Fête des Morts
 
-    # Christmas Eve is December 24th
-    print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
-
     # Christmas Day is December 25th
+    # Boxing Day is December 26th
     #   https://en.wikipedia.org/wiki/Christmas
     #   https://fr.wikipedia.org/wiki/No%C3%ABl
-    # Boxing Day is December 26th
     #   https://en.wikipedia.org/wiki/Boxing_Day
     #   https://fr.wikipedia.org/wiki/Boxing_Day
+    print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
     print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
     print(f'{date(year, DECEMBER, 26)} Boxing Day')
     # Lendemain de Noël

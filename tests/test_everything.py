@@ -7,24 +7,24 @@ from paper_cal import *
 
 class TestDays:
     def test_some_leap_years(self):
-        assert is_leap_year(2000) is True
-        assert is_leap_year(2020) is True
-        assert is_leap_year(2021) is False
-        assert is_leap_year(2022) is False
-        assert is_leap_year(2023) is False
-        assert is_leap_year(2024) is True
+        assert is_leap(2000) is True
+        assert is_leap(2020) is True
+        assert is_leap(2021) is False
+        assert is_leap(2022) is False
+        assert is_leap(2023) is False
+        assert is_leap(2024) is True
 
     def test_some_month_lengths(self):
-        assert days_in_month(2020, JANUARY) == 31
-        assert days_in_month(2020, FEBRUARY) == 29
-        assert days_in_month(2020, MARCH) == 31
-        assert days_in_month(2020, APRIL) == 30
-        assert days_in_month(2020, MAY) == 31
-        assert days_in_month(2020, JUNE) == 30
-        assert days_in_month(2021, FEBRUARY) == 28
-        assert days_in_month(2022, FEBRUARY) == 28
-        assert days_in_month(2023, FEBRUARY) == 28
-        assert days_in_month(2024, FEBRUARY) == 29
+        assert days_in_month(JANUARY, 2020) == 31
+        assert days_in_month(FEBRUARY, 2020) == 29
+        assert days_in_month(MARCH, 2020) == 31
+        assert days_in_month(APRIL, 2020) == 30
+        assert days_in_month(MAY, 2020) == 31
+        assert days_in_month(JUNE, 2020) == 30
+        assert days_in_month(FEBRUARY, 2021) == 28
+        assert days_in_month(FEBRUARY, 2022) == 28
+        assert days_in_month(FEBRUARY, 2023) == 28
+        assert days_in_month(FEBRUARY, 2024) == 29
 
     def test_some_nearby_days(self):
         assert closest_date(SATURDAY, date(2020, JANUARY, 30), last=True) == date(

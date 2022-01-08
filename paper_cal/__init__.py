@@ -1,13 +1,17 @@
 from .paper_cal import (
+    autumn,
     closest_date,
     closest_moon,
     days_in_month,
-    is_leap_year,
-    moon_glyph,
+    easter,
+    is_leap,
     moon_phase,
+    spring,
+    summer,
+    winter,
 )
 
-# Useful constants for months, days-of-the-week and week indices
+# Useful constants
 from .paper_cal import (
     APR,
     APRIL,
@@ -17,19 +21,23 @@ from .paper_cal import (
     DECEMBER,
     FEB,
     FEBRUARY,
+    FIRST_QUARTER_MOON,
     FRI,
     FRIDAY,
+    FULL_MOON,
     JAN,
     JANUARY,
     JUL,
     JULY,
     JUN,
     JUNE,
+    LAST_QUARTER_MOON,
     MAR,
     MARCH,
     MAY,
     MON,
     MONDAY,
+    NEW_MOON,
     NOV,
     NOVEMBER,
     OCT,
@@ -50,12 +58,4 @@ from .paper_cal import (
     WEEK2,
     WEEK3,
     WEEK4,
-)
-
-# Useful constants for moon phases and symbols
-from .paper_cal import (
-    FIRST_QUARTER_MOON,
-    FULL_MOON,
-    LAST_QUARTER_MOON,
-    NEW_MOON,
 )

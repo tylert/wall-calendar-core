@@ -31,7 +31,6 @@ def get_bin():
 def main(year):
     ''' '''
 
-
     bin = get_bin()
     for month in range(1, 13):
         # XXX FIXME TODO  OMIT Jan 01, Jul 01, Dec 25, Dec 26!!!

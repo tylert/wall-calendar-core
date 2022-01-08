@@ -20,25 +20,26 @@ def main(year):
     # https://en.wikipedia.org/wiki/Public_holidays_in_Canada
     # https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 
+    # New Year's Eve is December 31st
     # New Year's Day is January 1st
+    #   https://en.wikipedia.org/wiki/New_Year's_Eve
+    #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
     #   https://en.wikipedia.org/wiki/New_Year's_Day
     #   https://fr.wikipedia.org/wiki/Jour_de_l%27an
-    print(f'{date(year, JANUARY, 1)} New Year\'s Day')
-    # Jour de l'an
+    print(f'{date(year, DECEMBER, 31)} New Year\'s Eve')  # Veille du Nouvel An
+    print(f'{date(year, JANUARY, 1)} New Year\'s Day')  # Jour de l'an
     if (
         date.weekday(date(year, JANUARY, 1)) == SATURDAY
         or date.weekday(date(year, JANUARY, 1)) == SUNDAY
     ):
         print(
             f'{closest_date(MONDAY, date(year, JANUARY, 1))} New Year\'s Day (observed)'
-        )
-        # Jour de l'an (observé)
+        )  # Jour de l'an (observé)
 
     # Groundhog Day is February 2nd
     #   https://en.wikipedia.org/wiki/Groundhog_Day
     #   https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
-    print(f'{date(year, FEBRUARY, 2)} Groundhog Day')
-    # Jour de la marmotte
+    print(f'{date(year, FEBRUARY, 2)} Groundhog Day')  # Jour de la marmotte
 
     # National Flag of Canada Day is February 15th
     #   https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
@@ -84,8 +85,7 @@ def main(year):
     # Canada Day is July 1st
     #   https://en.wikipedia.org/wiki/Canada_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
-    print(f'{date(year, JULY, 1)} Canada Day')
-    # Fête du Canada
+    print(f'{date(year, JULY, 1)} Canada Day')  # Fête du Canada
     if (
         date.weekday(date(year, JULY, 1)) == SATURDAY
         or date.weekday(date(year, JULY, 1)) == SUNDAY
@@ -130,21 +130,13 @@ def main(year):
     # Rememberance Day is November 11th
     #   https://en.wikipedia.org/wiki/Remembrance_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
-    print(f'{date(year, NOVEMBER, 11)} Rememberance Day')
-    # Jour du Souvenir
+    print(f'{date(year, NOVEMBER, 11)} Rememberance Day')  # Jour du Souvenir
 
     # The Statute of Westminster was enacted on December 11th, 1931
     #   https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
     #   https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931
-    # MSG %"[bday(1931)] [babel("Anniversary of the Statute of Westminster", \
-    #   "Anniversaire du Statut de Westminster")]%" %b%
-
-    # New Year's Eve is December 31st
-    #   https://en.wikipedia.org/wiki/New_Year's_Eve
-    #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
-    print(f'{date(year, DECEMBER, 31)} New Year\'s Eve')
-    # XXX FIXME TODO Get a better name in French
-    # Veille du Nouvel An
+    # Anniversary of the Statute of Westminster
+    # Anniversaire du Statut de Westminster
 
 
 if __name__ == '__main__':

@@ -277,3 +277,62 @@ _EARTHLY_BRANCHES = [
 
 # Zodiac
 # https://en.wikipedia.org/wiki/Astrological_symbols
+
+# Chinese/Lunar New Year is between Jan 21 and Feb 20 on the day after the
+# new moon
+
+# January
+#   Wolf Moon
+#   Old Moon
+#   Spirit Moon
+#   Moon After Yule
+# February
+#   Hunger Moon
+#   Snow Moon
+#   Bear Moon
+# March
+#   Worm Moon
+#   Crow Moon
+#   Crust Moon
+#   Sap Moon
+#   Lenten Moon
+#   Sugar Moon
+# April
+#   Pink Moon
+#   Sprouting Grass Moon
+#   Egg Moon
+#   Fish Moon
+#   Sucker Moon
+# May
+#   Flower Moon
+#   Corn Planting Moon
+#   Milk Moon
+# June
+#   Strawberry Moon
+#   Rose Moon
+# July
+#   Buck Moon
+#   Thunder Moon
+#   Hay Moon
+#   Raspberry Moon
+# August
+#   Sturgeon Moon
+#   Red Moon
+#   Green Corn Moon
+#   Grain Moon
+#   Thimbleberry Moon
+# September
+#   Harvest Moon
+#   Corn Moon
+# October
+#   Hunter's Moon
+#   Falling Leaves Moon
+# November
+#   Beaver Moon
+#   Frosty Moon
+#   Freezing Moon
+# December
+#   Cold Moon
+#   Long Nights Moon
+#   Little Spirit Moon
+#   Moon Before Yule

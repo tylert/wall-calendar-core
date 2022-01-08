@@ -1,8 +1,9 @@
 from datetime import date, datetime, timedelta
-from math import ceil, floor, pi, sin
 
 from pymeeus.Epoch import Epoch
 from pymeeus.Sun import Sun
+from pymeeus.Earth import Earth
+from pymeeus.Moon import Moon
 
 
 (
@@ -108,15 +109,16 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
         return found_date
 
 
+# http://www.ben-daglish.net/moon.shtml
 # https://www.timeanddate.com/calendar/determining-easter-date.html
 # https://www.assa.org.au/edm
-# http://www.ben-daglish.net/moon.shtml
+
 
 def easter(year=date.today().year):
     ''' '''
 
     month, day = Epoch.easter(year)
-    return date(year, month, day)
+    return date(year=year, month=month, day=day)
 
 
 def spring(year=date.today().year):
@@ -125,7 +127,7 @@ def spring(year=date.today().year):
     _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
         year, target='spring'
     ).get_full_date()
-    return datetime(year, month, day, hour, minute)
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
 def summer(year=date.today().year):
@@ -134,7 +136,7 @@ def summer(year=date.today().year):
     _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
         year, target='summer'
     ).get_full_date()
-    return datetime(year, month, day, hour, minute)
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
 def autumn(year=date.today().year):
@@ -143,7 +145,7 @@ def autumn(year=date.today().year):
     _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
         year, target='autumn'
     ).get_full_date()
-    return datetime(year, month, day, hour, minute)
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
 def winter(year=date.today().year):
@@ -152,36 +154,43 @@ def winter(year=date.today().year):
     _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
         year, target='winter'
     ).get_full_date()
-    return datetime(year, month, day, hour, minute)
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
-def moon_phase(moon_date=date.today()):
+def perihelion(year=date.today().year):
     ''' '''
 
-    n = floor(12.37 * (moon_date.year - 1900 + ((1.0 * moon_date.month - 0.5) / 12.0)))
-    rad = pi / 180.0
-    t = n / 1236.85
-    t2 = t * t
-    ass = 359.2242 + 29.105356 * n
-    am = 306.0253 + 385.816918 * n + 0.010730 * t2
-    xtra = 0.75933 + 1.53058868 * n + ((1.178e-4) - (1.55e-7) * t) * t2
-    xtra += (0.1734 - 3.93e-4 * t) * sin(rad * ass) - 0.4068 * sin(rad * am)
-    i = floor(xtra) if xtra > 0.0 else ceil(xtra - 1.0)
-    jy = moon_date.year
-    if moon_date.year < 0:
-        jy += 1
-    jm = moon_date.month + 1
-    if moon_date.month <= 2:
-        jy -= 1
-        jm += 12
-    jul = floor(365.25 * jy) + floor(30.6001 * jm) + moon_date.day + 1720995
-    if moon_date.day + 31 * (moon_date.month + 12 * moon_date.year) >= (
-        15 + 31 * (10 + 12 * 1582)
-    ):
-        ja = floor(0.01 * jy)
-        jul = jul + 2 - ja + floor(0.25 * ja)
-    jd = (2415020 + 28 * n) + i
-    return (jul - jd + 30) % 30
+    _, month, day, hour, minute, _ = Earth.perihelion_aphelion(
+        Epoch(date(year, JANUARY, 1)), perihelion=True
+    ).get_full_date()
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
+
+
+def aphelion(year=date.today().year):
+    ''' '''
+
+    _, month, day, hour, minute, _ = Earth.perihelion_aphelion(
+        Epoch(date(year, JULY, 1)), perihelion=False
+    ).get_full_date()
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
+
+
+def new_moon(moon_date=date.today()):
+    ''' '''
+
+    year, month, day, hour, minute, _ = Moon.moon_phase(
+        Epoch(moon_date - timedelta(days=4)), target='new'
+    ).get_full_date()
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
+
+
+def full_moon(moon_date=date.today()):
+    ''' '''
+
+    year, month, day, hour, minute, _ = Moon.moon_phase(
+        Epoch(moon_date - timedelta(days=4)), target='full'
+    ).get_full_date()
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
 def closest_moon(desired_phase, nearby_date=date.today(), last=False):

@@ -5,9 +5,14 @@
 
 # Generic holidays and celebratory-type events for most of Canada
 
+  # New Year's Eve is December 31st
   # New Year's Day is January 1st
+  #   https://en.wikipedia.org/wiki/New_Year's_Eve
+  #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
   #   https://en.wikipedia.org/wiki/New_Year's_Day
   #   https://fr.wikipedia.org/wiki/Jour_de_l%27an
+  REM  Dec 31 +1 PRIORITY 1000 \
+    MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%
   REM  Jan 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF Saturday == wkdaynum(trigdate())
     OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
@@ -278,9 +283,3 @@
   REM  Dec 11 +1 PRIORITY 1000 \
     MSG %"[bday(1931)] [babel("Anniversary of the Statute of Westminster", \
       "Anniversaire du Statut de Westminster")]%" %b%
-
-  # New Year's Eve is December 31st
-  #   https://en.wikipedia.org/wiki/New_Year's_Eve
-  #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
-  REM  Dec 31 +1 PRIORITY 1000 \
-    MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%

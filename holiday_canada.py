@@ -112,8 +112,8 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Public_holidays_in_Canada
     #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
     print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} August Civic Holiday')
+    # Longue fin de semaine d'aôut (sauf CA-NL, CA-QC, CA-YT)
     # Premier lundi d'août
-    # Longue fin de semaine d'aôut
 
     # Labour Day is the 1st Monday in September
     #   https://en.wikipedia.org/wiki/Labour_Day

@@ -27,6 +27,32 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Saint-Valentin
     print(f'{date(year, FEBRUARY, 14)} St. Valentine\'s Day')  # Saint-Valentin
 
+    # St. David's Day (UK) is March 1st
+    # St. Patrick's Day is March 17th
+    # St. Patrick's Day (CA-NL) is the Monday nearest March 17th
+    # St. George's Day (CA-NL) is the Monday nearest April 23rd
+    # St. George's Day (UK) is April 23rd
+    # St. Andrew's Day (UK) is November 30th
+    #   https://en.wikipedia.org/wiki/Saint_David%27s_Day
+    #   https://fr.wikipedia.org/wiki/Saint_David%27s_Day
+    #   https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day
+    #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Patrick
+    #   https://en.wikipedia.org/wiki/Saint_George%27s_Day
+    #   https://fr.wikipedia.org/wiki/Sant_Jordi
+    #   https://en.wikipedia.org/wiki/Saint_Andrew%27s_Day
+    #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Andr%C3%A9
+    print(f'{date(year, MARCH, 1)} St. David\'s Day (UK)')
+    print(f'{date(year, MARCH, 17)} St. Patrick\'s Day')
+    print(f'{closest_date(MONDAY, date(year, MARCH, 17))} St. Patrick\'s Day (CA-NL)')
+    print(f'{closest_date(MONDAY, date(year, APRIL, 23))} St. George\'s Day (CA-NL)')
+    print(f'{date(year, APRIL, 23)} St. George\'s Day (UK)')
+    print(f'{date(year, NOVEMBER, 30)} St. Andrew\'s Day (UK)')
+    # Fête de la Saint-David (UK)
+    # Fête de la Saint-Patrick
+    # Fête de la Saint-Patrick (CA-NL)
+    # Fête de la Saint-Georges (CA-NL) (UK)
+    # Fête de la Saint-André (UK)
+
     # Annunciation is March 25th
     #   https://en.wikipedia.org/wiki/Annunciation
     #   https://fr.wikipedia.org/wiki/Annonciation
@@ -84,17 +110,19 @@ def main(year):
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
 
     # All Saints' Day is November 1st
+    # All Souls' Day is November 2nd
     #   https://en.wikipedia.org/wiki/All_Saints%27_Day
     #   https://fr.wikipedia.org/wiki/Toussaint
-    print(f'{date(year, NOVEMBER, 1)} All Saints\' Day')  # Toussaint
-
-    # All Souls' Day is November 2nd
     #   https://en.wikipedia.org/wiki/All_Souls%27_Day
     #   https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
+    print(f'{date(year, NOVEMBER, 1)} All Saints\' Day')  # Toussaint
     print(f'{date(year, NOVEMBER, 2)} All Souls\' Day')  # Fête des Morts
 
+    # Christmas Eve is December 24th
     # Christmas Day is December 25th
     # Boxing Day is December 26th
+    #   https://en.wikipedia.org/wiki/Christmas_Eve
+    #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
     #   https://en.wikipedia.org/wiki/Christmas
     #   https://fr.wikipedia.org/wiki/No%C3%ABl
     #   https://en.wikipedia.org/wiki/Boxing_Day

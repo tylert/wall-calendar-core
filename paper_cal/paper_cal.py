@@ -19,8 +19,8 @@ from pymeeus.Moon import Moon
     OCTOBER,
     NOVEMBER,
     DECEMBER,
-) = range(1, 13, 1)
-(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13, 1)
+) = range(1, 13)
+(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) = range(1, 13)
 LENGTH_OF_WEEK = 7  # days
 (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(LENGTH_OF_WEEK)
 (MON, TUE, WED, THU, FRI, SAT, SUN) = range(LENGTH_OF_WEEK)
@@ -119,6 +119,16 @@ def easter(year=date.today().year):
 
     month, day = Epoch.easter(year)
     return date(year=year, month=month, day=day)
+
+
+# Equinox/Équinoxe literally means "equal night"
+# Solstice literally means "sun stands still" (longest/shortest day)
+# March Equinox is the 1st Day of Spring/printemps in the Northern Hemisphere
+# June Solstice is the 1st Day of Summer/été in the Northern Hemisphere
+# September Equinox is the 1st Day of Fall/automne in the Northern Hemisphere
+# December Solstice is the 1st Day of Winter/hiver in the Northern Hemisphere
+# Aphelion/Aphélie is when the Earth is farthest from the Sun
+# Perihelion/Périhélie is when the Earth is closest to the Sun
 
 
 def spring(year=date.today().year):

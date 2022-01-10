@@ -7,7 +7,7 @@
 
   # Ottawa Amateur Radio Club meetings are the 2nd Wednesday of each month
   # except July and August
-  # https://www.oarc.net/
+  #   https://www.oarc.net/
   REM  Wed [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
   IF monnum(trigdate()) != July && monnum(trigdate()) != August
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
@@ -15,13 +15,13 @@
   ENDIF
 
   # West-Carleton Amateur Radio Club meetings are the 3rd Monday of each month
-  # https://wcarc.on.ca
+  #   https://wcarc.on.ca
   REM  Mon [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:00 +60 \
       DURATION 02:00 MSG %"[babel("WCARC Meeting", "Meeting de WCARC")]%" %b%
 
   # Rideau Lakes Amateur Radio Club meetings are the 3rd Thursday of each month
-  # https://www.ve3rlr.ca/p/about.html
+  #   https://www.ve3rlr.ca/p/about.html
   REM  Thu [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
       DURATION 02:30 MSG %"[babel("RLARC Meeting", "Meeting de RLARC")]%" %b%
@@ -30,14 +30,14 @@
 # Local amateur radio-related volunteer events
 
   # CN Cycle for CHEO is the 1st weekend in May
-  # https://cncycle.ca
+  #   https://cncycle.ca
   REM  Sun May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 07:30 +60 DURATION 06:00 \
       MSG %"[babel("CN Cycle for CHEO", "Le Défi CN pour le CHEO")]%" %b%
 
   # Rideau Lakes Cycle Tour RLCT is (usually) the 1st or 2nd weekend in
   # June since 1972
-  # http://ottawabicycleclub.ca/rlct
+  #   http://ottawabicycleclub.ca/rlct
   REM  Sat Jun [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("*RLCT*", "*RLCT*")]%" %b%
@@ -47,7 +47,7 @@
   # OARC Hamfest is the 1st Saturday after Labour Day
   # OARC Portable Station Demo is the 1st or 2nd Saturday after the OARC
   # Hamfest
-  # http://oarc.net/fleamarket/
+  #   http://oarc.net/fleamarket/
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 AT 07:30 +60 DURATION 3:00 \
       MSG %"[babel("OARC Hamfest", "Hamfest OARC")]%" %b%
@@ -57,7 +57,7 @@
         "Demo des Stations Portatif OARC")]%" %b%
 
   # Tall Pines Rally is the last weekend in November
-  # http://tallpinesrally.com
+  #   http://tallpinesrally.com
   REM  Sat Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Tall Pines Rally", "Rallye des Hautes Pins")]%" %b%
@@ -66,8 +66,8 @@
 # Local non-radio events
 
   # Tulip Festival is the middle 2 weekends in May
-  # https://en.wikipedia.org/wiki/Canadian_Tulip_Festival
-  # http://www.tulipfestival.ca/
+  #   https://en.wikipedia.org/wiki/Canadian_Tulip_Festival
+  #   http://www.tulipfestival.ca/
   REM  Fri May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Canadian Tulip Festival Starts", \
@@ -78,8 +78,8 @@
         "Fin du Festival Canadien des Tulipes")]%" %b%
 
   # Comicon Ottawa is the 2nd weekend in May
-  # https://en.wikipedia.org/wiki/Ottawa_Comiccon
-  # http://www.ottawacomiccon.com/
+  #   https://en.wikipedia.org/wiki/Ottawa_Comiccon
+  #   http://www.ottawacomiccon.com/
   REM  Sat May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())]   +1 PRIORITY 2000 \
       MSG %"[babel("Ottawa Comiccon", "Comiccon d'Ottawa")]%" %b%
@@ -87,8 +87,8 @@
       MSG %"[babel("Ottawa Comiccon", "Comiccon d'Ottawa")]%" %b%
 
   # Doors Open Ottawa is the 1st weekend in June
-  # https://en.wikipedia.org/wiki/Doors_Open_Ottawa
-  # http://ottawa.ca/en/liveculture/doors-open-ottawa
+  #   https://en.wikipedia.org/wiki/Doors_Open_Ottawa
+  #   http://ottawa.ca/en/liveculture/doors-open-ottawa
   REM  Sat Jun [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())]   +1 PRIORITY 2000 \
       MSG %"[babel("Doors Open Ottawa", "Portes ouvertes Ottawa")]%" %b%

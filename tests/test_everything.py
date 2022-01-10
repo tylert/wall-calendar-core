@@ -21,10 +21,12 @@ class TestDays:
         assert days_in_month(APRIL, 2020) == 30
         assert days_in_month(MAY, 2020) == 31
         assert days_in_month(JUNE, 2020) == 30
-        assert days_in_month(FEBRUARY, 2021) == 28
-        assert days_in_month(FEBRUARY, 2022) == 28
-        assert days_in_month(FEBRUARY, 2023) == 28
-        assert days_in_month(FEBRUARY, 2024) == 29
+        assert days_in_month(JULY, 2020) == 31
+        assert days_in_month(AUGUST, 2020) == 31
+        assert days_in_month(SEPTEMBER, 2020) == 30
+        assert days_in_month(OCTOBER, 2020) == 31
+        assert days_in_month(NOVEMBER, 2020) == 30
+        assert days_in_month(DECEMBER, 2020) == 31
 
         assert days_in_month(JAN, 2020) == 31
         assert days_in_month(FEB, 2020) == 29
@@ -32,6 +34,17 @@ class TestDays:
         assert days_in_month(APR, 2020) == 30
         assert days_in_month(MAY, 2020) == 31
         assert days_in_month(JUN, 2020) == 30
+        assert days_in_month(JULY, 2020) == 31
+        assert days_in_month(AUGUST, 2020) == 31
+        assert days_in_month(SEPTEMBER, 2020) == 30
+        assert days_in_month(OCTOBER, 2020) == 31
+        assert days_in_month(NOVEMBER, 2020) == 30
+        assert days_in_month(DECEMBER, 2020) == 31
+
+        assert days_in_month(FEBRUARY, 2021) == 28
+        assert days_in_month(FEBRUARY, 2022) == 28
+        assert days_in_month(FEBRUARY, 2023) == 28
+        assert days_in_month(FEBRUARY, 2024) == 29
         assert days_in_month(FEB, 2021) == 28
         assert days_in_month(FEB, 2022) == 28
         assert days_in_month(FEB, 2023) == 28

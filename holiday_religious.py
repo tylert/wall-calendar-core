@@ -17,12 +17,18 @@ from paper_cal import *
 )
 def main(year):
 
-    # Epiphany is January 6th
     #   https://en.wikipedia.org/wiki/Epiphany_(holiday)
     #   https://fr.wikipedia.org/wiki/%C3%89piphanie
     print(f'{date(year, JANUARY, 6)} Epiphany')  # Epiphanie
 
-    # St. Valentine's Day is February 14th
+    # Baptism of the Lord is the 1st Sunday after January 6th
+    #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord
+
+    #   https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
+    #   https://fr.wikipedia.org/wiki/Conversion_de_Paul
+    print(f'{date(year, JANUARY, 25)} Conversion of St. Paul')
+    # Conversion de Paul
+
     #   https://en.wikipedia.org/wiki/Valentine%27s_Day
     #   https://fr.wikipedia.org/wiki/Saint-Valentin
     print(f'{date(year, FEBRUARY, 14)} St. Valentine\'s Day')  # Saint-Valentin
@@ -53,15 +59,9 @@ def main(year):
     # Fête de la Saint-Georges (CA-NL) (UK)
     # Fête de la Saint-André (UK)
 
-    # Annunciation is March 25th
     #   https://en.wikipedia.org/wiki/Annunciation
     #   https://fr.wikipedia.org/wiki/Annonciation
     print(f'{date(year, MARCH, 25)} Annunciation')  # Annonciation
-
-    print(f'{spring(year).date()} First day of Spring')
-    print(f'{summer(year).date()} First day of Summer')
-    print(f'{autumn(year).date()} First day of Fall')
-    print(f'{winter(year).date()} First day of Winter')
 
     # Easter is the 1st Sunday after the 1st full moon after the Spring
     # equinox (min:  March 22nd, max:  April 25th)
@@ -109,40 +109,33 @@ def main(year):
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
 
-    # All Saints' Day is November 1st
-    # All Souls' Day is November 2nd
     #   https://en.wikipedia.org/wiki/All_Saints%27_Day
     #   https://fr.wikipedia.org/wiki/Toussaint
+    print(f'{date(year, NOVEMBER, 1)} All Saints\' Day')  # Toussaint
     #   https://en.wikipedia.org/wiki/All_Souls%27_Day
     #   https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
-    print(f'{date(year, NOVEMBER, 1)} All Saints\' Day')  # Toussaint
     print(f'{date(year, NOVEMBER, 2)} All Souls\' Day')  # Fête des Morts
 
-    # Christmas Eve is December 24th
-    # Christmas Day is December 25th
-    # Boxing Day is December 26th
     #   https://en.wikipedia.org/wiki/Christmas_Eve
     #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
+    print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
     #   https://en.wikipedia.org/wiki/Christmas
     #   https://fr.wikipedia.org/wiki/No%C3%ABl
+    print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
     #   https://en.wikipedia.org/wiki/Boxing_Day
     #   https://fr.wikipedia.org/wiki/Boxing_Day
-    print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
-    print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
     print(f'{date(year, DECEMBER, 26)} Boxing Day')
     # Lendemain de Noël
     # Le jour des boîtes
     # Après-Noël
     if date.weekday(date(year, DECEMBER, 25)) == SATURDAY:
         print(
-            f'{closest_date(MONDAY, date(year, DECEMBER, 25))} Christmas Day (observed)'
+            f'{closest_date(MONDAY, date(year, DECEMBER, 25))} Christmas Day Observed'
         )
-        print(
-            f'{closest_date(TUESDAY, date(year, DECEMBER, 26))} Boxing Day (observed)'
-        )
+        print(f'{closest_date(TUESDAY, date(year, DECEMBER, 26))} Boxing Day Observed')
     if date.weekday(date(year, DECEMBER, 25)) == SUNDAY:
         print(
-            f'{closest_date(TUESDAY, date(year, DECEMBER, 25))} Christmas Day (observed)'
+            f'{closest_date(TUESDAY, date(year, DECEMBER, 25))} Christmas Day Observed'
         )
 
 

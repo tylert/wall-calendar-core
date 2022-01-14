@@ -5,14 +5,12 @@
 
 # Generic holidays and celebratory-type events for most of Canada
 
-  # New Year's Eve is December 31st
-  # New Year's Day is January 1st
   #   https://en.wikipedia.org/wiki/New_Year's_Eve
   #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
-  #   https://en.wikipedia.org/wiki/New_Year's_Day
-  #   https://fr.wikipedia.org/wiki/Jour_de_l%27an
   REM  Dec 31 +1 PRIORITY 1000 \
     MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%
+  #   https://en.wikipedia.org/wiki/New_Year's_Day
+  #   https://fr.wikipedia.org/wiki/Jour_de_l%27an
   REM  Jan 01 SCANFROM [trigger(today() - 7)] SATISFY 1
   IF Saturday == wkdaynum(trigdate())
     OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
@@ -33,13 +31,11 @@
     ENDIF
   ENDIF
 
-  # Groundhog Day is February 2nd
   #   https://en.wikipedia.org/wiki/Groundhog_Day
   #   https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
   REM  Feb 02 +1 PRIORITY 1000 \
     MSG %"[babel("Groundhog Day", "Jour de la marmotte")]%" %b%
 
-  # National Flag of Canada Day is February 15th
   #   https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
   #   https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
   REM  Feb 15 +1 PRIORITY 1000 \
@@ -154,7 +150,6 @@
     MSG %"[babel("Canadian Multiculturalism Day", \
       "Journée canadienne du multiculturalisme")]%" %b%
 
-  # Canada Day is July 1st
   #   https://en.wikipedia.org/wiki/Canada_Day
   #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
   REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -238,14 +233,12 @@
     MSG %"[babel("Merchant Navy Day (CA)", \
       "Jour de la marine marchande (CA)")]%" %b%
 
-  # Labour Day is the 1st Monday in September
   #   https://en.wikipedia.org/wiki/Labour_Day
   #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
   REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Labour Day", "Fête du travail")]%" %b%
 
-  # Canadian Thanksgiving is the 2nd Monday in October
   #   https://en.wikipedia.org/wiki/Thanksgiving#Canada
   #   https://fr.wikipedia.org/wiki/Action_de_gr%C3%A2ce_(Canada)
   # Oktoberfest (CA-ON) starts the Friday before Thanksgiving and ends the

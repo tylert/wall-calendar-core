@@ -5,7 +5,6 @@
 
 # Major Christian holidays and celebratory-type events
 
-  # Epiphany is January 6th
   #   https://en.wikipedia.org/wiki/Epiphany_(holiday)
   #   https://fr.wikipedia.org/wiki/%C3%89piphanie
   REM  Jan 06 +1 PRIORITY 1000 \
@@ -15,13 +14,11 @@
   #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord
   #   MSG %"[babel("Baptism of the Lord", "???")]%" %b%
 
-  # Conversion of St. Paul is January 25th
   #   https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
   #   https://fr.wikipedia.org/wiki/Conversion_de_Paul
   REM  Jan 25 +1 PRIORITY 1000 \
     MSG %"[babel("Conversion of St. Paul", "Conversion de Paul")]%" %b%
 
-  # St. Valentine's Day is February 14th
   #   https://en.wikipedia.org/wiki/Valentine%27s_Day
   #   https://fr.wikipedia.org/wiki/Saint-Valentin
   REM  Feb 14 +1 PRIORITY 1000 \
@@ -60,7 +57,6 @@
     MSG %"[babel("St. Andrew's Day (UK)", \
       "Fête de la Saint-André (UK)")]%" %b%
 
-  # Annunciation is March 25th
   #   https://en.wikipedia.org/wiki/Annunciation
   #   https://fr.wikipedia.org/wiki/Annonciation
   REM  Mar 25 +1 PRIORITY 1000 \
@@ -134,8 +130,6 @@
       MSG %"[babel("Orangemen's Day (CA-NL)", \
         "Fête des Orangistes (CA-NL)")]%" %b%
 
-  # All Saints' Day is November 1st
-  # All Souls' Day is November 2nd
   #   https://en.wikipedia.org/wiki/All_Saints%27_Day
   #   https://fr.wikipedia.org/wiki/Toussaint
   #   https://en.wikipedia.org/wiki/All_Souls%27_Day
@@ -145,9 +139,6 @@
   REM  Nov 02 +1 PRIORITY 1000 \
     MSG %"[babel("All Souls' Day", "Fête des Morts")]%" %b%
 
-  # Christmas Eve is December 24th
-  # Christmas Day is December 25th
-  # Boxing Day is December 26th
   #   https://en.wikipedia.org/wiki/Christmas_Eve
   #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
   #   https://en.wikipedia.org/wiki/Christmas

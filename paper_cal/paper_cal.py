@@ -26,6 +26,22 @@ LENGTH_OF_WEEK = 7  # days
 (MON, TUE, WED, THU, FRI, SAT, SUN) = range(LENGTH_OF_WEEK)
 (WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
 
+(
+    NISAN,
+    IYAR,
+    SIVAN,
+    TAMMUZ,
+    AV,
+    ELUL,
+    TISHREI,
+    CHESHVAN,
+    KISLEV,
+    TEVET,
+    SHEVAT,
+    ADAR,
+    ADAR_SHENI,
+) = range(1, 14)
+
 LENGTH_OF_LUNAR_MONTH = 30
 (NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
 

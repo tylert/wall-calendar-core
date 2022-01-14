@@ -5,7 +5,6 @@
 
 # Generic holidays and celebratory-type events for US, UK, NZ, BD
 
-  # Martin Luther King, Jr. Day (US) is the 3rd Monday in January
   #   https://en.wikipedia.org/wiki/Martin_Luther_King_Jr._Day
   REM  Mon Jan [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
@@ -28,7 +27,6 @@
     ENDIF
   ENDIF
 
-  # President's Day (US) is the 3rd Monday in February
   #   https://en.wikipedia.org/wiki/Washington's_Birthday
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
@@ -80,7 +78,6 @@
   REM  Jun 14 +1 PRIORITY 1000 \
     MSG %"[babel("Flag Day (US)", "Jour du drapeau (US)")]%" %b%
 
-  # Independence Day (US) is July 4th
   #   https://en.wikipedia.org/wiki/Independence_Day_%28United_States%29
   REM  Jul 04 +1 PRIORITY 1000 \
     MSG %"[babel("Independence Day (US)", "Jour de l'indépendance (US)")]%" %b%
@@ -118,9 +115,6 @@
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Armistice Day (UK)", "Jour de l'Armistice (UK)")]%" %b%
 
-  # Thanksgiving Day (US) is the 4th Thursday in November
-  # Black Friday (US) is the Friday after Thanksgiving Day (US)
-  # Cyber Monday (US) is the Monday after Thanksgiving Day (US)
   #   https://en.wikipedia.org/wiki/Thanksgiving
   #   https://en.wikipedia.org/wiki/Black_Friday_(shopping)
   #   https://en.wikipedia.org/wiki/Cyber_Monday

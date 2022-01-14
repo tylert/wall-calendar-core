@@ -21,8 +21,8 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/%C3%89piphanie
     print(f'{date(year, JANUARY, 6)} Epiphany')  # Epiphanie
 
-    # Baptism of the Lord is the 1st Sunday after January 6th
     #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord
+    # Baptism of the Lord is the 1st Sunday after January 6th
 
     #   https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
     #   https://fr.wikipedia.org/wiki/Conversion_de_Paul
@@ -33,12 +33,8 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Saint-Valentin
     print(f'{date(year, FEBRUARY, 14)} St. Valentine\'s Day')  # Saint-Valentin
 
-    # St. David's Day (UK) is March 1st
-    # St. Patrick's Day is March 17th
     # St. Patrick's Day (CA-NL) is the Monday nearest March 17th
     # St. George's Day (CA-NL) is the Monday nearest April 23rd
-    # St. George's Day (UK) is April 23rd
-    # St. Andrew's Day (UK) is November 30th
     #   https://en.wikipedia.org/wiki/Saint_David%27s_Day
     #   https://fr.wikipedia.org/wiki/Saint_David%27s_Day
     #   https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day

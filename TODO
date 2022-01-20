@@ -3,17 +3,13 @@
 * https://georgexyz.com/python-calendar-app.html
 * https://github.com/lynxur/Kalender
 * https://docs.python.org/3/library/calendar.html
-
----
-
-http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/calendar/calendars/???
-
-http://stackoverflow.com/questions/7276017/producing-a-printable-calendar-with-python
-
----
-
-Another way to calculate things:
-http://quasar.as.utexas.edu/BillInfo/ReligiousCalendars.html
+* https://arrow.readthedocs.io/en/latest/index.html
+* http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/calendar/calendars/
+* http://stackoverflow.com/questions/7276017/producing-a-printable-calendar-with-python
+* http://quasar.as.utexas.edu/BillInfo/ReligiousCalendars.html
+* http://www.ben-daglish.net/moon.shtml
+* https://www.timeanddate.com/calendar/determining-easter-date.html
+* https://www.assa.org.au/edm
 
 ---
 
@@ -40,15 +36,12 @@ January?
   Feast of St. Basil (Orthodox)
   Gantan-sai (Shinto)
   Guru Gobindh Singh Birthday (Sikh)
-  Epiphany (Christian)
   Feast of the Theophany (Orthodox)
   Feast of the Nativity (Orthodox)
   Maghi (Sikh)
-  Baptism of the Lord Jesus (Christian)
   World Religion Day (Baha'i)
   Tu BiShavat (Jewish)
   Mahayana New Year (Buddhist)
-  Conversion of St. Paul (Christian)
 
 February?
   Sesubun-sai (Shinto)
@@ -84,7 +77,6 @@ April?
   Vaisakhi (Baisakhi)
   New Year (Sikh)
   Theravadin New Year (Buddhist)
-  Pesach/Passover (Jewish)
   Lazarus Saturday (Orthodox)
   Palm Sunday (Orthodox)
   Lailat al Bara'ah (Islam)
@@ -109,8 +101,6 @@ June?
   Eid al Fitr (Islam)
   Ascension of Jesus (Orthodox)
   Guru Arjan Dev Martyrdom (Sikh)
-  Trinity Sunday (Christian)
-  Corpus Christi (Catholic)
   All Saints (Orthodox)
   Sacred Heart of Jesus (Catholic)
   Saints Peter and Paul (Christian)
@@ -169,7 +159,6 @@ December?
   Advent begins (Christian)
   Saint Nicholas Day (Christian)
   Rohatsu - Bodhi Day (Buddhist)
-  Immaculate Conception of Mary (Catholic)
   Our Lady of Guadalupe (Catholic)
   Posadas Navidenas (Christian)
   Feast of the Nativity (Orthodox)

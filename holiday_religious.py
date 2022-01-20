@@ -23,6 +23,7 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord
     # Baptism of the Lord is the 1st Sunday after January 6th
+    # Jesus
 
     #   https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
     #   https://fr.wikipedia.org/wiki/Conversion_de_Paul
@@ -108,9 +109,10 @@ def main(year):
     # Passover is from 14 or 15 to 21 or 22 Nisan (1st month)
     #   https://en.wikipedia.org/wiki/Passover
     #   https://fr.wikipedia.org/wiki/Pessa%27h
-    print(f'{passover(year)} Passover')
+    print(f'{passover(year)} Passover')  # XXX FIXME TODO  Beginning only???
     # Début de Pâque des Juifs
     # Fin de Pâque des Juifs
+    # Pascha???
 
     #   https://en.wikipedia.org/wiki/Orangemen%27s_Day
     #   https://fr.wikipedia.org/wiki/Orange_Day
@@ -133,9 +135,8 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Boxing_Day
     print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
     print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
-    print(f'{date(year, DECEMBER, 26)} Boxing Day')
+    print(f'{date(year, DECEMBER, 26)} Boxing Day')  # Le jour des boîtes
     # Lendemain de Noël
-    # Le jour des boîtes
     # Après-Noël
     if date.weekday(date(year, DECEMBER, 25)) == SATURDAY:
         print(

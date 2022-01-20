@@ -21,8 +21,7 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Martin_Luther_King_Day
     print(
         f'{closest_date(MONDAY, date(year, JANUARY, WEEK3))} Martin Luther King Jr. Day (US)'
-    )
-    # Journée de Martin Luther King Jr. (US)
+    )  # Journée de Martin Luther King Jr. (US)
 
     #   https://en.wikipedia.org/wiki/Groundhog_Day
     #   https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
@@ -77,13 +76,15 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Thanksgiving
     #   https://en.wikipedia.org/wiki/Black_Friday_(shopping)
     #   https://en.wikipedia.org/wiki/Cyber_Monday
-    buzzard_day = closest_date(THURSDAY, date(year, NOVEMBER, WEEK4))
-    print(f'{buzzard_day} Thanksgiving Day (US)')
-    print(f'{buzzard_day + timedelta(days=1)} Black Friday (US)')
-    print(f'{buzzard_day + timedelta(days=3)} Cyber Monday (US)')
-    # Action de Grâce (US)
-    # Vendredi Noir (US)
-    # Cyber Lundi (US)
+    print(
+        f'{closest_date(THURSDAY, date(year, NOVEMBER, WEEK4))} Thanksgiving Day (US)'
+    )  # Action de Grâce (US)
+    print(
+        f'{closest_date(THURSDAY, date(year, NOVEMBER, WEEK4)) + timedelta(days=1)} Black Friday (US)'
+    )  # Vendredi Noir (US)
+    print(
+        f'{closest_date(THURSDAY, date(year, NOVEMBER, WEEK4)) + timedelta(days=3)} Cyber Monday (US)'
+    )  # Cyber Lundi (US)
 
     # Early May Bank Holiday (UK)
     # Spring Bank Holiday (UK)
@@ -93,11 +94,11 @@ def main(year):
     # Second Easter (ES)
     # Feast of San Juan (ES)
     # Assumption of Mary (ES)
-    # Virgin of Mecy (ES)
+    # Virgin of Mecy (ES)  is there a typo here???
     # Diada (ES)
     # National Day (ES)
     # Constitution Day (ES)
-    # Immaculate Conception (ES)
+    # Immaculate Conception (ES) = Immaculate Conception of Mary???
     # Day of Madrid (ES)
     # Feast Day of St. Isodore (ES)
     # Feast of St. James the Apostle (ES)

@@ -55,11 +55,10 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
     print(
         f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Family Day (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)'
-    )
+    )  # Fête de la famille
     print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Louis Riel Day (CA-MB)')
     print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Islander Day (CA-PE)')
     print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Heritage Day (CA-NS)')
-    # Fête de la famille
     # Journée Louis Riel (CA-MB)
     # Fête des insulaires (CA-PE)
     # Jour de patrimoine / Fête du patrimoine (CA-NS)
@@ -68,8 +67,7 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
     print(
         f'{closest_date(SUNDAY, date(year, FEBRUARY, WEEK4), last=True) - timedelta(days=2)} Heritage Day (CA-YT))'
-    )
-    # Jour de patrimoine / Fête du patrimoine (CA-YT)
+    )  # Jour de patrimoine / Fête du patrimoine (CA-YT)
 
     #   https://en.wikipedia.org/wiki/Commonwealth_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
@@ -137,15 +135,12 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Vacances_de_la_construction
     #   https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
     #   https://www.ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
-    last_sunday_in_july = closest_date(SUNDAY, date(year, JULY, WEEK4), last=True)
     print(
-        f'{last_sunday_in_july - timedelta(days=7)} Construction Holiday Begins (CA-QC)'
-    )
+        f'{closest_date(SUNDAY, date(year, JULY, WEEK4), last=True) - timedelta(days=7)} Construction Holiday Begins (CA-QC)'
+    )  # Début des vacances de la construction (CA-QC)
     print(
-        f'{last_sunday_in_july + timedelta(days=6)} Construction Holiday Ends (CA-QC)'
-    )
-    # Début des vacances de la construction (CA-QC)
-    # Fin des vacances de la construction (CA-QC)
+        f'{closest_date(SUNDAY, date(year, JULY, WEEK4), last=True) + timedelta(days=6)} Construction Holiday Ends (CA-QC)'
+    )  # Fin des vacances de la construction (CA-QC)
 
     # The 1st Monday in August is a quasi-semi-poly-un-statutory holiday,
     # kinda...
@@ -167,16 +162,14 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
     print(
         f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Civic Holiday (except CA-NL, CA-QC, CA-YT)'
-    )
+    )  # Congé civique (sauf CA-NL, CA-QC, CA-YT)
     # Premier lundi d'août
-    # Civic Holiday = Congé civique
 
     #   https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
     print(
         f'{date(year, AUGUST, 9)} International Day of the World\'s Indigenous Peoples'
-    )
-    # Journée internationale des populations autochtones du monde
+    )  # Journée internationale des populations autochtones du monde
 
     #   https://en.wikipedia.org/wiki/Discovery_Day
     print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK3))} Discovery Day (CA-YT)')
@@ -208,12 +201,15 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Oktoberfest
     # Oktoberfest (CA-ON) starts the Friday before Thanksgiving and ends the
     # Saturday after
-    turkey_day = closest_date(MONDAY, date(year, OCTOBER, WEEK2))
-    print(f'{turkey_day} Thanksgiving Day (CA)')  # Action de Grâce
-    print(f'{turkey_day - timedelta(days=3)} Oktoberfest Begins (CA-ON)')
-    print(f'{turkey_day + timedelta(days=8)} Oktoberfest Ends (CA-ON)')
-    # Début de l'Oktoberfest (CA-ON)
-    # Fin de l'Oktoberfest (CA-ON)
+    print(
+        f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2))} Thanksgiving Day (CA)'
+    )  # Action de Grâce
+    print(
+        f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2)) - timedelta(days=3)} Oktoberfest Begins (CA-ON)'
+    )  # Début de l'Oktoberfest (CA-ON)
+    print(
+        f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2)) + timedelta(days=8)} Oktoberfest Ends (CA-ON)'
+    )  # Fin de l'Oktoberfest (CA-ON)
 
     #   https://en.wikipedia.org/wiki/Remembrance_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir

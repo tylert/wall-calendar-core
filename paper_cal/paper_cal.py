@@ -125,11 +125,6 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
         return found_date
 
 
-# http://www.ben-daglish.net/moon.shtml
-# https://www.timeanddate.com/calendar/determining-easter-date.html
-# https://www.assa.org.au/edm
-
-
 def easter(year=date.today().year):
     ''' '''
 

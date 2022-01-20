@@ -48,16 +48,21 @@
   #     CA-BC:  Family Day;  statutory
   #     CA-MB:  Louis Riel Day;  statutory
   #     CA-NB:  Family Day;  statutory
-  #     CA-ON:  Family Day;  statutory
+  #     CA-NL:  not observed
   #     CA-NS:  Heritage Day;  ?
+  #     CA-NT:  not observed
+  #     CA-NU:  not observed
+  #     CA-ON:  Family Day;  statutory
   #     CA-PE:  Islander Day;  statutory
+  #     CA-QC:  not observed
   #     CA-SK:  Family Day;  statutory
+  #     CA-YT:  not observed
   #   https://en.wikipedia.org/wiki/Family_Day
   #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
   REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Family Day (CA-AB, CA-BC, CA-ON, CA-SK)", \
-        "Fête de la famille (CA-AB, CA-BC, CA-ON, CA-SK)")]%" %b%
+      MSG %"[babel("Family Day (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)", \
+        "Fête de la famille (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)")]%" %b%
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Louis Riel Day (CA-MB)", \
         "Journée Louis Riel (CA-MB)")]%" %b%
@@ -72,30 +77,25 @@
       MSG %"[babel("Heritage Day (CA-YT)", \
         "Jour de patrimoine (CA-YT)")]%" %b%
 
-  # Commonwealth Day is the 2nd Monday in March
   #   https://en.wikipedia.org/wiki/Commonwealth_Day
   REM  Mon Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Commonwealth Day", "Jour du Commonwealth")]%" %b%
 
-  # April Fool's Day is April 1st
   #   https://en.wikipedia.org/wiki/April_Fools'_Day
   REM  Apr 01 +1 PRIORITY 1000 \
     MSG %"[babel("April Fool's Day", "Poisson d'avril")]%" %b%
 
-  # Vimy Ridge Day is April 9th
   #   https://en.wikipedia.org/wiki/Vimy_Ridge_Day
   REM  Apr 09 +1 PRIORITY 1000 \
     MSG %"[babel("Vimy Ridge Day", "Jour de la crête de Vimy")]%" %b%
 
-  # Mother's Day is the 2nd Sunday in May
   #   https://en.wikipedia.org/wiki/Mother's_Day
   REM  Sun May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Mother's Day", "Fête des mères")]%" %b%
 
-  # Victoria Day is the Monday on or before May 24th
-  # (or the last Monday preceeding May 25th)
+  # Victoria Day is the last Monday preceeding May 25th
   #   https://en.wikipedia.org/wiki/Victoria_Day
   #   https://en.wikipedia.org/wiki/National_Patriots%27_Day
   #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
@@ -114,7 +114,6 @@
       MSG %"[babel("Canadian Armed Forces Day", \
         "Journée des Forces canadiennes")]%" %b%
 
-  # Father's Day is the 3rd Sunday in June
   #   https://en.wikipedia.org/wiki/Father's_Day
   REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
@@ -138,13 +137,11 @@
     MSG %"[babel("Quebec's National Holiday", \
       "Fête nationale du Québec")]%" %b%
 
-  # Discovery Day (CA-NL) is the Monday nearest June 24th
   #   https://en.wikipedia.org/wiki/Discovery_Day
   REM  Mon Jun 21 +1 PRIORITY 1000 \
     MSG %"[babel("Discovery Day (CA-NL)", \
       "Journée découverte (CA-NL)")]%" %b%
 
-  # Canadian Multiculturalism Day is June 27th
   #   https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
   REM  Jun 27 +1 PRIORITY 1000 \
     MSG %"[babel("Canadian Multiculturalism Day", \
@@ -171,7 +168,6 @@
     ENDIF
   ENDIF
 
-  # Memorial Day (CA-NL) is July 1st
   #   https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
   REM  Jul 01 +1 PRIORITY 1000 \
     MSG %"[babel("Memorial Day (CA-NL)", "Memorial Day (CA-NL)")]%" %b%
@@ -220,7 +216,6 @@
     MSG %"[babel("International Day of the World's Indigenous Peoples", \
       "Journée internationale des populations autochtones du monde")]%" %b%
 
-  # Discovery Day (CA-YT) is the 3rd Monday in August
   #   https://en.wikipedia.org/wiki/Discovery_Day
   REM  Mon Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
@@ -244,6 +239,7 @@
   # Oktoberfest (CA-ON) starts the Friday before Thanksgiving and ends the
   # Saturday after
   #   https://en.wikipedia.org/wiki/Oktoberfest
+  #   https://fr.wikipedia.org/wiki/Oktoberfest
   REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Thanksgiving Day", "Action de Grâce")]%" %b%
@@ -254,19 +250,16 @@
       MSG %"[babel("Oktoberfest Ends (CA-ON)", \
         "Fin de l'Oktoberfest (CA-ON)")]%" %b%
 
-  # Hallowe'en is October 31st
   #   https://en.wikipedia.org/wiki/Halloween
+  #   https://fr.wikipedia.org/wiki/Halloween
   REM  Oct 31 +1 PRIORITY 1000 \
     MSG %"[babel("Hallowe'en", "Halloween")]%" %b%
 
-  # Rememberance Day is November 11th
   #   https://en.wikipedia.org/wiki/Remembrance_Day
   #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
+  #   https://en.wikipedia.org/wiki/Armistice_Day
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
-
-  # Armistice Day (CA-NL) is November 11th
-  #   https://en.wikipedia.org/wiki/Armistice_Day
   REM  Nov 11 +1 PRIORITY 1000 \
     MSG %"[babel("Armistice Day (CA-NL)", "Jour de l'Armistice (CA-NL)")]%" %b%
 

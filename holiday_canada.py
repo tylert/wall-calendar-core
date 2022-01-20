@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-from datetime import date
+from datetime import date, timedelta
 
 import click
 
@@ -16,9 +16,6 @@ from paper_cal import *
     help='Year to show',
 )
 def main(year):
-
-    # https://en.wikipedia.org/wiki/Public_holidays_in_Canada
-    # https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 
     #   https://en.wikipedia.org/wiki/New_Year's_Eve
     #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
@@ -49,17 +46,34 @@ def main(year):
     #     CA-BC:  Family Day;  statutory
     #     CA-MB:  Louis Riel Day;  statutory
     #     CA-NB:  Family Day;  statutory
-    #     CA-ON:  Family Day;  statutory
+    #     CA-NL:  not observed
     #     CA-NS:  Heritage Day;  ?
+    #     CA-NT:  not observed
+    #     CA-NU:  not observed
+    #     CA-ON:  Family Day;  statutory
     #     CA-PE:  Islander Day;  statutory
+    #     CA-QC:  not observed
     #     CA-SK:  Family Day;  statutory
+    #     CA-YT:  not observed
     #   https://en.wikipedia.org/wiki/Family_Day
     #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
-    print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Family Day')
+    print(
+        f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Family Day (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)'
+    )
+    print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Louis Riel Day (CA-MB)')
+    print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Islander Day (CA-PE)')
+    print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Heritage Day (CA-NS)')
     # Fête de la famille
     # Journée Louis Riel (CA-MB)
     # Fête des Insulaires (CA-PE)
     # Fête du Patrimoine (CA-NS)
+
+    # Heritage Day (CA-YT) is the Friday before the last Sunday in February
+    #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
+    print(
+        f'{closest_date(SUNDAY, date(year, FEBRUARY, WEEK4), last=True) - timedelta(days=2)} Heritage Day (CA-YT))'
+    )
+    # Jour de patrimoine (CA-YT)
 
     print(f'{spring(year).date()} First day of Spring')
     print(f'{summer(year).date()} First day of Summer')
@@ -76,15 +90,18 @@ def main(year):
     # Spring break
     # Congé de printemps
 
-    # Victoria Day is the Monday on or before May 24th
-    # (or the last Monday preceeding May 25th)
+    # Victoria Day is the last Monday preceeding May 25th
     #   https://en.wikipedia.org/wiki/Victoria_Day
     #   https://en.wikipedia.org/wiki/National_Patriots%27_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
-    print(f'{closest_date(MONDAY, date(year, MAY, 21))} Victoria Day')
+    print(f'{closest_date(MONDAY, date(year, MAY, 21))} Victoria Day (CA)')
     # Fête de la Reine
     # Fête de Victoria
     # Journée nationale des patriotes (CA-QC)
+
+    #   https://en.wikipedia.org/wiki/Discovery_Day
+    print(f'{closest_date(MONDAY, date(year, JUNE, 24))} Discovery Day (CA-NL)')
+    # Journée découverte (CA-NL)
 
     #   https://en.wikipedia.org/wiki/Canada_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
@@ -96,11 +113,15 @@ def main(year):
         print(f'{closest_date(MONDAY, date(year, JULY, 1))} Canada Day Observed')
         # Fête du Canada (observé)
 
+    #   https://en.wikipedia.org/wiki/Nunavut_Day
+    print(f'{date(year, JULY, 9)} Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU)')
+    # Fête du Nunavut
+
     # The 1st Monday in August is a quasi-semi-poly-un-statutory holiday,
     # kinda...
     #     CA-AB:  Heritage Day;  optional, formerly statutory
     #     CA-BC:  British Columbia Day;  statutory
-    #     CA-MB:  Civic Holiday;  non-statutory
+    #     CA-MB:  Terry Fox Day;  non-statutory
     #     CA-NB:  New Brunswick Day;  statutory
     #     CA-NL:  not observed
     #     CA-NS:  Natal Day;  non-statutory
@@ -114,9 +135,16 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Civic_Holiday
     #   https://en.wikipedia.org/wiki/Public_holidays_in_Canada
     #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
-    print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} August Civic Holiday')
+    print(
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} August Civic Holiday (except CA-NL, CA-QC, CA-YT)'
+    )
     # Longue fin de semaine d'aôut (sauf CA-NL, CA-QC, CA-YT)
     # Premier lundi d'août
+    # Civic Holiday = Congé civique
+
+    #   https://en.wikipedia.org/wiki/Discovery_Day
+    print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK3))} Discovery Day (CA-YT)')
+    # Journée découverte (CA-YT)
 
     #   https://en.wikipedia.org/wiki/Labour_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
@@ -125,12 +153,28 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Thanksgiving#Canada
     #   https://fr.wikipedia.org/wiki/Action_de_gr%C3%A2ce_(Canada)
-    print(f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2))} Thanksgiving Day (CA)')
-    # Action de Grâce
+    #   https://en.wikipedia.org/wiki/Oktoberfest
+    #   https://fr.wikipedia.org/wiki/Oktoberfest
+    # Oktoberfest (CA-ON) starts the Friday before Thanksgiving and ends the
+    # Saturday after
+    turkey_day = closest_date(MONDAY, date(year, OCTOBER, WEEK2))
+    print(f'{turkey_day} Thanksgiving Day (CA)')  # Action de Grâce
+    print(f'{turkey_day - timedelta(days=3)} Oktoberfest Begins (CA-ON)')
+    print(f'{turkey_day + timedelta(days=8)} Oktoberfest Ends (CA-ON)')
+    # Début de l'Oktoberfest (CA-ON)
+    # Fin de l'Oktoberfest (CA-ON)
+
+    #   https://en.wikipedia.org/wiki/Halloween
+    #   https://fr.wikipedia.org/wiki/Halloween
+    print(f'{date(year, OCTOBER, 31)} Hallowe\'en')
+    # Halloween
 
     #   https://en.wikipedia.org/wiki/Remembrance_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
+    #   https://en.wikipedia.org/wiki/Armistice_Day
     print(f'{date(year, NOVEMBER, 11)} Rememberance Day')  # Jour du Souvenir
+    print(f'{date(year, NOVEMBER, 11)} Armistice Day (CA-NL)')
+    # Jour de l'Armistice (CA-NL)
 
     #   https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
     #   https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931

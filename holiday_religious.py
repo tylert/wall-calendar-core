@@ -60,10 +60,11 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Annonciation
     print(f'{date(year, MARCH, 25)} Annunciation')  # Annonciation
 
-    # Easter is the 1st Sunday after the 1st full moon after the Spring
+    # Easter is the 1st Sunday after the 1st full moon after the March
     # equinox (min:  March 22nd, max:  April 25th)
-    #   https://en.wikipedia.org/wiki/Ecclesiastical_full_moon#Paschal_full_moon
+    #   https://en.wikipedia.org/wiki/Ecclesiastical_full_moon
     #   https://en.wikipedia.org/wiki/Computus
+    #   https://en.wikipedia.org/wiki/Date_of_Easter
     #   https://fr.wikipedia.org/wiki/Calcul_de_la_date_de_P%C3%A2ques
     #   https://en.wikipedia.org/wiki/Shrove_Tuesday
     #   https://fr.wikipedia.org/wiki/Mardi_gras
@@ -101,7 +102,7 @@ def main(year):
     print(f'{easter(year)} Easter Sunday')  # Le dimanche de Pâques
     print(f'{easter(year) + timedelta(days=1)} Easter Monday')  # Le lundi de Pâques
     print(f'{easter(year) + timedelta(days=39)} Ascension Day')  # Ascension
-    print(f'{easter(year) + timedelta(days=49)} Whit Sunday/Pentecost')  # Pentecôte
+    print(f'{easter(year) + timedelta(days=49)} Whit Sunday/Pentecost Sunday')  # Pentecôte
     print(f'{easter(year) + timedelta(days=50)} Whit Monday/Pentecost Monday')
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
@@ -109,10 +110,14 @@ def main(year):
     # Passover is from 14 or 15 to 21 or 22 Nisan (1st month)
     #   https://en.wikipedia.org/wiki/Passover
     #   https://fr.wikipedia.org/wiki/Pessa%27h
-    print(f'{passover(year)} Passover')  # XXX FIXME TODO  Beginning only???
+    #   https://en.wikipedia.org/wiki/Pascha
+    #   https://en.wikipedia.org/wiki/Passover_(Christian_holiday)
+    #   https://en.wikipedia.org/wiki/Passover_Seder
+    #   https://fr.wikipedia.org/wiki/S%C3%A9der_de_Pessa%27h
+    print(f'{passover(year)} Passover')  # Pessa'h
     # Début de Pâque des Juifs
     # Fin de Pâque des Juifs
-    # Pascha???
+    # Passover = Pesach = Pascha = Easter
 
     #   https://en.wikipedia.org/wiki/Orangemen%27s_Day
     #   https://fr.wikipedia.org/wiki/Orange_Day

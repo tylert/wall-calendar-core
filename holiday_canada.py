@@ -29,7 +29,7 @@ def main(year):
     ):
         print(
             f'{closest_date(MONDAY, date(year, JANUARY, 1))} New Year\'s Day Observed'
-        )  # Jour de l'an (observé)
+        )  # Jour de l'an Observé
 
     #   https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
@@ -55,7 +55,7 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
     print(
         f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Family Day (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)'
-    )  # Fête de la famille
+    )  # Fête de la famille (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)
     print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Louis Riel Day (CA-MB)')
     print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Islander Day (CA-PE)')
     print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Heritage Day (CA-NS)')
@@ -103,8 +103,8 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_des_peuples_autochtones
     #   https://www.canada.ca/en/canadian-heritage/campaigns/indigenous-peoples-day.html
     #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-peuples-autochtones.html
-    print(f'{date(year, JUNE, 21)} National Indigenous Peoples Day')
-    # Journée nationale des peuples autochtones
+    print(f'{date(year, JUNE, 21)} National Indigenous Peoples Day (CA)')
+    # Journée nationale des peuples autochtones (CA)
 
     #   https://en.wikipedia.org/wiki/Discovery_Day
     print(f'{closest_date(MONDAY, date(year, JUNE, 24))} June Day (CA-NL)')
@@ -123,11 +123,11 @@ def main(year):
         or date.weekday(date(year, JULY, 1)) == SUNDAY
     ):
         print(f'{closest_date(MONDAY, date(year, JULY, 1))} Canada Day Observed')
-        # Fête du Canada (observé)
+        # Fête du Canada Observé
 
     #   https://en.wikipedia.org/wiki/Nunavut_Day
     print(f'{date(year, JULY, 9)} Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU)')
-    # Fête du Nunavut
+    # Fête du Nunavut (CA-NU)
 
     # The Quebec Construction Holiday begins on the 2nd last Sunday of July and
     # lasts for 2 weeks
@@ -179,8 +179,8 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Remembrance_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
     #   https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
-    print(f'{date(year, SEPTEMBER, 3)} Merchant Navy Day (CA)')
-    # Jour de la marine marchande (CA)
+    print(f'{date(year, SEPTEMBER, 3)} Merchant Navy Day')
+    # Jour de la marine marchande
 
     #   https://en.wikipedia.org/wiki/Labour_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
@@ -203,7 +203,7 @@ def main(year):
     # Saturday after
     print(
         f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2))} Thanksgiving Day (CA)'
-    )  # Action de Grâce
+    )  # Action de Grâce (CA)
     print(
         f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2)) - timedelta(days=3)} Oktoberfest Begins (CA-ON)'
     )  # Début de l'Oktoberfest (CA-ON)

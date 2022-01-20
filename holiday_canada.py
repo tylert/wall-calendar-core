@@ -138,8 +138,12 @@ def main(year):
     #   https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
     #   https://www.ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
     last_sunday_in_july = closest_date(SUNDAY, date(year, JULY, WEEK4), last=True)
-    print(f'{last_sunday_in_july - timedelta(days=7)} Construction Holiday Begins (CA-QC)')
-    print(f'{last_sunday_in_july + timedelta(days=6)} Construction Holiday Ends (CA-QC)')
+    print(
+        f'{last_sunday_in_july - timedelta(days=7)} Construction Holiday Begins (CA-QC)'
+    )
+    print(
+        f'{last_sunday_in_july + timedelta(days=6)} Construction Holiday Ends (CA-QC)'
+    )
     # Début des vacances de la construction (CA-QC)
     # Fin des vacances de la construction (CA-QC)
 
@@ -169,7 +173,9 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
-    print(f'{date(year, AUGUST, 9)} International Day of the World\'s Indigenous Peoples')
+    print(
+        f'{date(year, AUGUST, 9)} International Day of the World\'s Indigenous Peoples'
+    )
     # Journée internationale des populations autochtones du monde
 
     #   https://en.wikipedia.org/wiki/Discovery_Day

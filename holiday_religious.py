@@ -101,9 +101,16 @@ def main(year):
     print(f'{easter(year) + timedelta(days=1)} Easter Monday')  # Le lundi de Pâques
     print(f'{easter(year) + timedelta(days=39)} Ascension Day')  # Ascension
     print(f'{easter(year) + timedelta(days=49)} Whit Sunday/Pentecost')  # Pentecôte
-    print(f'{easter(year) + timedelta(days=50)} Whit Monday')
+    print(f'{easter(year) + timedelta(days=50)} Whit Monday/Pentecost Monday')
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
+
+    # Passover is from 14 or 15 to 21 or 22 Nisan (1st month)
+    #   https://en.wikipedia.org/wiki/Passover
+    #   https://fr.wikipedia.org/wiki/Pessa%27h
+    print(f'{passover(year)} Passover')
+    # Début de Pâque des Juifs
+    # Fin de Pâque des Juifs
 
     #   https://en.wikipedia.org/wiki/Orangemen%27s_Day
     #   https://fr.wikipedia.org/wiki/Orange_Day
@@ -113,19 +120,19 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/All_Saints%27_Day
     #   https://fr.wikipedia.org/wiki/Toussaint
-    print(f'{date(year, NOVEMBER, 1)} All Saints\' Day')  # Toussaint
     #   https://en.wikipedia.org/wiki/All_Souls%27_Day
     #   https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
+    print(f'{date(year, NOVEMBER, 1)} All Saints\' Day')  # Toussaint
     print(f'{date(year, NOVEMBER, 2)} All Souls\' Day')  # Fête des Morts
 
     #   https://en.wikipedia.org/wiki/Christmas_Eve
     #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
-    print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
     #   https://en.wikipedia.org/wiki/Christmas
     #   https://fr.wikipedia.org/wiki/No%C3%ABl
-    print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
     #   https://en.wikipedia.org/wiki/Boxing_Day
     #   https://fr.wikipedia.org/wiki/Boxing_Day
+    print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
+    print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
     print(f'{date(year, DECEMBER, 26)} Boxing Day')
     # Lendemain de Noël
     # Le jour des boîtes

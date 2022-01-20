@@ -7,6 +7,7 @@ from .paper_cal import (
     full_moon,
     is_leap,
     new_moon,
+    passover,
     perihelion,
     spring,
     summer,

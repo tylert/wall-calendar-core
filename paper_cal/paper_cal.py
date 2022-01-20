@@ -137,6 +137,14 @@ def easter(year=date.today().year):
     return date(year=year, month=month, day=day)
 
 
+def passover(year=date.today().year):
+    ''' '''
+
+    # Passover = Pesach = "Jewish Easter"
+    month, day = Epoch.jewish_pesach(year)
+    return date(year=year, month=month, day=day)
+
+
 # Equinox/Équinoxe literally means "equal night"
 # Solstice literally means "sun stands still" (longest/shortest day)
 # March Equinox is the 1st Day of Spring/printemps in the Northern Hemisphere

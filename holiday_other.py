@@ -46,6 +46,10 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Jour_de_la_Terre
     print(f'{date(year, APRIL, 23)} Earth Day')  # Jour de la Terre
 
+    #   https://en.wikipedia.org/wiki/Anzac_Day
+    print(f'{date(year, APRIL, 25)} ANZAC Day (AU, NZ)')
+    # Jour d'ANZAC (AU, NZ)
+
     #   https://en.wikipedia.org/wiki/Mother's_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
     print(f'{closest_date(SUNDAY, date(year, MAY, WEEK2))} Mother\'s Day')
@@ -80,6 +84,24 @@ def main(year):
     # Action de Grâce (US)
     # Vendredi Noir (US)
     # Cyber Lundi (US)
+
+    # Early May Bank Holiday (UK)
+    # Spring Bank Holiday (UK)
+    # Platinum Jubilee Bank Holiday (UK)
+    # Summer Bank Holiday (UK)
+
+    # Second Easter (ES)
+    # Feast of San Juan (ES)
+    # Assumption of Mary (ES)
+    # Virgin of Mecy (ES)
+    # Diada (ES)
+    # National Day (ES)
+    # Constitution Day (ES)
+    # Immaculate Conception (ES)
+    # Day of Madrid (ES)
+    # Feast Day of St. Isodore (ES)
+    # Feast of St. James the Apostle (ES)
+    # La Almudena (ES)
 
 
 if __name__ == '__main__':

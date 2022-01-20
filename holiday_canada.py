@@ -19,9 +19,9 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/New_Year's_Eve
     #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
-    print(f'{date(year, DECEMBER, 31)} New Year\'s Eve')  # Veille du Nouvel An
     #   https://en.wikipedia.org/wiki/New_Year's_Day
     #   https://fr.wikipedia.org/wiki/Jour_de_l%27an
+    print(f'{date(year, DECEMBER, 31)} New Year\'s Eve')  # Veille du Nouvel An
     print(f'{date(year, JANUARY, 1)} New Year\'s Day')  # Jour de l'an
     if (
         date.weekday(date(year, JANUARY, 1)) == SATURDAY

@@ -91,6 +91,7 @@
     MSG %"[babel("Vimy Ridge Day", "Jour de la crête de Vimy")]%" %b%
 
   #   https://en.wikipedia.org/wiki/Mother's_Day
+  #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
   REM  Sun May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Mother's Day", "Fête des mères")]%" %b%
@@ -115,6 +116,7 @@
         "Journée des Forces canadiennes")]%" %b%
 
   #   https://en.wikipedia.org/wiki/Father's_Day
+  #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_P%C3%A8res
   REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Father's Day", "Fête des pères")]%" %b%
@@ -125,8 +127,10 @@
     MSG %"[babel("William Davis Miners' Memorial Day (CA-NS)", \
       "Journée commémorative des mineurs (CA-NS)")]%" %b%
 
-  # National Indigenous Peoples Day is June 21st
   #   https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
+  #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_des_peuples_autochtones
+  #   https://www.canada.ca/en/canadian-heritage/campaigns/indigenous-peoples-day.html
+  #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-peuples-autochtones.html
   REM  Jun 21 +1 PRIORITY 1000 \
     MSG %"[babel("National Indigenous Peoples Day", \
       "Journée nationale des peuples autochtones")]%" %b%
@@ -143,6 +147,8 @@
       "Journée découverte (CA-NL)")]%" %b%
 
   #   https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
+  #   https://www.canada.ca/en/canadian-heritage/campaigns/multiculturalism-day.html
+  #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-multiculturalisme.html
   REM  Jun 27 +1 PRIORITY 1000 \
     MSG %"[babel("Canadian Multiculturalism Day", \
       "Journée canadienne du multiculturalisme")]%" %b%

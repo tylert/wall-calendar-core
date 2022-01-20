@@ -90,6 +90,11 @@ def main(year):
     # Spring Break
     # Congé de printemps
 
+    #   https://en.wikipedia.org/wiki/Mother's_Day
+    #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
+    print(f'{closest_date(SUNDAY, date(year, MAY, WEEK2))} Mother\'s Day')
+    # Fête des mères
+
     # Victoria Day is the Monday before May 25th
     #   https://en.wikipedia.org/wiki/Victoria_Day
     #   https://en.wikipedia.org/wiki/National_Patriots%27_Day
@@ -99,8 +104,27 @@ def main(year):
     # Fête de Victoria
     # Journée nationale des patriotes (CA-QC)
 
+    #   https://en.wikipedia.org/wiki/Father's_Day
+    #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_P%C3%A8res
+    print(f'{closest_date(SUNDAY, date(year, JUNE, WEEK3))} Father\'s Day')
+    # Fête des pères
+
+    #   https://en.wikipedia.org/wiki/National_Aboriginal_Day
+    #   https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
+    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_des_peuples_autochtones
+    #   https://www.canada.ca/en/canadian-heritage/campaigns/indigenous-peoples-day.html
+    #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-peuples-autochtones.html
+    print(f'{date(year, JUNE, 21)} National Indigenous Peoples Day')
+    # Journée nationale des peuples autochtones
+
     #   https://en.wikipedia.org/wiki/Discovery_Day
     print(f'{closest_date(MONDAY, date(year, JUNE, 24))} June Day (CA-NL)')
+
+    #   https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
+    #   https://www.canada.ca/en/canadian-heritage/campaigns/multiculturalism-day.html
+    #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-multiculturalisme.html
+    print(f'{date(year, JUNE, 27)} Canadian Multiculturalism Day')
+    # Journée canadienne du multiculturalisme
 
     #   https://en.wikipedia.org/wiki/Canada_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada

@@ -143,8 +143,8 @@ def easter(year=date.today().year):
 # June Solstice is the 1st Day of Summer/été in the Northern Hemisphere
 # September Equinox is the 1st Day of Fall/automne in the Northern Hemisphere
 # December Solstice is the 1st Day of Winter/hiver in the Northern Hemisphere
-# Aphelion/Aphélie is when the Earth is farthest from the Sun
 # Perihelion/Périhélie is when the Earth is closest to the Sun
+# Aphelion/Aphélie is when the Earth is farthest from the Sun
 
 
 def spring(year=date.today().year):

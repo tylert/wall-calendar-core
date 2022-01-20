@@ -31,10 +31,6 @@ def main(year):
             f'{closest_date(MONDAY, date(year, JANUARY, 1))} New Year\'s Day Observed'
         )  # Jour de l'an (observé)
 
-    #   https://en.wikipedia.org/wiki/Groundhog_Day
-    #   https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
-    print(f'{date(year, FEBRUARY, 2)} Groundhog Day')  # Jour de la marmotte
-
     #   https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
     print(f'{date(year, FEBRUARY, 15)} Flag Day (CA)')
@@ -65,23 +61,20 @@ def main(year):
     print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Heritage Day (CA-NS)')
     # Fête de la famille
     # Journée Louis Riel (CA-MB)
-    # Fête des Insulaires (CA-PE)
-    # Fête du Patrimoine (CA-NS)
+    # Fête des insulaires (CA-PE)
+    # Jour de patrimoine / Fête du patrimoine (CA-NS)
 
     # Heritage Day (CA-YT) is the Friday before the last Sunday in February
     #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
     print(
         f'{closest_date(SUNDAY, date(year, FEBRUARY, WEEK4), last=True) - timedelta(days=2)} Heritage Day (CA-YT))'
     )
-    # Jour de patrimoine (CA-YT)
+    # Jour de patrimoine / Fête du patrimoine (CA-YT)
 
-    print(f'{spring(year).date()} First day of Spring')
-    print(f'{summer(year).date()} First day of Summer')
-    print(f'{autumn(year).date()} First day of Fall')
-    print(f'{winter(year).date()} First day of Winter')
-
-    print(f'{aphelion(year).date()} Aphelion')
-    print(f'{perihelion(year).date()} Perihelion')
+    #   https://en.wikipedia.org/wiki/Commonwealth_Day
+    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
+    print(f'{closest_date(MONDAY, date(year, MARCH, WEEK2))} Commonwealth Day')
+    # Journée du Commonwealth
 
     # March Break
     # Congé de mars
@@ -90,10 +83,13 @@ def main(year):
     # Spring Break
     # Congé de printemps
 
-    #   https://en.wikipedia.org/wiki/Mother's_Day
-    #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
-    print(f'{closest_date(SUNDAY, date(year, MAY, WEEK2))} Mother\'s Day')
-    # Fête des mères
+    print(f'{spring(year).date()} First day of Spring')
+    print(f'{summer(year).date()} First day of Summer')
+    print(f'{autumn(year).date()} First day of Fall')
+    print(f'{winter(year).date()} First day of Winter')
+
+    print(f'{perihelion(year).date()} Perihelion')
+    print(f'{aphelion(year).date()} Aphelion')
 
     # Victoria Day is the Monday before May 25th
     #   https://en.wikipedia.org/wiki/Victoria_Day
@@ -103,11 +99,6 @@ def main(year):
     # Fête de la Reine
     # Fête de Victoria
     # Journée nationale des patriotes (CA-QC)
-
-    #   https://en.wikipedia.org/wiki/Father's_Day
-    #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_P%C3%A8res
-    print(f'{closest_date(SUNDAY, date(year, JUNE, WEEK3))} Father\'s Day')
-    # Fête des pères
 
     #   https://en.wikipedia.org/wiki/National_Aboriginal_Day
     #   https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
@@ -217,11 +208,6 @@ def main(year):
     print(f'{turkey_day + timedelta(days=8)} Oktoberfest Ends (CA-ON)')
     # Début de l'Oktoberfest (CA-ON)
     # Fin de l'Oktoberfest (CA-ON)
-
-    #   https://en.wikipedia.org/wiki/Halloween
-    #   https://fr.wikipedia.org/wiki/Halloween
-    print(f'{date(year, OCTOBER, 31)} Hallowe\'en')
-    # Halloween
 
     #   https://en.wikipedia.org/wiki/Remembrance_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir

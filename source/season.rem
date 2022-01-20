@@ -6,8 +6,8 @@
 # Season transitions from now until 2025
 #   From http://aa.usno.navy.mil/data/index.php
 
-  # Aphelion/Aphélie is when the Earth is farthest from the Sun
   # Perihelion/Périhélie is when the Earth is closest to the Sun
+  # Aphelion/Aphélie is when the Earth is farthest from the Sun
 
   # Equinox/Équinoxe literally means "equal night"
   # Solstice literally means "sun stands still" (longest/shortest day)

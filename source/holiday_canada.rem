@@ -78,11 +78,13 @@
         "Jour de patrimoine (CA-YT)")]%" %b%
 
   #   https://en.wikipedia.org/wiki/Commonwealth_Day
+  #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
   REM  Mon Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Commonwealth Day", "Jour du Commonwealth")]%" %b%
+      MSG %"[babel("Commonwealth Day", "Journée du Commonwealth")]%" %b%
 
   #   https://en.wikipedia.org/wiki/April_Fools'_Day
+  #   https://fr.wikipedia.org/wiki/Poisson_d%27avril
   REM  Apr 01 +1 PRIORITY 1000 \
     MSG %"[babel("April Fool's Day", "Poisson d'avril")]%" %b%
 

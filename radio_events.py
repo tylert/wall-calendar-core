@@ -18,26 +18,14 @@ from paper_cal import *
 def main(year):
     ''' '''
 
-    # Ottawa Amateur Radio Club executive meetings are the 1st Wednesday of
-    # each month except July and August
     # Ottawa Amateur Radio Club regular meetings are the 2nd Wednesday of
     # each month except July and August
     #   https://www.oarc.net/
     for month in range(1, 13):
         if month != JULY and month != AUGUST:
             print(
-                f'{closest_date(WEDNESDAY, date(year, month, WEEK1))} 1900-2100h OARC Exec Meeting'
-            )
-            # exécutif
-            print(
                 f'{closest_date(WEDNESDAY, date(year, month, WEEK2))} 1930-2200h OARC Meeting'
             )
-    print(
-        f'{closest_date(SATURDAY, date(year, SEPTEMBER, WEEK2))} 0700-1200h OARC Hamfest'
-    )
-    print(
-        f'{closest_date(SATURDAY, date(year, SEPTEMBER, WEEK3))} 0800-1300h OARC Demo'
-    )
 
     # Rideau Lakes Amateur Radio Club meetings are the 3rd Thursday of each
     # month
@@ -76,25 +64,25 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Pi_Day
     #   http://www.piday.org/
-    print(f'{date(year, MARCH, 14)} Pi Day (3.14)')  # Jour de pi (3.14)
+    print(f'{date(year, MARCH, 14)} Pi Day 3.14')  # Jour de pi 3.14
 
     #   https://en.wikipedia.org/wiki/Tau_Day
     #   https://tauday.com/
-    print(f'{date(year, JUNE, 28)} Tau Day (6.28)')  # Jour de tau (6.28)
+    print(f'{date(year, JUNE, 28)} Tau Day 6.28')  # Jour de tau 6.28
 
     #   https://en.wikipedia.org/wiki/Pi_Day
     #   http://piapproximationday.com/
-    print(f'{date(year, JULY, 22)} Pi Approximation Day (22/7)')
-    # Jour d'approximation pi (22/7)
+    print(f'{date(year, JULY, 22)} Pi Approximation Day 22/7')
+    # Jour d'approximation pi 22/7
 
     # The Day of the Programmer is the 256th day of the year
     #   https://en.wikipedia.org/wiki/Day_of_the_Programmer
     if is_leap(year):
-        print(f'{date(year, SEPTEMBER, 12)} Day of the Programmer (256th day)')
-        # Jour du programmeur (256e jour)
+        print(f'{date(year, SEPTEMBER, 12)} Day of the Programmer 256th day')
+        # Jour du programmeur 256e jour
     else:
-        print(f'{date(year, SEPTEMBER, 13)} Day of the Programmer (256th day)')
-        # Jour du programmeur (256e jour)
+        print(f'{date(year, SEPTEMBER, 13)} Day of the Programmer 256th day')
+        # Jour du programmeur 256e jour
 
 
 if __name__ == '__main__':

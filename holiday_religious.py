@@ -105,6 +105,12 @@ def main(year):
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
 
+    #   https://en.wikipedia.org/wiki/Orangemen%27s_Day
+    #   https://fr.wikipedia.org/wiki/Orange_Day
+    #   https://en.wikipedia.org/wiki/The_Twelfth#The_Twelfth_outside_Northern_Ireland
+    print(f'{closest_date(MONDAY, date(year, JULY, 12))} Orangemen\'s Day (CA-NL)')
+    # Fête des Orangistes (CA-NL)
+
     #   https://en.wikipedia.org/wiki/All_Saints%27_Day
     #   https://fr.wikipedia.org/wiki/Toussaint
     print(f'{date(year, NOVEMBER, 1)} All Saints\' Day')  # Toussaint

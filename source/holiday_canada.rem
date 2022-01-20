@@ -95,7 +95,7 @@
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Mother's Day", "Fête des mères")]%" %b%
 
-  # Victoria Day is the last Monday preceeding May 25th
+  # Victoria Day is the Monday before May 25th
   #   https://en.wikipedia.org/wiki/Victoria_Day
   #   https://en.wikipedia.org/wiki/National_Patriots%27_Day
   #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
@@ -139,7 +139,7 @@
 
   #   https://en.wikipedia.org/wiki/Discovery_Day
   REM  Mon Jun 21 +1 PRIORITY 1000 \
-    MSG %"[babel("Discovery Day (CA-NL)", \
+    MSG %"[babel("June Day (CA-NL)", \
       "Journée découverte (CA-NL)")]%" %b%
 
   #   https://en.wikipedia.org/wiki/Multiculturalism_in_Canada

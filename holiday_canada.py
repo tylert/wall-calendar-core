@@ -37,7 +37,7 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
-    print(f'{date(year, FEBRUARY, 15)} National Flag of Canada Day')
+    print(f'{date(year, FEBRUARY, 15)} Flag Day (CA)')
     # Jour du drapeau national du Canada
 
     # The 3rd Monday in February is observed in 8 provinces and 0
@@ -47,7 +47,7 @@ def main(year):
     #     CA-MB:  Louis Riel Day;  statutory
     #     CA-NB:  Family Day;  statutory
     #     CA-NL:  not observed
-    #     CA-NS:  Heritage Day;  ?
+    #     CA-NS:  Heritage Day;  statutory
     #     CA-NT:  not observed
     #     CA-NU:  not observed
     #     CA-ON:  Family Day;  statutory
@@ -83,14 +83,14 @@ def main(year):
     print(f'{aphelion(year).date()} Aphelion')
     print(f'{perihelion(year).date()} Perihelion')
 
-    # March break
+    # March Break
     # Congé de mars
 
     #   https://en.wikipedia.org/wiki/Spring_break
-    # Spring break
+    # Spring Break
     # Congé de printemps
 
-    # Victoria Day is the last Monday preceeding May 25th
+    # Victoria Day is the Monday before May 25th
     #   https://en.wikipedia.org/wiki/Victoria_Day
     #   https://en.wikipedia.org/wiki/National_Patriots%27_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
@@ -100,8 +100,7 @@ def main(year):
     # Journée nationale des patriotes (CA-QC)
 
     #   https://en.wikipedia.org/wiki/Discovery_Day
-    print(f'{closest_date(MONDAY, date(year, JUNE, 24))} Discovery Day (CA-NL)')
-    # Journée découverte (CA-NL)
+    print(f'{closest_date(MONDAY, date(year, JUNE, 24))} June Day (CA-NL)')
 
     #   https://en.wikipedia.org/wiki/Canada_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
@@ -150,6 +149,14 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
     print(f'{closest_date(MONDAY, date(year, SEPTEMBER, WEEK1))} Labour Day')
     # Fête du Travail
+
+    #   https://en.wikipedia.org/wiki/Orange_Shirt_Day
+    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_de_la_v%C3%A9rit%C3%A9_et_de_la_r%C3%A9conciliation
+    #   https://www.orangeshirtday.org/
+    print(f'{date(year, SEPTEMBER, 30)} Orange Shirt Day (CA)')
+    # Jour du chandail orange (CA)
+    # National Day for Truth and Reconciliation (CA)
+    # Journée nationale de la vérité et de la réconciliation (CA)
 
     #   https://en.wikipedia.org/wiki/Thanksgiving#Canada
     #   https://fr.wikipedia.org/wiki/Action_de_gr%C3%A2ce_(Canada)

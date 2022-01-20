@@ -28,6 +28,7 @@ def main(year):
     # Journée de la Présidence (US)
 
     #   https://en.wikipedia.org/wiki/Memorial_Day
+    #   https://fr.wikipedia.org/wiki/Memorial_Day
     print(
         f'{closest_date(MONDAY, date(year, MAY, WEEK4), last=True)} Memorial Day (US)'
     )

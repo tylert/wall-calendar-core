@@ -177,8 +177,12 @@
   REM  Jul 09 +1 PRIORITY 1000 \
     MSG %"[babel("Nunavut Day", "Fête du Nunavut")]%" %b%
 
-  # The Quebec Construction Holiday is the last two weeks of July
+  # The Quebec Construction Holiday begins on the 2nd last Sunday of July and
+  # lasts for 2 weeks
   #   https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
+  #   https://fr.wikipedia.org/wiki/Vacances_de_la_construction
+  #   https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
+  #   https://www.ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
   REM  Sun Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Construction Holiday Begins (CA-QC)", \
@@ -207,11 +211,11 @@
   #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
   REM  Mon Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("August Civic Holiday (except CA-NL, CA-QC, CA-YT)", \
-        "Longue fin de semaine d'aôut (sauf CA-NL, CA-QC, CA-YT)")]%" %b%
+      MSG %"[babel("Civic Holiday (except CA-NL, CA-QC, CA-YT)", \
+        "Congé civique (sauf CA-NL, CA-QC, CA-YT)")]%" %b%
 
-  # International Day of the World's Indigenous Peoples is August 9th
   #   https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
+  #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
   REM  Aug 09 +1 PRIORITY 1000 \
     MSG %"[babel("International Day of the World's Indigenous Peoples", \
       "Journée internationale des populations autochtones du monde")]%" %b%
@@ -222,7 +226,9 @@
       MSG %"[babel("Discovery Day (CA-YT)", \
         "Journée découverte (CA-YT)")]%" %b%
 
-  # Merchant Navy Veterans Day (CA) is September 3rd
+  # Merchant Navy Rememberance Day (CA) is September 3rd
+  #   https://en.wikipedia.org/wiki/Remembrance_Day
+  #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
   #   https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
   REM  Sep 03 +1 PRIORITY 1000 \
     MSG %"[babel("Merchant Navy Day (CA)", \

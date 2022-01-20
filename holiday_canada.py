@@ -116,6 +116,18 @@ def main(year):
     print(f'{date(year, JULY, 9)} Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU)')
     # Fête du Nunavut
 
+    # The Quebec Construction Holiday begins on the 2nd last Sunday of July and
+    # lasts for 2 weeks
+    #   https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
+    #   https://fr.wikipedia.org/wiki/Vacances_de_la_construction
+    #   https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
+    #   https://www.ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
+    last_sunday_in_july = closest_date(SUNDAY, date(year, JULY, WEEK4), last=True)
+    print(f'{last_sunday_in_july - timedelta(days=7)} Construction Holiday Begins (CA-QC)')
+    print(f'{last_sunday_in_july + timedelta(days=6)} Construction Holiday Ends (CA-QC)')
+    # Début des vacances de la construction (CA-QC)
+    # Fin des vacances de la construction (CA-QC)
+
     # The 1st Monday in August is a quasi-semi-poly-un-statutory holiday,
     # kinda...
     #     CA-AB:  Heritage Day;  optional, formerly statutory
@@ -135,15 +147,26 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Public_holidays_in_Canada
     #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
     print(
-        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} August Civic Holiday (except CA-NL, CA-QC, CA-YT)'
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Civic Holiday (except CA-NL, CA-QC, CA-YT)'
     )
-    # Longue fin de semaine d'aôut (sauf CA-NL, CA-QC, CA-YT)
     # Premier lundi d'août
     # Civic Holiday = Congé civique
+
+    #   https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
+    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
+    print(f'{date(year, AUGUST, 9)} International Day of the World\'s Indigenous Peoples')
+    # Journée internationale des populations autochtones du monde
 
     #   https://en.wikipedia.org/wiki/Discovery_Day
     print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK3))} Discovery Day (CA-YT)')
     # Journée découverte (CA-YT)
+
+    # Merchant Navy Rememberance Day (CA) is September 3rd
+    #   https://en.wikipedia.org/wiki/Remembrance_Day
+    #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
+    #   https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
+    print(f'{date(year, SEPTEMBER, 3)} Merchant Navy Day (CA)')
+    # Jour de la marine marchande (CA)
 
     #   https://en.wikipedia.org/wiki/Labour_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail

@@ -69,6 +69,7 @@
 
   # Memorial Day (US) is the last Monday in May
   #   https://en.wikipedia.org/wiki/Memorial_Day
+  #   https://fr.wikipedia.org/wiki/Memorial_Day
   REM  Mon Jun 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Memorial Day (US)", "Memorial Day (US)")]%" %b%

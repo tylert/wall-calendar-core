@@ -135,7 +135,6 @@ def easter(year=date.today().year):
 def passover(year=date.today().year):
     ''' '''
 
-    # Passover = Pesach = "Jewish Easter"
     month, day = Epoch.jewish_pesach(year)
     return date(year=year, month=month, day=day)
 

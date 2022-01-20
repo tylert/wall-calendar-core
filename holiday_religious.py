@@ -117,7 +117,7 @@ def main(year):
     print(f'{passover(year)} Passover')  # Pessa'h
     # Début de Pâque des Juifs
     # Fin de Pâque des Juifs
-    # Passover = Pesach = Pascha = Easter
+    # Passover = Pesach = Pascha = Jewish Easter
 
     #   https://en.wikipedia.org/wiki/Orangemen%27s_Day
     #   https://fr.wikipedia.org/wiki/Orange_Day

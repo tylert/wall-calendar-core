@@ -74,17 +74,14 @@ def main(year):
     print(f'{date(year, NOVEMBER, WEEK1)} Daylight Savings Time Ends (except CA-SK)')
     # Heure d'éte termine (sauf CA-SK)
 
-    # Pi Day
     #   https://en.wikipedia.org/wiki/Pi_Day
     #   http://www.piday.org/
     print(f'{date(year, MARCH, 14)} Pi Day (3.14)')  # Jour de pi (3.14)
 
-    # Tau Day
     #   https://en.wikipedia.org/wiki/Tau_Day
     #   https://tauday.com/
     print(f'{date(year, JUNE, 28)} Tau Day (6.28)')  # Jour de tau (6.28)
 
-    # Pi Approximation Day
     #   https://en.wikipedia.org/wiki/Pi_Day
     #   http://piapproximationday.com/
     print(f'{date(year, JULY, 22)} Pi Approximation Day (22/7)')

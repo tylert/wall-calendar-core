@@ -1,104 +1,43 @@
-# Tools required:
-#   make, bash, remind, sed, ghostscript, psutils, pdftk, inkscape
+SHELL := /usr/bin/env bash
 
-SHELL := /bin/bash
+PYTHON ?= python
+VENV ?= .venv
 
-SOURCE ?= source
-BUILD ?= build
-TOP_CALENDAR ?= $(SOURCE)/top.rem
-CALENDARS ?= $(TOP_CALENDAR) $(wildcard $(SOURCE)/*.rem)
-
-GEN_LANG ?= fr
-MEDIA ?= legal
-
-#YEAR ?= $(shell expr 1 + $(shell date +%Y))
-YEAR ?= $(shell date +%Y)
-DATE ?= $(YEAR)-01-01
-MONTHS ?= 12
+GENERATED_FILES =
 
 .SUFFIXES:
-.SUFFIXES: .rem .ps .pdf .svg .txt
-
-SVGS = $(PDFS:.pdf=.svg)
-
-GENERATED_FILES = \
-  $(wildcard $(BUILD)/*.ps) \
-  $(wildcard $(BUILD)/*.pdf) \
-  $(wildcard $(BUILD)/*.svg) \
-  doc_data.txt
+.SUFFIXES: .yaml .conf .jq .json .rdt
+.PRECIOUS: .yaml .conf .jq
 
 .PHONY: all
-all: calendar
+all: $(GENERATED_FILES)
 
-.PHONY: calendar
-calendar: $(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf
+ACTIVATE_SCRIPT = $(VENV)/bin/activate
+.PHONY: venv
+venv: $(ACTIVATE_SCRIPT)
+$(ACTIVATE_SCRIPT): requirements.txt
+	@test -d $(VENV) || $(PYTHON) -m venv $(VENV) && \
+  source $(ACTIVATE_SCRIPT) && \
+  pip install --requirement $< && \
+  touch $(ACTIVATE_SCRIPT)
 
-.PHONY: svgs
-svgs: $(SVGS)
+.PHONY: venv_upgrade
+venv_upgrade:
+	@rm -rf $(VENV) && \
+  $(PYTHON) -m venv $(VENV) && \
+  source $(ACTIVATE_SCRIPT) && \
+  pip install --requirement requirements_bare.txt && \
+  pip freeze > requirements.txt && \
+  touch $(ACTIVATE_SCRIPT)
+
+# moo:
+#   @source $(ACTIVATE_SCRIPT) && \
+#   ./moo.py > $@
 
 .PHONY: clean
 clean:
-	@rm -f $(GENERATED_FILES)
+	@rm -rf $(GENERATED_FILES)
 
-# Remind -> Postscript
-
-$(BUILD)/$(MEDIA)_$(GEN_LANG).ps: $(CALENDARS) Makefile
-	@remind.$(GEN_LANG) -p$(MONTHS) -b1 -gdaad $(TOP_CALENDAR) $(DATE) \
-    | rem2ps.$(GEN_LANG) -l -c3 -i -e -m Letter -sthed 8 -b 6 -t 1 -olrtb 1 \
-    | sed \
-      -e 's/\xc3\c82\|\xc2\xae/\d174/g' \
-      -e 's/\xc3\x89/\d201/g' \
-      -e 's/\d195\d162/\d226/g' \
-      -e 's/\d195\d168/\d232/g' \
-      -e 's/\d195\d169/\d233/g' \
-      -e 's/\d195\d170/\d234/g' \
-      -e 's/\d195\d171/\d235/g' \
-      -e 's/\d195\d180/\d244/g' \
-    | gs -sstdout=/dev/null -dQUIET -dNOPAUSE -dSAFER -sDEVICE=ps2write \
-      -sPAPERSIZE=$(MEDIA) -dFIXEDMEDIA -sOutputFile=$@ \
-      -c '<</BeginPage{0.9 0.9 scale 29.75 42.1 translate}>> setpagedevice'
-
-# http://ma.juii.net/blog/scale-page-content-of-pdf-files
-# http://stackoverflow.com/questions/3351967/prevent-ghostscript-from-writing-errors-to-standard-output
-
-# man iso_8859-1
-#   ® -> Â® -> \303\202\302\256 -> \xc3\x82\|\xc2\xae -> \d174
-#   â -> Ã¢ -> \d195\d162 -> \d226
-#   ê -> Ãª -> \d195\d170 -> \d234
-#   è -> Ã¨ -> \d195\d168 -> \d232
-#   é -> Ã© -> \d195\d169 -> \d233
-#   ë -> Ã« -> \d195\d171 -> \d235
-#   É -> Ã -> \xc3\x89 -> \d201
-#   ô -> Ã´ -> \d195\d180 -> \d244
-
-# Postscript -> Portable Document Format
-
-$(BUILD)/%.pdf: $(BUILD)/%.ps
-	@ps2pdf14 -sPAPERSIZE=$(MEDIA) $< - | pdftk - output $@ uncompress
-
-$(BUILD)/$(MEDIA)_$(YEAR)_$(GEN_LANG).pdf: $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf $(BUILD)/$(MEDIA)_border.pdf
-	@pdftk $< background $(BUILD)/$(MEDIA)_border.pdf output $@ uncompress
-
-# Single-page -> 2-up Portable Document Format
-
-$(BUILD)/junior_$(GEN_LANG).pdf: $(BUILD)/letter_$(GEN_LANG).pdf
-	@pdf2ps $< - | psnup -2 -c -f | ps2pdf - - | pdftk - output $@ uncompress
-
-# Multi-page -> Single-page Portable Document Format
-
-# XXX FIXME XXX If n < 100 months, otherwise use different padding
-RANGE = $(shell seq --format "%02g" $(MONTHS))
-PDFS = $(addprefix $(BUILD)/, $(addsuffix .pdf, $(addprefix $(GEN_LANG), \
-  $(RANGE))))
-
-# XXX FIXME XXX If n < 100 months, otherwise use different padding
-$(PDFS): $(BUILD)/$(MEDIA)_$(GEN_LANG).pdf
-	@pdftk $^ burst output $(BUILD)/$(GEN_LANG)%02d.pdf uncompress
-
-# Portable Document Format -> Scalable Vector Graphic
-
-$(BUILD)/%.svg: $(BUILD)/%.pdf
-	@inkscape --export-plain-svg $@ $^
-
-$(BUILD)/%.pdf: $(SOURCE)/%.svg
-	@inkscape --export-text-to-path --export-pdf=$@ $<
+.PHONY: reallyclean
+reallyclean: clean
+	@rm -rf $(VENV)

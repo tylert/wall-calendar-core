@@ -15,12 +15,178 @@
     CA-QC  Canada - Quebec/Québec
     CA-SK  Canada - Saskatchewan
     CA-YT  Canada - Yukon
-    GB     United Kingdom of Great Britain and Northern Ireland/Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
     JP     Japan/Japon
     NZ     New Zealand/Nouvelle-Zélande
+    UK     United Kingdom of Great Britain and Northern Ireland/Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
     UN     United Nations/Les Nations Unies
     US     United States of America/Les États-Unis d'Amérique
 
 * http://www.farmersalmanac.com/astronomy/fullmoonnames.html
-
 * https://stackoverflow.com/questions/704108/how-do-i-compute-equinox-solstice-moments
+* https://jol.dev/blog/2021-11-16-n2-sed-challenge-join-cal-y-months-into-a-single-column.html
+* https://github.com/jimblandy/spiral-calendar
+* https://georgexyz.com/python-calendar-app.html
+* https://github.com/lynxur/Kalender
+* https://docs.python.org/3/library/calendar.html
+* https://arrow.readthedocs.io/en/latest/index.html
+* http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/calendar/calendars/
+* http://stackoverflow.com/questions/7276017/producing-a-printable-calendar-with-python
+* http://quasar.as.utexas.edu/BillInfo/ReligiousCalendars.html
+* http://www.ben-daglish.net/moon.shtml
+* https://www.timeanddate.com/calendar/determining-easter-date.html
+* https://www.assa.org.au/edm
+
+---
+
+  Baha'u'llah's Birthday (November)
+  Diwali (October)
+  Holi (?)
+  Navrati (September)
+  Vaisakhi (April?)
+  Vesak (May or April;  on full moon)
+
+---
+
+Lunar-related events
+
+Islamic - 12 months of 354 or 355 days
+
+  Ramadan is from 1 to 29 or 30 Ramadan (9th month)
+  Eid al-Fitr is 1 Shawwal (10th month)
+  Eid al-Adha is from 10 to 13 Dhu al-Hijjah (12th month)
+
+---
+
+January?
+  Feast of St. Basil (Orthodox)
+  Gantan-sai (Shinto)
+  Guru Gobindh Singh Birthday (Sikh)
+  Feast of the Theophany (Orthodox)
+  Feast of the Nativity (Orthodox)
+  Maghi (Sikh)
+  World Religion Day (Baha'i)
+  Tu BiShavat (Jewish)
+  Mahayana New Year (Buddhist)
+
+February?
+  Sesubun-sai (Shinto)
+  Vasant Panchami (Hindu)
+  Nirvana Day (Buddhist, Jain)
+  Triodion begins (Orthodox)
+  Intercalary Days begin (Baha'i)
+
+March?
+  St. David of Wales (Christian)
+  Intercalary Days end (Baha'i)
+  Nineteen Day Fast (Baha'i)
+  Transfiguration Sunday (Christian)
+  Maha Shivaratri (Hindu)
+  Lent begins (Christian)
+  Orthodox Sunday
+  Clean Monday (Orthodox?)
+  Great Lent begins (Orthodox)
+  St. Joseph's Day (Christian)
+  Annunciation of the Blessed Virgin Mary (Christian)
+  Khordad Sal Birth of Prophet Zarathushtra (Zoroastrian)
+  Naw Ruz New Year (Baha'i)
+  Norouz New Year (Persian/Zoroastrian)
+  Hola Mohalla (Sikh)
+  Holi (Hindu)
+  Magha Puja Day (Buddhist)
+  Purim (Jewish)
+
+April?
+  Lailat al Miraj (Islam)
+  Mahavir Jayanti (Jain)
+  Palm Sunday (Christian)
+  Vaisakhi (Baisakhi)
+  New Year (Sikh)
+  Theravadin New Year (Buddhist)
+  Lazarus Saturday (Orthodox)
+  Palm Sunday (Orthodox)
+  Lailat al Bara'ah (Islam)
+  First Day of Ridvan (Baha'i)
+  Holy Friday (Orthodox)
+  Pascha (Orthodox)
+  Ninth Day of Ridvan (Baha'i)
+
+May?
+  Last Day of Ridvan (Baha'i)
+  Yom HaShoah (Jewish)
+  Ramadan begins (Islam)
+  Yom Ha'Atzmaut (Jewish)
+  Visakha Puja (Buddhist)
+  Declaration of the Bab (Baha'i)
+  Lag B'Omer (Jewish)
+  Ascension of Baha'u'llah (Baha'i)
+  Ascension of Jesus (Christian)
+
+June?
+  Lailat al Kadr (Islam)
+  Eid al Fitr (Islam)
+  Ascension of Jesus (Orthodox)
+  Guru Arjan Dev Martyrdom (Sikh)
+  All Saints (Orthodox)
+  Sacred Heart of Jesus (Catholic)
+  Saints Peter and Paul (Christian)
+
+July?
+  Martyrdom of the Bab (Baha'i)
+  Ulambana (Obon, Buddhist?)
+  Obon (Shinto)
+  Asalha Puja Day (Buddhist)
+  Pioneer Day (Mormon)
+
+August?
+  Lammas (Christian)
+  Fast in Honour of the Holy Mother of Jesus (Orthodox)
+  Transfiguration of the Lord (Orthodox)
+  Tish'a B'Av (Jewish)
+  Waqf al Arafa Hajj Day (Islam)
+  Eid al Adha (Islam)
+  Assumption of the Blessed Virgin Mary (Catholic)
+  Dormition of the Theotokos (Orthodox)
+  Raksha Bandhan (Hindu)
+  Krishna Janmashtami (Hindu)
+
+September?
+  Ecclesiastical year begins (Orthodox)
+  Hijra New Year (Islam)
+  Ganesh Chaturthi (Hindu)
+  Paryushana Parva (Jain)
+  Nativity of Virgin Mary (Christian)
+  Ashura (Islam)
+  Rosh Hashanah (Jewish)
+
+October?
+  Saint Francis Day (Catholic)
+  Dasara (Hindu)
+  Yom Kippur (Jewish)
+  Sukkot (Jewish)
+  Karwa Chauth (Hindu)
+  Birth of the Báb (Baha'i)
+  Installation of Scriptures as Guru Granth (Sikh)
+  Shemini Atzeret (Jewish)
+  Simchat Torah (Jewish)
+  Diwali Deepavali (Hindu/Jain/Sikh)
+  Jain New Year (Jain)
+  Reformation Day (Protestant)
+
+November?
+  Mawlid an Nabi (Islam)
+  Birth of Baha'u'llah (Baha'i)
+  Guru Nanak Dev Sahib Birthday (Sikh)
+  Nativity Fast begins (Orthodox)
+  Day of the Covenant (Baha'i)
+  Ascension of Abdu'l'Bahá (Baha'i)
+
+December?
+  Advent begins (Christian)
+  Saint Nicholas Day (Christian)
+  Rohatsu - Bodhi Day (Buddhist)
+  Our Lady of Guadalupe (Catholic)
+  Posadas Navidenas (Christian)
+  Feast of the Nativity (Orthodox)
+  Zarathosht Diso (Zoroastrian)
+  Holy Innocents (Christian)
+  Hanukkah (Jewish)

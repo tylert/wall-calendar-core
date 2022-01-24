@@ -81,13 +81,13 @@ def main(year):
     # Spring Break
     # Congé de printemps
 
-    print(f'{spring(year).date()} First day of Spring [{spring(year).time().strftime("%H%Mh")}]')
-    print(f'{summer(year).date()} First day of Summer [{summer(year).time().strftime("%H%Mh")}]')
-    print(f'{autumn(year).date()} First day of Fall [{autumn(year).time().strftime("%H%Mh")}]')
-    print(f'{winter(year).date()} First day of Winter [{winter(year).time().strftime("%H%Mh")}]')
+    print(f'{spring(year).date()} {spring(year).time().strftime("%H%Mh")} First day of Spring')
+    print(f'{summer(year).date()} {summer(year).time().strftime("%H%Mh")} First day of Summer')
+    print(f'{autumn(year).date()} {autumn(year).time().strftime("%H%Mh")} First day of Fall')
+    print(f'{winter(year).date()} {winter(year).time().strftime("%H%Mh")} First day of Winter')
 
-    print(f'{perihelion(year).date()} Perihelion [{perihelion(year).time().strftime("%H%Mh")}]')
-    print(f'{aphelion(year).date()} Aphelion [{aphelion(year).time().strftime("%H%Mh")}]')
+    print(f'{perihelion(year).date()} {perihelion(year).time().strftime("%H%Mh")} Perihelion')
+    print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H%Mh")} Aphelion')
 
     # Victoria Day is the Monday before May 25th
     #   https://en.wikipedia.org/wiki/Victoria_Day

@@ -18,6 +18,11 @@ from paper_cal import *
 def main(year):
     ''' '''
 
+    print(f'{date(2022, JANUARY, 24)} 2000h NC for Capital City Net')
+    print(f'{date(2022, JANUARY, 31)} 2000h NC for Capital City Net')
+    print(f'{date(2022, FEBRUARY, 28)} 2000h NC for Capital City Net')
+    print(f'{date(2022, APRIL, 4)} 2000h NC for Capital City Net')
+
     # Ottawa Amateur Radio Club regular meetings are the 2nd Wednesday of
     # each month except July and August
     #   https://www.oarc.net/

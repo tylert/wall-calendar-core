@@ -53,6 +53,7 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
     print(f'{closest_date(SUNDAY, date(year, MAY, WEEK2))} Mother\'s Day')
     # Fête des mères
+    # in UK, "Mothering Sunday" is 4th Sunday of Lent / exactly 3 weeks before Easter Sunday
 
     #   https://en.wikipedia.org/wiki/Memorial_Day
     #   https://fr.wikipedia.org/wiki/Memorial_Day
@@ -86,10 +87,18 @@ def main(year):
         f'{closest_date(THURSDAY, date(year, NOVEMBER, WEEK4)) + timedelta(days=3)} Cyber Monday (US)'
     )  # Cyber Lundi (US)
 
-    # Early May Bank Holiday (UK)
-    # Spring Bank Holiday (UK)
-    # Platinum Jubilee Bank Holiday (UK)
-    # Summer Bank Holiday (UK)
+    # https://uk-public-holidays.com/early-may-bank-holiday/
+    # https://uk-public-holidays.com/spring-bank-holiday/
+    # https://uk-public-holidays.com/summer-bank-holiday/
+
+    print(
+        f'{closest_date(MONDAY, date(year, MAY, WEEK1))} Early May Bank Holiday (UK)'
+    )  # May Day
+    # Spring Bank Holiday (UK)  last Monday of May (except 2022,  Jun 2 Thu and Fri)
+    # Platinum Jubilee Bank Holiday (UK)  (June 3)
+    print(
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK4), last=True)} Summer Bank Holiday (UK)'
+    )
 
     # Second Easter (ES)
     # Feast of San Juan (ES)

@@ -81,12 +81,22 @@ def main(year):
     # Spring Break
     # Congé de printemps
 
-    print(f'{spring(year).date()} {spring(year).time().strftime("%H%Mh")} First day of Spring')
-    print(f'{summer(year).date()} {summer(year).time().strftime("%H%Mh")} First day of Summer')
-    print(f'{autumn(year).date()} {autumn(year).time().strftime("%H%Mh")} First day of Fall')
-    print(f'{winter(year).date()} {winter(year).time().strftime("%H%Mh")} First day of Winter')
+    print(
+        f'{spring(year).date()} {spring(year).time().strftime("%H%Mh")} First day of Spring'
+    )
+    print(
+        f'{summer(year).date()} {summer(year).time().strftime("%H%Mh")} First day of Summer'
+    )
+    print(
+        f'{autumn(year).date()} {autumn(year).time().strftime("%H%Mh")} First day of Fall'
+    )
+    print(
+        f'{winter(year).date()} {winter(year).time().strftime("%H%Mh")} First day of Winter'
+    )
 
-    print(f'{perihelion(year).date()} {perihelion(year).time().strftime("%H%Mh")} Perihelion')
+    print(
+        f'{perihelion(year).date()} {perihelion(year).time().strftime("%H%Mh")} Perihelion'
+    )
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H%Mh")} Aphelion')
 
     # Victoria Day is the Monday before May 25th

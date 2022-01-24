@@ -94,7 +94,9 @@ def main(year):
     #   https://www.timeanddate.com/holidays/common/trinity
     #   https://www.timeanddate.com/holidays/common/corpus-christi
     print(f'{easter(year) - timedelta(days=47)} Shrove/Pancake Tuesday')  # Mardi Gras
-    print(f'{easter(year) - timedelta(days=46)} Ash Wednesday')  # Mercredi des Cendres
+    print(
+        f'{easter(year) - timedelta(days=46)} Carnival/Ash Wednesday'
+    )  # Mercredi des Cendres
     print(f'{easter(year) - timedelta(days=7)} Palm Sunday')  # Dimanche des Rameaux
     print(f'{easter(year) - timedelta(days=3)} Maundy Thursday')  # Jeudi saint
     print(f'{easter(year) - timedelta(days=2)} Good Friday')  # Vendredi saint
@@ -102,7 +104,9 @@ def main(year):
     print(f'{easter(year)} Easter Sunday')  # Le dimanche de Pâques
     print(f'{easter(year) + timedelta(days=1)} Easter Monday')  # Le lundi de Pâques
     print(f'{easter(year) + timedelta(days=39)} Ascension Day')  # Ascension
-    print(f'{easter(year) + timedelta(days=49)} Whit Sunday/Pentecost Sunday')  # Pentecôte
+    print(
+        f'{easter(year) + timedelta(days=49)} Whit Sunday/Pentecost Sunday'
+    )  # Pentecôte
     print(f'{easter(year) + timedelta(days=50)} Whit Monday/Pentecost Monday')
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
@@ -123,6 +127,7 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Orange_Day
     #   https://en.wikipedia.org/wiki/The_Twelfth#The_Twelfth_outside_Northern_Ireland
     print(f'{closest_date(MONDAY, date(year, JULY, 12))} Orangemen\'s Day (CA-NL)')
+    # Battle of the Boyne???
     # Fête des Orangistes (CA-NL)
 
     #   https://en.wikipedia.org/wiki/All_Saints%27_Day

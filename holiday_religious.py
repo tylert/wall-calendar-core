@@ -148,12 +148,12 @@ def main(year):
     print(f'{date(year, DECEMBER, 26)} Boxing Day')  # Le jour des boîtes
     # Lendemain de Noël
     # Après-Noël
-    if date.weekday(date(year, DECEMBER, 25)) == SATURDAY:
+    if SATURDAY == date.weekday(date(year, DECEMBER, 25)):
         print(
             f'{closest_date(MONDAY, date(year, DECEMBER, 25))} Christmas Day Observed'
         )
         print(f'{closest_date(TUESDAY, date(year, DECEMBER, 26))} Boxing Day Observed')
-    if date.weekday(date(year, DECEMBER, 25)) == SUNDAY:
+    if SUNDAY == date.weekday(date(year, DECEMBER, 25)):
         print(
             f'{closest_date(TUESDAY, date(year, DECEMBER, 25))} Christmas Day Observed'
         )

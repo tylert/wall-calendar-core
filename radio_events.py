@@ -25,7 +25,7 @@ def main(year):
 
     #   https://www.oarc.net/
     for month in range(1, 13):
-        if month != JULY and month != AUGUST:
+        if JULY != month and AUGUST != month:
             print(
                 f'{closest_date(WEDNESDAY, date(year, month, WEEK2))} 1930-2200h OARC Meeting'
             )

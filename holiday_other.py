@@ -23,6 +23,17 @@ def main(year):
         f'{closest_date(MONDAY, date(year, JANUARY, WEEK3))} Martin Luther King Jr. Day (US)'
     )  # Journée de Martin Luther King Jr. (US)
 
+    # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
+    # every 4th year where "year mod 4 == 1" (2001, ..., 2013, 2017, 2021,
+    # 2025, 2029, etc.)
+    #   https://en.wikipedia.org/wiki/United_States_presidential_inauguration
+    if 1 == year % 4:
+        if SUNDAY == date.weekday(date(year, JANUARY, 20)):
+            print(f'{date(year, JANUARY, 21)} Inauguration Day (US)')
+        else:
+            print(f'{date(year, JANUARY, 20)} Inauguration Day (US)')
+    # Jour d'inauguration (US)
+
     #   https://en.wikipedia.org/wiki/Groundhog_Day
     #   https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
     print(f'{date(year, FEBRUARY, 2)} Groundhog Day')  # Jour de la marmotte
@@ -87,15 +98,19 @@ def main(year):
         f'{closest_date(THURSDAY, date(year, NOVEMBER, WEEK4)) + timedelta(days=3)} Cyber Monday (US)'
     )  # Cyber Lundi (US)
 
-    # https://uk-public-holidays.com/early-may-bank-holiday/
-    # https://uk-public-holidays.com/spring-bank-holiday/
-    # https://uk-public-holidays.com/summer-bank-holiday/
-
+    #   https://uk-public-holidays.com/early-may-bank-holiday/
+    #   https://uk-public-holidays.com/spring-bank-holiday/
+    #   https://uk-public-holidays.com/summer-bank-holiday/
     print(
         f'{closest_date(MONDAY, date(year, MAY, WEEK1))} Early May Bank Holiday (UK)'
     )  # May Day
-    # Spring Bank Holiday (UK)  last Monday of May (except 2022,  Jun 2 Thu and Fri)
-    # Platinum Jubilee Bank Holiday (UK)  (June 3)
+    if 2022 == year:
+        print(f'{date(2022, JUNE, 2)} Spring Bank Holiday (UK)')
+        print(f'{date(2022, JUNE, 3)} Platinum Jubilee Bank Holiday (UK)')
+    else:
+        print(
+            f'{closest_date(MONDAY, date(year, MAY, WEEK4), last=True)} Spring Bank Holiday (UK)'
+        )
     print(
         f'{closest_date(MONDAY, date(year, AUGUST, WEEK4), last=True)} Summer Bank Holiday (UK)'
     )

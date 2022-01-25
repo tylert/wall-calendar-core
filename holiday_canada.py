@@ -23,9 +23,8 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Jour_de_l%27an
     print(f'{date(year, DECEMBER, 31)} New Year\'s Eve')  # Veille du Nouvel An
     print(f'{date(year, JANUARY, 1)} New Year\'s Day')  # Jour de l'an
-    if (
-        date.weekday(date(year, JANUARY, 1)) == SATURDAY
-        or date.weekday(date(year, JANUARY, 1)) == SUNDAY
+    if SATURDAY == date.weekday(date(year, JANUARY, 1)) or SUNDAY == date.weekday(
+        date(year, JANUARY, 1)
     ):
         print(
             f'{closest_date(MONDAY, date(year, JANUARY, 1))} New Year\'s Day Observed'
@@ -128,9 +127,8 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Canada_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
     print(f'{date(year, JULY, 1)} Canada Day')  # Fête du Canada
-    if (
-        date.weekday(date(year, JULY, 1)) == SATURDAY
-        or date.weekday(date(year, JULY, 1)) == SUNDAY
+    if SATURDAY == date.weekday(date(year, JULY, 1)) or SUNDAY == date.weekday(
+        date(year, JULY, 1)
     ):
         print(f'{closest_date(MONDAY, date(year, JULY, 1))} Canada Day Observed')
         # Fête du Canada Observé

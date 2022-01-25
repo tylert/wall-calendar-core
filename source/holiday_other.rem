@@ -142,7 +142,6 @@
 
 # Other interesting days
 
-  # Darwin Day is February 12th
   #   https://en.wikipedia.org/wiki/Darwin_Day
   REM  Feb 12 +1 PRIORITY 1000 \
     MSG %"[babel("Darwin Day", "Jour de Darwin")]%" %b%
@@ -155,19 +154,16 @@
       MSG %"[babel("Pink Shirt Day", \
         "Journée des chemises rose")]%" %b%
 
-  # International Polar Bear Day is February 27th
   #   https://en.wikipedia.org/wiki/International_Polar_Bear_Day
   REM  Feb 27 +1 PRIORITY 1000 \
     MSG %"[babel("International Polar Bear Day", \
       "Journée internationale des ours polaires")]%" %b%
 
-  # Pi Day
   #   https://en.wikipedia.org/wiki/Pi_Day
   #   http://www.piday.org/
   REM  Mar 14 +1 PRIORITY 1000 \
-    MSG %"[babel("Pi Day (3.14)", "Jour de pi (3.14)")]%" %b%
+    MSG %"[babel("Pi Day 3.14", "Jour de pi 3.14")]%" %b%
 
-  # Tartan Day is April 6th
   #   https://en.wikipedia.org/wiki/Tartan_Day
   REM  Apr 06 +1 PRIORITY 1000 \
     MSG %"[babel("Tartan Day", "Jour du tartan")]%" %b%
@@ -186,7 +182,6 @@
   # ... wkdaynum() == Sunday
   #   MSG %"[babel("Dark-Sky Week", "")]%" %b%
 
-  # Earth Day is April 22nd
   #   https://en.wikipedia.org/wiki/Earth_Day
   REM  Apr 22 +1 PRIORITY 1000 \
     MSG %"[babel("Earth Day", "Jour de la Terre")]%" %b%
@@ -224,18 +219,16 @@
     MSG %"[babel("INTERNATIONAL CAPS LOCK DAY", \
       "JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES")]%" %b%
 
-  # Tau Day
   #   https://en.wikipedia.org/wiki/Tau_Day
   #   https://tauday.com/
   REM  Jun 28 +1 PRIORITY 1000 \
-    MSG %"[babel("Tau Day (6.28)", "Jour de tau (6.28)")]%" %b%
+    MSG %"[babel("Tau Day 6.28", "Jour de tau 6.28")]%" %b%
 
-  # Pi Approximation Day
   #   https://en.wikipedia.org/wiki/Pi_Day
   #   http://piapproximationday.com/
   REM  Jul 22 +1 PRIORITY 1000 \
-    MSG %"[babel("Pi Approximation Day (22/7)", \
-      "Jour d'approximation pi (22/7)")]%" %b%
+    MSG %"[babel("Pi Approximation Day 22/7", \
+      "Jour d'approximation pi 22/7")]%" %b%
 
   # National Preparedness Month is September 1st
   #   https://en.wikipedia.org/wiki/National_Preparedness_Month
@@ -248,7 +241,6 @@
     MSG %"[babel("Disaster Prevention Day (JP)", \
       "Journée de prévention des catastrophes (JP)")]%" %b%
 
-  # The Day of the Programmer is the 256th day of the year
   #   https://en.wikipedia.org/wiki/Day_of_the_Programmer
   IF isleap(trigdate())
     REM  Sep 12 +1 PRIORITY 1000 \
@@ -292,13 +284,11 @@
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Ada Lovelace Day", "Jour de Ada Lovelace")]%" %b%
 
-  # World Kindness Day is November 13th
   #   https://en.wikipedia.org/wiki/World_Kindness_Day
   REM  Nov 13 +1 PRIORITY 1000 \
     MSG %"[babel("World Kindness Day", \
       "Journée mondiale de la gentillesse")]%" %b%
 
-  # Friday the 13th is every Friday that occurs on the 13th of the month
   #   https://en.wikipedia.org/wiki/Friday_The_13th
   REM  13 SATISFY [Friday == wkdaynum(trigdate())]
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \

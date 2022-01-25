@@ -30,6 +30,7 @@ from .paper_cal import (
     DECEMBER,
 )
 from .paper_cal import JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC
+from .paper_cal import LENGTH_OF_WEEK
 from .paper_cal import MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
 from .paper_cal import MON, TUE, WED, THU, FRI, SAT, SUN
 from .paper_cal import WEEK1, WEEK2, WEEK3, WEEK4

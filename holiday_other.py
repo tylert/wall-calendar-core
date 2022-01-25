@@ -55,7 +55,7 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Earth_Day
     #   https://fr.wikipedia.org/wiki/Jour_de_la_Terre
-    print(f'{date(year, APRIL, 23)} Earth Day')  # Jour de la Terre
+    print(f'{date(year, APRIL, 22)} Earth Day')  # Jour de la Terre
 
     #   https://en.wikipedia.org/wiki/Anzac_Day
     print(f'{date(year, APRIL, 25)} ANZAC Day (AU, NZ)')
@@ -72,6 +72,9 @@ def main(year):
     print(
         f'{closest_date(MONDAY, date(year, MAY, WEEK4), last=True)} Memorial Day (US)'
     )
+
+    #   https://en.wikipedia.org/wiki/Flag_Day_(United_States)
+    print(f'{date(year, JUNE, 14)} Flag Day (US)')  # Jour du drapeau (US)
 
     #   https://en.wikipedia.org/wiki/Father's_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_P%C3%A8res
@@ -115,6 +118,10 @@ def main(year):
     print(
         f'{closest_date(MONDAY, date(year, AUGUST, WEEK4), last=True)} Summer Bank Holiday (UK)'
     )
+
+    #   https://en.wikipedia.org/wiki/Guy_Fawkes_Night
+    print(f'{date(year, NOVEMBER, 5)} Guy Fawkes Day (UK)')
+    # Journée de Guy Fawkes (UK)
 
     # Second Easter (ES)
     # Feast of San Juan (ES)

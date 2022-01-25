@@ -1,35 +1,3 @@
-# Helper stuff
-
-  INCLUDE [filedir()]/defs.rem
-
-
-# Local amateur radio club meetings
-
-  # Ottawa Amateur Radio Club meetings are the 2nd Wednesday of each month
-  # except July and August
-  #   https://www.oarc.net/
-  REM  Wed [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-  IF monnum(trigdate()) != July && monnum(trigdate()) != August
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 02:30 MSG %"[babel("OARC Meeting", "Meeting de OARC")]%" %b%
-  ENDIF
-
-  # West-Carleton Amateur Radio Club meetings are the 3rd Monday of each month
-  #   https://wcarc.on.ca
-  REM  Mon [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:00 +60 \
-      DURATION 02:00 MSG %"[babel("WCARC Meeting", "Meeting de WCARC")]%" %b%
-
-  # Rideau Lakes Amateur Radio Club meetings are the 3rd Thursday of each month
-  #   https://www.ve3rlr.ca/p/about.html
-  REM  Thu [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 2000 SKIP AT 19:30 +60 \
-      DURATION 02:30 MSG %"[babel("RLARC Meeting", "Meeting de RLARC")]%" %b%
-
-
-# Local amateur radio-related volunteer events
-
-  # CN Cycle for CHEO is the 1st weekend in May
   #   https://cncycle.ca
   REM  Sun May [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 AT 07:30 +60 DURATION 06:00 \
@@ -44,26 +12,11 @@
     REM [trigger(trigdate()+1)] +1 PRIORITY 2000 \
       MSG %"[babel("*RLCT*", "*RLCT*")]%" %b%
 
-  # OARC Hamfest is the 1st Saturday after Labour Day
-  # OARC Portable Station Demo is the 1st or 2nd Saturday after the OARC
-  # Hamfest
-  #   http://oarc.net/fleamarket/
-  REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 AT 07:30 +60 DURATION 3:00 \
-      MSG %"[babel("OARC Hamfest", "Hamfest OARC")]%" %b%
-  REM  Mon Sep [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate()+5)] +1 PRIORITY 2000 AT 08:00 +60 \
-      MSG %"[babel("OARC Portable Station Demo", \
-        "Demo des Stations Portatif OARC")]%" %b%
-
   # Tall Pines Rally is the last weekend in November
   #   http://tallpinesrally.com
   REM  Sat Dec 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 2000 \
       MSG %"[babel("Tall Pines Rally", "Rallye des Hautes Pins")]%" %b%
-
-
-# Local non-radio events
 
   # Tulip Festival is the middle 2 weekends in May
   #   https://en.wikipedia.org/wiki/Canadian_Tulip_Festival
@@ -77,7 +30,6 @@
       MSG %"[babel("Canadian Tulip Festival Ends", \
         "Fin du Festival Canadien des Tulipes")]%" %b%
 
-  # Comicon Ottawa is the 2nd weekend in May
   #   https://en.wikipedia.org/wiki/Ottawa_Comiccon
   #   http://www.ottawacomiccon.com/
   REM  Sat May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -86,7 +38,6 @@
     REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 \
       MSG %"[babel("Ottawa Comiccon", "Comiccon d'Ottawa")]%" %b%
 
-  # Doors Open Ottawa is the 1st weekend in June
   #   https://en.wikipedia.org/wiki/Doors_Open_Ottawa
   #   http://ottawa.ca/en/liveculture/doors-open-ottawa
   REM  Sat Jun [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
@@ -94,3 +45,42 @@
       MSG %"[babel("Doors Open Ottawa", "Portes ouvertes Ottawa")]%" %b%
     REM  [trigger(trigdate()+1)] +1 PRIORITY 2000 \
       MSG %"[babel("Doors Open Ottawa", "Portes ouvertes Ottawa")]%" %b%
+
+  #   http://csm-mcs.com
+  REM  Sat Feb [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
+      MSG %"[nth(1967)] [babel("Canadian Ski Marathon Begins", \
+        "Marathon canadien de ski commence")]%" %b%
+
+  #   http://worldradioday.org
+  REM  Feb 13 +1 PRIORITY 2000 \
+    MSG %"[babel("World Radio Day", "Journée mondiale de la radio")]%" %b%
+
+  #   http://iaru.org/world-amateur-radio-day.html
+  REM  Apr 18 +1 PRIORITY 2000 \
+    MSG %"[babel("World Amateur Radio Day", \
+      "Journée de la radio amateur")]%" %b%
+
+  #   http://hamvention.org
+  REM  Fri May [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
+      MSG %"[babel("Dayton Hamvention® Begins", \
+        "Hamvention® de Dayton commence")]%" %b%
+
+  #   https://www.cbc.ca/news/canada/ottawa/local-radio-telegrapher-remembered-for-1909-heroic-death-1.4799110
+  #   https://easternontarionetwork.com/2018/08/26/a-heros-death-eastern-ontario-town-honours-1st-radio-telegrapher-killed-at-sea/
+  REM  Aug 26 +1 PRIORITY 2000 \
+    MSG %"[babel("George Eccles Day", "Jour de George Eccles")]%" %b%
+
+  #   https://jotajoti.org
+  #   http://joti.org
+  #   http://arrl.org/jamboree-on-the-air-jota
+  REM  Fri Oct [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
+    REM  [trigger(trigdate())] +1 PRIORITY 2000 \
+      MSG %"[babel("*JOTA-JOTI*", "*JOTA-JOTI*")]%" %b%
+
+  #   http://ve3we.org/2017/04/25/history-of-amateur-radio-in-canada/
+  #   https://en.wikipedia.org/wiki/Radio_Amateurs_of_Canada
+  REM  May 03 +1 PRIORITY 2000 \
+    MSG %"[bday(1993)] [babel("Anniversary of Founding of RAC", \
+      "Anniversaire du fondation de RAC")]%" %b%

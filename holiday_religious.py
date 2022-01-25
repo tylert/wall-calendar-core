@@ -119,10 +119,22 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Passover_(Christian_holiday)
     #   https://en.wikipedia.org/wiki/Passover_Seder
     #   https://fr.wikipedia.org/wiki/S%C3%A9der_de_Pessa%27h
-    print(f'{passover(year)} Passover')  # Pessa'h
+    print(f'{passover(year)} Passover Begins')  # Pessa'h
     # Début de Pâque des Juifs
     # Fin de Pâque des Juifs
     # Passover = Pesach = Pascha = Jewish Easter
+
+    #   https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
+    #   https://fr.wikipedia.org/wiki/F%C3%AAte_nationale_du_Qu%C3%A9bec
+    #   https://en.wikipedia.org/wiki/John_the_Baptist
+    #   https://fr.wikipedia.org/wiki/Jean_le_Baptiste
+    #   https://en.wikipedia.org/wiki/Nativity_of_St_John_the_Baptist
+    print(f'{date(year, JUNE, 24)} Saint-Jean-Baptiste Day')
+    # Fête nationale du Québec
+    # St. John the Baptist's Day
+    # Fête de la Saint-Jean-Baptiste
+    # Nativity of St. John the Baptist
+    # Nativité de saint Jean-Baptiste
 
     #   https://en.wikipedia.org/wiki/Orangemen%27s_Day
     #   https://fr.wikipedia.org/wiki/Orange_Day

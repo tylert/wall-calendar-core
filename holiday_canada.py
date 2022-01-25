@@ -83,29 +83,30 @@ def main(year):
 
     print(
         f'{spring(year).date()} {spring(year).time().strftime("%H%Mh")} First day of Spring'
-    )
+    )  # Premier jour de printemps
     print(
         f'{summer(year).date()} {summer(year).time().strftime("%H%Mh")} First day of Summer'
-    )
+    )  # Premier jour d'été
     print(
         f'{autumn(year).date()} {autumn(year).time().strftime("%H%Mh")} First day of Fall'
-    )
+    )  # Premier jour d'automne
     print(
         f'{winter(year).date()} {winter(year).time().strftime("%H%Mh")} First day of Winter'
-    )
+    )  # Premier jour d'hiver
 
     print(
         f'{perihelion(year).date()} {perihelion(year).time().strftime("%H%Mh")} Perihelion'
-    )
+    )  # Périhélie
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H%Mh")} Aphelion')
+    # Aphélie
 
     # Victoria Day is the Monday before May 25th
     #   https://en.wikipedia.org/wiki/Victoria_Day
     #   https://en.wikipedia.org/wiki/National_Patriots%27_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
     print(f'{closest_date(MONDAY, date(year, MAY, 21))} Victoria Day (CA)')
-    # Fête de la Reine
-    # Fête de Victoria
+    # National Patriot's Day (CA-QC)
+    # Fête de la Reine / Fête de Victoria
     # Journée nationale des patriotes (CA-QC)
 
     #   https://en.wikipedia.org/wiki/National_Aboriginal_Day
@@ -133,6 +134,9 @@ def main(year):
     ):
         print(f'{closest_date(MONDAY, date(year, JULY, 1))} Canada Day Observed')
         # Fête du Canada Observé
+
+    #   https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
+    print(f'{date(year, JULY, 1)} Memorial Day (CA-NL)')
 
     #   https://en.wikipedia.org/wiki/Nunavut_Day
     print(f'{date(year, JULY, 9)} Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU)')
@@ -184,11 +188,11 @@ def main(year):
     print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK3))} Discovery Day (CA-YT)')
     # Journée découverte (CA-YT)
 
-    # Merchant Navy Rememberance Day (CA) is September 3rd
     #   https://en.wikipedia.org/wiki/Remembrance_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
     #   https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
     print(f'{date(year, SEPTEMBER, 3)} Merchant Navy Day')
+    # Merchant Navy Rememberance Day
     # Jour de la marine marchande
 
     #   https://en.wikipedia.org/wiki/Labour_Day

@@ -18,10 +18,10 @@ from paper_cal import *
 def main(year):
     ''' '''
 
-    print(f'{date(2022, JANUARY, 24)} 2000h NC for Capital City Net')
-    print(f'{date(2022, JANUARY, 31)} 2000h NC for Capital City Net')
-    print(f'{date(2022, FEBRUARY, 28)} 2000h NC for Capital City Net')
-    print(f'{date(2022, APRIL, 4)} 2000h NC for Capital City Net')
+    print(f'{date(2022, JANUARY, 24)} 2000-2030h NC for Capital City Net')
+    print(f'{date(2022, JANUARY, 31)} 2000-2030h NC for Capital City Net')
+    print(f'{date(2022, FEBRUARY, 28)} 2000-2030h NC for Capital City Net')
+    print(f'{date(2022, APRIL, 4)} 2000-2030h NC for Capital City Net')
 
     #   https://www.oarc.net/
     for month in range(1, 13):
@@ -79,7 +79,11 @@ def main(year):
     print(f'{date(year, JULY, 22)} Pi Approximation Day 22/7')
     # Jour d'approximation pi 22/7
 
-    # The Day of the Programmer is the 256th day of the year
+    #   https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day
+    print(f'{date(year, JUNE, 28)} INTERNATIONAL CAPS LOCK DAY')
+    print(f'{date(year, OCTOBER, 22)} INTERNATIONAL CAPS LOCK DAY')
+    # JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES
+
     #   https://en.wikipedia.org/wiki/Day_of_the_Programmer
     if is_leap(year):
         print(f'{date(year, SEPTEMBER, 12)} Day of the Programmer 256th day')
@@ -87,6 +91,10 @@ def main(year):
     else:
         print(f'{date(year, SEPTEMBER, 13)} Day of the Programmer 256th day')
         # Jour du programmeur 256e jour
+
+    #   https://en.wikipedia.org/wiki/Software_Freedom_Day
+    print(f'{closest_date(SATURDAY, date(year, SEPTEMBER, WEEK3))} Software Freedom Day')
+    # Journée de la liberté des logiciels
 
 
 if __name__ == '__main__':

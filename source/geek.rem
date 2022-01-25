@@ -1,0 +1,157 @@
+# Remote geeky events
+
+  # DEF CON is (usually) over the first weekend in August since 1993
+  #   Aug 09 to 12, 2018
+  # REM  Thu Jul [Week_4] SCANFROM [trigger(today() - 7)] SATISFY 1
+  #   https://www.defcon.org/
+  REM  Thu Aug [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
+    OMIT [trigger(trigdate())]   +7 PRIORITY 2000 \
+      MSG %"[babel("DEF CON", "DEF CON")] [count(1993)]%" %b%
+    OMIT [trigger(trigdate()+1)] +7 PRIORITY 2000 \
+      MSG %"[babel("DEF CON", "DEF CON")] [count(1993)]%" %b%
+    OMIT [trigger(trigdate()+1)] +7 PRIORITY 2000 \
+      MSG %"[babel("DEF CON", "DEF CON")] [count(1993)]%" %b%
+    OMIT [trigger(trigdate()+1)] +7 PRIORITY 2000 \
+      MSG %"[babel("DEF CON", "DEF CON")] [count(1993)]%" %b%
+
+
+# War holidays
+
+  REM  Feb 05 +1 PRIORITY 2000 \
+    MSG %"[bday(1944)] [babel("Birthday of Colossus I", "")]%" %b%
+  REM  Jun 06 +1 PRIORITY 2000 \
+    MSG %"[bday(1944)] [babel("Anniversary of D-Day", "")]%" %b%
+  REM  Aug 13 +1 PRIORITY 2000 \
+    MSG %"[bday(1961)] [babel("Year Since Creation of Berlin Wall", "")]%" %b%
+  REM  Aug 14 +1 PRIORITY 2000 \
+    MSG %"[babel("Navajo Code-Talker's Day (US)", "")]%" %b%
+  REM  Nov 09 +1 PRIORITY 2000 \
+    MSG %"[bday(1989)] [babel("Year Since Felling of Berlin Wall", "")]%" %b%
+  REM  Dec 07 +1 PRIORITY 2000 \
+    MSG %"[bday(1941)] [babel("Anniversary of Pearl Harbour", "")]%" %b%
+
+
+# Other geek-type holidays
+
+  REM  Jul 10 +1 PRIORITY 2000 \
+    MSG %"[babel("Nikola Tesla Day", "")]%" %b%
+  REM  Jul 14 +1 PRIORITY 2000 \
+    MSG %"[babel("Tape Measure Day", "")]%" %b%
+  REM  Aug 13 +1 PRIORITY 2000 \
+    MSG %"[babel("Left-Handers' Day", "")]%" %b%
+  REM  Sep 19 +1 PRIORITY 2000 \
+    MSG %"[babel("Talk-Like-A-Pirate Day", "")]%" %b%
+
+
+# Video game inspired holidays
+
+  #   https://www.nintendo.com/whatsnew/detail/nintendo-celebrates-mar10-day-by-bringing-smiles-to-people-of-all-ages
+  REM  Mar 10 +1 PRIORITY 2000 MSG %"[babel("MAR10 Day", "Jour MAR10")]%" %b%
+
+
+# Linux/Unix-related holidays
+
+  REM  Feb 20 +1 PRIORITY 2000 \
+    MSG %"[bday(1991)] [babel("Birthday of Python", "")]%" %b%
+  REM  Mar 11 +1 PRIORITY 2000 \
+    MSG %"[bday(2002)] [babel("Birthday of Arch Linux", "")]%" %b%
+  REM  Mar 15 +1 PRIORITY 2000 \
+    MSG %"[bday(2013)] [babel("Birthday of Docker", "")]%" %b%
+  REM  Mar 18 +1 PRIORITY 2000 \
+    MSG %"[bday(1985)] [babel("Anniversary of GNU Manifesto", "")]%" %b%
+  REM  Mar 21 +1 PRIORITY 2000 \
+    MSG %"[bday(1993)] [babel("Birthday of NetBSD", "")]%" %b%
+  REM  Apr 16 +1 PRIORITY 2000 \
+    MSG %"[bday(1971)] [babel("Birthday of FTP", "")]%" %b%
+  REM  Jun 01 +1 PRIORITY 2000 \
+    MSG %"[bday(1969)] [babel("Birthday of Unix", "")]%" %b%
+  REM  Jun 07 +1 PRIORITY 2000 \
+    MSG %"[bday(2014)] [babel("Birthday of Kubernetes", "")]%" %b%
+  REM  Jun 19 +1 PRIORITY 2000 \
+    MSG %"[bday(1993)] [babel("Birthday of FreeBSD", "")]%" %b%
+  REM  Jun 19 +1 PRIORITY 2000 \
+    MSG %"[bday(1984)] [babel("Birthday of X-Windows", "")]%" %b%
+  # First software run at 11 AM on June 21, 1948
+  REM  Jun 21 +1 PRIORITY 2000 \
+    MSG %"[bday(1948)] [babel("Anniversary of First Software", "")]%" %b%
+  REM  Jul 16 +1 PRIORITY 2000 \
+    MSG %"[bday(1993)] [babel("Birthday of Slackware", "")]%" %b%
+  REM  Aug 01 +1 PRIORITY 2000 \
+    MSG %"[bday(1998)] [babel("Birthday of IRC", "")]%" %b%
+  REM  Aug 16 +1 PRIORITY 2000 \
+    MSG %"[bday(1993)] [babel("Birthday of Debian", "")]%" %b%
+  REM  Aug 25 +1 PRIORITY 2000 \
+    MSG %"[bday(1991)] [babel("Birthday of Linux", "")]%" %b%
+  REM  Sep 27 +1 PRIORITY 2000 \
+    MSG %"[bday(1983)] [babel("Birthday of GNU", "")]%" %b%
+  REM  Sep 28 +1 PRIORITY 2000 \
+    MSG %"[bday(2010)] [babel("Birthday of LibreOffice", "")]%" %b%
+  REM  Oct 18 +1 PRIORITY 2000 \
+    MSG %"[bday(1995)] [babel("Birthday of OpenBSD", "")]%" %b%
+  REM  Oct 19 +1 PRIORITY 2000 \
+    MSG %"[bday(2009)] [babel("Birthday of Alpine Linux", "")]%" %b%
+  REM  Oct 20 +1 PRIORITY 2000 \
+    MSG %"[bday(2004)] [babel("Birthday of Ubuntu", "")]%" %b%
+  REM  Nov 21 +1 PRIORITY 2000 \
+    MSG %"[bday(1995)] [babel("Birthday of GIMP", "")]%" %b%
+
+  # NTP 32-bit Timestamp 32-bit Overflow at 06:28:16 UTC on Feb 7th, 2036
+  REM  Feb 07 2036 +1 PRIORITY 2000 AT 01:28 +60 \
+    MSG %"[babel("NTP Timestamp 32-bit Overflow (EST5EDT)", "")]%" %b%
+
+  # POSIX Time began at 00:00:00 UTC on Thu, Jan 1st, 1970
+  # POSIX Time Signed 32-bit Overflow at 03:14:07 UTC on Tue, Jan 19th, 2038
+  # POSIX Time Unsigned 32-bit Overflow at 06:28:15 UTC on Sun, Feb 7th, 2106
+  REM  Jan 18 2038 +1 PRIORITY 2000 AT 22:14 +60 \
+    MSG %"[babel("POSIX Time Signed 32-bit Overflow (EST5EDT)", "")]%" %b%
+  REM  Feb 07 2106 +1 PRIORITY 2000 AT 01:28 +60 \
+    MSG %"[babel("POSIX Time Unsigned 32-bit Overflow (EST5EDT)", "")]%" %b%
+
+
+# Space holidays
+
+  REM  Jul 20 +1 PRIORITY 2000 \
+    MSG %"[bday(1969)] [babel("Anniversary of First Lunar Landing", "")]%" %b%
+  REM  Aug 07 2027 +1 PRIORITY 2000 \
+    MSG %"[babel("1999 AN10 Fly-by", "")]%" %b%
+  REM  Nov 20 +1 PRIORITY 2000 \
+    MSG %"[bday(1998)] [babel("Anniversary of ISS Launch", "")]%" %b%
+  REM  Dec 19 +1 PRIORITY 2000 \
+    MSG %"[bday(1972)] [babel("Anniversary of Last Lunar Landing", "")]%" %b%
+
+
+# Sci-fi holidays
+
+  REM  Jan 12 +1 PRIORITY 2000 \
+    MSG %"[bday(1992)] [babel("Birthday of HAL9000", "")]%" %b%
+  REM  May 04 +1 PRIORITY 2000 MSG %"[babel("Star Wars Day", "")]%" %b%
+  REM  May 25 +1 PRIORITY 2000 MSG %"[babel("Towel Day", "")]%" %b%
+  REM  Sep 08 +1 PRIORITY 2000 \
+    MSG %"[bday(1966)] [babel("Birthday of Star Trek", "")]%" %b%
+  REM  Nov 22 +1 PRIORITY 2000 \
+    MSG %"[bday(1963)] [babel("Birthday of Dr. Who", "")]%" %b%
+
+
+# Weird holidays
+
+  #   https://en.wikipedia.org/wiki/Blue_Monday_%28date%29
+  REM  Mon Jan [Week_3] +1 PRIORITY 2000 \
+    MSG %"[babel("Blue Monday", "")]%" %b%
+
+  #   https://en.wikipedia.org/wiki/No_Pants_Day
+  REM  Fri May [Week_1] +1 PRIORITY 2000 \
+    MSG %"[babel("No Pants Day", "")]%" %b%
+
+  # Caturday
+  #   https://en.wikipedia.org/wiki/International_Cat_Day
+  #   https://en.wikipedia.org/wiki/National_Cat_Day
+  REM  Feb 17 +1 PRIORITY 2000 \
+    MSG %"[babel("World Cat Day (EU)", "")]%" %b%
+  REM  Aug 08 +1 PRIORITY 2000 \
+    MSG %"[babel("International Cat Day", "")]%" %b%
+  REM  Oct 29 +1 PRIORITY 2000 \
+    MSG %"[babel("National Cat Day (US)", "")]%" %b%
+
+  #   https://www.timeanddate.com/holidays/fun/sandwich-day
+  REM  Nov 03 +1 PRIORITY 2000 \
+    MSG %"[babel("Sandwich Day", "")]%" %b%

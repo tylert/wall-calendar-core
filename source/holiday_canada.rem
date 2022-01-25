@@ -1,127 +1,12 @@
-# Helper stuff
-
-  INCLUDE [filedir()]/defs.rem
-
-
-# Generic holidays and celebratory-type events for most of Canada
-
-  #   https://en.wikipedia.org/wiki/New_Year's_Eve
-  #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
-  REM  Dec 31 +1 PRIORITY 1000 \
-    MSG %"[babel("New Year's Eve", "Veille du Nouvel An")]%" %b%
-  #   https://en.wikipedia.org/wiki/New_Year's_Day
-  #   https://fr.wikipedia.org/wiki/Jour_de_l%27an
-  REM  Jan 01 SCANFROM [trigger(today() - 7)] SATISFY 1
-  IF Saturday == wkdaynum(trigdate())
-    OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
-      MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
-    REM  [trigger(trigdate()+2)] +1 PRIORITY 1000 \
-      MSG %"[babel("New Year's Day (Observed)", \
-        "Jour de l'an (observé)")]%" %b%
-  ELSE
-    IF Sunday == wkdaynum(trigdate())
-      OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
-        MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
-      REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 \
-        MSG %"[babel("New Year's Day (Observed)", \
-          "Jour de l'an (observé)")]%" %b%
-    ELSE
-      OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-        MSG %"[babel("New Year's Day", "Jour de l'an")]%" %b%
-    ENDIF
-  ENDIF
-
-  #   https://en.wikipedia.org/wiki/Groundhog_Day
-  #   https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
-  REM  Feb 02 +1 PRIORITY 1000 \
-    MSG %"[babel("Groundhog Day", "Jour de la marmotte")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
-  #   https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
-  REM  Feb 15 +1 PRIORITY 1000 \
-    MSG %"[babel("National Flag of Canada Day", \
-      "Jour du drapeau national du Canada")]%" %b%
-
-  # The 3rd Monday in February is observed in 8 provinces and 0
-  # territories...
-  #     CA-AB:  Family Day;  statutory
-  #     CA-BC:  Family Day;  statutory
-  #     CA-MB:  Louis Riel Day;  statutory
-  #     CA-NB:  Family Day;  statutory
-  #     CA-NL:  not observed
-  #     CA-NS:  Heritage Day;  ?
-  #     CA-NT:  not observed
-  #     CA-NU:  not observed
-  #     CA-ON:  Family Day;  statutory
-  #     CA-PE:  Islander Day;  statutory
-  #     CA-QC:  not observed
-  #     CA-SK:  Family Day;  statutory
-  #     CA-YT:  not observed
-  #   https://en.wikipedia.org/wiki/Family_Day
-  #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
-  REM  Mon Feb [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Family Day (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)", \
-        "Fête de la famille (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)")]%" %b%
-    OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Louis Riel Day (CA-MB)", \
-        "Journée Louis Riel (CA-MB)")]%" %b%
-    OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Islander Day (CA-PE)", \
-        "Fête des Insulaires (CA-PE)")]%" %b%
-
-  # Heritage Day (CA-YT) is the Friday before the last Sunday in February
-  #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
-  REM  Sun Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate()-2)] +1 PRIORITY 1000 \
-      MSG %"[babel("Heritage Day (CA-YT)", \
-        "Jour de patrimoine (CA-YT)")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/Commonwealth_Day
-  #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
-  REM  Mon Mar [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Commonwealth Day", "Journée du Commonwealth")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/April_Fools'_Day
-  #   https://fr.wikipedia.org/wiki/Poisson_d%27avril
-  REM  Apr 01 +1 PRIORITY 1000 \
-    MSG %"[babel("April Fool's Day", "Poisson d'avril")]%" %b%
-
   #   https://en.wikipedia.org/wiki/Vimy_Ridge_Day
   REM  Apr 09 +1 PRIORITY 1000 \
     MSG %"[babel("Vimy Ridge Day", "Jour de la crête de Vimy")]%" %b%
 
-  #   https://en.wikipedia.org/wiki/Mother's_Day
-  #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
-  REM  Sun May [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Mother's Day", "Fête des mères")]%" %b%
-
-  # Victoria Day is the Monday before May 25th
-  #   https://en.wikipedia.org/wiki/Victoria_Day
-  #   https://en.wikipedia.org/wiki/National_Patriots%27_Day
-  #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
-  REM  Mon May 18 SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Victoria Day", "Fête de la Reine")]%" %b%
-  REM  Mon May 18 SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("National Patriots' Day (CA-QC)", \
-        "Journée nationale des patriotes (CA-QC)")]%" %b%
-
-  # Canadian Armed Forces Day is the 1st Sunday in June
   #   https://en.wikipedia.org/wiki/Armed_Forces_Day
   REM  Sun Jun [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
     REM  [trigger(trigdate())] +1 PRIORITY 1000 \
       MSG %"[babel("Canadian Armed Forces Day", \
         "Journée des Forces canadiennes")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/Father's_Day
-  #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_P%C3%A8res
-  REM  Sun Jun [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Father's Day", "Fête des pères")]%" %b%
 
   # Davis Day (CA-NS) is June 11th
   #   https://en.wikipedia.org/wiki/William_Davis_Miners'_Memorial_Day
@@ -129,157 +14,46 @@
     MSG %"[babel("William Davis Miners' Memorial Day (CA-NS)", \
       "Journée commémorative des mineurs (CA-NS)")]%" %b%
 
-  #   https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
-  #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_des_peuples_autochtones
-  #   https://www.canada.ca/en/canadian-heritage/campaigns/indigenous-peoples-day.html
-  #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-peuples-autochtones.html
-  REM  Jun 21 +1 PRIORITY 1000 \
-    MSG %"[babel("National Indigenous Peoples Day", \
-      "Journée nationale des peuples autochtones")]%" %b%
+  # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following (3rd month)
+  #   https://en.wikipedia.org/wiki/Shavuot
+  #   https://fr.wikipedia.org/wiki/Chavouot
+  REM  [hebdate(6, "Sivan")] +1 PRIORITY 1000 \
+    MSG %"[babel("Shauvot Begins", "Début de Chavouot")]%" %b%
+  REM  [hebdate(7, "Sivan")] +1 PRIORITY 1000 \
+    MSG %"[babel("Shauvot Ends", "Fin de Chavouot")]%" %b%
 
-  # Quebec's National Holiday is June 24th
-  #   https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
-  OMIT Jun 24 +1 PRIORITY 1000 \
-    MSG %"[babel("Quebec's National Holiday", \
-      "Fête nationale du Québec")]%" %b%
+  # Rosh Hashanah or Jewish New Year is 1 and 2 Tishrey (7th month)
+  #   https://en.wikipedia.org/wiki/Rosh_Hashanah
+  #   https://fr.wikipedia.org/wiki/Roch_Hachana
+  REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Rosh Hashanah Begins", "Début de Roch Hachana")]%" %b%
+  REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Rosh Hashanah Ends", "Fin de Roch Hachana")]%" %b%
 
-  #   https://en.wikipedia.org/wiki/Discovery_Day
-  REM  Mon Jun 21 +1 PRIORITY 1000 \
-    MSG %"[babel("June Day (CA-NL)", \
-      "Journée découverte (CA-NL)")]%" %b%
+  # Yom Kippur is 10 Tishrey (7th month)
+  #   https://en.wikipedia.org/wiki/Yom_Kippur
+  #   https://fr.wikipedia.org/wiki/Yom_Kippour
+  REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Yom Kippur", "Yom Kippour")]%" %b%
 
-  #   https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
-  #   https://www.canada.ca/en/canadian-heritage/campaigns/multiculturalism-day.html
-  #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-multiculturalisme.html
-  REM  Jun 27 +1 PRIORITY 1000 \
-    MSG %"[babel("Canadian Multiculturalism Day", \
-      "Journée canadienne du multiculturalisme")]%" %b%
+  # Sukkot or Tabernacles is from 15 to 21 or 22 Tishrey (7th month)
+  #   https://en.wikipedia.org/wiki/Sukkot
+  #   https://fr.wikipedia.org/wiki/Souccot
+  REM  [hebdate(15, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Sukkot Begins", "Début de Souccot")]%" %b%
+  REM  [hebdate(22, "Tishrey")] +1 PRIORITY 1000 \
+    MSG %"[babel("Sukkot Ends", "Fin de Souccot")]%" %b%
 
-  #   https://en.wikipedia.org/wiki/Canada_Day
-  #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
-  REM  Jul 01 SCANFROM [trigger(today() - 7)] SATISFY 1
-  IF Saturday == wkdaynum(trigdate())
-    OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
-      MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
-    REM  [trigger(trigdate()+2)] +1 PRIORITY 1000 \
-      MSG %"[babel("Canada Day (Observed)", "Fête du Canada (observé)")]%" %b%
-  ELSE
-    IF Sunday == wkdaynum(trigdate())
-      OMIT [trigger(trigdate())]   +1 PRIORITY 1000 \
-        MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
-      REM  [trigger(trigdate()+1)] +1 PRIORITY 1000 \
-        MSG %"[babel("Canada Day (Observed)", \
-          "Fête du Canada (observé)")]%" %b%
-    ELSE
-      OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-        MSG %"[babel("Canada Day", "Fête du Canada")]%" %b%
-    ENDIF
-  ENDIF
+  # Hanukkah is from 25 Kislev (9th month) to 2 Tevet (10th month)
+  #   https://en.wikipedia.org/wiki/Hanukkah
+  #   https://fr.wikipedia.org/wiki/Hanoucca
+  REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
+    MSG %"[babel("Hanukkah Begins", "Début de Hanoucca")]%" %b%
+  REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
+    MSG %"[babel("Hanukkah Ends", "Fin de Hanoucca")]%" %b%
 
-  #   https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
-  REM  Jul 01 +1 PRIORITY 1000 \
-    MSG %"[babel("Memorial Day (CA-NL)", "Memorial Day (CA-NL)")]%" %b%
-
-  # Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU) is July 9th
-  #   https://en.wikipedia.org/wiki/Nunavut_Day
-  REM  Jul 09 +1 PRIORITY 1000 \
-    MSG %"[babel("Nunavut Day", "Fête du Nunavut")]%" %b%
-
-  # The Quebec Construction Holiday begins on the 2nd last Sunday of July and
-  # lasts for 2 weeks
-  #   https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
-  #   https://fr.wikipedia.org/wiki/Vacances_de_la_construction
-  #   https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
-  #   https://www.ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
-  REM  Sun Jul [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Construction Holiday Begins (CA-QC)", \
-        "Début des vacances de la construction (CA-QC)")]%" %b%
-  REM  Aug 01 -1 +1 PRIORITY 1000 \
-    MSG %"[babel("Construction Holiday Ends (CA-QC)", \
-      "Fin des vacances de la construction (CA-QC)")]%" %b%
-
-  # The 1st Monday in August is a quasi-semi-poly-un-statutory holiday,
-  # kinda...
-  #     CA-AB:  Heritage Day;  optional, formerly statutory
-  #     CA-BC:  British Columbia Day;  statutory
-  #     CA-MB:  Civic Holiday;  non-statutory
-  #     CA-NB:  New Brunswick Day;  statutory
-  #     CA-NL:  not observed
-  #     CA-NS:  Natal Day;  non-statutory
-  #     CA-NT:  Civic Holiday;  statutory
-  #     CA-NU:  Civic Holiday;  statutory
-  #     CA-ON:  Civic Holiday and Simcoe Day;  non-statutory
-  #     CA-PE:  Civic Holiday;  statutory or non-statutory
-  #     CA-QC:  not observed
-  #     CA-SK:  Saskatchewan Day;  statutory
-  #     CA-YT:  not observed
-  #   https://en.wikipedia.org/wiki/Civic_Holiday
-  #   https://en.wikipedia.org/wiki/Public_holidays_in_Canada
-  #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
-  REM  Mon Aug [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Civic Holiday (except CA-NL, CA-QC, CA-YT)", \
-        "Congé civique (sauf CA-NL, CA-QC, CA-YT)")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
-  #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
-  REM  Aug 09 +1 PRIORITY 1000 \
-    MSG %"[babel("International Day of the World's Indigenous Peoples", \
-      "Journée internationale des populations autochtones du monde")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/Discovery_Day
-  REM  Mon Aug [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Discovery Day (CA-YT)", \
-        "Journée découverte (CA-YT)")]%" %b%
-
-  # Merchant Navy Rememberance Day (CA) is September 3rd
-  #   https://en.wikipedia.org/wiki/Remembrance_Day
-  #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
-  #   https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
-  REM  Sep 03 +1 PRIORITY 1000 \
-    MSG %"[babel("Merchant Navy Day (CA)", \
-      "Jour de la marine marchande (CA)")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/Labour_Day
-  #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
-  REM  Mon Sep [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Labour Day", "Fête du travail")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/Thanksgiving#Canada
-  #   https://fr.wikipedia.org/wiki/Action_de_gr%C3%A2ce_(Canada)
-  # Oktoberfest (CA-ON) starts the Friday before Thanksgiving and ends the
-  # Saturday after
-  #   https://en.wikipedia.org/wiki/Oktoberfest
-  #   https://fr.wikipedia.org/wiki/Oktoberfest
-  REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    OMIT [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Thanksgiving Day", "Action de Grâce")]%" %b%
-    REM  [trigger(trigdate()-3)] +1 PRIORITY 1000 \
-      MSG %"[babel("Oktoberfest Begins (CA-ON)", \
-        "Début de l'Oktoberfest (CA-ON)")]%" %b%
-    REM  [trigger(trigdate()+8)] +1 PRIORITY 1000 \
-      MSG %"[babel("Oktoberfest Ends (CA-ON)", \
-        "Fin de l'Oktoberfest (CA-ON)")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/Halloween
-  #   https://fr.wikipedia.org/wiki/Halloween
-  REM  Oct 31 +1 PRIORITY 1000 \
-    MSG %"[babel("Hallowe'en", "Halloween")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/Remembrance_Day
-  #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
-  #   https://en.wikipedia.org/wiki/Armistice_Day
-  REM  Nov 11 +1 PRIORITY 1000 \
-    MSG %"[babel("Rememberance Day", "Jour du Souvenir")]%" %b%
-  REM  Nov 11 +1 PRIORITY 1000 \
-    MSG %"[babel("Armistice Day (CA-NL)", "Jour de l'Armistice (CA-NL)")]%" %b%
-
-  # The Statute of Westminster was enacted on December 11th, 1931
-  #   https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
-  #   https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931
-  REM  Dec 11 +1 PRIORITY 1000 \
-    MSG %"[bday(1931)] [babel("Anniversary of the Statute of Westminster", \
-      "Anniversaire du Statut de Westminster")]%" %b%
+  # Purim is 14 Adar (12th month)
+  #   https://en.wikipedia.org/wiki/Purim
+  #   https://fr.wikipedia.org/wiki/Pourim
+  REM  [hebdate(14, "Adar")] +1 PRIORITY 1000 \
+    MSG %"[babel("Purim", "Pourim")]%" %b%

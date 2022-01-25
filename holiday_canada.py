@@ -16,6 +16,7 @@ from paper_cal import *
     help='Year to show',
 )
 def main(year):
+    ''' '''
 
     #   https://en.wikipedia.org/wiki/New_Year's_Eve
     #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre

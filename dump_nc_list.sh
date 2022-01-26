@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Generate the TXT file
-python radio_events_LNLARES.py > list.txt
+python radio_events.py > list.txt
 
 # Generate the CSV file from the TXT file
 cat <(echo "Date,Controller") <(cat list.txt) | tr ' ' ',' > list.csv

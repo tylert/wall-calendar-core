@@ -146,6 +146,14 @@ def main(year):
         f'{closest_date(SATURDAY, date(year, SEPTEMBER, WEEK3))} Software Freedom Day'
     )  # Journée de la liberté des logiciels
 
+    #   http://worldradioday.org
+    print(f'{date(year,FEBRUARY, 13)} World Radio Day')
+    # Journée mondiale de la radio
+
+    #   http://iaru.org/world-amateur-radio-day.html
+    print(f'{date(year, APRIL, 18)} World Amateur Radio Day')
+    # Journée de la radio amateur
+
     #   https://en.wikipedia.org/wiki/Pi_Day
     #   http://www.piday.org/
     #   https://en.wikipedia.org/wiki/Tau_Day

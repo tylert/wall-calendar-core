@@ -1,142 +1,127 @@
-  #   https://en.wikipedia.org/wiki/Nowruz
-  #   https://fr.wikipedia.org/wiki/Norouz
-  REM  Mar 21 +1 PRIORITY 1000 \
-    MSG %"[babel("Nowruz", "Norouz")]%" %b%
+    #   https://en.wikipedia.org/wiki/Nowruz
+    #   https://fr.wikipedia.org/wiki/Norouz
+    Mar 21
+      Nowruz
+    # Norouz
 
-  # Pahela Baishakh (BD) is April 14th
-  #   https://en.wikipedia.org/wiki/Pahela_Baishakh
-  REM  Mar 21 +1 PRIORITY 1000 \
-    MSG %"[babel("Pahela Baishakh (BD)", "Pahela Baishakh (BD)")]%" %b%
+    #   https://en.wikipedia.org/wiki/Pahela_Baishakh
+    # Pahela Baishakh (BD) is April 14th
+    Mar 21
+      Pahela Baishakh (BD)
 
-  #   https://en.wikipedia.org/wiki/Queen's_Official_Birthday
-  REM  Apr 21 +1 PRIORITY 1000 \
-    MSG %"[babel("Queen's Birthday (UK)", \
-      "Anniversaire de la reine (UK)")]%" %b%
+    #   https://en.wikipedia.org/wiki/Queen's_Official_Birthday
+    Apr 21
+      Queen's Birthday (UK)
+    # Anniversaire de la reine (UK)
 
-  #   https://en.wikipedia.org/wiki/Cinco_de_Mayo
-  REM  May 05 +1 PRIORITY 1000 \
-    MSG %"[babel("Cinco de Mayo (US)", "Fête du 5 mai (US)")]%" %b%
+    #   https://en.wikipedia.org/wiki/Cinco_de_Mayo
+    May 05
+      Cinco de Mayo (US)
+    # Fête du 5 mai (US)
 
-  #   https://en.wikipedia.org/wiki/Armed_Forces_Day
-  REM  Sat May [Week_3] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Armed Forces Day (US)", \
-        "Journée des forces armées (US)")]%" %b%
+    #   https://en.wikipedia.org/wiki/Armed_Forces_Day
+    Sat May [Week_3]
+      Armed Forces Day (US)
+    # Journée des forces armées (US)
 
-  #   https://en.wikipedia.org/wiki/Patriot_Day
-  REM  Sep 11 +1 PRIORITY 1000 \
-    MSG %"[babel("Patriot Day (US)", "Journée des patriotes (US)")]%" %b%
+    #   https://en.wikipedia.org/wiki/Patriot_Day
+    Sep 11
+      Patriot Day (US)
+    # Journée des patriotes (US)
 
-  #   https://en.wikipedia.org/wiki/Columbus_Day
-  REM  Mon Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Columbus Day (US)", "Jour de Columbus (US)")]%" %b%
+    #   https://en.wikipedia.org/wiki/Veterans_Day
+    Nov 11
+      Veterans Day (US)
+    # Jour des anciens combattants (US)
 
-  #   https://en.wikipedia.org/wiki/Veterans_Day
-  REM  Nov 11 +1 PRIORITY 1000 \
-    MSG %"[babel("Veterans Day (US)", \
-      "Jour des anciens combattants (US)")]%" %b%
+    #   https://en.wikipedia.org/wiki/Armistice_Day
+    Nov 11
+      Armistice Day (UK)
+    # Jour de l'Armistice (UK)
 
-  #   https://en.wikipedia.org/wiki/Armistice_Day
-  REM  Nov 11 +1 PRIORITY 1000 \
-    MSG %"[babel("Armistice Day (UK)", "Jour de l'Armistice (UK)")]%" %b%
+    #   https://en.wikipedia.org/wiki/Kwanzaa
+    Dec 26
+      Kwanzaa Begins
+    Jan 01
+      Kwanzaa Ends
+    # Début de Kwanzaa
+    # Fin de Kwanzaa
 
-  #   https://en.wikipedia.org/wiki/Kwanzaa
-  REM  Dec 26 +1 PRIORITY 1000 \
-    MSG %"[babel("Kwanzaa Begins", "Début de Kwanzaa")]%" %b%
-  REM  Jan 01 +1 PRIORITY 1000 \
-    MSG %"[babel("Kwanzaa Ends", "Fin de Kwanzaa")]%" %b%
+    #   https://en.wikipedia.org/wiki/Hogmanay
+    Dec 31
+      Hogmanay (UK)
 
-  #   https://en.wikipedia.org/wiki/Hogmanay
-  REM  Dec 31 +1 PRIORITY 1000 \
-    MSG %"[babel("Hogmanay (UK)", "Hogmanay (UK)")]%" %b%
+    #   https://en.wikipedia.org/wiki/Darwin_Day
+    Feb 12
+      Darwin Day
+    # Jour de Darwin
 
+    #   http://pinkshirtday.ca/
+    #   http://www.erasebullying.ca/resources/resources-pink-shirt.php
+    # Pink Shirt Day seems to be on the last Wednesday in February
+    Wed Mar 01 --7
+      Pink Shirt Day
+    # Journée des chemises rose
 
-# Other interesting days
+    #   https://en.wikipedia.org/wiki/International_Polar_Bear_Day
+    Feb 27
+      International Polar Bear Day
+    # Journée internationale des ours polaires
 
-  #   https://en.wikipedia.org/wiki/Darwin_Day
-  REM  Feb 12 +1 PRIORITY 1000 \
-    MSG %"[babel("Darwin Day", "Jour de Darwin")]%" %b%
+    #   https://en.wikipedia.org/wiki/International_Day_of_Pink
+    Wed Apr [Week_2]
+      International Day of Pink
+    # Journée internationale de la rose
 
-  # Pink Shirt Day seems to be on the last Wednesday in February
-  #   http://pinkshirtday.ca/
-  #   http://www.erasebullying.ca/resources/resources-pink-shirt.php
-  REM  Wed Mar 01 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Pink Shirt Day", \
-        "Journée des chemises rose")]%" %b%
+    #   https://en.wikipedia.org/wiki/National_Dark-Sky_Week
+    # Dark-Sky Week is the week of the new moon in April
 
-  #   https://en.wikipedia.org/wiki/International_Polar_Bear_Day
-  REM  Feb 27 +1 PRIORITY 1000 \
-    MSG %"[babel("International Polar Bear Day", \
-      "Journée internationale des ours polaires")]%" %b%
+    #   https://en.wikipedia.org/wiki/Administrative_Professionals'_Day
+    # Administrative Professionals' Day is the Wednesday of the last full week
+    # of April
+    Wed Apr 28 --7
+      Administrative Professionals' Day
+    # Journée des professionnels de l'administration
 
-  #   https://en.wikipedia.org/wiki/International_Day_of_Pink
-  REM  Wed Apr [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("International Day of Pink", \
-        "Journée internationale de la rose")]%" %b%
+    #   https://en.wikipedia.org/wiki/Astronomy_Day
+    # Astronomy Day is the Saturday closest to the quarter moon between mid-April
+    # and mid-May and the Saturday closest to the quarter moon between
+    # mid-September and mid-October
 
-  # Dark-Sky Week is the week of the new moon in April
-  #   https://en.wikipedia.org/wiki/National_Dark-Sky_Week
-  # REM  [trigger(moondate(0))] SATISFY 1
-  # IF monnum(trigdate()) == April
-  # ... wkdaynum() == Sunday
-  #   MSG %"[babel("Dark-Sky Week", "")]%" %b%
+    #   https://en.wikipedia.org/wiki/Anti-Bullying_Day
+    May 04
+      International Anti-Bullying Day
+    # Journée internationale anti-intimidation
 
-  # Administrative Professionals' Day is the Wednesday of the last full week
-  # of April
-  #   https://en.wikipedia.org/wiki/Administrative_Professionals'_Day
-  REM  Wed Apr 28 --7 SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Administrative Professionals' Day", \
-        "Journée des professionnels de l'administration")]%" %b%
+    #   https://en.wikipedia.org/wiki/World_Oceans_Day
+    Jun 08
+      World Oceans Day
+    # Journée mondiale des océans
 
-  # Astronomy Day is the Saturday closest to the quarter moon between mid-April
-  # and mid-May and the Saturday closest to the quarter moon between
-  # mid-September and mid-October
-  #   https://en.wikipedia.org/wiki/Astronomy_Day
+    #   https://en.wikipedia.org/wiki/National_Preparedness_Month
+    #   https://en.wikipedia.org/wiki/Disaster_Prevention_Day
+    #   https://en.wikipedia.org/wiki/International_Day_for_Disaster_Reduction
+    Sep 01
+      National Preparedness Month (US)
+    # Mois national de la préparation (US)
+    Sep 01
+      Disaster Prevention Day (JP)
+    # Journée de prévention des catastrophes (JP)
+    Oct 13
+      International Day for Disaster Reduction (UN)
+    # Journée internationale de la prévention des catastrophes (UN)
 
-  #   https://en.wikipedia.org/wiki/Anti-Bullying_Day
-  REM  May 04 +1 PRIORITY 1000 \
-    MSG %"[babel("International Anti-Bullying Day", \
-      "Journée internationale anti-intimidation")]%" %b%
+    #   https://en.wikipedia.org/wiki/International_Day_of_Peace
+    Sep 21
+      International Day of Peace
+    # Journée internationale de la paix
 
-  #   https://en.wikipedia.org/wiki/World_Oceans_Day
-  REM  Jun 08 +1 PRIORITY 1000 \
-    MSG %"[babel("World Oceans Day", "Journée mondiale des océans")]%" %b%
+    #   https://en.wikipedia.org/wiki/Sputnik_1
+    Oct 4
+      1957 Anniversary of Launch of Sputnik 1
+    # Anniversaire du lancement de Sputnik 1
 
-  #   https://en.wikipedia.org/wiki/National_Preparedness_Month
-  REM  Sep 01 +1 PRIORITY 1000 \
-    MSG %"[babel("National Preparedness Month (US)", \
-      "Mois national de la préparation (US)")]%" %b%
-  #   https://en.wikipedia.org/wiki/Disaster_Prevention_Day
-  REM  Sep 01 +1 PRIORITY 1000 \
-    MSG %"[babel("Disaster Prevention Day (JP)", \
-      "Journée de prévention des catastrophes (JP)")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/International_Day_of_Peace
-  REM  Sep 21 +1 PRIORITY 1000 \
-    MSG %"[babel("International Day of Peace", \
-      "Journée internationale de la paix")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/International_Day_for_Disaster_Reduction
-  REM  Oct 13 +1 PRIORITY 1000 \
-    MSG %"[babel("International Day for Disaster Reduction (UN)", \
-      "Journée internationale de la prévention des catastrophes (UN)")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/Sputnik_1
-  REM  Oct 4 +1 PRIORITY 1000 \
-    MSG %"[bday(1957)] [babel("Anniversary of Launch of Sputnik 1", \
-      "Anniversaire du lancement de Sputnik 1")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/Ada_Lovelace_Day
-  #   http://findingada.com/about/when-is-ald/
-  REM  Tue Oct [Week_2] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Ada Lovelace Day", "Jour de Ada Lovelace")]%" %b%
-
-  #   https://en.wikipedia.org/wiki/World_Kindness_Day
-  REM  Nov 13 +1 PRIORITY 1000 \
-    MSG %"[babel("World Kindness Day", \
-      "Journée mondiale de la gentillesse")]%" %b%
+    #   https://en.wikipedia.org/wiki/World_Kindness_Day
+    Nov 13
+      World Kindness Day
+    # Journée mondiale de la gentillesse

@@ -61,8 +61,6 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Annonciation
     print(f'{date(year, MARCH, 25)} Annunciation')  # Annonciation
 
-    # Easter is the 1st Sunday after the 1st full moon after the March
-    # equinox (min:  March 22nd, max:  April 25th)
     #   https://en.wikipedia.org/wiki/Ecclesiastical_full_moon
     #   https://en.wikipedia.org/wiki/Computus
     #   https://en.wikipedia.org/wiki/Date_of_Easter
@@ -112,7 +110,6 @@ def main(year):
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
 
-    # Passover is from 14 or 15 to 21 or 22 Nisan (1st month)
     #   https://en.wikipedia.org/wiki/Passover
     #   https://fr.wikipedia.org/wiki/Pessa%27h
     #   https://en.wikipedia.org/wiki/Pascha
@@ -164,12 +161,13 @@ def main(year):
     if SATURDAY == date.weekday(date(year, DECEMBER, 25)):
         print(
             f'{closest_date(MONDAY, date(year, DECEMBER, 25))} Christmas Day Observed'
-        )
+        )  # Noël observé
         print(f'{closest_date(TUESDAY, date(year, DECEMBER, 26))} Boxing Day Observed')
+        # Le jour des boîtes observé
     if SUNDAY == date.weekday(date(year, DECEMBER, 25)):
         print(
             f'{closest_date(TUESDAY, date(year, DECEMBER, 25))} Christmas Day Observed'
-        )
+        )  # Noël observé
 
 
 if __name__ == '__main__':

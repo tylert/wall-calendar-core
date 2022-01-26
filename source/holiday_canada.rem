@@ -1,59 +1,69 @@
-  #   https://en.wikipedia.org/wiki/Vimy_Ridge_Day
-  REM  Apr 09 +1 PRIORITY 1000 \
-    MSG %"[babel("Vimy Ridge Day", "Jour de la crête de Vimy")]%" %b%
+    #   https://en.wikipedia.org/wiki/Vimy_Ridge_Day
+    Apr 09
+      Vimy Ridge Day
+    # Jour de la crête de Vimy
 
-  #   https://en.wikipedia.org/wiki/Armed_Forces_Day
-  REM  Sun Jun [Week_1] SCANFROM [trigger(today() - 7)] SATISFY 1
-    REM  [trigger(trigdate())] +1 PRIORITY 1000 \
-      MSG %"[babel("Canadian Armed Forces Day", \
-        "Journée des Forces canadiennes")]%" %b%
+    #   https://en.wikipedia.org/wiki/Armed_Forces_Day
+    Sun Jun [Week_1]
+      Canadian Armed Forces Day
+    # Journée des Forces canadiennes
 
-  # Davis Day (CA-NS) is June 11th
-  #   https://en.wikipedia.org/wiki/William_Davis_Miners'_Memorial_Day
-  REM  Jun 11 +1 PRIORITY 1000 \
-    MSG %"[babel("William Davis Miners' Memorial Day (CA-NS)", \
-      "Journée commémorative des mineurs (CA-NS)")]%" %b%
+    #   https://en.wikipedia.org/wiki/William_Davis_Miners'_Memorial_Day
+    # Davis Day (CA-NS) is June 11th
+    Jun 11
+      William Davis Miners' Memorial Day (CA-NS)
+    # Journée commémorative des mineurs (CA-NS)
 
-  # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following (3rd month)
-  #   https://en.wikipedia.org/wiki/Shavuot
-  #   https://fr.wikipedia.org/wiki/Chavouot
-  REM  [hebdate(6, "Sivan")] +1 PRIORITY 1000 \
-    MSG %"[babel("Shauvot Begins", "Début de Chavouot")]%" %b%
-  REM  [hebdate(7, "Sivan")] +1 PRIORITY 1000 \
-    MSG %"[babel("Shauvot Ends", "Fin de Chavouot")]%" %b%
+    #   https://en.wikipedia.org/wiki/Shavuot
+    #   https://fr.wikipedia.org/wiki/Chavouot
+    # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following (3rd month)
+    [hebdate(6, "Sivan")]
+      Shauvot Begins
+    [hebdate(7, "Sivan")]
+      Shauvot Ends
+    # Début de Chavouot
+    # Fin de Chavouot
 
-  # Rosh Hashanah or Jewish New Year is 1 and 2 Tishrey (7th month)
-  #   https://en.wikipedia.org/wiki/Rosh_Hashanah
-  #   https://fr.wikipedia.org/wiki/Roch_Hachana
-  REM  [hebdate(1, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Rosh Hashanah Begins", "Début de Roch Hachana")]%" %b%
-  REM  [hebdate(2, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Rosh Hashanah Ends", "Fin de Roch Hachana")]%" %b%
+    #   https://en.wikipedia.org/wiki/Rosh_Hashanah
+    #   https://fr.wikipedia.org/wiki/Roch_Hachana
+    # Rosh Hashanah or Jewish New Year is 1 and 2 Tishrey (7th month)
+    [hebdate(1, "Tishrey")]
+      Rosh Hashanah Begins
+    [hebdate(2, "Tishrey")]
+      Rosh Hashanah Ends
+    # Début de Roch Hachana
+    # Fin de Roch Hachana
 
-  # Yom Kippur is 10 Tishrey (7th month)
-  #   https://en.wikipedia.org/wiki/Yom_Kippur
-  #   https://fr.wikipedia.org/wiki/Yom_Kippour
-  REM  [hebdate(10, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Yom Kippur", "Yom Kippour")]%" %b%
+    #   https://en.wikipedia.org/wiki/Yom_Kippur
+    #   https://fr.wikipedia.org/wiki/Yom_Kippour
+    # Yom Kippur is 10 Tishrey (7th month)
+    [hebdate(10, "Tishrey")]
+      Yom Kippur
+    # Yom Kippour
 
-  # Sukkot or Tabernacles is from 15 to 21 or 22 Tishrey (7th month)
-  #   https://en.wikipedia.org/wiki/Sukkot
-  #   https://fr.wikipedia.org/wiki/Souccot
-  REM  [hebdate(15, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Sukkot Begins", "Début de Souccot")]%" %b%
-  REM  [hebdate(22, "Tishrey")] +1 PRIORITY 1000 \
-    MSG %"[babel("Sukkot Ends", "Fin de Souccot")]%" %b%
+    #   https://en.wikipedia.org/wiki/Sukkot
+    #   https://fr.wikipedia.org/wiki/Souccot
+    # Sukkot or Tabernacles is from 15 to 21 or 22 Tishrey (7th month)
+    [hebdate(15, "Tishrey")]
+      Sukkot Begins
+    [hebdate(22, "Tishrey")]
+      Sukkot Ends
+    # Début de Souccot
+    # Fin de Souccot
 
-  # Hanukkah is from 25 Kislev (9th month) to 2 Tevet (10th month)
-  #   https://en.wikipedia.org/wiki/Hanukkah
-  #   https://fr.wikipedia.org/wiki/Hanoucca
-  REM  [hebdate(25, "Kislev")] +1 PRIORITY 1000 \
-    MSG %"[babel("Hanukkah Begins", "Début de Hanoucca")]%" %b%
-  REM  [hebdate(2, "Tevet")] +1 PRIORITY 1000 \
-    MSG %"[babel("Hanukkah Ends", "Fin de Hanoucca")]%" %b%
+    #   https://en.wikipedia.org/wiki/Hanukkah
+    #   https://fr.wikipedia.org/wiki/Hanoucca
+    # Hanukkah is from 25 Kislev (9th month) to 2 Tevet (10th month)
+    [hebdate(25, "Kislev")]
+      Hanukkah Begins
+    [hebdate(2, "Tevet")]
+      Hanukkah Ends
+    # Début de Hanoucca
+    # Fin de Hanoucca
 
-  # Purim is 14 Adar (12th month)
-  #   https://en.wikipedia.org/wiki/Purim
-  #   https://fr.wikipedia.org/wiki/Pourim
-  REM  [hebdate(14, "Adar")] +1 PRIORITY 1000 \
-    MSG %"[babel("Purim", "Pourim")]%" %b%
+    #   https://en.wikipedia.org/wiki/Purim
+    #   https://fr.wikipedia.org/wiki/Pourim
+    # Purim is 14 Adar (12th month)
+    [hebdate(14, "Adar")]
+      Purim
+    # Pourim

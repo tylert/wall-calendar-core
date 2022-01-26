@@ -29,7 +29,7 @@ def main(year):
     ):
         print(
             f'{closest_date(MONDAY, date(year, JANUARY, 1))} New Year\'s Day Observed'
-        )  # Jour de l'an Observé
+        )  # Jour de l'an observé
 
     #   https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
@@ -133,7 +133,7 @@ def main(year):
         date(year, JULY, 1)
     ):
         print(f'{closest_date(MONDAY, date(year, JULY, 1))} Canada Day Observed')
-        # Fête du Canada Observé
+        # Fête du Canada observé
 
     #   https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
     print(f'{date(year, JULY, 1)} Memorial Day (CA-NL)')

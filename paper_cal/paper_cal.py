@@ -109,8 +109,10 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
             day=days_in_month(month=nearby_date.month, year=nearby_date.year),
         )
 
+    # Determine how far away we are from our desired weekday
     offset = nearby_date.weekday() - (desired_weekday % LENGTH_OF_WEEK)
 
+    # Force the offset back into the current week if it is too large
     if offset < -3:
         offset += LENGTH_OF_WEEK
     if offset > 3:
@@ -125,6 +127,25 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
         return found_date
 
 
+# Easter is the 1st Sunday after the 1st full moon after the March equinox
+# Passover is from 14 or 15 to 21 or 22 Nisan
+# March 22nd is the earliest date when Easter may occur
+# April 25nd is the latest date when Easter may occur
+# ??? is the earliest date when Passover may occur
+# ??? is the latest date when Passover may occur
+# XXX FIXME TODO  Get this info from wikipedia page???
+
+
+# Equinox/Équinoxe literally means "equal night"
+# Solstice literally means "sun stands still" (longest/shortest day)
+# March Equinox is the 1st Day of Spring/printemps in the Northern Hemisphere
+# June Solstice is the 1st Day of Summer/été in the Northern Hemisphere
+# September Equinox is the 1st Day of Fall/automne in the Northern Hemisphere
+# December Solstice is the 1st Day of Winter/hiver in the Northern Hemisphere
+# Perihelion/Périhélie is when the Earth is closest to the Sun
+# Aphelion/Aphélie is when the Earth is farthest from the Sun
+
+
 def easter(year=date.today().year):
     ''' '''
 
@@ -137,16 +158,6 @@ def passover(year=date.today().year):
 
     month, day = Epoch.jewish_pesach(year)
     return date(year=year, month=month, day=day)
-
-
-# Equinox/Équinoxe literally means "equal night"
-# Solstice literally means "sun stands still" (longest/shortest day)
-# March Equinox is the 1st Day of Spring/printemps in the Northern Hemisphere
-# June Solstice is the 1st Day of Summer/été in the Northern Hemisphere
-# September Equinox is the 1st Day of Fall/automne in the Northern Hemisphere
-# December Solstice is the 1st Day of Winter/hiver in the Northern Hemisphere
-# Perihelion/Périhélie is when the Earth is closest to the Sun
-# Aphelion/Aphélie is when the Earth is farthest from the Sun
 
 
 def spring(year=date.today().year):
@@ -207,7 +218,16 @@ def new_moon(moon_date=date.today()):
     ''' '''
 
     year, month, day, hour, minute, _ = Moon.moon_phase(
-        Epoch(moon_date - timedelta(days=4)), target='new'
+        Epoch(moon_date - timedelta(days=6)), target='new'
+    ).get_full_date()
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
+
+
+def first_moon(moon_date=date.today()):
+    ''' '''
+
+    year, month, day, hour, minute, _ = Moon.moon_phase(
+        Epoch(moon_date - timedelta(days=6)), target='first'
     ).get_full_date()
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
@@ -216,30 +236,18 @@ def full_moon(moon_date=date.today()):
     ''' '''
 
     year, month, day, hour, minute, _ = Moon.moon_phase(
-        Epoch(moon_date - timedelta(days=4)), target='full'
+        Epoch(moon_date - timedelta(days=6)), target='full'
     ).get_full_date()
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
-def closest_moon(desired_phase, nearby_date=date.today(), last=False):
+def last_moon(moon_date=date.today()):
     ''' '''
 
-    # XXX FIXME TODO Exception if desired_phase is too weird???
-
-    offset = moon_phase(nearby_date) - (desired_phase % LENGTH_OF_LUNAR_MONTH)
-
-    if offset < -14:
-        offset += LENGTH_OF_LUNAR_MONTH
-    if offset > 14:
-        offset -= LENGTH_OF_LUNAR_MONTH
-
-    found_date = nearby_date - timedelta(days=offset)
-
-    # Jump back into the correct month if we managed to leave it
-    if last and found_date.month != nearby_date.month:
-        return found_date - timedelta(days=LENGTH_OF_LUNAR_MONTH)
-    else:
-        return found_date
+    year, month, day, hour, minute, _ = Moon.moon_phase(
+        Epoch(moon_date - timedelta(days=6)), target='last'
+    ).get_full_date()
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
 # https://en.wikipedia.org/wiki/Chinese_zodiac

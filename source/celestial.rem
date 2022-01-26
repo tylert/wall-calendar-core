@@ -57,4 +57,3 @@
     REM  [trigger(trigdate())] +1 PRIORITY 0000 \
       MSG %"Lunar New Year ([element_en()] [animal_en()] - [spin_en()])%" %b%
   ENDIF
-# XXX FIXME XXX  Move this event to the day after the new moon instead

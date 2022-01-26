@@ -104,8 +104,6 @@ class TestDays:
         assert easter(2023) == date(2023, APRIL, 9)
         assert easter(2024) == date(2024, MARCH, 31)
 
-        # March 22nd is the earliest date when Easter may occur
-        # April 25nd is the latest date when Easter may occur
         assert easter(1818) == date(1818, MARCH, 22)
         assert easter(2285) == date(2285, MARCH, 22)
         assert easter(1943) == date(1943, APRIL, 25)

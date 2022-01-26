@@ -85,6 +85,10 @@ def main(year):
     print(f'{date(year, JULY, 4)} Independence Day (US)')
     # Jour de l'indépendance (US)
 
+    #   https://en.wikipedia.org/wiki/Columbus_Day
+    print(f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2))} Columbus Day (US)')
+    # Jour de Columbus (US)
+
     #   https://en.wikipedia.org/wiki/Halloween
     #   https://fr.wikipedia.org/wiki/Halloween
     print(f'{date(year, OCTOBER, 31)} Hallowe\'en')  # Halloween

@@ -18,6 +18,11 @@ from paper_cal import *
 def main(year):
     ''' '''
 
+    #   https://www.canada.ca/en/revenue-agency/services/tax/public-holidays.html
+    #   https://www.canada.ca/fr/agence-revenu/services/impot/jours-feries.html
+    #   https://en.wikipedia.org/wiki/Public_holidays_in_Canada
+    #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
+
     #   https://en.wikipedia.org/wiki/New_Year's_Eve
     #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
     #   https://en.wikipedia.org/wiki/New_Year's_Day
@@ -175,7 +180,8 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
     print(
         f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Civic Holiday (except CA-NL, CA-QC, CA-YT)'
-    )  # Congé civique (sauf CA-NL, CA-QC, CA-YT)
+    )  # Jour férié
+    # Congé civique (sauf CA-NL, CA-QC, CA-YT)
     # Premier lundi d'août
 
     #   https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
@@ -216,7 +222,7 @@ def main(year):
     # Saturday after
     print(
         f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2))} Thanksgiving Day (CA)'
-    )  # Action de Grâce (CA)
+    )  # Action de grâce (CA)
     print(
         f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2)) - timedelta(days=3)} Oktoberfest Begins (CA-ON)'
     )  # Début de l'Oktoberfest (CA-ON)
@@ -233,8 +239,12 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
     #   https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931
+    #   https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days/anniversary-statute-westminster.html
+    #   https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives/anniversaire-statut-westminster.html
     # The Statute of Westminster was enacted on December 11th, 1931
-    # Anniversary of the Statute of Westminster
+    print(
+        f'{date(year, DECEMBER, 11)} {ordinal(year - 1931)} Anniversary of the Statute of Westminster'
+    )
     # Anniversaire du Statut de Westminster
 
 

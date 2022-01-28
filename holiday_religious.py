@@ -100,8 +100,8 @@ def main(year):
     print(f'{easter(year) - timedelta(days=3)} Maundy Thursday')  # Jeudi saint
     print(f'{easter(year) - timedelta(days=2)} Good Friday')  # Vendredi saint
     print(f'{easter(year) - timedelta(days=1)} Easter Saturday')
-    print(f'{easter(year)} Easter Sunday')  # Le dimanche de Pâques
-    print(f'{easter(year) + timedelta(days=1)} Easter Monday')  # Le lundi de Pâques
+    print(f'{easter(year)} Easter Sunday')  # Dimanche de Pâques
+    print(f'{easter(year) + timedelta(days=1)} Easter Monday')  # Lundi de Pâques
     print(f'{easter(year) + timedelta(days=39)} Ascension Day')  # Ascension
     print(
         f'{easter(year) + timedelta(days=49)} Whit Sunday/Pentecost Sunday'

@@ -127,6 +127,23 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
         return found_date
 
 
+def ordinal(number, lang='en'):
+    ''' '''
+
+    #   https://docs.python.org/3.10/whatsnew/3.10.html#pep-634-structural-pattern-matching
+    match lang:
+        case 'en':
+            if number % 10 == 1:
+                return f'{number}st'
+            else:
+                return f'{number}nd'
+        case 'fr':
+            if number == 1:
+                return f'{number}er'
+            else:
+                return f'{number}e'
+
+
 # Easter is the 1st Sunday after the 1st full moon after the March equinox
 # Passover is from 14 or 15 to 21 or 22 Nisan
 # March 22nd is the earliest date when Easter may occur

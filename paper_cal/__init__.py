@@ -9,6 +9,7 @@ from .paper_cal import (
     is_leap,
     last_moon,
     new_moon,
+    ordinal,
     passover,
     perihelion,
     spring,

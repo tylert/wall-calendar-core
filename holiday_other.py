@@ -18,6 +18,15 @@ from paper_cal import *
 def main(year):
     ''' '''
 
+    #   https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days.html
+    #   https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives.html
+    #   https://www.canada.ca/en/canadian-heritage/news/2022/01/statement-by-minister-hussen-on-raoul-wallenberg-day.html
+    #   https://www.canada.ca/fr/patrimoine-canadien/nouvelles/2022/01/declaration-du-ministrehussen-a-loccasion-de-la-journee-raoulwallenberg.html
+    #   https://en.wikipedia.org/wiki/Raoul_Wallenberg
+    #   https://fr.wikipedia.org/wiki/Raoul_Wallenberg
+    print(f'{date(year, JANUARY, 17)} Raoul Wallenburg Day')
+    # Journée Raoul Wallenberg
+
     #   https://en.wikipedia.org/wiki/Martin_Luther_King_Jr._Day
     #   https://fr.wikipedia.org/wiki/Martin_Luther_King_Day
     print(

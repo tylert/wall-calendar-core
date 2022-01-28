@@ -48,12 +48,3 @@
     MSG %"[babel("Pisces Rises", "Ascension des poissons")]%" %b%
   REM  Mar 20 +1 PRIORITY 0000 \
     MSG %"[babel("Pisces Sets", "Descension des poissons")]%" %b%
-
-  # Chinese/Lunar New Year is between Jan 21 and Feb 20 on the day after the
-  # new moon
-  REM  [trigger(moondate(0))] SATISFY 1
-  IF monnum(trigdate()) == January && day(trigdate()) >= 21 \
-  || monnum(trigdate()) == February && day(trigdate()) <= 20
-    REM  [trigger(trigdate())] +1 PRIORITY 0000 \
-      MSG %"Lunar New Year ([element_en()] [animal_en()] - [spin_en()])%" %b%
-  ENDIF

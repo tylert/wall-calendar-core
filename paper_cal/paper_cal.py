@@ -127,16 +127,31 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
         return found_date
 
 
+def weekly_date(start_date=date.today(), skip=LENGTH_OF_WEEK):
+    ''' '''
+
+    date_tracker = start_date
+    while True:
+        yield date_tracker
+        date_tracker += timedelta(skip)
+
+
 def ordinal(number, lang='en'):
     ''' '''
 
     #   https://docs.python.org/3.10/whatsnew/3.10.html#pep-634-structural-pattern-matching
     match lang:
         case 'en':
+            if number > 10 and number < 20:
+                return f'{number}th'
             if number % 10 == 1:
                 return f'{number}st'
-            else:
+            elif number % 10 == 2:
                 return f'{number}nd'
+            elif number % 10 == 3:
+                return f'{number}rd'
+            else:
+                return f'{number}th'
         case 'fr':
             if number == 1:
                 return f'{number}er'
@@ -339,7 +354,7 @@ EARTHLY_BRANCHES = [
 
 # Chinese New Year
 # https://humanoriginproject.com/the-chinese-calendar-how-to-calculate-chinese-new-year/
-# Chinese New Year falls between January 21 and February 21.
+# Chinese New Year falls between January 21 and February 20.
 # The precise date is the second new moon after the December solstice (December
 # 21).
 

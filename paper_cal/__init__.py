@@ -14,6 +14,7 @@ from .paper_cal import (
     perihelion,
     spring,
     summer,
+    weekly_date,
     winter,
 )
 
@@ -51,4 +52,11 @@ from .paper_cal import (
     SHEVAT,
     ADAR,
     ADAR_SHENI,
+)
+from .paper_cal import (
+    CHINESE_ZODIAC,
+    MAJOR_ELEMENTS,
+    SPINS,
+    HEAVENLY_STEMS,
+    EARTHLY_BRANCHES,
 )

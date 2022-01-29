@@ -6,11 +6,11 @@ VENV ?= .venv
 GENERATED_FILES =
 
 .SUFFIXES:
-.SUFFIXES: .yaml .conf .jq .json .rdt
-.PRECIOUS: .yaml .conf .jq
+.SUFFIXES: .py
+.PRECIOUS: .py
 
 .PHONY: all
-all: $(GENERATED_FILES)
+all: venv
 
 ACTIVATE_SCRIPT = $(VENV)/bin/activate
 .PHONY: venv

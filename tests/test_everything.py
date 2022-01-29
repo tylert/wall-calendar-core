@@ -34,12 +34,12 @@ class TestDays:
         assert days_in_month(APR, 2020) == 30
         assert days_in_month(MAY, 2020) == 31
         assert days_in_month(JUN, 2020) == 30
-        assert days_in_month(JULY, 2020) == 31
-        assert days_in_month(AUGUST, 2020) == 31
-        assert days_in_month(SEPTEMBER, 2020) == 30
-        assert days_in_month(OCTOBER, 2020) == 31
-        assert days_in_month(NOVEMBER, 2020) == 30
-        assert days_in_month(DECEMBER, 2020) == 31
+        assert days_in_month(JUL, 2020) == 31
+        assert days_in_month(AUG, 2020) == 31
+        assert days_in_month(SEP, 2020) == 30
+        assert days_in_month(OCT, 2020) == 31
+        assert days_in_month(NOV, 2020) == 30
+        assert days_in_month(DEC, 2020) == 31
 
         assert days_in_month(FEBRUARY, 2021) == 28
         assert days_in_month(FEBRUARY, 2022) == 28
@@ -96,6 +96,53 @@ class TestDays:
             assert closest_date(MONDAY, date(2020, 13, 32))
         with pytest.raises(TypeError):
             assert closest_date()
+
+    def test_ordinals(self):
+        assert ordinal(1) == '1st'
+        assert ordinal(2) == '2nd'
+        assert ordinal(3) == '3rd'
+        assert ordinal(4) == '4th'
+        assert ordinal(5) == '5th'
+        assert ordinal(6) == '6th'
+        assert ordinal(7) == '7th'
+        assert ordinal(8) == '8th'
+        assert ordinal(9) == '9th'
+        assert ordinal(10) == '10th'
+        assert ordinal(11) == '11th'
+        assert ordinal(12) == '12th'
+        assert ordinal(13) == '13th'
+        assert ordinal(14) == '14th'
+        assert ordinal(15) == '15th'
+        assert ordinal(16) == '16th'
+        assert ordinal(17) == '17th'
+        assert ordinal(18) == '18th'
+        assert ordinal(19) == '19th'
+        assert ordinal(20) == '20th'
+        assert ordinal(21) == '21st'
+        assert ordinal(22) == '22nd'
+        assert ordinal(23) == '23rd'
+        assert ordinal(24) == '24th'
+        assert ordinal(25) == '25th'
+
+        assert ordinal(51) == '51st'
+        assert ordinal(91) == '91st'
+        assert ordinal(52) == '52nd'
+        assert ordinal(92) == '92nd'
+        assert ordinal(53) == '53rd'
+        assert ordinal(93) == '93rd'
+        assert ordinal(54) == '54th'
+        assert ordinal(94) == '94th'
+
+        assert ordinal(1, lang='fr') == '1er'
+        assert ordinal(2, lang='fr') == '2e'
+        assert ordinal(3, lang='fr') == '3e'
+        assert ordinal(4, lang='fr') == '4e'
+        assert ordinal(5, lang='fr') == '5e'
+        assert ordinal(6, lang='fr') == '6e'
+        assert ordinal(7, lang='fr') == '7e'
+        assert ordinal(8, lang='fr') == '8e'
+        assert ordinal(9, lang='fr') == '9e'
+        assert ordinal(10, lang='fr') == '10e'
 
     def test_a_bunch_of_easters(self):
         assert easter(2020) == date(2020, APRIL, 12)

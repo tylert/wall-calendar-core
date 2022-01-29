@@ -39,7 +39,7 @@ def main(year):
     )  # Heure d'éte termine (sauf CA-SK)
 
     #   https://en.wikipedia.org/wiki/Friday_The_13th
-    friday = weekly_date(closest_date(FRIDAY, date(year, JANUARY, 4)))
+    friday = repeat_date(closest_date(FRIDAY, date(year, JANUARY, 4)))
     for week in range(1, 55):
         found = next(friday)
         if year == found.year and 13 == found.day:

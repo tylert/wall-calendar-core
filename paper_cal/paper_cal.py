@@ -127,7 +127,7 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
         return found_date
 
 
-def weekly_date(start_date=date.today(), skip=LENGTH_OF_WEEK):
+def repeat_date(start_date=date.today(), skip=LENGTH_OF_WEEK):
     ''' '''
 
     date_tracker = start_date
@@ -288,6 +288,23 @@ def last_moon(moon_date=date.today()):
 # https://en.wikipedia.org/wiki/Heavenly_Stems
 # https://en.wikipedia.org/wiki/Earthly_Branches
 
+# 年 (year)
+SPINS = [
+    '陽',  # yáng (white side) 阳
+    '陰',  # yīn (black side) 阴
+]  # year mod 2
+MAJOR_ELEMENTS = [
+    '金',  # jīn (metal)
+    '金',  # jīn (metal)
+    '水',  # shuǐ (water)
+    '水',  # shuǐ (water)
+    '木',  # mù (wood)
+    '木',  # mù (wood)
+    '火',  # huǒ (fire)
+    '火',  # huǒ (fire)
+    '土',  # tǔ (earth)
+    '土',  # tǔ (earth)
+]  # year mod 10
 CHINESE_ZODIAC = [
     '猴',  # hóu (monkey)
     '雞',  # jī (rooster) 鸡
@@ -302,33 +319,17 @@ CHINESE_ZODIAC = [
     '馬',  # mǎ (horse) 马
     '羊',  # yáng (goat)
 ]  # year mod 12
-MAJOR_ELEMENTS = [
-    '金',  # jīn (metal)
-    '金',  # jīn (metal)
-    '水',  # shuǐ (water)
-    '水',  # shuǐ (water)
-    '木',  # mù (wood)
-    '木',  # mù (wood)
-    '火',  # huǒ (fire)
-    '火',  # huǒ (fire)
-    '土',  # tǔ (earth)
-    '土',  # tǔ (earth)
-]  # year mod 10
-SPINS = [
-    '陽',  # yáng (white side) 阳
-    '陰',  # yīn (black side) 阴
-]  # year mod 2
 HEAVENLY_STEMS = [
-    '庚',  # gēng
-    '辛',  # xīn
-    '壬',  # rén
-    '癸',  # guǐ
-    '甲',  # jiǎ
-    '乙',  # yǐ
-    '丙',  # bǐng
-    '丁',  # dīng
-    '戊',  # wù
-    '己',  # jǐ
+    '庚',  # gēng (white metal)
+    '辛',  # xīn (wrought metal)
+    '壬',  # rén (black running water)
+    '癸',  # guǐ (stagnant water)
+    '甲',  # jiǎ (green shield wood)
+    '乙',  # yǐ (timber wood)
+    '丙',  # bǐng (red fire)
+    '丁',  # dīng (artificial fire)
+    '戊',  # wù (yellow earth)
+    '己',  # jǐ (pottery)
 ]  # year mod 10
 EARTHLY_BRANCHES = [
     '申',  # shēn
@@ -344,6 +345,18 @@ EARTHLY_BRANCHES = [
     '午',  # wǔ
     '未',  # wèi
 ]  # year mod 12
+CORRELATIONS = [
+    '西',  # (west)
+    '西',  # (west)
+    '北',  # (north)
+    '北',  # (north)
+    '東',  # (east)
+    '東',  # (east)
+    '南',  # (south)
+    '南',  # (south)
+    '中',  # (middle)
+    '中',  # (middle)
+]  # year mod 10
 
 
 # https://dateutil.readthedocs.io/en/stable/rrule.html
@@ -357,31 +370,6 @@ EARTHLY_BRANCHES = [
 # Chinese New Year falls between January 21 and February 20.
 # The precise date is the second new moon after the December solstice (December
 # 21).
-
-# 庚 = white metal (GENG)
-# 辛 = wrought metal (XIN)
-# 金 = metal (?)
-# 西 = west (?)
-
-# 壬 = black running water (REN)
-# 癸 = stagnant water (GUI)
-# 水 = water (?)
-# 北 = north (?)
-
-# 甲 = green shield wood (JIA)
-# 乙 = timber wood (YI)
-# 木 = wood (?)
-# 東 = east (?)
-
-# 丙 = red fire (BING)
-# 丁 = artificial fire (DING)
-# 火 = fire (?)
-# 南 = south (?)
-
-# 戊 = yellow earth (WU)
-# 己 = pottery (JI)
-# 土 = earth (?)
-# 中 = middle (?)
 
 # Zodiac
 # https://en.wikipedia.org/wiki/Astrological_symbols

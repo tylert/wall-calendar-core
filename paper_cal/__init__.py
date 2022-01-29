@@ -12,9 +12,9 @@ from .paper_cal import (
     ordinal,
     passover,
     perihelion,
+    repeat_date,
     spring,
     summer,
-    weekly_date,
     winter,
 )
 

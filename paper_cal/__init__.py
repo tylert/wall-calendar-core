@@ -5,6 +5,7 @@ from .paper_cal import (
     closest_date,
     repeat_date,
     ordinal,
+    heb_date,
 )
 from .paper_cal import (
     easter,
@@ -60,6 +61,6 @@ from .paper_cal import (
     KISLEV,
     TEVET,
     SHEVAT,
+    ADAR_I,
     ADAR,
-    ADAR_SHENI,
 )

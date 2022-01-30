@@ -4,6 +4,7 @@ from pymeeus.Epoch import Epoch
 from pymeeus.Sun import Sun
 from pymeeus.Earth import Earth
 from pymeeus.Moon import Moon
+from pyluach import dates
 
 
 (
@@ -34,12 +35,12 @@ LENGTH_OF_WEEK = 7  # days
     AV,
     ELUL,
     TISHREI,
-    CHESHVAN,
-    KISLEV,
+    CHESHVAN,  # 29 or 30 days
+    KISLEV,  # 30 or 29 days
     TEVET,
     SHEVAT,
     ADAR_I,  # Adar Aleph / Adar Rishon / Adar I
-    ADAR,    # Adar Bet / Adar Sheni / Adar II / Ve'Adar
+    ADAR,  # Adar Bet / Adar Sheni / Adar II / Ve'Adar
 ) = range(1, 14)
 DAYS_IN_HEB_MONTH = [-1, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30, 29]
 
@@ -280,6 +281,17 @@ def last_moon(moon_date=date.today()):
         Epoch(moon_date - timedelta(days=6)), target='last'
     ).get_full_date()
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
+
+
+def heb_date(
+    heb_month=dates.HebrewDate.today().month,
+    heb_day=dates.HebrewDate.today().day,
+    greg_year=date.today().year,
+):
+    ''' '''
+
+    heb_year = dates.HebrewDate.from_pydate(date(greg_year, 1, 1)).year
+    return dates.HebrewDate(year=heb_year, month=heb_month, day=heb_day).to_pydate()
 
 
 # Chinese/Lunar New Year is the 2nd new moon after the December solstice

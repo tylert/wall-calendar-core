@@ -1,4 +1,12 @@
-﻿::
+﻿Docs
+----
+
+* https://docs.python.org/3/library/datetime.html
+* https://docs.python.org/3/library/calendar.html
+* PyMeeus https://pymeeus.readthedocs.io/en/latest/
+* Pyluach https://pyluach.readthedocs.io/en/latest/
+
+::
 
     AU     Australia/Australie
     BD     Bangladesh/Bangladesh
@@ -27,7 +35,6 @@
 * https://github.com/jimblandy/spiral-calendar
 * https://georgexyz.com/python-calendar-app.html
 * https://github.com/lynxur/Kalender
-* https://docs.python.org/3/library/calendar.html
 * https://arrow.readthedocs.io/en/latest/index.html
 * http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/calendar/calendars/
 * http://stackoverflow.com/questions/7276017/producing-a-printable-calendar-with-python

@@ -110,17 +110,53 @@ def main(year):
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
 
-    # Passover begins on 14 or 15 Nisan and goes until 21 or 22 Nisan
+    #   https://en.wikipedia.org/wiki/Lunar_New_Year#Middle_East
+    #   https://fr.wikipedia.org/wiki/Nouvel_An_lunaire#Calendrier_h%C3%A9bra%C3%AFque
+    #   https://en.wikipedia.org/wiki/Nisan
+    #   https://fr.wikipedia.org/wiki/Nissan_(mois)
+    print(f'{heb_date(NISAN, 1, year)} Aviv')
+
     #   https://en.wikipedia.org/wiki/Passover
     #   https://fr.wikipedia.org/wiki/Pessa%27h
     #   https://en.wikipedia.org/wiki/Pascha
     #   https://en.wikipedia.org/wiki/Passover_(Christian_holiday)
     #   https://en.wikipedia.org/wiki/Passover_Seder
     #   https://fr.wikipedia.org/wiki/S%C3%A9der_de_Pessa%27h
-    print(f'{passover(year) - timedelta(days=1)} Passover')  # Pessa'h
+    #   https://en.wikipedia.org/wiki/Nisan
+    #   https://fr.wikipedia.org/wiki/Nissan_(mois)
+    # Passover begins on 14 or 15 Nisan and goes until 21 or 22 Nisan
+    print(f'{passover(year) - timedelta(days=1)} Passover Begins')  # Pessa'h
+    print(f'{heb_date(NISAN, 22, year)} Passover Ends')
     # Début de Pâque des Juifs
     # Fin de Pâque des Juifs
     # Passover = Pesach = Pascha = Jewish Easter
+
+    #   https://en.wikipedia.org/wiki/Rosh_Hashanah
+    #   https://fr.wikipedia.org/wiki/Roch_Hachana
+    #   https://en.wikipedia.org/wiki/Tishrei
+    #   https://fr.wikipedia.org/wiki/Tishri
+    print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah Begins')
+    print(f'{heb_date(TISHREI, 2, year)} Rosh Hashanah Ends')
+    # Jewish New Year
+    # Début de Roch Hachana
+    # Fin de Roch Hachana
+
+    #   https://en.wikipedia.org/wiki/Yom_Kippur
+    #   https://fr.wikipedia.org/wiki/Yom_Kippour
+    #   https://en.wikipedia.org/wiki/Tishrei
+    #   https://fr.wikipedia.org/wiki/Tishri
+    print(f'{heb_date(TISHREI, 10, year)} Yom Kippur')
+    # Yom Kippour
+
+    #   https://en.wikipedia.org/wiki/Sukkot
+    #   https://fr.wikipedia.org/wiki/Souccot
+    #   https://en.wikipedia.org/wiki/Tishrei
+    #   https://fr.wikipedia.org/wiki/Tishri
+    print(f'{heb_date(TISHREI, 15, year)} Sukkot Begins')
+    print(f'{heb_date(TISHREI, 21, year)} Sukkot Ends')
+    # Tabernacles
+    # Début de Souccot
+    # Fin de Souccot
 
     #   https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_nationale_du_Qu%C3%A9bec

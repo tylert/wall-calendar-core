@@ -16,7 +16,7 @@
 
     #   https://en.wikipedia.org/wiki/Shavuot
     #   https://fr.wikipedia.org/wiki/Chavouot
-    # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following (3rd month)
+    # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following
     [hebdate(6, "Sivan")]
       Shauvot Begins
     [hebdate(7, "Sivan")]
@@ -24,36 +24,9 @@
     # Début de Chavouot
     # Fin de Chavouot
 
-    #   https://en.wikipedia.org/wiki/Rosh_Hashanah
-    #   https://fr.wikipedia.org/wiki/Roch_Hachana
-    # Rosh Hashanah or Jewish New Year is 1 and 2 Tishrey (7th month)
-    [hebdate(1, "Tishrey")]
-      Rosh Hashanah Begins
-    [hebdate(2, "Tishrey")]
-      Rosh Hashanah Ends
-    # Début de Roch Hachana
-    # Fin de Roch Hachana
-
-    #   https://en.wikipedia.org/wiki/Yom_Kippur
-    #   https://fr.wikipedia.org/wiki/Yom_Kippour
-    # Yom Kippur is 10 Tishrey (7th month)
-    [hebdate(10, "Tishrey")]
-      Yom Kippur
-    # Yom Kippour
-
-    #   https://en.wikipedia.org/wiki/Sukkot
-    #   https://fr.wikipedia.org/wiki/Souccot
-    # Sukkot or Tabernacles is from 15 to 21 or 22 Tishrey (7th month)
-    [hebdate(15, "Tishrey")]
-      Sukkot Begins
-    [hebdate(22, "Tishrey")]
-      Sukkot Ends
-    # Début de Souccot
-    # Fin de Souccot
-
     #   https://en.wikipedia.org/wiki/Hanukkah
     #   https://fr.wikipedia.org/wiki/Hanoucca
-    # Hanukkah is from 25 Kislev (9th month) to 2 Tevet (10th month)
+    # Hanukkah is from 25 Kislev (9th month) to 2 Tevet
     [hebdate(25, "Kislev")]
       Hanukkah Begins
     [hebdate(2, "Tevet")]
@@ -63,7 +36,7 @@
 
     #   https://en.wikipedia.org/wiki/Purim
     #   https://fr.wikipedia.org/wiki/Pourim
-    # Purim is 14 Adar (12th month)
+    # Purim is 14 Adar
     [hebdate(14, "Adar")]
       Purim
     # Pourim

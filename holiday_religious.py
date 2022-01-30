@@ -110,13 +110,14 @@ def main(year):
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
 
+    # Passover begins on 14 or 15 Nisan and goes until 21 or 22 Nisan
     #   https://en.wikipedia.org/wiki/Passover
     #   https://fr.wikipedia.org/wiki/Pessa%27h
     #   https://en.wikipedia.org/wiki/Pascha
     #   https://en.wikipedia.org/wiki/Passover_(Christian_holiday)
     #   https://en.wikipedia.org/wiki/Passover_Seder
     #   https://fr.wikipedia.org/wiki/S%C3%A9der_de_Pessa%27h
-    print(f'{passover(year)} Passover Begins')  # Pessa'h
+    print(f'{passover(year) - timedelta(days=1)} Passover')  # Pessa'h
     # Début de Pâque des Juifs
     # Fin de Pâque des Juifs
     # Passover = Pesach = Pascha = Jewish Easter

@@ -38,9 +38,10 @@ LENGTH_OF_WEEK = 7  # days
     KISLEV,
     TEVET,
     SHEVAT,
-    ADAR,
-    ADAR_SHENI,
+    ADAR_I,  # Adar Aleph / Adar Rishon / Adar I
+    ADAR,    # Adar Bet / Adar Sheni / Adar II / Ve'Adar
 ) = range(1, 14)
+DAYS_IN_HEB_MONTH = [-1, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30, 29]
 
 LENGTH_OF_LUNAR_MONTH = 30
 (NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
@@ -159,7 +160,7 @@ def ordinal(number, lang='en'):
                 return f'{number}e'
 
 
-# Easter is the 1st Sunday after the 1st full moon after the March equinox
+# Easter is the Sunday after the full moon after the March (vernal) equinox
 # Passover is from 14 or 15 to 21 or 22 Nisan
 # March 22nd is the earliest date when Easter may occur
 # April 25nd is the latest date when Easter may occur
@@ -167,15 +168,14 @@ def ordinal(number, lang='en'):
 # ??? is the latest date when Passover may occur
 # XXX FIXME TODO  Get this info from wikipedia page???
 
-
-# Equinox/Équinoxe literally means "equal night"
-# Solstice literally means "sun stands still" (longest/shortest day)
-# March Equinox is the 1st Day of Spring/printemps in the Northern Hemisphere
-# June Solstice is the 1st Day of Summer/été in the Northern Hemisphere
-# September Equinox is the 1st Day of Fall/automne in the Northern Hemisphere
-# December Solstice is the 1st Day of Winter/hiver in the Northern Hemisphere
 # Perihelion/Périhélie is when the Earth is closest to the Sun
 # Aphelion/Aphélie is when the Earth is farthest from the Sun
+# Equinox/Équinoxe literally means "equal night"
+# Solstice literally means "Sun stands still" (longest/shortest day)
+# March Equinox is the 1st day of Spring/printemps in the Northern Hemisphere
+# June Solstice is the 1st day of Summer/été in the Northern Hemisphere
+# September Equinox is the 1st day of Fall/automne in the Northern Hemisphere
+# December Solstice is the 1st day of Winter/hiver in the Northern Hemisphere
 
 
 def easter(year=date.today().year):
@@ -190,6 +190,24 @@ def passover(year=date.today().year):
 
     month, day = Epoch.jewish_pesach(year)
     return date(year=year, month=month, day=day)
+
+
+def perihelion(year=date.today().year):
+    ''' '''
+
+    _, month, day, hour, minute, _ = Earth.perihelion_aphelion(
+        Epoch(date(year, JANUARY, 1)), perihelion=True
+    ).get_full_date()
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
+
+
+def aphelion(year=date.today().year):
+    ''' '''
+
+    _, month, day, hour, minute, _ = Earth.perihelion_aphelion(
+        Epoch(date(year, JULY, 1)), perihelion=False
+    ).get_full_date()
+    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
 def spring(year=date.today().year):
@@ -224,24 +242,6 @@ def winter(year=date.today().year):
 
     _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
         year, target='winter'
-    ).get_full_date()
-    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
-
-
-def perihelion(year=date.today().year):
-    ''' '''
-
-    _, month, day, hour, minute, _ = Earth.perihelion_aphelion(
-        Epoch(date(year, JANUARY, 1)), perihelion=True
-    ).get_full_date()
-    return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
-
-
-def aphelion(year=date.today().year):
-    ''' '''
-
-    _, month, day, hour, minute, _ = Earth.perihelion_aphelion(
-        Epoch(date(year, JULY, 1)), perihelion=False
     ).get_full_date()
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
@@ -282,82 +282,128 @@ def last_moon(moon_date=date.today()):
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
-# https://en.wikipedia.org/wiki/Chinese_zodiac
-# https://en.wikipedia.org/wiki/Chinese_astrology
-# https://en.wikipedia.org/wiki/Sexagenary_cycle
-# https://en.wikipedia.org/wiki/Heavenly_Stems
-# https://en.wikipedia.org/wiki/Earthly_Branches
+# Chinese/Lunar New Year is the 2nd new moon after the December solstice
+# January 21st is the earliest date when Lunar New Year may occur
+# February 20th is the latest date when Lunar New Year may occur
+#   https://en.wikipedia.org/wiki/Chinese_zodiac
+#   https://en.wikipedia.org/wiki/Chinese_astrology
+#   https://en.wikipedia.org/wiki/Sexagenary_cycle
+#   https://en.wikipedia.org/wiki/Heavenly_Stems
+#   https://en.wikipedia.org/wiki/Earthly_Branches
+#   https://humanoriginproject.com/the-chinese-calendar-how-to-calculate-chinese-new-year/
+
+
+def spin(year=date.today().year):
+    ''' '''
+
+    SPINS = [
+        '陽',  # yáng (white side) 阳
+        '陰',  # yīn (black side) 阴
+    ]
+
+    return SPINS[year % 2]
+
+
+def stem(year=date.today().year):
+    ''' '''
+
+    HEAVENLY_STEMS = [
+        '庚',  # gēng (white metal)
+        '辛',  # xīn (wrought metal)
+        '壬',  # rén (black running water)
+        '癸',  # guǐ (stagnant water)
+        '甲',  # jiǎ (green shield wood)
+        '乙',  # yǐ (cut timber)
+        '丙',  # bǐng (red fire)
+        '丁',  # dīng (artificial fire)
+        '戊',  # wù (yellow earth)
+        '己',  # jǐ (pottery)
+    ]
+
+    return HEAVENLY_STEMS[year % 10]
+
+
+def branch(year=date.today().year):
+    ''' '''
+
+    EARTHLY_BRANCHES = [
+        '申',  # shēn (monkey)
+        '酉',  # yǒu (rooster)
+        '戌',  # xū (dog)
+        '亥',  # hài (pig)
+        '子',  # zǐ (rat)
+        '丑',  # chǒu (ox)
+        '寅',  # yín (tiger)
+        '卯',  # mǎo (rabbit)
+        '辰',  # chén (dragon)
+        '巳',  # sì (snake)
+        '午',  # wǔ (horse)
+        '未',  # wèi (goat)
+    ]
+
+    return EARTHLY_BRANCHES[year % 12]
+
+
+def element(year=date.today().year):
+    ''' '''
+
+    MAJOR_ELEMENTS = [
+        '金',  # jīn (metal)
+        '金',  # jīn (metal)
+        '水',  # shuǐ (water)
+        '水',  # shuǐ (water)
+        '木',  # mù (wood)
+        '木',  # mù (wood)
+        '火',  # huǒ (fire)
+        '火',  # huǒ (fire)
+        '土',  # tǔ (earth)
+        '土',  # tǔ (earth)
+    ]
+
+    return MAJOR_ELEMENTS[year % 10]
+
+
+def animal(year=date.today().year):
+    ''' '''
+
+    CHINESE_ZODIAC = [
+        '猴',  # hóu (monkey)
+        '雞',  # jī (rooster) 鸡
+        '狗',  # gǒu (dog)
+        '豬',  # zhū (pig) 猪
+        '鼠',  # shǔ (rat)
+        '牛',  # niú (ox)
+        '虎',  # hǔ (tiger)
+        '兔',  # tù (rabbit)
+        '龍',  # lóng (dragon) 龙
+        '蛇',  # shé (snake)
+        '馬',  # mǎ (horse) 马
+        '羊',  # yáng (goat)
+    ]
+
+    return CHINESE_ZODIAC[year % 12]
+
+
+def correlation(year=date.today().year):
+    ''' '''
+
+    CORRELATIONS = [
+        '西',  # xī (west)
+        '西',  # xī (west)
+        '北',  # běi (north)
+        '北',  # běi (north)
+        '東',  # dōng (east) 东
+        '東',  # dōng (east) 东
+        '南',  # nán (south)
+        '南',  # nán (south)
+        '中',  # zhōng (middle)
+        '中',  # zhōng (middle)
+    ]
+
+    return CORRELATIONS[year % 10]
+
 
 # 年 (year)
-SPINS = [
-    '陽',  # yáng (white side) 阳
-    '陰',  # yīn (black side) 阴
-]  # year mod 2
-MAJOR_ELEMENTS = [
-    '金',  # jīn (metal)
-    '金',  # jīn (metal)
-    '水',  # shuǐ (water)
-    '水',  # shuǐ (water)
-    '木',  # mù (wood)
-    '木',  # mù (wood)
-    '火',  # huǒ (fire)
-    '火',  # huǒ (fire)
-    '土',  # tǔ (earth)
-    '土',  # tǔ (earth)
-]  # year mod 10
-CHINESE_ZODIAC = [
-    '猴',  # hóu (monkey)
-    '雞',  # jī (rooster) 鸡
-    '狗',  # gǒu (dog)
-    '豬',  # zhū (pig/boar) 猪
-    '鼠',  # shǔ (rat)
-    '牛',  # niú (ox)
-    '虎',  # hǔ (tiger)
-    '兔',  # tù (rabbit)
-    '龍',  # lóng (dragon) 龙
-    '蛇',  # shé (snake)
-    '馬',  # mǎ (horse) 马
-    '羊',  # yáng (goat)
-]  # year mod 12
-HEAVENLY_STEMS = [
-    '庚',  # gēng (white metal)
-    '辛',  # xīn (wrought metal)
-    '壬',  # rén (black running water)
-    '癸',  # guǐ (stagnant water)
-    '甲',  # jiǎ (green shield wood)
-    '乙',  # yǐ (timber wood)
-    '丙',  # bǐng (red fire)
-    '丁',  # dīng (artificial fire)
-    '戊',  # wù (yellow earth)
-    '己',  # jǐ (pottery)
-]  # year mod 10
-EARTHLY_BRANCHES = [
-    '申',  # shēn
-    '酉',  # yǒu
-    '戌',  # xū
-    '亥',  # hài
-    '子',  # zǐ
-    '丑',  # chǒu
-    '寅',  # yín
-    '卯',  # mǎo
-    '辰',  # chén
-    '巳',  # sì
-    '午',  # wǔ
-    '未',  # wèi
-]  # year mod 12
-CORRELATIONS = [
-    '西',  # (west)
-    '西',  # (west)
-    '北',  # (north)
-    '北',  # (north)
-    '東',  # (east)
-    '東',  # (east)
-    '南',  # (south)
-    '南',  # (south)
-    '中',  # (middle)
-    '中',  # (middle)
-]  # year mod 10
-
 
 # https://dateutil.readthedocs.io/en/stable/rrule.html
 
@@ -365,17 +411,8 @@ CORRELATIONS = [
 # https://rhodesmill.org/skyfield/examples.html#what-phase-is-the-moon-tonight
 # https://rhodesmill.org/skyfield/almanac.html#the-seasons
 
-# Chinese New Year
-# https://humanoriginproject.com/the-chinese-calendar-how-to-calculate-chinese-new-year/
-# Chinese New Year falls between January 21 and February 20.
-# The precise date is the second new moon after the December solstice (December
-# 21).
-
 # Zodiac
 # https://en.wikipedia.org/wiki/Astrological_symbols
-
-# Chinese/Lunar New Year is between Jan 21 and Feb 20 on the day after the
-# new moon
 
 # January
 #   Wolf Moon

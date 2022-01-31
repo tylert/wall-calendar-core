@@ -71,12 +71,17 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Mercredi_des_Cendres
     #   https://en.wikipedia.org/wiki/Palm_Sunday
     #   https://fr.wikipedia.org/wiki/Dimanche_des_Rameaux
+    #   https://en.wikipedia.org/wiki/Holy_Wednesday
+    #   https://fr.wikipedia.org/wiki/Mercredi_saint
     #   https://en.wikipedia.org/wiki/Maundy_Thursday
     #   https://fr.wikipedia.org/wiki/Jeudi_saint
     #   https://en.wikipedia.org/wiki/Good_Friday
     #   https://fr.wikipedia.org/wiki/Vendredi_saint
+    #   https://en.wikipedia.org/wiki/Holy_Saturday
+    #   https://fr.wikipedia.org/wiki/Samedi_saint
     #   https://en.wikipedia.org/wiki/Easter
     #   https://fr.wikipedia.org/wiki/P%C3%A2ques
+    #   https://en.wikipedia.org/wiki/Easter_Saturday
     #   https://en.wikipedia.org/wiki/Feast_of_the_Ascension
     #   https://fr.wikipedia.org/wiki/Ascension_(f%C3%AAte)
     #   https://en.wikipedia.org/wiki/Pentecost
@@ -97,11 +102,13 @@ def main(year):
         f'{easter(year) - timedelta(days=46)} Carnival/Ash Wednesday'
     )  # Mercredi des Cendres
     print(f'{easter(year) - timedelta(days=7)} Palm Sunday')  # Dimanche des Rameaux
+    print(f'{easter(year) - timedelta(days=4)} Holy Wednesday')  # Mercredi saint
     print(f'{easter(year) - timedelta(days=3)} Maundy Thursday')  # Jeudi saint
     print(f'{easter(year) - timedelta(days=2)} Good Friday')  # Vendredi saint
-    print(f'{easter(year) - timedelta(days=1)} Easter Saturday')
+    print(f'{easter(year) - timedelta(days=1)} Holy Saturday')  # Samedi saint
     print(f'{easter(year)} Easter Sunday')  # Dimanche de Pâques
     print(f'{easter(year) + timedelta(days=1)} Easter Monday')  # Lundi de Pâques
+    print(f'{easter(year) + timedelta(days=6)} Easter Saturday')
     print(f'{easter(year) + timedelta(days=39)} Ascension Day')  # Ascension
     print(
         f'{easter(year) + timedelta(days=49)} Whit Sunday/Pentecost Sunday'

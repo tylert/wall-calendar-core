@@ -18,32 +18,35 @@ from paper_cal import *
 def main(year):
     ''' '''
 
-    # XXX FIXME TODO  DST start/end times are different for UK, AT, etc.
-
-    # Daylight Savings Time starts on the 2nd Sunday in March
-    # Before 2007, old DST started on the 1st Sunday in April
-    # "Spring forward" at 0200h local time (except CA-SK)
-    #     EST -> UTC-04:00 -> Quebec (EST5EDT)
-    #     BST -> UTC+01:00 -> Alpha
+    #   https://en.wikipedia.org/wiki/Daylight_saving_time_by_country
+    #   https://en.wikipedia.org/wiki/Daylight_saving_time_in_Canada
+    # DST Begins = "Spring forward"
+    # DST Ends = "Fall back"
+    #     UTC-05:00 -> Romeo
+    #     UTC-04:00 -> Quebec
+    #     UTC+00:00 -> Zulu
+    #     UTC+01:00 -> Alpha
+    #     UTC+02:00 -> Bravo
     print(
-        f'{closest_date(SUNDAY, date(year, MARCH, WEEK2))} 02:00 Daylight Savings Time Begins (except CA-SK)'
-    )  # Heure d'éte commence (sauf CA-SK)
-
-    # Daylight Savings Time ends on the 1st Sunday in November
-    # Before 2007, old DST ended on the last Sunday in October
-    # "Fall back" at 0200h local time (except CA-SK)
-    #     EDT -> UTC-05:00 -> Romeo (EST5EDT)
-    #     GMT -> UTC+00:00 -> Zulu
+        f'{closest_date(SUNDAY, date(year, MARCH, WEEK2))} 02:00 Daylight Savings Time Begins (CA, US)'
+    )  # Heure d'éte commence (CA, US)
     print(
-        f'{closest_date(SUNDAY, date(year, NOVEMBER, WEEK1))} 02:00 Daylight Savings Time Ends (except CA-SK)'
-    )  # Heure d'éte termine (sauf CA-SK)
+        f'{closest_date(SUNDAY, date(year, MARCH, WEEK4), last=True)} 01:00Z Daylight Savings Time Begins (EU, UK)'
+    )  # Heure d'éte commence (EU, UK)
+    print(
+        f'{closest_date(SUNDAY, date(year, NOVEMBER, WEEK1))} 02:00 Daylight Savings Time Ends (CA, US)'
+    )  # Heure d'éte termine (CA, US)
+    print(
+        f'{closest_date(SUNDAY, date(year, OCTOBER, WEEK4), last=True)} 01:00Z Daylight Savings Time Ends (EU, UK)'
+    )  # Heure d'éte termine (EU, UK)
 
     #   https://en.wikipedia.org/wiki/Friday_The_13th
+    #   https://fr.wikipedia.org/wiki/Vendredi_treize
     friday = repeat_date(closest_date(FRIDAY, date(year, JANUARY, 4)))
     for week in range(1, 55):
         found = next(friday)
         if year == found.year and 13 == found.day:
-            print(f'{found} Friday the 13th')  # Le vendredi treize
+            print(f'{found} Friday the 13th')  # Vendredi treize
 
     #   https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days.html
     #   https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives.html

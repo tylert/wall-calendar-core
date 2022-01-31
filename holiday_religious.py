@@ -125,7 +125,7 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Nisan
     #   https://fr.wikipedia.org/wiki/Nissan_(mois)
     # Passover begins on 14 or 15 Nisan and goes until 21 or 22 Nisan
-    print(f'{passover(year) - timedelta(days=1)} Passover Begins')  # Pessa'h
+    print(f'{heb_date(NISAN, 14, year)} Passover Begins')  # Pessa'h
     print(f'{heb_date(NISAN, 22, year)} Passover Ends')
     # Début de Pâque des Juifs
     # Fin de Pâque des Juifs

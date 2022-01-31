@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, timedelta
 
 import pytest
 
@@ -158,6 +158,10 @@ class TestDays:
 
         for year in range(1, 5000):
             assert easter(year).month == MARCH or easter(year).month == APRIL
+
+    def test_passover(self):
+        assert passover(2022) - timedelta(days=1) == heb_date(NISAN, 14, 2022)
+        assert passover(2022) + timedelta(days=7) == heb_date(NISAN, 22, 2022)
 
 
 # class TestMoons:

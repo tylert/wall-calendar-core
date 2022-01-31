@@ -20,11 +20,11 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Epiphany_(holiday)
     #   https://fr.wikipedia.org/wiki/%C3%89piphanie
-    print(f'{date(year, JANUARY, 6)} Epiphany')  # Epiphanie
-
     #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord
     # Baptism of the Lord is the 1st Sunday after January 6th
     # Jesus
+    print(f'{date(year, JANUARY, 6)} Epiphany')  # Epiphanie
+    print(f'{closest_date(SUNDAY, date(year, JANUARY, 10))} Baptism of the Lord')
 
     #   https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
     #   https://fr.wikipedia.org/wiki/Conversion_de_Paul
@@ -133,6 +133,7 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Shavuot
     #   https://fr.wikipedia.org/wiki/Chavouot
+    #   XXX FIXME TODO  Add more links!!!
     # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following
     print(f'{heb_date(SIVAN, 6, year)} Shauvot Begins')  # Début de Chavouot
     print(f'{heb_date(SIVAN, 7, year)} Shauvot Ends')  # Fin de Chavouot
@@ -163,6 +164,7 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Hanukkah
     #   https://fr.wikipedia.org/wiki/Hanoucca
+    #   XXX FIXME TODO  Add more links!!!
     print(f'{heb_date(KISLEV, 25, year)} Hanukkah Begins')
     print(f'{heb_date(TEVET, 2, year)} Hanukkah Ends')
     # Début de Hanoucca
@@ -170,6 +172,8 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Purim
     #   https://fr.wikipedia.org/wiki/Pourim
+    #   XXX FIXME TODO  Add more links!!!
+    #   XXX FIXME TODO  What happens when the year is "short"???
     # print(f'{heb_date(ADAR, 14, year)} Purim')  # Pourim
 
     #   https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day

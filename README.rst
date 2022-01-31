@@ -73,7 +73,6 @@ February?
   Intercalary Days begin (Baha'i)
 
 March?
-  St. David of Wales (Christian)
   Intercalary Days end (Baha'i)
   Nineteen Day Fast (Baha'i)
   Transfiguration Sunday (Christian)
@@ -104,7 +103,6 @@ April?
   Lailat al Bara'ah (Islam)
   First Day of Ridvan (Baha'i)
   Holy Friday (Orthodox)
-  Pascha (Orthodox)
   Ninth Day of Ridvan (Baha'i)
 
 May?
@@ -153,13 +151,10 @@ September?
   Paryushana Parva (Jain)
   Nativity of Virgin Mary (Christian)
   Ashura (Islam)
-  Rosh Hashanah (Jewish)
 
 October?
   Saint Francis Day (Catholic)
   Dasara (Hindu)
-  Yom Kippur (Jewish)
-  Sukkot (Jewish)
   Karwa Chauth (Hindu)
   Birth of the Báb (Baha'i)
   Installation of Scriptures as Guru Granth (Sikh)
@@ -186,7 +181,6 @@ December?
   Feast of the Nativity (Orthodox)
   Zarathosht Diso (Zoroastrian)
   Holy Innocents (Christian)
-  Hanukkah (Jewish)
 
 Quadrantids                 28 Dec to 12 Jan   4 Jan
 Daytime Capri.-Sagitt.      13 Jan to 29 Feb   2 Feb

@@ -26,7 +26,7 @@ def main(year):
     #     EST -> UTC-04:00 -> Quebec (EST5EDT)
     #     BST -> UTC+01:00 -> Alpha
     print(
-        f'{closest_date(SUNDAY, date(year, MARCH, WEEK2))} Daylight Savings Time Begins (except CA-SK)'
+        f'{closest_date(SUNDAY, date(year, MARCH, WEEK2))} 02:00 Daylight Savings Time Begins (except CA-SK)'
     )  # Heure d'éte commence (sauf CA-SK)
 
     # Daylight Savings Time ends on the 1st Sunday in November
@@ -35,7 +35,7 @@ def main(year):
     #     EDT -> UTC-05:00 -> Romeo (EST5EDT)
     #     GMT -> UTC+00:00 -> Zulu
     print(
-        f'{closest_date(SUNDAY, date(year, NOVEMBER, WEEK1))} Daylight Savings Time Ends (except CA-SK)'
+        f'{closest_date(SUNDAY, date(year, NOVEMBER, WEEK1))} 02:00 Daylight Savings Time Ends (except CA-SK)'
     )  # Heure d'éte termine (sauf CA-SK)
 
     #   https://en.wikipedia.org/wiki/Friday_The_13th
@@ -229,7 +229,7 @@ def main(year):
     print(f'{date(year, JUNE, 1)} {ordinal(year - 1969)} Birthday of Unix')
     print(f'{date(year, JUNE, 19)} {ordinal(year - 1984)} Birthday of X-Windows')
     print(f'{date(year, JUNE, 19)} {ordinal(year - 1993)} Birthday of FreeBSD')
-    print(f'{date(year, JUNE, 21)} 1100h {ordinal(year - 1948)} Birthday of Software')
+    print(f'{date(year, JUNE, 21)} 11:00 {ordinal(year - 1948)} Birthday of Software')
     print(f'{date(year, JUNE, 7)} {ordinal(year - 2014)} Birthday of Kubernetes')
     print(f'{date(year, JULY, 16)} {ordinal(year - 1993)} Birthday of Slackware')
     print(f'{date(year, AUGUST, 1)} {ordinal(year - 1998)} Birthday of IRC')

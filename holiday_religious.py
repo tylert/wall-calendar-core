@@ -131,6 +131,12 @@ def main(year):
     # Fin de Pâque des Juifs
     # Passover = Pesach = Pascha = Jewish Easter
 
+    #   https://en.wikipedia.org/wiki/Shavuot
+    #   https://fr.wikipedia.org/wiki/Chavouot
+    # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following
+    print(f'{heb_date(SIVAN, 6, year)} Shauvot Begins')  # Début de Chavouot
+    print(f'{heb_date(SIVAN, 7, year)} Shauvot Ends')  # Fin de Chavouot
+
     #   https://en.wikipedia.org/wiki/Rosh_Hashanah
     #   https://fr.wikipedia.org/wiki/Roch_Hachana
     #   https://en.wikipedia.org/wiki/Tishrei
@@ -145,18 +151,26 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Yom_Kippour
     #   https://en.wikipedia.org/wiki/Tishrei
     #   https://fr.wikipedia.org/wiki/Tishri
-    print(f'{heb_date(TISHREI, 10, year)} Yom Kippur')
-    # Yom Kippour
+    print(f'{heb_date(TISHREI, 10, year)} Yom Kippur')  # Yom Kippour
 
     #   https://en.wikipedia.org/wiki/Sukkot
     #   https://fr.wikipedia.org/wiki/Souccot
     #   https://en.wikipedia.org/wiki/Tishrei
     #   https://fr.wikipedia.org/wiki/Tishri
-    print(f'{heb_date(TISHREI, 15, year)} Sukkot Begins')
-    print(f'{heb_date(TISHREI, 21, year)} Sukkot Ends')
-    # Tabernacles
-    # Début de Souccot
-    # Fin de Souccot
+    print(f'{heb_date(TISHREI, 15, year)} Sukkot Begins')  # Début de Souccot
+    print(f'{heb_date(TISHREI, 21, year)} Sukkot Ends')  # Fin de Souccot
+    # a.k.a. Tabernacles
+
+    #   https://en.wikipedia.org/wiki/Hanukkah
+    #   https://fr.wikipedia.org/wiki/Hanoucca
+    print(f'{heb_date(KISLEV, 25, year)} Hanukkah Begins')
+    print(f'{heb_date(TEVET, 2, year)} Hanukkah Ends')
+    # Début de Hanoucca
+    # Fin de Hanoucca
+
+    #   https://en.wikipedia.org/wiki/Purim
+    #   https://fr.wikipedia.org/wiki/Pourim
+    # print(f'{heb_date(ADAR, 14, year)} Purim')  # Pourim
 
     #   https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_nationale_du_Qu%C3%A9bec

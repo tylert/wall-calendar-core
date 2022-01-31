@@ -13,30 +13,3 @@
     Jun 11
       William Davis Miners' Memorial Day (CA-NS)
     # Journée commémorative des mineurs (CA-NS)
-
-    #   https://en.wikipedia.org/wiki/Shavuot
-    #   https://fr.wikipedia.org/wiki/Chavouot
-    # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following
-    [hebdate(6, "Sivan")]
-      Shauvot Begins
-    [hebdate(7, "Sivan")]
-      Shauvot Ends
-    # Début de Chavouot
-    # Fin de Chavouot
-
-    #   https://en.wikipedia.org/wiki/Hanukkah
-    #   https://fr.wikipedia.org/wiki/Hanoucca
-    # Hanukkah is from 25 Kislev (9th month) to 2 Tevet
-    [hebdate(25, "Kislev")]
-      Hanukkah Begins
-    [hebdate(2, "Tevet")]
-      Hanukkah Ends
-    # Début de Hanoucca
-    # Fin de Hanoucca
-
-    #   https://en.wikipedia.org/wiki/Purim
-    #   https://fr.wikipedia.org/wiki/Pourim
-    # Purim is 14 Adar
-    [hebdate(14, "Adar")]
-      Purim
-    # Pourim

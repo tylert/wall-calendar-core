@@ -161,6 +161,21 @@ def ordinal(number, lang='en'):
                 return f'{number}e'
 
 
+def heb_date(
+    heb_month=dates.HebrewDate.today().month,
+    heb_day=dates.HebrewDate.today().day,
+    greg_year=date.today().year,
+):
+    ''' '''
+
+    if heb_month >= TISHREI:
+        heb_year = dates.HebrewDate.from_pydate(date(greg_year, JANUARY, 1)).year + 1
+    else:
+        heb_year = dates.HebrewDate.from_pydate(date(greg_year, JANUARY, 1)).year
+
+    return dates.HebrewDate(year=heb_year, month=heb_month, day=heb_day).to_pydate()
+
+
 # Easter is the Sunday after the full moon after the March (vernal) equinox
 # Passover is from 14 or 15 to 21 or 22 Nisan
 # March 22nd is the earliest date when Easter may occur
@@ -281,17 +296,6 @@ def last_moon(moon_date=date.today()):
         Epoch(moon_date - timedelta(days=6)), target='last'
     ).get_full_date()
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
-
-
-def heb_date(
-    heb_month=dates.HebrewDate.today().month,
-    heb_day=dates.HebrewDate.today().day,
-    greg_year=date.today().year,
-):
-    ''' '''
-
-    heb_year = dates.HebrewDate.from_pydate(date(greg_year, 1, 1)).year
-    return dates.HebrewDate(year=heb_year, month=heb_month, day=heb_day).to_pydate()
 
 
 # Chinese/Lunar New Year is the 2nd new moon after the December solstice

@@ -1,50 +1,26 @@
 # Signs of the Zodiac
 
-  REM  Mar 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Aries Rises", "Ascension du bélier")]%" %b%
-  REM  Apr 19 +1 PRIORITY 0000 \
-    MSG %"[babel("Aries Sets", "Descension du bélier")]%" %b%
-  REM  Apr 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Taurus Rises", "Ascension du taureau")]%" %b%
-  REM  May 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Taurus Sets", "Descension du taureau")]%" %b%
-  REM  May 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Gemini Rises", "Ascension des gémeaux")]%" %b%
-  REM  Jun 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Gemini Sets", "Descension des gémeaux")]%" %b%
-  REM  Jun 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Cancer Rises", "Ascension du cancer")]%" %b%
-  REM  Jul 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Cancer Sets", "Descension du cancer")]%" %b%
-  REM  Jul 23 +1 PRIORITY 0000 \
-    MSG %"[babel("Leo Rises", "Ascension du lion")]%" %b%
-  REM  Aug 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Leo Sets", "Descension du lion")]%" %b%
-  REM  Aug 23 +1 PRIORITY 0000 \
-    MSG %"[babel("Virgo Rises", "Ascension de la vierge")]%" %b%
-  REM  Sep 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Virgo Sets", "Descension de la vierge")]%" %b%
-  REM  Sep 23 +1 PRIORITY 0000 \
-    MSG %"[babel("Libra Rises", "Ascension de la balance")]%" %b%
-  REM  Oct 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Libra Sets", "Descension de la balance")]%" %b%
-  REM  Oct 23 +1 PRIORITY 0000 \
-    MSG %"[babel("Scorpio Rises", "Ascension du scorpion")]%" %b%
-  REM  Nov 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Scorpio Sets", "Descension du scorpion")]%" %b%
-  REM  Nov 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Sagittarius Rises", "Ascension du sagittaire")]%" %b%
-  REM  Dec 21 +1 PRIORITY 0000 \
-    MSG %"[babel("Sagittarius Sets", "Descension du sagittaire")]%" %b%
-  REM  Dec 22 +1 PRIORITY 0000 \
-    MSG %"[babel("Capricorn Rises", "Ascension du capricorne")]%" %b%
-  REM  Jan 19 +1 PRIORITY 0000 \
-    MSG %"[babel("Capricorn Sets", "Descension du capricorne")]%" %b%
-  REM  Jan 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Aquarius Rises", "Ascension du verseau")]%" %b%
-  REM  Feb 18 +1 PRIORITY 0000 \
-    MSG %"[babel("Aquarius Sets", "Descension du verseau")]%" %b%
-  REM  Feb 19 +1 PRIORITY 0000 \
-    MSG %"[babel("Pisces Rises", "Ascension des poissons")]%" %b%
-  REM  Mar 20 +1 PRIORITY 0000 \
-    MSG %"[babel("Pisces Sets", "Descension des poissons")]%" %b%
+  MAR 21 Aries Rises  # Ascension du bélier
+  APR 19 Aries Sets  # Descension du bélier
+  APR 20 Taurus Rises  # Ascension du taureau
+  MAY 20 Taurus Sets  # Descension du taureau
+  MAY 21 Gemini Rises  # Ascension des gémeaux
+  JUN 20 Gemini Sets  # Descension des gémeaux
+  JUN 21 Cancer Rises  # Ascension du cancer
+  JUL 22 Cancer Sets  # Descension du cancer
+  JUL 23 Leo Rises  # Ascension du lion
+  AUG 22 Leo Sets  # Descension du lion
+  AUG 23 Virgo Rises  # Ascension de la vierge
+  SEP 22 Virgo Sets  # Descension de la vierge
+  SEP 23 Libra Rises  # Ascension de la balance
+  OCT 22 Libra Sets  # Descension de la balance
+  OCT 23 Scorpio Rises  # Ascension du scorpion
+  NOV 21 Scorpio Sets  # Descension du scorpion
+  NOV 22 Sagittarius Rises  # Ascension du sagittaire
+  DEC 21 Sagittarius Sets  # Descension du sagittaire
+  DEC 22 Capricorn Rises  # Ascension du capricorne
+  JAN 19 Capricorn Sets  # Descension du capricorne
+  JAN 20 Aquarius Rises  # Ascension du verseau
+  FEB 18 Aquarius Sets  # Descension du verseau
+  FEB 19 Pisces Rises  # Ascension des poissons
+  MAR 20 Pisces Sets  # Descension des poissons

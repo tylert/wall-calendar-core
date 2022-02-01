@@ -1,81 +1,40 @@
-# Remote geeky events
-
   #   https://www.defcon.org/
   # DEF CON is (usually) over the first weekend in August since 1993
-  Thu Aug [Week_2]
-    DEF CON 1993
+  THU AUG WEEK2 DEF CON 1993
 
-  Feb 05
-    1944 Birthday of Colossus I
-  Jun 06
-    1944 Anniversary of D-Day
-  Aug 13
-    1961 Year Since Creation of Berlin Wall
-  Aug 14
-    Navajo Code-Talker's Day (US)
-  Nov 09
-    1989 Year Since Felling of Berlin Wall
-  Dec 07
-    1941 Anniversary of Pearl Harbour
+  FEB 05 1944 Birthday of Colossus I
+  JUN 06 1944 Anniversary of D-Day
+  AUG 13 1961 Year Since Creation of Berlin Wall
+  AUG 14 Navajo Code-Talker's Day (US)
+  NOV 09 1989 Year Since Felling of Berlin Wall
+  DEC 07 1941 Anniversary of Pearl Harbour
 
-  Jul 14
-    Tape Measure Day
-  Aug 13
-    Left-Handers' Day
-  Sep 19
-    Talk-Like-A-Pirate Day
+  JUL 14 Tape Measure Day
+  AUG 13 Left-Handers' Day
+  SEP 19 Talk-Like-A-Pirate Day
 
   #   https://www.nintendo.com/whatsnew/detail/nintendo-celebrates-mar10-day-by-bringing-smiles-to-people-of-all-ages
-  Mar 10 MAR10 Day
-  # Jour MAR10
+  MAR 10 MAR10 Day  # Jour MAR10
 
   # NTP 32-bit Timestamp 32-bit Overflow at 06:28:16 UTC on Feb 7th, 2036
   # POSIX Time began at 00:00:00 UTC on Thu, Jan 1st, 1970
   # POSIX Time Signed 32-bit Overflow at 03:14:07 UTC on Tue, Jan 19th, 2038
   # POSIX Time Unsigned 32-bit Overflow at 06:28:15 UTC on Sun, Feb 7th, 2106
-  Feb 07 2036 0128h
-    NTP Timestamp 32-bit Overflow (EST5EDT)
-  Jan 18 2038 2214h
-    POSIX Time Signed 32-bit Overflow (EST5EDT)
-  Feb 07 2106 0128h
-    POSIX Time Unsigned 32-bit Overflow (EST5EDT)
+  FEB 07 2036 0128h NTP Timestamp 32-bit Overflow (EST5EDT)
+  JAN 18 2038 2214h POSIX Time Signed 32-bit Overflow (EST5EDT)
 
-  Jul 20
-    1969 Anniversary of First Lunar Landing
-  Aug 07 2027
-    1999 AN10 Fly-by
-  Nov 20
-    1998 Anniversary of ISS Launch
-  Dec 19
-    1972 Anniversary of Last Lunar Landing
+  JUL 20 1969 Anniversary of First Lunar Landing
+  NOV 20 1998 Anniversary of ISS Launch
+  DEC 19 1972 Anniversary of Last Lunar Landing
 
-  Jan 12
-    1992 Birthday of HAL9000
-  May 04 Star Wars Day
-  May 25 Towel Day
-  Sep 08
-    1966 Birthday of Star Trek
-  Nov 22
-    1963 Birthday of Dr. Who
-
-  #   https://en.wikipedia.org/wiki/Blue_Monday_%28date%29
-  Mon Jan [Week_3]
-    Blue Monday
+  JAN 12 1992 Birthday of HAL9000
+  MAY 04 Star Wars Day
+  MAY 25 Towel Day
+  SEP 08 1966 Birthday of Star Trek
+  NOV 22 1963 Birthday of Dr. Who
 
   #   https://en.wikipedia.org/wiki/No_Pants_Day
-  Fri May [Week_1]
-    No Pants Day
-
-  #   https://en.wikipedia.org/wiki/International_Cat_Day
-  #   https://en.wikipedia.org/wiki/National_Cat_Day
-  # Caturday
-  Feb 17
-    World Cat Day (EU)
-  Aug 08
-    International Cat Day
-  Oct 29
-    National Cat Day (US)
+  FRI MAY WEEK1 No Pants Day
 
   #   https://www.timeanddate.com/holidays/fun/sandwich-day
-  Nov 03
-    Sandwich Day
+  NOV 03 Sandwich Day

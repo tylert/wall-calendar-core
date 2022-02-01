@@ -18,6 +18,15 @@ from paper_cal import *
 def main(year):
     ''' '''
 
+    #   https://en.wikipedia.org/wiki/(137108)_1999_AN10
+    #   https://fr.wikipedia.org/wiki/(137108)_1999_AN10
+    #   https://en.wikipedia.org/wiki/(35396)_1997_XF11
+    #   https://fr.wikipedia.org/wiki/(35396)_1997_XF11
+    if 2027 == year:
+        print(f'{date(year, AUGUST, 7)} 06:48 1999 AN10 Asteroid Pass')
+    if 2028 == year:
+        print(f'{date(year, OCTOBER, 26)} 06:44 1997 XF11 Asteroid Pass')
+
     #   https://en.wikipedia.org/wiki/Daylight_saving_time_by_country
     #   https://en.wikipedia.org/wiki/Daylight_saving_time_in_Canada
     # DST Begins = "Spring forward"
@@ -178,6 +187,18 @@ def main(year):
     # Feast Day of St. Isodore (ES)
     # Feast of St. James the Apostle (ES)
     # La Almudena (ES)
+
+    #   https://en.wikipedia.org/wiki/International_Cat_Day
+    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat
+    #   https://en.wikipedia.org/wiki/National_Cat_Day
+    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_du_chat
+    # Caturday!!!
+    print(f'{date(year, FEBRUARY, 17)} National Cat Day (BR, IT)')
+    print(f'{date(year, FEBRUARY, 22)} National Cat Day (JP)')
+    print(f'{date(year, MARCH, 1)} National Cat Day (RU)')
+    print(f'{date(year, AUGUST, 8)} National Cat Day (CA)')
+    print(f'{date(year, AUGUST, 8)} International Cat Day')
+    print(f'{date(year, OCTOBER, 29)} National Cat Day (US)')
 
     #   https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day
     print(f'{date(year, JUNE, 28)} INTERNATIONAL CAPS LOCK DAY')

@@ -18,6 +18,13 @@ from paper_cal import *
 def main(year):
     ''' '''
 
+    # XXX FIXME TODO  Do a much better job with the moon phases!!!
+    for month in range(1, 13):
+        print(f'{new_moon(date(year, month, 16)).date()} New Moon')
+        print(f'{first_moon(date(year, month, 16)).date()} First Moon')
+        print(f'{full_moon(date(year, month, 16)).date()} Full Moon')
+        print(f'{last_moon(date(year, month, 16)).date()} Last Moon')
+
     #   https://en.wikipedia.org/wiki/Epiphany_(holiday)
     #   https://fr.wikipedia.org/wiki/%C3%89piphanie
     #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord

@@ -103,7 +103,7 @@ def days_in_month(month=date.today().month, year=date.today().year):
 def closest_date(desired_weekday, nearby_date=date.today(), last=False):
     ''' '''
 
-    # Move the nearby_date to the end of the month
+    # Jump straight to the end of the current month
     if last:
         nearby_date = date(
             year=nearby_date.year,
@@ -111,18 +111,19 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
             day=days_in_month(month=nearby_date.month, year=nearby_date.year),
         )
 
-    # Determine how far away we are from our desired weekday
+    # Find the offset from here to our desired weekday
     offset = nearby_date.weekday() - (desired_weekday % LENGTH_OF_WEEK)
 
-    # Force the offset back into the current week if it is too large
+    # Ensure the offset always exists within the current week
     if offset < -3:
         offset += LENGTH_OF_WEEK
     if offset > 3:
         offset -= LENGTH_OF_WEEK
 
+    # Jump to the desired weekday
     found_date = nearby_date - timedelta(days=offset)
 
-    # Jump back into the correct month if we managed to leave it
+    # Jump back into the previous month if we managed to leave it
     if last and found_date.month != nearby_date.month:
         return found_date - timedelta(days=LENGTH_OF_WEEK)
     else:

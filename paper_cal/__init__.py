@@ -6,6 +6,7 @@ from .paper_cal import (
     repeat_date,
     ordinal,
     heb_date,
+    isl_date,
 )
 from .paper_cal import (
     easter,
@@ -63,4 +64,18 @@ from .paper_cal import (
     SHEVAT,
     ADAR_I,
     ADAR,
+)
+from .paper_cal import (
+    MUHARRAM,
+    SAFAR,
+    RABI_AL_AWWAL,
+    RABI_AL_THANI,
+    JUMADA_AL_AWWAL,
+    JUMADA_AL_THANI,
+    RAJAB,
+    SHAABAN,
+    RAMADAN,
+    SHAWWAL,
+    DHU_AL_QADAH,
+    DHU_AL_HIJJAH,
 )

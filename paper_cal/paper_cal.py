@@ -44,6 +44,21 @@ LENGTH_OF_WEEK = 7  # days
 ) = range(1, 14)
 DAYS_IN_HEB_MONTH = [-1, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30, 29]
 
+(
+    MUHARRAM,
+    SAFAR,
+    RABI_AL_AWWAL,
+    RABI_AL_THANI,
+    JUMADA_AL_AWWAL,
+    JUMADA_AL_THANI,
+    RAJAB,
+    SHAABAN,
+    RAMADAN,
+    SHAWWAL,
+    DHU_AL_QADAH,
+    DHU_AL_HIJJAH,
+) = range(1, 13)
+
 LENGTH_OF_LUNAR_MONTH = 30
 (NEW_MOON, FIRST_QUARTER_MOON, FULL_MOON, LAST_QUARTER_MOON) = (0, 8, 15, 22)
 
@@ -169,12 +184,31 @@ def heb_date(
 ):
     ''' '''
 
+    # Find out if this date falls into a new year or not
     if heb_month >= TISHREI:
         heb_year = dates.HebrewDate.from_pydate(date(greg_year, JANUARY, 1)).year + 1
     else:
         heb_year = dates.HebrewDate.from_pydate(date(greg_year, JANUARY, 1)).year
 
     return dates.HebrewDate(year=heb_year, month=heb_month, day=heb_day).to_pydate()
+
+
+def isl_date(
+    isl_month=Epoch.gregorian2moslem(
+        date.today().year, date.today().month, date.today().day
+    )[1],
+    isl_day=Epoch.gregorian2moslem(
+        date.today().year, date.today().month, date.today().day
+    )[2],
+    greg_year=date.today().year,
+):
+    ''' '''
+
+    isl_year, _, _ = Epoch.gregorian2moslem(greg_year, JANUARY, 16)
+
+    _, greg_month, greg_day = Epoch.moslem2gregorian(isl_year, isl_month, isl_day)
+
+    return date(year=greg_year, month=greg_month, day=greg_day)
 
 
 # Easter is the Sunday after the full moon after the March (vernal) equinox

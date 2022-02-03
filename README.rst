@@ -50,10 +50,6 @@
   Vaisakhi (April?)
   Vesak (May or April;  on full moon)
 
-  Ramadan is from 1 to 29 or 30 Ramadan (9th month)
-  Eid al-Fitr is 1 Shawwal (10th month)
-  Eid al-Adha is from 10 to 13 Dhu al-Hijjah (12th month)
-
 January?
   Feast of St. Basil (Orthodox)
   Gantan-sai (Shinto)
@@ -108,7 +104,6 @@ April?
 May?
   Last Day of Ridvan (Baha'i)
   Yom HaShoah (Jewish)
-  Ramadan begins (Islam)
   Yom Ha'Atzmaut (Jewish)
   Visakha Puja (Buddhist)
   Declaration of the Bab (Baha'i)
@@ -118,7 +113,6 @@ May?
 
 June?
   Lailat al Kadr (Islam)
-  Eid al Fitr (Islam)
   Ascension of Jesus (Orthodox)
   Guru Arjan Dev Martyrdom (Sikh)
   All Saints (Orthodox)
@@ -138,7 +132,6 @@ August?
   Transfiguration of the Lord (Orthodox)
   Tish'a B'Av (Jewish)
   Waqf al Arafa Hajj Day (Islam)
-  Eid al Adha (Islam)
   Assumption of the Blessed Virgin Mary (Catholic)
   Dormition of the Theotokos (Orthodox)
   Raksha Bandhan (Hindu)

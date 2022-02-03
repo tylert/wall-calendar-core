@@ -190,6 +190,22 @@ def main(year):
     #   XXX FIXME TODO  What happens when the year is "short"???
     # print(f'{heb_date(ADAR, 14, year)} Purim')  # Pourim
 
+    #   https://en.wikipedia.org/wiki/Ramadan
+    #   https://fr.wikipedia.org/wiki/Ramadan
+    #   https://en.wikipedia.org/wiki/Eid_al-Fitr
+    #   https://fr.wikipedia.org/wiki/A%C3%AFd_el-Fitr
+    #   https://en.wikipedia.org/wiki/Ramadan_(calendar_month)
+    #   https://en.wikipedia.org/wiki/Shawwal
+    #   https://fr.wikipedia.org/wiki/Chawwal
+    print(f'{isl_date(RAMADAN, 1, year)} Month of Ramadan Begins')
+    print(f'{isl_date(SHAWWAL, 1, year)} Eid al-Fitr Begins')
+
+    #   https://en.wikipedia.org/wiki/Eid_al-Adha
+    #   https://fr.wikipedia.org/wiki/A%C3%AFd_al-Adha
+    #   https://en.wikipedia.org/wiki/Dhu_al-Hijjah
+    #   https://fr.wikipedia.org/wiki/Dhou_al-hijja
+    print(f'{isl_date(DHU_AL_HIJJAH, 10, year)} Eid al-Adha Begins')
+
     #   https://en.wikipedia.org/wiki/Saint-Jean-Baptiste_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_nationale_du_Qu%C3%A9bec
     #   https://en.wikipedia.org/wiki/John_the_Baptist

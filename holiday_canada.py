@@ -71,7 +71,7 @@ def main(year):
     # Heritage Day (CA-YT) is the Friday before the last Sunday in February
     #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
     print(
-        f'{closest_date(SUNDAY, date(year, FEBRUARY, WEEK4), last=True) - timedelta(days=2)} Heritage Day (CA-YT))'
+        f'{closest_date(SUNDAY, date(year, FEBRUARY, WEEK4), last=True) - timedelta(days=2)} Heritage Day (CA-YT)'
     )  # Jour de patrimoine / Fête du patrimoine (CA-YT)
 
     #   https://en.wikipedia.org/wiki/Commonwealth_Day

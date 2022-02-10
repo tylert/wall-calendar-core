@@ -347,6 +347,10 @@ def last_moon(moon_date=date.today()):
 def spin(year=date.today().year):
     ''' '''
 
+    # even numbered years are yang, odd numbered years are yin
+    # rooster pig ox rabbit snake goat are yin
+    # dog rat tiger dragon horse monkey are yang
+
     SPINS = [
         '陽',  # yáng (white side) 阳
         '陰',  # yīn (black side) 阴
@@ -392,6 +396,8 @@ def branch(year=date.today().year):
         '未',  # wèi (goat)
     ]
 
+    # singe coq chien cochon/sanglier/verrat rat boeuf tigre lapin dragon serpent cheval chèvre/bélier/mouton
+
     return EARTHLY_BRANCHES[year % 12]
 
 
@@ -410,6 +416,8 @@ def element(year=date.today().year):
         '土',  # tǔ (earth)
         '土',  # tǔ (earth)
     ]
+
+    # métal eau bois feu terre
 
     return MAJOR_ELEMENTS[year % 10]
 

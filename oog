@@ -1,0 +1,423 @@
+    #   https://cncycle.ca
+    SUNDAY MAY WEEK1 CN Cycle for CHEO
+    # Le Défi CN pour le CHEO
+
+    #   http://ottawabicycleclub.ca/rlct
+    # Rideau Lakes Cycle Tour RLCT is (usually) the 1st or 2nd weekend in
+    # June since 1972
+    SATURDAY JUNE WEEK2 RLCT
+
+    #   http://tallpinesrally.com
+    # Tall Pines Rally is the last weekend in November
+    SATURDAY NOVEMBER 31 Tall Pines Rally
+    # Rallye des Hautes Pins
+
+    #   https://en.wikipedia.org/wiki/Canadian_Tulip_Festival
+    #   http://www.tulipfestival.ca/
+    # Tulip Festival is the middle 2 weekends in May
+    FRIDAY MAY WEEK2 Canadian Tulip Festival Starts
+    MONDAY MAY WEEK3 Canadian Tulip Festival Ends
+    # Début du Festival Canadien des Tulipes
+    # Fin du Festival Canadien des Tulipes
+
+    #   https://en.wikipedia.org/wiki/Ottawa_Comiccon
+    #   http://www.ottawacomiccon.com/
+    SATURDAY MAY WEEK2 Ottawa Comiccon
+    # Comiccon d'Ottawa
+
+    #   https://en.wikipedia.org/wiki/Doors_Open_Ottawa
+    #   http://ottawa.ca/en/liveculture/doors-open-ottawa
+    SATURDAY JUNE WEEK1 Doors Open Ottawa
+    # Portes ouvertes Ottawa
+
+    #   http://csm-mcs.com
+    SATURDAY FEBRUARY WEEK2 1967 Canadian Ski Marathon Begins
+    # Marathon canadien de ski commence
+
+    #   http://hamvention.org
+    FRIDAY MAY WEEK3 Dayton Hamvention® Begins
+    # Hamvention® de Dayton commence
+
+    #   https://www.cbc.ca/news/canada/ottawa/local-radio-telegrapher-remembered-for-1909-heroic-death-1.4799110
+    #   https://easternontarionetwork.com/2018/08/26/a-heros-death-eastern-ontario-town-honours-1st-radio-telegrapher-killed-at-sea/
+    AUGUST 26 George Eccles Day
+    # Jour de George Eccles
+
+    #   https://jotajoti.org
+    #   http://joti.org
+    #   http://arrl.org/jamboree-on-the-air-jota
+    FRIDAY OCTOBER WEEK3 JOTA-JOTI
+
+    #   http://ve3we.org/2017/04/25/history-of-amateur-radio-in-canada/
+    #   https://en.wikipedia.org/wiki/Radio_Amateurs_of_Canada
+    MAY 3 1993 Anniversary of Founding of RAC
+    # Anniversaire du fondation de RAC
+
+    #   https://www.defcon.org/
+    # DEF CON is (usually) over the first weekend in August since 1993
+    THURSDAY AUGUST WEEK2 DEF CON 1993
+
+    FEBRUARY 5 1944 Birthday of Colossus I
+    JUNE 6 1944 Anniversary of D-Day
+    AUGUST 13 1961 Year Since Creation of Berlin Wall
+    AUGUST 14 Navajo Code-Talker's Day (US)
+    NOVEMBER 9 1989 Year Since Felling of Berlin Wall
+    DECEMBER 7 1941 Anniversary of Pearl Harbour
+
+    JULY 14 Tape Measure Day
+    AUGUST 13 Left-Handers' Day
+    SEPTEMBER 19 Talk-Like-A-Pirate Day
+
+    #   https://www.nintendo.com/whatsnew/detail/nintendo-celebrates-mar10-day-by-bringing-smiles-to-people-of-all-ages
+    MARCH 10 MAR10 Day  # Jour MAR10
+
+    # NTP 32-bit Timestamp 32-bit Overflow at 06:28:16 UTC on Feb 7th, 2036
+    # POSIX Time began at 00:00:00 UTC on Thu, Jan 1st, 1970
+    # POSIX Time Signed 32-bit Overflow at 03:14:07 UTC on Tue, Jan 19th, 2038
+    # POSIX Time Unsigned 32-bit Overflow at 06:28:15 UTC on Sun, Feb 7th, 2106
+    FEBRUARY 7 2036 01:28 NTP Timestamp 32-bit Overflow (EST5EDT)
+    JANUARY 18 2038 22:14 POSIX Time Signed 32-bit Overflow (EST5EDT)
+
+    JULY 20 1969 Anniversary of First Lunar Landing
+    NOVEMBER 20 1998 Anniversary of ISS Launch
+    DECEMBER 19 1972 Anniversary of Last Lunar Landing
+
+    JANUARY 12 1992 Birthday of HAL9000
+    MAY 4 Star Wars Day
+    MAY 25 Towel Day
+    SEPTEMBER 8 1966 Birthday of Star Trek
+    NOVEMBER 22 1963 Birthday of Dr. Who
+
+    #   https://en.wikipedia.org/wiki/No_Pants_Day
+    FRIDAY MAY WEEK1 No Pants Day
+
+    #   https://www.timeanddate.com/holidays/fun/sandwich-day
+    NOVEMBER 3 Sandwich Day
+
+    #   https://en.wikipedia.org/wiki/Vimy_Ridge_Day
+    APRIL 9 Vimy Ridge Day
+    # Jour de la crête de Vimy
+
+    #   https://en.wikipedia.org/wiki/Armed_Forces_Day
+    SUNDAY JUNE WEEK1 Canadian Armed Forces Day
+    # Journée des Forces canadiennes
+
+    #   https://en.wikipedia.org/wiki/William_Davis_Miners'_Memorial_Day
+    # Davis Day (CA-NS) is June 11th
+    JUNE 11 William Davis Miners' Memorial Day (CA-NS)
+    # Journée commémorative des mineurs (CA-NS)
+
+    #   https://en.wikipedia.org/wiki/Queen's_Official_Birthday
+    APRIL 21 Queen's Birthday (UK)
+    # Anniversaire de la reine (UK)
+
+    #   https://en.wikipedia.org/wiki/Cinco_de_Mayo
+    MAY 5 Cinco de Mayo (US)
+    # Fête du 5 mai (US)
+
+    #   https://en.wikipedia.org/wiki/Armed_Forces_Day
+    SATURDAY MAY WEEK3 Armed Forces Day (US)
+    # Journée des forces armées (US)
+
+    #   https://en.wikipedia.org/wiki/Patriot_Day
+    SEPTEMBER 11 Patriot Day (US)
+    # Journée des patriotes (US)
+
+    #   https://en.wikipedia.org/wiki/Veterans_Day
+    NOVEMBER 11 Veterans Day (US)
+    # Jour des anciens combattants (US)
+
+    #   https://en.wikipedia.org/wiki/Armistice_Day
+    NOVEMBER 11 Armistice Day (UK)
+    # Jour de l'Armistice (UK)
+
+    #   https://en.wikipedia.org/wiki/Kwanzaa
+    DECEMBER 26 Kwanzaa Begins
+    JANUARY 1 Kwanzaa Ends
+    # Début de Kwanzaa
+    # Fin de Kwanzaa
+
+    #   https://en.wikipedia.org/wiki/Hogmanay
+    DECEMBER 31 Hogmanay (UK)
+
+    #   https://en.wikipedia.org/wiki/Darwin_Day
+    FEBRUARY 12 Darwin Day
+    # Jour de Darwin
+
+    #   http://pinkshirtday.ca/
+    #   http://www.erasebullying.ca/resources/resources-pink-shirt.php
+    # Pink Shirt Day seems to be on the last Wednesday in February
+    WEDNESDAY FEBRUARY 28 Pink Shirt Day
+    # Journée des chemises rose
+
+    #   https://en.wikipedia.org/wiki/International_Day_of_Pink
+    WEDNESDAY APRIL WEEK2 International Day of Pink
+    # Journée internationale de la rose
+
+    #   https://en.wikipedia.org/wiki/Anti-Bullying_Day
+    MAY 4 International Anti-Bullying Day
+    # Journée internationale anti-intimidation
+
+    #   https://en.wikipedia.org/wiki/International_Polar_Bear_Day
+    FEBRUARY 27 International Polar Bear Day
+    # Journée internationale des ours polaires
+
+    #   https://en.wikipedia.org/wiki/National_Dark-Sky_Week
+    # Dark-Sky Week is the week of the new moon in April
+
+    #   https://en.wikipedia.org/wiki/Astronomy_Day
+    # Astronomy Day is the Saturday closest to the quarter moon between mid-April
+    # and mid-May and the Saturday closest to the quarter moon between
+    # mid-September and mid-October
+
+    #   https://en.wikipedia.org/wiki/Administrative_Professionals'_Day
+    # Administrative Professionals' Day is the Wednesday of the last full week
+    # of April
+    WEDNESDAY APRIL 28 Administrative Professionals' Day
+    # Journée des professionnels de l'administration
+
+    #   https://en.wikipedia.org/wiki/World_Oceans_Day
+    JUNE 8 World Oceans Day
+    # Journée mondiale des océans
+
+    #   https://en.wikipedia.org/wiki/National_Preparedness_Month
+    #   https://en.wikipedia.org/wiki/Disaster_Prevention_Day
+    #   https://en.wikipedia.org/wiki/International_Day_for_Disaster_Reduction
+    SEPTEMBER 1 National Preparedness Month (US)
+    # Mois national de la préparation (US)
+    SEPTEMBER 1 Disaster Prevention Day (JP)
+    # Journée de prévention des catastrophes (JP)
+    OCTOBER 13 International Day for Disaster Reduction (UN)
+    # Journée internationale de la prévention des catastrophes (UN)
+
+    #   https://en.wikipedia.org/wiki/International_Day_of_Peace
+    SEPTEMBER 21 International Day of Peace
+    # Journée internationale de la paix
+
+    #   https://en.wikipedia.org/wiki/Sputnik_1
+    OCTOBER 4 1957 Anniversary of Launch of Sputnik 1
+    # Anniversaire du lancement de Sputnik 1
+
+    #   https://en.wikipedia.org/wiki/World_Kindness_Day
+    NOVEMBER 13 World Kindness Day
+    # Journée mondiale de la gentillesse
+
+    # Traditional wedding anniversary gifts
+    # http://www.happy-anniversary.com/year-of-marriage/
+    # http://ideas.hallmark.com/articles/anniversary-ideas/anniversary-gifts-by-year/
+
+    FSET gifts_en(x) choose(x, \
+      "Paper|Plastic|Clocks", "Cotton|Calico|China", "Leather|Crystal/Glass", "Fruit/Flowers|Linen/Silk/Nylon|Appliances", "Wood|Silverware", \
+      "Candy|Iron|Wood", "Copper/Wool|Brass|Desk Sets", "Bronze|Pottery|Linen/Lace", "Pottery|Willow|Leather", "Tin|Aluminium|Diamond", \
+      "Steel|Jewelry", "Silk|Linen|Pearl", "Lace|Textiles/Fur", "Ivory|Gold", "Crystal/Glass|Watches", \
+      "Coffee/Tea", "Furniture|Wine/Spirits", "Porcelain|Appliances", "Bronze|Jade", "China|Platinum", \
+      "Brass/Nickel|Fire", "Copper|Water", "Air", "Musical Instruments|Stone", "Silver", \
+      "Pictures|Art", "Sculpture|Music", "Orchids|Linens", "Furniture|Tools", "Pearl", \
+      "Timepieces|Travel/Tourism", "Transportation|Bronze", "Amethyst|Iron", "Opal|Food", "Coral|Jade", \
+      "Bone China|Antiques", "Alabaster|Books", "Beryl|Tourmaline|Luck", "Lace|Laughter", "Ruby|Garnet", \
+      "Land|Office/Desk", "Real Estate|Clocks/Watches", "Travel|Entertainment", "Gourmet|Electronics", "Sapphire", \
+      "Poetry|Games", "Books|Garden/Plants", "Optical|Home Improvement", "Luxury Goods|Copper", "Gold", \
+      "Photos/Cameras", "Bath/Spa", "Plastic", "Glass", "Emerald|Turquoise", \
+      "Day", "Night", "Faith/Hope", "Charity", "Diamond|Gold", \
+      "", "", "", "", "Platinum/Blue Sapphire", \
+      "", "", "", "", "Titanium/Platinum", \
+      "", "", "", "", "", \
+      "", "", "", "", "Oak", \
+      "", "", "", "", "", \
+      "", "", "", "", "", \
+      "", "", "", "", "", \
+      "", "", "", "", "")
+
+  Navrati (September)
+  Vesak (May or April;  on full moon)
+
+    #   https://en.wikipedia.org/wiki/Nowruz
+    #   https://fr.wikipedia.org/wiki/Norouz
+    MARCH 21 Nowruz
+    # Norouz
+  Naw Ruz New Year (Baha'i)
+  Norouz New Year (Persian/Zoroastrian)
+
+    #   https://en.wikipedia.org/wiki/Pahela_Baishakh
+    # Pahela Baishakh (BD) is April 14th
+    MARCH 21 Pahela Baishakh (BD)
+
+January?
+  Feast of St. Basil (Orthodox)
+  Gantan-sai (Shinto)
+  Guru Gobindh Singh Birthday (Sikh)
+  Feast of the Theophany (Orthodox)
+  Feast of the Nativity (Orthodox)
+  Maghi (Sikh)
+  World Religion Day (Baha'i)
+  Tu BiShavat (Jewish)
+  Mahayana New Year (Buddhist)
+
+February?
+  Sesubun-sai (Shinto)
+  Vasant Panchami (Hindu)
+  Nirvana Day (Buddhist, Jain)
+  Triodion begins (Orthodox)
+  Intercalary Days begin (Baha'i)
+
+March?
+  Intercalary Days end (Baha'i)
+  Nineteen Day Fast (Baha'i)
+  Transfiguration Sunday (Christian)
+  Maha Shivaratri (Hindu)
+  Lent begins (Christian)
+  Orthodox Sunday
+  Clean Monday (Orthodox?)
+  Great Lent begins (Orthodox)
+  St. Joseph's Day (Christian)
+  Annunciation of the Blessed Virgin Mary (Christian)
+  Khordad Sal Birth of Prophet Zarathushtra (Zoroastrian)
+  Hola Mohalla (Sikh)
+  Holi (Hindu)
+  Magha Puja Day (Buddhist)
+
+April?
+  Lailat al Miraj (Islam)
+  Mahavir Jayanti (Jain)
+  Palm Sunday (Christian)
+  Vaisakhi (Baisakhi)
+  New Year (Sikh)
+  Theravadin New Year (Buddhist)
+  Lazarus Saturday (Orthodox)
+  Palm Sunday (Orthodox)
+  Lailat al Bara'ah (Islam)
+  First Day of Ridvan (Baha'i)
+  Holy Friday (Orthodox)
+  Ninth Day of Ridvan (Baha'i)
+
+May?
+  Last Day of Ridvan (Baha'i)
+  Yom HaShoah (Jewish)
+  Yom Ha'Atzmaut (Jewish)
+  Visakha Puja (Buddhist)
+  Declaration of the Bab (Baha'i)
+  Lag B'Omer (Jewish)
+  Ascension of Baha'u'llah (Baha'i)
+  Ascension of Jesus (Christian)
+
+June?
+  Lailat al Kadr (Islam)
+  Ascension of Jesus (Orthodox)
+  Guru Arjan Dev Martyrdom (Sikh)
+  All Saints (Orthodox)
+  Sacred Heart of Jesus (Catholic)
+  Saints Peter and Paul (Christian)
+
+July?
+  Martyrdom of the Bab (Baha'i)
+  Ulambana (Obon, Buddhist?)
+  Obon (Shinto)
+  Asalha Puja Day (Buddhist)
+  Pioneer Day (Mormon)
+
+August?
+  Lammas (Christian)
+  Fast in Honour of the Holy Mother of Jesus (Orthodox)
+  Transfiguration of the Lord (Orthodox)
+  Tish'a B'Av (Jewish)
+  Waqf al Arafa Hajj Day (Islam)
+  Assumption of the Blessed Virgin Mary (Catholic)
+  Dormition of the Theotokos (Orthodox)
+  Raksha Bandhan (Hindu)
+  Krishna Janmashtami (Hindu)
+
+September?
+  Ecclesiastical year begins (Orthodox)
+  Hijra New Year (Islam)
+  Ganesh Chaturthi (Hindu)
+  Paryushana Parva (Jain)
+  Nativity of Virgin Mary (Christian)
+  Ashura (Islam)
+
+October?
+  Saint Francis Day (Catholic)
+  Dasara (Hindu)
+  Karwa Chauth (Hindu)
+  Birth of the Báb (Baha'i)
+  Installation of Scriptures as Guru Granth (Sikh)
+  Shemini Atzeret (Jewish)
+  Simchat Torah (Jewish)
+  Diwali Deepavali (Hindu/Jain/Sikh)
+  Jain New Year (Jain)
+  Reformation Day (Protestant)
+
+November?
+  Mawlid an Nabi (Islam)
+  Birth of Baha'u'llah (Baha'i)
+  Baha'u'llah's Birthday
+  Guru Nanak Dev Sahib Birthday (Sikh)
+  Nativity Fast begins (Orthodox)
+  Day of the Covenant (Baha'i)
+  Ascension of Abdu'l'Bahá (Baha'i)
+
+December?
+  Advent begins (Christian)
+  Saint Nicholas Day (Christian)
+  Rohatsu - Bodhi Day (Buddhist)
+  Our Lady of Guadalupe (Catholic)
+  Posadas Navidenas (Christian)
+  Feast of the Nativity (Orthodox)
+  Zarathosht Diso (Zoroastrian)
+  Holy Innocents (Christian)
+
+Quadrantids                 28 Dec to 12 Jan   4 Jan
+Daytime Capri.-Sagitt.      13 Jan to 29 Feb   2 Feb
+Alpha Centaurids            28 Jan to 21 Feb   8 Feb
+Theta Centaurids            23 Jan to 12 Mar  10 Feb
+Gamma Normids               25 Feb to 22 Mar  14 Mar
+Kappa Serpentids             1 Apr to  7 Apr   5 Apr
+Virginids                   22 Mar to 26 Apr  17 Apr
+Lyrids                      16 Apr to 25 Apr  22 Apr
+Pi Puppids                  15 Apr to 28 Apr  23 Apr
+Eta Aquariids               19 Apr to 28 May   5 May
+Omega Cetids                 5 May to  9 Jun   7 May
+Eta Lyrids                   3 May to 14 May   8 May
+Daytime May Arietids         4 May to  6 Jun  15 May
+Daytime Eps. Arietids        4 May to  6 Jun  15 May
+Alpha Scorpiids             21 Apr to 26 May  15 May
+South Omega Scorpiids       23 May to 15 Jun  31 May
+North Omega Scorpiids       23 May to 15 Jun  31 May
+Arietids                    22 May to  2 Jul   7 Jun
+Daytime Zeta Perseids       20 May to  5 Jul   9 Jun
+June Lyrids                 11 Jun to 21 Jun  16 Jun
+South June Aquilids          9 Jun to  2 Jul  16 Jun
+Pi Cetids                   16 Jun to  4 Jul  26 Jun
+June Bootids                22 Jun to  2 Jul  27 Jun
+Daytime Beta Taurids         5 Jun to 17 Jul  28 Jun
+Tau Aquariids               27 Jun to  6 Jul  28 Jun
+July Phoenicids             24 Jun to 18 Jul  12 Jul
+North Delta Aquariids       15 Jul to 25 Aug  26 Jul
+Piscis Austrinids           15 Jul to 10 Aug  27 Jul
+Southern Delta Aquariids    12 Jul to 23 Aug  29 Jul
+Beta Cassiopeids             3 Jul to 19 Aug  29 Jul
+Alpha Capricornids           3 Jul to  5 Aug  29 Jul
+Eta Eridanids                3 Aug to 14 Aug   9 Aug
+Perseids                    17 Jul to 24 Aug  12 Aug
+Kappa Cygnids                3 Aug to 25 Aug  17 Aug
+Gamma Doradids              27 Aug to  3 Sep  28 Aug
+Alpha Aurigids              28 Aug to  5 Sep  31 Aug
+September Epsilon Perseids   5 Sep to 21 Sep   9 Sep
+Daytime Sextantids          26 Sep to  3 Oct   1 Oct
+Draconids                    6 Oct to 10 Oct   8 Oct
+Southern Taurids            10 Sep to 20 Nov  10 Oct
+Delta Aurigids              10 Oct to 18 Oct  11 Oct
+Epsilon Geminids            14 Oct to 27 Oct  18 Oct
+Orionids                     2 Oct to  7 Nov  21 Oct
+Leo Minorids                19 Oct to 27 Oct  24 Oct
+Northern Taurids            20 Oct to 10 Dec  12 Nov
+Nov. Iota Aurigids           1 Nov to 23 Nov  15 Nov
+Leonids                      6 Nov to 30 Nov  17 Nov
+Alpha Monocerotids          15 Nov to 25 Nov  21 Nov
+Phoenicids                  28 Nov to  9 Dec   6 Dec
+Puppid-Velids                1 Dec to 15 Dec
+Monocerotids                27 Nov to 17 Dec   8 Dec
+Sigma Hydrids                3 Dec to 15 Dec  11 Dec
+Geminids                     7 Dec to 17 Dec  13 Dec
+Comae Berenicids            12 Dec to 23 Dec  15 Dec
+Dec. Leonis Minorids         5 Dec to  4 Feb  19 Dec
+Ursids                      17 Dec to 26 Dec  23 Dec

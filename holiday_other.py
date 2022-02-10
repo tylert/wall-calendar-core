@@ -266,6 +266,31 @@ def main(year):
     print(f'{date(year, OCTOBER, 20)} {ordinal(year - 2004)} Birthday of Ubuntu')
     print(f'{date(year, NOVEMBER, 21)} {ordinal(year - 1995)} Birthday of GIMP')
 
+    print(f'{date(year, MARCH, 21)} Aries Rises')  # Ascension du bélier
+    print(f'{date(year, APRIL, 19)} Aries Sets')  # Descension du bélier
+    print(f'{date(year, APRIL, 20)} Taurus Rises')  # Ascension du taureau
+    print(f'{date(year, MAY, 20)} Taurus Sets')  # Descension du taureau
+    print(f'{date(year, MAY, 21)} Gemini Rises')  # Ascension des gémeaux
+    print(f'{date(year, JUNE, 20)} Gemini Sets')  # Descension des gémeaux
+    print(f'{date(year, JUNE, 21)} Cancer Rises')  # Ascension du cancer
+    print(f'{date(year, JULY, 22)} Cancer Sets')  # Descension du cancer
+    print(f'{date(year, JULY, 23)} Leo Rises')  # Ascension du lion
+    print(f'{date(year, AUGUST, 22)} Leo Sets')  # Descension du lion
+    print(f'{date(year, AUGUST, 23)} Virgo Rises')  # Ascension de la vierge
+    print(f'{date(year, SEPTEMBER, 22)} Virgo Sets')  # Descension de la vierge
+    print(f'{date(year, SEPTEMBER, 23)} Libra Rises')  # Ascension de la balance
+    print(f'{date(year, OCTOBER, 22)} Libra Sets')  # Descension de la balance
+    print(f'{date(year, OCTOBER, 23)} Scorpio Rises')  # Ascension du scorpion
+    print(f'{date(year, NOVEMBER, 21)} Scorpio Sets')  # Descension du scorpion
+    print(f'{date(year, NOVEMBER, 22)} Sagittarius Rises')  # Ascension du sagittaire
+    print(f'{date(year, DECEMBER, 21)} Sagittarius Sets')  # Descension du sagittaire
+    print(f'{date(year, DECEMBER, 22)} Capricorn Rises')  # Ascension du capricorne
+    print(f'{date(year, JANUARY, 19)} Capricorn Sets')  # Descension du capricorne
+    print(f'{date(year, JANUARY, 20)} Aquarius Rises')  # Ascension du verseau
+    print(f'{date(year, FEBRUARY, 18)} Aquarius Sets')  # Descension du verseau
+    print(f'{date(year, FEBRUARY, 19)} Pisces Rises')  # Ascension des poissons
+    print(f'{date(year, MARCH, 20)} Pisces Sets')  # Descension des poissons
+
 
 if __name__ == '__main__':
     main()

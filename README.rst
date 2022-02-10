@@ -1,4 +1,12 @@
-﻿Docs
+﻿Using
+-----
+
+::
+
+    (./holiday_canada.py --year 2022 ; ./holiday_religion.py --year 2022 ; ./holiday_other.py --year 2022) | sort
+
+
+Docs
 ----
 
 * https://docs.python.org/3/library/datetime.html

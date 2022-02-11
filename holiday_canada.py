@@ -86,6 +86,11 @@ def main(year):
     # Spring Break
     # Congé de printemps
 
+    #   https://en.wikipedia.org/wiki/March_equinox
+    #   https://fr.wikipedia.org/wiki/%C3%89quinoxe_de_mars
+    #   https://en.wikipedia.org/wiki/June_solstice
+    #   https://en.wikipedia.org/wiki/September_equinox
+    #   https://en.wikipedia.org/wiki/December_solstice
     print(
         f'{spring(year).date()} {spring(year).time().strftime("%H:%M")} First day of Spring'
     )  # Premier jour de printemps

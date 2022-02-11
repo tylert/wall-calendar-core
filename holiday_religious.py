@@ -42,8 +42,6 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Saint-Valentin
     print(f'{date(year, FEBRUARY, 14)} St. Valentine\'s Day')  # Saint-Valentin
 
-    # St. Patrick's Day (CA-NL) is the Monday nearest March 17th
-    # St. George's Day (CA-NL) is the Monday nearest April 23rd
     #   https://en.wikipedia.org/wiki/Saint_David%27s_Day
     #   https://fr.wikipedia.org/wiki/Saint_David%27s_Day
     #   https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day
@@ -52,6 +50,8 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Sant_Jordi
     #   https://en.wikipedia.org/wiki/Saint_Andrew%27s_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Andr%C3%A9
+    # St. Patrick's Day (CA-NL) is the Monday nearest March 17th
+    # St. George's Day (CA-NL) is the Monday nearest April 23rd
     print(f'{date(year, MARCH, 1)} St. David\'s Day (UK)')
     print(f'{date(year, MARCH, 17)} St. Patrick\'s Day')
     print(f'{closest_date(MONDAY, date(year, MARCH, 17))} St. Patrick\'s Day (CA-NL)')
@@ -123,6 +123,20 @@ def main(year):
     print(f'{easter(year) + timedelta(days=50)} Whit Monday/Pentecost Monday')
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
+
+    #   https://en.wikipedia.org/wiki/Nowruz
+    #   https://fr.wikipedia.org/wiki/Norouz
+    # Persian/Zoroastrian/Baha'i
+    print(f'{spring(year).date()} Nowruz')  # Norouz
+
+    #   https://en.wikipedia.org/wiki/South_and_Southeast_Asian_solar_New_Year
+    #   https://en.wikipedia.org/wiki/New_Year%27s_Day#New_Year's_Days_in_other_calendars
+    #   https://en.wikipedia.org/wiki/Pahela_Baishakh
+    # print(f'{date(year, APRIL, 13)}')
+
+    #   https://en.wikipedia.org/wiki/Diwali
+    #   https://fr.wikipedia.org/wiki/Divali
+    print(f'{new_moon(date(year, OCTOBER, 16)).date() - timedelta(days=4)} Diwali')
 
     #   https://en.wikipedia.org/wiki/Lunar_New_Year#Middle_East
     #   https://fr.wikipedia.org/wiki/Nouvel_An_lunaire#Calendrier_h%C3%A9bra%C3%AFque

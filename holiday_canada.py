@@ -110,10 +110,10 @@ def main(year):
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H:%M")} Aphelion')
     # Aphélie
 
-    # Victoria Day is the Monday before May 25th
     #   https://en.wikipedia.org/wiki/Victoria_Day
     #   https://en.wikipedia.org/wiki/National_Patriots%27_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
+    # Victoria Day is the Monday before May 25th
     print(f'{closest_date(MONDAY, date(year, MAY, 21))} Victoria Day (CA)')
     # National Patriot's Day (CA-QC)
     # Fête de la Reine / Fête de Victoria
@@ -152,12 +152,12 @@ def main(year):
     print(f'{date(year, JULY, 9)} Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU)')
     # Fête du Nunavut (CA-NU)
 
-    # The Quebec Construction Holiday begins on the 2nd last Sunday of July and
-    # lasts for 2 weeks
     #   https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
     #   https://fr.wikipedia.org/wiki/Vacances_de_la_construction
     #   https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
     #   https://www.ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
+    # The Quebec Construction Holiday begins on the 2nd last Sunday of July and
+    # lasts for 2 weeks
     print(
         f'{closest_date(SUNDAY, date(year, JULY, WEEK4), last=True) - timedelta(days=7)} Construction Holiday Begins (CA-QC)'
     )  # Début des vacances de la construction (CA-QC)
@@ -215,7 +215,7 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_de_la_v%C3%A9rit%C3%A9_et_de_la_r%C3%A9conciliation
     #   https://www.orangeshirtday.org/
     print(f'{date(year, SEPTEMBER, 30)} Orange Shirt Day (CA)')
-    # Jour du chandail orange (CA)
+    # Journée du chandail orange (CA)
     # National Day for Truth and Reconciliation (CA)
     # Journée nationale de la vérité et de la réconciliation (CA)
 

@@ -28,7 +28,7 @@ LENGTH_OF_WEEK = 7  # days
 (WEEK1, WEEK2, WEEK3, WEEK4) = (4, 11, 18, 25)
 
 (
-    NISAN,
+    NISAN,  # a.k.a. Abib
     IYAR,
     SIVAN,
     TAMMUZ,
@@ -39,8 +39,8 @@ LENGTH_OF_WEEK = 7  # days
     KISLEV,  # 30 or 29 days
     TEVET,
     SHEVAT,
-    ADAR_I,  # Adar Aleph / Adar Rishon / Adar I
-    ADAR,  # Adar Bet / Adar Sheni / Adar II / Ve'Adar
+    ADAR_I,  # a.k.a. Adar Aleph, Adar Rishon, Adar I
+    ADAR,  # a.k.a. Adar Bet, Adar Sheni, Adar II, Ve'Adar
 ) = range(1, 14)
 DAYS_IN_HEB_MONTH = [-1, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 30, 29]
 

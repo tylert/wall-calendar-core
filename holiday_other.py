@@ -29,13 +29,22 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Daylight_saving_time_by_country
     #   https://en.wikipedia.org/wiki/Daylight_saving_time_in_Canada
+    #   https://www.timeanddate.com/time/zones/y
+    #   https://www.timeanddate.com/time/zones/r
+    #   https://www.timeanddate.com/time/zones/q
+    #   https://www.timeanddate.com/time/zones/z
+    #   https://www.timeanddate.com/time/zones/a
+    #   https://www.timeanddate.com/time/zones/b
+    #   https://www.timeanddate.com/time/zones/m
     # DST Begins = "Spring forward"
     # DST Ends = "Fall back"
+    #     UTC-12:00 -> Yankee
     #     UTC-05:00 -> Romeo
     #     UTC-04:00 -> Quebec
     #     UTC+00:00 -> Zulu
     #     UTC+01:00 -> Alpha
     #     UTC+02:00 -> Bravo
+    #     UTC+12:00 -> Mike
     print(
         f'{closest_date(SUNDAY, date(year, MARCH, WEEK2))} 02:00 Daylight Savings Time Begins (CA, US)'
     )  # Heure d'éte commence (CA, US)
@@ -111,9 +120,10 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Mother's_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
+    # Mothering Sunday (UK) is 4th Sunday of Lent / exactly 3 weeks before Easter Sunday
     print(f'{closest_date(SUNDAY, date(year, MAY, WEEK2))} Mother\'s Day')
+    print(f'{easter(year) - timedelta(days=21)} Mothering Sunday (UK)')
     # Fête des mères
-    # in UK, "Mothering Sunday" is 4th Sunday of Lent / exactly 3 weeks before Easter Sunday
 
     #   https://en.wikipedia.org/wiki/Memorial_Day
     #   https://fr.wikipedia.org/wiki/Memorial_Day

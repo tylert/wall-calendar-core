@@ -65,26 +65,27 @@ def main(year):
     print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Islander Day (CA-PE)')
     print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} Heritage Day (CA-NS)')
     # Journée Louis Riel (CA-MB)
-    # Fête des insulaires (CA-PE)
-    # Jour de patrimoine / Fête du patrimoine (CA-NS)
+    # Fête des Insulaires (CA-PE)
+    # Fête du patrimoine (CA-NS)
 
     # Heritage Day (CA-YT) is the Friday before the last Sunday in February
     #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
     print(
         f'{closest_date(SUNDAY, date(year, FEBRUARY, WEEK4), last=True) - timedelta(days=2)} Heritage Day (CA-YT)'
-    )  # Jour de patrimoine / Fête du patrimoine (CA-YT)
+    )  # Fête du patrimoine (CA-YT)
 
     #   https://en.wikipedia.org/wiki/Commonwealth_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
     print(f'{closest_date(MONDAY, date(year, MARCH, WEEK2))} Commonwealth Day')
     # Journée du Commonwealth
 
-    # March Break
-    # Congé de mars
-
     #   https://en.wikipedia.org/wiki/Spring_break
+    #   https://fr.wikipedia.org/wiki/Semaine_de_rel%C3%A2che
+    # March Break
     # Spring Break
+    # Congé de mars
     # Congé de printemps
+    # Semaine de relâche
 
     #   https://en.wikipedia.org/wiki/March_equinox
     #   https://fr.wikipedia.org/wiki/%C3%89quinoxe_de_mars
@@ -115,8 +116,10 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
     # Victoria Day is the Monday before May 25th
     print(f'{closest_date(MONDAY, date(year, MAY, 21))} Victoria Day (CA)')
-    # National Patriot's Day (CA-QC)
-    # Fête de la Reine / Fête de Victoria
+    print(
+        f'{closest_date(MONDAY, date(year, MAY, 21))} National Patriot\'s Day (CA-QC)'
+    )
+    # Fête de la Reine / Fête de Victoria (CA)
     # Journée nationale des patriotes (CA-QC)
 
     #   https://en.wikipedia.org/wiki/National_Aboriginal_Day
@@ -126,6 +129,8 @@ def main(year):
     #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-peuples-autochtones.html
     print(f'{date(year, JUNE, 21)} National Indigenous Peoples Day (CA)')
     # Journée nationale des peuples autochtones (CA)
+    # National Aboriginal Day (CA)
+    # Journée nationale des Autochthones (CA)
 
     #   https://en.wikipedia.org/wiki/Discovery_Day
     print(f'{closest_date(MONDAY, date(year, JUNE, 24))} June Day (CA-NL)')
@@ -167,27 +172,32 @@ def main(year):
 
     # The 1st Monday in August is a quasi-semi-poly-un-statutory holiday,
     # kinda...
-    #     CA-AB:  Heritage Day;  optional, formerly statutory
-    #     CA-BC:  British Columbia Day;  statutory
     #     CA-MB:  Terry Fox Day;  non-statutory
-    #     CA-NB:  New Brunswick Day;  statutory
-    #     CA-NL:  not observed
     #     CA-NS:  Natal Day;  non-statutory
-    #     CA-NT:  Civic Holiday;  statutory
-    #     CA-NU:  Civic Holiday;  statutory
-    #     CA-ON:  Civic Holiday and Simcoe Day;  non-statutory
-    #     CA-PE:  Civic Holiday;  statutory or non-statutory
-    #     CA-QC:  not observed
-    #     CA-SK:  Saskatchewan Day;  statutory
-    #     CA-YT:  not observed
     #   https://en.wikipedia.org/wiki/Civic_Holiday
     #   https://en.wikipedia.org/wiki/Public_holidays_in_Canada
     #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
+    # Simcoe Day???
     print(
-        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Civic Holiday (except CA-NL, CA-QC, CA-YT)'
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Civic Holiday (CA-NL, CA-NT, CA-NU, CA-ON)'
     )  # Jour férié
-    # Congé civique (sauf CA-NL, CA-QC, CA-YT)
     # Premier lundi d'août
+    # Congé civique
+    print(
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Heritage Day (CA-AB, CA-YT)'
+    )  # Fête du patrimoine (CA-AB, CA-YT)
+    print(
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} British Columbia Day (CA-BC)'
+    )  # Jour de la Colombie-Britannique (CA-BC)
+    print(
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Saskatchewan Day (CA-SK)'
+    )  # Jour de Saskatchewan (CA-SK)
+    print(
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} New Brunswick Day (CA-NB)'
+    )  # Jour de Nouveau Brunswick (CA-NB)
+    print(
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Natal Day (CA-NS)'
+    )  # Jour de la Fondation (CA-NS)
 
     #   https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
@@ -199,12 +209,10 @@ def main(year):
     print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK3))} Discovery Day (CA-YT)')
     # Journée découverte (CA-YT)
 
-    #   https://en.wikipedia.org/wiki/Remembrance_Day
-    #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
-    #   https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
-    print(f'{date(year, SEPTEMBER, 3)} Merchant Navy Day')
-    # Merchant Navy Rememberance Day
-    # Jour de la marine marchande
+    print(
+        f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'
+    )
+    #  	Défilé de la Coupe d'or (CA-PE)
 
     #   https://en.wikipedia.org/wiki/Labour_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
@@ -214,10 +222,10 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Orange_Shirt_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_de_la_v%C3%A9rit%C3%A9_et_de_la_r%C3%A9conciliation
     #   https://www.orangeshirtday.org/
-    print(f'{date(year, SEPTEMBER, 30)} Orange Shirt Day (CA)')
-    # Journée du chandail orange (CA)
-    # National Day for Truth and Reconciliation (CA)
+    print(f'{date(year, SEPTEMBER, 30)} National Day for Truth and Reconciliation (CA)')
     # Journée nationale de la vérité et de la réconciliation (CA)
+    # Orange Shirt Day (CA)
+    # Journée du chandail orange (CA)
 
     #   https://en.wikipedia.org/wiki/Thanksgiving#Canada
     #   https://fr.wikipedia.org/wiki/Action_de_gr%C3%A2ce_(Canada)
@@ -238,9 +246,14 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Remembrance_Day
     #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
     #   https://en.wikipedia.org/wiki/Armistice_Day
+    #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
+    #   https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
     print(f'{date(year, NOVEMBER, 11)} Rememberance Day')  # Jour du Souvenir
     print(f'{date(year, NOVEMBER, 11)} Armistice Day (CA-NL)')
     # Jour de l'Armistice (CA-NL)
+    print(f'{date(year, SEPTEMBER, 3)} Merchant Navy Day')
+    # Merchant Navy Rememberance Day
+    # Jour de la marine marchande
 
     #   https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
     #   https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931

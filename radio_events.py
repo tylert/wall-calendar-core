@@ -44,10 +44,18 @@ def main(year):
     # Lanark North Leeds ARES nets are every Wednesday of each month at
     # 2000H.
     for month in range(1, 13):
-        print(f'{closest_date(WEDNESDAY, date(year, month, WEEK1))} 20:00 {next(assignment)}')
-        print(f'{closest_date(WEDNESDAY, date(year, month, WEEK2))} 20:00 {next(assignment)}')
-        print(f'{closest_date(WEDNESDAY, date(year, month, WEEK3))} 20:00 {next(assignment)}')
-        print(f'{closest_date(WEDNESDAY, date(year, month, WEEK4))} 20:00 {next(assignment)}')
+        print(
+            f'{closest_date(WEDNESDAY, date(year, month, WEEK1))} 20:00 {next(assignment)}'
+        )
+        print(
+            f'{closest_date(WEDNESDAY, date(year, month, WEEK2))} 20:00 {next(assignment)}'
+        )
+        print(
+            f'{closest_date(WEDNESDAY, date(year, month, WEEK3))} 20:00 {next(assignment)}'
+        )
+        print(
+            f'{closest_date(WEDNESDAY, date(year, month, WEEK4))} 20:00 {next(assignment)}'
+        )
         # Wednesdays sometimes happen in the 5th week of the month
         if closest_date(WEDNESDAY, date(year, month, WEEK4)) != closest_date(
             WEDNESDAY, date(year, month, WEEK4), last=True

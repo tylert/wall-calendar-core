@@ -185,6 +185,10 @@ def main(year):
     print(f'{date(year, NOVEMBER, 5)} Guy Fawkes Day (UK)')
     # Journée de Guy Fawkes (UK)
 
+    #   https://en.wikipedia.org/wiki/Hogmanay
+    #   https://fr.wikipedia.org/wiki/Hogmanay
+    print(f'{date(year, DECEMBER, 31)} Hogmanay (UK)')
+
     # Second Easter (ES)
     # Feast of San Juan (ES)
     # Assumption of Mary (ES)

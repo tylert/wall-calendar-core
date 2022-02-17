@@ -52,12 +52,12 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Andr%C3%A9
     # St. Patrick's Day (CA-NL) is the Monday nearest March 17th
     # St. George's Day (CA-NL) is the Monday nearest April 23rd
-    print(f'{date(year, MARCH, 1)} St. David\'s Day (UK)')
+    print(f'{date(year, MARCH, 1)} St. David\'s Day')
     print(f'{date(year, MARCH, 17)} St. Patrick\'s Day')
     print(f'{closest_date(MONDAY, date(year, MARCH, 17))} St. Patrick\'s Day (CA-NL)')
     print(f'{closest_date(MONDAY, date(year, APRIL, 23))} St. George\'s Day (CA-NL)')
-    print(f'{date(year, APRIL, 23)} St. George\'s Day (UK)')
-    print(f'{date(year, NOVEMBER, 30)} St. Andrew\'s Day (UK)')
+    print(f'{date(year, APRIL, 23)} St. George\'s Day')
+    print(f'{date(year, NOVEMBER, 30)} St. Andrew\'s Day')
     # Fête de la Saint-David (UK)
     # Fête de la Saint-Patrick
     # Fête de la Saint-Patrick (CA-NL)

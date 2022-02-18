@@ -3,8 +3,18 @@
 
 ::
 
+    # Initial setup
     make venv ; source .venv/bin/activate
-    (./holiday_canada.py --year 2022 ; ./holiday_religion.py --year 2022 ; ./holiday_other.py --year 2022) | sort
+
+    # Show all events for this year
+    ( ./holiday_canada.py ; \
+      ./holiday_religious.py ; \
+      ./holiday_other.py ) | sort
+
+    # Find out when the next few Easters will occur
+    for (( year=2022 ; year<2033 ; year++ )); do
+        ./holiday_religious.py --year $year | grep 'Easter Sunday'
+    done
 
 
 Docs

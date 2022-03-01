@@ -211,8 +211,7 @@ def main(year):
 
     print(
         f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'
-    )
-    #  	Défilé de la Coupe d'or (CA-PE)
+    )  #  	Défilé de la Coupe d'or (CA-PE)
 
     #   https://en.wikipedia.org/wiki/Labour_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
@@ -262,8 +261,7 @@ def main(year):
     # The Statute of Westminster was enacted on December 11th, 1931
     print(
         f'{date(year, DECEMBER, 11)} {ordinal(year - 1931)} Anniversary of the Statute of Westminster'
-    )
-    # Anniversaire du Statut de Westminster
+    )  # Anniversaire du Statut de Westminster
 
 
 if __name__ == '__main__':

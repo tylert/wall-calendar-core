@@ -41,21 +41,6 @@ def main(year):
     print(f'{date(year, FEBRUARY, 15)} Flag Day (CA)')
     # Jour du drapeau national du Canada
 
-    # The 3rd Monday in February is observed in 8 provinces and 0
-    # territories...
-    #     CA-AB:  Family Day;  statutory
-    #     CA-BC:  Family Day;  statutory
-    #     CA-MB:  Louis Riel Day;  statutory
-    #     CA-NB:  Family Day;  statutory
-    #     CA-NL:  not observed
-    #     CA-NS:  Heritage Day;  statutory
-    #     CA-NT:  not observed
-    #     CA-NU:  not observed
-    #     CA-ON:  Family Day;  statutory
-    #     CA-PE:  Islander Day;  statutory
-    #     CA-QC:  not observed
-    #     CA-SK:  Family Day;  statutory
-    #     CA-YT:  not observed
     #   https://en.wikipedia.org/wiki/Family_Day
     #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
     print(
@@ -170,14 +155,10 @@ def main(year):
         f'{closest_date(SUNDAY, date(year, JULY, WEEK4), last=True) + timedelta(days=6)} Construction Holiday Ends (CA-QC)'
     )  # Fin des vacances de la construction (CA-QC)
 
-    # The 1st Monday in August is a quasi-semi-poly-un-statutory holiday,
-    # kinda...
-    #     CA-MB:  Terry Fox Day;  non-statutory
-    #     CA-NS:  Natal Day;  non-statutory
     #   https://en.wikipedia.org/wiki/Civic_Holiday
     #   https://en.wikipedia.org/wiki/Public_holidays_in_Canada
     #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
-    # Simcoe Day???
+    # XXX FIXME TODO  CA-MB Terry Fox Day???  CA-ON Simcoe Day???
     print(
         f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Civic Holiday (CA-NL, CA-NT, CA-NU, CA-ON)'
     )  # Jour férié

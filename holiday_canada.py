@@ -211,7 +211,7 @@ def main(year):
 
     print(
         f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'
-    )  #  	Défilé de la Coupe d'or (CA-PE)
+    )  # Défilé de la Coupe d'or (CA-PE)
 
     #   https://en.wikipedia.org/wiki/Labour_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail

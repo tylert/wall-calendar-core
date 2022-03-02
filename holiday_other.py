@@ -202,6 +202,8 @@ def main(year):
     # Feast of St. James the Apostle (ES)
     # La Almudena (ES)
 
+    #   https://en.wikipedia.org/wiki/List_of_minor_secular_observances
+
     #   https://en.wikipedia.org/wiki/International_Cat_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat
     #   https://en.wikipedia.org/wiki/National_Cat_Day
@@ -241,22 +243,34 @@ def main(year):
     # Journée de la radio amateur
 
     #   https://en.wikipedia.org/wiki/Pi_Day
-    #   http://www.piday.org/
-    #   https://en.wikipedia.org/wiki/Tau_Day
+    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_de_pi
+    #   https://piday.org/
     #   https://tauday.com/
-    #   https://en.wikipedia.org/wiki/Pi_Day
-    #   http://piapproximationday.com/
-    print(f'{date(year, MARCH, 14)} Pi Day 3.14')  # Jour de pi 3.14
-    print(f'{date(year, JUNE, 28)} Tau Day 6.28')  # Jour de tau 6.28
+    #   https://piapproximationday.com/
+    print(f'{date(year, MARCH, 14)} Pi Day 3.14')  # Journée de pi 3.14
+    print(f'{date(year, JUNE, 28)} Tau Day 6.28')  # Journée de tau 6.28
     print(f'{date(year, JULY, 22)} Pi Approximation Day 22/7')
-    # Jour d'approximation pi 22/7
+    if is_leap(year):
+        print(f'{date(year, NOVEMBER, 9)} Pi Approximation Day 314th day')
+    else:
+        print(f'{date(year, NOVEMBER, 10)} Pi Approximation Day 314th day')
+    # Journée d'approximation pi 22/7
+    # Journée d'approximation pi 314e jour
 
+    #   https://en.wikipedia.org/wiki/Nikola_Tesla
+    #   https://fr.wikipedia.org/wiki/Nikola_Tesla
+    #   https://nikolatesladay.com/
     print(f'{date(year, JULY, 10)} Nikola Tesla Day')
 
     #   https://en.wikipedia.org/wiki/Ada_Lovelace_Day
     #   http://findingada.com/about/when-is-ald/
     print(f'{closest_date(TUESDAY, date(year, OCTOBER, WEEK2))} Ada Lovelace Day')
-    # Jour de Ada Lovelace
+    # Journée de Ada Lovelace
+
+    #   https://en.wikipedia.org/wiki/Darwin_Day
+    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_Darwin
+    print(f'{date(year, FEBRUARY, 12)} Darwin Day')
+    # Journée de Darwin
 
     #   https://en.wikipedia.org/wiki/International_Lefthanders_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_gauchers

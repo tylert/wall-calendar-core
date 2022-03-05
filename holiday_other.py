@@ -125,8 +125,13 @@ def main(year):
     print(f'{easter(year) - timedelta(days=21)} Mothering Sunday (UK)')
     # Fête des mères
 
+    #   https://en.wikipedia.org/wiki/Armed_Forces_Day
+    #   https://fr.wikipedia.org/wiki/Jour_des_forces_arm%C3%A9es
     #   https://en.wikipedia.org/wiki/Memorial_Day
     #   https://fr.wikipedia.org/wiki/Memorial_Day
+    print(f'{closest_date(SATURDAY, date(year, MAY, WEEK2))} Armed Forces Week (US)')
+    print(f'{closest_date(SATURDAY, date(year, MAY, WEEK3))} Armed Forces Day (US)')
+    # Journée des forces armées (US)
     print(
         f'{closest_date(MONDAY, date(year, MAY, WEEK4), last=True)} Memorial Day (US)'
     )
@@ -184,6 +189,15 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Guy_Fawkes_Night
     print(f'{date(year, NOVEMBER, 5)} Guy Fawkes Day (UK)')
     # Journée de Guy Fawkes (UK)
+
+    #   https://en.wikipedia.org/wiki/Veterans_Day
+    #   https://fr.wikipedia.org/wiki/Veterans_Day
+    #   https://en.wikipedia.org/wiki/Armistice_Day
+    #   https://fr.wikipedia.org/wiki/Jour_de_l%27Armistice
+    print(f'{date(year, NOVEMBER, 11)} Veterans Day (US)')
+    # Journée des anciens combattants (US)
+    print(f'{date(year, NOVEMBER, 11)} Armistice Day (UK)')
+    # Jour de l'Armistice (UK)
 
     #   https://en.wikipedia.org/wiki/Hogmanay
     #   https://fr.wikipedia.org/wiki/Hogmanay

@@ -107,6 +107,13 @@ def main(year):
     # Fête de la Reine / Fête de Victoria (CA)
     # Journée nationale des patriotes (CA-QC)
 
+    #   https://en.wikipedia.org/wiki/Armed_Forces_Day
+    #   https://fr.wikipedia.org/wiki/Jour_des_forces_arm%C3%A9es
+    print(f'{closest_date(SUNDAY, date(year, JUNE, WEEK1))} Armed Forces Day (CA)')
+    # Journée des forces armées (CA)
+    # Journée des forces armées canadiennes (CA)
+    # Canadian Armed Forces Day
+
     #   https://en.wikipedia.org/wiki/National_Aboriginal_Day
     #   https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_des_peuples_autochtones

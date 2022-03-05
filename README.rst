@@ -4,7 +4,7 @@
 ::
 
     # Initial setup
-    make venv ; source .venv/bin/activate
+    make venv && source .venv/bin/activate
 
     # Show all events for this year
     ( ./holiday_canada.py ; \

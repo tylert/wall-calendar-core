@@ -219,7 +219,9 @@ def main(year):
     #   https://en.wikipedia.org/wiki/List_of_minor_secular_observances
 
     #   https://en.wikipedia.org/wiki/Employee_Appreciation_Day
-    print(f'{closest_date(FRIDAY, date(year, MARCH, WEEK1))} Employee Appreciation Day (CA, US)')
+    print(
+        f'{closest_date(FRIDAY, date(year, MARCH, WEEK1))} Employee Appreciation Day (CA, US)'
+    )
 
     #   https://en.wikipedia.org/wiki/International_Cat_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat

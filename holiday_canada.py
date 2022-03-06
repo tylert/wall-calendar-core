@@ -117,6 +117,7 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Constitutional_history_of_Canada
     #   https://fr.wikipedia.org/wiki/Histoire_constitutionnelle_du_Canada
     #   https://www.ontario.ca/laws/statute/97u42
+    #   https://www.ontario.ca/fr/lois/loi/97u42
     print(f'{date(year, JUNE, 19)} Loyalist Day (CA-ON)')
 
     #   https://en.wikipedia.org/wiki/National_Aboriginal_Day

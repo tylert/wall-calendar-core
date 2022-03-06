@@ -76,6 +76,8 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Mardi_gras
     #   https://en.wikipedia.org/wiki/Ash_Wednesday
     #   https://fr.wikipedia.org/wiki/Mercredi_des_Cendres
+    #   https://en.wikipedia.org/wiki/Lent
+    #   https://fr.wikipedia.org/wiki/Car%C3%AAme
     #   https://en.wikipedia.org/wiki/Palm_Sunday
     #   https://fr.wikipedia.org/wiki/Dimanche_des_Rameaux
     #   https://en.wikipedia.org/wiki/Holy_Wednesday
@@ -108,6 +110,7 @@ def main(year):
     print(
         f'{easter(year) - timedelta(days=46)} Carnival/Ash Wednesday'
     )  # Mercredi des Cendres
+    # Lent / Carême
     print(f'{easter(year) - timedelta(days=7)} Palm Sunday')  # Dimanche des Rameaux
     print(f'{easter(year) - timedelta(days=4)} Holy Wednesday')  # Mercredi saint
     print(f'{easter(year) - timedelta(days=3)} Maundy Thursday')  # Jeudi saint
@@ -123,6 +126,7 @@ def main(year):
     print(f'{easter(year) + timedelta(days=50)} Whit Monday/Pentecost Monday')
     print(f'{easter(year) + timedelta(days=56)} Trinity Sunday')
     print(f'{easter(year) + timedelta(days=60)} Corpus Christi')
+    # XXX FIXME TODO  Palm Sunday Orthodox???
 
     #   https://en.wikipedia.org/wiki/Nowruz
     #   https://fr.wikipedia.org/wiki/Norouz

@@ -18,8 +18,6 @@ from paper_cal import *
 def main(year):
     ''' '''
 
-    #   https://www.canada.ca/en/revenue-agency/services/tax/public-holidays.html
-    #   https://www.canada.ca/fr/agence-revenu/services/impot/jours-feries.html
     #   https://en.wikipedia.org/wiki/Public_holidays_in_Canada
     #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 
@@ -114,6 +112,13 @@ def main(year):
     # Journée des forces armées canadiennes (CA)
     # Canadian Armed Forces Day
 
+    #   https://en.wikipedia.org/wiki/Upper_Canada
+    #   https://fr.wikipedia.org/wiki/Haut-Canada
+    #   https://en.wikipedia.org/wiki/Constitutional_history_of_Canada
+    #   https://fr.wikipedia.org/wiki/Histoire_constitutionnelle_du_Canada
+    #   https://www.ontario.ca/laws/statute/97u42
+    print(f'{date(year, JUNE, 19)} Loyalist Day (CA-ON)')
+
     #   https://en.wikipedia.org/wiki/National_Aboriginal_Day
     #   https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_des_peuples_autochtones
@@ -165,27 +170,28 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Civic_Holiday
     #   https://en.wikipedia.org/wiki/Public_holidays_in_Canada
     #   https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
-    # XXX FIXME TODO  CA-MB Terry Fox Day???  CA-ON Simcoe Day???
+    # XXX FIXME TODO  CA-ON Simcoe Day???
     print(
         f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Civic Holiday (CA-NL, CA-NT, CA-NU, CA-ON)'
     )  # Jour férié
     # Premier lundi d'août
     # Congé civique
     print(
-        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Heritage Day (CA-AB, CA-YT)'
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Heritage Day (CA-AB)'
     )  # Fête du patrimoine (CA-AB, CA-YT)
     print(
         f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} British Columbia Day (CA-BC)'
     )  # Jour de la Colombie-Britannique (CA-BC)
-    print(
-        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Saskatchewan Day (CA-SK)'
-    )  # Jour de Saskatchewan (CA-SK)
+    print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Terry Fox Day (CA-MB)')
     print(
         f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} New Brunswick Day (CA-NB)'
     )  # Jour de Nouveau Brunswick (CA-NB)
     print(
         f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Natal Day (CA-NS)'
     )  # Jour de la Fondation (CA-NS)
+    print(
+        f'{closest_date(MONDAY, date(year, AUGUST, WEEK1))} Saskatchewan Day (CA-SK)'
+    )  # Jour de Saskatchewan (CA-SK)
 
     #   https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
@@ -195,7 +201,7 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Discovery_Day
     print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK3))} Discovery Day (CA-YT)')
-    # Journée découverte (CA-YT)
+    # Journée de la Découverte (CA-YT)
 
     print(
         f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'

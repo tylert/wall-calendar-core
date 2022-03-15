@@ -306,7 +306,6 @@ def main(year):
     print(f'{date(year, JUNE, 1)} {ordinal(year - 1969)} Birthday of Unix')
     print(f'{date(year, JUNE, 19)} {ordinal(year - 1984)} Birthday of X-Windows')
     print(f'{date(year, JUNE, 19)} {ordinal(year - 1993)} Birthday of FreeBSD')
-    print(f'{date(year, JUNE, 21)} 11:00 {ordinal(year - 1948)} Birthday of Software')
     print(f'{date(year, JUNE, 7)} {ordinal(year - 2014)} Birthday of Kubernetes')
     print(f'{date(year, JULY, 16)} {ordinal(year - 1993)} Birthday of Slackware')
     print(f'{date(year, AUGUST, 1)} {ordinal(year - 1998)} Birthday of IRC')

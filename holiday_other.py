@@ -120,6 +120,7 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Mother's_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
+    #   https://en.wikipedia.org/wiki/Mothering_Sunday
     # Mothering Sunday (UK) is 4th Sunday of Lent / exactly 3 weeks before Easter Sunday
     print(f'{closest_date(SUNDAY, date(year, MAY, WEEK2))} Mother\'s Day')
     print(f'{easter(year) - timedelta(days=21)} Mothering Sunday (UK)')

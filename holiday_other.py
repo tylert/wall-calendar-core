@@ -298,7 +298,14 @@ def main(year):
     # Journée internationale des gauchers
 
     print(f'{date(year, FEBRUARY, 20)} {ordinal(year - 1991)} Birthday of Python')
-    print(f'{date(year, FEBRUARY, 29)} {ordinal(year - 2012)} Birthday of Raspberry Pi')
+    if is_leap(year):
+        print(
+            f'{date(year, FEBRUARY, 29)} {ordinal(year - 2012)} Birthday of Raspberry Pi'
+        )
+    else:
+        print(
+            f'{date(year, FEBRUARY, 28)} {ordinal(year - 2012)} Birthday of Raspberry Pi'
+        )
     print(f'{date(year, MARCH, 11)} {ordinal(year - 2002)} Birthday of Arch')
     print(f'{date(year, MARCH, 15)} {ordinal(year - 2013)} Birthday of Docker')
     print(f'{date(year, MARCH, 18)} {ordinal(year - 1985)} Birthday of GNU Manifesto')

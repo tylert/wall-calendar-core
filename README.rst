@@ -13,7 +13,7 @@
 
     # Find out when the next few Easters will occur
     for (( year=2022 ; year<2033 ; year++ )); do
-        ./holiday_religious.py --year $year | grep 'Easter Sunday'
+        ./holiday_religious.py --year ${year} | grep 'Easter Sunday'
     done
 
 

@@ -310,6 +310,7 @@ def main(year):
     print(f'{date(year, MARCH, 15)} {ordinal(year - 2013)} Birthday of Docker')
     print(f'{date(year, MARCH, 18)} {ordinal(year - 1985)} Birthday of GNU Manifesto')
     print(f'{date(year, MARCH, 21)} {ordinal(year - 1993)} Birthday of NetBSD')
+    print(f'{date(year, APRIL, 3)} {ordinal(year - 2005)} Birthday of Git')
     print(f'{date(year, APRIL, 16)} {ordinal(year - 1971)} Birthday of FTP')
     print(f'{date(year, JUNE, 1)} {ordinal(year - 1969)} Birthday of Unix')
     print(f'{date(year, JUNE, 19)} {ordinal(year - 1984)} Birthday of X-Windows')

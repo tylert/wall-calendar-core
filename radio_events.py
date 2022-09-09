@@ -42,7 +42,7 @@ def main(year):
 
     assignment = get_assignment()
     # Lanark North Leeds ARES nets are every Wednesday of each month at
-    # 2000H.
+    # 20:00.
     for month in range(1, 13):
         print(
             f'{closest_date(WEDNESDAY, date(year, month, WEEK1))} 20:00 {next(assignment)}'

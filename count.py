@@ -15,12 +15,12 @@ print(
     f'Bv {b.days} days, {b.days / 7:.2f} weeks, {b.days / 30:.2f} months, {b.days / 365:.2f} years'
 )
 
-# ---==[e]==---
-e = today_date - date(2017, 10, 10)  # count up from date
+# ---==[s]==---
+s = today_date - date(2017, 10, 10)  # count up from a date
 print(
-    f'E^ {e.days} days, {e.days / 7:.2f} weeks, {e.days / 30:.2f} months, {e.days / 365:.2f} years'
+    f'S^ {s.days} days, {s.days / 7:.2f} weeks, {s.days / 30:.2f} months, {s.days / 365:.2f} years'
 )
 
-# ---==[r]==---
-# r = date(2021, 6, 1) + timedelta(days=365 * 10) - today_date  # count down to date ten years in the future
-# print(f'Rv {r.days} days, {r.days / 7:.2f} weeks, {r.days / 30:.2f} months, {r.days / 365:.2f} years')
+# ---==[a]==---
+a = date(2017, 10, 10) + timedelta(days=365 * 5) - today_date  # count down to a date five years from some other date
+print(f'Av {a.days} days, {a.days / 7:.2f} weeks, {a.days / 30:.2f} months, {a.days / 365:.2f} years')

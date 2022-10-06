@@ -69,3 +69,4 @@ Links
 * https://www.assa.org.au/edm
 * https://bloben.com/  CalDAV client
 * https://github.com/nibdo/bloben-app  source for bloben CalDAV client
+* https://endler.dev/2022/zerocal/  just the event, please!

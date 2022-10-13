@@ -138,6 +138,14 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Pahela_Baishakh
     # print(f'{date(year, APRIL, 13)}')
 
+    # 10th day of the 7th month (Ashvin) on the Hindu calendar
+    #   https://en.wikipedia.org/wiki/Dasara
+    #   https://en.wikipedia.org/wiki/Vijayadashami
+    #   https://fr.wikipedia.org/wiki/Dussehra
+    # in 7th month (Ashvin) on the Hindu calendar
+    #   https://en.wikipedia.org/wiki/Navaratri
+    #   https://fr.wikipedia.org/wiki/Navratri
+    # 20 days after Vijayadashami/Dussehra/Dasara/Dasain
     #   https://en.wikipedia.org/wiki/Diwali
     #   https://fr.wikipedia.org/wiki/Divali
     print(f'{new_moon(date(year, OCTOBER, 16)).date() - timedelta(days=4)} Diwali')

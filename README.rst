@@ -24,6 +24,11 @@ Docs
 * https://docs.python.org/3/library/calendar.html
 * PyMeeus https://pymeeus.readthedocs.io/en/latest/
 * Pyluach https://pyluach.readthedocs.io/en/latest/
+* https://pkg.go.dev/time
+* https://github.com/soniakeys/meeus
+* https://www.golangprograms.com/golang-package-examples/example-to-use-weekday-and-yearday-function.html
+* https://www.golangprograms.com/regular-expression-to-extract-date-yyyy-mm-dd-from-string.html
+* https://github.com/janczer/goMoonPhase  Golang moon phase
 
 ::
 

@@ -96,14 +96,14 @@ MOON_GLYPHS = [
 ]
 
 
-def is_leap(year=date.today().year):
+def is_leap(year: int = date.today().year) -> bool:
     ''' '''
 
     # return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
     return Epoch.is_leap(year)
 
 
-def days_in_month(month=date.today().month, year=date.today().year):
+def days_in_month(month: int = date.today().month, year: int = date.today().year) -> int:
     ''' '''
 
     DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -115,7 +115,7 @@ def days_in_month(month=date.today().month, year=date.today().year):
         return DAYS_IN_MONTH[month]
 
 
-def closest_date(desired_weekday, nearby_date=date.today(), last=False):
+def closest_date(desired_weekday: int, nearby_date=date.today(), last: bool = False):
     ''' '''
 
     # Jump straight to the end of the current month
@@ -145,7 +145,7 @@ def closest_date(desired_weekday, nearby_date=date.today(), last=False):
         return found_date
 
 
-def repeat_date(start_date=date.today(), skip=LENGTH_OF_WEEK):
+def repeat_date(start_date=date.today(), skip: int = LENGTH_OF_WEEK):
     ''' '''
 
     date_tracker = start_date
@@ -154,7 +154,7 @@ def repeat_date(start_date=date.today(), skip=LENGTH_OF_WEEK):
         date_tracker += timedelta(skip)
 
 
-def ordinal(number, lang='en'):
+def ordinal(number: int, lang: str = 'en') -> str:
     ''' '''
 
     #   https://docs.python.org/3.10/whatsnew/3.10.html#pep-634-structural-pattern-matching
@@ -178,9 +178,9 @@ def ordinal(number, lang='en'):
 
 
 def heb_date(
-    heb_month=dates.HebrewDate.today().month,
-    heb_day=dates.HebrewDate.today().day,
-    greg_year=date.today().year,
+    heb_month: int = dates.HebrewDate.today().month,
+    heb_day: int = dates.HebrewDate.today().day,
+    greg_year: int = date.today().year,
 ):
     ''' '''
 
@@ -194,13 +194,13 @@ def heb_date(
 
 
 def isl_date(
-    isl_month=Epoch.gregorian2moslem(
+    isl_month: int = Epoch.gregorian2moslem(
         date.today().year, date.today().month, date.today().day
     )[1],
-    isl_day=Epoch.gregorian2moslem(
+    isl_day: int = Epoch.gregorian2moslem(
         date.today().year, date.today().month, date.today().day
     )[2],
-    greg_year=date.today().year,
+    greg_year: int = date.today().year,
 ):
     ''' '''
 
@@ -229,21 +229,21 @@ def isl_date(
 # December Solstice is the 1st day of Winter/hiver in the Northern Hemisphere
 
 
-def easter(year=date.today().year):
+def easter(year: int = date.today().year):
     ''' '''
 
     month, day = Epoch.easter(year)
     return date(year=year, month=month, day=day)
 
 
-def passover(year=date.today().year):
+def passover(year: int = date.today().year):
     ''' '''
 
     month, day = Epoch.jewish_pesach(year)
     return date(year=year, month=month, day=day)
 
 
-def perihelion(year=date.today().year):
+def perihelion(year: int = date.today().year):
     ''' '''
 
     _, month, day, hour, minute, _ = Earth.perihelion_aphelion(
@@ -252,7 +252,7 @@ def perihelion(year=date.today().year):
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
-def aphelion(year=date.today().year):
+def aphelion(year: int = date.today().year):
     ''' '''
 
     _, month, day, hour, minute, _ = Earth.perihelion_aphelion(
@@ -261,7 +261,7 @@ def aphelion(year=date.today().year):
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
-def spring(year=date.today().year):
+def spring(year: int = date.today().year):
     ''' '''
 
     _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
@@ -270,7 +270,7 @@ def spring(year=date.today().year):
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
-def summer(year=date.today().year):
+def summer(year: int = date.today().year):
     ''' '''
 
     _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
@@ -279,7 +279,7 @@ def summer(year=date.today().year):
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
-def autumn(year=date.today().year):
+def autumn(year: int = date.today().year):
     ''' '''
 
     _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
@@ -288,7 +288,7 @@ def autumn(year=date.today().year):
     return datetime(year=year, month=month, day=day, hour=hour, minute=minute)
 
 
-def winter(year=date.today().year):
+def winter(year: int = date.today().year):
     ''' '''
 
     _, month, day, hour, minute, _ = Sun.get_equinox_solstice(
@@ -344,7 +344,7 @@ def last_moon(moon_date=date.today()):
 #   https://humanoriginproject.com/the-chinese-calendar-how-to-calculate-chinese-new-year/
 
 
-def spin(year=date.today().year):
+def spin(year: int = date.today().year) -> str:
     ''' '''
 
     # even numbered years are yang, odd numbered years are yin
@@ -359,7 +359,7 @@ def spin(year=date.today().year):
     return SPINS[year % 2]
 
 
-def stem(year=date.today().year):
+def stem(year: int = date.today().year) -> str:
     ''' '''
 
     HEAVENLY_STEMS = [
@@ -378,7 +378,7 @@ def stem(year=date.today().year):
     return HEAVENLY_STEMS[year % 10]
 
 
-def branch(year=date.today().year):
+def branch(year: int = date.today().year) -> str:
     ''' '''
 
     EARTHLY_BRANCHES = [
@@ -401,7 +401,7 @@ def branch(year=date.today().year):
     return EARTHLY_BRANCHES[year % 12]
 
 
-def element(year=date.today().year):
+def element(year: int = date.today().year) -> str:
     ''' '''
 
     MAJOR_ELEMENTS = [
@@ -422,7 +422,7 @@ def element(year=date.today().year):
     return MAJOR_ELEMENTS[year % 10]
 
 
-def animal(year=date.today().year):
+def animal(year: int = date.today().year) -> str:
     ''' '''
 
     CHINESE_ZODIAC = [
@@ -443,7 +443,7 @@ def animal(year=date.today().year):
     return CHINESE_ZODIAC[year % 12]
 
 
-def correlation(year=date.today().year):
+def correlation(year: int = date.today().year) -> str:
     ''' '''
 
     CORRELATIONS = [

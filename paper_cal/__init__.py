@@ -32,6 +32,10 @@ from .paper_cal import (
 )
 
 # Useful constants
+from .paper_cal import JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC
+from .paper_cal import MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+from .paper_cal import MON, TUE, WED, THU, FRI, SAT, SUN
+from .paper_cal import WEEK1, WEEK2, WEEK3, WEEK4
 from .paper_cal import (
     JANUARY,
     FEBRUARY,
@@ -46,10 +50,6 @@ from .paper_cal import (
     NOVEMBER,
     DECEMBER,
 )
-from .paper_cal import JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC
-from .paper_cal import MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
-from .paper_cal import MON, TUE, WED, THU, FRI, SAT, SUN
-from .paper_cal import WEEK1, WEEK2, WEEK3, WEEK4
 from .paper_cal import (
     NISAN,
     IYAR,

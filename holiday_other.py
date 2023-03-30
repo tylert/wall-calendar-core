@@ -200,6 +200,13 @@ def main(year):
     print(f'{date(year, NOVEMBER, 11)} Armistice Day (UK)')
     # Jour de l'Armistice (UK)
 
+    #   https://en.wikipedia.org/wiki/Kwanzaa
+    #   https://fr.wikipedia.org/wiki/Kwanzaa
+    print(f'{date(year, DECEMBER, 26)} Kwanzaa Begins')
+    print(f'{date(year, JANUARY, 1)} Kwanzaa Ends')
+    # Début de Kwanzaa
+    # Fin de Kwanzaa
+
     #   https://en.wikipedia.org/wiki/Hogmanay
     #   https://fr.wikipedia.org/wiki/Hogmanay
     print(f'{date(year, DECEMBER, 31)} Hogmanay (UK)')

@@ -440,6 +440,8 @@ def animal(year: int = date.today().year) -> str:
         '羊',  # yáng (goat)
     ]
 
+    # singe coq chien cochon/sanglier/verrat rat boeuf tigre lapin dragon serpent cheval chèvre/bélier/mouton
+
     return CHINESE_ZODIAC[year % 12]
 
 
@@ -458,6 +460,8 @@ def correlation(year: int = date.today().year) -> str:
         '中',  # zhōng (middle)
         '中',  # zhōng (middle)
     ]
+
+    # ouest nord est sud
 
     return CORRELATIONS[year % 10]
 

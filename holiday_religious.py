@@ -182,8 +182,9 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Roch_Hachana
     #   https://en.wikipedia.org/wiki/Tishrei
     #   https://fr.wikipedia.org/wiki/Tishri
-    print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah Begins')
-    print(f'{heb_date(TISHREI, 2, year)} Rosh Hashanah Ends')
+    print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah')
+    # print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah Begins')
+    # print(f'{heb_date(TISHREI, 2, year)} Rosh Hashanah Ends')
     # Jewish New Year
     # Début de Roch Hachana
     # Fin de Roch Hachana

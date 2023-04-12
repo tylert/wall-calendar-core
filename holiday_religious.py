@@ -175,19 +175,18 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Chavouot
     #   XXX FIXME TODO  Add more links!!!
     # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following
-    print(f'{heb_date(SIVAN, 6, year)} Shauvot Begins')  # Début de Chavouot
-    print(f'{heb_date(SIVAN, 7, year)} Shauvot Ends')  # Fin de Chavouot
+    print(f'{heb_date(SIVAN, 6, year)} Shauvot')  # Chavouot
+    # print(f'{heb_date(SIVAN, 6, year)} Shauvot Begins')  # Début de Chavouot
+    # print(f'{heb_date(SIVAN, 7, year)} Shauvot Ends')  # Fin de Chavouot
 
     #   https://en.wikipedia.org/wiki/Rosh_Hashanah
     #   https://fr.wikipedia.org/wiki/Roch_Hachana
     #   https://en.wikipedia.org/wiki/Tishrei
     #   https://fr.wikipedia.org/wiki/Tishri
     print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah')
-    # print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah Begins')
-    # print(f'{heb_date(TISHREI, 2, year)} Rosh Hashanah Ends')
+    # print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah Begins')  # Début de Roch Hachana
+    # print(f'{heb_date(TISHREI, 2, year)} Rosh Hashanah Ends')  # Fin de Roch Hachana
     # Jewish New Year
-    # Début de Roch Hachana
-    # Fin de Roch Hachana
 
     #   https://en.wikipedia.org/wiki/Yom_Kippur
     #   https://fr.wikipedia.org/wiki/Yom_Kippour

@@ -208,6 +208,9 @@ def main(year):
     print(f'{date(year, NOVEMBER, 11)} Armistice Day (UK)')
     # Jour de l'Armistice (UK)
 
+    #   https://en.wikipedia.org/wiki/National_Pearl_Harbor_Remembrance_Day
+    print(f'{date(year, DECEMBER, 7)} Pearl Harbor Day (US)')
+
     #   https://en.wikipedia.org/wiki/Kwanzaa
     #   https://fr.wikipedia.org/wiki/Kwanzaa
     print(f'{date(year, DECEMBER, 26)} Kwanzaa Begins')

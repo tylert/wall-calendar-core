@@ -24,6 +24,7 @@ Python
 * https://docs.python.org/3/library/calendar.html
 * PyMeeus https://pymeeus.readthedocs.io/en/latest/
 * Pyluach https://pyluach.readthedocs.io/en/latest/
+* https://blog.ganssle.io/articles/2018/03/pytz-fastest-footgun.html  Python timezone math
 
 
 Golang

@@ -67,6 +67,8 @@ Golang
 Links
 -----
 
+* https://en.wikipedia.org/wiki/ISO_3166-2:CA
+* https://en.wikipedia.org/wiki/ISO_3166-2:ES
 * https://ilyabirman.net/forebruary/
 * https://elf.org/moons/index.html  beautiful moon calendars
 * http://www.farmersalmanac.com/astronomy/fullmoonnames.html

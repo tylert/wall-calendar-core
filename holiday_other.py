@@ -222,9 +222,6 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Hogmanay
     print(f'{date(year, DECEMBER, 31)} Hogmanay (UK)')
 
-    #   https://es.wikipedia.org/wiki/Reyes_Magos
-    #   https://es.wikipedia.org/wiki/Viernes_Santo
-    #   https://es.wikipedia.org/wiki/Pascua
     #   https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores
     #   https://es.wikipedia.org/wiki/Fiesta_de_San_Juan
     #   https://es.wikipedia.org/wiki/Asunci%C3%B3n_de_Mar%C3%ADa
@@ -233,22 +230,14 @@ def main(year):
     #   https://es.wikipedia.org/wiki/D%C3%ADa_de_Todos_los_Santos
     #   https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Constituci%C3%B3n_(Espa%C3%B1a)
     #   https://es.wikipedia.org/wiki/Inmaculada_Concepci%C3%B3n
-    #   https://es.wikipedia.org/wiki/Navidad
-    #   https://es.wikipedia.org/wiki/D%C3%ADa_de_San_Esteban
-     
-    print(f'{date(year, JANUARY, 6)} Reyes (ES)')
-    print(f'{date(year, APRIL, 7)} Viernes Santo (ES)')
-    print(f'{date(year, APRIL, 10)} Pascua (ES)')
     print(f'{date(year, MAY, 1)} Fiesta del Trabajo (ES)')
-    print(f'{date(year, JUNE, 24)} San Juan (CAT)')
+    print(f'{date(year, JUNE, 24)} San Juan (ES-CT)')
     print(f'{date(year, AUGUST, 15)} La Asunción (ES)')
     print(f'{date(year, SEPTEMBER, 11)} Diada Nacional de Catalunya (ES)')
     print(f'{date(year, OCTOBER, 12)} Fiesta Nacional de España (ES)')
     print(f'{date(year, NOVEMBER, 1)} Todos los Santos (ES)')
     print(f'{date(year, DECEMBER, 6)} Dia de la Constitución (ES)')
     print(f'{date(year, DECEMBER, 8)} La Inmaculada (ES)')
-    print(f'{date(year, DECEMBER, 25)} Navidad (ES)')
-    print(f'{date(year, DECEMBER, 26)} San Esteban (CAT)')
 
     #   https://en.wikipedia.org/wiki/List_of_minor_secular_observances
 

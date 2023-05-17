@@ -27,10 +27,15 @@ def main(year):
 
     #   https://en.wikipedia.org/wiki/Epiphany_(holiday)
     #   https://fr.wikipedia.org/wiki/%C3%89piphanie
+    #   https://es.wikipedia.org/wiki/Epifan%C3%ADa
+    #   https://en.wikipedia.org/wiki/Biblical_Magi
+    #   https://fr.wikipedia.org/wiki/Rois_mages
+    #   https://es.wikipedia.org/wiki/Reyes_Magos
     #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord
     # Baptism of the Lord is the 1st Sunday after January 6th
     # Jesus
-    print(f'{date(year, JANUARY, 6)} Epiphany')  # Epiphanie
+    print(f'{date(year, JANUARY, 6)} Epiphany')  # Épiphanie
+    print(f'{date(year, JANUARY, 6)} Reyes (ES)')  # Epifanía???  La festividad de los Reyes Magos???
     print(f'{closest_date(SUNDAY, date(year, JANUARY, 10))} Baptism of the Lord')
 
     #   https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
@@ -86,10 +91,12 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Jeudi_saint
     #   https://en.wikipedia.org/wiki/Good_Friday
     #   https://fr.wikipedia.org/wiki/Vendredi_saint
+    #   https://es.wikipedia.org/wiki/Viernes_Santo
     #   https://en.wikipedia.org/wiki/Holy_Saturday
     #   https://fr.wikipedia.org/wiki/Samedi_saint
     #   https://en.wikipedia.org/wiki/Easter
     #   https://fr.wikipedia.org/wiki/P%C3%A2ques
+    #   https://es.wikipedia.org/wiki/Pascua
     #   https://en.wikipedia.org/wiki/Easter_Saturday
     #   https://en.wikipedia.org/wiki/Feast_of_the_Ascension
     #   https://fr.wikipedia.org/wiki/Ascension_(f%C3%AAte)
@@ -115,8 +122,10 @@ def main(year):
     print(f'{easter(year) - timedelta(days=4)} Holy Wednesday')  # Mercredi saint
     print(f'{easter(year) - timedelta(days=3)} Maundy Thursday')  # Jeudi saint
     print(f'{easter(year) - timedelta(days=2)} Good Friday')  # Vendredi saint
+    print(f'{easter(year) - timedelta(days=2)} Viernes Santo (ES)')  # Good Friday
     print(f'{easter(year) - timedelta(days=1)} Holy Saturday')  # Samedi saint
     print(f'{easter(year)} Easter Sunday')  # Dimanche de Pâques
+    print(f'{easter(year)} Pascua (ES)')  # Easter Sunday
     print(f'{easter(year) + timedelta(days=1)} Easter Monday')  # Lundi de Pâques
     print(f'{easter(year) + timedelta(days=6)} Easter Saturday')
     print(f'{easter(year) + timedelta(days=39)} Ascension Day')  # Ascension
@@ -262,11 +271,18 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
     #   https://en.wikipedia.org/wiki/Christmas
     #   https://fr.wikipedia.org/wiki/No%C3%ABl
+    #   https://es.wikipedia.org/wiki/Navidad
     #   https://en.wikipedia.org/wiki/Boxing_Day
     #   https://fr.wikipedia.org/wiki/Boxing_Day
+    #   https://en.wikipedia.org/wiki/Saint_Stephen%27s_Day
+    #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-%C3%89tienne
+    #   https://es.wikipedia.org/wiki/D%C3%ADa_de_San_Esteban
     print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
     print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
+    print(f'{date(year, DECEMBER, 25)} Navidad (ES)')  # Christmas Day
     print(f'{date(year, DECEMBER, 26)} Boxing Day')  # Le jour des boîtes
+    print(f'{date(year, DECEMBER, 26)} Saint Stephen\'s Day')  # Fête de la Saint-Étienne
+    print(f'{date(year, DECEMBER, 26)} Día de San Esteban (ES)')  # Saint Stephen's Day
     # Lendemain de Noël
     # Après-Noël
     if SATURDAY == date.weekday(date(year, DECEMBER, 25)):

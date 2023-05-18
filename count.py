@@ -14,6 +14,7 @@ else:
 print(
     f'Bv {b.days} days, {b.days / 7:.2f} weeks, {b.days / 30:.2f} months, {b.days / 365:.2f} years'
 )
+# v=1;w=100;x=.1;y=1;(w*.5*x*y)+(w*.5*x*y*v)
 
 # ---==[s]==---
 s = today_date - date(2017, 10, 10)  # count up from a date

@@ -34,8 +34,10 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord
     # Baptism of the Lord is the 1st Sunday after January 6th
     # Jesus
-    print(f'{date(year, JANUARY, 6)} Epiphany')  # Épiphanie
-    print(f'{date(year, JANUARY, 6)} Reyes (ES)')  # Epifanía???  La festividad de los Reyes Magos???
+    print(f'{date(year, JANUARY, 6)} Epiphany')  # Épiphanie / Epifanía
+    print(
+        f'{date(year, JANUARY, 6)} Reyes (ES)'
+    )  # La festividad de los Reyes Magos???
     print(f'{closest_date(SUNDAY, date(year, JANUARY, 10))} Baptism of the Lord')
 
     #   https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
@@ -214,10 +216,8 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Hanukkah
     #   https://fr.wikipedia.org/wiki/Hanoucca
     #   XXX FIXME TODO  Add more links!!!
-    print(f'{heb_date(KISLEV, 25, year)} Hanukkah Begins')
-    print(f'{heb_date(TEVET, 2, year)} Hanukkah Ends')
-    # Début de Hanoucca
-    # Fin de Hanoucca
+    print(f'{heb_date(KISLEV, 25, year)} Hanukkah Begins')  # Début de Hanoucca
+    print(f'{heb_date(TEVET, 2, year)} Hanukkah Ends')  # Fin de Hanoucca
 
     #   https://en.wikipedia.org/wiki/Purim
     #   https://fr.wikipedia.org/wiki/Pourim
@@ -247,6 +247,11 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Jean_le_Baptiste
     #   https://en.wikipedia.org/wiki/Nativity_of_St_John_the_Baptist
     print(f'{date(year, JUNE, 24)} Saint-Jean-Baptiste Day')
+    # XXX FIXME TODO  The rules are vague about what happens if this is on a Saturday
+    if SUNDAY == date.weekday(date(year, JUNE, 24)):
+        print(
+            f'{closest_date(MONDAY, date(year, JUNE, 24))} Saint-Jean-Baptiste Day Observed'
+        )  # observé
     # Fête nationale du Québec
     # St. John the Baptist's Day
     # Fête de la Saint-Jean-Baptiste
@@ -281,7 +286,9 @@ def main(year):
     print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
     print(f'{date(year, DECEMBER, 25)} Navidad (ES)')  # Christmas Day
     print(f'{date(year, DECEMBER, 26)} Boxing Day')  # Le jour des boîtes
-    print(f'{date(year, DECEMBER, 26)} Saint Stephen\'s Day')  # Fête de la Saint-Étienne
+    print(
+        f'{date(year, DECEMBER, 26)} Saint Stephen\'s Day'
+    )  # Fête de la Saint-Étienne
     print(f'{date(year, DECEMBER, 26)} Día de San Esteban (ES)')  # Saint Stephen's Day
     # Lendemain de Noël
     # Après-Noël

@@ -29,6 +29,7 @@ from .paper_cal import (
     element,
     animal,
     correlation,
+    hexagram,
 )
 
 # Useful constants

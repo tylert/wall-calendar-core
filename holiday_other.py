@@ -140,6 +140,10 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Flag_Day_(United_States)
     print(f'{date(year, JUNE, 14)} Flag Day (US)')  # Jour du drapeau (US)
 
+    #   https://en.wikipedia.org/wiki/Juneteenth
+    #   https://fr.wikipedia.org/wiki/Juneteenth
+    print(f'{date(year, JUNE, 19)} Juneteenth')
+
     #   https://en.wikipedia.org/wiki/Father's_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_P%C3%A8res
     print(f'{closest_date(SUNDAY, date(year, JUNE, WEEK3))} Father\'s Day')

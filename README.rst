@@ -30,12 +30,13 @@ Python
 Golang
 ------
 
-* https://pkg.go.dev/time
+* https://github.com/floAr/calendargo  example of building calendars using gg
+* https://github.com/fogleman/gg  2d drawings
+* https://github.com/rickar/cal  example that has slippy dates for holidays (e.g.  3rd Monday)
 * https://github.com/soniakeys/meeus
 * https://www.golangprograms.com/golang-package-examples/example-to-use-weekday-and-yearday-function.html
 * https://www.golangprograms.com/regular-expression-to-extract-date-yyyy-mm-dd-from-string.html
 * https://github.com/janczer/goMoonPhase  Golang moon phase
-* https://github.com/rickar/cal
 * https://github.com/yamadayuki/go-calendar
 * https://github.com/bykof/gostradamus
 * https://github.com/ijt/go-anytime

@@ -12,7 +12,7 @@ from paper_cal import *
 @click.option(
     '--year',
     '-y',
-    default=date.today().year,
+    default=date.today().year+1,
     help='Year to show',
 )
 def main(year):

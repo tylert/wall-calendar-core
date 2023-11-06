@@ -12,7 +12,7 @@ from paper_cal import *
 @click.option(
     '--year',
     '-y',
-    default=date.today().year,
+    default=date.today().year+1,
     help='Year to show',
 )
 def main(year):
@@ -26,37 +26,6 @@ def main(year):
         print(f'{date(year, AUGUST, 7)} 06:48 1999 AN10 Asteroid Pass')
     if 2028 == year:
         print(f'{date(year, OCTOBER, 26)} 06:44 1997 XF11 Asteroid Pass')
-
-    #   https://en.wikipedia.org/wiki/Daylight_saving_time_by_country
-    #   https://en.wikipedia.org/wiki/Daylight_saving_time_in_Canada
-    #   https://www.timeanddate.com/time/zones/y
-    #   https://www.timeanddate.com/time/zones/r
-    #   https://www.timeanddate.com/time/zones/q
-    #   https://www.timeanddate.com/time/zones/z
-    #   https://www.timeanddate.com/time/zones/a
-    #   https://www.timeanddate.com/time/zones/b
-    #   https://www.timeanddate.com/time/zones/m
-    # DST Begins = "Spring forward"
-    # DST Ends = "Fall back"
-    #     UTC-12:00 -> Yankee
-    #     UTC-05:00 -> Romeo
-    #     UTC-04:00 -> Quebec
-    #     UTC+00:00 -> Zulu
-    #     UTC+01:00 -> Alpha
-    #     UTC+02:00 -> Bravo
-    #     UTC+12:00 -> Mike
-    print(
-        f'{closest_date(SUNDAY, date(year, MARCH, WEEK2))} 02:00 Daylight Savings Time Begins (CA, US)'
-    )  # Heure d'éte commence (CA, US)
-    print(
-        f'{closest_date(SUNDAY, date(year, MARCH, WEEK4), last=True)} 01:00Z Daylight Savings Time Begins (EU, UK)'
-    )  # Heure d'éte commence (EU, UK)
-    print(
-        f'{closest_date(SUNDAY, date(year, NOVEMBER, WEEK1))} 02:00 Daylight Savings Time Ends (CA, US)'
-    )  # Heure d'éte termine (CA, US)
-    print(
-        f'{closest_date(SUNDAY, date(year, OCTOBER, WEEK4), last=True)} 01:00Z Daylight Savings Time Ends (EU, UK)'
-    )  # Heure d'éte termine (EU, UK)
 
     #   https://en.wikipedia.org/wiki/Friday_The_13th
     #   https://fr.wikipedia.org/wiki/Vendredi_treize
@@ -75,12 +44,6 @@ def main(year):
     print(f'{date(year, JANUARY, 17)} Raoul Wallenburg Day')
     # Journée Raoul Wallenberg
 
-    #   https://en.wikipedia.org/wiki/Martin_Luther_King_Jr._Day
-    #   https://fr.wikipedia.org/wiki/Martin_Luther_King_Day
-    print(
-        f'{closest_date(MONDAY, date(year, JANUARY, WEEK3))} Martin Luther King Jr. Day (US)'
-    )  # Journée de Martin Luther King Jr. (US)
-
     # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
     # every 4th year where "year mod 4 == 1" (2001, ..., 2013, 2017, 2021,
     # 2025, 2029, etc.)
@@ -91,16 +54,6 @@ def main(year):
         else:
             print(f'{date(year, JANUARY, 20)} Inauguration Day (US)')
     # Jour d'inauguration (US)
-
-    #   https://en.wikipedia.org/wiki/Groundhog_Day
-    #   https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
-    print(f'{date(year, FEBRUARY, 2)} Groundhog Day')  # Jour de la marmotte
-
-    #   https://en.wikipedia.org/wiki/Washington's_Birthday
-    #   https://en.wikipedia.org/wiki/Presidents%27_Day
-    #   https://fr.wikipedia.org/wiki/Presidents_Day
-    print(f'{closest_date(MONDAY, date(year, FEBRUARY, WEEK3))} President\'s Day (US)')
-    # Journée de la Présidence (US)
 
     #   https://en.wikipedia.org/wiki/April_Fools'_Day
     #   https://fr.wikipedia.org/wiki/Poisson_d%27avril
@@ -149,10 +102,6 @@ def main(year):
     print(f'{closest_date(SUNDAY, date(year, JUNE, WEEK3))} Father\'s Day')
     # Fête des pères
 
-    #   https://en.wikipedia.org/wiki/Independence_Day_%28United_States%29
-    print(f'{date(year, JULY, 4)} Independence Day (US)')
-    # Jour de l'indépendance (US)
-
     #   https://en.wikipedia.org/wiki/Grandparents'_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_grands-parents
     # XXX FIXME TODO  2nd Sunday in September or 1st Sunday after Labour Day
@@ -160,14 +109,6 @@ def main(year):
     # print(f'{closest_date(MONDAY, date(year, SEPTEMBER, WEEK1)) + timedelta(days=6)} Grandparents\' Day (US)')
     # Fête des grands-parents (US)
     # Journée nationale des grands-parents (US)
-
-    #   https://en.wikipedia.org/wiki/Columbus_Day
-    print(f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2))} Columbus Day (US)')
-    # Jour de Columbus (US)
-
-    #   https://en.wikipedia.org/wiki/Halloween
-    #   https://fr.wikipedia.org/wiki/Halloween
-    print(f'{date(year, OCTOBER, 31)} Hallowe\'en')  # Halloween
 
     #   https://en.wikipedia.org/wiki/Thanksgiving
     #   https://en.wikipedia.org/wiki/Black_Friday_(shopping)
@@ -211,9 +152,6 @@ def main(year):
     # Journée des anciens combattants (US)
     print(f'{date(year, NOVEMBER, 11)} Armistice Day (UK)')
     # Jour de l'Armistice (UK)
-
-    #   https://en.wikipedia.org/wiki/National_Pearl_Harbor_Remembrance_Day
-    print(f'{date(year, DECEMBER, 7)} Pearl Harbor Day (US)')
 
     #   https://en.wikipedia.org/wiki/Kwanzaa
     #   https://fr.wikipedia.org/wiki/Kwanzaa

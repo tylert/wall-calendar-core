@@ -7,7 +7,8 @@
     make venv && source .venv/bin/activate
 
     # Show all events for this year
-    ( ./holiday_canada.py ; \
+    ( go run . ; \
+      ./holiday_canada.py ; \
       ./holiday_religious.py ; \
       ./holiday_other.py ) | sort
 

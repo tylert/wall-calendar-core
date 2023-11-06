@@ -55,13 +55,17 @@ func englishCanada(u32 uint32) {
 	// last Sunday in March and last Sunday in October
 	// https://en.wikipedia.org/wiki/Daylight_saving_time_in_Canada
 	// https://en.wikipedia.org/wiki/Daylight_saving_time_by_country
-	// UTC-12:00 -> Yankee https://www.timeanddate.com/time/zones/y
-	// UTC-05:00 -> Romeo  https://www.timeanddate.com/time/zones/r
-	// UTC-04:00 -> Quebec https://www.timeanddate.com/time/zones/q
-	// UTC+00:00 -> Zulu   https://www.timeanddate.com/time/zones/z
-	// UTC+01:00 -> Alpha  https://www.timeanddate.com/time/zones/a
-	// UTC+02:00 -> Bravo  https://www.timeanddate.com/time/zones/b
-	// UTC+12:00 -> Mike   https://www.timeanddate.com/time/zones/m
+	// https://en.wikipedia.org/wiki/Military_time_zone
+	// https://fr.wikipedia.org/wiki/Liste_des_zones_horaires_militaires
+	//   UTC-12:00 Yankee, UTC-11:00 X-ray,   UTC-10:00 Whiskey
+	//   UTC-09:00 Victor, UTC-08:00 Uniform, UTC-07:00 Tango
+	//   UTC-06:00 Sierra, UTC-05:00 Romeo,   UTC-04:00 Quebec
+	//   UTC-03:00 Papa,   UTC-02:00 Oscar,   UTC-01:00 November
+	//   UTC+00:00 Zulu
+	//   UTC+01:00 Alpha,  UTC+02:00 Bravo,   UTC+03:00 Charlie
+	//   UTC+04:00 Delta,  UTC+05:00 Echo,    UTC+06:00 Foxtrot
+	//   UTC+07:00 Golf,   UTC+08:00 Hotel,   UTC+09:00 India
+	//   UTC+10:00 Kilo,   UTC+11:00 Lima,    UTC+12:00 Mike
 	// DST Begins = "Spring forward", DST Ends = "Fall back"
 	// Heure d'éte commence, Heure d'éte termine
 	print_wiggly_event(fmt.Sprintf("%d-03-11", u32), "02:00 DST Begins (CA, US)", uint32(time.Sunday))

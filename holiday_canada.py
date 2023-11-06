@@ -18,17 +18,6 @@ from paper_cal import *
 def main(year):
     ''' '''
 
-    #   https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
-    #   https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
-    print(f'{date(year, FEBRUARY, 15)} Flag Day (CA)')
-    # Jour du drapeau national du Canada
-
-    # Heritage Day (CA-YT) is the Friday before the last Sunday in February
-    #   https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
-    print(
-        f'{closest_date(SUNDAY, date(year, FEBRUARY, WEEK4), last=True) - timedelta(days=2)} Heritage Day (CA-YT)'
-    )  # Fête du patrimoine (CA-YT)
-
     #   https://en.wikipedia.org/wiki/Commonwealth_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
     print(f'{closest_date(MONDAY, date(year, MARCH, WEEK2))} Commonwealth Day')

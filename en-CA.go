@@ -25,6 +25,11 @@ func englishCanada(u32 uint32) {
 	// Jour de la marmotte
 	print_event(fmt.Sprintf("%d-02-02", u32), "Groundhog Day")
 
+	// https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
+	// https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
+	// Jour du drapeau national du Canada
+	print_event(fmt.Sprintf("%d-02-15", u32), "Flag Day (CA)")
+
 	// 3rd Monday in February
 	// https://en.wikipedia.org/wiki/Family_Day
 	// https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
@@ -34,6 +39,17 @@ func englishCanada(u32 uint32) {
 	print_wiggly_event(fmt.Sprintf("%d-02-18", u32), "Louis Riel Day (CA-MB)", uint32(time.Monday))
 	print_wiggly_event(fmt.Sprintf("%d-02-18", u32), "Heritage Day (CA-NS)", uint32(time.Monday))
 	print_wiggly_event(fmt.Sprintf("%d-02-18", u32), "Islander Day (CA-PE)", uint32(time.Monday))
+
+	// the Friday before the last Sunday in February
+	// https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
+	// Fête du patrimoine (CA-YT)
+	tmp1, err := time.Parse(time.DateOnly, fmt.Sprintf("%d-02-29", u32))
+	if err != nil {
+		panic(err)
+	}
+	tmp2 := Closest(tmp1, uint32(time.Sunday))
+	tmp3 := tmp2.AddDate(0, 0, -2)
+	fmt.Println(fmt.Sprintf("%d-%02d-%02d  Heritage Day (CA-YT)", tmp3.Year(), tmp3.Month(), tmp3.Day()))
 
 	// 2nd Sunday in March and 1st Sunday in November
 	// last Sunday in March and last Sunday in October
@@ -81,7 +97,7 @@ func englishCanada(u32 uint32) {
 	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 	// Simcoe Day (CA-ON)
 	// Jour férié, Premier lundi d'août, Congé civique
-	// Fête du patrimoine (CA-AB, CA-YT), Jour de la Colombie-Britannique (CA-BC)
+	// Fête du patrimoine (CA-AB), Jour de la Colombie-Britannique (CA-BC)
 	// Jour de Nouveau Brunswick (CA-NB), Jour de la Fondation (CA-NS)
 	// Jour de Saskatchewan (CA-SK)
 	print_wiggly_event(fmt.Sprintf("%d-08-04", u32), "Civic Holiday (CA-NL, CA-NT, CA-NU, CA-ON)", uint32(time.Monday))

@@ -62,25 +62,6 @@ def main(year):
     # Journée des forces armées canadiennes (CA)
     # Canadian Armed Forces Day
 
-    #   https://en.wikipedia.org/wiki/National_Aboriginal_Day
-    #   https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
-    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_des_peuples_autochtones
-    #   https://www.canada.ca/en/canadian-heritage/campaigns/indigenous-peoples-day.html
-    #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-peuples-autochtones.html
-    print(f'{date(year, JUNE, 21)} National Indigenous Peoples Day (CA)')
-    # Journée nationale des peuples autochtones (CA)
-    # National Aboriginal Day (CA)
-    # Journée nationale des Autochthones (CA)
-
-    #   https://en.wikipedia.org/wiki/Discovery_Day
-    print(f'{closest_date(MONDAY, date(year, JUNE, 24))} June Day (CA-NL)')
-
-    #   https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
-    #   https://www.canada.ca/en/canadian-heritage/campaigns/multiculturalism-day.html
-    #   https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-multiculturalisme.html
-    print(f'{date(year, JUNE, 27)} Canadian Multiculturalism Day')
-    # Journée canadienne du multiculturalisme
-
     #   https://en.wikipedia.org/wiki/Canada_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
     print(f'{date(year, JULY, 1)} Canada Day')  # Fête du Canada
@@ -105,16 +86,6 @@ def main(year):
     print(
         f'{closest_date(SUNDAY, date(year, JULY, WEEK4), last=True) + timedelta(days=6)} Construction Holiday Ends (CA-QC)'
     )  # Fin des vacances de la construction (CA-QC)
-
-    #   https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
-    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
-    print(
-        f'{date(year, AUGUST, 9)} International Day of the World\'s Indigenous Peoples'
-    )  # Journée internationale des populations autochtones du monde
-
-    #   https://en.wikipedia.org/wiki/Discovery_Day
-    print(f'{closest_date(MONDAY, date(year, AUGUST, WEEK3))} Discovery Day (CA-YT)')
-    # Journée de la Découverte (CA-YT)
 
     print(
         f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'

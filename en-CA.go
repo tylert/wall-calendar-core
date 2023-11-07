@@ -90,6 +90,28 @@ func englishCanada(u32 uint32) {
 	// https://www.ontario.ca/fr/lois/loi/97u42
 	print_event(fmt.Sprintf("%d-06-19", u32), "Loyalist Day (CA-ON)")
 
+	// June 21st
+	// https://en.wikipedia.org/wiki/National_Aboriginal_Day
+	// https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_des_peuples_autochtones
+	// https://www.canada.ca/en/canadian-heritage/campaigns/indigenous-peoples-day.html
+	// https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-peuples-autochtones.html
+	// Journée nationale des peuples autochtones (CA)
+	// National Aboriginal Day (CA)
+	// Journée nationale des Autochthones (CA)
+	print_event(fmt.Sprintf("%d-06-21", u32), "National Indigenous Peoples Day (CA)")
+
+	// June 24th
+	// https://en.wikipedia.org/wiki/Discovery_Day
+	print_event(fmt.Sprintf("%d-06-24", u32), "June Day (CA-NL)")
+
+	// June 27th
+	// https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
+	// https://www.canada.ca/en/canadian-heritage/campaigns/multiculturalism-day.html
+	// https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-multiculturalisme.html
+	// Journée canadienne du multiculturalisme
+	print_event(fmt.Sprintf("%d-06-27", u32), "Canadian Multiculturalism Day")
+
 	// July 9th
 	// https://en.wikipedia.org/wiki/Nunavut_Day
 	// Fête du Nunavut (CA-NU)
@@ -111,6 +133,17 @@ func englishCanada(u32 uint32) {
 	print_wiggly_event(fmt.Sprintf("%d-08-04", u32), "New Brunswick Day (CA-NB)", uint32(time.Monday))
 	print_wiggly_event(fmt.Sprintf("%d-08-04", u32), "Natal Day (CA-NS)", uint32(time.Monday))
 	print_wiggly_event(fmt.Sprintf("%d-08-04", u32), "Saskatchewan Day (CA-SK)", uint32(time.Monday))
+
+	// August 9th
+	// https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
+	// Journée internationale des populations autochtones du monde
+	print_event(fmt.Sprintf("%d-08-09", u32), "International Day of the World's Indigenous Peoples")
+
+	// 3rd Monday in August
+	// https://en.wikipedia.org/wiki/Discovery_Day
+	// Journée de la Découverte (CA-YT)
+	print_wiggly_event(fmt.Sprintf("%d-08-18", u32), "Discovery Day (CA-YT)", uint32(time.Monday))
 
 	// 1st Monday in September
 	// https://en.wikipedia.org/wiki/Labour_Day

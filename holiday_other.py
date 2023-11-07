@@ -291,6 +291,7 @@ def main(year):
     print(f'{date(year, OCTOBER, 18)} {ordinal(year - 1995)} Birthday of OpenBSD')
     print(f'{date(year, OCTOBER, 19)} {ordinal(year - 2009)} Birthday of Alpine')
     print(f'{date(year, OCTOBER, 20)} {ordinal(year - 2004)} Birthday of Ubuntu')
+    print(f'{date(year, NOVEMBER, 6)} {ordinal(year - 2003)} Birthday of Inkscape')
     print(f'{date(year, NOVEMBER, 21)} {ordinal(year - 1995)} Birthday of GIMP')
 
     print(f'{date(year, MARCH, 21)} Aries Rises')  # Ascension du bélier

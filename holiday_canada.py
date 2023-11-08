@@ -55,13 +55,6 @@ def main(year):
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H:%M")} Aphelion')
     # Aphélie
 
-    #   https://en.wikipedia.org/wiki/Armed_Forces_Day
-    #   https://fr.wikipedia.org/wiki/Jour_des_forces_arm%C3%A9es
-    print(f'{closest_date(SUNDAY, date(year, JUNE, WEEK1))} Armed Forces Day (CA)')
-    # Journée des forces armées (CA)
-    # Journée des forces armées canadiennes (CA)
-    # Canadian Armed Forces Day
-
     #   https://en.wikipedia.org/wiki/Canada_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
     print(f'{date(year, JULY, 1)} Canada Day')  # Fête du Canada
@@ -91,14 +84,6 @@ def main(year):
         f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'
     )  # Défilé de la Coupe d'or (CA-PE)
 
-    #   https://en.wikipedia.org/wiki/Orange_Shirt_Day
-    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_de_la_v%C3%A9rit%C3%A9_et_de_la_r%C3%A9conciliation
-    #   https://www.orangeshirtday.org/
-    print(f'{date(year, SEPTEMBER, 30)} National Day for Truth and Reconciliation (CA)')
-    # Journée nationale de la vérité et de la réconciliation (CA)
-    # Orange Shirt Day (CA)
-    # Journée du chandail orange (CA)
-
     #   https://en.wikipedia.org/wiki/Thanksgiving#Canada
     #   https://fr.wikipedia.org/wiki/Action_de_gr%C3%A2ce_(Canada)
     #   https://en.wikipedia.org/wiki/Oktoberfest
@@ -114,18 +99,6 @@ def main(year):
     print(
         f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2)) + timedelta(days=8)} Oktoberfest Ends (CA-ON)'
     )  # Fin de l'Oktoberfest (CA-ON)
-
-    #   https://en.wikipedia.org/wiki/Remembrance_Day
-    #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
-    #   https://en.wikipedia.org/wiki/Armistice_Day
-    #   https://fr.wikipedia.org/wiki/Jour_du_Souvenir
-    #   https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
-    print(f'{date(year, NOVEMBER, 11)} Rememberance Day')  # Jour du Souvenir
-    print(f'{date(year, NOVEMBER, 11)} Armistice Day (CA-NL)')
-    # Jour de l'Armistice (CA-NL)
-    print(f'{date(year, SEPTEMBER, 3)} Merchant Navy Day')
-    # Merchant Navy Rememberance Day
-    # Jour de la marine marchande
 
     #   https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
     #   https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931

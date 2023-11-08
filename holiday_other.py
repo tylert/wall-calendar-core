@@ -35,15 +35,6 @@ def main(year):
         if year == found.year and 13 == found.day:
             print(f'{found} Friday the 13th')  # Vendredi treize
 
-    #   https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days.html
-    #   https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives.html
-    #   https://www.canada.ca/en/canadian-heritage/news/2022/01/statement-by-minister-hussen-on-raoul-wallenberg-day.html
-    #   https://www.canada.ca/fr/patrimoine-canadien/nouvelles/2022/01/declaration-du-ministrehussen-a-loccasion-de-la-journee-raoulwallenberg.html
-    #   https://en.wikipedia.org/wiki/Raoul_Wallenberg
-    #   https://fr.wikipedia.org/wiki/Raoul_Wallenberg
-    print(f'{date(year, JANUARY, 17)} Raoul Wallenburg Day')
-    # Journée Raoul Wallenberg
-
     # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
     # every 4th year where "year mod 4 == 1" (2001, ..., 2013, 2017, 2021,
     # 2025, 2029, etc.)
@@ -143,15 +134,6 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Guy_Fawkes_Night
     print(f'{date(year, NOVEMBER, 5)} Guy Fawkes Day (UK)')
     # Journée de Guy Fawkes (UK)
-
-    #   https://en.wikipedia.org/wiki/Veterans_Day
-    #   https://fr.wikipedia.org/wiki/Veterans_Day
-    #   https://en.wikipedia.org/wiki/Armistice_Day
-    #   https://fr.wikipedia.org/wiki/Jour_de_l%27Armistice
-    print(f'{date(year, NOVEMBER, 11)} Veterans Day (US)')
-    # Journée des anciens combattants (US)
-    print(f'{date(year, NOVEMBER, 11)} Armistice Day (UK)')
-    # Jour de l'Armistice (UK)
 
     #   https://en.wikipedia.org/wiki/Kwanzaa
     #   https://fr.wikipedia.org/wiki/Kwanzaa

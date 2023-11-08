@@ -19,6 +19,16 @@ func englishCanada(u32 uint32) {
 	print_event(fmt.Sprintf("%d-01-01", u32), "New Year's Day")
 	// XXX FIXME TODO  Add "observed" date too!!!
 
+	// January 17th
+	// https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days.html
+	// https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives.html
+	// https://www.canada.ca/en/canadian-heritage/news/2022/01/statement-by-minister-hussen-on-raoul-wallenberg-day.html
+	// https://www.canada.ca/fr/patrimoine-canadien/nouvelles/2022/01/declaration-du-ministrehussen-a-loccasion-de-la-journee-raoulwallenberg.html
+	// https://en.wikipedia.org/wiki/Raoul_Wallenberg
+	// https://fr.wikipedia.org/wiki/Raoul_Wallenberg
+	// Journée Raoul Wallenberg
+	print_event(fmt.Sprintf("%d-01-17", u32), "Raoul Wallenburg Day")
+
 	// February 2nd
 	// https://en.wikipedia.org/wiki/Groundhog_Day
 	// https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
@@ -80,6 +90,14 @@ func englishCanada(u32 uint32) {
 	// Fête de la Reine, Fête de Victoria, Journée nationale des patriotes (CA-QC)
 	print_wiggly_event(fmt.Sprintf("%d-05-21", u32), "Victoria Day (CA)", uint32(time.Monday))
 	print_wiggly_event(fmt.Sprintf("%d-05-21", u32), "National Patriot's Day (CA-QC)", uint32(time.Monday))
+
+	// 1st Sunday in June
+	// https://en.wikipedia.org/wiki/Armed_Forces_Day
+	// https://fr.wikipedia.org/wiki/Jour_des_forces_arm%C3%A9es
+	// Journée des forces armées (CA)
+	// Journée des forces armées canadiennes (CA)
+	// Canadian Armed Forces Day
+	print_wiggly_event(fmt.Sprintf("%d-06-04", u32), "Armed Forces Day (CA)", uint32(time.Sunday))
 
 	// June 19th
 	// https://en.wikipedia.org/wiki/Upper_Canada
@@ -151,8 +169,37 @@ func englishCanada(u32 uint32) {
 	// Fête du Travail
 	print_wiggly_event(fmt.Sprintf("%d-09-04", u32), "Labour Day", uint32(time.Monday))
 
+	// September 30th
+	// https://en.wikipedia.org/wiki/Orange_Shirt_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_de_la_v%C3%A9rit%C3%A9_et_de_la_r%C3%A9conciliation
+	// https://www.orangeshirtday.org/
+	// Journée nationale de la vérité et de la réconciliation (CA)
+	// Orange Shirt Day (CA)
+	// Journée du chandail orange (CA)
+	print_event(fmt.Sprintf("%d-09-30", u32), "National Day for Truth and Reconciliation (CA)")
+
 	// October 31st
 	// https://en.wikipedia.org/wiki/Halloween
 	// https://fr.wikipedia.org/wiki/Halloween
 	print_event(fmt.Sprintf("%d-10-31", u32), "Hallowe'en")
+
+	// November 11th and September 3rd
+	// https://en.wikipedia.org/wiki/Remembrance_Day
+	// https://fr.wikipedia.org/wiki/Jour_du_Souvenir
+	// https://en.wikipedia.org/wiki/Armistice_Day
+	// https://fr.wikipedia.org/wiki/Jour_du_Souvenir
+	// https://en.wikipedia.org/wiki/Veterans_Day
+	// https://fr.wikipedia.org/wiki/Veterans_Day
+	// https://en.wikipedia.org/wiki/Armistice_Day
+	// https://fr.wikipedia.org/wiki/Jour_de_l%27Armistice
+	// https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
+	// Jour du Souvenir
+	// Jour de l'Armistice (CA-NL, UK)
+	// Journée des anciens combattants (US)
+	// Merchant Navy Rememberance Day
+	// Jour de la marine marchande
+	print_event(fmt.Sprintf("%d-11-11", u32), "Rememberance Day")
+	print_event(fmt.Sprintf("%d-11-11", u32), "Armistice Day (CA-NL, UK)")
+	print_event(fmt.Sprintf("%d-11-11", u32), "Veterans Day (US)")
+	print_event(fmt.Sprintf("%d-09-03", u32), "Merchant Navy Day")
 }

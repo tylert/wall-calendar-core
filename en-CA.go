@@ -178,6 +178,10 @@ func englishCanada(u32 uint32) {
 	// Journée du chandail orange (CA)
 	print_event(fmt.Sprintf("%d-09-30", u32), "National Day for Truth and Reconciliation (CA)")
 
+	// https://en.wikipedia.org/wiki/World_Mental_Health_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_mondiale_de_la_sant%C3%A9_mentale
+	print_event(fmt.Sprintf("%d-10-10", u32), "World Mental Health Day")
+
 	// October 31st
 	// https://en.wikipedia.org/wiki/Halloween
 	// https://fr.wikipedia.org/wiki/Halloween

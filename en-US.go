@@ -23,8 +23,16 @@ func englishUnitedStates(u32 uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-02-18", u32), uint32(time.Monday))
 	print_date(t, "President's Day (US)")
 
+	// June 14th
+	// https://en.wikipedia.org/wiki/Flag_Day_(United_States)
+	// https://fr.wikipedia.org/wiki/Jour_du_drapeau_(%C3%89tats-Unis)
+	// Jour du drapeau (US)
+	t = find_date(fmt.Sprintf("%d-06-14", u32))
+	print_date(t, "Flag Day (US)")
+
 	// July 4th
 	// https://en.wikipedia.org/wiki/Independence_Day_%28United_States%29
+	// https://fr.wikipedia.org/wiki/Jour_de_l%27Ind%C3%A9pendance_(%C3%89tats-Unis)
 	// Jour de l'indépendance (US)
 	t = find_date(fmt.Sprintf("%d-07-04", u32))
 	print_date(t, "Independence Day (US)")
@@ -37,7 +45,7 @@ func englishUnitedStates(u32 uint32) {
 	print_date(t, "Columbus Day (US)")
 	print_date(t, "Bartolomé Day (US)")
 
-	// 4th Thursday in November
+	// 4th Thursday in November and the following Friday and Monday
 	// https://en.wikipedia.org/wiki/Thanksgiving
 	// https://fr.wikipedia.org/wiki/Thanksgiving
 	// https://en.wikipedia.org/wiki/Black_Friday_(shopping)
@@ -48,10 +56,10 @@ func englishUnitedStates(u32 uint32) {
 	// Vendredi Noir, Cyber Lundi (US)
 	t = find_nearby_date(fmt.Sprintf("%d-11-25", u32), uint32(time.Thursday))
 	print_date(t, "Thanksgiving Day (US)")
-	u := t.AddDate(0, 0, 1)
-	v := t.AddDate(0, 0, 3)
-	print_date(u, "Black Friday (US)")
-	print_date(v, "Cyber Monday (US)")
+	t = t.AddDate(0, 0, 1)
+	print_date(t, "Black Friday (US)")
+	t = t.AddDate(0, 0, 3)
+	print_date(t, "Cyber Monday (US)")
 
 	// December 7th
 	// https://en.wikipedia.org/wiki/National_Pearl_Harbor_Remembrance_Day

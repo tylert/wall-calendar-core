@@ -46,18 +46,6 @@ def main(year):
             print(f'{date(year, JANUARY, 20)} Inauguration Day (US)')
     # Jour d'inauguration (US)
 
-    #   https://en.wikipedia.org/wiki/April_Fools'_Day
-    #   https://fr.wikipedia.org/wiki/Poisson_d%27avril
-    print(f'{date(year, APRIL, 1)} April Fool\'s Day')  # Poisson d'avril
-
-    #   https://en.wikipedia.org/wiki/Tartan_Day
-    #   https://fr.wikipedia.org/wiki/Tartan_Day
-    print(f'{date(year, APRIL, 6)} Tartan Day')  # Journée du Tartan
-
-    #   https://en.wikipedia.org/wiki/Earth_Day
-    #   https://fr.wikipedia.org/wiki/Jour_de_la_Terre
-    print(f'{date(year, APRIL, 22)} Earth Day')  # Jour de la Terre
-
     #   https://en.wikipedia.org/wiki/Anzac_Day
     print(f'{date(year, APRIL, 25)} ANZAC Day (AU, NZ)')
     # Jour d'ANZAC (AU, NZ)
@@ -80,9 +68,6 @@ def main(year):
     print(
         f'{closest_date(MONDAY, date(year, MAY, WEEK4), last=True)} Memorial Day (US)'
     )
-
-    #   https://en.wikipedia.org/wiki/Flag_Day_(United_States)
-    print(f'{date(year, JUNE, 14)} Flag Day (US)')  # Jour du drapeau (US)
 
     #   https://en.wikipedia.org/wiki/Juneteenth
     #   https://fr.wikipedia.org/wiki/Juneteenth

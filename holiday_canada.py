@@ -55,18 +55,6 @@ def main(year):
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H:%M")} Aphelion')
     # Aphélie
 
-    #   https://en.wikipedia.org/wiki/Canada_Day
-    #   https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
-    print(f'{date(year, JULY, 1)} Canada Day')  # Fête du Canada
-    if SATURDAY == date.weekday(date(year, JULY, 1)) or SUNDAY == date.weekday(
-        date(year, JULY, 1)
-    ):
-        print(f'{closest_date(MONDAY, date(year, JULY, 1))} Canada Day Observed')
-        # Fête du Canada observé
-
-    #   https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
-    print(f'{date(year, JULY, 1)} Memorial Day (CA-NL)')
-
     #   https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
     #   https://fr.wikipedia.org/wiki/Vacances_de_la_construction
     #   https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances

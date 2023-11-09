@@ -22,6 +22,14 @@ func englishCanada(u32 uint32) {
 	t = find_date(fmt.Sprintf("%d-01-01", u32))
 	print_date(t, "New Year's Day")
 
+	if t.Weekday() == time.Sunday {
+		t = t.AddDate(0, 0, 1)
+		print_date(t, "New Year's Day Observed")
+	} else if t.Weekday() == time.Saturday {
+		t = t.AddDate(0, 0, 2)
+		print_date(t, "New Year's Day Observed")
+	}
+
 	// January 17th
 	// https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days.html
 	// https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives.html
@@ -62,8 +70,8 @@ func englishCanada(u32 uint32) {
 	// https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
 	// Fête du patrimoine (CA-YT)
 	t = find_nearby_date(fmt.Sprintf("%d-02-28", u32), uint32(time.Sunday))
-	w := t.AddDate(0, 0, -2)
-	print_date(w, "Heritage Day (CA-YT)")
+	t = t.AddDate(0, 0, -2)
+	print_date(t, "Heritage Day (CA-YT)")
 
 	// 2nd Sunday in March and 1st Sunday in November
 	// last Sunday in March and last Sunday in October
@@ -90,6 +98,27 @@ func englishCanada(u32 uint32) {
 	print_date(t, "01:00Z DST Begins (EU, UK)")
 	t = find_nearby_date(fmt.Sprintf("%d-10-31", u32), uint32(time.Sunday))
 	print_date(t, "01:00Z DST Ends (EU, UK)")
+
+	// April 1st
+	// https://en.wikipedia.org/wiki/April_Fools'_Day
+	// https://fr.wikipedia.org/wiki/Poisson_d%27avril
+	// Poisson d'avril
+	t = find_date(fmt.Sprintf("%d-04-01", u32))
+	print_date(t, "April Fool's Day")
+
+	// April 6th
+	// https://en.wikipedia.org/wiki/Tartan_Day
+	// https://fr.wikipedia.org/wiki/Tartan_Day
+	// Journée du Tartan
+	t = find_date(fmt.Sprintf("%d-04-06", u32))
+	print_date(t, "Tartan Day")
+
+	// April 22nd
+	// https://en.wikipedia.org/wiki/Earth_Day
+	// https://fr.wikipedia.org/wiki/Jour_de_la_Terre
+	// Jour de la Terre
+	t = find_date(fmt.Sprintf("%d-04-22", u32))
+	print_date(t, "Earth Day")
 
 	// the Monday before May 25th
 	// https://en.wikipedia.org/wiki/Victoria_Day
@@ -143,6 +172,23 @@ func englishCanada(u32 uint32) {
 	// Journée canadienne du multiculturalisme
 	t = find_date(fmt.Sprintf("%d-06-27", u32))
 	print_date(t, "Canadian Multiculturalism Day")
+
+	// July 1st
+	// https://en.wikipedia.org/wiki/Canada_Day
+	// https://fr.wikipedia.org/wiki/F%C3%AAte_du_Canada
+	// https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
+	// Fête du Canada, Fête du Canada observé
+	t = find_date(fmt.Sprintf("%d-07-01", u32))
+	print_date(t, "Canada Day")
+	print_date(t, "Memorial Day (CA-NL)")
+
+	if t.Weekday() == time.Sunday {
+		t = t.AddDate(0, 0, 1)
+		print_date(t, "Canada Day Observed")
+	} else if t.Weekday() == time.Saturday {
+		t = t.AddDate(0, 0, 2)
+		print_date(t, "Canada Day Observed")
+	}
 
 	// July 9th
 	// https://en.wikipedia.org/wiki/Nunavut_Day
@@ -214,10 +260,10 @@ func englishCanada(u32 uint32) {
 	// Début de l'Oktoberfest, Fin de l'Oktoberfest (CA-ON)
 	t = find_nearby_date(fmt.Sprintf("%d-10-11", u32), uint32(time.Monday))
 	print_date(t, "Thanksgiving Day (CA)")
-	u := t.AddDate(0, 0, -3)
-	v := t.AddDate(0, 0, 5)
-	print_date(u, "Oktoberfest Begins (CA-ON)")
-	print_date(v, "Oktoberfest Ends (CA-ON)")
+	t = t.AddDate(0, 0, -3)
+	print_date(t, "Oktoberfest Begins (CA-ON)")
+	t = t.AddDate(0, 0, 5)
+	print_date(t, "Oktoberfest Ends (CA-ON)")
 
 	// October 31st
 	// https://en.wikipedia.org/wiki/Halloween

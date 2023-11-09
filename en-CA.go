@@ -73,6 +73,33 @@ func englishCanada(u32 uint32) {
 	t = t.AddDate(0, 0, -2)
 	print_date(t, "Heritage Day (CA-YT)")
 
+	// the Monday nearest March 17th
+	// the Monday nearest April 23rd
+	// https://en.wikipedia.org/wiki/Saint_David%27s_Day
+	// https://fr.wikipedia.org/wiki/Saint_David%27s_Day
+	// https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day
+	// https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Patrick
+	// https://en.wikipedia.org/wiki/Saint_George%27s_Day
+	// https://fr.wikipedia.org/wiki/Sant_Jordi
+	// https://en.wikipedia.org/wiki/Saint_Andrew%27s_Day
+	// https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-Andr%C3%A9
+	// Fête de la Saint-David
+	// Fête de la Saint-Patrick
+	// Fête de la Saint-Georges
+	// Fête de la Saint-André
+	t = find_date(fmt.Sprintf("%d-03-01", u32))
+	print_date(t, "St. David's Day")
+	t = find_date(fmt.Sprintf("%d-03-17", u32))
+	print_date(t, "St. Patrick's Day")
+	t = find_nearby_date(fmt.Sprintf("%d-03-17", u32), uint32(time.Monday))
+	print_date(t, "St. Patrick's Day (CA-NL)")
+	t = find_nearby_date(fmt.Sprintf("%d-04-23", u32), uint32(time.Monday))
+	print_date(t, "St. George's Day (CA-NL)")
+	t = find_date(fmt.Sprintf("%d-04-23", u32))
+	print_date(t, "St. George's Day")
+	t = find_date(fmt.Sprintf("%d-11-30", u32))
+	print_date(t, "St. Andrew's Day")
+
 	// 2nd Sunday in March and 1st Sunday in November
 	// last Sunday in March and last Sunday in October
 	// https://en.wikipedia.org/wiki/Daylight_saving_time_in_Canada
@@ -270,6 +297,18 @@ func englishCanada(u32 uint32) {
 	// https://fr.wikipedia.org/wiki/Halloween
 	t = find_date(fmt.Sprintf("%d-10-31", u32))
 	print_date(t, "Hallowe'en")
+
+	// November 1st and 2nd
+	// https://en.wikipedia.org/wiki/All_Saints%27_Day
+	// https://fr.wikipedia.org/wiki/Toussaint
+	// https://en.wikipedia.org/wiki/All_Souls%27_Day
+	// https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
+	// Toussaint
+	// Fête des Morts
+	t = find_date(fmt.Sprintf("%d-11-01", u32))
+	print_date(t, "All Saints' Day")
+	t = find_date(fmt.Sprintf("%d-11-02", u32))
+	print_date(t, "All Souls' Day")
 
 	// November 11th and September 3rd
 	// https://en.wikipedia.org/wiki/Remembrance_Day

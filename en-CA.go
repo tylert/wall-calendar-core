@@ -289,7 +289,7 @@ func englishCanada(u32 uint32) {
 	print_date(t, "Thanksgiving Day (CA)")
 	t = t.AddDate(0, 0, -3)
 	print_date(t, "Oktoberfest Begins (CA-ON)")
-	t = t.AddDate(0, 0, 5)
+	t = t.AddDate(0, 0, 8)
 	print_date(t, "Oktoberfest Ends (CA-ON)")
 
 	// October 31st

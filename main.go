@@ -10,7 +10,7 @@ import (
 // Sun = 0, Mon = 1, Tue = 2, Wed = 3, Thu = 4, Fri = 5, Sat = 6
 // 1st = 4, 2nd = 11, 3rd = 18, 4th = 25, 5th/last = 31(32)
 
-func Closest(nearby time.Time, desired uint32) time.Time {
+func closest(nearby time.Time, desired uint32) time.Time {
 	offset := -(int(nearby.Weekday()) - (int(desired) % 7))
 	if offset < -3 {
 		offset += 7
@@ -29,17 +29,19 @@ func Closest(nearby time.Time, desired uint32) time.Time {
 	}
 }
 
-func print_wiggly_event(date string, label string, desired uint32) {
-	thingy, _ := time.Parse(time.DateOnly, date)
-	whatzit := Closest(thingy, desired)
-	// fmt.Println(fmt.Sprintf("%s, %s %d, %d  %s", whatzit.Weekday(), whatzit.Month().String(), whatzit.Day(), whatzit.Year(), label))
-	fmt.Println(fmt.Sprintf("%d-%02d-%02d  %s", whatzit.Year(), whatzit.Month(), whatzit.Day(), label))
+func find_date(date string) time.Time {
+	t, _ := time.Parse(time.DateOnly, date)
+	return t
 }
 
-func print_event(date string, label string) {
-	thingy, _ := time.Parse(time.DateOnly, date)
-	// fmt.Println(fmt.Sprintf("%s, %s %d, %d  %s", thingy.Weekday(), thingy.Month().String(), thingy.Day(), thingy.Year(), label))
-	fmt.Println(fmt.Sprintf("%d-%02d-%02d  %s", thingy.Year(), thingy.Month(), thingy.Day(), label))
+func find_nearby_date(date string, desired uint32) time.Time {
+	t := closest(find_date(date), desired)
+	return t
+}
+
+func print_date(whatzit time.Time, label string) {
+	// fmt.Println(fmt.Sprintf("%s, %s %d, %d  %s", whatzit.Weekday(), whatzit.Month().String(), whatzit.Day(), whatzit.Year(), label))
+	fmt.Println(fmt.Sprintf("%d-%02d-%02d  %s", whatzit.Year(), whatzit.Month(), whatzit.Day(), label))
 }
 
 func main() {

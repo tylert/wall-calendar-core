@@ -84,22 +84,6 @@ def main(year):
         f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'
     )  # Défilé de la Coupe d'or (CA-PE)
 
-    #   https://en.wikipedia.org/wiki/Thanksgiving#Canada
-    #   https://fr.wikipedia.org/wiki/Action_de_gr%C3%A2ce_(Canada)
-    #   https://en.wikipedia.org/wiki/Oktoberfest
-    #   https://fr.wikipedia.org/wiki/Oktoberfest
-    # Oktoberfest (CA-ON) starts the Friday before Thanksgiving and ends the
-    # Saturday after
-    print(
-        f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2))} Thanksgiving Day (CA)'
-    )  # Action de grâce (CA)
-    print(
-        f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2)) - timedelta(days=3)} Oktoberfest Begins (CA-ON)'
-    )  # Début de l'Oktoberfest (CA-ON)
-    print(
-        f'{closest_date(MONDAY, date(year, OCTOBER, WEEK2)) + timedelta(days=8)} Oktoberfest Ends (CA-ON)'
-    )  # Fin de l'Oktoberfest (CA-ON)
-
     #   https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
     #   https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931
     #   https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days/anniversary-statute-westminster.html

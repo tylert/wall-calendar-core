@@ -101,19 +101,6 @@ def main(year):
     # Fête des grands-parents (US)
     # Journée nationale des grands-parents (US)
 
-    #   https://en.wikipedia.org/wiki/Thanksgiving
-    #   https://en.wikipedia.org/wiki/Black_Friday_(shopping)
-    #   https://en.wikipedia.org/wiki/Cyber_Monday
-    print(
-        f'{closest_date(THURSDAY, date(year, NOVEMBER, WEEK4))} Thanksgiving Day (US)'
-    )  # Action de Grâce (US)
-    print(
-        f'{closest_date(THURSDAY, date(year, NOVEMBER, WEEK4)) + timedelta(days=1)} Black Friday (US)'
-    )  # Vendredi Noir (US)
-    print(
-        f'{closest_date(THURSDAY, date(year, NOVEMBER, WEEK4)) + timedelta(days=3)} Cyber Monday (US)'
-    )  # Cyber Lundi (US)
-
     #   https://uk-public-holidays.com/early-may-bank-holiday/
     #   https://uk-public-holidays.com/spring-bank-holiday/
     #   https://uk-public-holidays.com/summer-bank-holiday/

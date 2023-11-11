@@ -12,7 +12,7 @@ func englishAustralia(u32 uint32) {
 
 	// https://en.wikipedia.org/wiki/Anzac_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_de_l%27ANZAC
-	//. Jour de l'ANZAC (AU, NZ)
+	// Jour de l'Anzac (AU, NZ)
 	t = find_date(fmt.Sprintf("%d-04-25", u32))
-	print_date(t, "ANZAC Day (AU, NZ)")
+	print_date(t, "Anzac Day (AU, NZ)")
 }

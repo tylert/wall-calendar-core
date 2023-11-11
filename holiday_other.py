@@ -46,10 +46,6 @@ def main(year):
             print(f'{date(year, JANUARY, 20)} Inauguration Day (US)')
     # Jour d'inauguration (US)
 
-    #   https://en.wikipedia.org/wiki/Anzac_Day
-    print(f'{date(year, APRIL, 25)} ANZAC Day (AU, NZ)')
-    # Jour d'ANZAC (AU, NZ)
-
     #   https://en.wikipedia.org/wiki/Mother's_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
     #   https://en.wikipedia.org/wiki/Mothering_Sunday

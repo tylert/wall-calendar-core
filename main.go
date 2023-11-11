@@ -69,4 +69,5 @@ func main() {
 
 	englishCanada(u32)
 	englishUnitedStates(u32)
+	englishAustralia(u32)
 }

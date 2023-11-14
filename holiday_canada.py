@@ -18,11 +18,6 @@ from paper_cal import *
 def main(year):
     ''' '''
 
-    #   https://en.wikipedia.org/wiki/Commonwealth_Day
-    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
-    print(f'{closest_date(MONDAY, date(year, MARCH, WEEK2))} Commonwealth Day')
-    # Journée du Commonwealth
-
     #   https://en.wikipedia.org/wiki/Spring_break
     #   https://fr.wikipedia.org/wiki/Semaine_de_rel%C3%A2che
     # March Break
@@ -54,19 +49,6 @@ def main(year):
     )  # Périhélie
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H:%M")} Aphelion')
     # Aphélie
-
-    #   https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
-    #   https://fr.wikipedia.org/wiki/Vacances_de_la_construction
-    #   https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
-    #   https://www.ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
-    # The Quebec Construction Holiday begins on the 2nd last Sunday of July and
-    # lasts for 2 weeks
-    print(
-        f'{closest_date(SUNDAY, date(year, JULY, WEEK4), last=True) - timedelta(days=7)} Construction Holiday Begins (CA-QC)'
-    )  # Début des vacances de la construction (CA-QC)
-    print(
-        f'{closest_date(SUNDAY, date(year, JULY, WEEK4), last=True) + timedelta(days=6)} Construction Holiday Ends (CA-QC)'
-    )  # Fin des vacances de la construction (CA-QC)
 
     print(
         f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'

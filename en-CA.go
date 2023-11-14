@@ -126,6 +126,13 @@ func englishCanada(u32 uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-10-31", u32), uint32(time.Sunday))
 	print_date(t, "01:00Z DST Ends (EU, UK)")
 
+	// 2nd Monday in March
+	// https://en.wikipedia.org/wiki/Commonwealth_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
+	// Journée du Commonwealth
+	t = find_nearby_date(fmt.Sprintf("%d-03-11", u32), uint32(time.Monday))
+	print_date(t, "Commonwealth Day")
+
 	// April 1st
 	// https://en.wikipedia.org/wiki/April_Fools'_Day
 	// https://fr.wikipedia.org/wiki/Poisson_d%27avril
@@ -222,6 +229,19 @@ func englishCanada(u32 uint32) {
 	// Fête du Nunavut (CA-NU)
 	t = find_date(fmt.Sprintf("%d-07-09", u32))
 	print_date(t, "Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU)")
+
+	// begins on the 2nd last Sunday of July and lasts for 2 weeks
+	// https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
+	// https://fr.wikipedia.org/wiki/Vacances_de_la_construction
+	// https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
+	// https://www.ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
+	// Début des vacances de la construction (CA-QC)
+	// Fin des vacances de la construction (CA-QC)
+	t = find_nearby_date(fmt.Sprintf("%d-07-31", u32), uint32(time.Sunday))
+	t = t.AddDate(0, 0, -7)
+	print_date(t, "Construction Holiday Begins (CA-QC)")
+	t = t.AddDate(0, 0, 14)
+	print_date(t, "Construction Holiday Ends (CA-QC)")
 
 	// 1st Monday in August
 	// https://en.wikipedia.org/wiki/Civic_Holiday

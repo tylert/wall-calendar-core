@@ -110,10 +110,6 @@ def main(year):
     # Début de Kwanzaa
     # Fin de Kwanzaa
 
-    #   https://en.wikipedia.org/wiki/Hogmanay
-    #   https://fr.wikipedia.org/wiki/Hogmanay
-    print(f'{date(year, DECEMBER, 31)} Hogmanay (UK)')
-
     #   https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores
     #   https://es.wikipedia.org/wiki/Fiesta_de_San_Juan
     #   https://es.wikipedia.org/wiki/Asunci%C3%B3n_de_Mar%C3%ADa

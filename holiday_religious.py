@@ -40,15 +40,6 @@ def main(year):
     )  # La festividad de los Reyes Magos???
     print(f'{closest_date(SUNDAY, date(year, JANUARY, 10))} Baptism of the Lord')
 
-    #   https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
-    #   https://fr.wikipedia.org/wiki/Conversion_de_Paul
-    print(f'{date(year, JANUARY, 25)} Conversion of St. Paul')
-    # Conversion de Paul
-
-    #   https://en.wikipedia.org/wiki/Valentine%27s_Day
-    #   https://fr.wikipedia.org/wiki/Saint-Valentin
-    print(f'{date(year, FEBRUARY, 14)} St. Valentine\'s Day')  # Saint-Valentin
-
     #   https://en.wikipedia.org/wiki/Annunciation
     #   https://fr.wikipedia.org/wiki/Annonciation
     print(f'{date(year, MARCH, 25)} Annunciation')  # Annonciation

@@ -14,10 +14,13 @@ func englishCanada(u32 uint32) {
 	// December 31st and January 1st
 	// https://en.wikipedia.org/wiki/New_Year's_Eve
 	// https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
+	// https://en.wikipedia.org/wiki/Hogmanay
+	// https://fr.wikipedia.org/wiki/Hogmanay
 	// https://en.wikipedia.org/wiki/New_Year's_Day
 	// https://fr.wikipedia.org/wiki/Jour_de_l%27an
 	// Veille du Nouvel An, Jour de l'an, Jour de l'an observé
 	t = find_date(fmt.Sprintf("%d-12-31", u32))
+	print_date(t, "Hogmanay (UK)")
 	print_date(t, "New Year's Eve")
 	t = find_date(fmt.Sprintf("%d-01-01", u32))
 	print_date(t, "New Year's Day")
@@ -41,12 +44,26 @@ func englishCanada(u32 uint32) {
 	t = find_date(fmt.Sprintf("%d-01-17", u32))
 	print_date(t, "Raoul Wallenburg Day")
 
+	// January 25th
+	// https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
+	// https://fr.wikipedia.org/wiki/Conversion_de_Paul
+	// Conversion de Paul
+	t = find_date(fmt.Sprintf("%d-01-25", u32))
+	print_date(t, "Conversion of St. Paul")
+
 	// February 2nd
 	// https://en.wikipedia.org/wiki/Groundhog_Day
 	// https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
 	// Jour de la marmotte
 	t = find_date(fmt.Sprintf("%d-02-02", u32))
 	print_date(t, "Groundhog Day")
+
+	// February 14th
+	// https://en.wikipedia.org/wiki/Valentine%27s_Day
+	// https://fr.wikipedia.org/wiki/Saint-Valentin
+	// Saint-Valentin
+	t = find_date(fmt.Sprintf("%d-02-14", u32))
+	print_date(t, "St. Valentine's Day")
 
 	// February 15th
 	// https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
@@ -323,8 +340,7 @@ func englishCanada(u32 uint32) {
 	// https://fr.wikipedia.org/wiki/Toussaint
 	// https://en.wikipedia.org/wiki/All_Souls%27_Day
 	// https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
-	// Toussaint
-	// Fête des Morts
+	// Toussaint, Fête des Morts
 	t = find_date(fmt.Sprintf("%d-11-01", u32))
 	print_date(t, "All Saints' Day")
 	t = find_date(fmt.Sprintf("%d-11-02", u32))

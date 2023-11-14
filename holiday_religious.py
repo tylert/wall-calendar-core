@@ -243,37 +243,6 @@ def main(year):
     # Battle of the Boyne???
     # Fête des Orangistes (CA-NL)
 
-    #   https://en.wikipedia.org/wiki/Christmas_Eve
-    #   https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
-    #   https://en.wikipedia.org/wiki/Christmas
-    #   https://fr.wikipedia.org/wiki/No%C3%ABl
-    #   https://es.wikipedia.org/wiki/Navidad
-    #   https://en.wikipedia.org/wiki/Boxing_Day
-    #   https://fr.wikipedia.org/wiki/Boxing_Day
-    #   https://en.wikipedia.org/wiki/Saint_Stephen%27s_Day
-    #   https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-%C3%89tienne
-    #   https://es.wikipedia.org/wiki/D%C3%ADa_de_San_Esteban
-    print(f'{date(year, DECEMBER, 24)} Christmas Eve')  # Veille de Noël
-    print(f'{date(year, DECEMBER, 25)} Christmas Day')  # Noël
-    print(f'{date(year, DECEMBER, 25)} Navidad (ES)')  # Christmas Day
-    print(f'{date(year, DECEMBER, 26)} Boxing Day')  # Le jour des boîtes
-    print(
-        f'{date(year, DECEMBER, 26)} Saint Stephen\'s Day'
-    )  # Fête de la Saint-Étienne
-    print(f'{date(year, DECEMBER, 26)} Día de San Esteban (ES)')  # Saint Stephen's Day
-    # Lendemain de Noël
-    # Après-Noël
-    if SATURDAY == date.weekday(date(year, DECEMBER, 25)):
-        print(
-            f'{closest_date(MONDAY, date(year, DECEMBER, 25))} Christmas Day Observed'
-        )  # Noël observé
-        print(f'{closest_date(TUESDAY, date(year, DECEMBER, 26))} Boxing Day Observed')
-        # Le jour des boîtes observé
-    if SUNDAY == date.weekday(date(year, DECEMBER, 25)):
-        print(
-            f'{closest_date(TUESDAY, date(year, DECEMBER, 25))} Christmas Day Observed'
-        )  # Noël observé
-
 
 if __name__ == '__main__':
     main()

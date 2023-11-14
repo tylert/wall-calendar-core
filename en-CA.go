@@ -351,4 +351,46 @@ func englishCanada(u32 uint32) {
 	print_date(t, "Veterans Day (US)")
 	t = find_date(fmt.Sprintf("%d-09-03", u32))
 	print_date(t, "Merchant Navy Day")
+
+	// December 24th, 25th and 26th
+	// https://en.wikipedia.org/wiki/Christmas_Eve
+	// https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
+	// https://en.wikipedia.org/wiki/Christmas
+	// https://fr.wikipedia.org/wiki/No%C3%ABl
+	// https://es.wikipedia.org/wiki/Navidad
+	// https://en.wikipedia.org/wiki/Boxing_Day
+	// https://fr.wikipedia.org/wiki/Boxing_Day
+	// https://en.wikipedia.org/wiki/Saint_Stephen%27s_Day
+	// https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Saint-%C3%89tienne
+	// https://es.wikipedia.org/wiki/D%C3%ADa_de_San_Esteban
+	// Veille de Noël
+	// Noël, Navidad
+	// Le jour des boîtes, Lendemain de Noël, Après-Noël
+	// Fête de la Saint-Étienne, Día de San Esteban
+	// Noël observé, Le jour des boîtes observé
+	t = find_date(fmt.Sprintf("%d-12-24", u32))
+	print_date(t, "Christmas Eve")
+
+	t = find_date(fmt.Sprintf("%d-12-25", u32))
+	print_date(t, "Christmas Day")
+
+	if t.Weekday() == time.Sunday {
+		t = t.AddDate(0, 0, 1)
+		print_date(t, "Christmas Day Observed")
+	} else if t.Weekday() == time.Saturday {
+		t = t.AddDate(0, 0, 2)
+		print_date(t, "Christmas Day Observed")
+	}
+
+	t = find_date(fmt.Sprintf("%d-12-26", u32))
+	print_date(t, "St. Stephen's Day")
+	print_date(t, "Boxing Day")
+
+	if t.Weekday() == time.Sunday {
+		t = t.AddDate(0, 0, 1)
+		print_date(t, "Boxing Day Observed")
+	} else if t.Weekday() == time.Saturday {
+		t = t.AddDate(0, 0, 2)
+		print_date(t, "Boxing Day Observed")
+	}
 }

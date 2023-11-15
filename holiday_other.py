@@ -54,17 +54,6 @@ def main(year):
     print(f'{easter(year) - timedelta(days=21)} Mothering Sunday (UK)')
     # Fête des mères
 
-    #   https://en.wikipedia.org/wiki/Armed_Forces_Day
-    #   https://fr.wikipedia.org/wiki/Jour_des_forces_arm%C3%A9es
-    #   https://en.wikipedia.org/wiki/Memorial_Day
-    #   https://fr.wikipedia.org/wiki/Memorial_Day
-    print(f'{closest_date(SATURDAY, date(year, MAY, WEEK2))} Armed Forces Week (US)')
-    print(f'{closest_date(SATURDAY, date(year, MAY, WEEK3))} Armed Forces Day (US)')
-    # Journée des forces armées (US)
-    print(
-        f'{closest_date(MONDAY, date(year, MAY, WEEK4), last=True)} Memorial Day (US)'
-    )
-
     #   https://en.wikipedia.org/wiki/Juneteenth
     #   https://fr.wikipedia.org/wiki/Juneteenth
     print(f'{date(year, JUNE, 19)} Juneteenth')
@@ -102,13 +91,6 @@ def main(year):
     #   https://en.wikipedia.org/wiki/Guy_Fawkes_Night
     print(f'{date(year, NOVEMBER, 5)} Guy Fawkes Day (UK)')
     # Journée de Guy Fawkes (UK)
-
-    #   https://en.wikipedia.org/wiki/Kwanzaa
-    #   https://fr.wikipedia.org/wiki/Kwanzaa
-    print(f'{date(year, DECEMBER, 26)} Kwanzaa Begins')
-    print(f'{date(year, JANUARY, 1)} Kwanzaa Ends')
-    # Début de Kwanzaa
-    # Fin de Kwanzaa
 
     #   https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores
     #   https://es.wikipedia.org/wiki/Fiesta_de_San_Juan

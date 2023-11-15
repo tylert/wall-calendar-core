@@ -23,6 +23,21 @@ func englishUnitedStates(u32 uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-02-18", u32), uint32(time.Monday))
 	print_date(t, "President's Day (US)")
 
+	// 2nd Saturday in May
+	// 3rd Saturday in May
+	// last Monday in May
+	// https://en.wikipedia.org/wiki/Armed_Forces_Day
+	// https://fr.wikipedia.org/wiki/Jour_des_forces_arm%C3%A9es
+	// https://en.wikipedia.org/wiki/Memorial_Day
+	// https://fr.wikipedia.org/wiki/Memorial_Day
+	// Journée des forces armées (US)
+	t = find_nearby_date(fmt.Sprintf("%d-05-11", u32), uint32(time.Saturday))
+	print_date(t, "Armed Forces Week (US)")
+	t = find_nearby_date(fmt.Sprintf("%d-05-18", u32), uint32(time.Saturday))
+	print_date(t, "Armed Forces Day (US)")
+	t = find_nearby_date(fmt.Sprintf("%d-05-31", u32), uint32(time.Monday))
+	print_date(t, "Memorial Day (US)")
+
 	// June 14th
 	// https://en.wikipedia.org/wiki/Flag_Day_(United_States)
 	// https://fr.wikipedia.org/wiki/Jour_du_drapeau_(%C3%89tats-Unis)

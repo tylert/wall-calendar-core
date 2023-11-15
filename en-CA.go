@@ -409,4 +409,13 @@ func englishCanada(u32 uint32) {
 		t = t.AddDate(0, 0, 2)
 		print_date(t, "Boxing Day Observed")
 	}
+
+	// December 26th to January 1st
+	// https://en.wikipedia.org/wiki/Kwanzaa
+	// https://fr.wikipedia.org/wiki/Kwanzaa
+	// Début de Kwanzaa, Fin de Kwanzaa
+	t = find_date(fmt.Sprintf("%d-12-26", u32))
+	print_date(t, "Kwanzaa Begins")
+	t = find_date(fmt.Sprintf("%d-01-01", u32))
+	print_date(t, "Kwanzaa Ends")
 }

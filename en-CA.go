@@ -10,6 +10,7 @@ func englishCanada(u32 uint32) {
 
 	// https://en.wikipedia.org/wiki/Public_holidays_in_Canada
 	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
+	// https://en.wikipedia.org/wiki/Lists_of_holidays
 
 	// December 31st and January 1st
 	// https://en.wikipedia.org/wiki/New_Year's_Eve
@@ -329,22 +330,43 @@ func englishCanada(u32 uint32) {
 	t = t.AddDate(0, 0, 8)
 	print_date(t, "Oktoberfest Ends (CA-ON)")
 
-	// October 31st
+	// October 31st, November 1st and 2nd
+	// https://en.wikipedia.org/wiki/Allhallowtide
 	// https://en.wikipedia.org/wiki/Halloween
 	// https://fr.wikipedia.org/wiki/Halloween
-	t = find_date(fmt.Sprintf("%d-10-31", u32))
-	print_date(t, "Hallowe'en")
-
-	// November 1st and 2nd
 	// https://en.wikipedia.org/wiki/All_Saints%27_Day
 	// https://fr.wikipedia.org/wiki/Toussaint
 	// https://en.wikipedia.org/wiki/All_Souls%27_Day
 	// https://fr.wikipedia.org/wiki/Comm%C3%A9moration_des_fid%C3%A8les_d%C3%A9funts
+	// https://en.wikipedia.org/wiki/Day_of_the_Dead
+	// https://fr.wikipedia.org/wiki/Jour_des_morts_(Mexique)
 	// Toussaint, Fête des Morts
+	t = find_date(fmt.Sprintf("%d-10-31", u32))
+	print_date(t, "Hallowe'en")
+	print_date(t, "All Hallows' Eve")
 	t = find_date(fmt.Sprintf("%d-11-01", u32))
+	print_date(t, "All Hallows' Day")
 	print_date(t, "All Saints' Day")
 	t = find_date(fmt.Sprintf("%d-11-02", u32))
 	print_date(t, "All Souls' Day")
+
+	// February 1st, May 1st, August 1st, November 1st
+	// https://en.wikipedia.org/wiki/Imbolc
+	// https://fr.wikipedia.org/wiki/Imbolc
+	// https://en.wikipedia.org/wiki/Beltane
+	// https://fr.wikipedia.org/wiki/Beltaine
+	// https://en.wikipedia.org/wiki/Lughnasadh
+	// https://fr.wikipedia.org/wiki/Lugnasad
+	// https://en.wikipedia.org/wiki/Samhain
+	// https://fr.wikipedia.org/wiki/Samain_(mythologie)
+	t = find_date(fmt.Sprintf("%d-02-01", u32))
+	print_date(t, "Imbolc")
+	t = find_date(fmt.Sprintf("%d-05-01", u32))
+	print_date(t, "Beltane")
+	t = find_date(fmt.Sprintf("%d-08-01", u32))
+	print_date(t, "Lughnasadh")
+	t = find_date(fmt.Sprintf("%d-11-01", u32))
+	print_date(t, "Samhain")
 
 	// November 11th and September 3rd
 	// https://en.wikipedia.org/wiki/Remembrance_Day
@@ -418,6 +440,11 @@ func englishCanada(u32 uint32) {
 	print_date(t, "Kwanzaa Begins")
 	t = find_date(fmt.Sprintf("%d-01-01", u32))
 	print_date(t, "Kwanzaa Ends")
+
+	// 1st Friday in March
+	// https://en.wikipedia.org/wiki/Employee_Appreciation_Day
+	t = find_nearby_date(fmt.Sprintf("%d-03-04", u32), uint32(time.Friday))
+	print_date(t, "Employee Appreciation Day (AU, CA, IN, SG, US, UK)")
 
 	// March 14th, June 28th, July 22nd, Nov 9th or 10th (314th day of the year)
 	// https://en.wikipedia.org/wiki/Pi_Day

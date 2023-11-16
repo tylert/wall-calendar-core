@@ -15,6 +15,20 @@ func englishUnitedStates(u32 uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-01-18", u32), uint32(time.Monday))
 	print_date(t, "Martin Luther King Jr. Day (US)")
 
+	// January 20th or the 21st if the 20th is a Sunday
+	// every 4th year where "year%4 == 1" (2001, ..., 2013, 2017, 2021, 2025, 2029, etc.)
+	// https://en.wikipedia.org/wiki/United_States_presidential_inauguration
+	// Jour d'inauguration (US)
+	if 1 == u32%4 {
+		t = find_date(fmt.Sprintf("%d-01-20", u32))
+		if t.Weekday() == time.Sunday {
+			t = t.AddDate(0, 0, 1)
+			print_date(t, "Inauguration Day (US)")
+		} else {
+			print_date(t, "Inauguration Day (US)")
+		}
+	}
+
 	// 3rd Monday in February
 	// https://en.wikipedia.org/wiki/Washington's_Birthday
 	// https://en.wikipedia.org/wiki/Presidents%27_Day

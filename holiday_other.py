@@ -35,17 +35,6 @@ def main(year):
         if year == found.year and 13 == found.day:
             print(f'{found} Friday the 13th')  # Vendredi treize
 
-    # Inauguration Day (US) is January 20th or the 21st if the 20th is a Sunday
-    # every 4th year where "year mod 4 == 1" (2001, ..., 2013, 2017, 2021,
-    # 2025, 2029, etc.)
-    #   https://en.wikipedia.org/wiki/United_States_presidential_inauguration
-    if 1 == year % 4:
-        if SUNDAY == date.weekday(date(year, JANUARY, 20)):
-            print(f'{date(year, JANUARY, 21)} Inauguration Day (US)')
-        else:
-            print(f'{date(year, JANUARY, 20)} Inauguration Day (US)')
-    # Jour d'inauguration (US)
-
     #   https://en.wikipedia.org/wiki/Mother's_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
     #   https://en.wikipedia.org/wiki/Mothering_Sunday
@@ -108,13 +97,6 @@ def main(year):
     print(f'{date(year, NOVEMBER, 1)} Todos los Santos (ES)')
     print(f'{date(year, DECEMBER, 6)} Dia de la Constitución (ES)')
     print(f'{date(year, DECEMBER, 8)} La Inmaculada (ES)')
-
-    #   https://en.wikipedia.org/wiki/List_of_minor_secular_observances
-
-    #   https://en.wikipedia.org/wiki/Employee_Appreciation_Day
-    print(
-        f'{closest_date(FRIDAY, date(year, MARCH, WEEK1))} Employee Appreciation Day (CA, US)'
-    )
 
     #   https://en.wikipedia.org/wiki/International_Cat_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat

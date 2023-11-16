@@ -7,25 +7,15 @@
     make venv && source .venv/bin/activate
 
     # Show all events for this year
-    ( go run . ; \
-      ./holiday_canada.py ; \
-      ./holiday_religious.py ; \
-      ./holiday_other.py ) | sort
+    ( go run . --year 2024 ; \
+      ./holiday_canada.py --year 2024 ; \
+      ./holiday_religious.py --year 2024 ; \
+      ./holiday_other.py --year 2024 ) | sort
 
     # Find out when the next few Easters will occur
-    for (( year=2022 ; year<2033 ; year++ )); do
+    for (( year=2024 ; year<2034 ; year++ )); do
         ./holiday_religious.py --year ${year} | grep 'Easter Sunday'
     done
-
-
-Python
-------
-
-* https://docs.python.org/3/library/datetime.html
-* https://docs.python.org/3/library/calendar.html
-* PyMeeus https://pymeeus.readthedocs.io/en/latest/
-* Pyluach https://pyluach.readthedocs.io/en/latest/
-* https://blog.ganssle.io/articles/2018/03/pytz-fastest-footgun.html  Python timezone math
 
 
 Golang

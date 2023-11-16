@@ -154,21 +154,6 @@ def main(year):
     print(f'{date(year, APRIL, 18)} World Amateur Radio Day')
     # Journée de la radio amateur
 
-    #   https://en.wikipedia.org/wiki/Pi_Day
-    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_de_pi
-    #   https://piday.org/
-    #   https://tauday.com/
-    #   https://piapproximationday.com/
-    print(f'{date(year, MARCH, 14)} Pi Day 3.14')  # Journée de pi 3.14
-    print(f'{date(year, JUNE, 28)} Tau Day 6.28')  # Journée de tau 6.28
-    print(f'{date(year, JULY, 22)} Pi Approximation Day 22/7')
-    if is_leap(year):
-        print(f'{date(year, NOVEMBER, 9)} Pi Approximation Day 314th day')
-    else:
-        print(f'{date(year, NOVEMBER, 10)} Pi Approximation Day 314th day')
-    # Journée d'approximation pi 22/7
-    # Journée d'approximation pi 314e jour
-
     #   https://en.wikipedia.org/wiki/Nikola_Tesla
     #   https://fr.wikipedia.org/wiki/Nikola_Tesla
     #   https://nikolatesladay.com/

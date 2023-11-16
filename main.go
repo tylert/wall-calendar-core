@@ -8,7 +8,7 @@ import (
 )
 
 // Sun = 0, Mon = 1, Tue = 2, Wed = 3, Thu = 4, Fri = 5, Sat = 6
-// 1st = 4, 2nd = 11, 3rd = 18, 4th = 25, 5th/last = 31(32)
+// 1st = 4, 2nd = 11, 3rd = 18, 4th = 25, 5th/last = 31
 
 func closest(nearby time.Time, desired uint32) time.Time {
 	offset := -(int(nearby.Weekday()) - (int(desired) % 7))
@@ -42,6 +42,10 @@ func find_nearby_date(date string, desired uint32) time.Time {
 func print_date(whatzit time.Time, label string) {
 	// fmt.Println(fmt.Sprintf("%s, %s %d, %d  %s", whatzit.Weekday(), whatzit.Month().String(), whatzit.Day(), whatzit.Year(), label))
 	fmt.Println(fmt.Sprintf("%d-%02d-%02d  %s", whatzit.Year(), whatzit.Month(), whatzit.Day(), label))
+}
+
+func is_leap(year uint32) bool {
+	return year%4 == 0 && (year%100 != 0 || year%400 == 0)
 }
 
 func main() {

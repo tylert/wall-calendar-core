@@ -418,4 +418,28 @@ func englishCanada(u32 uint32) {
 	print_date(t, "Kwanzaa Begins")
 	t = find_date(fmt.Sprintf("%d-01-01", u32))
 	print_date(t, "Kwanzaa Ends")
+
+	// March 14th, June 28th, July 22nd, Nov 9th or 10th (314th day of the year)
+	// https://en.wikipedia.org/wiki/Pi_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_de_pi
+	// https://piday.org
+	// https://tauday.com
+	// https://piapproximationday.com
+	// Journée de pi 3.14
+	// Journée de tau 6.28
+	// Journée d'approximation pi 22/7
+	// Journée d'approximation pi 314e jour
+	t = find_date(fmt.Sprintf("%d-03-14", u32))
+	print_date(t, "Pi Day 3.14")
+	t = find_date(fmt.Sprintf("%d-06-28", u32))
+	print_date(t, "Tau Day 6.28")
+	t = find_date(fmt.Sprintf("%d-07-22", u32))
+	print_date(t, "Pi Approximation Day 22/7")
+	if is_leap(u32) {
+		t = find_date(fmt.Sprintf("%d-11-09", u32))
+		print_date(t, "Pi Approximation Day 314th day")
+	} else {
+		t = find_date(fmt.Sprintf("%d-11-10", u32))
+		print_date(t, "Pi Approximation Day 314th day")
+	}
 }

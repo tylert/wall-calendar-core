@@ -115,14 +115,6 @@ def main(year):
     print(f'{date(year, OCTOBER, 22)} INTERNATIONAL CAPS LOCK DAY')
     # JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES
 
-    #   https://en.wikipedia.org/wiki/Day_of_the_Programmer
-    if is_leap(year):
-        print(f'{date(year, SEPTEMBER, 12)} Day of the Programmer 256th day')
-        # Jour du programmeur 256e jour
-    else:
-        print(f'{date(year, SEPTEMBER, 13)} Day of the Programmer 256th day')
-        # Jour du programmeur 256e jour
-
     #   https://en.wikipedia.org/wiki/Software_Freedom_Day
     print(
         f'{closest_date(SATURDAY, date(year, SEPTEMBER, WEEK3))} Software Freedom Day'

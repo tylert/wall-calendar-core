@@ -488,4 +488,16 @@ func englishCanada(year uint32) {
 		t = find_date(fmt.Sprintf("%d-11-10", year))
 		print_date(t, "Pi Approximation Day 314th day")
 	}
+
+	// September 12th or 13th (256th day of the year)
+	// https://en.wikipedia.org/wiki/Day_of_the_Programmer
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_des_programmeurs
+	// Jour du programmeur 256e jour
+	if is_leap(year) {
+		t = find_date(fmt.Sprintf("%d-09-12", year))
+		print_date(t, "Day of the Programmer 256th day")
+	} else {
+		t = find_date(fmt.Sprintf("%d-09-13", year))
+		print_date(t, "Day of the Programmer 256th day")
+	}
 }

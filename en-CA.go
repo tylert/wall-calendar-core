@@ -165,6 +165,12 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-04-06", year))
 	print_date(t, "Tartan Day")
 
+	// April 9th
+	// https://en.wikipedia.org/wiki/Vimy_Ridge_Day
+	// Jour de la crête de Vimy
+	t = find_date(fmt.Sprintf("%d-04-09", year))
+	print_date(t, "Vimy Ridge Day")
+
 	// April 22nd
 	// https://en.wikipedia.org/wiki/Earth_Day
 	// https://fr.wikipedia.org/wiki/Jour_de_la_Terre

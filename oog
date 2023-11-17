@@ -93,18 +93,10 @@
     #   https://www.timeanddate.com/holidays/fun/sandwich-day
     NOVEMBER 3 Sandwich Day
 
-    #   https://en.wikipedia.org/wiki/Vimy_Ridge_Day
-    APRIL 9 Vimy Ridge Day
-    # Jour de la crête de Vimy
-
     #   https://en.wikipedia.org/wiki/William_Davis_Miners'_Memorial_Day
     # Davis Day (CA-NS) is June 11th
     JUNE 11 William Davis Miners' Memorial Day (CA-NS)
     # Journée commémorative des mineurs (CA-NS)
-
-    #   https://en.wikipedia.org/wiki/Cinco_de_Mayo
-    MAY 5 Cinco de Mayo (US)
-    # Fête du 5 mai (US)
 
     #   https://en.wikipedia.org/wiki/Patriot_Day
     SEPTEMBER 11 Patriot Day (US)
@@ -136,11 +128,12 @@
     # and mid-May and the Saturday closest to the quarter moon between
     # mid-September and mid-October
 
-    #   https://en.wikipedia.org/wiki/Administrative_Professionals'_Day
-    # Administrative Professionals' Day is the Wednesday of the last full week
-    # of April
+    // the Wednesday of the last full week of April
+    // https://en.wikipedia.org/wiki/Administrative_Professionals'_Day
+    // https://fr.wikipedia.org/wiki/F%C3%AAte_des_secr%C3%A9taires
+    // Fête des secrétaires
+    // Journée des professionnels de l'administration
     WEDNESDAY APRIL 28 Administrative Professionals' Day
-    # Journée des professionnels de l'administration
 
     #   https://en.wikipedia.org/wiki/World_Oceans_Day
     JUNE 8 World Oceans Day

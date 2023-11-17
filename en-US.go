@@ -37,6 +37,13 @@ func englishUnitedStates(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-02-18", year), uint32(time.Monday))
 	print_date(t, "President's Day (US)")
 
+	// May 5th
+	// https://en.wikipedia.org/wiki/Cinco_de_Mayo
+	// https://fr.wikipedia.org/wiki/Cinco_de_Mayo
+	// Fête du 5 mai (US)
+	t = find_date(fmt.Sprintf("%d-05-05", year))
+	print_date(t, "Cinco de Mayo (US)")
+
 	// 2nd Saturday in May
 	// 3rd Saturday in May
 	// last Monday in May

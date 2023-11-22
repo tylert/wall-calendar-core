@@ -488,40 +488,4 @@ func englishCanada(year uint32) {
 	// https://en.wikipedia.org/wiki/Employee_Appreciation_Day
 	t = find_nearby_date(fmt.Sprintf("%d-03-04", year), uint32(time.Friday))
 	print_date(t, "Employee Appreciation Day (AU, CA, IN, SG, US, UK)")
-
-	// March 14th, June 28th, July 22nd, Nov 9th or 10th (314th day of the year)
-	// https://en.wikipedia.org/wiki/Pi_Day
-	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_de_pi
-	// https://piday.org
-	// https://tauday.com
-	// https://piapproximationday.com
-	// Journée de pi 3.14
-	// Journée de tau 6.28
-	// Journée d'approximation pi 22/7
-	// Journée d'approximation pi 314e jour
-	t = find_date(fmt.Sprintf("%d-03-14", year))
-	print_date(t, "Pi Day 3.14")
-	t = find_date(fmt.Sprintf("%d-06-28", year))
-	print_date(t, "Tau Day 6.28")
-	t = find_date(fmt.Sprintf("%d-07-22", year))
-	print_date(t, "Pi Approximation Day 22/7")
-	if is_leap(year) {
-		t = find_date(fmt.Sprintf("%d-11-09", year))
-		print_date(t, "Pi Approximation Day 314th day")
-	} else {
-		t = find_date(fmt.Sprintf("%d-11-10", year))
-		print_date(t, "Pi Approximation Day 314th day")
-	}
-
-	// September 12th or 13th (256th day of the year)
-	// https://en.wikipedia.org/wiki/Day_of_the_Programmer
-	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_des_programmeurs
-	// Jour du programmeur 256e jour
-	if is_leap(year) {
-		t = find_date(fmt.Sprintf("%d-09-12", year))
-		print_date(t, "Day of the Programmer 256th day")
-	} else {
-		t = find_date(fmt.Sprintf("%d-09-13", year))
-		print_date(t, "Day of the Programmer 256th day")
-	}
 }

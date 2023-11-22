@@ -98,18 +98,6 @@ def main(year):
     print(f'{date(year, DECEMBER, 6)} Dia de la Constitución (ES)')
     print(f'{date(year, DECEMBER, 8)} La Inmaculada (ES)')
 
-    #   https://en.wikipedia.org/wiki/International_Cat_Day
-    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat
-    #   https://en.wikipedia.org/wiki/National_Cat_Day
-    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_du_chat
-    # Caturday!!!
-    print(f'{date(year, FEBRUARY, 17)} National Cat Day (BR, IT)')
-    print(f'{date(year, FEBRUARY, 22)} National Cat Day (JP)')
-    print(f'{date(year, MARCH, 1)} National Cat Day (RU)')
-    print(f'{date(year, AUGUST, 8)} National Cat Day (CA)')
-    print(f'{date(year, AUGUST, 8)} International Cat Day')
-    print(f'{date(year, OCTOBER, 29)} National Cat Day (US)')
-
     #   https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day
     print(f'{date(year, JUNE, 28)} INTERNATIONAL CAPS LOCK DAY')
     print(f'{date(year, OCTOBER, 22)} INTERNATIONAL CAPS LOCK DAY')

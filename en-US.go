@@ -97,7 +97,7 @@ func englishUnitedStates(year uint32) {
 	t = t.AddDate(0, 0, 3)
 	print_date(t, "Cyber Monday (US)")
 
-	// December 7th
+	// December 7th (December 7th, 1941)
 	// https://en.wikipedia.org/wiki/National_Pearl_Harbor_Remembrance_Day
 	t = find_date(fmt.Sprintf("%d-12-07", year))
 	print_date(t, "Pearl Harbor Day (US)")

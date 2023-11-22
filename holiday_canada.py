@@ -54,15 +54,6 @@ def main(year):
         f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'
     )  # Défilé de la Coupe d'or (CA-PE)
 
-    #   https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
-    #   https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931
-    #   https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days/anniversary-statute-westminster.html
-    #   https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives/anniversaire-statut-westminster.html
-    # The Statute of Westminster was enacted on December 11th, 1931
-    print(
-        f'{date(year, DECEMBER, 11)} {ordinal(year - 1931)} Anniversary of the Statute of Westminster'
-    )  # Anniversaire du Statut de Westminster
-
 
 if __name__ == '__main__':
     main()

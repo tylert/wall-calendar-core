@@ -415,6 +415,16 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-09-03", year))
 	print_date(t, "Merchant Navy Day")
 
+	// December 11th, 1931
+	// https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
+	// https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931
+	// https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days/anniversary-statute-westminster.html
+	// https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives/anniversaire-statut-westminster.html
+	// The Statute of Westminster was enacted on December 11th, 1931
+	// Anniversaire du Statut de Westminster
+	t = find_date(fmt.Sprintf("%d-12-11", year))
+	print_date(t, fmt.Sprintf("%s Anniversary of the Statute of Westminster", ordinal(int(year-1931), "en")))
+
 	// December 24th, 25th and 26th
 	// https://en.wikipedia.org/wiki/Christmas_Eve
 	// https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl

@@ -317,6 +317,13 @@ func englishCanada(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-08-18", year), uint32(time.Monday))
 	print_date(t, "Discovery Day (CA-YT)")
 
+	// 3rd Friday in August
+	// https://en.wikipedia.org/wiki/Public_holidays_in_Canada
+	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
+	// Défilé de la Coupe d'or (CA-PE)
+	t = find_nearby_date(fmt.Sprintf("%d-08-18", year), uint32(time.Friday))
+	print_date(t, "Gold Cup Parade Day (CA-PE)")
+
 	// 1st Monday in September
 	// https://en.wikipedia.org/wiki/Labour_Day
 	// https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
@@ -325,14 +332,16 @@ func englishCanada(year uint32) {
 	print_date(t, "Labour Day")
 
 	// September 30th
+	// https://en.wikipedia.org/wiki/Public_holidays_in_Canada
+	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 	// https://en.wikipedia.org/wiki/Orange_Shirt_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_de_la_v%C3%A9rit%C3%A9_et_de_la_r%C3%A9conciliation
 	// https://www.orangeshirtday.org/
-	// Journée nationale de la vérité et de la réconciliation (CA)
+	// Journée de la vérité et de la réconciliation (CA)
 	// Orange Shirt Day (CA)
 	// Journée du chandail orange (CA)
 	t = find_date(fmt.Sprintf("%d-09-30", year))
-	print_date(t, "National Day for Truth and Reconciliation (CA)")
+	print_date(t, "Truth and Reconciliation Day (CA)")
 
 	// October 10th
 	// https://en.wikipedia.org/wiki/World_Mental_Health_Day
@@ -420,7 +429,6 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931
 	// https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days/anniversary-statute-westminster.html
 	// https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives/anniversaire-statut-westminster.html
-	// The Statute of Westminster was enacted on December 11th, 1931
 	// Anniversaire du Statut de Westminster
 	t = find_date(fmt.Sprintf("%d-12-11", year))
 	print_date(t, fmt.Sprintf("%s Anniversary of the Statute of Westminster", ordinal(int(year-1931), "en")))

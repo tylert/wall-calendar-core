@@ -50,10 +50,6 @@ def main(year):
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H:%M")} Aphelion')
     # Aphélie
 
-    print(
-        f'{closest_date(FRIDAY, date(year, AUGUST, WEEK3))} Gold Cup Parade Day (CA-PE)'
-    )  # Défilé de la Coupe d'or (CA-PE)
-
 
 if __name__ == '__main__':
     main()

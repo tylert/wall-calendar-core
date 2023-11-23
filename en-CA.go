@@ -25,7 +25,6 @@ func englishCanada(year uint32) {
 	print_date(t, "New Year's Eve")
 	t = find_date(fmt.Sprintf("%d-01-01", year))
 	print_date(t, "New Year's Day")
-
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
 		print_date(t, "New Year's Day Observed")
@@ -234,7 +233,6 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-06-24", year))
 	print_date(t, "June Day (CA-NL)")
 	print_date(t, "Saint-Jean-Baptiste Day")
-
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
 		print_date(t, "Saint-Jean-Baptiste Day Observed")
@@ -258,7 +256,6 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-07-01", year))
 	print_date(t, "Canada Day")
 	print_date(t, "Memorial Day (CA-NL)")
-
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
 		print_date(t, "Canada Day Observed")
@@ -451,10 +448,8 @@ func englishCanada(year uint32) {
 	// Noël observé, Le jour des boîtes observé
 	t = find_date(fmt.Sprintf("%d-12-24", year))
 	print_date(t, "Christmas Eve")
-
 	t = find_date(fmt.Sprintf("%d-12-25", year))
 	print_date(t, "Christmas Day")
-
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
 		print_date(t, "Christmas Day Observed")
@@ -462,11 +457,9 @@ func englishCanada(year uint32) {
 		t = t.AddDate(0, 0, 2)
 		print_date(t, "Christmas Day Observed")
 	}
-
 	t = find_date(fmt.Sprintf("%d-12-26", year))
 	print_date(t, "St. Stephen's Day")
 	print_date(t, "Boxing Day")
-
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
 		print_date(t, "Boxing Day Observed")

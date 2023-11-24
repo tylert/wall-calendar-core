@@ -143,6 +143,11 @@ func englishCanada(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-10-31", year), uint32(time.Sunday))
 	print_date(t, "01:00Z DST Ends (EU, UK)")
 
+	// 1st Friday in March
+	// https://en.wikipedia.org/wiki/Employee_Appreciation_Day
+	t = find_nearby_date(fmt.Sprintf("%d-03-04", year), uint32(time.Friday))
+	print_date(t, "Employee Appreciation Day (AU, CA, IN, SG, US, UK)")
+
 	// 2nd Monday in March
 	// https://en.wikipedia.org/wiki/Commonwealth_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
@@ -254,8 +259,8 @@ func englishCanada(year uint32) {
 	// https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
 	// Fête du Canada, Fête du Canada observé
 	t = find_date(fmt.Sprintf("%d-07-01", year))
-	print_date(t, "Canada Day")
 	print_date(t, "Memorial Day (CA-NL)")
+	print_date(t, "Canada Day")
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
 		print_date(t, "Canada Day Observed")
@@ -476,9 +481,4 @@ func englishCanada(year uint32) {
 	print_date(t, "Kwanzaa Begins")
 	t = find_date(fmt.Sprintf("%d-01-01", year))
 	print_date(t, "Kwanzaa Ends")
-
-	// 1st Friday in March
-	// https://en.wikipedia.org/wiki/Employee_Appreciation_Day
-	t = find_nearby_date(fmt.Sprintf("%d-03-04", year), uint32(time.Friday))
-	print_date(t, "Employee Appreciation Day (AU, CA, IN, SG, US, UK)")
 }

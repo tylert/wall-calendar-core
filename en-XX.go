@@ -8,6 +8,16 @@ import (
 func englishOther(year uint32) {
 	var t time.Time
 
+	// February 29, 2012
+	// https://en.wikipedia.org/wiki/Raspberry_Pi
+	// https://fr.wikipedia.org/wiki/Raspberry_Pi
+	if is_leap(year) {
+		t = find_date(fmt.Sprintf("%d-02-29", year))
+	} else {
+		t = find_date(fmt.Sprintf("%d-02-28", year))
+	}
+	print_date(t, fmt.Sprintf("%s Birthday of Raspberry Pi", ordinal(int(year-2012), "en")))
+
 	// March 14th, June 28th, July 22nd, Nov 9th or 10th (314th day of the year)
 	// https://en.wikipedia.org/wiki/Pi_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_de_pi
@@ -26,11 +36,10 @@ func englishOther(year uint32) {
 	print_date(t, "Pi Approximation Day 22/7")
 	if is_leap(year) {
 		t = find_date(fmt.Sprintf("%d-11-09", year))
-		print_date(t, "Pi Approximation Day 314th day")
 	} else {
 		t = find_date(fmt.Sprintf("%d-11-10", year))
-		print_date(t, "Pi Approximation Day 314th day")
 	}
+	print_date(t, "Pi Approximation Day 314th day")
 
 	// September 12th or 13th (256th day of the year)
 	// https://en.wikipedia.org/wiki/Day_of_the_Programmer
@@ -38,11 +47,26 @@ func englishOther(year uint32) {
 	// Jour du programmeur 256e jour
 	if is_leap(year) {
 		t = find_date(fmt.Sprintf("%d-09-12", year))
-		print_date(t, "Day of the Programmer 256th day")
 	} else {
 		t = find_date(fmt.Sprintf("%d-09-13", year))
-		print_date(t, "Day of the Programmer 256th day")
 	}
+	print_date(t, "Day of the Programmer 256th day")
+
+	// 3rd Saturday in September
+	// https://en.wikipedia.org/wiki/Software_Freedom_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_logiciel_libre
+	// Journée de la liberté des logiciels
+	t = find_nearby_date(fmt.Sprintf("%d-09-18", year), uint32(time.Saturday))
+	print_date(t, "Software Freedom Day")
+
+	// June 28th, October 22nd
+	// https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day
+	// https://fr.wikipedia.org/wiki/Touche_de_verrouillage_des_majuscules
+	// JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES
+	t = find_date(fmt.Sprintf("%d-06-28", year))
+	print_date(t, "INTERNATIONAL CAPS LOCK DAY")
+	t = find_date(fmt.Sprintf("%d-10-22", year))
+	print_date(t, "INTERNATIONAL CAPS LOCK DAY")
 
 	// Caturday
 	// https://en.wikipedia.org/wiki/International_Cat_Day

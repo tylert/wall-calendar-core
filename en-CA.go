@@ -155,6 +155,93 @@ func englishCanada(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-03-11", year), uint32(time.Monday))
 	print_date(t, "Commonwealth Day")
 
+	// XXX FIXME TODO  Describe a bit how this date is calculated
+	// https://en.wikipedia.org/wiki/Ecclesiastical_full_moon
+	// https://en.wikipedia.org/wiki/Computus
+	// https://en.wikipedia.org/wiki/Date_of_Easter
+	// https://fr.wikipedia.org/wiki/Calcul_de_la_date_de_P%C3%A2ques
+	// https://en.wikipedia.org/wiki/Shrove_Tuesday
+	// https://fr.wikipedia.org/wiki/Mardi_gras
+	// https://en.wikipedia.org/wiki/Ash_Wednesday
+	// https://fr.wikipedia.org/wiki/Mercredi_des_Cendres
+	// https://en.wikipedia.org/wiki/Lent
+	// https://fr.wikipedia.org/wiki/Car%C3%AAme
+	// https://en.wikipedia.org/wiki/Palm_Sunday
+	// https://fr.wikipedia.org/wiki/Dimanche_des_Rameaux
+	// https://en.wikipedia.org/wiki/Holy_Wednesday
+	// https://fr.wikipedia.org/wiki/Mercredi_saint
+	// https://en.wikipedia.org/wiki/Maundy_Thursday
+	// https://fr.wikipedia.org/wiki/Jeudi_saint
+	// https://en.wikipedia.org/wiki/Good_Friday
+	// https://fr.wikipedia.org/wiki/Vendredi_saint
+	// https://es.wikipedia.org/wiki/Viernes_Santo
+	// https://en.wikipedia.org/wiki/Holy_Saturday
+	// https://fr.wikipedia.org/wiki/Samedi_saint
+	// https://en.wikipedia.org/wiki/Easter
+	// https://fr.wikipedia.org/wiki/P%C3%A2ques
+	// https://es.wikipedia.org/wiki/Pascua
+	// https://en.wikipedia.org/wiki/Easter_Saturday
+	// https://en.wikipedia.org/wiki/Feast_of_the_Ascension
+	// https://fr.wikipedia.org/wiki/Ascension_(f%C3%AAte)
+	// https://en.wikipedia.org/wiki/Pentecost
+	// https://fr.wikipedia.org/wiki/Pentec%C3%B4te
+	// https://www.timeanddate.com/holidays/common/carnival-wednesday
+	// https://www.timeanddate.com/holidays/common/palm-sunday
+	// https://www.timeanddate.com/holidays/common/maundy-thursday
+	// https://www.timeanddate.com/holidays/common/good-friday
+	// https://www.timeanddate.com/holidays/common/holy-saturday
+	// https://www.timeanddate.com/holidays/common/easter-monday
+	// https://www.timeanddate.com/holidays/common/ascension-day
+	// https://www.timeanddate.com/holidays/common/whit-sunday
+	// https://www.timeanddate.com/holidays/common/whit-monday
+	// https://www.timeanddate.com/holidays/common/trinity
+	// https://www.timeanddate.com/holidays/common/corpus-christi
+	// Pascua (ES) = Easter
+	// Mardi Gras
+	// Mercredi des Cendres
+	// Lent / Carême
+	// Dimanche des Rameaux
+	// Mercredi saint
+	// Jeudi saint
+	// Vendredi saint, Viernes Santo (ES)
+	// Samedi saint
+	// Dimanche de Pâques
+	// Lundi de Pâques
+	// Ascension
+	// Pentecôte
+	// XXX FIXME TODO  Palm Sunday Orthodox???
+	month, day := Gregorian(int(year))
+	easter := find_date(fmt.Sprintf("%d-%02d-%02d", year, month, day))
+	t = easter.AddDate(0, 0, -47)
+	print_date(t, "Shrove/Pancake Tuesday")
+	t = easter.AddDate(0, 0, -46)
+	print_date(t, "Carnival/Ash Wednesday")
+	t = easter.AddDate(0, 0, -7)
+	print_date(t, "Palm Sunday")
+	t = easter.AddDate(0, 0, -4)
+	print_date(t, "Holy Wednesday")
+	t = easter.AddDate(0, 0, -3)
+	print_date(t, "Maundy Thursday")
+	t = easter.AddDate(0, 0, -2)
+	print_date(t, "Good Friday")
+	t = easter.AddDate(0, 0, -1)
+	print_date(t, "Holy Saturday")
+	print_date(easter, "Easter Sunday")
+	t = easter.AddDate(0, 0, 1)
+	print_date(t, "Easter Monday")
+	t = easter.AddDate(0, 0, 6)
+	print_date(t, "Easter Saturday")
+	t = easter.AddDate(0, 0, 39)
+	print_date(t, "Ascension Day")
+	t = easter.AddDate(0, 0, 49)
+	print_date(t, "Whit/Pentecost Sunday")
+	t = easter.AddDate(0, 0, 50)
+	print_date(t, "Whit/Pentecost Monday")
+	t = easter.AddDate(0, 0, 56)
+	print_date(t, "Trinity Sunday")
+	t = easter.AddDate(0, 0, 60)
+	print_date(t, "Corpus Christi")
+
 	// April 1st
 	// https://en.wikipedia.org/wiki/April_Fools'_Day
 	// https://fr.wikipedia.org/wiki/Poisson_d%27avril

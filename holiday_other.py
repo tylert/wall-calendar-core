@@ -35,22 +35,9 @@ def main(year):
         if year == found.year and 13 == found.day:
             print(f'{found} Friday the 13th')  # Vendredi treize
 
-    #   https://en.wikipedia.org/wiki/Mother's_Day
-    #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
-    #   https://en.wikipedia.org/wiki/Mothering_Sunday
-    # Mothering Sunday (UK) is 4th Sunday of Lent / exactly 3 weeks before Easter Sunday
-    print(f'{closest_date(SUNDAY, date(year, MAY, WEEK2))} Mother\'s Day')
-    print(f'{easter(year) - timedelta(days=21)} Mothering Sunday (UK)')
-    # Fête des mères
-
     #   https://en.wikipedia.org/wiki/Juneteenth
     #   https://fr.wikipedia.org/wiki/Juneteenth
     print(f'{date(year, JUNE, 19)} Juneteenth')
-
-    #   https://en.wikipedia.org/wiki/Father's_Day
-    #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_P%C3%A8res
-    print(f'{closest_date(SUNDAY, date(year, JUNE, WEEK3))} Father\'s Day')
-    # Fête des pères
 
     #   https://en.wikipedia.org/wiki/Grandparents'_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_grands-parents

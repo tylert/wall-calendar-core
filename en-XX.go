@@ -8,6 +8,26 @@ import (
 func englishOther(year uint32) {
 	var t time.Time
 
+	// 2nd Sunday in May
+	// exactly 3 weeks before Easter Sunday (4th Sunday of Lent)
+	// https://en.wikipedia.org/wiki/Mother's_Day
+	// https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
+	// https://en.wikipedia.org/wiki/Mothering_Sunday
+	// Fête des mères
+	t = find_nearby_date(fmt.Sprintf("%d-05-11", year), uint32(time.Sunday))
+	print_date(t, "Mother's Day")
+	month, day := Gregorian(int(year))
+	easter := find_date(fmt.Sprintf("%d-%02d-%02d", year, month, day))
+	t = easter.AddDate(0, 0, -21)
+	print_date(t, "Mothering Sunday (UK)")
+
+	// 3rd Sunday in June
+	// https://en.wikipedia.org/wiki/Father's_Day
+	// https://fr.wikipedia.org/wiki/F%C3%AAte_des_P%C3%A8res
+	// Fête des pères
+	t = find_nearby_date(fmt.Sprintf("%d-06-18", year), uint32(time.Sunday))
+	print_date(t, "Father's Day")
+
 	// February 29, 2012
 	// https://en.wikipedia.org/wiki/Raspberry_Pi
 	// https://fr.wikipedia.org/wiki/Raspberry_Pi

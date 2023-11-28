@@ -273,6 +273,8 @@ func englishCanada(year uint32) {
 	// https://en.wikipedia.org/wiki/Victoria_Day
 	// https://en.wikipedia.org/wiki/National_Patriots%27_Day
 	// https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)
+	// https://en.wikipedia.org/wiki/King%27s_Official_Birthday
+	// https://fr.wikipedia.org/wiki/Anniversaire_officiel_du_roi
 	// Fête de la Reine, Fête de Victoria, Journée nationale des patriotes (CA-QC)
 	t = find_nearby_date(fmt.Sprintf("%d-05-21", year), uint32(time.Monday))
 	print_date(t, "Victoria Day (CA)")

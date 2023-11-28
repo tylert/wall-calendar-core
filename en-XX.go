@@ -79,6 +79,12 @@ func englishOther(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-09-18", year), uint32(time.Saturday))
 	print_date(t, "Software Freedom Day")
 
+	// September 19th
+	// https://en.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day
+	// https://fr.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day
+	t = find_date(fmt.Sprintf("%d-09-19", year))
+	print_date(t, "International Talk Like a Pirate Day")
+
 	// June 28th, October 22nd
 	// https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day
 	// https://fr.wikipedia.org/wiki/Touche_de_verrouillage_des_majuscules

@@ -35,10 +35,6 @@ def main(year):
         if year == found.year and 13 == found.day:
             print(f'{found} Friday the 13th')  # Vendredi treize
 
-    #   https://en.wikipedia.org/wiki/Juneteenth
-    #   https://fr.wikipedia.org/wiki/Juneteenth
-    print(f'{date(year, JUNE, 19)} Juneteenth')
-
     #   https://en.wikipedia.org/wiki/Grandparents'_Day
     #   https://fr.wikipedia.org/wiki/F%C3%AAte_des_grands-parents
     # XXX FIXME TODO  2nd Sunday in September or 1st Sunday after Labour Day

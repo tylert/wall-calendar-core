@@ -66,6 +66,12 @@ func englishUnitedStates(year uint32) {
 	t = find_date(fmt.Sprintf("%d-06-14", year))
 	print_date(t, "Flag Day (US)")
 
+	// June 19th
+	// https://en.wikipedia.org/wiki/Juneteenth
+	// https://fr.wikipedia.org/wiki/Juneteenth
+	t = find_date(fmt.Sprintf("%d-06-19", year))
+	print_date(t, "Juneteenth (US)")
+
 	// July 4th
 	// https://en.wikipedia.org/wiki/Independence_Day_%28United_States%29
 	// https://fr.wikipedia.org/wiki/Jour_de_l%27Ind%C3%A9pendance_(%C3%89tats-Unis)

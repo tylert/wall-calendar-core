@@ -47,27 +47,6 @@ def main(year):
     # Fête des grands-parents (US)
     # Journée nationale des grands-parents (US)
 
-    #   https://uk-public-holidays.com/early-may-bank-holiday/
-    #   https://uk-public-holidays.com/spring-bank-holiday/
-    #   https://uk-public-holidays.com/summer-bank-holiday/
-    print(
-        f'{closest_date(MONDAY, date(year, MAY, WEEK1))} Early May Bank Holiday (UK)'
-    )  # May Day
-    if 2022 == year:
-        print(f'{date(year, JUNE, 2)} Spring Bank Holiday (UK)')
-        print(f'{date(year, JUNE, 3)} Platinum Jubilee Bank Holiday (UK)')
-    else:
-        print(
-            f'{closest_date(MONDAY, date(year, MAY, WEEK4), last=True)} Spring Bank Holiday (UK)'
-        )
-    print(
-        f'{closest_date(MONDAY, date(year, AUGUST, WEEK4), last=True)} Summer Bank Holiday (UK)'
-    )
-
-    #   https://en.wikipedia.org/wiki/Guy_Fawkes_Night
-    print(f'{date(year, NOVEMBER, 5)} Guy Fawkes Day (UK)')
-    # Journée de Guy Fawkes (UK)
-
     #   https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores
     #   https://es.wikipedia.org/wiki/Fiesta_de_San_Juan
     #   https://es.wikipedia.org/wiki/Asunci%C3%B3n_de_Mar%C3%ADa

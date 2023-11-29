@@ -146,13 +146,6 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Dhou_al-hijja
     print(f'{isl_date(DHU_AL_HIJJAH, 10, year)} Eid al-Adha Begins')
 
-    #   https://en.wikipedia.org/wiki/Orangemen%27s_Day
-    #   https://fr.wikipedia.org/wiki/Orange_Day
-    #   https://en.wikipedia.org/wiki/The_Twelfth#The_Twelfth_outside_Northern_Ireland
-    print(f'{closest_date(MONDAY, date(year, JULY, 12))} Orangemen\'s Day (CA-NL)')
-    # Battle of the Boyne???
-    # Fête des Orangistes (CA-NL)
-
 
 if __name__ == '__main__':
     main()

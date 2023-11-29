@@ -92,19 +92,6 @@ def main(year):
     print(f'{date(year, DECEMBER, 6)} Dia de la Constitución (ES)')
     print(f'{date(year, DECEMBER, 8)} La Inmaculada (ES)')
 
-    #   http://worldradioday.org
-    print(f'{date(year,FEBRUARY, 13)} World Radio Day')
-    # Journée mondiale de la radio
-
-    #   http://iaru.org/world-amateur-radio-day.html
-    print(f'{date(year, APRIL, 18)} World Amateur Radio Day')
-    # Journée de la radio amateur
-
-    #   https://en.wikipedia.org/wiki/Nikola_Tesla
-    #   https://fr.wikipedia.org/wiki/Nikola_Tesla
-    #   https://nikolatesladay.com/
-    print(f'{date(year, JULY, 10)} Nikola Tesla Day')
-
     #   https://en.wikipedia.org/wiki/Ada_Lovelace_Day
     #   http://findingada.com/about/when-is-ald/
     print(f'{closest_date(TUESDAY, date(year, OCTOBER, WEEK2))} Ada Lovelace Day')

@@ -28,6 +28,23 @@ func englishOther(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-06-18", year), uint32(time.Sunday))
 	print_date(t, "Father's Day")
 
+	// Caturday
+	// https://en.wikipedia.org/wiki/International_Cat_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat
+	// https://en.wikipedia.org/wiki/National_Cat_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_du_chat
+	t = find_date(fmt.Sprintf("%d-02-17", year))
+	print_date(t, "National Cat Day (BR, IT)")
+	t = find_date(fmt.Sprintf("%d-02-22", year))
+	print_date(t, "National Cat Day (JP)")
+	t = find_date(fmt.Sprintf("%d-03-01", year))
+	print_date(t, "National Cat Day (RU)")
+	t = find_date(fmt.Sprintf("%d-08-08", year))
+	print_date(t, "International Cat Day")
+	print_date(t, "National Cat Day (CA)")
+	t = find_date(fmt.Sprintf("%d-10-29", year))
+	print_date(t, "National Cat Day (US)")
+
 	// February 29, 2012
 	// https://en.wikipedia.org/wiki/Raspberry_Pi
 	// https://fr.wikipedia.org/wiki/Raspberry_Pi
@@ -94,20 +111,25 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-10-22", year))
 	print_date(t, "INTERNATIONAL CAPS LOCK DAY")
 
-	// Caturday
-	// https://en.wikipedia.org/wiki/International_Cat_Day
-	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat
-	// https://en.wikipedia.org/wiki/National_Cat_Day
-	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_du_chat
-	t = find_date(fmt.Sprintf("%d-02-17", year))
-	print_date(t, "National Cat Day (BR, IT)")
-	t = find_date(fmt.Sprintf("%d-02-22", year))
-	print_date(t, "National Cat Day (JP)")
-	t = find_date(fmt.Sprintf("%d-03-01", year))
-	print_date(t, "National Cat Day (RU)")
-	t = find_date(fmt.Sprintf("%d-08-08", year))
-	print_date(t, "International Cat Day")
-	print_date(t, "National Cat Day (CA)")
-	t = find_date(fmt.Sprintf("%d-10-29", year))
-	print_date(t, "National Cat Day (US)")
+	// February 13th
+	// https://en.wikipedia.org/wiki/World_Radio_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_mondiale_de_la_radio
+	// Journée mondiale de la radio
+	t = find_date(fmt.Sprintf("%d-02-13", year))
+	print_date(t, "World Radio Day")
+
+	// April 18th
+	// https://www.iaru.org/on-the-air/world-amateur-radio-day
+	// https://www.rac.ca/operating/world-amateur-radio-day-april-18
+	// https://www.arrl.org/world-amateur-radio-day
+	// Journée de la radio amateur
+	t = find_date(fmt.Sprintf("%d-04-18", year))
+	print_date(t, "World Amateur Radio Day")
+
+	// July 10th
+	// https://en.wikipedia.org/wiki/Nikola_Tesla
+	// https://fr.wikipedia.org/wiki/Nikola_Tesla
+	// https://nikolatesladay.com/
+	t = find_date(fmt.Sprintf("%d-07-10", year))
+	print_date(t, "Nikola Tesla Day")
 }

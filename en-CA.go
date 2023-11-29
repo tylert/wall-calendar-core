@@ -364,6 +364,15 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-07-09", year))
 	print_date(t, "Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU)")
 
+	// July 12th
+	// https://en.wikipedia.org/wiki/Orangemen%27s_Day
+	// https://fr.wikipedia.org/wiki/Orange_Day
+	// https://en.wikipedia.org/wiki/The_Twelfth#The_Twelfth_outside_Northern_Ireland
+	// Battle of the Boyne
+	// Fête des Orangistes (CA-NL)
+	t = find_date(fmt.Sprintf("%d-07-12", year))
+	print_date(t, "Orangemen's Day (CA-NL)")
+
 	// begins on the 2nd last Sunday of July and lasts for 2 weeks
 	// https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
 	// https://fr.wikipedia.org/wiki/Vacances_de_la_construction

@@ -75,9 +75,7 @@
     FEBRUARY 7 2036 01:28 NTP Timestamp 32-bit Overflow (EST5EDT)
     JANUARY 18 2038 22:14 POSIX Time Signed 32-bit Overflow (EST5EDT)
 
-    JULY 20 1969 Anniversary of First Lunar Landing
     NOVEMBER 20 1998 Anniversary of ISS Launch
-    DECEMBER 19 1972 Anniversary of Last Lunar Landing
 
     JANUARY 12 1992 Birthday of HAL9000
     MAY 4 Star Wars Day
@@ -151,10 +149,6 @@
     #   https://en.wikipedia.org/wiki/International_Day_of_Peace
     SEPTEMBER 21 International Day of Peace
     # Journée internationale de la paix
-
-    #   https://en.wikipedia.org/wiki/Sputnik_1
-    OCTOBER 4 1957 Anniversary of Launch of Sputnik 1
-    # Anniversaire du lancement de Sputnik 1
 
     #   https://en.wikipedia.org/wiki/World_Kindness_Day
     NOVEMBER 13 World Kindness Day

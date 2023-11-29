@@ -97,11 +97,6 @@ def main(year):
     print(f'{closest_date(TUESDAY, date(year, OCTOBER, WEEK2))} Ada Lovelace Day')
     # Journée de Ada Lovelace
 
-    #   https://en.wikipedia.org/wiki/Darwin_Day
-    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_Darwin
-    print(f'{date(year, FEBRUARY, 12)} Darwin Day')
-    # Journée de Darwin
-
     #   https://en.wikipedia.org/wiki/International_Lefthanders_Day
     #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_gauchers
     print(f'{date(year, AUGUST, 13)} Left-Handers\' Day')

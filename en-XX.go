@@ -126,10 +126,35 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-04-18", year))
 	print_date(t, "World Amateur Radio Day")
 
+	// February 12th (February 12th, 1809)
+	// https://en.wikipedia.org/wiki/Darwin_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_Darwin
+	// Journée de Darwin
+	t = find_date(fmt.Sprintf("%d-02-12", year))
+	print_date(t, "Darwin Day")
+
 	// July 10th
 	// https://en.wikipedia.org/wiki/Nikola_Tesla
 	// https://fr.wikipedia.org/wiki/Nikola_Tesla
 	// https://nikolatesladay.com/
 	t = find_date(fmt.Sprintf("%d-07-10", year))
 	print_date(t, "Nikola Tesla Day")
+
+	// October 4th, 1957
+	// https://en.wikipedia.org/wiki/Sputnik_1
+	// https://fr.wikipedia.org/wiki/Spoutnik_1
+	// Anniversaire du lancement de Spoutnik 1
+	t = find_date(fmt.Sprintf("%d-10-04", year))
+	print_date(t, fmt.Sprintf("%s Launch of Sputnik 1", ordinal(int(year-1957), "en")))
+
+	// July 20th, 1969
+	// December 11th, 1972
+	// https://en.wikipedia.org/wiki/Apollo_11
+	// https://fr.wikipedia.org/wiki/Apollo_11
+	// https://en.wikipedia.org/wiki/Apollo_17
+	// https://fr.wikipedia.org/wiki/Apollo_17
+	t = find_date(fmt.Sprintf("%d-07-20", year))
+	print_date(t, fmt.Sprintf("%s Anniversary of First Lunar Landing", ordinal(int(year-1969), "en")))
+	t = find_date(fmt.Sprintf("%d-12-11", year))
+	print_date(t, fmt.Sprintf("%s Anniversary of Last Lunar Landing", ordinal(int(year-1972), "en")))
 }

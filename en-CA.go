@@ -484,24 +484,6 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-11-02", year))
 	print_date(t, "All Souls' Day")
 
-	// February 1st, May 1st, August 1st, November 1st
-	// https://en.wikipedia.org/wiki/Imbolc
-	// https://fr.wikipedia.org/wiki/Imbolc
-	// https://en.wikipedia.org/wiki/Beltane
-	// https://fr.wikipedia.org/wiki/Beltaine
-	// https://en.wikipedia.org/wiki/Lughnasadh
-	// https://fr.wikipedia.org/wiki/Lugnasad
-	// https://en.wikipedia.org/wiki/Samhain
-	// https://fr.wikipedia.org/wiki/Samain_(mythologie)
-	t = find_date(fmt.Sprintf("%d-02-01", year))
-	print_date(t, "Imbolc")
-	t = find_date(fmt.Sprintf("%d-05-01", year))
-	print_date(t, "Beltane")
-	t = find_date(fmt.Sprintf("%d-08-01", year))
-	print_date(t, "Lughnasadh")
-	t = find_date(fmt.Sprintf("%d-11-01", year))
-	print_date(t, "Samhain")
-
 	// November 11th and September 3rd
 	// https://en.wikipedia.org/wiki/Remembrance_Day
 	// https://fr.wikipedia.org/wiki/Jour_du_Souvenir

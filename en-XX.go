@@ -28,6 +28,44 @@ func englishOther(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-06-18", year), uint32(time.Sunday))
 	print_date(t, "Father's Day")
 
+	// February 1st, May 1st, August 1st, November 1st
+	// https://en.wikipedia.org/wiki/Wheel_of_the_Year
+	// https://fr.wikipedia.org/wiki/Roue_de_l%27ann%C3%A9e
+	// https://en.wikipedia.org/wiki/Imbolc
+	// https://fr.wikipedia.org/wiki/Imbolc
+	// https://en.wikipedia.org/wiki/%C4%92ostre
+	// https://fr.wikipedia.org/wiki/%C3%89ostre
+	// https://en.wikipedia.org/wiki/Beltane
+	// https://fr.wikipedia.org/wiki/Beltaine
+	// https://en.wikipedia.org/wiki/Lughnasadh
+	// https://fr.wikipedia.org/wiki/Lugnasad
+	// https://en.wikipedia.org/wiki/Samhain
+	// https://fr.wikipedia.org/wiki/Samain_(mythologie)
+	// https://en.wikipedia.org/wiki/Yule
+	// https://fr.wikipedia.org/wiki/Yule
+	t = find_date(fmt.Sprintf("%d-02-01", year))
+	print_date(t, "Imbolc")
+	t = find_date(fmt.Sprintf("%d-03-21", year))
+	print_date(t, "Ostara")
+	t = find_date(fmt.Sprintf("%d-05-01", year))
+	print_date(t, "Beltane")
+	t = find_date(fmt.Sprintf("%d-06-21", year))
+	print_date(t, "Litha")
+	t = find_date(fmt.Sprintf("%d-08-01", year))
+	print_date(t, "Lughnasadh")
+	t = find_date(fmt.Sprintf("%d-09-21", year))
+	print_date(t, "Mabon")
+	t = find_date(fmt.Sprintf("%d-11-01", year))
+	print_date(t, "Samhain")
+	t = find_date(fmt.Sprintf("%d-12-21", year))
+	print_date(t, "Yule")
+
+	// December 17th to 23rd
+	// https://en.wikipedia.org/wiki/Saturnalia
+	// https://fr.wikipedia.org/wiki/Saturnales
+	t = find_date(fmt.Sprintf("%d-12-17", year))
+	print_date(t, "Saturnalia Begins")
+
 	// Caturday
 	// https://en.wikipedia.org/wiki/International_Cat_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat

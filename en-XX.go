@@ -164,6 +164,11 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-04-18", year))
 	print_date(t, "World Amateur Radio Day")
 
+	// November 27, 1923
+	// https://en.wikipedia.org/wiki/History_of_amateur_radio
+	t = find_date(fmt.Sprintf("%d-11-27", year))
+	print_date(t, fmt.Sprintf("%s Anniversary of first transatlantic two-way ham contact", ordinal(int(year-1923), "en")))
+
 	// February 12th (February 12th, 1809)
 	// https://en.wikipedia.org/wiki/Darwin_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_Darwin
@@ -183,7 +188,7 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Spoutnik_1
 	// Anniversaire du lancement de Spoutnik 1
 	t = find_date(fmt.Sprintf("%d-10-04", year))
-	print_date(t, fmt.Sprintf("%s Launch of Sputnik 1", ordinal(int(year-1957), "en")))
+	print_date(t, fmt.Sprintf("%s Anniversary of launch of Sputnik 1", ordinal(int(year-1957), "en")))
 
 	// July 20th, 1969
 	// December 11th, 1972
@@ -192,7 +197,40 @@ func englishOther(year uint32) {
 	// https://en.wikipedia.org/wiki/Apollo_17
 	// https://fr.wikipedia.org/wiki/Apollo_17
 	t = find_date(fmt.Sprintf("%d-07-20", year))
-	print_date(t, fmt.Sprintf("%s Anniversary of First Lunar Landing", ordinal(int(year-1969), "en")))
+	print_date(t, fmt.Sprintf("%s Anniversary of first lunar landing", ordinal(int(year-1969), "en")))
 	t = find_date(fmt.Sprintf("%d-12-11", year))
-	print_date(t, fmt.Sprintf("%s Anniversary of Last Lunar Landing", ordinal(int(year-1972), "en")))
+	print_date(t, fmt.Sprintf("%s Anniversary of last lunar landing", ordinal(int(year-1972), "en")))
+
+	// August 7th, 2027
+	// October 26th, 2028
+	// https://en.wikipedia.org/wiki/(137108)_1999_AN10
+	// https://fr.wikipedia.org/wiki/(137108)_1999_AN10
+	// https://en.wikipedia.org/wiki/(35396)_1997_XF11
+	// https://fr.wikipedia.org/wiki/(35396)_1997_XF11
+	if 2027 == year {
+		t = find_date("2027-08-07")
+		print_date(t, "06:48 1999 AN10 Asteroid Pass")
+	}
+	if 2028 == year {
+		t = find_date("2028-10-26")
+		print_date(t, "06:44 1997 XF11 Asteroid Pass")
+	}
+
+	// February 7th, 2036
+	// January 19th, 2038
+	// https://en.wikipedia.org/wiki/Year_2038_problem
+	// https://fr.wikipedia.org/wiki/Bug_de_l%27an_2038
+	// https://en.wikipedia.org/wiki/Network_Time_Protocol
+	// https://fr.wikipedia.org/wiki/Network_Time_Protocol
+	// NTP 00:00:00 UTC January 1st, 1900 to 06:28:16 UTC February 7th, 2036
+	// POSIX 00:00:00 UTC January 1st, 1970 to 03:14:07 UTC January 19th, 2038
+	// POSIX unsigned 32-bit overflow 06:28:15 UTC February 7th, 2106
+	if 2036 == year {
+		t = find_date("2036-02-07")
+		print_date(t, "06:28:16 UTC NTP 32-bit Overflow")
+	}
+	if 2038 == year {
+		t = find_date("2038-01-19")
+		print_date(t, "03:14:07 UTC POSIX 32-bit Overflow")
+	}
 }

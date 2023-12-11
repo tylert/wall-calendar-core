@@ -68,13 +68,6 @@
     #   https://www.nintendo.com/whatsnew/detail/nintendo-celebrates-mar10-day-by-bringing-smiles-to-people-of-all-ages
     MARCH 10 MAR10 Day  # Jour MAR10
 
-    # NTP 32-bit Timestamp 32-bit Overflow at 06:28:16 UTC on Feb 7th, 2036
-    # POSIX Time began at 00:00:00 UTC on Thu, Jan 1st, 1970
-    # POSIX Time Signed 32-bit Overflow at 03:14:07 UTC on Tue, Jan 19th, 2038
-    # POSIX Time Unsigned 32-bit Overflow at 06:28:15 UTC on Sun, Feb 7th, 2106
-    FEBRUARY 7 2036 01:28 NTP Timestamp 32-bit Overflow (EST5EDT)
-    JANUARY 18 2038 22:14 POSIX Time Signed 32-bit Overflow (EST5EDT)
-
     NOVEMBER 20 1998 Anniversary of ISS Launch
 
     JANUARY 12 1992 Birthday of HAL9000

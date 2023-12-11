@@ -50,15 +50,6 @@ def main(year):
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H:%M")} Aphelion')
     # Aphélie
 
-    #   https://en.wikipedia.org/wiki/(137108)_1999_AN10
-    #   https://fr.wikipedia.org/wiki/(137108)_1999_AN10
-    #   https://en.wikipedia.org/wiki/(35396)_1997_XF11
-    #   https://fr.wikipedia.org/wiki/(35396)_1997_XF11
-    if 2027 == year:
-        print(f'{date(year, AUGUST, 7)} 06:48 1999 AN10 Asteroid Pass')
-    if 2028 == year:
-        print(f'{date(year, OCTOBER, 26)} 06:44 1997 XF11 Asteroid Pass')
-
     #   https://en.wikipedia.org/wiki/Friday_The_13th
     #   https://fr.wikipedia.org/wiki/Vendredi_treize
     friday = repeat_date(closest_date(FRIDAY, date(year, JANUARY, 4)))

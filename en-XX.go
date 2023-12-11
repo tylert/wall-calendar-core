@@ -67,6 +67,7 @@ func englishOther(year uint32) {
 	print_date(t, "Saturnalia Begins")
 
 	// Caturday
+	// February 17th, February 22nd, March 1st, August 8th, October 29th
 	// https://en.wikipedia.org/wiki/International_Cat_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat
 	// https://en.wikipedia.org/wiki/National_Cat_Day
@@ -140,6 +141,13 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-09-19", year))
 	print_date(t, "International Talk Like a Pirate Day")
 
+	// August 13th
+	// https://en.wikipedia.org/wiki/International_Lefthanders_Day
+	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_gauchers
+	// Journée internationale des gauchers
+	t = find_date(fmt.Sprintf("%d-08-13", year))
+	print_date(t, "Left-Handers' Day")
+
 	// June 28th, October 22nd
 	// https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day
 	// https://fr.wikipedia.org/wiki/Touche_de_verrouillage_des_majuscules
@@ -182,6 +190,14 @@ func englishOther(year uint32) {
 	// https://nikolatesladay.com/
 	t = find_date(fmt.Sprintf("%d-07-10", year))
 	print_date(t, "Nikola Tesla Day")
+
+	// 2nd Tuesday of October
+	// https://en.wikipedia.org/wiki/Ada_Lovelace_Day
+	// https://fr.wikipedia.org/wiki/Ada_Lovelace_Day
+	// https://findingada.com/about/when-is-ald
+	// Journée de Ada Lovelace
+	t = find_nearby_date(fmt.Sprintf("%d-10-11", year), uint32(time.Tuesday))
+	print_date(t, "Ada Lovelace Day")
 
 	// October 4th, 1957
 	// https://en.wikipedia.org/wiki/Sputnik_1

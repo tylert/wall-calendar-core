@@ -83,16 +83,6 @@ def main(year):
     print(f'{date(year, DECEMBER, 6)} Dia de la Constitución (ES)')
     print(f'{date(year, DECEMBER, 8)} La Inmaculada (ES)')
 
-    #   https://en.wikipedia.org/wiki/Ada_Lovelace_Day
-    #   http://findingada.com/about/when-is-ald/
-    print(f'{closest_date(TUESDAY, date(year, OCTOBER, WEEK2))} Ada Lovelace Day')
-    # Journée de Ada Lovelace
-
-    #   https://en.wikipedia.org/wiki/International_Lefthanders_Day
-    #   https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_gauchers
-    print(f'{date(year, AUGUST, 13)} Left-Handers\' Day')
-    # Journée internationale des gauchers
-
     print(f'{date(year, FEBRUARY, 20)} {ordinal(year - 1991)} Birthday of Python')
     print(f'{date(year, MARCH, 11)} {ordinal(year - 2002)} Birthday of Arch')
     print(f'{date(year, MARCH, 15)} {ordinal(year - 2013)} Birthday of Docker')

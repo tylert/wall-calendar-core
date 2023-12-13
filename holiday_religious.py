@@ -44,6 +44,16 @@ def main(year):
     #   https://fr.wikipedia.org/wiki/Annonciation
     print(f'{date(year, MARCH, 25)} Annunciation')  # Annonciation
 
+    #// XXX FIXME TODO  St. Francis Day
+    #// XXX FIXME TODO  St. Nicholas Day
+    #// XXX FIXME TODO  Our Lady of Guadalupe
+    #// XXX FIXME TODO  Posadas Navidenas
+    #// XXX FIXME TODO  Holy Innocents
+    #// XXX FIXME TODO  Nativity Fast begins
+    #// XXX FIXME TODO  Feast of the Nativity
+    #// XXX FIXME TODO  Nativity of Virgin Mary
+    #// XXX FIXME TODO  Ecclesiastical year begins
+
     #   https://en.wikipedia.org/wiki/Nowruz
     #   https://fr.wikipedia.org/wiki/Norouz
     # Persian/Zoroastrian/Baha'i

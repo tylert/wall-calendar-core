@@ -37,4 +37,10 @@ func englishUnitedKingdom(year uint32) {
 	// Journée de Guy Fawkes (UK)
 	t = find_date(fmt.Sprintf("%d-11-05", year))
 	print_date(t, "Guy Fawkes Day (UK)")
+
+	// December 31st
+	// https://en.wikipedia.org/wiki/Hogmanay
+	// https://fr.wikipedia.org/wiki/Hogmanay
+	t = find_date(fmt.Sprintf("%d-12-31", year))
+	print_date(t, "Hogmanay (UK)")
 }

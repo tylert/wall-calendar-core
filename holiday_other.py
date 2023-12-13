@@ -73,7 +73,6 @@ def main(year):
     #   https://es.wikipedia.org/wiki/Fiesta_Nacional_de_Espa%C3%B1a
     #   https://es.wikipedia.org/wiki/D%C3%ADa_de_Todos_los_Santos
     #   https://es.wikipedia.org/wiki/D%C3%ADa_de_la_Constituci%C3%B3n_(Espa%C3%B1a)
-    #   https://es.wikipedia.org/wiki/Inmaculada_Concepci%C3%B3n
     print(f'{date(year, MAY, 1)} Fiesta del Trabajo (ES)')
     print(f'{date(year, JUNE, 24)} San Juan (ES-CT)')
     print(f'{date(year, AUGUST, 15)} La Asunción (ES)')
@@ -81,7 +80,6 @@ def main(year):
     print(f'{date(year, OCTOBER, 12)} Fiesta Nacional de España (ES)')
     print(f'{date(year, NOVEMBER, 1)} Todos los Santos (ES)')
     print(f'{date(year, DECEMBER, 6)} Dia de la Constitución (ES)')
-    print(f'{date(year, DECEMBER, 8)} La Inmaculada (ES)')
 
     print(f'{date(year, FEBRUARY, 20)} {ordinal(year - 1991)} Birthday of Python')
     print(f'{date(year, MARCH, 11)} {ordinal(year - 2002)} Birthday of Arch')

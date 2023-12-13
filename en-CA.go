@@ -15,13 +15,10 @@ func englishCanada(year uint32) {
 	// December 31st and January 1st
 	// https://en.wikipedia.org/wiki/New_Year's_Eve
 	// https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
-	// https://en.wikipedia.org/wiki/Hogmanay
-	// https://fr.wikipedia.org/wiki/Hogmanay
 	// https://en.wikipedia.org/wiki/New_Year's_Day
 	// https://fr.wikipedia.org/wiki/Jour_de_l%27an
 	// Veille du Nouvel An, Jour de l'an, Jour de l'an observé
 	t = find_date(fmt.Sprintf("%d-12-31", year))
-	print_date(t, "Hogmanay (UK)")
 	print_date(t, "New Year's Eve")
 	t = find_date(fmt.Sprintf("%d-01-01", year))
 	print_date(t, "New Year's Day")
@@ -514,6 +511,32 @@ func englishCanada(year uint32) {
 	// Anniversaire du Statut de Westminster
 	t = find_date(fmt.Sprintf("%d-12-11", year))
 	print_date(t, fmt.Sprintf("%s Anniversary of the Statute of Westminster", ordinal(int(year-1931), "en")))
+
+	// 1st Saturday in December
+	// https://canlii.org/en/on/laws/stat/so-2015-c-12/latest/so-2015-c-12.html
+	// https://canlii.org/fr/on/legis/lois/lo-2015-c-12/derniere/lo-2015-c-12.html
+	t = find_nearby_date(fmt.Sprintf("%d-12-04", year), uint32(time.Saturday))
+	print_date(t, "Christmas Tree Day (CA-ON)")
+
+	// December 8th
+	// https://en.wikipedia.org/wiki/Immaculate_Conception
+	// https://fr.wikipedia.org/wiki/Immacul%C3%A9e_Conception
+	// https://es.wikipedia.org/wiki/Inmaculada_Concepci%C3%B3n
+	// La Inmaculada
+	t = find_date(fmt.Sprintf("%d-12-08", year))
+	print_date(t, "Immaculate Conception Day")
+
+	// XXX FIXME TODO  Advent, Candelmas, Christmastide
+	// XXX FIXME TODO  Epiphany Eve, Twelfth Night, Epiphanytide
+
+	// 4th Sunday before December 25th
+	// https://en.wikipedia.org/wiki/Advent_Sunday
+	// https://fr.wikipedia.org/wiki/Premier_dimanche_de_l%27Avent
+	// https://en.wikipedia.org/wiki/Christmas_tree
+	// https://fr.wikipedia.org/wiki/Sapin_de_No%C3%ABl
+	t = find_nearby_date(fmt.Sprintf("%d-12-21", year), uint32(time.Sunday))
+	t = t.AddDate(0, 0, -21)
+	print_date(t, "Advent Sunday")
 
 	// December 24th, 25th and 26th
 	// https://en.wikipedia.org/wiki/Christmas_Eve

@@ -107,4 +107,11 @@ func englishUnitedStates(year uint32) {
 	// https://en.wikipedia.org/wiki/National_Pearl_Harbor_Remembrance_Day
 	t = find_date(fmt.Sprintf("%d-12-07", year))
 	print_date(t, "Pearl Harbor Day (US)")
+
+	// December 8th
+	// https://en.wikipedia.org/wiki/Christmas_tree
+	// https://fr.wikipedia.org/wiki/Sapin_de_No%C3%ABl
+	// https://checkiday.com/2e2a58a06269bc06cefe283f22b8173e/national-christmas-tree-day
+	t = find_date(fmt.Sprintf("%d-12-08", year))
+	print_date(t, "Christmas Tree Day (US)")
 }

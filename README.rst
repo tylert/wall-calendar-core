@@ -8,12 +8,11 @@
 
     # Show all events for this year
     ( go run . --year 2024 ; \
-        ./holiday_religious.py --year 2024 ; \
         ./holiday_other.py --year 2024 ) | sort
 
     # Find out when the next few Easters will occur
     for (( year=2024 ; year<2034 ; year++ )); do
-        ./holiday_religious.py --year ${year} | grep 'Easter Sunday'
+        go run . --year ${year} | grep 'Easter Sunday'
     done
 
 

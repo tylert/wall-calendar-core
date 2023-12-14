@@ -8,18 +8,124 @@ import (
 func englishOther(year uint32) {
 	var t time.Time
 
+	// https://en.wikipedia.org/wiki/Liturgical_year
+	// https://fr.wikipedia.org/wiki/Calendrier_liturgique
+
+	// the Sunday following the full moon on or after the March equinox (March 21st)
+	// https://en.wikipedia.org/wiki/Ecclesiastical_full_moon
+	// https://en.wikipedia.org/wiki/Computus
+	// https://en.wikipedia.org/wiki/Date_of_Easter
+	// https://fr.wikipedia.org/wiki/Calcul_de_la_date_de_P%C3%A2ques
+	// https://en.wikipedia.org/wiki/Easter_cycle
+	// https://en.wikipedia.org/wiki/Shrovetide
+	// https://fr.wikipedia.org/wiki/Septuag%C3%A9sime
+	// https://en.wikipedia.org/wiki/Quinquagesima
+	// https://fr.wikipedia.org/wiki/Dimanche_Gras
+	// https://en.wikipedia.org/wiki/Sexagesima
+	// https://en.wikipedia.org/wiki/Shrove_Tuesday
+	// https://fr.wikipedia.org/wiki/Mardi_gras
+	// https://en.wikipedia.org/wiki/Ash_Wednesday
+	// https://fr.wikipedia.org/wiki/Mercredi_des_Cendres
+	// https://en.wikipedia.org/wiki/Lent
+	// https://fr.wikipedia.org/wiki/Car%C3%AAme
+	// https://en.wikipedia.org/wiki/Quadragesima_Sunday
+	// https://fr.wikipedia.org/wiki/Premier_dimanche_de_Car%C3%AAme
+	// https://en.wikipedia.org/wiki/Laetare_Sunday
+	// https://fr.wikipedia.org/wiki/Quatri%C3%A8me_dimanche_de_Car%C3%AAme
+	// https://en.wikipedia.org/wiki/Palm_Sunday
+	// https://fr.wikipedia.org/wiki/Dimanche_des_Rameaux
+	// https://en.wikipedia.org/wiki/Holy_Wednesday
+	// https://fr.wikipedia.org/wiki/Mercredi_saint
+	// https://en.wikipedia.org/wiki/Maundy_Thursday
+	// https://fr.wikipedia.org/wiki/Jeudi_saint
+	// https://en.wikipedia.org/wiki/Good_Friday
+	// https://fr.wikipedia.org/wiki/Vendredi_saint
+	// https://es.wikipedia.org/wiki/Viernes_Santo
+	// https://en.wikipedia.org/wiki/Holy_Saturday
+	// https://fr.wikipedia.org/wiki/Samedi_saint
+	// https://en.wikipedia.org/wiki/Easter
+	// https://fr.wikipedia.org/wiki/P%C3%A2ques
+	// https://es.wikipedia.org/wiki/Pascua
+	// https://en.wikipedia.org/wiki/Easter_Saturday
+	// https://en.wikipedia.org/wiki/Feast_of_the_Ascension
+	// https://fr.wikipedia.org/wiki/Ascension_(f%C3%AAte)
+	// https://en.wikipedia.org/wiki/Pentecost
+	// https://fr.wikipedia.org/wiki/Pentec%C3%B4te
+	// https://en.wikipedia.org/wiki/Trinity_Sunday
+	// https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Sainte-Trinit%C3%A9
+	// https://en.wikipedia.org/wiki/Feast_of_Corpus_Christi
+	// https://fr.wikipedia.org/wiki/F%C3%AAte-Dieu
+	// https://en.wikipedia.org/wiki/Carnival
+	// https://fr.wikipedia.org/wiki/Carnaval
+	// https://www.timeanddate.com/holidays/common/carnival-wednesday
+	// https://www.timeanddate.com/holidays/common/whit-sunday
+	// https://www.timeanddate.com/holidays/common/whit-monday
+	// Pascua (ES) = Easter
+	// Mardi Gras
+	// Mercredi des Cendres
+	// Lent / Carême
+	// Dimanche des Rameaux
+	// Mercredi saint
+	// Jeudi saint
+	// Vendredi saint, Viernes Santo (ES)
+	// Samedi saint
+	// Dimanche de Pâques
+	// Lundi de Pâques
+	// Ascension
+	// Pentecôte
+	// XXX FIXME TODO  Palm Sunday Orthodox???
+	month, day := Gregorian(int(year))
+	easter := find_date(fmt.Sprintf("%d-%02d-%02d", year, month, day))
+	t = easter.AddDate(0, 0, -63)
+	print_date(t, "Septuagesima Sunday") // "70th", 3rd Sunday before Lent (9th before Easter)
+	t = easter.AddDate(0, 0, -56)
+	print_date(t, "Sexagesima Sunday") // "60th", 2nd Sunday before Lent (8th before Easter)
+	t = easter.AddDate(0, 0, -49)
+	print_date(t, "Quinquagesima/Shrove/Pork Sunday") // "50th", last Sunday before Lent (7th before Easter)
+	t = easter.AddDate(0, 0, -47)
+	print_date(t, "Shrove/Pancake Tuesday") // day before Lent
+	t = easter.AddDate(0, 0, -46)
+	print_date(t, "Carnival/Ash Wednesday") // Lent begins
+	t = easter.AddDate(0, 0, -42)
+	print_date(t, "Invocabit Sunday") // "40th", 1st Sunday after Lent (6th before Easter)
+	t = easter.AddDate(0, 0, -21)
+	print_date(t, "Laetare Sunday") // 4th before Easter
+	t = easter.AddDate(0, 0, -7)
+	print_date(t, "Palm Sunday")
+	t = easter.AddDate(0, 0, -4)
+	print_date(t, "Holy Wednesday")
+	t = easter.AddDate(0, 0, -3)
+	print_date(t, "Maundy Thursday")
+	t = easter.AddDate(0, 0, -2)
+	print_date(t, "Good Friday")
+	t = easter.AddDate(0, 0, -1)
+	print_date(t, "Holy Saturday")
+	print_date(easter, "Easter Sunday")
+	t = easter.AddDate(0, 0, 1)
+	print_date(t, "Easter Monday")
+	t = easter.AddDate(0, 0, 6)
+	print_date(t, "Easter Saturday")
+	t = easter.AddDate(0, 0, 39)
+	print_date(t, "Ascension Day")
+	t = easter.AddDate(0, 0, 49)
+	print_date(t, "Whit/Pentecost Sunday")
+	t = easter.AddDate(0, 0, 50)
+	print_date(t, "Whit/Pentecost Monday")
+	t = easter.AddDate(0, 0, 56)
+	print_date(t, "Trinity Sunday")
+	t = easter.AddDate(0, 0, 60)
+	print_date(t, "Corpus Christi")
+
 	// 2nd Sunday in May
 	// exactly 3 weeks before Easter Sunday (4th Sunday of Lent)
 	// https://en.wikipedia.org/wiki/Mother's_Day
 	// https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
 	// https://en.wikipedia.org/wiki/Mothering_Sunday
 	// Fête des mères
-	t = find_nearby_date(fmt.Sprintf("%d-05-11", year), uint32(time.Sunday))
-	print_date(t, "Mother's Day")
-	month, day := Gregorian(int(year))
-	easter := find_date(fmt.Sprintf("%d-%02d-%02d", year, month, day))
 	t = easter.AddDate(0, 0, -21)
 	print_date(t, "Mothering Sunday (UK)")
+	t = find_nearby_date(fmt.Sprintf("%d-05-11", year), uint32(time.Sunday))
+	print_date(t, "Mother's Day")
 
 	// 3rd Sunday in June
 	// https://en.wikipedia.org/wiki/Father's_Day

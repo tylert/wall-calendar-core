@@ -8,9 +8,8 @@
 
     # Show all events for this year
     ( go run . --year 2024 ; \
-      ./holiday_canada.py --year 2024 ; \
-      ./holiday_religious.py --year 2024 ; \
-      ./holiday_other.py --year 2024 ) | sort
+        ./holiday_religious.py --year 2024 ; \
+        ./holiday_other.py --year 2024 ) | sort
 
     # Find out when the next few Easters will occur
     for (( year=2024 ; year<2034 ; year++ )); do

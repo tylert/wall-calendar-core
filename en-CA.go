@@ -12,7 +12,7 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 	// https://en.wikipedia.org/wiki/Lists_of_holidays
 
-	// December 31st and January 1st
+	// December 31st, January 1st
 	// https://en.wikipedia.org/wiki/New_Year's_Eve
 	// https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_la_Saint-Sylvestre
 	// https://en.wikipedia.org/wiki/New_Year's_Day
@@ -114,8 +114,8 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-11-30", year))
 	print_date(t, "St. Andrew's Day")
 
-	// 2nd Sunday in March and 1st Sunday in November
-	// last Sunday in March and last Sunday in October
+	// 2nd Sunday in March, 1st Sunday in November
+	// last Sunday in March, last Sunday in October
 	// https://en.wikipedia.org/wiki/Daylight_saving_time_in_Canada
 	// https://en.wikipedia.org/wiki/Daylight_saving_time_by_country
 	// https://en.wikipedia.org/wiki/Military_time_zone
@@ -370,7 +370,8 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-07-12", year))
 	print_date(t, "Orangemen's Day (CA-NL)")
 
-	// begins on the 2nd last Sunday of July and lasts for 2 weeks
+	// begins on the 2nd last Sunday of July
+	// ends 2 weeks later
 	// https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
 	// https://fr.wikipedia.org/wiki/Vacances_de_la_construction
 	// https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
@@ -461,7 +462,7 @@ func englishCanada(year uint32) {
 	t = t.AddDate(0, 0, 8)
 	print_date(t, "Oktoberfest Ends (CA-ON)")
 
-	// October 31st, November 1st and 2nd
+	// October 31st, November 1st, 2nd
 	// https://en.wikipedia.org/wiki/Allhallowtide
 	// https://en.wikipedia.org/wiki/Halloween
 	// https://fr.wikipedia.org/wiki/Halloween
@@ -481,7 +482,7 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-11-02", year))
 	print_date(t, "All Souls' Day")
 
-	// November 11th and September 3rd
+	// November 11th, September 3rd
 	// https://en.wikipedia.org/wiki/Remembrance_Day
 	// https://fr.wikipedia.org/wiki/Jour_du_Souvenir
 	// https://en.wikipedia.org/wiki/Armistice_Day
@@ -537,7 +538,7 @@ func englishCanada(year uint32) {
 	t = t.AddDate(0, 0, -21)
 	print_date(t, "Advent Sunday")
 
-	// December 24th, 25th and 26th
+	// December 24th, 25th, 26th
 	// https://en.wikipedia.org/wiki/Christmastide
 	// https://fr.wikipedia.org/wiki/Temps_de_No%C3%ABl
 	// https://en.wikipedia.org/wiki/Christmas_Eve
@@ -585,6 +586,9 @@ func englishCanada(year uint32) {
 	// https://es.wikipedia.org/wiki/Epifan%C3%ADa
 	// https://en.wikipedia.org/wiki/Candlemas
 	// https://fr.wikipedia.org/wiki/Chandeleur
+	// https://en.wikipedia.org/wiki/Christmas_tree
+	// https://fr.wikipedia.org/wiki/Sapin_de_No%C3%ABl
+	// Epiphanytide
 	// Épiphanie, Epifanía
 	t = find_date(fmt.Sprintf("%d-01-05", year))
 	print_date(t, "Epiphany Eve")

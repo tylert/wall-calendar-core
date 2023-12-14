@@ -73,7 +73,7 @@ func ordinal(num int, lang string) string {
 		return fmt.Sprintf("%dx", num)
 	}
 	// case "es":
-	// add 'ª' after feminin words and 'º' after masculin words (days are masculin)
+	// add 'ª' after feminine words and 'º' after masculine words (days are masculine)
 }
 
 // This stuff below was copied from https://github.com/soniakeys/meeus

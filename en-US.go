@@ -87,7 +87,7 @@ func englishUnitedStates(year uint32) {
 	print_date(t, "Columbus Day (US)")
 	print_date(t, "Bartolomé Day (US)")
 
-	// 4th Thursday in November and the following Friday and Monday
+	// 4th Thursday in November, Friday, Monday
 	// https://en.wikipedia.org/wiki/Thanksgiving
 	// https://fr.wikipedia.org/wiki/Thanksgiving
 	// https://en.wikipedia.org/wiki/Black_Friday_(shopping)

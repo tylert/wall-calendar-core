@@ -29,6 +29,7 @@ func englishOther(year uint32) {
 	print_date(t, "Father's Day")
 
 	// February 1st, May 1st, August 1st, November 1st
+	// March 21st, June 21st, September 21st, December 21st
 	// https://en.wikipedia.org/wiki/Wheel_of_the_Year
 	// https://fr.wikipedia.org/wiki/Roue_de_l%27ann%C3%A9e
 	// https://en.wikipedia.org/wiki/Imbolc

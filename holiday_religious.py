@@ -25,16 +25,12 @@ def main(year):
         print(f'{full_moon(date(year, month, 16)).date()} Full Moon')
         print(f'{last_moon(date(year, month, 16)).date()} Last Moon')
 
-    #   https://en.wikipedia.org/wiki/Epiphany_(holiday)
-    #   https://fr.wikipedia.org/wiki/%C3%89piphanie
-    #   https://es.wikipedia.org/wiki/Epifan%C3%ADa
     #   https://en.wikipedia.org/wiki/Biblical_Magi
     #   https://fr.wikipedia.org/wiki/Rois_mages
     #   https://es.wikipedia.org/wiki/Reyes_Magos
     #   https://en.wikipedia.org/wiki/Baptism_of_the_Lord
     # Baptism of the Lord is the 1st Sunday after January 6th
     # Jesus
-    print(f'{date(year, JANUARY, 6)} Epiphany')  # Épiphanie / Epifanía
     print(
         f'{date(year, JANUARY, 6)} Reyes (ES)'
     )  # La festividad de los Reyes Magos???

@@ -526,10 +526,9 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-12-08", year))
 	print_date(t, "Immaculate Conception Day")
 
-	// XXX FIXME TODO  Advent, Candelmas, Christmastide
-	// XXX FIXME TODO  Epiphany Eve, Twelfth Night, Epiphanytide
-
 	// 4th Sunday before December 25th
+	// https://en.wikipedia.org/wiki/Advent
+	// https://fr.wikipedia.org/wiki/Avent
 	// https://en.wikipedia.org/wiki/Advent_Sunday
 	// https://fr.wikipedia.org/wiki/Premier_dimanche_de_l%27Avent
 	// https://en.wikipedia.org/wiki/Christmas_tree
@@ -539,6 +538,8 @@ func englishCanada(year uint32) {
 	print_date(t, "Advent Sunday")
 
 	// December 24th, 25th and 26th
+	// https://en.wikipedia.org/wiki/Christmastide
+	// https://fr.wikipedia.org/wiki/Temps_de_No%C3%ABl
 	// https://en.wikipedia.org/wiki/Christmas_Eve
 	// https://fr.wikipedia.org/wiki/R%C3%A9veillon_de_No%C3%ABl
 	// https://en.wikipedia.org/wiki/Christmas
@@ -575,6 +576,22 @@ func englishCanada(year uint32) {
 		t = t.AddDate(0, 0, 2)
 		print_date(t, "Boxing Day Observed")
 	}
+
+	// January 6th to February 2nd
+	// https://en.wikipedia.org/wiki/Epiphany_season
+	// https://en.wikipedia.org/wiki/Twelfth_Night_(holiday)
+	// https://en.wikipedia.org/wiki/Epiphany_(holiday)
+	// https://fr.wikipedia.org/wiki/%C3%89piphanie
+	// https://es.wikipedia.org/wiki/Epifan%C3%ADa
+	// https://en.wikipedia.org/wiki/Candlemas
+	// https://fr.wikipedia.org/wiki/Chandeleur
+	// Épiphanie, Epifanía
+	t = find_date(fmt.Sprintf("%d-01-05", year))
+	print_date(t, "Epiphany Eve")
+	t = find_date(fmt.Sprintf("%d-01-06", year))
+	print_date(t, "Epiphany")
+	t = find_date(fmt.Sprintf("%d-02-02", year))
+	print_date(t, "Candlemas")
 
 	// December 26th to January 1st
 	// https://en.wikipedia.org/wiki/Kwanzaa

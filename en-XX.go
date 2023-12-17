@@ -134,6 +134,70 @@ func englishOther(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-06-18", year), uint32(time.Sunday))
 	print_date(t, "Father's Day")
 
+	// March 20st, April 20th, May 21st, June 21st
+	// July 23rd, August 23rd, September 23rd, October 23rd
+	// November 22nd, December 22nd, January 20th, February 18th
+	// https://en.wikipedia.org/wiki/Aries_(astrology)
+	// https://fr.wikipedia.org/wiki/B%C3%A9lier_(astrologie)
+	// https://en.wikipedia.org/wiki/Taurus_(astrology)
+	// https://fr.wikipedia.org/wiki/Taureau_(astrologie)
+	// https://en.wikipedia.org/wiki/Gemini_(astrology)
+	// https://fr.wikipedia.org/wiki/G%C3%A9meaux_(astrologie)
+	// https://en.wikipedia.org/wiki/Cancer_(astrology)
+	// https://fr.wikipedia.org/wiki/Cancer_(astrologie)
+	// https://en.wikipedia.org/wiki/Leo_(astrology)
+	// https://fr.wikipedia.org/wiki/Lion_(astrologie)
+	// https://en.wikipedia.org/wiki/Virgo_(astrology)
+	// https://fr.wikipedia.org/wiki/Vierge_(astrologie)
+	// https://en.wikipedia.org/wiki/Libra_(astrology)
+	// https://fr.wikipedia.org/wiki/Balance_(astrologie)
+	// https://en.wikipedia.org/wiki/Scorpio_(astrology)
+	// https://fr.wikipedia.org/wiki/Scorpion_(astrologie)
+	// https://en.wikipedia.org/wiki/Sagittarius_(astrology)
+	// https://fr.wikipedia.org/wiki/Sagittaire_(astrologie)
+	// https://en.wikipedia.org/wiki/Capricorn_(astrology)
+	// https://fr.wikipedia.org/wiki/Capricorne_(astrologie)
+	// https://en.wikipedia.org/wiki/Aquarius_(astrology)
+	// https://fr.wikipedia.org/wiki/Verseau_(astrologie)
+	// https://en.wikipedia.org/wiki/Pisces_(astrology)
+	// https://fr.wikipedia.org/wiki/Poissons_(astrologie)
+	// Ascension du bélier, Descension du bélier
+	// Ascension du taureau, Descension du taureau
+	// Ascension des gémeaux, Descension des gémeaux
+	// Ascension du cancer, Descension du cancer
+	// Ascension du lion, Descension du lion
+	// Ascension de la vierge, Descension de la vierge
+	// Ascension de la balance, Descension de la balance
+	// Ascension du scorpion, Descension du scorpion
+	// Ascension du sagittaire, Descension du sagittaire
+	// Ascension du capricorne, Descension du capricorne
+	// Ascension du verseau, Descension du verseau
+	// Ascension des poissons, Descension des poissons
+	t = find_date(fmt.Sprintf("%d-03-20", year))
+	print_date(t, "♈︎ Aries Rises")
+	t = find_date(fmt.Sprintf("%d-04-20", year))
+	print_date(t, "♉︎ Taurus Rises")
+	t = find_date(fmt.Sprintf("%d-05-21", year))
+	print_date(t, "♊︎ Gemini Rises")
+	t = find_date(fmt.Sprintf("%d-06-21", year))
+	print_date(t, "♋︎ Cancer Rises")
+	t = find_date(fmt.Sprintf("%d-07-23", year))
+	print_date(t, "♌︎ Leo Rises")
+	t = find_date(fmt.Sprintf("%d-08-23", year))
+	print_date(t, "♍︎ Virgo Rises")
+	t = find_date(fmt.Sprintf("%d-09-23", year))
+	print_date(t, "♎︎ Libra Rises")
+	t = find_date(fmt.Sprintf("%d-10-23", year))
+	print_date(t, "♏︎ Scorpio Rises")
+	t = find_date(fmt.Sprintf("%d-11-22", year))
+	print_date(t, "♐︎ Sagittarius Rises")
+	t = find_date(fmt.Sprintf("%d-12-22", year))
+	print_date(t, "♑︎ Capricorn Rises")
+	t = find_date(fmt.Sprintf("%d-01-20", year))
+	print_date(t, "♒︎ Aquarius Rises")
+	t = find_date(fmt.Sprintf("%d-02-18", year))
+	print_date(t, "♓︎ Pisces Rises")
+
 	// February 1st, May 1st, August 1st, November 1st
 	// March 21st, June 21st, September 21st, December 21st
 	// https://en.wikipedia.org/wiki/Wheel_of_the_Year
@@ -172,6 +236,11 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Saturnales
 	t = find_date(fmt.Sprintf("%d-12-17", year))
 	print_date(t, "Saturnalia Begins")
+
+	// December 23rd
+	// https://en.wikipedia.org/wiki/Festivus
+	t = find_date(fmt.Sprintf("%d-12-23", year))
+	print_date(t, "Festivus")
 
 	// Caturday
 	// February 17th, February 22nd, March 1st, August 8th, October 29th

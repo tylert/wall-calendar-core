@@ -60,28 +60,31 @@ def main(year):
         f'{winter(year).date()} {winter(year).time().strftime("%H:%M")} First day of Winter'
     )
 
+    #// Périhélie
+    #// Aphélie
     print(
         f'{perihelion(year).date()} {perihelion(year).time().strftime("%H:%M")} Perihelion'
-    )  # Périhélie
+    )
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H:%M")} Aphelion')
-    # Aphélie
 
     #// https://en.wikipedia.org/wiki/Friday_The_13th
     #// https://fr.wikipedia.org/wiki/Vendredi_treize
+    #// Vendredi treize
     friday = repeat_date(closest_date(FRIDAY, date(year, JANUARY, 4)))
     for week in range(1, 55):
         found = next(friday)
         if year == found.year and 13 == found.day:
-            print(f'{found} Friday the 13th')  # Vendredi treize
+            print(f'{found} Friday the 13th')
 
     #// https://en.wikipedia.org/wiki/Grandparents'_Day
     #// https://fr.wikipedia.org/wiki/F%C3%AAte_des_grands-parents
-    # XXX FIXME TODO  2nd Sunday in September or 1st Sunday after Labour Day
+    #// Fête des grands-parents (US)
+    #// Journée nationale des grands-parents (US)
+    #// XXX FIXME TODO  2nd Sunday in September or 1st Sunday after Labour Day
     # print(f'{closest_date(SUNDAY, date(year, SEPTEMBER, WEEK2))} Grandparents\' Day (US)')
     # print(f'{closest_date(MONDAY, date(year, SEPTEMBER, WEEK1)) + timedelta(days=6)} Grandparents\' Day (US)')
-    # Fête des grands-parents (US)
-    # Journée nationale des grands-parents (US)
 
+    #// https://ajuntament.barcelona.cat/calendarifestius/en/
     #// https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores
     #// https://es.wikipedia.org/wiki/Fiesta_de_San_Juan
     #// https://es.wikipedia.org/wiki/Asunci%C3%B3n_de_Mar%C3%ADa
@@ -96,6 +99,16 @@ def main(year):
     print(f'{date(year, OCTOBER, 12)} Fiesta Nacional de España (ES)')
     print(f'{date(year, NOVEMBER, 1)} Todos los Santos (ES)')
     print(f'{date(year, DECEMBER, 6)} Dia de la Constitución (ES)')
+
+    #// XXX FIXME TODO  St. Francis Day
+    #// XXX FIXME TODO  St. Nicholas Day
+    #// XXX FIXME TODO  Our Lady of Guadalupe
+    #// XXX FIXME TODO  Posadas Navidenas
+    #// XXX FIXME TODO  Holy Innocents
+    #// XXX FIXME TODO  Nativity Fast begins
+    #// XXX FIXME TODO  Feast of the Nativity
+    #// XXX FIXME TODO  Nativity of Virgin Mary
+    #// XXX FIXME TODO  Ecclesiastical year begins
 
     print(f'{date(year, FEBRUARY, 20)} {ordinal(year - 1991)} Birthday of Python')
     print(f'{date(year, MARCH, 11)} {ordinal(year - 2002)} Birthday of Arch')
@@ -120,44 +133,35 @@ def main(year):
     print(f'{date(year, NOVEMBER, 6)} {ordinal(year - 2003)} Birthday of Inkscape')
     print(f'{date(year, NOVEMBER, 21)} {ordinal(year - 1995)} Birthday of GIMP')
 
-    # XXX FIXME TODO  Do a much better job with the moon phases!!!
+    #// XXX FIXME TODO  Do a much better job with the moon phases!!!
     for month in range(1, 13):
         print(f'{new_moon(date(year, month, 16)).date()} New Moon')
         print(f'{first_moon(date(year, month, 16)).date()} First Moon')
         print(f'{full_moon(date(year, month, 16)).date()} Full Moon')
         print(f'{last_moon(date(year, month, 16)).date()} Last Moon')
 
-    #// XXX FIXME TODO  St. Francis Day
-    #// XXX FIXME TODO  St. Nicholas Day
-    #// XXX FIXME TODO  Our Lady of Guadalupe
-    #// XXX FIXME TODO  Posadas Navidenas
-    #// XXX FIXME TODO  Holy Innocents
-    #// XXX FIXME TODO  Nativity Fast begins
-    #// XXX FIXME TODO  Feast of the Nativity
-    #// XXX FIXME TODO  Nativity of Virgin Mary
-    #// XXX FIXME TODO  Ecclesiastical year begins
-
     #// https://en.wikipedia.org/wiki/Nowruz
     #// https://fr.wikipedia.org/wiki/Norouz
-    # Persian/Zoroastrian/Baha'i
-    print(f'{spring(year).date()} Nowruz')  # Norouz
+    #// Persian/Zoroastrian/Baha'i
+    #// Norouz
+    print(f'{spring(year).date()} Nowruz')
 
     #// https://en.wikipedia.org/wiki/South_and_Southeast_Asian_solar_New_Year
     #// https://en.wikipedia.org/wiki/New_Year%27s_Day#New_Year's_Days_in_other_calendars
     #// https://en.wikipedia.org/wiki/Pahela_Baishakh
     # print(f'{date(year, APRIL, 13)}')
 
-    # 10th day of the 7th month (Ashvin) on the Hindu calendar
+    #// 10th day of the 7th month (Ashvin) on the Hindu calendar
     #// https://en.wikipedia.org/wiki/Dasara
     #// https://en.wikipedia.org/wiki/Vijayadashami
     #// https://fr.wikipedia.org/wiki/Dussehra
-    # in 7th month (Ashvin) on the Hindu calendar
+    #// in 7th month (Ashvin) on the Hindu calendar
     #// https://en.wikipedia.org/wiki/Navaratri
     #// https://fr.wikipedia.org/wiki/Navratri
-    # 20 days after Vijayadashami/Dussehra/Dasara/Dasain
+    #// 20 days after Vijayadashami/Dussehra/Dasara/Dasain
     #// https://en.wikipedia.org/wiki/Diwali
     #// https://fr.wikipedia.org/wiki/Divali
-    print(f'{new_moon(date(year, OCTOBER, 16)).date() - timedelta(days=4)} Diwali')
+    # print(f'{new_moon(date(year, OCTOBER, 16)).date() - timedelta(days=4)} Diwali')
 
     #// https://en.wikipedia.org/wiki/Lunar_New_Year#Middle_East
     #// https://fr.wikipedia.org/wiki/Nouvel_An_lunaire#Calendrier_h%C3%A9bra%C3%AFque
@@ -173,52 +177,60 @@ def main(year):
     #// https://fr.wikipedia.org/wiki/S%C3%A9der_de_Pessa%27h
     #// https://en.wikipedia.org/wiki/Nisan
     #// https://fr.wikipedia.org/wiki/Nissan_(mois)
-    # Passover begins on 14 or 15 Nisan and goes until 21 or 22 Nisan
-    print(f'{heb_date(NISAN, 14, year)} Passover Begins')  # Pessa'h
+    #// Passover begins on 14 or 15 Nisan and goes until 21 or 22 Nisan
+    #// Début de Pâque des Juifs
+    #// Fin de Pâque des Juifs
+    #// Passover = Pesach = Pascha = Jewish Easter
+    #// Pessa'h
+    print(f'{heb_date(NISAN, 14, year)} Passover Begins')
     print(f'{heb_date(NISAN, 22, year)} Passover Ends')
-    # Début de Pâque des Juifs
-    # Fin de Pâque des Juifs
-    # Passover = Pesach = Pascha = Jewish Easter
 
     #// https://en.wikipedia.org/wiki/Shavuot
     #// https://fr.wikipedia.org/wiki/Chavouot
-    # Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following
-    print(f'{heb_date(SIVAN, 6, year)} Shauvot')  # Chavouot
-    # print(f'{heb_date(SIVAN, 6, year)} Shauvot Begins')  # Début de Chavouot
-    # print(f'{heb_date(SIVAN, 7, year)} Shauvot Ends')  # Fin de Chavouot
+    #// Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following
+    #// Chavouot
+    #// Début de Chavouot, Fin de Chavouot
+    print(f'{heb_date(SIVAN, 6, year)} Shauvot')
+    # print(f'{heb_date(SIVAN, 6, year)} Shauvot Begins')
+    # print(f'{heb_date(SIVAN, 7, year)} Shauvot Ends')
 
     #// https://en.wikipedia.org/wiki/Rosh_Hashanah
     #// https://fr.wikipedia.org/wiki/Roch_Hachana
     #// https://en.wikipedia.org/wiki/Tishrei
     #// https://fr.wikipedia.org/wiki/Tishri
+    #// Jewish New Year
+    #// Début de Roch Hachana, Fin de Roch Hachana
     print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah')
-    # print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah Begins')  # Début de Roch Hachana
-    # print(f'{heb_date(TISHREI, 2, year)} Rosh Hashanah Ends')  # Fin de Roch Hachana
-    # Jewish New Year
+    # print(f'{heb_date(TISHREI, 1, year)} Rosh Hashanah Begins')
+    # print(f'{heb_date(TISHREI, 2, year)} Rosh Hashanah Ends')
 
     #// https://en.wikipedia.org/wiki/Yom_Kippur
     #// https://fr.wikipedia.org/wiki/Yom_Kippour
     #// https://en.wikipedia.org/wiki/Tishrei
     #// https://fr.wikipedia.org/wiki/Tishri
-    print(f'{heb_date(TISHREI, 10, year)} Yom Kippur')  # Yom Kippour
+    #// Yom Kippour
+    print(f'{heb_date(TISHREI, 10, year)} Yom Kippur')
 
     #// https://en.wikipedia.org/wiki/Sukkot
     #// https://fr.wikipedia.org/wiki/Souccot
     #// https://en.wikipedia.org/wiki/Tishrei
     #// https://fr.wikipedia.org/wiki/Tishri
-    print(f'{heb_date(TISHREI, 15, year)} Sukkot Begins')  # Début de Souccot
-    print(f'{heb_date(TISHREI, 21, year)} Sukkot Ends')  # Fin de Souccot
-    # a.k.a. Tabernacles
+    #// a.k.a. Tabernacles
+    #// Début de Souccot, Fin de Souccot
+    print(f'{heb_date(TISHREI, 15, year)} Sukkot Begins')
+    print(f'{heb_date(TISHREI, 21, year)} Sukkot Ends')
 
     #// https://en.wikipedia.org/wiki/Hanukkah
     #// https://fr.wikipedia.org/wiki/Hanoucca
-    print(f'{heb_date(KISLEV, 25, year)} Hanukkah Begins')  # Début de Hanoucca
-    print(f'{heb_date(TEVET, 2, year)} Hanukkah Ends')  # Fin de Hanoucca
+    #// Début de Hanoucca, Fin de Hanoucca
+    print(f'{heb_date(KISLEV, 25, year)} Hanukkah Begins')
+    print(f'{heb_date(TEVET, 2, year)} Hanukkah Ends')
 
     #// https://en.wikipedia.org/wiki/Purim
     #// https://fr.wikipedia.org/wiki/Pourim
-    #   XXX FIXME TODO  What happens when the year is "short"???
-    # print(f'{heb_date(ADAR, 14, year)} Purim')  # Pourim
+    #// Pourim
+    #// XXX FIXME TODO  What happens when the year is "short"???
+    # print(f'{heb_date(ADAR, 14, year)} Purim')
 
     #// https://en.wikipedia.org/wiki/Ramadan
     #// https://fr.wikipedia.org/wiki/Ramadan

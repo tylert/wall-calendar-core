@@ -23,5 +23,5 @@ print(
 )
 
 # ---==[a]==---
-# a = date(2017, 10, 10) + timedelta(days=365 * 5) - today_date  # count down to a date five years from some other date
-# print(f'Av {a.days} days, {a.days / 7:.2f} weeks, {a.days / 30:.2f} months, {a.days / 365:.2f} years')
+a = date(2024, 4, 5) - today_date  # count down to a date
+print(f'Av {a.days} days, {a.days / 7:.2f} weeks, {a.days / 30:.2f} months, {a.days / 365:.2f} years')

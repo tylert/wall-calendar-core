@@ -51,7 +51,7 @@ func ordinal(num int, lang string) string {
 	switch lang {
 	case "en":
 		switch {
-		case num > 10 && num < 20:
+		case num > 10 && num < 14: // 11th, 12th, 13th
 			return fmt.Sprintf("%dth", num)
 		case num%10 == 1:
 			return fmt.Sprintf("%dst", num)

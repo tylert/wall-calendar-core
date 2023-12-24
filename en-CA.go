@@ -518,6 +518,7 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-02-02", year))
 	print_date(t, "Candlemas")
 
+	// March 25th
 	// https://en.wikipedia.org/wiki/Annunciation
 	// https://fr.wikipedia.org/wiki/Annonciation
 	// Annonciation

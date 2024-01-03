@@ -451,7 +451,7 @@ func englishCanada(year uint32) {
 	t = t.AddDate(0, 0, -21)
 	print_date(t, "Advent Sunday")
 
-	// December 24th, 25th, 26th
+	// December 24th, 25th, 26th, January 7th
 	// https://en.wikipedia.org/wiki/Christmastide
 	// https://fr.wikipedia.org/wiki/Temps_de_No%C3%ABl
 	// https://en.wikipedia.org/wiki/Christmas_Eve
@@ -473,6 +473,8 @@ func englishCanada(year uint32) {
 	print_date(t, "Christmas Eve")
 	t = find_date(fmt.Sprintf("%d-12-25", year))
 	print_date(t, "Christmas Day")
+	t = find_date(fmt.Sprintf("%d-01-07", year))
+	print_date(t, "Orthodox Christmas Day")
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
 		print_date(t, "Christmas Day Observed")

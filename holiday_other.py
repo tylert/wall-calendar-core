@@ -169,22 +169,6 @@ def main(year):
     #// https://fr.wikipedia.org/wiki/Nissan_(mois)
     print(f'{heb_date(NISAN, 1, year)} Aviv')
 
-    #// https://en.wikipedia.org/wiki/Passover
-    #// https://fr.wikipedia.org/wiki/Pessa%27h
-    #// https://en.wikipedia.org/wiki/Pascha
-    #// https://en.wikipedia.org/wiki/Passover_(Christian_holiday)
-    #// https://en.wikipedia.org/wiki/Passover_Seder
-    #// https://fr.wikipedia.org/wiki/S%C3%A9der_de_Pessa%27h
-    #// https://en.wikipedia.org/wiki/Nisan
-    #// https://fr.wikipedia.org/wiki/Nissan_(mois)
-    #// Passover begins on 14 or 15 Nisan and goes until 21 or 22 Nisan
-    #// Début de Pâque des Juifs
-    #// Fin de Pâque des Juifs
-    #// Passover = Pesach = Pascha = Jewish Easter
-    #// Pessa'h
-    print(f'{heb_date(NISAN, 14, year)} Passover Begins')
-    print(f'{heb_date(NISAN, 22, year)} Passover Ends')
-
     #// https://en.wikipedia.org/wiki/Shavuot
     #// https://fr.wikipedia.org/wiki/Chavouot
     #// Shauvot or Pentecost is 6 and 7 Sivan or the Sunday following

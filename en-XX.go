@@ -73,9 +73,8 @@ func englishOther(year uint32) {
 	// Lundi de Pâques
 	// Ascension
 	// Pentecôte
-	// XXX FIXME TODO  Palm Sunday Orthodox???
-	month, day := Gregorian(int(year))
-	easter := find_date(fmt.Sprintf("%d-%02d-%02d", year, month, day))
+	monthG, dayG := Gregorian(int(year))
+	easter := find_date(fmt.Sprintf("%d-%02d-%02d", year, monthG, dayG))
 	t = easter.AddDate(0, 0, -63)
 	print_date(t, "Septuagesima Sunday") // "70th", 3rd Sunday before Lent (9th before Easter)
 	t = easter.AddDate(0, 0, -56)
@@ -115,6 +114,24 @@ func englishOther(year uint32) {
 	print_date(t, "Trinity Sunday")
 	t = easter.AddDate(0, 0, 60)
 	print_date(t, "Corpus Christi")
+	// Passover begins on 14 or 15 Nisan and goes until 21 or 22 Nisan
+	// https://en.wikipedia.org/wiki/Passover
+	// https://fr.wikipedia.org/wiki/Pessa%27h
+	// https://en.wikipedia.org/wiki/Pascha
+	// https://en.wikipedia.org/wiki/Passover_(Christian_holiday)
+	// https://en.wikipedia.org/wiki/Passover_Seder
+	// https://fr.wikipedia.org/wiki/S%C3%A9der_de_Pessa%27h
+	// https://en.wikipedia.org/wiki/Nisan
+	// https://fr.wikipedia.org/wiki/Nissan_(mois)
+	// Début de Pâque des Juifs, Fin de Pâque des Juifs
+	// Passover = Pesach = Pascha = Jewish Easter
+	// Pessa'h
+	// XXX FIXME TODO  Palm Sunday Orthodox???
+	monthJ, dayJ := Julian(int(year))
+	pascha := find_date(fmt.Sprintf("%d-%02d-%02d", year, monthJ, dayJ))
+	print_date(pascha, "Passover")
+	//t = pascha.AddDate(0, 0, 8)
+	//print_date(t, "Orthodox Easter Sunday")
 
 	// 2nd Sunday in May
 	// exactly 3 weeks before Easter Sunday (4th Sunday of Lent)

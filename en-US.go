@@ -8,6 +8,10 @@ import (
 func englishUnitedStates(year uint32) {
 	var t time.Time
 
+	// US  United States of America/Les États-Unis d'Amérique
+	// https://en.wikipedia.org/wiki/ISO_3166-2:US
+	// https://fr.wikipedia.org/wiki/ISO_3166-2:US
+
 	// 3rd Monday in January
 	// https://en.wikipedia.org/wiki/Martin_Luther_King_Jr._Day
 	// https://fr.wikipedia.org/wiki/Martin_Luther_King_Day

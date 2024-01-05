@@ -31,32 +31,15 @@ Golang
 
 ::
 
-    AU     Australia/Australie
-    BD     Bangladesh/Bangladesh
-    CA-AB  Canada - Alberta
-    CA-BC  Canada - British Columbia/Colombie-Britannique
-    CA-MB  Canada - Manitoba
-    CA-NB  Canada - New Brunswick/Nouveau Brunswick
-    CA-NL  Canada - Newfoundland and Labrador/Terre-Neuve-et-Labrador
-    CA-NS  Canada - Nova Scotia/Nouvelle-Écosse
-    CA-NT  Canada - Northwest Territories/Territoires du Nord-Ouest
-    CA-NU  Canada - Nunavut/ᓄᓇᕗᑦ
-    CA-ON  Canada - Ontario
-    CA-PE  Canada - Prince Edward Island/Île-du-Prince-Édouard
-    CA-QC  Canada - Quebec/Québec
-    CA-SK  Canada - Saskatchewan
-    CA-YT  Canada - Yukon
-    JP     Japan/Japon
-    NZ     New Zealand/Nouvelle-Zélande
-    UK     United Kingdom of Great Britain and Northern Ireland/Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
-    UN     United Nations/Les Nations Unies
-    US     United States of America/Les États-Unis d'Amérique
+    BD  Bangladesh/Bangladesh
+    JP  Japan/Japon
+    NZ  New Zealand/Nouvelle-Zélande
+    UN  United Nations/Les Nations Unies
 
 
 Links
 -----
 
-* https://en.wikipedia.org/wiki/ISO_3166-2:CA
 * https://en.wikipedia.org/wiki/ISO_3166-2:ES
 * https://ilyabirman.net/forebruary/
 * https://elf.org/moons/index.html  beautiful moon calendars

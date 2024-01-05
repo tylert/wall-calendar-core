@@ -8,6 +8,21 @@ import (
 func englishCanada(year uint32) {
 	var t time.Time
 
+	// CA-AB  Canada - Alberta
+	// CA-BC  Canada - British Columbia/Colombie-Britannique
+	// CA-MB  Canada - Manitoba
+	// CA-NB  Canada - New Brunswick/Nouveau Brunswick
+	// CA-NL  Canada - Newfoundland and Labrador/Terre-Neuve-et-Labrador
+	// CA-NS  Canada - Nova Scotia/Nouvelle-Écosse
+	// CA-NT  Canada - Northwest Territories/Territoires du Nord-Ouest
+	// CA-NU  Canada - Nunavut/ᓄᓇᕗᑦ
+	// CA-ON  Canada - Ontario
+	// CA-PE  Canada - Prince Edward Island/Île-du-Prince-Édouard
+	// CA-QC  Canada - Quebec/Québec
+	// CA-SK  Canada - Saskatchewan
+	// CA-YT  Canada - Yukon
+	// https://en.wikipedia.org/wiki/ISO_3166-2:CA
+	// https://fr.wikipedia.org/wiki/ISO_3166-2:CA
 	// https://en.wikipedia.org/wiki/Public_holidays_in_Canada
 	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 	// https://en.wikipedia.org/wiki/Lists_of_holidays
@@ -136,14 +151,14 @@ func englishCanada(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-11-04", year), uint32(time.Sunday))
 	print_date(t, "02:00 DST Ends (CA, US)")
 	t = find_nearby_date(fmt.Sprintf("%d-03-31", year), uint32(time.Sunday))
-	print_date(t, "01:00Z DST Begins (EU, UK)")
+	print_date(t, "01:00Z DST Begins (EU, GB)")
 	t = find_nearby_date(fmt.Sprintf("%d-10-31", year), uint32(time.Sunday))
-	print_date(t, "01:00Z DST Ends (EU, UK)")
+	print_date(t, "01:00Z DST Ends (EU, GB)")
 
 	// 1st Friday in March
 	// https://en.wikipedia.org/wiki/Employee_Appreciation_Day
 	t = find_nearby_date(fmt.Sprintf("%d-03-04", year), uint32(time.Friday))
-	print_date(t, "Employee Appreciation Day (AU, CA, IN, SG, US, UK)")
+	print_date(t, "Employee Appreciation Day (AU, CA, GB, IN, SG, US)")
 
 	// 2nd Monday in March
 	// https://en.wikipedia.org/wiki/Commonwealth_Day
@@ -406,13 +421,13 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/Jour_de_l%27Armistice
 	// https://en.wikipedia.org/wiki/Merchant_Navy_(United_Kingdom)
 	// Jour du Souvenir
-	// Jour de l'Armistice (CA-NL, UK)
+	// Jour de l'Armistice (CA-NL, GB)
 	// Journée des anciens combattants (US)
 	// Merchant Navy Rememberance Day
 	// Jour de la marine marchande
 	t = find_date(fmt.Sprintf("%d-11-11", year))
 	print_date(t, "Rememberance Day")
-	print_date(t, "Armistice Day (CA-NL, UK)")
+	print_date(t, "Armistice Day (CA-NL, GB)")
 	print_date(t, "Veterans Day (US)")
 	t = find_date(fmt.Sprintf("%d-09-03", year))
 	print_date(t, "Merchant Navy Day")

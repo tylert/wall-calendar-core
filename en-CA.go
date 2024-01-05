@@ -8,19 +8,20 @@ import (
 func englishCanada(year uint32) {
 	var t time.Time
 
-	// CA-AB  Canada - Alberta
-	// CA-BC  Canada - British Columbia/Colombie-Britannique
-	// CA-MB  Canada - Manitoba
-	// CA-NB  Canada - New Brunswick/Nouveau Brunswick
-	// CA-NL  Canada - Newfoundland and Labrador/Terre-Neuve-et-Labrador
-	// CA-NS  Canada - Nova Scotia/Nouvelle-Écosse
-	// CA-NT  Canada - Northwest Territories/Territoires du Nord-Ouest
-	// CA-NU  Canada - Nunavut/ᓄᓇᕗᑦ
-	// CA-ON  Canada - Ontario
-	// CA-PE  Canada - Prince Edward Island/Île-du-Prince-Édouard
-	// CA-QC  Canada - Quebec/Québec
-	// CA-SK  Canada - Saskatchewan
-	// CA-YT  Canada - Yukon
+	// CA     Canada
+	// CA-AB  Alberta
+	// CA-BC  British Columbia/Colombie-Britannique
+	// CA-MB  Manitoba
+	// CA-NB  New Brunswick/Nouveau Brunswick
+	// CA-NL  Newfoundland and Labrador/Terre-Neuve-et-Labrador
+	// CA-NS  Nova Scotia/Nouvelle-Écosse
+	// CA-NT  Northwest Territories/Territoires du Nord-Ouest
+	// CA-NU  Nunavut/ᓄᓇᕗᑦ
+	// CA-ON  Ontario
+	// CA-PE  Prince Edward Island/Île-du-Prince-Édouard
+	// CA-QC  Quebec/Québec
+	// CA-SK  Saskatchewan
+	// CA-YT  Yukon
 	// https://en.wikipedia.org/wiki/ISO_3166-2:CA
 	// https://fr.wikipedia.org/wiki/ISO_3166-2:CA
 	// https://en.wikipedia.org/wiki/Public_holidays_in_Canada
@@ -298,8 +299,7 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%d-07-12", year))
 	print_date(t, "Orangemen's Day (CA-NL)")
 
-	// begins on the 2nd last Sunday of July
-	// ends 2 weeks later
+	// begins on the 2nd last Sunday of July and ends 2 weeks later
 	// https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
 	// https://fr.wikipedia.org/wiki/Vacances_de_la_construction
 	// https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances

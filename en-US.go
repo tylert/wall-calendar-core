@@ -48,9 +48,7 @@ func englishUnitedStates(year uint32) {
 	t = find_date(fmt.Sprintf("%d-05-05", year))
 	print_date(t, "Cinco de Mayo (US)")
 
-	// 2nd Saturday in May
-	// 3rd Saturday in May
-	// last Monday in May
+	// 2nd Saturday in May, 3rd Saturday in May, last Monday in May
 	// https://en.wikipedia.org/wiki/Armed_Forces_Day
 	// https://fr.wikipedia.org/wiki/Jour_des_forces_arm%C3%A9es
 	// https://en.wikipedia.org/wiki/Memorial_Day

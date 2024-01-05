@@ -324,6 +324,36 @@ func englishOther(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%d-09-18", year), uint32(time.Saturday))
 	print_date(t, "Software Freedom Day")
 
+	// February 20th, 1991
+	// https://en.wikipedia.org/wiki/Python_(programming_language)
+	// https://fr.wikipedia.org/wiki/Python_(langage)
+	t = find_date(fmt.Sprintf("%d-02-20", year))
+	print_date(t, fmt.Sprintf("%s Birthday of Python", ordinal(int(year-1991), "en")))
+
+	// September 17th, 1991
+	// https://en.wikipedia.org/wiki/Linux
+	// https://fr.wikipedia.org/wiki/Linux
+	t = find_date(fmt.Sprintf("%d-09-17", year))
+	print_date(t, fmt.Sprintf("%s Birthday of Linux", ordinal(int(year-1991), "en")))
+
+	// July 17th, 1993
+	// https://en.wikipedia.org/wiki/Slackware
+	// https://fr.wikipedia.org/wiki/Slackware
+	t = find_date(fmt.Sprintf("%d-07-17", year))
+	print_date(t, fmt.Sprintf("%s Birthday of Slackware", ordinal(int(year-1993), "en")))
+
+	// September 15th, 1993
+	// https://en.wikipedia.org/wiki/Debian
+	// https://fr.wikipedia.org/wiki/Debian
+	t = find_date(fmt.Sprintf("%d-09-15", year))
+	print_date(t, fmt.Sprintf("%s Birthday of Debian", ordinal(int(year-1993), "en")))
+
+	// March 11th, 2002
+	// https://en.wikipedia.org/wiki/Arch_Linux
+	// https://fr.wikipedia.org/wiki/Arch_Linux
+	t = find_date(fmt.Sprintf("%d-03-11", year))
+	print_date(t, fmt.Sprintf("%s Birthday of Arch Linux", ordinal(int(year-2002), "en")))
+
 	// April 7, 2005
 	// https://en.wikipedia.org/wiki/Git
 	// https://fr.wikipedia.org/wiki/Git

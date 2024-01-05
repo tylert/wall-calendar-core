@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func englishUnitedKingdom(year uint32) {
+func englishGreatBritain(year uint32) {
 	var t time.Time
 
 	// GB      United Kingdom of Great Britain and Northern Ireland/Royaume-Uni de Grande-Bretagne et d'Irlande du Nord

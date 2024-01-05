@@ -32,7 +32,7 @@ func main() {
 	}
 
 	englishCanada(u32)
-	englishUnitedKingdom(u32)
+	englishGreatBritain(u32)
 	englishUnitedStates(u32)
 	englishAustralia(u32)
 	englishOther(u32)

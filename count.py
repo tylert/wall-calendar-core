@@ -23,7 +23,7 @@ print(
 # v=10000;w=.1;x=1.1;y=1;z=.5;print(((v*.5*w*x)+(v*.5*w*x*y))*z)
 
 # ---==[k]==---
-k = date(2024, 2, 16) - today_date  # count down to a date
+k = date(2024, 2, 29) - today_date  # count down to a date
 print(f'Kv {k.days * 5/7:.2f} workdays, {k.days} days, {k.days / 7:.2f} weeks, {k.days / 30:.2f} months, {k.days / 365:.2f} years')
 
 # ---==[a]==---

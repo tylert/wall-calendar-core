@@ -27,7 +27,7 @@ k = date(2024, 2, 29) - today_date  # count down to a date
 print(f'Kv {k.days} days, {k.days / 7:.2f} weeks, {k.days / 30:.2f} months, {k.days / 365:.2f} years')
 
 d2 = date(2024, 2, 29)
-daygenerator = (today_date + timedelta(x + 1) for x in range((d2 - today_date).days)) # generate all days from d1 to d2
+daygenerator = (today_date + timedelta(x + 1) for x in range((d2 - today_date).days))
 print(f'   {sum(1 for day in daygenerator if day.weekday() < 5)} weekdays')
 
 # ---==[a]==---
@@ -35,5 +35,5 @@ a = date(2024, 4, 5) - today_date  # count down to a date
 print(f'Av {a.days} days, {a.days / 7:.2f} weeks, {a.days / 30:.2f} months, {a.days / 365:.2f} years')
 
 d2 = date(2024, 4, 5)
-daygenerator = (today_date + timedelta(x + 1) for x in range((d2 - today_date).days)) # generate all days from d1 to d2
+daygenerator = (today_date + timedelta(x + 1) for x in range((d2 - today_date).days))
 print(f'   {sum(1 for day in daygenerator if day.weekday() < 5)} weekdays')

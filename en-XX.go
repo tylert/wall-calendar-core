@@ -57,9 +57,9 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/F%C3%AAte-Dieu
 	// https://en.wikipedia.org/wiki/Carnival
 	// https://fr.wikipedia.org/wiki/Carnaval
-	// https://www.timeanddate.com/holidays/common/carnival-wednesday
-	// https://www.timeanddate.com/holidays/common/whit-sunday
-	// https://www.timeanddate.com/holidays/common/whit-monday
+	// https://timeanddate.com/holidays/common/carnival-wednesday
+	// https://timeanddate.com/holidays/common/whit-sunday
+	// https://timeanddate.com/holidays/common/whit-monday
 	// Pascua (ES) = Easter
 	// Mardi Gras
 	// Mercredi des Cendres
@@ -426,9 +426,9 @@ func englishOther(year uint32) {
 	print_date(t, "World Radio Day")
 
 	// April 18th
-	// https://www.iaru.org/on-the-air/world-amateur-radio-day
-	// https://www.rac.ca/operating/world-amateur-radio-day-april-18
-	// https://www.arrl.org/world-amateur-radio-day
+	// https://iaru.org/on-the-air/world-amateur-radio-day
+	// https://rac.ca/operating/world-amateur-radio-day-april-18
+	// https://arrl.org/world-amateur-radio-day
 	// Journée de la radio amateur
 	t = find_date(fmt.Sprintf("%d-04-18", year))
 	print_date(t, "World Amateur Radio Day")

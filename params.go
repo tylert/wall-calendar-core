@@ -37,7 +37,7 @@ func init() {
 	}
 
 	// FlagSet for sub-commands???
-	// https://www.digitalocean.com/community/tutorials/how-to-use-the-flag-package-in-go
+	// https://digitalocean.com/community/tutorials/how-to-use-the-flag-package-in-go
 
 	// Attempt to gracefully load things from a known config file location
 	// cfg := ini.Empty()

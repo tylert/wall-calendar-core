@@ -47,10 +47,10 @@ func englishCanada(year uint32) {
 	}
 
 	// January 17th
-	// https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days.html
-	// https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives.html
-	// https://www.canada.ca/en/canadian-heritage/news/2022/01/statement-by-minister-hussen-on-raoul-wallenberg-day.html
-	// https://www.canada.ca/fr/patrimoine-canadien/nouvelles/2022/01/declaration-du-ministrehussen-a-loccasion-de-la-journee-raoulwallenberg.html
+	// https://canada.ca/en/canadian-heritage/services/important-commemorative-days.html
+	// https://canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives.html
+	// https://canada.ca/en/canadian-heritage/news/2022/01/statement-by-minister-hussen-on-raoul-wallenberg-day.html
+	// https://canada.ca/fr/patrimoine-canadien/nouvelles/2022/01/declaration-du-ministrehussen-a-loccasion-de-la-journee-raoulwallenberg.html
 	// https://en.wikipedia.org/wiki/Raoul_Wallenberg
 	// https://fr.wikipedia.org/wiki/Raoul_Wallenberg
 	// Journée Raoul Wallenberg
@@ -220,8 +220,8 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/Haut-Canada
 	// https://en.wikipedia.org/wiki/Constitutional_history_of_Canada
 	// https://fr.wikipedia.org/wiki/Histoire_constitutionnelle_du_Canada
-	// https://www.ontario.ca/laws/statute/97u42
-	// https://www.ontario.ca/fr/lois/loi/97u42
+	// https://ontario.ca/laws/statute/97u42
+	// https://ontario.ca/fr/lois/loi/97u42
 	t = find_date(fmt.Sprintf("%d-06-19", year))
 	print_date(t, "Loyalist Day (CA-ON)")
 
@@ -229,8 +229,8 @@ func englishCanada(year uint32) {
 	// https://en.wikipedia.org/wiki/National_Aboriginal_Day
 	// https://en.wikipedia.org/wiki/National_Indigenous_Peoples_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_des_peuples_autochtones
-	// https://www.canada.ca/en/canadian-heritage/campaigns/indigenous-peoples-day.html
-	// https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-peuples-autochtones.html
+	// https://canada.ca/en/canadian-heritage/campaigns/indigenous-peoples-day.html
+	// https://canada.ca/fr/patrimoine-canadien/campagnes/journee-peuples-autochtones.html
 	// Journée nationale des peuples autochtones (CA)
 	// National Aboriginal Day (CA)
 	// Journée nationale des Autochthones (CA)
@@ -262,8 +262,8 @@ func englishCanada(year uint32) {
 
 	// June 27th
 	// https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
-	// https://www.canada.ca/en/canadian-heritage/campaigns/multiculturalism-day.html
-	// https://www.canada.ca/fr/patrimoine-canadien/campagnes/journee-multiculturalisme.html
+	// https://canada.ca/en/canadian-heritage/campaigns/multiculturalism-day.html
+	// https://canada.ca/fr/patrimoine-canadien/campagnes/journee-multiculturalisme.html
 	// Journée canadienne du multiculturalisme
 	t = find_date(fmt.Sprintf("%d-06-27", year))
 	print_date(t, "Canadian Multiculturalism Day")
@@ -302,8 +302,8 @@ func englishCanada(year uint32) {
 	// begins on the 2nd last Sunday of July and ends 2 weeks later
 	// https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
 	// https://fr.wikipedia.org/wiki/Vacances_de_la_construction
-	// https://www.ccq.org/en/avantages-sociaux/dates-conges-vacances
-	// https://www.ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
+	// https://ccq.org/en/avantages-sociaux/dates-conges-vacances
+	// https://ccq.org/fr-CA/avantages-sociaux/dates-conges-vacances
 	// Début des vacances de la construction (CA-QC)
 	// Fin des vacances de la construction (CA-QC)
 	t = find_nearby_date(fmt.Sprintf("%d-07-31", year), uint32(time.Sunday))
@@ -362,7 +362,7 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 	// https://en.wikipedia.org/wiki/Orange_Shirt_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_de_la_v%C3%A9rit%C3%A9_et_de_la_r%C3%A9conciliation
-	// https://www.orangeshirtday.org/
+	// https://orangeshirtday.org/
 	// Journée de la vérité et de la réconciliation (CA)
 	// Orange Shirt Day (CA)
 	// Journée du chandail orange (CA)
@@ -435,8 +435,8 @@ func englishCanada(year uint32) {
 	// December 11th, 1931
 	// https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
 	// https://fr.wikipedia.org/wiki/Statut_de_Westminster_de_1931
-	// https://www.canada.ca/en/canadian-heritage/services/important-commemorative-days/anniversary-statute-westminster.html
-	// https://www.canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives/anniversaire-statut-westminster.html
+	// https://canada.ca/en/canadian-heritage/services/important-commemorative-days/anniversary-statute-westminster.html
+	// https://canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives/anniversaire-statut-westminster.html
 	// Anniversaire du Statut de Westminster
 	t = find_date(fmt.Sprintf("%d-12-11", year))
 	print_date(t, fmt.Sprintf("%s Anniversary of the Statute of Westminster", ordinal(int(year-1931), "en")))

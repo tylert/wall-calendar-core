@@ -474,9 +474,9 @@ func englishOther(year uint32) {
 	// https://en.wikipedia.org/wiki/Apollo_17
 	// https://fr.wikipedia.org/wiki/Apollo_17
 	t = find_date(fmt.Sprintf("%d-07-20", year))
-	print_date(t, fmt.Sprintf("%s Anniversary of first lunar landing", ordinal(int(year-1969), "en")))
+	print_date(t, fmt.Sprintf("%s Anniversary of Apollo 11 lunar landing", ordinal(int(year-1969), "en")))
 	t = find_date(fmt.Sprintf("%d-12-11", year))
-	print_date(t, fmt.Sprintf("%s Anniversary of last lunar landing", ordinal(int(year-1972), "en")))
+	print_date(t, fmt.Sprintf("%s Anniversary of Apollo 17 lunar landing", ordinal(int(year-1972), "en")))
 
 	// August 7th, 2027
 	// October 26th, 2028

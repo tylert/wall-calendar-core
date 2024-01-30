@@ -348,11 +348,23 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-09-15", year))
 	print_date(t, fmt.Sprintf("%s Birthday of Debian", ordinal(int(year-1993), "en")))
 
+	// June 2nd, 1998
+	// https://en.wikipedia.org/wiki/GIMP
+	// https://fr.wikipedia.org/wiki/GIMP
+	t = find_date(fmt.Sprintf("%d-06-02", year))
+	print_date(t, fmt.Sprintf("%s Birthday of GIMP", ordinal(int(year-1998), "en")))
+
 	// March 11th, 2002
 	// https://en.wikipedia.org/wiki/Arch_Linux
 	// https://fr.wikipedia.org/wiki/Arch_Linux
 	t = find_date(fmt.Sprintf("%d-03-11", year))
 	print_date(t, fmt.Sprintf("%s Birthday of Arch Linux", ordinal(int(year-2002), "en")))
+
+	// November 6th, 2003
+	// https://en.wikipedia.org/wiki/Inkscape
+	// https://fr.wikipedia.org/wiki/Inkscape
+	t = find_date(fmt.Sprintf("%d-11-06", year))
+	print_date(t, fmt.Sprintf("%s Birthday of Inkscape", ordinal(int(year-2003), "en")))
 
 	// January 1st, 2004
 	// https://en.wikipedia.org/wiki/OpenWrt
@@ -366,11 +378,23 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-04-07", year))
 	print_date(t, fmt.Sprintf("%s Birthday of Git", ordinal(int(year-2005), "en")))
 
+	// February 19th, 2010
+	// https://en.wikipedia.org/wiki/OpenSCAD
+	// https://fr.wikipedia.org/wiki/OpenSCAD
+	t = find_date(fmt.Sprintf("%d-02-19", year))
+	print_date(t, fmt.Sprintf("%s Birthday of OpenSCAD", ordinal(int(year-2010), "en")))
+
 	// January 25th, 2011
 	// https://en.wikipedia.org/wiki/LibreOffice
 	// https://fr.wikipedia.org/wiki/LibreOffice
 	t = find_date(fmt.Sprintf("%d-01-25", year))
-	print_date(t, fmt.Sprintf("%s Birthday of LibreOffice", ordinal(int(year-2010), "en")))
+	print_date(t, fmt.Sprintf("%s Birthday of LibreOffice", ordinal(int(year-2011), "en")))
+
+	// December 15th, 2011
+	// https://en.wikipedia.org/wiki/LibreCAD
+	// https://fr.wikipedia.org/wiki/LibreCAD
+	t = find_date(fmt.Sprintf("%d-12-15", year))
+	print_date(t, fmt.Sprintf("%s Birthday of LibreCAD", ordinal(int(year-2011), "en")))
 
 	// September 19th
 	// https://en.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day

@@ -255,6 +255,17 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-12-23", year))
 	print_date(t, "Festivus")
 
+	// https://en.wikipedia.org/wiki/Friday_The_13th
+	// https://fr.wikipedia.org/wiki/Vendredi_treize
+	// Vendredi treize
+	t = find_nearby_date(fmt.Sprintf("%d-01-04", year), uint32(time.Friday))
+	for i := 0; i < 51; i++ {
+		t = t.AddDate(0, 0, 7)
+		if 13 == t.Day() {
+			print_date(t, "Friday the 13th")
+		}
+	}
+
 	// Caturday
 	// February 17th, February 22nd, March 1st, August 8th, October 29th
 	// https://en.wikipedia.org/wiki/International_Cat_Day

@@ -67,15 +67,6 @@ def main(year):
     )
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H:%M")} Aphelion')
 
-    #// https://en.wikipedia.org/wiki/Friday_The_13th
-    #// https://fr.wikipedia.org/wiki/Vendredi_treize
-    #// Vendredi treize
-    friday = repeat_date(closest_date(FRIDAY, date(year, JANUARY, 4)))
-    for week in range(1, 55):
-        found = next(friday)
-        if year == found.year and 13 == found.day:
-            print(f'{found} Friday the 13th')
-
     #// https://en.wikipedia.org/wiki/Grandparents'_Day
     #// https://fr.wikipedia.org/wiki/F%C3%AAte_des_grands-parents
     #// Fête des grands-parents (US)

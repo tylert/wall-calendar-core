@@ -20,6 +20,8 @@ else:
 print(
     f'bv {b.days} days, {b.days / 7:.2f} weeks, {b.days / 30:.2f} months, {b.days / 365:.2f} years'
 )
+daygen = (t + timedelta(x + 1) for x in range(b.days))
+print(f'   {sum(1 for x in daygen if x.weekday() < 5)} weekdays')
 # v=10000;w=.1;x=1.1;y=1;z=.5;print(((v*.5*w*x)+(v*.5*w*x*y))*z)
 
 # ---==[f]==---

@@ -60,3 +60,4 @@ Links
 * https://github.com/nibdo/bloben-app  source for bloben CalDAV client
 * https://endler.dev/2022/zerocal/  just the event, please!
 * https://github.com/vacanza/python-holidays
+* https://www.futilitycloset.com/2024/05/24/day-tripper  calculate weekday number for any date

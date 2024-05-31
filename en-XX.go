@@ -360,6 +360,7 @@ func englishOther(year uint32) {
 	print_date(t, fmt.Sprintf("%s Birthday of Debian", ordinal(int(year-1993), "en")))
 
 	// June 2nd, 1998
+	// https://www.gimp.org/about/history.html
 	// https://en.wikipedia.org/wiki/GIMP
 	// https://fr.wikipedia.org/wiki/GIMP
 	t = find_date(fmt.Sprintf("%d-06-02", year))
@@ -388,6 +389,13 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Git
 	t = find_date(fmt.Sprintf("%d-04-07", year))
 	print_date(t, fmt.Sprintf("%s Birthday of Git", ordinal(int(year-2005), "en")))
+
+	// June 7, 2005
+	// https://krita.org/en/posts/2024/krita-25-years
+	// https://en.wikipedia.org/wiki/Krita
+	// https://fr.wikipedia.org/wiki/Krita
+	t = find_date(fmt.Sprintf("%d-06-07", year))
+	print_date(t, fmt.Sprintf("%s Birthday of Krita", ordinal(int(year-2005), "en")))
 
 	// November 10th, 2009
 	// https://en.wikipedia.org/wiki/Go_(programming_language)

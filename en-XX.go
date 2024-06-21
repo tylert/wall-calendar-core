@@ -503,7 +503,7 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Spoutnik_1
 	// Anniversaire du lancement de Spoutnik 1
 	t = find_date(fmt.Sprintf("%d-10-04", year))
-	print_date(t, fmt.Sprintf("%s Anniversary of launch of Sputnik 1", ordinal(int(year-1957), "en")))
+	print_date(t, fmt.Sprintf("%s Anniversary of Sputnik 1 launch", ordinal(int(year-1957), "en")))
 
 	// July 20th, 1969
 	// December 11th, 1972
@@ -515,6 +515,13 @@ func englishOther(year uint32) {
 	print_date(t, fmt.Sprintf("%s Anniversary of Apollo 11 lunar landing", ordinal(int(year-1969), "en")))
 	t = find_date(fmt.Sprintf("%d-12-11", year))
 	print_date(t, fmt.Sprintf("%s Anniversary of Apollo 17 lunar landing", ordinal(int(year-1972), "en")))
+
+	// April 25th, 1990
+	// https://en.wikipedia.org/wiki/Hubble_Space_Telescope
+	// https://fr.wikipedia.org/wiki/Hubble_(t%C3%A9lescope_spatial)
+	// Anniversaire du lancement de Hubble
+	t = find_date(fmt.Sprintf("%d-04-25", year))
+	print_date(t, fmt.Sprintf("%s Anniversary of Hubble launch", ordinal(int(year-1990), "en")))
 
 	// August 7th, 2027
 	// October 26th, 2028

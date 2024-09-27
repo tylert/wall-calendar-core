@@ -328,6 +328,12 @@ func englishOther(year uint32) {
 	}
 	print_date(t, "Day of the Programmer 256th day")
 
+	// 3rd Tuesday in September
+	// https://npw.payroll.ca
+	// https://www.dayforce.com/ca/blog/how-to-celebrate-national-payroll-week
+	t = find_nearby_date(fmt.Sprintf("%d-09-18", year), uint32(time.Tuesday))
+	print_date(t, "National Day of Recognition for Payroll Professionals")
+
 	// 3rd Saturday in September
 	// https://en.wikipedia.org/wiki/Software_Freedom_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_logiciel_libre

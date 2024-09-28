@@ -103,6 +103,23 @@ func englishCanada(year uint32) {
 	t = t.AddDate(0, 0, -2)
 	print_date(t, "Heritage Day (CA-YT)")
 
+	// 2nd or 3rd Monday in March
+	// https://ontario.ca/page/school-year-calendars
+	// https://en.wikipedia.org/wiki/Spring_break
+	// https://fr.wikipedia.org/wiki/Semaine_de_rel%C3%A2che
+	// March Break
+	// Spring Break
+	// Congé de mars
+	// Congé de printemps
+	// Semaine de relâche
+	t = find_date(fmt.Sprintf("%d-03-01", year))
+	if t.Weekday() == time.Sunday || t.Weekday() == time.Monday {
+		t = find_nearby_date(fmt.Sprintf("%d-03-18", year), uint32(time.Monday))
+	} else {
+		t = find_nearby_date(fmt.Sprintf("%d-03-11", year), uint32(time.Monday))
+	}
+	print_date(t, "March Break Begins (CA-ON)")
+
 	// the Monday nearest March 17th
 	// the Monday nearest April 23rd
 	// https://en.wikipedia.org/wiki/Saint_David%27s_Day

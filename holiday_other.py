@@ -18,14 +18,6 @@ from paper_cal import *
 def main(year):
     ''' '''
 
-    #// https://en.wikipedia.org/wiki/Spring_break
-    #// https://fr.wikipedia.org/wiki/Semaine_de_rel%C3%A2che
-    #// March Break
-    #// Spring Break
-    #// Congé de mars
-    #// Congé de printemps
-    #// Semaine de relâche
-
     #// https://en.wikipedia.org/wiki/March_equinox
     #// https://fr.wikipedia.org/wiki/%C3%89quinoxe_de_mars
     #// https://en.wikipedia.org/wiki/June_solstice

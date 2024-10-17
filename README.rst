@@ -61,3 +61,6 @@ Links
 * https://endler.dev/2022/zerocal/  just the event, please!
 * https://github.com/vacanza/python-holidays
 * https://www.futilitycloset.com/2024/05/24/day-tripper  calculate weekday number for any date
+* https://typst.app/universe/package/cineca
+* https://github.com/HPDell/typst-cineca
+* https://forum.typst.app/t/how-to-split-a-list-of-calendar-entries-by-month/824

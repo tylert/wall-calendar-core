@@ -63,4 +63,5 @@ Links
 * https://www.futilitycloset.com/2024/05/24/day-tripper  calculate weekday number for any date
 * https://typst.app/universe/package/cineca
 * https://github.com/HPDell/typst-cineca
+* https://github.com/extua/october
 * https://forum.typst.app/t/how-to-split-a-list-of-calendar-entries-by-month/824

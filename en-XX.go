@@ -403,6 +403,12 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-01-01", year))
 	print_date(t, fmt.Sprintf("%s Birthday of OpenWRT", ordinal(int(year-2004), "en")))
 
+	// October 20th, 2004
+	// https://en.wikipedia.org/wiki/Ubuntu
+	// https://fr.wikipedia.org/wiki/Ubuntu_(syst%C3%A8me_d%27exploitation)
+	t = find_date(fmt.Sprintf("%d-10-20", year))
+	print_date(t, fmt.Sprintf("%s Birthday of Ubuntu", ordinal(int(year-2004), "en")))
+
 	// April 7, 2005
 	// https://en.wikipedia.org/wiki/Git
 	// https://fr.wikipedia.org/wiki/Git

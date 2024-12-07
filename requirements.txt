@@ -1,8 +1,5 @@
 click==8.1.7
 pyluach==2.2.0
 PyMeeus==0.5.12
-python-dateutil==2.9.0.post0
-setuptools==75.1.0
-six==1.16.0
-vobject==0.9.7
-wheel==0.44.0
+setuptools==75.6.0
+wheel==0.45.1

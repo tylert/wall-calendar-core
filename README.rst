@@ -29,13 +29,6 @@ Golang
 * https://github.com/floAr/calendargo  example of building calendars using gg
 * https://github.com/fogleman/gg  2d drawings
 
-::
-
-    BD  Bangladesh/Bangladesh
-    JP  Japan/Japon
-    NZ  New Zealand/Nouvelle-Zélande
-    UN  United Nations/Les Nations Unies
-
 
 Links
 -----

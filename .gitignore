@@ -1,5 +1,6 @@
 .DS_Store
 .*.sw?
+en-ZZ.go
 *.py[coz]
 __pycache__/
 .venv/

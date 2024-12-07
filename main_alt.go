@@ -36,7 +36,5 @@ func main() {
 	englishUnitedStates(u32)
 	englishAustralia(u32)
 	englishOther(u32)
-
-	// Need to build with "alt" tag
 	englishPersonal(u32)
 }

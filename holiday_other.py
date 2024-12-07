@@ -98,7 +98,6 @@ def main(year):
     print(f'{date(year, MARCH, 21)} {ordinal(year - 1993)} Birthday of NetBSD')
     print(f'{date(year, APRIL, 16)} {ordinal(year - 1971)} Birthday of FTP')
     print(f'{date(year, MAY, 22)} {ordinal(year - 1973)} Birthday of Ethernet')
-    print(f'{date(year, JUNE, 1)} {ordinal(year - 1969)} Birthday of Unix')
     print(f'{date(year, JUNE, 19)} {ordinal(year - 1984)} Birthday of X-Windows')
     print(f'{date(year, JUNE, 19)} {ordinal(year - 1993)} Birthday of FreeBSD')
     print(f'{date(year, JUNE, 7)} {ordinal(year - 2014)} Birthday of Kubernetes')
@@ -106,8 +105,7 @@ def main(year):
     print(f'{date(year, AUGUST, 15)} {ordinal(year - 1997)} Birthday of GNOME')
     print(f'{date(year, SEPTEMBER, 27)} {ordinal(year - 1983)} Birthday of GNU')
     print(f'{date(year, OCTOBER, 18)} {ordinal(year - 1995)} Birthday of OpenBSD')
-    print(f'{date(year, OCTOBER, 19)} {ordinal(year - 2009)} Birthday of Alpine')
-    print(f'{date(year, OCTOBER, 20)} {ordinal(year - 2004)} Birthday of Ubuntu')
+    print(f'{date(year, OCTOBER, 19)} {ordinal(year - 2009)} Birthday of Alpine')  # or 2005-08-23???
 
     #// XXX FIXME TODO  Do a much better job with the moon phases!!!
     for month in range(1, 13):

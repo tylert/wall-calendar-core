@@ -366,6 +366,12 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-09-17", year))
 	print_date(t, fmt.Sprintf("%s Birthday of Linux", ordinal(int(year-1991), "en")))
 
+	// April 19th, 1993
+	// https://en.wikipedia.org/wiki/NetBSD
+	// https://fr.wikipedia.org/wiki/NetBSD
+	t = find_date(fmt.Sprintf("%d-04-19", year))
+	print_date(t, fmt.Sprintf("%s Birthday of NetBSD", ordinal(int(year-1993), "en")))
+
 	// July 17th, 1993
 	// https://en.wikipedia.org/wiki/Slackware
 	// https://fr.wikipedia.org/wiki/Slackware
@@ -377,6 +383,18 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Debian
 	t = find_date(fmt.Sprintf("%d-09-15", year))
 	print_date(t, fmt.Sprintf("%s Birthday of Debian", ordinal(int(year-1993), "en")))
+
+	// November 1st, 1993
+	// https://en.wikipedia.org/wiki/FreeBSD
+	// https://fr.wikipedia.org/wiki/FreeBSD
+	t = find_date(fmt.Sprintf("%d-11-01", year))
+	print_date(t, fmt.Sprintf("%s Birthday of FreeBSD", ordinal(int(year-1993), "en")))
+
+	// October 18th, 1995
+	// https://en.wikipedia.org/wiki/OpenBSD
+	// https://fr.wikipedia.org/wiki/OpenBSD
+	t = find_date(fmt.Sprintf("%d-10-18", year))
+	print_date(t, fmt.Sprintf("%s Birthday of OpenBSD", ordinal(int(year-1995), "en")))
 
 	// June 2nd, 1998
 	// https://www.gimp.org/about/history.html

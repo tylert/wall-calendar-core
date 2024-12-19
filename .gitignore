@@ -1,5 +1,6 @@
 .DS_Store
 .*.sw?
+*.pdf
 en-ZZ.go
 *.py[coz]
 __pycache__/

@@ -13,7 +13,7 @@
   fill: gray,
 )
 
-// Wednesday start, non-leap year
+// Wednesday start, not a leap year
 = 2025/31/42/53
 #grid(
   columns: 7,
@@ -35,7 +35,7 @@
   ..range(1, 3+1).map(str), // padding
 )
 
-// Thursday start, non-leap year
+// Thursday start, not a leap year
 = 2026/37/43/54
 #grid(
   columns: 7,
@@ -57,7 +57,7 @@
   ..range(1, 2+1).map(str), // padding
 )
 
-// Friday start, non-leap year
+// Friday start, not a leap year
 = 2027/38/49/55
 #grid(
   columns: 7,
@@ -101,7 +101,7 @@
   [30/31]
 )
 
-// Monday start, non-leap year
+// Monday start, not a leap year
 = 2029/35/46/57
 #grid(
   columns: 7,
@@ -123,7 +123,7 @@
   ..range(1, 5+1).map(str), // padding
 )
 
-// Tuesday start, non-leap year
+// Tuesday start, not a leap year
 = 2030/41/47/58
 #grid(
   columns: 7,
@@ -167,7 +167,7 @@
   ..range(1, 1+1).map(str), // padding
 )
 
-// Saturday start, non-leap year
+// Saturday start, not a leap year
 = 2033/39/50
 #grid(
   columns: 7,
@@ -188,7 +188,7 @@
   text(stroke: black)[1],..range(2, 31+1).map(str), // DEC
 )
 
-// Sunday start, non-leap year
+// Sunday start, not a leap year
 = 2034/45/51
 #grid(
   columns: 7,

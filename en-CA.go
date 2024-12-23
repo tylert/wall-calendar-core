@@ -273,9 +273,11 @@ func englishCanada(year uint32) {
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
 		print_date(t, "Saint-Jean-Baptiste Day Observed")
-	} // else if t.Weekday() == time.Saturday {
-	// XXX FIXME TODO  The rules are vague about what happens if this is on a Saturday
-	// }
+	} else if t.Weekday() == time.Saturday {
+		// XXX FIXME TODO  The rules are vague about what happens if this is on a Saturday
+		t = t.AddDate(0, 0, 2)
+		print_date(t, "Saint-Jean-Baptiste Day Observed")
+	}
 
 	// June 27th
 	// https://en.wikipedia.org/wiki/Multiculturalism_in_Canada
@@ -505,8 +507,6 @@ func englishCanada(year uint32) {
 	print_date(t, "Christmas Eve")
 	t = find_date(fmt.Sprintf("%d-12-25", year))
 	print_date(t, "Christmas Day")
-	t = find_date(fmt.Sprintf("%d-01-07", year))
-	print_date(t, "Orthodox Christmas Day")
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
 		print_date(t, "Christmas Day Observed")
@@ -514,6 +514,8 @@ func englishCanada(year uint32) {
 		t = t.AddDate(0, 0, 2)
 		print_date(t, "Christmas Day Observed")
 	}
+	t = find_date(fmt.Sprintf("%d-01-07", year))
+	print_date(t, "Orthodox Christmas Day")
 	t = find_date(fmt.Sprintf("%d-12-26", year))
 	print_date(t, "St. Stephen's Day")
 	print_date(t, "Boxing Day")

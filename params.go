@@ -7,6 +7,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 	//"gopkg.in/ini.v1"
 )
 
@@ -23,10 +24,13 @@ func init() {
 		uYear    = "Year for which to build calendar"
 	)
 
+	// The current year as a string
+	cy := strconv.FormatUint(uint64(time.Now().Year()), 10)
+
 	flag.BoolVar(&aVersion, "version", FromEnvP("FOO_VERSION", false).(bool), uVersion)
 	flag.BoolVar(&aVersion, "v", FromEnvP("FOO_VERSION", false).(bool), uVersion)
-	flag.StringVar(&aYear, "year", FromEnvP("FOO_YEAR", "2024").(string), uYear)
-	flag.StringVar(&aYear, "y", FromEnvP("FOO_YEAR", "2024").(string), uYear)
+	flag.StringVar(&aYear, "year", FromEnvP("FOO_YEAR", cy).(string), uYear)
+	flag.StringVar(&aYear, "y", FromEnvP("FOO_YEAR", cy).(string), uYear)
 
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage of %s:\n", os.Args[0])

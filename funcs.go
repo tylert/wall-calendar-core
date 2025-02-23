@@ -8,6 +8,13 @@ import (
 // Sun = 0, Mon = 1, Tue = 2, Wed = 3, Thu = 4, Fri = 5, Sat = 6
 // 1st = 4, 2nd = 11, 3rd = 18, 4th = 25, 5th/last = 31/30/29/28
 
+const (
+	Month1st int = 4
+	Month2nd     = 11
+	Month3rd     = 18
+	Month4th     = 25
+)
+
 func closest(nearby time.Time, desired uint32) time.Time {
 	// Find out how many days to shift over to find the desired weekday
 	offset := -(int(nearby.Weekday()) - (int(desired) % 7))

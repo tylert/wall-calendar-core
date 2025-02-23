@@ -137,14 +137,14 @@ func englishOther(year uint32) {
 	// https://en.wikipedia.org/wiki/Mother's_Day
 	// https://fr.wikipedia.org/wiki/F%C3%AAte_des_M%C3%A8res
 	// Fête des mères
-	t = find_nearby_date(fmt.Sprintf("%d-05-11", year), uint32(time.Sunday))
+	t = find_nearby_date(fmt.Sprintf("%d-%02d-%02d", year, time.May, Month2nd), uint32(time.Sunday))
 	print_date(t, "Mother's Day")
 
 	// 3rd Sunday in June
 	// https://en.wikipedia.org/wiki/Father's_Day
 	// https://fr.wikipedia.org/wiki/F%C3%AAte_des_P%C3%A8res
 	// Fête des pères
-	t = find_nearby_date(fmt.Sprintf("%d-06-18", year), uint32(time.Sunday))
+	t = find_nearby_date(fmt.Sprintf("%d-%02d-%02d", year, time.June, Month3rd), uint32(time.Sunday))
 	print_date(t, "Father's Day")
 
 	// March 20st, April 20th, May 21st, June 21st
@@ -186,29 +186,29 @@ func englishOther(year uint32) {
 	// Ascension du capricorne, Descension du capricorne
 	// Ascension du verseau, Descension du verseau
 	// Ascension des poissons, Descension des poissons
-	t = find_date(fmt.Sprintf("%d-03-20", year))
+	t = find_date(fmt.Sprintf("%d-%02d-20", year, time.March))
 	print_date(t, "♈︎ Aries Rises")
-	t = find_date(fmt.Sprintf("%d-04-20", year))
+	t = find_date(fmt.Sprintf("%d-%02d-20", year, time.April))
 	print_date(t, "♉︎ Taurus Rises")
-	t = find_date(fmt.Sprintf("%d-05-21", year))
+	t = find_date(fmt.Sprintf("%d-%02d-21", year, time.May))
 	print_date(t, "♊︎ Gemini Rises")
-	t = find_date(fmt.Sprintf("%d-06-21", year))
+	t = find_date(fmt.Sprintf("%d-%02d-21", year, time.June))
 	print_date(t, "♋︎ Cancer Rises")
-	t = find_date(fmt.Sprintf("%d-07-23", year))
+	t = find_date(fmt.Sprintf("%d-%02d-23", year, time.July))
 	print_date(t, "♌︎ Leo Rises")
-	t = find_date(fmt.Sprintf("%d-08-23", year))
+	t = find_date(fmt.Sprintf("%d-%02d-23", year, time.August))
 	print_date(t, "♍︎ Virgo Rises")
-	t = find_date(fmt.Sprintf("%d-09-23", year))
+	t = find_date(fmt.Sprintf("%d-%02d-23", year, time.September))
 	print_date(t, "♎︎ Libra Rises")
-	t = find_date(fmt.Sprintf("%d-10-23", year))
+	t = find_date(fmt.Sprintf("%d-%02d-23", year, time.October))
 	print_date(t, "♏︎ Scorpio Rises")
-	t = find_date(fmt.Sprintf("%d-11-22", year))
+	t = find_date(fmt.Sprintf("%d-%02d-22", year, time.November))
 	print_date(t, "♐︎ Sagittarius Rises")
-	t = find_date(fmt.Sprintf("%d-12-22", year))
+	t = find_date(fmt.Sprintf("%d-%02d-22", year, time.December))
 	print_date(t, "♑︎ Capricorn Rises")
-	t = find_date(fmt.Sprintf("%d-01-20", year))
+	t = find_date(fmt.Sprintf("%d-%02d-20", year, time.January))
 	print_date(t, "♒︎ Aquarius Rises")
-	t = find_date(fmt.Sprintf("%d-02-18", year))
+	t = find_date(fmt.Sprintf("%d-%02d-18", year, time.February))
 	print_date(t, "♓︎ Pisces Rises")
 
 	// February 1st, May 1st, August 1st, November 1st
@@ -227,38 +227,38 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Samain_(mythologie)
 	// https://en.wikipedia.org/wiki/Yule
 	// https://fr.wikipedia.org/wiki/Yule
-	t = find_date(fmt.Sprintf("%d-02-01", year))
+	t = find_date(fmt.Sprintf("%d-%02d-01", year, time.February))
 	print_date(t, "Imbolc")
-	t = find_date(fmt.Sprintf("%d-03-21", year))
+	t = find_date(fmt.Sprintf("%d-%02d-21", year, time.March))
 	print_date(t, "Ostara")
-	t = find_date(fmt.Sprintf("%d-05-01", year))
+	t = find_date(fmt.Sprintf("%d-%02d-01", year, time.May))
 	print_date(t, "Beltane")
-	t = find_date(fmt.Sprintf("%d-06-21", year))
+	t = find_date(fmt.Sprintf("%d-%02d-21", year, time.June))
 	print_date(t, "Litha")
-	t = find_date(fmt.Sprintf("%d-08-01", year))
+	t = find_date(fmt.Sprintf("%d-%02d-01", year, time.August))
 	print_date(t, "Lughnasadh")
-	t = find_date(fmt.Sprintf("%d-09-21", year))
+	t = find_date(fmt.Sprintf("%d-%02d-21", year, time.September))
 	print_date(t, "Mabon")
-	t = find_date(fmt.Sprintf("%d-11-01", year))
+	t = find_date(fmt.Sprintf("%d-%02d-01", year, time.November))
 	print_date(t, "Samhain")
-	t = find_date(fmt.Sprintf("%d-12-21", year))
+	t = find_date(fmt.Sprintf("%d-%02d-21", year, time.December))
 	print_date(t, "Yule")
 
 	// December 17th to 23rd
 	// https://en.wikipedia.org/wiki/Saturnalia
 	// https://fr.wikipedia.org/wiki/Saturnales
-	t = find_date(fmt.Sprintf("%d-12-17", year))
+	t = find_date(fmt.Sprintf("%d-%02d-17", year, time.December))
 	print_date(t, "Saturnalia Begins")
 
 	// December 23rd
 	// https://en.wikipedia.org/wiki/Festivus
-	t = find_date(fmt.Sprintf("%d-12-23", year))
+	t = find_date(fmt.Sprintf("%d-%02d-23", year, time.December))
 	print_date(t, "Festivus")
 
 	// https://en.wikipedia.org/wiki/Friday_The_13th
 	// https://fr.wikipedia.org/wiki/Vendredi_treize
 	// Vendredi treize
-	t = find_nearby_date(fmt.Sprintf("%d-01-04", year), uint32(time.Friday))
+	t = find_nearby_date(fmt.Sprintf("%d-%02d-%02d", year, time.January, Month1st), uint32(time.Friday))
 	for i := 0; i < 51; i++ {
 		t = t.AddDate(0, 0, 7)
 		if 13 == t.Day() {
@@ -272,25 +272,25 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_du_chat
 	// https://en.wikipedia.org/wiki/National_Cat_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_du_chat
-	t = find_date(fmt.Sprintf("%d-02-17", year))
+	t = find_date(fmt.Sprintf("%d-%02d-17", year, time.February))
 	print_date(t, "National Cat Day (BR, IT)")
-	t = find_date(fmt.Sprintf("%d-02-22", year))
+	t = find_date(fmt.Sprintf("%d-%02d-22", year, time.February))
 	print_date(t, "National Cat Day (JP)")
-	t = find_date(fmt.Sprintf("%d-03-01", year))
+	t = find_date(fmt.Sprintf("%d-%02d-01", year, time.March))
 	print_date(t, "National Cat Day (RU)")
-	t = find_date(fmt.Sprintf("%d-08-08", year))
+	t = find_date(fmt.Sprintf("%d-%02d-08", year, time.August))
 	print_date(t, "International Cat Day")
 	print_date(t, "National Cat Day (CA)")
-	t = find_date(fmt.Sprintf("%d-10-29", year))
+	t = find_date(fmt.Sprintf("%d-%02d-29", year, time.October))
 	print_date(t, "National Cat Day (US)")
 
 	// February 29, 2012
 	// https://en.wikipedia.org/wiki/Raspberry_Pi
 	// https://fr.wikipedia.org/wiki/Raspberry_Pi
 	if is_leap(year) {
-		t = find_date(fmt.Sprintf("%d-02-29", year))
+		t = find_date(fmt.Sprintf("%d-%02d-29", year, time.February))
 	} else {
-		t = find_date(fmt.Sprintf("%d-02-28", year))
+		t = find_date(fmt.Sprintf("%d-%02d-28", year, time.February))
 	}
 	print_date(t, fmt.Sprintf("%s Birthday of Raspberry Pi", ordinal(int(year-2012), "en")))
 
@@ -311,9 +311,9 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%d-07-22", year))
 	print_date(t, "Pi Approximation Day 22/7")
 	if is_leap(year) {
-		t = find_date(fmt.Sprintf("%d-11-09", year))
+		t = find_date(fmt.Sprintf("%d-%02d-09", year, time.November))
 	} else {
-		t = find_date(fmt.Sprintf("%d-11-10", year))
+		t = find_date(fmt.Sprintf("%d-%02d-10", year, time.November))
 	}
 	print_date(t, "Pi Approximation Day 314th day")
 
@@ -322,175 +322,175 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_des_programmeurs
 	// Jour du programmeur 256e jour
 	if is_leap(year) {
-		t = find_date(fmt.Sprintf("%d-09-12", year))
+		t = find_date(fmt.Sprintf("%d-%02d-12", year, time.September))
 	} else {
-		t = find_date(fmt.Sprintf("%d-09-13", year))
+		t = find_date(fmt.Sprintf("%d-%02d-13", year, time.September))
 	}
 	print_date(t, "Day of the Programmer 256th day")
 
 	// 3rd Tuesday in September
 	// https://npw.payroll.ca
 	// https://www.dayforce.com/ca/blog/how-to-celebrate-national-payroll-week
-	t = find_nearby_date(fmt.Sprintf("%d-09-18", year), uint32(time.Tuesday))
+	t = find_nearby_date(fmt.Sprintf("%d-%02d-%02d", year, time.September, Month3rd), uint32(time.Tuesday))
 	print_date(t, "National Day of Recognition for Payroll Professionals")
 
 	// 3rd Saturday in September
 	// https://en.wikipedia.org/wiki/Software_Freedom_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_logiciel_libre
 	// Journée de la liberté des logiciels
-	t = find_nearby_date(fmt.Sprintf("%d-09-18", year), uint32(time.Saturday))
+	t = find_nearby_date(fmt.Sprintf("%d-%02d-%02d", year, time.September, Month3rd), uint32(time.Saturday))
 	print_date(t, "Software Freedom Day")
 
 	// January 1st, 1970
 	// https://en.wikipedia.org/wiki/Unix
 	// https://fr.wikipedia.org/wiki/Unix
 	// https://en.wikipedia.org/wiki/History_of_Unix
-	t = find_date(fmt.Sprintf("%d-01-01", year))
+	t = find_date(fmt.Sprintf("%d-%02d-01", year, time.January))
 	print_date(t, fmt.Sprintf("%s Birthday of Unix", ordinal(int(year-1970), "en")))
 
 	// June 1st, 1974
 	// https://en.wikipedia.org/wiki/Diff
 	// https://fr.wikipedia.org/wiki/Diff
-	t = find_date(fmt.Sprintf("%d-06-01", year))
+	t = find_date(fmt.Sprintf("%d-%02d-01", year, time.June))
 	print_date(t, fmt.Sprintf("%s Birthday of Diff", ordinal(int(year-1974), "en")))
 
 	// February 20th, 1991
 	// https://en.wikipedia.org/wiki/Python_(programming_language)
 	// https://fr.wikipedia.org/wiki/Python_(langage)
-	t = find_date(fmt.Sprintf("%d-02-20", year))
+	t = find_date(fmt.Sprintf("%d-%02d-20", year, time.February))
 	print_date(t, fmt.Sprintf("%s Birthday of Python", ordinal(int(year-1991), "en")))
 
 	// September 17th, 1991
 	// https://en.wikipedia.org/wiki/Linux
 	// https://fr.wikipedia.org/wiki/Linux
-	t = find_date(fmt.Sprintf("%d-09-17", year))
+	t = find_date(fmt.Sprintf("%d-%02d-17", year, time.September))
 	print_date(t, fmt.Sprintf("%s Birthday of Linux", ordinal(int(year-1991), "en")))
 
 	// April 19th, 1993
 	// https://en.wikipedia.org/wiki/NetBSD
 	// https://fr.wikipedia.org/wiki/NetBSD
-	t = find_date(fmt.Sprintf("%d-04-19", year))
+	t = find_date(fmt.Sprintf("%d-%02d-19", year, time.April))
 	print_date(t, fmt.Sprintf("%s Birthday of NetBSD", ordinal(int(year-1993), "en")))
 
 	// July 17th, 1993
 	// https://en.wikipedia.org/wiki/Slackware
 	// https://fr.wikipedia.org/wiki/Slackware
-	t = find_date(fmt.Sprintf("%d-07-17", year))
+	t = find_date(fmt.Sprintf("%d-%02d-17", year, time.July))
 	print_date(t, fmt.Sprintf("%s Birthday of Slackware", ordinal(int(year-1993), "en")))
 
 	// September 15th, 1993
 	// https://en.wikipedia.org/wiki/Debian
 	// https://fr.wikipedia.org/wiki/Debian
-	t = find_date(fmt.Sprintf("%d-09-15", year))
+	t = find_date(fmt.Sprintf("%d-%02d-15", year, time.September))
 	print_date(t, fmt.Sprintf("%s Birthday of Debian", ordinal(int(year-1993), "en")))
 
 	// November 1st, 1993
 	// https://en.wikipedia.org/wiki/FreeBSD
 	// https://fr.wikipedia.org/wiki/FreeBSD
-	t = find_date(fmt.Sprintf("%d-11-01", year))
+	t = find_date(fmt.Sprintf("%d-%02d-01", year, time.November))
 	print_date(t, fmt.Sprintf("%s Birthday of FreeBSD", ordinal(int(year-1993), "en")))
 
 	// October 18th, 1995
 	// https://en.wikipedia.org/wiki/OpenBSD
 	// https://fr.wikipedia.org/wiki/OpenBSD
-	t = find_date(fmt.Sprintf("%d-10-18", year))
+	t = find_date(fmt.Sprintf("%d-%02d-18", year, time.October))
 	print_date(t, fmt.Sprintf("%s Birthday of OpenBSD", ordinal(int(year-1995), "en")))
 
 	// June 2nd, 1998
 	// https://www.gimp.org/about/history.html
 	// https://en.wikipedia.org/wiki/GIMP
 	// https://fr.wikipedia.org/wiki/GIMP
-	t = find_date(fmt.Sprintf("%d-06-02", year))
+	t = find_date(fmt.Sprintf("%d-%02d-02", year, time.June))
 	print_date(t, fmt.Sprintf("%s Birthday of GIMP", ordinal(int(year-1998), "en")))
 
 	// March 11th, 2002
 	// https://en.wikipedia.org/wiki/Arch_Linux
 	// https://fr.wikipedia.org/wiki/Arch_Linux
-	t = find_date(fmt.Sprintf("%d-03-11", year))
+	t = find_date(fmt.Sprintf("%d-%02d-11", year, time.March))
 	print_date(t, fmt.Sprintf("%s Birthday of Arch Linux", ordinal(int(year-2002), "en")))
 
 	// November 6th, 2003
 	// https://en.wikipedia.org/wiki/Inkscape
 	// https://fr.wikipedia.org/wiki/Inkscape
-	t = find_date(fmt.Sprintf("%d-11-06", year))
+	t = find_date(fmt.Sprintf("%d-%02d-06", year, time.November))
 	print_date(t, fmt.Sprintf("%s Birthday of Inkscape", ordinal(int(year-2003), "en")))
 
 	// January 1st, 2004
 	// https://en.wikipedia.org/wiki/OpenWrt
 	// https://fr.wikipedia.org/wiki/OpenWrt
-	t = find_date(fmt.Sprintf("%d-01-01", year))
+	t = find_date(fmt.Sprintf("%d-%02d-01", year, time.January))
 	print_date(t, fmt.Sprintf("%s Birthday of OpenWRT", ordinal(int(year-2004), "en")))
 
 	// October 20th, 2004
 	// https://en.wikipedia.org/wiki/Ubuntu
 	// https://fr.wikipedia.org/wiki/Ubuntu_(syst%C3%A8me_d%27exploitation)
-	t = find_date(fmt.Sprintf("%d-10-20", year))
+	t = find_date(fmt.Sprintf("%d-%02d-20", year, time.October))
 	print_date(t, fmt.Sprintf("%s Birthday of Ubuntu", ordinal(int(year-2004), "en")))
 
 	// April 7, 2005
 	// https://en.wikipedia.org/wiki/Git
 	// https://fr.wikipedia.org/wiki/Git
-	t = find_date(fmt.Sprintf("%d-04-07", year))
+	t = find_date(fmt.Sprintf("%d-%02d-07", year, time.April))
 	print_date(t, fmt.Sprintf("%s Birthday of Git", ordinal(int(year-2005), "en")))
 
 	// June 7, 2005
 	// https://krita.org/en/posts/2024/krita-25-years
 	// https://en.wikipedia.org/wiki/Krita
 	// https://fr.wikipedia.org/wiki/Krita
-	t = find_date(fmt.Sprintf("%d-06-07", year))
+	t = find_date(fmt.Sprintf("%d-%02d-07", year, time.June))
 	print_date(t, fmt.Sprintf("%s Birthday of Krita", ordinal(int(year-2005), "en")))
 
 	// November 10th, 2009
 	// https://en.wikipedia.org/wiki/Go_(programming_language)
 	// https://fr.wikipedia.org/wiki/Go_(langage)
-	t = find_date(fmt.Sprintf("%d-11-10", year))
+	t = find_date(fmt.Sprintf("%d-%02d-10", year, time.November))
 	print_date(t, fmt.Sprintf("%s Birthday of Golang", ordinal(int(year-2009), "en")))
 
 	// February 19th, 2010
 	// https://en.wikipedia.org/wiki/OpenSCAD
 	// https://fr.wikipedia.org/wiki/OpenSCAD
-	t = find_date(fmt.Sprintf("%d-02-19", year))
+	t = find_date(fmt.Sprintf("%d-%02d-19", year, time.February))
 	print_date(t, fmt.Sprintf("%s Birthday of OpenSCAD", ordinal(int(year-2010), "en")))
 
 	// January 25th, 2011
 	// https://en.wikipedia.org/wiki/LibreOffice
 	// https://fr.wikipedia.org/wiki/LibreOffice
-	t = find_date(fmt.Sprintf("%d-01-25", year))
+	t = find_date(fmt.Sprintf("%d-%02d-25", year, time.January))
 	print_date(t, fmt.Sprintf("%s Birthday of LibreOffice", ordinal(int(year-2011), "en")))
 
 	// December 15th, 2011
 	// https://en.wikipedia.org/wiki/LibreCAD
 	// https://fr.wikipedia.org/wiki/LibreCAD
-	t = find_date(fmt.Sprintf("%d-12-15", year))
+	t = find_date(fmt.Sprintf("%d-%02d-15", year, time.December))
 	print_date(t, fmt.Sprintf("%s Birthday of LibreCAD", ordinal(int(year-2011), "en")))
 
 	// September 19th
 	// https://en.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day
 	// https://fr.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day
-	t = find_date(fmt.Sprintf("%d-09-19", year))
+	t = find_date(fmt.Sprintf("%d-%02d-19", year, time.September))
 	print_date(t, "International Talk Like a Pirate Day")
 
 	// August 13th
 	// https://en.wikipedia.org/wiki/International_Lefthanders_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_gauchers
 	// Journée internationale des gauchers
-	t = find_date(fmt.Sprintf("%d-08-13", year))
+	t = find_date(fmt.Sprintf("%d-%02d-13", year, time.August))
 	print_date(t, "Left-Handers' Day")
 
 	// June 28th, October 22nd
 	// https://en.wikipedia.org/wiki/Caps_lock#International_Caps_Lock_Day
 	// https://fr.wikipedia.org/wiki/Touche_de_verrouillage_des_majuscules
 	// JOURNÉE INTERNATIONALE DU VERROUILLAGE DES MAJUSCULES
-	t = find_date(fmt.Sprintf("%d-06-28", year))
+	t = find_date(fmt.Sprintf("%d-%02d-28", year, time.June))
 	print_date(t, "INTERNATIONAL CAPS LOCK DAY")
-	t = find_date(fmt.Sprintf("%d-10-22", year))
+	t = find_date(fmt.Sprintf("%d-%02d-22", year, time.October))
 	print_date(t, "INTERNATIONAL CAPS LOCK DAY")
 
 	// February 13th
 	// https://en.wikipedia.org/wiki/World_Radio_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_mondiale_de_la_radio
 	// Journée mondiale de la radio
-	t = find_date(fmt.Sprintf("%d-02-13", year))
+	t = find_date(fmt.Sprintf("%d-%02d-13", year, time.February))
 	print_date(t, "World Radio Day")
 
 	// April 18th
@@ -498,26 +498,26 @@ func englishOther(year uint32) {
 	// https://rac.ca/operating/world-amateur-radio-day-april-18
 	// https://arrl.org/world-amateur-radio-day
 	// Journée de la radio amateur
-	t = find_date(fmt.Sprintf("%d-04-18", year))
+	t = find_date(fmt.Sprintf("%d-%02d-18", year, time.April))
 	print_date(t, "World Amateur Radio Day")
 
 	// November 27, 1923
 	// https://en.wikipedia.org/wiki/History_of_amateur_radio
-	t = find_date(fmt.Sprintf("%d-11-27", year))
+	t = find_date(fmt.Sprintf("%d-%02d-27", year, time.November))
 	print_date(t, fmt.Sprintf("%s Anniversary of first transatlantic two-way ham contact", ordinal(int(year-1923), "en")))
 
 	// February 12th (February 12th, 1809)
 	// https://en.wikipedia.org/wiki/Darwin_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_Darwin
 	// Journée de Darwin
-	t = find_date(fmt.Sprintf("%d-02-12", year))
+	t = find_date(fmt.Sprintf("%d-%02d-12", year, time.February))
 	print_date(t, "Darwin Day")
 
 	// July 10th
 	// https://en.wikipedia.org/wiki/Nikola_Tesla
 	// https://fr.wikipedia.org/wiki/Nikola_Tesla
 	// https://nikolatesladay.com/
-	t = find_date(fmt.Sprintf("%d-07-10", year))
+	t = find_date(fmt.Sprintf("%d-%02d-10", year, time.July))
 	print_date(t, "Nikola Tesla Day")
 
 	// 2nd Tuesday of October
@@ -525,14 +525,14 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Ada_Lovelace_Day
 	// https://findingada.com/about/when-is-ald
 	// Journée de Ada Lovelace
-	t = find_nearby_date(fmt.Sprintf("%d-10-11", year), uint32(time.Tuesday))
+	t = find_nearby_date(fmt.Sprintf("%d-%02d-%02d", year, time.October, Month2nd), uint32(time.Tuesday))
 	print_date(t, "Ada Lovelace Day")
 
 	// October 4th, 1957
 	// https://en.wikipedia.org/wiki/Sputnik_1
 	// https://fr.wikipedia.org/wiki/Spoutnik_1
 	// Anniversaire du lancement de Spoutnik 1
-	t = find_date(fmt.Sprintf("%d-10-04", year))
+	t = find_date(fmt.Sprintf("%d-%02d-04", year, time.October))
 	print_date(t, fmt.Sprintf("%s Anniversary of Sputnik 1 launch", ordinal(int(year-1957), "en")))
 
 	// July 20th, 1969
@@ -541,16 +541,16 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Apollo_11
 	// https://en.wikipedia.org/wiki/Apollo_17
 	// https://fr.wikipedia.org/wiki/Apollo_17
-	t = find_date(fmt.Sprintf("%d-07-20", year))
+	t = find_date(fmt.Sprintf("%d-%02d-20", year, time.July))
 	print_date(t, fmt.Sprintf("%s Anniversary of Apollo 11 lunar landing", ordinal(int(year-1969), "en")))
-	t = find_date(fmt.Sprintf("%d-12-11", year))
+	t = find_date(fmt.Sprintf("%d-%02d-11", year, time.December))
 	print_date(t, fmt.Sprintf("%s Anniversary of Apollo 17 lunar landing", ordinal(int(year-1972), "en")))
 
 	// April 25th, 1990
 	// https://en.wikipedia.org/wiki/Hubble_Space_Telescope
 	// https://fr.wikipedia.org/wiki/Hubble_(t%C3%A9lescope_spatial)
 	// Anniversaire du lancement de Hubble
-	t = find_date(fmt.Sprintf("%d-04-25", year))
+	t = find_date(fmt.Sprintf("%d-%02d-25", year, time.April))
 	print_date(t, fmt.Sprintf("%s Anniversary of Hubble launch", ordinal(int(year-1990), "en")))
 
 	// August 7th, 2027

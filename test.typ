@@ -7,6 +7,7 @@
     right: 1cm,
   ),
 )
+
 #set text(
   10pt,
   font: "DejaVu Sans Mono",

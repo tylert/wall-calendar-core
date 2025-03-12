@@ -28,6 +28,7 @@ Golang
 * https://github.com/yamadayuki/go-calendar
 * https://github.com/floAr/calendargo  example of building calendars using gg
 * https://github.com/fogleman/gg  2d drawings
+* https://github.com/jbreckmckye/daylight  network-based sunset/sunrise times
 
 
 Links

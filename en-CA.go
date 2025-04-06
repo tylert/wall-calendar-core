@@ -376,6 +376,14 @@ func englishCanada(year uint32) {
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.September, Month1st), uint32(time.Monday))
 	print_date(t, "Labour Day")
 
+	// 2nd Sunday in September
+	// https://en.wikipedia.org/wiki/Grandparents'_Day
+	// https://fr.wikipedia.org/wiki/F%C3%AAte_des_grands-parents
+	// Fête des grands-parents
+	// Journée nationale des grands-parents
+	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.September, Month2nd), uint32(time.Sunday))
+	print_date(t, "Grandparent's Day (CA)")
+
 	// September 30th
 	// https://en.wikipedia.org/wiki/Public_holidays_in_Canada
 	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada

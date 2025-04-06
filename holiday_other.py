@@ -59,15 +59,7 @@ def main(year):
     )
     print(f'{aphelion(year).date()} {aphelion(year).time().strftime("%H:%M")} Aphelion')
 
-    #// https://en.wikipedia.org/wiki/Grandparents'_Day
-    #// https://fr.wikipedia.org/wiki/F%C3%AAte_des_grands-parents
-    #// Fête des grands-parents (US)
-    #// Journée nationale des grands-parents (US)
-    #// XXX FIXME TODO  2nd Sunday in September or 1st Sunday after Labour Day
-    # print(f'{closest_date(SUNDAY, date(year, SEPTEMBER, WEEK2))} Grandparents\' Day (US)')
-    # print(f'{closest_date(MONDAY, date(year, SEPTEMBER, WEEK1)) + timedelta(days=6)} Grandparents\' Day (US)')
-
-    #// https://ajuntament.barcelona.cat/calendarifestius/en/
+    #// https://ajuntament.barcelona.cat/calendarifestius/en
     #// https://es.wikipedia.org/wiki/D%C3%ADa_Internacional_de_los_Trabajadores
     #// https://es.wikipedia.org/wiki/Fiesta_de_San_Juan
     #// https://es.wikipedia.org/wiki/Asunci%C3%B3n_de_Mar%C3%ADa

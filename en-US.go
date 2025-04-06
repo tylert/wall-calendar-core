@@ -81,6 +81,15 @@ func englishUnitedStates(year uint32) {
 	t = find_date(fmt.Sprintf("%04d-%02d-04", year, time.July))
 	print_date(t, "Independence Day (US)")
 
+	// 1st Sunday after the 1st Monday of September
+	// https://en.wikipedia.org/wiki/Grandparents'_Day
+	// https://fr.wikipedia.org/wiki/F%C3%AAte_des_grands-parents
+	// Fête des grands-parents
+	// Journée nationale des grands-parents
+	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.September, Month1st), uint32(time.Monday))
+	t = t.AddDate(0, 0, 6)
+	print_date(t, "Grandparent's Day (US)")
+
 	// 2nd Monday in October
 	// https://en.wikipedia.org/wiki/Columbus_Day
 	// https://fr.wikipedia.org/wiki/Jour_de_Christophe_Colomb

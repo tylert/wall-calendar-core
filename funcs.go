@@ -47,7 +47,7 @@ func find_nearby_date(date string, desired uint32) time.Time {
 }
 
 func print_date(whatzit time.Time, label string) {
-	fmt.Println(fmt.Sprintf("%d-%02d-%02d  [%s]  %s", whatzit.Year(), whatzit.Month(), whatzit.Day(), whatzit.Weekday(), label))
+	fmt.Println(fmt.Sprintf("%04d-%02d-%02d  [%s]  %s", whatzit.Year(), whatzit.Month(), whatzit.Day(), whatzit.Weekday(), label))
 }
 
 func is_leap(year uint32) bool {

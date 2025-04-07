@@ -81,7 +81,7 @@ func englishUnitedStates(year uint32) {
 	t = find_date(fmt.Sprintf("%04d-%02d-04", year, time.July))
 	print_date(t, "Independence Day (US)")
 
-	// 1st Sunday after the 1st Monday of September
+	// Sunday after the 1st Monday of September
 	// https://en.wikipedia.org/wiki/Grandparents'_Day
 	// https://fr.wikipedia.org/wiki/F%C3%AAte_des_grands-parents
 	// Fête des grands-parents

@@ -96,7 +96,7 @@ func englishCanada(year uint32) {
 	print_date(t, "Heritage Day (CA-NS)")
 	print_date(t, "Islander Day (CA-PE)")
 
-	// the Friday before the last Sunday in February
+	// Friday before the last Sunday in February
 	// https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
 	// Fête du patrimoine (CA-YT)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-28", year, time.February), uint32(time.Sunday))
@@ -120,8 +120,8 @@ func englishCanada(year uint32) {
 	}
 	print_date(t, "March Break Begins (CA-ON)")
 
-	// the Monday nearest March 17th
-	// the Monday nearest April 23rd
+	// Monday nearest March 17th
+	// Monday nearest April 23rd
 	// https://en.wikipedia.org/wiki/Saint_David%27s_Day
 	// https://fr.wikipedia.org/wiki/Saint_David%27s_Day
 	// https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day
@@ -212,7 +212,7 @@ func englishCanada(year uint32) {
 	t = find_date(fmt.Sprintf("%04d-%02d-22", year, time.April))
 	print_date(t, "Earth Day")
 
-	// the Monday before May 25th
+	// Monday before May 25th
 	// https://en.wikipedia.org/wiki/Victoria_Day
 	// https://en.wikipedia.org/wiki/National_Patriots%27_Day
 	// https://fr.wikipedia.org/wiki/F%C3%AAte_de_la_Reine_(Canada)

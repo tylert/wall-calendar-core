@@ -11,7 +11,7 @@ func englishOther(year uint32) {
 	// https://en.wikipedia.org/wiki/Liturgical_year
 	// https://fr.wikipedia.org/wiki/Calendrier_liturgique
 
-	// the Sunday following the full moon on or after the March equinox (March 21st)
+	// Sunday following the full moon on or after the March equinox (March 21st)
 	// https://en.wikipedia.org/wiki/Ecclesiastical_full_moon
 	// https://en.wikipedia.org/wiki/Computus
 	// https://en.wikipedia.org/wiki/Date_of_Easter

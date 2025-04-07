@@ -1,5 +1,5 @@
 click==8.1.8
 pyluach==2.2.0
 PyMeeus==0.5.12
-setuptools==75.6.0
+setuptools==78.1.0
 wheel==0.45.1

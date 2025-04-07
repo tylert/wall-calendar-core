@@ -328,9 +328,12 @@ func englishOther(year uint32) {
 	}
 	print_date(t, "Day of the Programmer 256th day")
 
-	// 3rd Tuesday in September
+	// Monday to Friday before 1st Saturday in May, 3rd Tuesday in September
 	// https://npw.payroll.ca
-	// https://www.dayforce.com/ca/blog/how-to-celebrate-national-payroll-week
+	// https://global.payroll.org/education-events/global-payroll-week
+	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.May, Month1st), uint32(time.Saturday))
+	t = t.AddDate(0, 0, -5)
+	print_date(t, "Global Payroll Week Begins")
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.September, Month3rd), uint32(time.Tuesday))
 	print_date(t, "National Day of Recognition for Payroll Professionals")
 
@@ -397,7 +400,7 @@ func englishOther(year uint32) {
 	print_date(t, fmt.Sprintf("%s Birthday of OpenBSD", ordinal(int(year-1995), "en")))
 
 	// June 2nd, 1998
-	// https://www.gimp.org/about/history.html
+	// https://gimp.org/about/history.html
 	// https://en.wikipedia.org/wiki/GIMP
 	// https://fr.wikipedia.org/wiki/GIMP
 	t = find_date(fmt.Sprintf("%04d-%02d-02", year, time.June))

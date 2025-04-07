@@ -31,9 +31,9 @@ func main() {
 		}
 	}
 
-	englishCanada(u32)
-	englishGreatBritain(u32)
-	englishUnitedStates(u32)
-	englishAustralia(u32)
-	englishOther(u32)
+	englishAustralia(u32)    // en-AU
+	englishCanada(u32)       // en-CA
+	englishGreatBritain(u32) // en-GB
+	englishUnitedStates(u32) // en-US
+	englishOther(u32)        // en-XX
 }

@@ -29,9 +29,9 @@ func englishGreatBritain(year uint32) {
 	// 1st Monday in August, last Monday in August, last Monday in October
 	// https://en.wikipedia.org/wiki/Bank_holiday
 	// https://en.wikipedia.org/wiki/May_Day
-	// https://uk-public-holidays.com/early-may-bank-holiday/
-	// https://uk-public-holidays.com/spring-bank-holiday/
-	// https://uk-public-holidays.com/summer-bank-holiday/
+	// https://uk-public-holidays.com/early-may-bank-holiday
+	// https://uk-public-holidays.com/spring-bank-holiday
+	// https://uk-public-holidays.com/summer-bank-holiday
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.May, Month1st), uint32(time.Monday))
 	print_date(t, "Early May Bank Holiday (GB)")
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-31", year, time.May), uint32(time.Monday))

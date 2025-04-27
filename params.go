@@ -28,7 +28,7 @@ func init() {
 	cy := strconv.FormatUint(uint64(time.Now().Year()), 10)
 
 	flag.BoolVar(&aVersion, "version", FromEnvP("FOO_VERSION", false).(bool), uVersion)
-	flag.BoolVar(&aVersion, "v", FromEnvP("FOO_VERSION", false).(bool), uVersion)
+	flag.BoolVar(&aVersion, "V", FromEnvP("FOO_VERSION", false).(bool), uVersion)
 	flag.StringVar(&aYear, "year", FromEnvP("FOO_YEAR", cy).(string), uYear)
 	flag.StringVar(&aYear, "y", FromEnvP("FOO_YEAR", cy).(string), uYear)
 

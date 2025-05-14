@@ -443,6 +443,12 @@ func englishOther(year uint32) {
 	t = find_date(fmt.Sprintf("%04d-%02d-07", year, time.June))
 	print_date(t, fmt.Sprintf("%s Birthday of Krita", ordinal(int(year-2005), "en")))
 
+	// August 22, 2005
+	// https://en.wikipedia.org/wiki/Alpine_Linux
+	// https://fr.wikipedia.org/wiki/Alpine_Linux
+	t = find_date(fmt.Sprintf("%04d-%02d-22", year, time.August))
+	print_date(t, fmt.Sprintf("%s Birthday of Alpine Linux", ordinal(int(year-2005), "en")))
+
 	// November 10th, 2009
 	// https://en.wikipedia.org/wiki/Go_(programming_language)
 	// https://fr.wikipedia.org/wiki/Go_(langage)

@@ -94,7 +94,6 @@ def main(year):
     print(f'{date(year, AUGUST, 1)} {ordinal(year - 1998)} Birthday of IRC')
     print(f'{date(year, AUGUST, 15)} {ordinal(year - 1997)} Birthday of GNOME')
     print(f'{date(year, SEPTEMBER, 27)} {ordinal(year - 1983)} Birthday of GNU')
-    print(f'{date(year, OCTOBER, 19)} {ordinal(year - 2009)} Birthday of Alpine')  # or 2005-08-23???
 
     #// XXX FIXME TODO  Do a much better job with the moon phases!!!
     for month in range(1, 13):

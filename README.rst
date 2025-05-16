@@ -23,8 +23,6 @@ Golang
 * https://dates.gmarts.org/eastalg.htm  Easter algorithms
 * https://github.com/soniakeys/meeus  aphelion, perihelion, solstice, etc.
 * https://github.com/janczer/goMoonPhase  Golang moon phase
-* https://www.golangprograms.com/golang-package-examples/example-to-use-weekday-and-yearday-function.html
-* https://www.golangprograms.com/regular-expression-to-extract-date-yyyy-mm-dd-from-string.html
 * https://github.com/yamadayuki/go-calendar
 * https://github.com/floAr/calendargo  example of building calendars using gg
 * https://github.com/fogleman/gg  2d drawings
@@ -61,3 +59,4 @@ Links
 * https://forum.typst.app/t/how-to-split-a-list-of-calendar-entries-by-month/824
 * https://terokarvinen.com/2021/calendar-txt
 * https://todotxt.org
+* https://hueffner.de/falk/blog/a-leap-year-check-in-three-instructions.html

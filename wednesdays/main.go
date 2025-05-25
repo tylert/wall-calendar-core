@@ -10,11 +10,13 @@ import (
 func wednesdays(year uint32) {
 	var t time.Time
 
-	// 1st Wedneday
+	// every Wednesday of the year
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.January, Month1st), uint32(time.Wednesday))
-	for i := 0; i < 51; i++ {
+	for i := 0; i < 53; i++ {
 		t = t.AddDate(0, 0, 7)
-		print_date(t, "")
+		if int(year) == t.Year() {
+			print_date(t, "")
+		}
 	}
 }
 

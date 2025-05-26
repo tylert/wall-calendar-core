@@ -259,11 +259,11 @@ func englishOther(year uint32) {
 	// https://fr.wikipedia.org/wiki/Vendredi_treize
 	// Vendredi treize
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.January, Month1st), uint32(time.Friday))
-	for i := 0; i < 51; i++ {
-		t = t.AddDate(0, 0, 7)
+	for i := 0; i < 53; i++ {
 		if 13 == t.Day() {
 			print_date(t, "Friday the 13th")
 		}
+		t = t.AddDate(0, 0, 7)
 	}
 
 	// Caturday

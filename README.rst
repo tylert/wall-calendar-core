@@ -60,3 +60,4 @@ Links
 * https://terokarvinen.com/2021/calendar-txt
 * https://todotxt.org
 * https://hueffner.de/falk/blog/a-leap-year-check-in-three-instructions.html
+* https://github.com/oliverkwebb/moonphase  lean implementations in C, Rust, etc.

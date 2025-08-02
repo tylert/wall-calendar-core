@@ -61,3 +61,5 @@ Links
 * https://todotxt.org
 * https://hueffner.de/falk/blog/a-leap-year-check-in-three-instructions.html
 * https://github.com/oliverkwebb/moonphase  lean implementations in C, Rust, etc.
+* https://neatnik.net/calendar/?layout=aligned-weekdays&year=2026  single page PDF calendar
+* https://neatnik.net/dispenser/?project=calendar  source code for above

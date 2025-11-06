@@ -389,7 +389,7 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 	// https://en.wikipedia.org/wiki/Orange_Shirt_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_nationale_de_la_v%C3%A9rit%C3%A9_et_de_la_r%C3%A9conciliation
-	// https://orangeshirtday.org/
+	// https://orangeshirtday.org
 	// Journée de la vérité et de la réconciliation (CA)
 	// Orange Shirt Day (CA)
 	// Journée du chandail orange (CA)

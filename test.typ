@@ -15,7 +15,7 @@
 )
 
 // Wednesday start, not a leap year
-= 2025/31/42/53
+= 2025/2031/2042/2053
 #grid(
   columns: 7,
   column-gutter: 10pt,
@@ -37,7 +37,7 @@
 )
 
 // Thursday start, not a leap year
-= 2026/37/43/54
+= 2026/2037/2043/2054
 #grid(
   columns: 7,
   column-gutter: 10pt,
@@ -59,7 +59,7 @@
 )
 
 // Friday start, not a leap year
-= 2027/38/49/55
+= 2027/2038/2049/2055
 #grid(
   columns: 7,
   column-gutter: 10pt,
@@ -81,7 +81,7 @@
 )
 
 // Saturday start, leap year
-= 2028/56
+= 2028/2056
 #grid(
   columns: 7,
   column-gutter: 10pt,
@@ -103,7 +103,7 @@
 )
 
 // Monday start, not a leap year
-= 2029/35/46/57
+= 2029/2035/2046/2057
 #grid(
   columns: 7,
   column-gutter: 10pt,
@@ -125,7 +125,7 @@
 )
 
 // Tuesday start, not a leap year
-= 2030/41/47/58
+= 2030/2041/2047/2058
 #grid(
   columns: 7,
   column-gutter: 10pt,
@@ -169,7 +169,7 @@
 )
 
 // Saturday start, not a leap year
-= 2033/39/50
+= 2033/2039/2050
 #grid(
   columns: 7,
   column-gutter: 10pt,
@@ -190,7 +190,7 @@
 )
 
 // Sunday start, not a leap year
-= 2034/45/51
+= 2034/2045/2051
 #grid(
   columns: 7,
   column-gutter: 10pt,

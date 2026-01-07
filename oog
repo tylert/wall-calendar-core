@@ -8,7 +8,7 @@
     # Rallye des Hautes Pins
 
     #   https://en.wikipedia.org/wiki/Canadian_Tulip_Festival
-    #   http://www.tulipfestival.ca/
+    #   http://www.tulipfestival.ca
     # Tulip Festival is the middle 2 weekends in May
     FRIDAY MAY WEEK2 Canadian Tulip Festival Starts
     MONDAY MAY WEEK3 Canadian Tulip Festival Ends
@@ -38,12 +38,12 @@
     #   http://arrl.org/jamboree-on-the-air-jota
     FRIDAY OCTOBER WEEK3 JOTA-JOTI
 
-    #   http://ve3we.org/2017/04/25/history-of-amateur-radio-in-canada/
+    #   http://ve3we.org/2017/04/25/history-of-amateur-radio-in-canada
     #   https://en.wikipedia.org/wiki/Radio_Amateurs_of_Canada
     MAY 3 1993 Anniversary of Founding of RAC
     # Anniversaire du fondation de RAC
 
-    #   https://www.defcon.org/
+    #   https://www.defcon.org
     # DEF CON is (usually) over the first weekend in August since 1993
     THURSDAY AUGUST WEEK2 DEF CON 1993
 
@@ -82,7 +82,7 @@
     SEPTEMBER 11 Patriot Day (US)
     # Journée des patriotes (US)
 
-    #   http://pinkshirtday.ca/
+    #   http://pinkshirtday.ca
     #   http://www.erasebullying.ca/resources/resources-pink-shirt.php
     # Pink Shirt Day seems to be on the last Wednesday in February
     WEDNESDAY FEBRUARY 28 Pink Shirt Day
@@ -138,8 +138,8 @@
     # Journée mondiale de la gentillesse
 
     # Traditional wedding anniversary gifts
-    # http://www.happy-anniversary.com/year-of-marriage/
-    # http://ideas.hallmark.com/articles/anniversary-ideas/anniversary-gifts-by-year/
+    # http://www.happy-anniversary.com/year-of-marriage
+    # http://ideas.hallmark.com/articles/anniversary-ideas/anniversary-gifts-by-year
 
     FSET gifts_en(x) choose(x, \
       "Paper|Plastic|Clocks", "Cotton|Calico|China", "Leather|Crystal/Glass", "Fruit/Flowers|Linen/Silk/Nylon|Appliances", "Wood|Silverware", \

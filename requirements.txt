@@ -1,4 +1,4 @@
-click==8.3.0
+click==8.3.1
 pyluach==2.3.0
 PyMeeus==0.5.12
 setuptools==80.9.0

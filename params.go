@@ -53,7 +53,7 @@ func init() {
 	if flag.NArg() > 0 {
 		fmt.Fprintf(os.Stderr, "Error: Unused command line arguments detected.\n")
 		flag.Usage()
-		os.Exit(1)
+		os.Exit(2)
 	}
 }
 

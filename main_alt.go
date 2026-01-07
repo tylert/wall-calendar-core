@@ -27,7 +27,7 @@ func main() {
 
 		if err != nil {
 			fmt.Println("Error parsing uint32 string")
-			os.Exit(2)
+			os.Exit(1)
 		}
 	}
 

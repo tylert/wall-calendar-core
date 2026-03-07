@@ -1,11 +1,12 @@
 package main
 
 import (
+	"container/list"
 	"fmt"
 	"time"
 )
 
-func englishCanada(year uint32) {
+func englishCanada(year uint32, events *list.List) {
 	var t time.Time
 
 	// CA     Canada
@@ -35,15 +36,15 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/Jour_de_l%27an
 	// Veille du Nouvel An, Jour de l'an, Jour de l'an observé
 	t = find_date(fmt.Sprintf("%04d-%02d-31", year, time.December))
-	print_date(t, "New Year's Eve")
+	events.PushBack(Event{t, "New Year's Eve"})
 	t = find_date(fmt.Sprintf("%04d-%02d-01", year, time.January))
-	print_date(t, "New Year's Day")
+	events.PushBack(Event{t, "New Year's Day"})
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
-		print_date(t, "New Year's Day Observed")
+		events.PushBack(Event{t, "New Year's Day Observed"})
 	} else if t.Weekday() == time.Saturday {
 		t = t.AddDate(0, 0, 2)
-		print_date(t, "New Year's Day Observed")
+		events.PushBack(Event{t, "New Year's Day Observed"})
 	}
 
 	// January 17th
@@ -55,35 +56,35 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/Raoul_Wallenberg
 	// Journée Raoul Wallenberg
 	t = find_date(fmt.Sprintf("%04d-%02d-17", year, time.January))
-	print_date(t, "Raoul Wallenburg Day")
+	events.PushBack(Event{t, "Raoul Wallenburg Day"})
 
 	// January 25th
 	// https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle
 	// https://fr.wikipedia.org/wiki/Conversion_de_Paul
 	// Conversion de Paul
 	t = find_date(fmt.Sprintf("%04d-%02d-25", year, time.January))
-	print_date(t, "Conversion of St. Paul")
+	events.PushBack(Event{t, "Conversion of St. Paul"})
 
 	// February 2nd
 	// https://en.wikipedia.org/wiki/Groundhog_Day
 	// https://fr.wikipedia.org/wiki/Jour_de_la_marmotte
 	// Jour de la marmotte
 	t = find_date(fmt.Sprintf("%04d-%02d-02", year, time.February))
-	print_date(t, "Groundhog Day")
+	events.PushBack(Event{t, "Groundhog Day"})
 
 	// February 14th
 	// https://en.wikipedia.org/wiki/Valentine%27s_Day
 	// https://fr.wikipedia.org/wiki/Saint-Valentin
 	// Saint-Valentin
 	t = find_date(fmt.Sprintf("%04d-%02d-14", year, time.February))
-	print_date(t, "St. Valentine's Day")
+	events.PushBack(Event{t, "St. Valentine's Day"})
 
 	// February 15th
 	// https://en.wikipedia.org/wiki/National_Flag_of_Canada_Day
 	// https://fr.wikipedia.org/wiki/Jour_du_drapeau_national_du_Canada
 	// Jour du drapeau national du Canada
 	t = find_date(fmt.Sprintf("%04d-%02d-15", year, time.February))
-	print_date(t, "Flag Day (CA)")
+	events.PushBack(Event{t, "Flag Day (CA)"})
 
 	// 3rd Monday in February
 	// https://en.wikipedia.org/wiki/Family_Day
@@ -91,17 +92,17 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/Jour_de_Louis_Riel
 	// Fête de la famille, Journée Louis Riel (CA-MB), Fête des Insulaires (CA-PE), Journée du patrimoine (CA-NS)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.February, Month3rd), uint32(time.Monday))
-	print_date(t, "Family Day (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)")
-	print_date(t, "Louis Riel Day (CA-MB)")
-	print_date(t, "Heritage Day (CA-NS)")
-	print_date(t, "Islander Day (CA-PE)")
+	events.PushBack(Event{t, "Family Day (CA-AB, CA-BC, CA-NB, CA-ON, CA-SK)"})
+	events.PushBack(Event{t, "Louis Riel Day (CA-MB)"})
+	events.PushBack(Event{t, "Heritage Day (CA-NS)"})
+	events.PushBack(Event{t, "Islander Day (CA-PE)"})
 
 	// Friday before the last Sunday in February
 	// https://en.wikipedia.org/wiki/Family_Day_%28Canada%29
 	// Fête du patrimoine (CA-YT)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-28", year, time.February), uint32(time.Sunday))
 	t = t.AddDate(0, 0, -2)
-	print_date(t, "Heritage Day (CA-YT)")
+	events.PushBack(Event{t, "Heritage Day (CA-YT)"})
 
 	// 2nd or 3rd Monday in March
 	// https://ontario.ca/page/school-year-calendars
@@ -118,7 +119,7 @@ func englishCanada(year uint32) {
 	} else {
 		t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.March, Month2nd), uint32(time.Monday))
 	}
-	print_date(t, "March Break Begins (CA-ON)")
+	events.PushBack(Event{t, "March Break Begins (CA-ON)"})
 
 	// Monday nearest March 17th
 	// Monday nearest April 23rd
@@ -135,17 +136,17 @@ func englishCanada(year uint32) {
 	// Fête de la Saint-Georges
 	// Fête de la Saint-André
 	t = find_date(fmt.Sprintf("%04d-%02d-01", year, time.March))
-	print_date(t, "St. David's Day")
+	events.PushBack(Event{t, "St. David's Day"})
 	t = find_date(fmt.Sprintf("%04d-%02d-17", year, time.March))
-	print_date(t, "St. Patrick's Day")
+	events.PushBack(Event{t, "St. Patrick's Day"})
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-17", year, time.March), uint32(time.Monday))
-	print_date(t, "St. Patrick's Day (CA-NL)")
+	events.PushBack(Event{t, "St. Patrick's Day (CA-NL)"})
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-23", year, time.April), uint32(time.Monday))
-	print_date(t, "St. George's Day (CA-NL)")
+	events.PushBack(Event{t, "St. George's Day (CA-NL)"})
 	t = find_date(fmt.Sprintf("%04d-%02d-23", year, time.April))
-	print_date(t, "St. George's Day")
+	events.PushBack(Event{t, "St. George's Day"})
 	t = find_date(fmt.Sprintf("%04d-%02d-30", year, time.November))
-	print_date(t, "St. Andrew's Day")
+	events.PushBack(Event{t, "St. Andrew's Day"})
 
 	// 2nd Sunday in March, 1st Sunday in November
 	// last Sunday in March, last Sunday in October
@@ -165,52 +166,52 @@ func englishCanada(year uint32) {
 	// DST Begins = "Spring forward", DST Ends = "Fall back"
 	// Heure d'éte commence, Heure d'éte termine
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.March, Month2nd), uint32(time.Sunday))
-	print_date(t, "02:00 DST Begins (CA, US)")
+	events.PushBack(Event{t, "02:00 DST Begins (CA, US)"})
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.November, Month1st), uint32(time.Sunday))
-	print_date(t, "02:00 DST Ends (CA, US)")
+	events.PushBack(Event{t, "02:00 DST Ends (CA, US)"})
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-31", year, time.March), uint32(time.Sunday))
-	print_date(t, "01:00Z DST Begins (EU, GB)")
+	events.PushBack(Event{t, "01:00Z DST Begins (EU, GB)"})
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-31", year, time.October), uint32(time.Sunday))
-	print_date(t, "01:00Z DST Ends (EU, GB)")
+	events.PushBack(Event{t, "01:00Z DST Ends (EU, GB)"})
 
 	// 1st Friday in March
 	// https://en.wikipedia.org/wiki/Employee_Appreciation_Day
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.March, Month1st), uint32(time.Friday))
-	print_date(t, "Employee Appreciation Day (AU, CA, GB, IN, SG, US)")
+	events.PushBack(Event{t, "Employee Appreciation Day (AU, CA, GB, IN, SG, US)"})
 
 	// 2nd Monday in March
 	// https://en.wikipedia.org/wiki/Commonwealth_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_du_Commonwealth
 	// Journée du Commonwealth
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.March, Month2nd), uint32(time.Monday))
-	print_date(t, "Commonwealth Day")
+	events.PushBack(Event{t, "Commonwealth Day"})
 
 	// April 1st
 	// https://en.wikipedia.org/wiki/April_Fools'_Day
 	// https://fr.wikipedia.org/wiki/Poisson_d%27avril
 	// Poisson d'avril
 	t = find_date(fmt.Sprintf("%04d-%02d-01", year, time.April))
-	print_date(t, "April Fool's Day")
+	events.PushBack(Event{t, "April Fool's Day"})
 
 	// April 6th
 	// https://en.wikipedia.org/wiki/Tartan_Day
 	// https://fr.wikipedia.org/wiki/Tartan_Day
 	// Journée du Tartan
 	t = find_date(fmt.Sprintf("%04d-%02d-06", year, time.April))
-	print_date(t, "Tartan Day")
+	events.PushBack(Event{t, "Tartan Day"})
 
 	// April 9th
 	// https://en.wikipedia.org/wiki/Vimy_Ridge_Day
 	// Jour de la crête de Vimy
 	t = find_date(fmt.Sprintf("%04d-%02d-09", year, time.April))
-	print_date(t, "Vimy Ridge Day")
+	events.PushBack(Event{t, "Vimy Ridge Day"})
 
 	// April 22nd
 	// https://en.wikipedia.org/wiki/Earth_Day
 	// https://fr.wikipedia.org/wiki/Jour_de_la_Terre
 	// Jour de la Terre
 	t = find_date(fmt.Sprintf("%04d-%02d-22", year, time.April))
-	print_date(t, "Earth Day")
+	events.PushBack(Event{t, "Earth Day"})
 
 	// Monday before May 25th
 	// https://en.wikipedia.org/wiki/Victoria_Day
@@ -220,8 +221,8 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/Anniversaire_officiel_du_roi
 	// Fête de la Reine, Fête de Victoria, Journée nationale des patriotes (CA-QC)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-21", year, time.May), uint32(time.Monday))
-	print_date(t, "Victoria Day (CA)")
-	print_date(t, "National Patriot's Day (CA-QC)")
+	events.PushBack(Event{t, "Victoria Day (CA)"})
+	events.PushBack(Event{t, "National Patriot's Day (CA-QC)"})
 
 	// 1st Sunday in June
 	// https://en.wikipedia.org/wiki/Armed_Forces_Day
@@ -230,7 +231,7 @@ func englishCanada(year uint32) {
 	// Journée des forces armées canadiennes (CA)
 	// Canadian Armed Forces Day
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.June, Month1st), uint32(time.Sunday))
-	print_date(t, "Armed Forces Day (CA)")
+	events.PushBack(Event{t, "Armed Forces Day (CA)"})
 
 	// June 19th
 	// https://en.wikipedia.org/wiki/Upper_Canada
@@ -240,7 +241,7 @@ func englishCanada(year uint32) {
 	// https://ontario.ca/laws/statute/97u42
 	// https://ontario.ca/fr/lois/loi/97u42
 	t = find_date(fmt.Sprintf("%04d-%02d-19", year, time.June))
-	print_date(t, "Loyalist Day (CA-ON)")
+	events.PushBack(Event{t, "Loyalist Day (CA-ON)"})
 
 	// June 21st
 	// https://en.wikipedia.org/wiki/National_Aboriginal_Day
@@ -252,7 +253,7 @@ func englishCanada(year uint32) {
 	// National Aboriginal Day (CA)
 	// Journée nationale des Autochthones (CA)
 	t = find_date(fmt.Sprintf("%04d-%02d-21", year, time.June))
-	print_date(t, "National Indigenous Peoples Day (CA)")
+	events.PushBack(Event{t, "National Indigenous Peoples Day (CA)"})
 
 	// June 24th
 	// https://en.wikipedia.org/wiki/Discovery_Day
@@ -268,15 +269,15 @@ func englishCanada(year uint32) {
 	// Nativité de saint Jean-Baptiste
 	// observé
 	t = find_date(fmt.Sprintf("%04d-%02d-24", year, time.June))
-	print_date(t, "June Day (CA-NL)")
-	print_date(t, "Saint-Jean-Baptiste Day")
+	events.PushBack(Event{t, "June Day (CA-NL)"})
+	events.PushBack(Event{t, "Saint-Jean-Baptiste Day"})
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
-		print_date(t, "Saint-Jean-Baptiste Day Observed")
+		events.PushBack(Event{t, "Saint-Jean-Baptiste Day Observed"})
 	} else if t.Weekday() == time.Saturday {
 		// XXX FIXME TODO  The rules are vague about what happens if this is on a Saturday
 		t = t.AddDate(0, 0, 2)
-		print_date(t, "Saint-Jean-Baptiste Day Observed")
+		events.PushBack(Event{t, "Saint-Jean-Baptiste Day Observed"})
 	}
 
 	// June 27th
@@ -285,7 +286,7 @@ func englishCanada(year uint32) {
 	// https://canada.ca/fr/patrimoine-canadien/campagnes/journee-multiculturalisme.html
 	// Journée canadienne du multiculturalisme
 	t = find_date(fmt.Sprintf("%04d-%02d-27", year, time.June))
-	print_date(t, "Canadian Multiculturalism Day")
+	events.PushBack(Event{t, "Canadian Multiculturalism Day"})
 
 	// July 1st
 	// https://en.wikipedia.org/wiki/Canada_Day
@@ -293,21 +294,21 @@ func englishCanada(year uint32) {
 	// https://en.wikipedia.org/wiki/Memorial_Day_(Newfoundland_and_Labrador)
 	// Fête du Canada, Fête du Canada observé
 	t = find_date(fmt.Sprintf("%04d-%02d-01", year, time.July))
-	print_date(t, "Memorial Day (CA-NL)")
-	print_date(t, "Canada Day")
+	events.PushBack(Event{t, "Memorial Day (CA-NL)"})
+	events.PushBack(Event{t, "Canada Day"})
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
-		print_date(t, "Canada Day Observed")
+		events.PushBack(Event{t, "Canada Day Observed"})
 	} else if t.Weekday() == time.Saturday {
 		t = t.AddDate(0, 0, 2)
-		print_date(t, "Canada Day Observed")
+		events.PushBack(Event{t, "Canada Day Observed"})
 	}
 
 	// July 9th
 	// https://en.wikipedia.org/wiki/Nunavut_Day
 	// Fête du Nunavut (CA-NU)
 	t = find_date(fmt.Sprintf("%04d-%02d-09", year, time.July))
-	print_date(t, "Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU)")
+	events.PushBack(Event{t, "Nunavut Day ᓄᓇᕗᑦ ᐅᓪᓗᖓ  (CA-NU)"})
 
 	// July 12th
 	// https://en.wikipedia.org/wiki/Orangemen%27s_Day
@@ -316,7 +317,7 @@ func englishCanada(year uint32) {
 	// Battle of the Boyne
 	// Fête des Orangistes (CA-NL)
 	t = find_date(fmt.Sprintf("%04d-%02d-12", year, time.July))
-	print_date(t, "Orangemen's Day (CA-NL)")
+	events.PushBack(Event{t, "Orangemen's Day (CA-NL)"})
 
 	// begins on the 2nd last Sunday of July and ends 2 weeks later
 	// https://en.wikipedia.org/wiki/Construction_Holiday_%28Quebec%29
@@ -327,9 +328,9 @@ func englishCanada(year uint32) {
 	// Fin des vacances de la construction (CA-QC)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-31", year, time.July), uint32(time.Sunday))
 	t = t.AddDate(0, 0, -7)
-	print_date(t, "Construction Holiday Begins (CA-QC)")
+	events.PushBack(Event{t, "Construction Holiday Begins (CA-QC)"})
 	t = t.AddDate(0, 0, 14)
-	print_date(t, "Construction Holiday Ends (CA-QC)")
+	events.PushBack(Event{t, "Construction Holiday Ends (CA-QC)"})
 
 	// 1st Monday in August
 	// https://en.wikipedia.org/wiki/Civic_Holiday
@@ -341,40 +342,40 @@ func englishCanada(year uint32) {
 	// Jour de Nouveau Brunswick (CA-NB), Jour de la Fondation (CA-NS)
 	// Jour de Saskatchewan (CA-SK)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.August, Month1st), uint32(time.Monday))
-	print_date(t, "Civic Holiday (CA-NL, CA-NT, CA-NU, CA-ON)")
-	print_date(t, "Heritage Day (CA-AB)")
-	print_date(t, "British Columbia Day (CA-BC)")
-	print_date(t, "Terry Fox Day (CA-MB)")
-	print_date(t, "New Brunswick Day (CA-NB)")
-	print_date(t, "Natal Day (CA-NS)")
-	print_date(t, "Saskatchewan Day (CA-SK)")
+	events.PushBack(Event{t, "Civic Holiday (CA-NL, CA-NT, CA-NU, CA-ON)"})
+	events.PushBack(Event{t, "Heritage Day (CA-AB)"})
+	events.PushBack(Event{t, "British Columbia Day (CA-BC)"})
+	events.PushBack(Event{t, "Terry Fox Day (CA-MB)"})
+	events.PushBack(Event{t, "New Brunswick Day (CA-NB)"})
+	events.PushBack(Event{t, "Natal Day (CA-NS)"})
+	events.PushBack(Event{t, "Saskatchewan Day (CA-SK)"})
 
 	// August 9th
 	// https://en.wikipedia.org/wiki/International_Day_of_the_World's_Indigenous_Peoples
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_internationale_des_populations_autochtones
 	// Journée internationale des populations autochtones du monde
 	t = find_date(fmt.Sprintf("%04d-%02d-09", year, time.August))
-	print_date(t, "International Day of the World's Indigenous Peoples")
+	events.PushBack(Event{t, "International Day of the World's Indigenous Peoples"})
 
 	// 3rd Monday in August
 	// https://en.wikipedia.org/wiki/Discovery_Day
 	// Journée de la Découverte (CA-YT)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.August, Month3rd), uint32(time.Monday))
-	print_date(t, "Discovery Day (CA-YT)")
+	events.PushBack(Event{t, "Discovery Day (CA-YT)"})
 
 	// 3rd Friday in August
 	// https://en.wikipedia.org/wiki/Public_holidays_in_Canada
 	// https://fr.wikipedia.org/wiki/F%C3%AAtes_et_jours_f%C3%A9ri%C3%A9s_au_Canada
 	// Défilé de la Coupe d'or (CA-PE)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.August, Month3rd), uint32(time.Friday))
-	print_date(t, "Gold Cup Parade Day (CA-PE)")
+	events.PushBack(Event{t, "Gold Cup Parade Day (CA-PE)"})
 
 	// 1st Monday in September
 	// https://en.wikipedia.org/wiki/Labour_Day
 	// https://fr.wikipedia.org/wiki/F%C3%AAte_du_Travail
 	// Fête du Travail
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.September, Month1st), uint32(time.Monday))
-	print_date(t, "Labour Day")
+	events.PushBack(Event{t, "Labour Day"})
 
 	// 2nd Sunday in September
 	// https://en.wikipedia.org/wiki/Grandparents'_Day
@@ -382,7 +383,7 @@ func englishCanada(year uint32) {
 	// Fête des grands-parents
 	// Journée nationale des grands-parents
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.September, Month2nd), uint32(time.Sunday))
-	print_date(t, "Grandparent's Day (CA)")
+	events.PushBack(Event{t, "Grandparent's Day (CA)"})
 
 	// September 30th
 	// https://en.wikipedia.org/wiki/Public_holidays_in_Canada
@@ -394,13 +395,13 @@ func englishCanada(year uint32) {
 	// Orange Shirt Day (CA)
 	// Journée du chandail orange (CA)
 	t = find_date(fmt.Sprintf("%04d-%02d-30", year, time.September))
-	print_date(t, "Truth and Reconciliation Day (CA)")
+	events.PushBack(Event{t, "Truth and Reconciliation Day (CA)"})
 
 	// October 10th
 	// https://en.wikipedia.org/wiki/World_Mental_Health_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_mondiale_de_la_sant%C3%A9_mentale
 	t = find_date(fmt.Sprintf("%04d-%02d-10", year, time.October))
-	print_date(t, "World Mental Health Day")
+	events.PushBack(Event{t, "World Mental Health Day"})
 
 	// 2nd Monday in October
 	// the Friday before 2nd Monday in October, ends the Saturday after
@@ -411,11 +412,11 @@ func englishCanada(year uint32) {
 	// Action de grâce (CA)
 	// Début de l'Oktoberfest, Fin de l'Oktoberfest (CA-ON)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.October, Month2nd), uint32(time.Monday))
-	print_date(t, "Thanksgiving Day (CA)")
+	events.PushBack(Event{t, "Thanksgiving Day (CA)"})
 	t = t.AddDate(0, 0, -3)
-	print_date(t, "Oktoberfest Begins (CA-ON)")
+	events.PushBack(Event{t, "Oktoberfest Begins (CA-ON)"})
 	t = t.AddDate(0, 0, 8)
-	print_date(t, "Oktoberfest Ends (CA-ON)")
+	events.PushBack(Event{t, "Oktoberfest Ends (CA-ON)"})
 
 	// October 31st, November 1st, 2nd
 	// https://en.wikipedia.org/wiki/Allhallowtide
@@ -429,13 +430,13 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/Jour_des_morts_(Mexique)
 	// Toussaint, Fête des Morts
 	t = find_date(fmt.Sprintf("%04d-%02d-31", year, time.October))
-	print_date(t, "Hallowe'en")
-	print_date(t, "All Hallows' Eve")
+	events.PushBack(Event{t, "Hallowe'en"})
+	events.PushBack(Event{t, "All Hallows' Eve"})
 	t = find_date(fmt.Sprintf("%04d-%02d-01", year, time.November))
-	print_date(t, "All Hallows' Day")
-	print_date(t, "All Saints' Day")
+	events.PushBack(Event{t, "All Hallows' Day"})
+	events.PushBack(Event{t, "All Saints' Day"})
 	t = find_date(fmt.Sprintf("%04d-%02d-02", year, time.November))
-	print_date(t, "All Souls' Day")
+	events.PushBack(Event{t, "All Souls' Day"})
 
 	// November 11th, September 3rd
 	// https://en.wikipedia.org/wiki/Remembrance_Day
@@ -453,11 +454,11 @@ func englishCanada(year uint32) {
 	// Merchant Navy Rememberance Day
 	// Jour de la marine marchande
 	t = find_date(fmt.Sprintf("%04d-%02d-11", year, time.November))
-	print_date(t, "Rememberance Day")
-	print_date(t, "Armistice Day (CA-NL, GB)")
-	print_date(t, "Veterans Day (US)")
+	events.PushBack(Event{t, "Rememberance Day"})
+	events.PushBack(Event{t, "Armistice Day (CA-NL, GB)"})
+	events.PushBack(Event{t, "Veterans Day (US)"})
 	t = find_date(fmt.Sprintf("%04d-%02d-03", year, time.September))
-	print_date(t, "Merchant Navy Day")
+	events.PushBack(Event{t, "Merchant Navy Day"})
 
 	// December 11th, 1931
 	// https://en.wikipedia.org/wiki/Statute_of_Westminster_1931
@@ -466,13 +467,13 @@ func englishCanada(year uint32) {
 	// https://canada.ca/fr/patrimoine-canadien/services/journees-importantes-commemoratives/anniversaire-statut-westminster.html
 	// Anniversaire du Statut de Westminster
 	t = find_date(fmt.Sprintf("%04d-%02d-11", year, time.December))
-	print_date(t, fmt.Sprintf("%s Anniversary of the Statute of Westminster", ordinal(int(year-1931), "en")))
+	events.PushBack(Event{t, fmt.Sprintf("%s Anniversary of the Statute of Westminster", ordinal(int(year-1931), "en"))})
 
 	// 1st Saturday in December
 	// https://canlii.org/en/on/laws/stat/so-2015-c-12/latest/so-2015-c-12.html
 	// https://canlii.org/fr/on/legis/lois/lo-2015-c-12/derniere/lo-2015-c-12.html
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.December, Month1st), uint32(time.Saturday))
-	print_date(t, "Christmas Tree Day (CA-ON)")
+	events.PushBack(Event{t, "Christmas Tree Day (CA-ON)"})
 
 	// December 8th
 	// https://en.wikipedia.org/wiki/Immaculate_Conception
@@ -480,7 +481,7 @@ func englishCanada(year uint32) {
 	// https://es.wikipedia.org/wiki/Inmaculada_Concepci%C3%B3n
 	// La Inmaculada
 	t = find_date(fmt.Sprintf("%04d-%02d-08", year, time.December))
-	print_date(t, "Immaculate Conception Day")
+	events.PushBack(Event{t, "Immaculate Conception Day"})
 
 	// 4th Sunday before December 25th
 	// https://en.wikipedia.org/wiki/Advent
@@ -491,7 +492,7 @@ func englishCanada(year uint32) {
 	// https://fr.wikipedia.org/wiki/Sapin_de_No%C3%ABl
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-21", year, time.December), uint32(time.Sunday))
 	t = t.AddDate(0, 0, -21)
-	print_date(t, "Advent Sunday")
+	events.PushBack(Event{t, "Advent Sunday"})
 
 	// December 24th, 25th, 26th, January 7th
 	// https://en.wikipedia.org/wiki/Christmastide
@@ -512,27 +513,27 @@ func englishCanada(year uint32) {
 	// Fête de la Saint-Étienne, Día de San Esteban
 	// Noël observé, Le jour des boîtes observé
 	t = find_date(fmt.Sprintf("%04d-%02d-24", year, time.December))
-	print_date(t, "Christmas Eve")
+	events.PushBack(Event{t, "Christmas Eve"})
 	t = find_date(fmt.Sprintf("%04d-%02d-25", year, time.December))
-	print_date(t, "Christmas Day")
+	events.PushBack(Event{t, "Christmas Day"})
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
-		print_date(t, "Christmas Day Observed")
+		events.PushBack(Event{t, "Christmas Day Observed"})
 	} else if t.Weekday() == time.Saturday {
 		t = t.AddDate(0, 0, 2)
-		print_date(t, "Christmas Day Observed")
+		events.PushBack(Event{t, "Christmas Day Observed"})
 	}
 	t = find_date(fmt.Sprintf("%04d-%02d-07", year, time.January))
-	print_date(t, "Orthodox Christmas Day")
+	events.PushBack(Event{t, "Orthodox Christmas Day"})
 	t = find_date(fmt.Sprintf("%04d-%02d-26", year, time.December))
-	print_date(t, "St. Stephen's Day")
-	print_date(t, "Boxing Day")
+	events.PushBack(Event{t, "St. Stephen's Day"})
+	events.PushBack(Event{t, "Boxing Day"})
 	if t.Weekday() == time.Sunday {
 		t = t.AddDate(0, 0, 1)
-		print_date(t, "Boxing Day Observed")
+		events.PushBack(Event{t, "Boxing Day Observed"})
 	} else if t.Weekday() == time.Saturday {
 		t = t.AddDate(0, 0, 2)
-		print_date(t, "Boxing Day Observed")
+		events.PushBack(Event{t, "Boxing Day Observed"})
 	}
 
 	// January 6th to February 2nd
@@ -553,28 +554,28 @@ func englishCanada(year uint32) {
 	// Epiphanytide
 	// Épiphanie, Epifanía
 	t = find_date(fmt.Sprintf("%04d-%02d-05", year, time.January))
-	print_date(t, "Epiphany Eve")
+	events.PushBack(Event{t, "Epiphany Eve"})
 	t = find_date(fmt.Sprintf("%04d-%02d-06", year, time.January))
-	print_date(t, "Epiphany")
-	print_date(t, "Reyes")
+	events.PushBack(Event{t, "Epiphany"})
+	events.PushBack(Event{t, "Reyes"})
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-10", year, time.January), uint32(time.Sunday))
-	print_date(t, "Baptism of the Lord")
+	events.PushBack(Event{t, "Baptism of the Lord"})
 	t = find_date(fmt.Sprintf("%04d-%02d-02", year, time.February))
-	print_date(t, "Candlemas")
+	events.PushBack(Event{t, "Candlemas"})
 
 	// March 25th
 	// https://en.wikipedia.org/wiki/Annunciation
 	// https://fr.wikipedia.org/wiki/Annonciation
 	// Annonciation
 	t = find_date(fmt.Sprintf("%04d-%02d-25", year, time.March))
-	print_date(t, "Annunciation")
+	events.PushBack(Event{t, "Annunciation"})
 
 	// December 26th to January 1st
 	// https://en.wikipedia.org/wiki/Kwanzaa
 	// https://fr.wikipedia.org/wiki/Kwanzaa
 	// Début de Kwanzaa, Fin de Kwanzaa
 	t = find_date(fmt.Sprintf("%04d-%02d-26", year, time.December))
-	print_date(t, "Kwanzaa Begins")
+	events.PushBack(Event{t, "Kwanzaa Begins"})
 	t = find_date(fmt.Sprintf("%04d-%02d-01", year, time.January))
-	print_date(t, "Kwanzaa Ends")
+	events.PushBack(Event{t, "Kwanzaa Ends"})
 }

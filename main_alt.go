@@ -3,6 +3,7 @@
 package main
 
 import (
+	"container/list"
 	"fmt"
 	"os"
 	"strconv"
@@ -31,10 +32,16 @@ func main() {
 		}
 	}
 
-	englishAustralia(u32)    // en-AU
-	englishCanada(u32)       // en-CA
-	englishGreatBritain(u32) // en-GB
-	englishUnitedStates(u32) // en-US
-	englishOther(u32)        // en-XX
-	englishPersonal(u32)     // en-ZZ
+	e := list.New()
+	englishAustralia(u32, e)    // en-AU
+	englishCanada(u32, e)       // en-CA
+	englishGreatBritain(u32, e) // en-GB
+	englishUnitedStates(u32, e) // en-US
+	englishOther(u32, e)        // en-XX
+	englishPersonal(u32, e)     // en-ZZ
+
+	for x := e.Front(); x != nil; x = x.Next() {
+		y := Event(x.Value.(Event))
+		print_date(y.date, y.label)
+	}
 }

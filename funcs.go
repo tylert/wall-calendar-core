@@ -5,6 +5,11 @@ import (
 	"time"
 )
 
+type Event struct {
+	date  time.Time
+	label string
+}
+
 // Sun = 0, Mon = 1, Tue = 2, Wed = 3, Thu = 4, Fri = 5, Sat = 6
 // 1st = 4, 2nd = 11, 3rd = 18, 4th = 25, 5th/last = 31/30/29/28
 

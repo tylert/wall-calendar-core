@@ -7,10 +7,11 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	//"time"
 )
 
 func main() {
-	// Print out the version information
+	// Print out the version information and exit
 	if aVersion {
 		fmt.Println(GetVersion())
 		os.Exit(0)
@@ -39,6 +40,7 @@ func main() {
 	englishUnitedStates(u32, e) // en-US
 	englishOther(u32, e)        // en-XX
 
+	//today := time.Now()
 	for x := e.Front(); x != nil; x = x.Next() {
 		y := Event(x.Value.(Event))
 		print_date(y.date, y.label)

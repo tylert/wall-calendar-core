@@ -18,7 +18,7 @@ func englishUnitedStates(year uint32, events *list.List) {
 	// https://fr.wikipedia.org/wiki/Martin_Luther_King_Day
 	// Journée de Martin Luther King Jr. (US)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.January, Month3rd), uint32(time.Monday))
-	events.PushBack(Event{t, "Martin Luther King Jr. Day (US)"})
+	events.PushBack(Event{t, "Martin Luther King Jr. Day (US)", 1})
 
 	// January 20th or the 21st if the 20th is a Sunday
 	// every 4th year where "year%4 == 1" (2001, ..., 2013, 2017, 2021, 2025, 2029, etc.)
@@ -28,9 +28,9 @@ func englishUnitedStates(year uint32, events *list.List) {
 		t = find_date(fmt.Sprintf("%04d-%02d-20", year, time.January))
 		if t.Weekday() == time.Sunday {
 			t = t.AddDate(0, 0, 1)
-			events.PushBack(Event{t, "Inauguration Day (US)"})
+			events.PushBack(Event{t, "Inauguration Day (US)", 1})
 		} else {
-			events.PushBack(Event{t, "Inauguration Day (US)"})
+			events.PushBack(Event{t, "Inauguration Day (US)", 1})
 		}
 	}
 
@@ -40,14 +40,14 @@ func englishUnitedStates(year uint32, events *list.List) {
 	// https://fr.wikipedia.org/wiki/Presidents_Day
 	// Journée de la Présidence (US)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.February, Month3rd), uint32(time.Monday))
-	events.PushBack(Event{t, "President's Day (US)"})
+	events.PushBack(Event{t, "President's Day (US)", 1})
 
 	// May 5th
 	// https://en.wikipedia.org/wiki/Cinco_de_Mayo
 	// https://fr.wikipedia.org/wiki/Cinco_de_Mayo
 	// Fête du 5 mai (US)
 	t = find_date(fmt.Sprintf("%04d-%02d-05", year, time.May))
-	events.PushBack(Event{t, "Cinco de Mayo (US)"})
+	events.PushBack(Event{t, "Cinco de Mayo (US)", 1})
 
 	// 2nd Saturday in May, 3rd Saturday in May, last Monday in May
 	// https://en.wikipedia.org/wiki/Armed_Forces_Day
@@ -56,31 +56,31 @@ func englishUnitedStates(year uint32, events *list.List) {
 	// https://fr.wikipedia.org/wiki/Memorial_Day
 	// Journée des forces armées (US)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.May, Month2nd), uint32(time.Saturday))
-	events.PushBack(Event{t, "Armed Forces Week (US)"})
+	events.PushBack(Event{t, "Armed Forces Week (US)", 1})
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.May, Month3rd), uint32(time.Saturday))
-	events.PushBack(Event{t, "Armed Forces Day (US)"})
+	events.PushBack(Event{t, "Armed Forces Day (US)", 1})
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-31", year, time.May), uint32(time.Monday))
-	events.PushBack(Event{t, "Memorial Day (US)"})
+	events.PushBack(Event{t, "Memorial Day (US)", 1})
 
 	// June 14th
 	// https://en.wikipedia.org/wiki/Flag_Day_(United_States)
 	// https://fr.wikipedia.org/wiki/Jour_du_drapeau_(%C3%89tats-Unis)
 	// Jour du drapeau (US)
 	t = find_date(fmt.Sprintf("%04d-%02d-14", year, time.June))
-	events.PushBack(Event{t, "Flag Day (US)"})
+	events.PushBack(Event{t, "Flag Day (US)", 1})
 
 	// June 19th
 	// https://en.wikipedia.org/wiki/Juneteenth
 	// https://fr.wikipedia.org/wiki/Juneteenth
 	t = find_date(fmt.Sprintf("%04d-%02d-19", year, time.June))
-	events.PushBack(Event{t, "Juneteenth (US)"})
+	events.PushBack(Event{t, "Juneteenth (US)", 1})
 
 	// July 4th
 	// https://en.wikipedia.org/wiki/Independence_Day_%28United_States%29
 	// https://fr.wikipedia.org/wiki/Jour_de_l%27Ind%C3%A9pendance_(%C3%89tats-Unis)
 	// Jour de l'indépendance (US)
 	t = find_date(fmt.Sprintf("%04d-%02d-04", year, time.July))
-	events.PushBack(Event{t, "Independence Day (US)"})
+	events.PushBack(Event{t, "Independence Day (US)", 1})
 
 	// Sunday after the 1st Monday of September
 	// https://en.wikipedia.org/wiki/Grandparents'_Day
@@ -89,15 +89,15 @@ func englishUnitedStates(year uint32, events *list.List) {
 	// Journée nationale des grands-parents
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.September, Month1st), uint32(time.Monday))
 	t = t.AddDate(0, 0, 6)
-	events.PushBack(Event{t, "Grandparent's Day (US)"})
+	events.PushBack(Event{t, "Grandparent's Day (US)", 1})
 
 	// 2nd Monday in October
 	// https://en.wikipedia.org/wiki/Columbus_Day
 	// https://fr.wikipedia.org/wiki/Jour_de_Christophe_Colomb
 	// https://theoatmeal.com/comics/columbus_day
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.October, Month2nd), uint32(time.Monday))
-	events.PushBack(Event{t, "Columbus Day (US)"})
-	events.PushBack(Event{t, "Bartolomé Day (US)"})
+	events.PushBack(Event{t, "Columbus Day (US)", 1})
+	events.PushBack(Event{t, "Bartolomé Day (US)", 1})
 
 	// 4th Thursday in November, Friday, Monday
 	// https://en.wikipedia.org/wiki/Thanksgiving
@@ -109,21 +109,21 @@ func englishUnitedStates(year uint32, events *list.List) {
 	// Action de Grâce (US)
 	// Vendredi Noir, Cyber Lundi (US)
 	t = find_nearby_date(fmt.Sprintf("%04d-%02d-%02d", year, time.November, Month4th), uint32(time.Thursday))
-	events.PushBack(Event{t, "Thanksgiving Day (US)"})
+	events.PushBack(Event{t, "Thanksgiving Day (US)", 1})
 	t = t.AddDate(0, 0, 1)
-	events.PushBack(Event{t, "Black Friday (US)"})
+	events.PushBack(Event{t, "Black Friday (US)", 1})
 	t = t.AddDate(0, 0, 3)
-	events.PushBack(Event{t, "Cyber Monday (US)"})
+	events.PushBack(Event{t, "Cyber Monday (US)", 1})
 
 	// December 7th (December 7th, 1941)
 	// https://en.wikipedia.org/wiki/National_Pearl_Harbor_Remembrance_Day
 	t = find_date(fmt.Sprintf("%04d-%02d-07", year, time.December))
-	events.PushBack(Event{t, "Pearl Harbor Day (US)"})
+	events.PushBack(Event{t, "Pearl Harbor Day (US)", 1})
 
 	// December 8th
 	// https://en.wikipedia.org/wiki/Christmas_tree
 	// https://fr.wikipedia.org/wiki/Sapin_de_No%C3%ABl
 	// https://checkiday.com/2e2a58a06269bc06cefe283f22b8173e/national-christmas-tree-day
 	t = find_date(fmt.Sprintf("%04d-%02d-08", year, time.December))
-	events.PushBack(Event{t, "Christmas Tree Day (US)"})
+	events.PushBack(Event{t, "Christmas Tree Day (US)", 1})
 }

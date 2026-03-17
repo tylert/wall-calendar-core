@@ -6,8 +6,9 @@ import (
 )
 
 type Event struct {
-	date  time.Time
-	label string
+	date   time.Time
+	label  string
+	notice int
 }
 
 // Sun = 0, Mon = 1, Tue = 2, Wed = 3, Thu = 4, Fri = 5, Sat = 6
@@ -15,9 +16,9 @@ type Event struct {
 
 const (
 	Month1st int = 4
-	Month2nd     = 11
-	Month3rd     = 18
-	Month4th     = 25
+	Month2nd int = 11
+	Month3rd int = 18
+	Month4th int = 25
 )
 
 func closest(nearby time.Time, desired uint32) time.Time {

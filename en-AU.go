@@ -26,12 +26,12 @@ func englishAustralia(year uint32, events *list.List) {
 	// https://en.wikipedia.org/wiki/Australia_Day
 	// https://fr.wikipedia.org/wiki/Australia_Day
 	t = find_date(fmt.Sprintf("%04d-%02d-26", year, time.January))
-	events.PushBack(Event{t, "Australia Day (AU)"})
+	events.PushBack(Event{t, "Australia Day (AU)", 1})
 
 	// April 25th
 	// https://en.wikipedia.org/wiki/Anzac_Day
 	// https://fr.wikipedia.org/wiki/Journ%C3%A9e_de_l%27ANZAC
 	// Jour de l'Anzac (AU, NZ)
 	t = find_date(fmt.Sprintf("%04d-%02d-25", year, time.April))
-	events.PushBack(Event{t, "Anzac Day (AU, NZ)"})
+	events.PushBack(Event{t, "Anzac Day (AU, NZ)", 1})
 }

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-	//"time"
+	"time"
 )
 
 func main() {
@@ -40,9 +40,13 @@ func main() {
 	englishUnitedStates(u32, e) // en-US
 	englishOther(u32, e)        // en-XX
 
-	//today := time.Now()
+	today := time.Now()
 	for x := e.Front(); x != nil; x = x.Next() {
 		y := Event(x.Value.(Event))
-		print_date(y.date, y.label)
+		if y.date.Compare(today) >= 0 {
+			print_date(y.date, y.label)
+		} else if aPast {
+			print_date(y.date, y.label)
+		}
 	}
 }

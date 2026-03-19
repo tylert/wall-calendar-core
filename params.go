@@ -13,6 +13,7 @@ import (
 
 // Command-line arguments
 var (
+	aPast    bool
 	aVersion bool
 	aYear    string
 )
@@ -20,6 +21,7 @@ var (
 func init() {
 	// Usage for command-line arguments
 	const (
+		uPast    = "Allow showing events which are in the past (default false)"
 		uVersion = "Display build version information (default false)"
 		uYear    = "Year for which to build calendar"
 	)
@@ -27,6 +29,8 @@ func init() {
 	// The current year as a string
 	cy := strconv.FormatUint(uint64(time.Now().Year()), 10)
 
+	flag.BoolVar(&aPast, "past", FromEnvP("FOO_PAST", false).(bool), uPast)
+	flag.BoolVar(&aPast, "p", FromEnvP("FOO_PAST", false).(bool), uPast)
 	flag.BoolVar(&aVersion, "version", FromEnvP("FOO_VERSION", false).(bool), uVersion)
 	flag.BoolVar(&aVersion, "V", FromEnvP("FOO_VERSION", false).(bool), uVersion)
 	flag.StringVar(&aYear, "year", FromEnvP("FOO_YEAR", cy).(string), uYear)

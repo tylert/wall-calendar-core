@@ -9,6 +9,40 @@ import (
 func englishOther(year uint32, events *list.List) {
 	var t time.Time
 
+	// https://en.wikipedia.org/wiki/Equinox
+	// https://fr.wikipedia.org/wiki/%C3%89quinoxe
+	// https://en.wikipedia.org/wiki/March_equinox
+	// https://fr.wikipedia.org/wiki/%C3%89quinoxe_de_mars
+	// https://en.wikipedia.org/wiki/June_solstice
+	// https://en.wikipedia.org/wiki/Summer_solstice
+	// https://fr.wikipedia.org/wiki/Solstice_d%27%C3%A9t%C3%A9
+	// https://en.wikipedia.org/wiki/September_equinox
+	// https://en.wikipedia.org/wiki/December_solstice
+	// https://en.wikipedia.org/wiki/Winter_solstice
+	// https://fr.wikipedia.org/wiki/Solstice_d%27hiver
+	// https://en.wikipedia.org/wiki/Spring_(season)
+	// https://fr.wikipedia.org/wiki/Printemps
+	// https://en.wikipedia.org/wiki/Summer
+	// https://fr.wikipedia.org/wiki/%C3%89t%C3%A9
+	// https://en.wikipedia.org/wiki/Autumn
+	// https://fr.wikipedia.org/wiki/Automne
+	// https://en.wikipedia.org/wiki/Winter
+	// https://fr.wikipedia.org/wiki/Hiver
+	// vernal equinox, autumnal equinox
+	// estival solstice, hibernal solstice
+	// Premier jour de printemps
+	// Premier jour d'été
+	// Premier jour d'automne
+	// Premier jour d'hiver
+	t = find_date(fmt.Sprintf("%04d-%02d-%02d", year, time.March, 20))
+	events.PushBack(Event{t, "Spring Equinox 20", 1})
+	t = find_date(fmt.Sprintf("%04d-%02d-%02d", year, time.June, 20))
+	events.PushBack(Event{t, "Summer Solstice 20-21", 1})
+	t = find_date(fmt.Sprintf("%04d-%02d-%02d", year, time.September, 22))
+	events.PushBack(Event{t, "Fall Equinox 22-23", 1})
+	t = find_date(fmt.Sprintf("%04d-%02d-%02d", year, time.December, 21))
+	events.PushBack(Event{t, "Winter Solstice 21-22", 1})
+
 	// https://en.wikipedia.org/wiki/Liturgical_year
 	// https://fr.wikipedia.org/wiki/Calendrier_liturgique
 
